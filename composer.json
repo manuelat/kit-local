@@ -1,0 +1,11 @@
+{
+    "require": {
+        "twig/twig": "1.*",
+        "symfony/http-foundation": "2.7.*@dev"
+    },
+    "autoload": {
+        "psr-0": {
+            "": "app/libs/"
+        }
+    }
+}

@@ -1,0 +1,6 @@
+!cache/.gitkeep
+cache/
+vendor/
+public_html/bower/
+*.log
+composer.lock
