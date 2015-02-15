@@ -1,0 +1,86 @@
+.investor {
+    .benefits-lender h3 span {
+        border-bottom: 2px solid @brandColorCTA;
+        padding-bottom: 16px;
+    }
+
+    .benefits-lender h3 {
+        border-bottom: 2px solid @brandColorCTA;
+        padding-bottom: 16px;
+    }
+
+    /*.three-steps {
+      margin-top: -@verticalRhythm; //TODO: best solution to move up?
+    }
+
+    .risks {
+
+      .row {
+        margin-bottom: @verticalRhythm / 2;
+
+        .last-of-type-margin-bottom;
+      }
+    } */
+
+    .fees {
+        /*
+     background-color: @gray5;
+     background-image: url("/bundles/intlendweblayout/frontend/images/cms/investor/investor-fees-bg.jpg");
+     background-repeat: no-repeat;
+     background-position: 50% 0;
+     margin-top: -@verticalRhythm; //TODO: best solution to move up?
+
+
+     .span6 {
+       .box-shadow(@containerBoxShadow);
+       background-color: @white;
+     }
+
+     .padding-box {
+       padding: @gridGutterWidth;
+     }
+
+     .styled {
+       i {
+         color: #2682bf;
+       }
+     }
+  */
+        .table {
+
+            td,
+            th {
+                background-color: @baseBackground;
+                width: 50%;
+            }
+        }
+    }
+
+    .loan-types {
+
+        .table {
+
+            td {
+                font-size: @baseFontSize * 0.95;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .table > thead > tr > th,
+            .table > tbody > tr > th,
+            .table > tfoot > tr > th,
+            .table > thead > tr > td,
+            .table > tbody > tr > td,
+            .table > tfoot > tr > td {
+                padding: 4px;
+            }
+
+        }
+    }
+}
+
+.container-wrapper.blue {
+    background: #189bf2;
+    color: @white;
+}

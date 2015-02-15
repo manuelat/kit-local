@@ -1,0 +1,76 @@
+//
+// Progress bars
+// --------------------------------------------------
+
+// THE BARS
+// --------
+
+// Outer container
+.progress {
+    height: @baseLineHeight;
+    margin-bottom: @baseLineHeight;
+    background-color: @white;
+    background-image: none;
+    .box-shadow(inset 0 1px 2px rgba(0, 0, 0, .2));
+    .border-top-radius(@borderRadiusSmall);
+    .border-right-radius(@borderRadiusSmall);
+    .border-bottom-radius(@borderRadiusSmall);
+    .border-left-radius(@borderRadiusSmall);
+}
+
+// Bar of progress
+.progress .bar {
+    width: 0%;
+    height: 100%;
+    color: @white;
+    float: left;
+    font-size: 12px;
+    text-align: center;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
+    //  #gradient > .vertical(#149bdf, #0480be);
+    background-color: @brandColor;
+    background-image: none;
+    .box-shadow(inset 0 1px 2px rgba(0, 0, 0, .4));
+    .box-sizing(border-box);
+    .transition(width .6s ease);
+}
+
+.progress .bar + .bar {
+    .box-shadow(~"inset 1px 0 0 rgba(0,0,0,.15), inset 0 -1px 0 rgba(0,0,0,.15)");
+}
+
+
+// my style
+.custom-progress {
+    height: @baseLineHeight * 2;
+    background-color: #bbd0ef;
+    margin-bottom: 0;
+    max-width: 80%;
+    margin-left: 11%;
+}
+
+.loan-progress {
+    max-width: 60%;
+}
+
+.custom-table {
+    .grade-small {
+        margin-left: 0;
+        height: @baseLineHeight * 2;
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+}
+
+/*
+.table.custom-table > tbody > tr > td:nth-child(1) {
+    background: red;
+    padding: 0;
+}*/
+
+.progress-bar {
+    font-size: 11px;
+    /*text-wrap: none;*/
+    height: 40px;
+    line-height: 40px;
+}

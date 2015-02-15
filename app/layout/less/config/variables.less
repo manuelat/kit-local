@@ -1,0 +1,433 @@
+//
+// Variables
+// --------------------------------------------------
+
+@layoutUrl:                        '/bundles/intlendweblayout/frontend/images/';
+@fontsUrl:                         '/bundles/intlendweblayout/fonts/';
+
+@c-positive: #333;
+
+// Global values
+// --------------------------------------------------
+
+@white:                            hsl(0, 0, 100);                 // 100% brightness, #fff, white, rgb(255, 255, 255)
+@gray5:                            hsl(0, 0, 95);                  // 95% brightness, #f2f2f2
+@gray10:                           hsl(0, 0, 90);                  // 90% brightness, #e5e5e5
+@gray15:                           hsl(0, 0, 85);                  // 85% brightness, #d9d9d9
+@gray20:                           hsl(0, 0, 80);                  // 80% brightness, #ccc
+@gray25:                           hsl(0, 0, 75);                  // 75% brightness, #bfbfbf
+@gray30:                           hsl(0, 0, 70);                  // 70% brightness, #b3b3b3
+@gray35:                           hsl(0, 0, 65);                  // 65% brightness, #a6a6a6
+@gray40:                           hsl(0, 0, 60);                  // 60% brightness, #999
+@gray45:                           hsl(0, 0, 55);                  // 55% brightness, #8b8b8b
+@gray50:                           hsl(0, 0, 50);                  // 50% brightness, #808080
+@gray55:                           hsl(0, 0, 45);                  // 45% brightness, #737373
+@gray60:                           hsl(0, 0, 40);                  // 40% brightness, #666
+@gray65:                           hsl(0, 0, 35);                  // 35% brightness, #595959
+@gray70:                           hsl(0, 0, 30);                  // 30% brightness, #4d4d4d
+@gray75:                           hsl(0, 0, 25);                  // 25% brightness, #3f3f3f
+@gray80:                           hsl(0, 0, 20);                  // 20% brightness, #333
+@gray90:                           hsl(0, 0, 10);                  // 10% brightness, #1a1a1a
+@black:                            hsl(0, 0, 0);                   // 0% brightness, #000, black, rgb(0, 0, 0)
+
+// Brand colors
+// -------------------------
+
+@brandColor:                      #2682bf;                        // background color, link-color
+@brandColorCTA:                   #189bf2;                        // call-to-action (investor)
+@brandColor2:                     #e67a2e;                        // background color, link-color
+@brandColor2CTA:                  #ff8c19;                        // call-to-action (borrower)
+@brandColor3:                     #5c6266;                        // basic text color
+@brandColor4:                     #203340;                        // headline text color
+@brandColor5:                     #9da2a6;                        // placeholder text color
+@brandColor6:                     #c7d2d9;                        // input border color
+@brandColor7:                     #edf0f2;                        // default shape background (eg. widget background color, horizontal ruler color)
+
+@brandColorLight:                lighten(@brandColor, 10%);
+@brandColorLighter:              lighten(@brandColor, 20%);
+@brandColorDark:                 darken(@brandColor, 10%);
+@brandColorDarker:               darken(@brandColor, 20%);
+
+@brandColor2Light:               lighten(@brandColor2, 10%);
+@brandColor2Lighter:             lighten(@brandColor2, 20%);
+@brandColor2Dark:                darken(@brandColor2, 10%);
+@brandColor2Darker:              darken(@brandColor2, 10%);
+
+// Grade colors
+
+@gradeAcolor: #5b9bd5;
+@gradeBcolor: #9dc3e6;
+@gradeCcolor: #00b050;
+@gradeDcolor: #92d050;
+@gradeEcolor: #ffc000;
+
+@promoColor:            #0d5d00;
+@promoIconColor:        #931d1a;
+
+
+// Brand colors advanced
+// -------------------------
+
+// investors
+@investor:                         @brandColor;
+@investorDark:                     @brandColorDark;
+@investorActive:                   @brandColorLight;
+@investorLight:                    @brandColorLight;
+@investorCTA:                      @brandColorCTA;
+
+@progressBarBackground:            darken(@c-positive, 6%);
+@progressBarShadow:                #d4d9db;
+
+// borrowers
+@borrower:                         @brandColor2;
+@borrowerDark:                     @brandColor2Dark;
+@borrowerActive:                   @brandColor2Light;
+@borrowerLight:                    @brandColor2Light;
+@borrowerLighter:                  @brandColor2Lighter;
+@borrowerCTA:                      @brandColor2CTA;
+
+@footerBackground:                 #203340;
+@footerBackgroundDark:             darken(@footerBackground, 20%);
+@footerLight:                      #0f0;
+@footerText:                       @white;
+
+
+// Grays
+// -------------------------
+@black:                 #000;
+@grayDarker:            #222;
+@grayDark:              #333;
+@gray:                  #555;
+@grayLight:             #999;
+@grayLighter:           #eee;
+@white:                 #fff;
+
+
+// Accent colors
+// -------------------------
+@blue:                  #049cdb;
+@blueDark:              #0064cd;
+@green:                 #46a546;
+@red:                   #9d261d;
+@yellow:                #ffc40d;
+@orange:                #f89406;
+@pink:                  #c3325f;
+@purple:                #7a43b6;
+
+
+// Scaffolding
+// -------------------------
+@bodyBackground:        @white;
+@textColor:             @brandColor3;
+@textMutedColor:        lighten(@textColor, 20%);
+
+// Links
+// -------------------------
+@linkColor:             @brandColor;
+@linkColorHover:        lighten(@linkColor, 10%);
+
+
+// Typography
+// -------------------------
+@sansFontFamily:        "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@serifFontFamily:       Georgia, "Times New Roman", Times, serif;
+@monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
+@iconFontFamily:        "Lend-Ico";
+@iconFontFamilyZencap:  "Zend-Ico";
+@iconFontFamilyAwesome: "FontAwesome";
+
+@baseFontSize:          14px;
+@baseFontFamily:        @sansFontFamily;
+@baseLineHeight:        20px;
+@baseFontWeight:        400;
+@baseFontWeightBold:    600;
+@altFontFamily:         @sansFontFamily;
+
+@headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
+@headingsLineHeight:    1.2;
+@headingsFontWeight:    300; // instead of browser default, bold
+@headingsFontWeightBold:@baseFontWeightBold;
+@headingsColor:         @brandColor4; // empty to use BS default, @textColor
+
+@headingsFontSizeH1:    38px;
+@headingsFontSizeH2:    28px;
+@headingsFontSizeH3:    18px;
+@headingsFontSizeH4:    16px;
+@headingsFontSizeH5:    14px;
+@headingsFontSizeH6:    12px;
+
+
+// Component sizing
+// -------------------------
+// Based on 14px font-size and 20px line-height
+
+@fontSizeLarge:         18px;
+@fontSizeSmall:         12px;
+@fontSizeMini:          10px;
+
+@lineHeightLarge:       24px;
+@lineHeightSmall:       16px;
+@lineHeightMini:        14px;
+
+@paddingBaseVertical:   6px;
+@paddingBaseHorizontal: 12px;
+@paddingLargeVertical:  14px;
+@paddingLargeHorizontal:16px;
+@paddingSmallVertical:  4px;
+@paddingSmallHorizontal:8px;
+@paddingMiniVertical:   0;
+@paddingMiniHorizontal: 6px;
+
+@paddingBase:           @paddingBaseVertical @paddingBaseHorizontal; // 32px
+@paddingLarge:          @paddingLargeVertical @paddingLargeHorizontal; // 48px
+@paddingSmall:          @paddingSmallVertical @paddingSmallHorizontal; // 28px
+@paddingMini:           @paddingMiniVertical @paddingMiniHorizontal; // 24px
+
+@baseBorderRadius:      4px;
+@borderRadiusLarge:     6px;
+@borderRadiusSmall:     3px;
+
+@baseBackground:        @brandColor7;
+@baseBorderColor:       @baseBackground;
+
+@containerBoxShadow:    ~"0 0 30px rgba(0,0,0,.1)";
+
+
+// Tables
+// -------------------------
+@tableBackground:                   @white; // overall background-color
+@tableBackgroundAccent:             #f9f9f9; // for striping
+@tableBackgroundHover:              #f5f5f5; // for hover
+@tableBorder:                       @baseBackground; // table and cell border
+
+
+// Buttons
+// -------------------------
+@btnBackground:                     darken(@white, 10%);
+@btnBackgroundHighlight:            darken(@btnBackground, 10%);
+@btnBorder:                         transparent;
+
+@btnPrimaryBackground:              @brandColorCTA;
+@btnPrimaryBackgroundHighlight:     spin(@btnPrimaryBackground, 20%);
+
+@btnInfoBackground:                 #5bc0de;
+@btnInfoBackgroundHighlight:        #2f96b4;
+
+@btnSuccessBackground:              #62c462;
+@btnSuccessBackgroundHighlight:     #51a351;
+
+@btnWarningBackground:              lighten(@orange, 15%);
+@btnWarningBackgroundHighlight:     @orange;
+
+@btnDangerBackground:               #ee5f5b;
+@btnDangerBackgroundHighlight:      #bd362f;
+
+@btnInverseBackground:              #444;
+@btnInverseBackgroundHighlight:     @grayDarker;
+
+@btnShadowWidth:                    3px;
+
+
+// Forms
+// -------------------------
+@inputBackground:               @white;
+@inputBorder:                   @brandColor6;
+@inputBorderRadius:             @baseBorderRadius;
+@inputBorderWidth:              1px;
+@inputDisabledBackground:       @grayLighter;
+@formActionsBackground:         #f5f5f5;
+@inputPaddingVertical:          5px;
+@inputHeight:                   @baseLineHeight + (@inputPaddingVertical + @inputBorderWidth) * 2; // base line-height + 8px vertical padding + 2px top/bottom border
+@inputFocusColor:               @brandColor3;
+
+
+// Dropdowns
+// -------------------------
+@dropdownBackground:            @white;
+@dropdownBorder:                rgba(0,0,0,.2);
+@dropdownDividerTop:            #e5e5e5;
+@dropdownDividerBottom:         @white;
+
+@dropdownLinkColor:             @grayDark;
+@dropdownLinkColorHover:        @white;
+@dropdownLinkColorActive:       @white;
+
+@dropdownLinkBackgroundActive:  @linkColor;
+@dropdownLinkBackgroundHover:   @dropdownLinkBackgroundActive;
+
+
+
+// COMPONENT VARIABLES
+// --------------------------------------------------
+
+
+// Z-index master list
+// -------------------------
+// Used for a bird's eye view of components dependent on the z-axis
+// Try to avoid customizing these :)
+@zindexDropdown:          1000;
+@zindexPopover:           1010;
+@zindexTooltip:           1030;
+@zindexFixedNavbar:       1030;
+@zindexModalBackdrop:     1040;
+@zindexModal:             1050;
+
+
+// Sprite icons path
+// -------------------------
+@iconSpritePath:          "@{layoutUrl}bootstrap/glyphicons-halflings.png";
+@iconWhiteSpritePath:     "@{layoutUrl}bootstrap/glyphicons-halflings-white.png";
+
+
+// Input placeholder text color
+// -------------------------
+@placeholderText:         @grayLight;
+
+
+// Hr border color
+// -------------------------
+@hrBorder:                @grayLighter;
+
+
+// Horizontal forms & lists
+// -------------------------
+@horizontalComponentOffset:       180px;
+
+
+// Wells
+// -------------------------
+@wellBackground:                  @baseBackground;
+
+
+// Navbar
+// -------------------------
+@navbarCollapseWidth:             979px;
+@navbarCollapseDesktopWidth:      @navbarCollapseWidth + 1;
+
+@navbarHeight:                    48px;
+@navbarBackground:                @white;
+@navbarBackgroundHighlight:       darken(@navbarBackground, 5%);
+@navbarBorder:                    @baseBackground;
+@navbarBorderWidth:               2px;
+
+@navbarText:                      @brandColor3;
+@navbarLinkColor:                 @navbarText;
+@navbarLinkColorHover:            @navbarText;
+@navbarLinkColorActive:           @navbarText;
+@navbarLinkBackgroundHover:       @white;
+@navbarLinkBackgroundActive:      @white;
+
+@navbarBrandColor:                @navbarLinkColor;
+
+// Inverted navbar
+@navbarInverseBackground:                #111111;
+@navbarInverseBackgroundHighlight:       #222222;
+@navbarInverseBorder:                    #252525;
+
+@navbarInverseText:                      @grayLight;
+@navbarInverseLinkColor:                 @grayLight;
+@navbarInverseLinkColorHover:            @white;
+@navbarInverseLinkColorActive:           @navbarInverseLinkColorHover;
+@navbarInverseLinkBackgroundHover:       transparent;
+@navbarInverseLinkBackgroundActive:      @navbarInverseBackground;
+
+@navbarInverseSearchBackground:          lighten(@navbarInverseBackground, 25%);
+@navbarInverseSearchBackgroundFocus:     @white;
+@navbarInverseSearchBorder:              @navbarInverseBackground;
+@navbarInverseSearchPlaceholderColor:    #ccc;
+
+@navbarInverseBrandColor:                @navbarInverseLinkColor;
+
+
+// Pagination
+// -------------------------
+@paginationBackground:                #fff;
+@paginationBorder:                    #ddd;
+@paginationActiveBackground:          #f5f5f5;
+
+
+// Hero unit
+// -------------------------
+@heroUnitBackground:              @grayLighter;
+@heroUnitHeadingColor:            inherit;
+@heroUnitLeadColor:               inherit;
+
+
+// Form states and alerts
+// -------------------------
+@warningText:             #c09853;
+@warningBackground:       #fcf8e3;
+@warningBorder:           darken(spin(@warningBackground, -10), 3%);
+
+@errorText:               #e74c3c;
+@errorBackground:         #fdedeb;
+@errorBorder:             darken(spin(@errorBackground, -10), 3%);
+@errorBorderInput:        @errorText;
+
+@successText:             #468847;
+@successBackground:       #dff0d8;
+@successBorder:           darken(spin(@successBackground, -10), 5%);
+
+@infoText:                #3a87ad;
+@infoBackground:          #d9edf7;
+@infoBorder:              darken(spin(@infoBackground, -10), 7%);
+
+
+// Tooltips and popovers
+// -------------------------
+@tooltipColor:            #fff;
+@tooltipBackground:       #000;
+@tooltipArrowWidth:       5px;
+@tooltipArrowColor:       @tooltipBackground;
+
+@popoverBackground:       #fff;
+@popoverArrowWidth:       10px;
+@popoverArrowColor:       #fff;
+@popoverTitleBackground:  darken(@popoverBackground, 3%);
+
+// Special enhancement for popovers
+@popoverArrowOuterWidth:  @popoverArrowWidth + 1;
+@popoverArrowOuterColor:  rgba(0,0,0,.25);
+
+
+// GRID
+// --------------------------------------------------
+@containerWidth:                  940px;
+
+@verticalRhythm:                  48px;
+
+@gridPaddingWidth:                @gridGutterWidth;
+@gridPaddingLargeWidth:           @gridPaddingWidth * 2;
+@gridPaddingSmallWidth:           @gridPaddingWidth / 2;
+
+
+// Default 940px grid
+// -------------------------
+@gridColumns:             12;
+@gridColumnWidth:         60px;
+@gridGutterWidth:         20px;
+@gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
+
+// 1200px min
+@gridColumnWidth1200:     70px;
+@gridGutterWidth1200:     30px;
+@gridRowWidth1200:        (@gridColumns * @gridColumnWidth1200) + (@gridGutterWidth1200 * (@gridColumns - 1));
+
+// 768px-979px
+@gridColumnWidth768:      42px;
+@gridGutterWidth768:      20px;
+@gridRowWidth768:         (@gridColumns * @gridColumnWidth768) + (@gridGutterWidth768 * (@gridColumns - 1));
+
+
+// Fluid grid
+// -------------------------
+@fluidGridColumnWidth:    percentage(@gridColumnWidth/@gridRowWidth);
+@fluidGridGutterWidth:    percentage(@gridGutterWidth/@gridRowWidth);
+
+// 1200px min
+@fluidGridColumnWidth1200:     percentage(@gridColumnWidth1200/@gridRowWidth1200);
+@fluidGridGutterWidth1200:     percentage(@gridGutterWidth1200/@gridRowWidth1200);
+
+// 768px-979px
+@fluidGridColumnWidth768:      percentage(@gridColumnWidth768/@gridRowWidth768);
+@fluidGridGutterWidth768:      percentage(@gridGutterWidth768/@gridRowWidth768);

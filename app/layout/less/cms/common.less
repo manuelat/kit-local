@@ -1,0 +1,197 @@
+.cms-page {
+
+    .styled {
+
+        li {
+            padding: @paddingBaseVertical 0 @paddingBaseVertical @gridGutterWidth * 1.5;
+            border-bottom-color: @brandColor6;
+
+            &:before {
+                line-height: @baseLineHeight;
+                position: absolute;
+                top: @paddingBaseVertical;
+                left: 0;
+                content: "\f13a";
+                font-family: @iconFontFamilyAwesome;
+                font-size: 133%;
+            }
+
+            &:first-of-type {
+
+                &:before {
+                    top: 0;
+                }
+            }
+        }
+
+        &.large {
+            @offset-y: 3px;
+
+            li {
+                padding: @paddingLargeVertical 0 @paddingLargeVertical @gridGutterWidth * 2;
+
+                &:before {
+                    top: @paddingLargeVertical + @offset-y;
+                }
+
+                &:first-of-type {
+
+                    &:before {
+                        top: @offset-y;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.borrower {
+
+    .styled {
+
+        li {
+
+            &:before {
+                color: @borrowerCTA;
+            }
+
+            i {
+                color: @borrowerCTA;
+            }
+        }
+    }
+}
+
+.investor {
+
+    .styled {
+
+        li {
+
+            &:before {
+                color: @investorCTA;
+            }
+
+            i {
+                color: @investorCTA;
+            }
+        }
+    }
+}
+
+.main-title {
+    h1 {
+        color: @white;
+    }
+
+    p {
+        font-size: @fontSizeSmall + 1;
+        color: @white;
+        &.text-left {
+            padding-top: 55px;
+        }
+    }
+}
+
+
+.header-top {
+    background-color: @gray5;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    /*min-width: @containerWidth;*/
+    //    min-height: @verticalRhythm * 8; // 48px * 8px = 384px
+
+    .container {
+        min-height: @verticalRhythm * 6; // 48px * 6 = 384px
+    }
+
+}
+
+
+/*
+.testimonials {
+
+    .detail-box-wrapper {
+        .clearfix;
+        margin-bottom: @gridGutterWidth;
+
+        img {
+
+        }
+
+        > p {
+            background-color: @white;
+            margin-bottom: 0;
+            height: @verticalRhythm;
+            line-height: @verticalRhythm;
+        }
+
+        .detail-box {
+            .detail-box-style;
+            background-color: @baseBackground;
+            width: 33.33%;
+            height: @verticalRhythm + @gridGutterWidth;
+
+            &.loan-amount {
+            }
+
+            &.years {
+            }
+
+            &.interest-rate {
+            }
+
+        }
+    }
+}
+
+.benefits {
+
+    .row {
+        .row-gutter-style;
+    }
+}*/
+
+// TABS
+
+.nav-tabs {
+    background-color: #edf0f2;
+    border-bottom: 0 none;
+    height: 48px;
+
+}
+
+.nav-tabs > li > a {
+    border-color: #edf0f2;
+    border-radius: 0;
+    border-style: solid none !important;
+    border-width: 4px 0 !important;
+    height: 100%;
+    line-height: 40px;
+    padding: 0 20px;
+    &:hover {
+        background: #fff;
+        border-bottom-color: #fff !important;
+    }
+}
+
+.nav-tabs > .active > a {
+    border-bottom-color: #fff !important;
+}
+
+.nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #fff;
+    border-color: #fff transparent;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    border: 1px solid #edf0f2;
+}

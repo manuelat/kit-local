@@ -1,0 +1,65 @@
+.press {
+
+    // I commented it out
+    /*.page-header {
+      margin-top: -@verticalRhythm;
+    }*/
+
+    .media-response {
+
+        // I commented it out
+        // Use in html <hr/> instead
+        /*.row {
+            .hr-style;
+        }*/
+
+        blockquote {
+            padding-top: 0;
+            padding-bottom: 0;
+
+            &:before,
+            &:after {
+                color: inherit;
+            }
+
+            &:before {
+                // creates the quote icon
+                top: @verticalRhythm / 2;
+            }
+
+            &:after {
+                // creates the quote icon
+                bottom: 0;
+            }
+
+            p {
+                font-size: @baseFontSize;
+                font-weight: @baseFontWeight;
+            }
+
+            + p {
+                padding-left: (@gridPaddingLargeWidth * 1.5);
+                margin-top: @baseLineHeight;
+
+                .last-of-type-margin-bottom;
+            }
+        }
+    }
+
+    .press-materials {
+
+        img {
+            margin-bottom: @gridGutterWidth / 4;
+        }
+    }
+}
+
+// I commented it out
+/*.press-article {
+
+  h1 {
+    .text-left;
+  }
+
+}*/
+

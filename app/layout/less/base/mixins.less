@@ -1,0 +1,175 @@
+
+.last-of-type-margin-bottom {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/*
+.pull-top {
+  position: absolute !important;
+  top: @gridPaddingWidth;
+}
+
+.pull-down {
+  position: absolute !important;
+  bottom: @gridPaddingWidth;
+}*/
+
+
+
+// styles links with the corresponding color, eg. borrower or investor
+.link-color(@linkColor) {
+  color: @linkColor;
+
+  &:hover {
+    color: lighten(@linkColor, 10%);
+  }
+}
+
+/*
+// I commented it out
+
+// Progress bar
+.progress-background(@progressBarBackground, @progressBarShadow) {
+  background-color: @progressBarBackground;
+  background-repeat: repeat-x;
+  background-image: -ms-linear-gradient(top, @progressBarShadow 10%, @progressBarBackground 11%);
+  background-image: -khtml-gradient(linear,left top,left bottom,from(@progressBarShadow),to(@progressBarBackground));
+  background-image: -moz-linear-gradient(top, @progressBarShadow 10%, @progressBarBackground 11%);
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(10%, @progressBarShadow),color-stop(11%, @progressBarBackground));
+  background-image: -webkit-linear-gradient(top, @progressBarShadow 10%, @progressBarBackground 11%);
+  background-image: -o-linear-gradient(top, @progressBarShadow 10%, @progressBarBackground 11%);
+  background-image: linear-gradient(top, @progressBarShadow 10%, @progressBarBackground 11%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=@progressBarShadow ,endColorstr=@progressBarBackground ,GradientType=0);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+// Used for loan request step navigation (alias progressbar)
+.step-style (@backgroundColor: @baseBackground, @stepBackgroundColor: @baseBackground, @textColor: @headingsColor, @stepTextColor: @headingsColor) {
+  color: @textColor !important;
+  background-color: @backgroundColor;
+
+  .step-number {
+    background-color: darken(@stepBackgroundColor, 5%);
+  }
+
+  &:hover {
+    background-color: darken(@backgroundColor, 2%);
+
+    .step-number {
+      color: @stepTextColor !important;
+      background-color: darken(@stepBackgroundColor, 8%);
+    }
+  }
+}
+
+// style for text below buttons
+.hint-style {
+
+  .btn + p,
+  form + .hintContainer,
+  form + .active-popover,
+  .container > div + .active-popover,
+  .form-item + .active-popover {
+    position: absolute;
+    bottom: @baseLineHeight;
+    margin-bottom: 0;
+    white-space: nowrap;
+  }
+
+  .btn + p {
+    width: 100%;
+  }
+}
+
+.error-label-style {
+  color: @errorText;
+  font-size: @fontSizeSmall;
+  line-height: @lineHeightSmall;
+  margin-top: -8px;
+  margin-bottom: 15px;
+}
+
+.category-icon-style {
+  font-family: @iconFontFamilyZencap;
+  cursor: default;
+}
+
+.intlend-icon-style {
+  font-family: @iconFontFamily;
+  cursor: default;
+}
+
+.input-text-oversized-style {
+  font-size: @headingsFontSizeH2;
+//  font-weight: @headingsFontWeightBold;
+  padding: @paddingBase;
+  margin: 0 0 @gridGutterWidth 0;
+  height: @verticalRhythm;
+}
+
+.nobr {
+  white-space: nowrap;
+}
+*/
+
+/*
+.hr-style(@hrBorderColor: @baseBorderColor, @hrWidth: @containerWidth) {
+
+  &:after {
+    display: block;
+    content: '';
+    padding-bottom: (@verticalRhythm / 2);
+    border-bottom: 1px solid @hrBorderColor;
+    margin-bottom: (@verticalRhythm / 2);
+    margin-left: 20px;
+    width: @hrWidth;
+  }
+
+  &:last-of-type {
+
+    &:after {
+      padding-bottom: 0;
+      border-bottom: 0 none;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.detail-box-style {
+//.detail-box-style(@detailboxWidth) {
+  .pull-left;
+  .box-sizing(border-box);
+  .text-center;
+  overflow: hidden;
+//  width: @detailboxWidth;
+  padding: (@gridGutterWidth / 2) 0;
+  border-right: 2px solid @white;
+
+  &:last-child {
+    border-right: 0 none !important;
+  }
+
+  p {
+    font-size: @headingsFontSizeH2;
+    line-height: @lineHeightLarge * 1.2;
+    padding: 0 @paddingBaseHorizontal;
+    margin-bottom: 0;
+
+    small {
+      display: block;
+      font-size: @fontSizeSmall;
+      font-weight: normal;
+    }
+  }
+}
+
+.row-gutter-style {
+  margin-bottom: @verticalRhythm / 2;
+
+  .last-of-type-margin-bottom;
+}
+*/

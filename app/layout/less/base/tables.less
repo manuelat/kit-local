@@ -1,0 +1,164 @@
+//
+// Tables
+// --------------------------------------------------
+
+// BASE TABLES
+// -----------------
+
+table {
+
+}
+
+.table > thead > tr > th {
+    border-bottom: none;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td  {
+    border-top: 1px solid @baseBackground;
+}
+
+// BASELINE STYLES
+// ---------------
+
+.table {
+    width: 100%;
+    margin-bottom: @gridGutterWidth;
+
+    caption {
+        /*.text-left;*/
+        color: @headingsColor;
+        font-size: @headingsFontSizeH3;
+        font-weight: @headingsFontWeightBold;
+        height: @verticalRhythm - 10;
+        /*line-height: @verticalRhythm * 1.25;*/
+    }
+
+    /*.highlight {
+        color: @brandColor2;
+    }*/
+
+    // Cells
+    th,
+    td {
+        padding: @paddingBaseVertical @paddingBaseHorizontal;
+
+        /*&.text-right {
+            .text-right;
+        }
+
+        &.text-center {
+            .text-center;
+        }*/
+    }
+
+    th {
+        background-color: @baseBackground;
+        font-weight: @baseFontWeightBold;
+    }
+
+    // Bottom align for column headings
+    thead {
+        font-size: @fontSizeSmall;
+        font-weight: @baseFontWeightBold;
+
+        th {
+            white-space: nowrap;
+
+            a {
+
+                i {
+
+                    &.next {
+                        visibility: hidden;
+                        opacity: .3;
+                        filter: alpha(opacity=30);
+                    }
+                }
+            }
+        }
+
+        td {
+
+        }
+
+    }
+
+/*
+    // Account for multiple tbody instances
+    tbody + tbody {
+
+    }
+
+    // Nesting
+    .table {
+
+    }*/
+}
+
+/*
+
+// BORDERED VERSION
+// ----------------
+
+.table-bordered {
+    .border-radius(0);
+
+    // For first th/td in the first row in the first thead or tbody
+    thead:first-child tr:first-child > th:first-child,
+    tbody:first-child tr:first-child > td:first-child,
+    tbody:first-child tr:first-child > th:first-child {
+        .border-top-left-radius(0);
+    }
+    // For last th/td in the first row in the first thead or tbody
+    thead:first-child tr:first-child > th:last-child,
+    tbody:first-child tr:first-child > td:last-child,
+    tbody:first-child tr:first-child > th:last-child {
+        .border-top-right-radius(0);
+    }
+    // For first th/td (can be either) in the last row in the last thead, tbody, and tfoot
+    thead:last-child tr:last-child > th:first-child,
+    tbody:last-child tr:last-child > td:first-child,
+    tbody:last-child tr:last-child > th:first-child,
+    tfoot:last-child tr:last-child > td:first-child,
+    tfoot:last-child tr:last-child > th:first-child {
+        .border-bottom-left-radius(0);
+    }
+    // For last th/td (can be either) in the last row in the last thead, tbody, and tfoot
+    thead:last-child tr:last-child > th:last-child,
+    tbody:last-child tr:last-child > td:last-child,
+    tbody:last-child tr:last-child > th:last-child,
+    tfoot:last-child tr:last-child > td:last-child,
+    tfoot:last-child tr:last-child > th:last-child {
+        .border-bottom-right-radius(0);
+    }
+
+    // Clear border-radius for first and last td in the last row in the last tbody for table with tfoot
+    tfoot + tbody:last-child tr:last-child td:first-child {
+        .border-bottom-left-radius(0);
+    }
+    tfoot + tbody:last-child tr:last-child td:last-child {
+        .border-bottom-right-radius(0);
+    }
+
+    // Special fixes to round the left border on the first td/th
+    caption + thead tr:first-child th:first-child,
+    caption + tbody tr:first-child td:first-child,
+    colgroup + thead tr:first-child th:first-child,
+    colgroup + tbody tr:first-child td:first-child {
+        .border-top-left-radius(0);
+    }
+    caption + thead tr:first-child th:last-child,
+    caption + tbody tr:first-child td:last-child,
+    colgroup + thead tr:first-child th:last-child,
+    colgroup + tbody tr:first-child td:last-child {
+        .border-top-right-radius(0);
+    }
+
+}
+
+*/

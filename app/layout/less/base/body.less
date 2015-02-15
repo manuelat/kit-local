@@ -1,0 +1,53 @@
+.content {
+    padding: @verticalRhythm 0;
+
+    // I commented it out
+    /*> .content { // TODO: nested .content DIVs are just wrong!
+        padding: 0;
+    }
+*/
+}
+
+.page-header {
+    padding: 0;
+    border: 0 none;
+    margin: 0 0 @verticalRhythm * 0.8;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        margin-bottom: 0;
+    }
+}
+
+
+.resp-iframe {
+    iframe {
+        .box-shadow("0 0 5px rgba(0,0,0,.2)");
+        margin-bottom: @verticalRhythm;
+    }
+}
+
+// I added the tags below
+// Default blue link color (investors)
+
+a {
+    color: @brandColor;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: #3f9cd9;
+}
+
+// Orange link color (borrower)
+.link-borrower {
+    .link-color(@borrower);
+}
+
+// Orange text (borrower)
+.text-orange {
+    color: @borrower;
+}

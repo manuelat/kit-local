@@ -46,7 +46,11 @@ $htmlContent = $twig->render(
     $twigData->getOutput()
 );
 
-$less = new lessc();
-$less->compileFile(LESS . '/index.less', PUBLIC_DOC . '/css/style.css');
+//$less = new lessc();
+//$less->compileFile(LESS . '/style.less', PUBLIC_DOC . '/css/style.css');
+
+$parser = new Less_Parser();
+$parser->parseFile( LESS . '/style.less' );
+file_put_contents(PUBLIC_DOC . '/css/style.css', $parser->getCss());
 
 echo $htmlContent;

@@ -1,0 +1,98 @@
+.homepage {
+    //  margin-top: -@verticalRhythm;
+    //  margin-bottom: -@verticalRhythm;
+
+    .main-image {
+        background-image: url("/bundles/intlenddeweblayout/frontend/images/cms/home/Hero-home_02_02.jpg");
+
+       /* background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: center;*/
+
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .xs-main-image {
+        background-image: url("/bundles/intlenddeweblayout/frontend/images/cms/home/Hero-home_02_02.jpg");
+        /*min-height: 208px;*/
+        /*background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;*/
+        background-size: 100%;
+        background-repeat: no-repeat;
+
+        h1 {
+            color: @white;
+            padding-top: 28px;
+            font-size: 25px;
+        }
+
+    }
+
+    .pull-top {
+        padding-top: 56px;
+        top: -145px;
+        left: 0;
+        width: 100%;
+    }
+
+    .header-top {
+
+        .pull-down {
+            bottom: -220px;
+        }
+
+        .white-box {
+            background: @white;
+            border-radius: @baseBorderRadius;
+        }
+
+        .borrower, .investor {
+            padding: 0 35px;
+        }
+
+        .styled {
+            /*border-top: 1px solid @baseBackground;*/
+            padding-bottom: 20px;
+            margin-bottom: 0;
+            margin-left: -38px;
+            li {
+                &:before {
+                    content: "\f058";
+                }
+
+                border-bottom: 0;
+            }
+        }
+    }
+}
+
+.logos .item blockquote {
+
+    &:after {
+        right: 21px;
+        color: #5c6266;
+        bottom: 45px;
+    }
+    &:before {
+        color: #5c6266;
+        top: 47px;
+        left: 20px;
+    }
+}
+
+.logos p em {
+    color: #3f9cd9;
+
+    &:before {
+        content: "\f06e";
+        color: #3f9cd9;
+        font-family: @iconFontFamilyAwesome;
+        font-size: 20px;
+        padding-right: 7px;
+    }
+}

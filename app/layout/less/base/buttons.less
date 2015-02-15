@@ -1,0 +1,176 @@
+//
+// Buttons
+// --------------------------------------------------
+
+// Base styles
+// --------------------------------------------------
+
+.btnShadow(@color) {
+    -webkit-box-shadow: inset 0 -@btnShadowWidth 0 darken(@color, 10%);
+    -moz-box-shadow: inset 0 -@btnShadowWidth 0 darken(@color, 10%);
+    box-shadow: inset 0 -@btnShadowWidth 0 darken(@color, 10%);
+}
+
+.buttonStyling(@buttonColor, @fontColor) {
+    color: @fontColor !important;
+    .btnShadow(@buttonColor);
+    background: @buttonColor;
+
+    &:hover,
+    &:focus {
+        color: @fontColor;
+        background: lighten(@buttonColor, 5%);
+    }
+
+    &:focus {
+        .btnShadow(@buttonColor);
+    }
+
+    &.active,
+    &:active {
+        .btnShadow(@buttonColor);
+        //    .box-shadow(~"inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05)");
+    }
+
+    &.disabled,
+    &[disabled] {
+        background: @buttonColor;
+        .btnShadow(@buttonColor);
+
+        &:hover,
+        &:focus {
+            background: @buttonColor !important;
+        }
+    }
+}
+
+// Core
+.btn {
+    .buttonStyling(@btnBackground, @textColor);
+    background-image: none;
+    //  padding: @paddingBaseVertical @paddingBaseHorizontal;
+    padding: @paddingBase;
+    border: none;
+    font-weight: @baseFontWeightBold;
+    text-shadow: none !important;
+    outline: none !important;
+    white-space: normal;
+
+    &:hover,
+    &:focus {
+        //    background: lighten(@buttonColor, 5%);
+    }
+
+    &.active,
+    &:active {
+        //    .box-shadow(~"inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05)");
+    }
+
+    &.disabled,
+    &[disabled] {
+        //    background: lighten(@buttonColor, 40%);
+        //    .btnShadow(@buttonColor);
+    }
+
+}
+
+// Button Sizes
+// --------------------------------------------------
+
+// Large
+.btn-lg {
+    //  padding: (@paddingBaseVertical + @btnShadowWidth) @paddingBaseHorizontal;
+    padding: @paddingLarge;
+    font-size: @headingsFontSizeH3;
+    .border-top-radius(@baseBorderRadius);
+    .border-right-radius(@baseBorderRadius);
+    .border-bottom-radius(@baseBorderRadius);
+    .border-left-radius(@baseBorderRadius);
+}
+
+// Small
+.btn-sm {
+    font-size: @fontSizeSmall;
+    //  padding: (@paddingSmallVertical + @btnShadowWidth) @paddingSmallHorizontal;
+    padding: @paddingSmall;
+    .border-top-radius(@baseBorderRadius);
+    .border-right-radius(@baseBorderRadius);
+    .border-bottom-radius(@baseBorderRadius);
+    .border-left-radius(@baseBorderRadius);
+}
+
+// Mini
+.btn-mini {
+    font-size: @fontSizeMini;
+    //  padding: (@paddingMiniVertical + @btnShadowWidth) @paddingMiniHorizontal;
+    padding: @paddingMini;
+    .border-top-radius(@borderRadiusSmall);
+    .border-right-radius(@borderRadiusSmall);
+    .border-bottom-radius(@borderRadiusSmall);
+    .border-left-radius(@borderRadiusSmall);
+}
+
+// Set the backgrounds
+// -------------------------
+
+.btn-default {
+    .buttonStyling(@btnBackground, @textColor);
+}
+
+.btn-primary {
+    .buttonStyling(@btnPrimaryBackground, @white);
+}
+
+.btn-warning {
+    .buttonStyling(@btnWarningBackground, @white);
+}
+
+.btn-danger {
+    .buttonStyling(@btnDangerBackground, @white);
+}
+
+.btn-success {
+    .buttonStyling(@btnSuccessBackground, @white);
+}
+
+.btn-info {
+    .buttonStyling(@btnInfoBackground, @white);
+}
+
+.btn-inverse {
+
+}
+
+.btn-brrwr {
+    .buttonStyling(@borrowerCTA, @white);
+}
+
+.btn-nvstr {
+    .buttonStyling(@investorCTA, @white);
+}
+
+.btn-white {
+    .buttonStyling(@white, @textColor);
+}
+
+// I commented it out
+/*
+
+// TODO: Spinner
+button .spinner {
+  display: none;
+}
+
+button.has-spinner.active {
+  cursor:progress;
+}
+
+button.has-spinner.active .spinner {
+  display: inline-block;
+}
+*/
+
+.active i {
+    font-family: 'fontawesome';
+}
+

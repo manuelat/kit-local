@@ -1,0 +1,325 @@
+//
+// Typography
+// --------------------------------------------------
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,300,400,600);
+@import url(https://fonts.googleapis.com/css?family=PT+Sans);
+
+@font-face {
+    font-family: @iconFontFamilyZencap;
+    src: url("@{fontsUrl}Zend-Ico.eot");
+    src: url("@{fontsUrl}Zend-Ico.eot?#iefix") format('embedded-opentype'),
+    url("@{fontsUrl}Zend-Ico.woff") format('woff'),
+    url("@{fontsUrl}Zend-Ico.ttf") format('truetype'),
+    url("@{fontsUrl}Zend-Ico.svg#Zend-Ico") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: @iconFontFamily;
+    src: url("@{fontsUrl}Lend-Ico.eot?xmas");
+    src: url("@{fontsUrl}Lend-Ico.eot?xmas#iefix") format('embedded-opentype'),
+    url("@{fontsUrl}Lend-Ico.woff?xmas") format('woff'),
+    url("@{fontsUrl}Lend-Ico.ttf?xmas") format('truetype'),
+    url("@{fontsUrl}Lend-Ico.svg#Lend-Ico") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// Body text
+// -------------------------
+
+p {
+    margin: 0 0 @baseLineHeight;
+
+    //  .last-of-type-margin-bottom;
+
+    small {
+        line-height: @lineHeightSmall;
+    }
+}
+
+.lead {
+    font-size: @baseFontSize * 1.4;
+    font-weight: @baseFontWeight;
+    line-height: @baseLineHeight * 1.4;
+    margin: 0 0 @baseLineHeight;
+}
+
+
+
+// Headings
+// -------------------------
+
+h1,
+.faux-h1,
+h2,
+.faux-h2,
+h3,
+.faux-h3,
+h4,
+h5,
+h6 {
+    color: @headingsColor;
+    font-weight: @headingsFontWeight;
+    line-height: @headingsLineHeight;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+// I commented this out
+/*
+
+h1,
+h2,
+h3 {
+  position: relative;
+
+  small,
+  .btn {
+    // to position optional links and buttons
+    position: absolute;
+    right: 0;
+  }
+
+  small {
+    font-size: @baseFontSize;
+    bottom: 6px;
+    font-weight: @baseFontWeightBold;
+
+    a {
+      .nobr;
+    }
+
+    i {
+    }
+  }
+
+  i {
+    font-size: @baseFontSize;
+  }
+}
+*/
+h1,
+.faux-h1 {
+    font-size: @headingsFontSizeH1;
+    margin-bottom: @verticalRhythm * 0.8;
+
+    + .lead {
+        margin-top: -(@verticalRhythm / 2);
+    }
+
+    + h4 {
+        margin-top: -(@verticalRhythm * 0.4);
+    }
+}
+
+h2,
+.faux-h2 {
+    font-size: @headingsFontSizeH2;
+    margin-bottom: 1em;
+
+    .quick-tooltip {
+        vertical-align: middle;
+    }
+}
+
+h3,
+.faux-h3 {
+    font-size: @headingsFontSizeH3;
+    font-weight: @headingsFontWeightBold;
+}
+
+h4,
+.faux-h4 {
+    font-size: @headingsFontSizeH4 - 1;
+}
+
+h5 {
+    font-size: @headingsFontSizeH5;
+    font-weight: @headingsFontWeightBold;
+}
+
+h6 {
+    font-size: @headingsFontSizeH6;
+}
+
+.title-lead {
+    font-size: 22px;
+    font-weight: 100;
+}
+
+@media (min-width: 600px) {
+    .title-lead {
+        font-size: 38px;
+        margin-top: 5px;
+    }
+}
+
+@media (min-width: 992px) {
+    .title-lead {
+        margin-left: -7px;
+    }
+}
+
+a {
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+// Lists
+// --------------------------------------------------
+
+// Unordered and Ordered lists
+ul,
+ol {
+    margin-bottom: @baseLineHeight;
+}
+
+.unstyled,
+.styled {
+
+    [class^="icon-"],
+    [class*=" icon-"] {
+        margin-right: 6px;
+    }
+}
+
+// Remove default list styles
+.unstyled {
+}
+
+.styled {
+    list-style: none;
+    margin-left: 0;
+
+    li {
+        position: relative;
+        padding: @paddingBaseVertical 0;
+        border-bottom: 1px solid @baseBorderColor;
+
+        &:first-of-type {
+            padding-top: 0 !important;
+        }
+
+        &:last-of-type {
+            padding-bottom: 0 !important;
+            border-bottom: 0 none;
+        }
+
+        [class^="icon-"],
+        [class*=" icon-"] {
+            font-size: 133%;
+        }
+    }
+
+    &.large {
+
+        li {
+            font-size: @fontSizeLarge;
+            padding: @paddingLargeVertical 0;
+        }
+    }
+}
+
+// MISC
+// ----
+
+// Horizontal rules
+hr {
+    margin: (@verticalRhythm / 2) 0;
+    border-top-width: 1px;
+    border-top-color: @baseBorderColor;
+    border-bottom-width: 1px;
+}
+
+hr.middle-line {
+    border-top-width: 2px;
+    border-color: red;
+    margin-top: 64px;
+    margin-left: -19px;
+    margin-right: -16px;
+   /* height: 128px;
+    line-height: 128px;*/
+
+}
+
+// Blockquotes
+blockquote {
+    padding: (@verticalRhythm /2) (@gridPaddingLargeWidth * 1.5);
+    border-left: 0 none;
+    margin: 0;
+    position: relative;
+
+    &:before,
+    &:after {
+        font-family: 'PT Sans', sans-serif;
+        content: "";
+        display: block;
+        position: absolute;
+        color: @brandColor;
+        font-size: 96px;
+    }
+
+    &:before {
+        // creates the quote icon
+        content: "“";
+        top: @verticalRhythm;
+        left: 0;
+    }
+
+    &:after {
+        // creates the quote icon
+        content: "”";
+        bottom: @baseLineHeight;
+        right: 0;
+    }
+
+    img {
+
+        &.pull-left,
+        &.pull-right {
+            margin-bottom: @gridGutterWidth;
+        }
+    }
+
+    p {
+        line-height: @lineHeightLarge;
+        margin-bottom: @baseLineHeight;
+        font-weight: 300;
+
+        &:last-of-type {
+            margin-bottom: 0 !important;
+
+            em {
+                font-size: @baseFontSize;
+                font-style: normal;
+                font-weight: @baseFontWeightBold;
+                line-height: @baseLineHeight;
+                .text-right;
+            }
+        }
+    }
+}
+
+// Icons dimensions
+
+.fa-large {
+    font-size: 20px;
+}
+
+.fa-medium {
+    font-size: 18px;
+}
+
+.fa-small {
+    font-size: 15px;
+}
+
+// Text color
+
+.text-white {
+    color: @white;
+}
