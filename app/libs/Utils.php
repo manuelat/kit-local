@@ -40,4 +40,49 @@ abstract class Utils
         self::p($data, $title);
         die;
     }
+
+    public static function nice_url_title($str, $separator = 'dash', $lowercase = true)
+    {
+        if ( $separator == 'dash' ) {
+            $search     = '_';
+            $replace    = '-';
+        } else {
+            $search     = '-';
+            $replace    = '_';
+        }
+
+        $tr = array(
+            'Î'=>'I',
+            'Ă'=>'A',
+            'Â'=>'A',
+            'î'=>'i',
+            'â'=>'a',
+            'ă'=>'a',
+            'Ş'=>'S',
+            'ş'=>'s',
+            'Ţ'=>'T',
+            'ţ'=>'t',
+        );
+        $str = strtr($str, $tr);
+
+
+        $trans = array(
+            '&\#\d+?;'              => '',
+            '&\S+?;'                => '',
+            '\s+'                   => $replace,
+            '[^a-z0-9\-_]'          => '',
+            $replace.'+'            => $replace,
+            $replace.'$'            => $replace,
+            '^'.$replace            => $replace,
+            '\.+$'                  => ''
+        );
+
+        $str = ($lowercase === TRUE) ? strtolower(strip_tags($str)) : strip_tags($str);
+
+        foreach ($trans as $key => $val) {
+            $str = preg_replace("#".$key."#i", $val, $str);
+        }
+
+        return trim(stripslashes($str));
+    }
 }

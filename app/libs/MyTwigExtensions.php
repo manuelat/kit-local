@@ -22,7 +22,7 @@ class MyTwigExtensions extends Twig_Extension
     {
         return array(
             new Twig_SimpleFilter('nice_url_title', function($text){
-                return $text;
+                return Utils::nice_url_title($text);
             }),
             new Twig_SimpleFilter('truncate', function($string, $num=255){
                 $string = substr($string, 0, $num);
@@ -38,17 +38,12 @@ class MyTwigExtensions extends Twig_Extension
                 return Utils::p($data, $title);
             }),
             // generate url
-            new Twig_SimpleFunction('myurl', function(){
+            new Twig_SimpleFunction('path', function(){
                 $params = func_get_args();
                 $pathName = $params[0];
                 $parameters = ( isset($params[1]) ) ? $params[1] : array();
 
-                $url = '/' . $pathName;
-                if ( ! empty($parameters) ) {
-                    $url .= '?' . http_build_query($parameters);
-                }
-
-                return $url;
+                return SdkRouter::getInstance()->generate($pathName, $parameters);
             }),
             // get settings
             new Twig_SimpleFunction('getSettings', function(){

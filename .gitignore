@@ -4,3 +4,5 @@ vendor/
 public_html/bower/
 *.log
 composer.lock
+public_html/css/style.css
+.idea/

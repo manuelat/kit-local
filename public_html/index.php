@@ -3,13 +3,14 @@
 /**
  * https://getcomposer.org/doc/04-schema.md
  */
-error_reporting(E_ALL);
-ini_set('error_reporting', 'on');
 
 define('SYSTEM',    dirname(__DIR__));
 define('LAYOUT',    SYSTEM . '/app/layout/');
 define('MODULES',   SYSTEM . '/app/modules/');
 define('LIBS',      SYSTEM . '/app/libs/');
+define('CONFIG',    SYSTEM . '/app/config/');
+define('LESS',      LAYOUT . '/less/');
+define('PUBLIC_DOC',SYSTEM . '/public_html');
 
 require_once SYSTEM . '/vendor/autoload.php';
 
@@ -19,6 +20,13 @@ $directories = array(
     LAYOUT . '/default/',
     LAYOUT . '/views/',
 );
+
+use Symfony\Component\Yaml\Yaml;
+
+$routes = Yaml::parse(file_get_contents(CONFIG . '/routes.yml'));
+
+$route = SdkRouter::getInstance();
+$route->registerRoutes($routes);
 
 $twigData = new TwigData($directories);
 $loader = new Twig_Loader_Filesystem($twigData->getDirs());
@@ -37,5 +45,8 @@ $htmlContent = $twig->render(
     $twigData->getTemplate(),
     $twigData->getOutput()
 );
+
+$less = new lessc();
+$less->compileFile(LESS . '/index.less', PUBLIC_DOC . '/css/style.css');
 
 echo $htmlContent;

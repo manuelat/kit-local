@@ -116,7 +116,7 @@ class TwigData extends Helper
     {
         $file = $this->getScript();
         if ( is_file($file) ) {
-            $output = include_once $file;
+            $output = require_once $file;
             $this->output = array_merge($this->output, $output);
         }
     }
