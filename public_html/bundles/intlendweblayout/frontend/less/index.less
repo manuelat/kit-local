@@ -1,0 +1,432 @@
+.rounded-corners (@radius: 6px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.index-headline input, .index-headline select{
+    display: block;
+}
+
+.pull-right.index-headline {
+    margin-right: 60px;
+}
+
+.pull-left.index-headline {
+    margin-left: 60px;
+}
+
+#overlay {
+  .opacity(50);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: white;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+@boxMarginVert: 30px;
+@boxMarginHor: 80px;
+@boxPaddingHor: 15px;
+@boxWidth: 340px;
+@boxHeight: 192px;
+
+#home-top {
+    min-width: 960px;
+    background: url("@{home}bg_top.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 0px;
+
+    .home-regbox-header {
+      font-size: 32px;
+      margin: 10px 0 5px 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    #box-inv, #box-borr {
+        width: @boxWidth;
+        min-height: 384px;
+        text-align: center;
+        position: relative;
+        //margin-top: @boxMarginVert - 9;
+        h2, p {
+            padding: 0px 30px;
+        }
+
+
+        .home-box-dtls-rate p{
+            padding: 0px;
+        }
+
+        .home-box-dtls{
+          position: absolute;
+          bottom: 0px;
+          min-width: 370px;
+        }
+    }
+
+    #box-inv {
+        margin-right: @boxMarginHor;
+        float: right;
+        line-height: 58px;
+        min-width: 370px;
+        .home-box-dtls {
+            border-top: 0px solid @investorBlue;
+
+            .unstyled {
+
+                margin-top: 24px;
+
+                li {
+                    margin: 15px 0px;
+
+                    i {
+                        color: @investorBlue;
+                        margin-right: 10px;
+                        font-size: 22px;
+                        margin-top: -2px;
+                        display: inline-block;
+                        float: left;
+                    }
+                }
+            }
+        }
+    }
+
+    #box-borr {
+        margin-left: @boxMarginHor;
+        float: left;
+        line-height: 58px;
+        min-width: 370px;
+
+        .home-box-dtls {
+            border-top: 0px solid @borrowerGreen;
+        }
+    }
+    .header-row
+    {
+      min-height: 384px;
+      position: relative;
+        h3
+        {
+          margin-top: 66px;
+          margin-left: 10px;
+          margin-right: 10px;
+        }
+    }
+    .header-bottom
+    {
+      height: 192px;
+      width: 100%;
+      position: absolute;
+      bottom: 0px;
+    }
+    .header-top
+    {
+      width: 100%;
+      position: absolute;
+      top: 0px;
+      h3
+      {
+        width:370px;
+        margin-left: 0px;
+        margin-right: 0px;
+      }
+    }
+    .left-side
+    {
+      float: right;
+      margin-right: 10px;
+    }
+    .right-side
+    {
+      float: left;
+      margin-left: 10px;
+    }
+    .home-box-dtls {
+        height: @boxHeight;
+        width: @boxWidth;
+        position: relative;
+        border: 0px solid @lineGray;
+        border-top-width: 0px;
+        text-align: left;
+        padding: 3px @boxPaddingHor 0px;
+        background-color: @white;
+        background-repeat: no-repeat;
+
+
+        h3 {
+            margin: 18px 0px 16px;
+        }
+
+        .btn-pull-down {
+            position: absolute;
+            bottom: 3px;
+            width: @boxWidth;
+
+          .btn {
+            margin-bottom: 6px;
+          }
+        }
+
+        li {
+            font-size: 17px;
+        }
+
+        .more {
+            font-weight: @boldFontWeight;
+        }
+
+        .home-box-dtls-rate {
+            position: absolute;
+            right: 0px;
+            top: 5px;
+            margin-right: -7px;
+            width: 116px;
+            height: 54px;
+            text-align: center;
+            background: url("@{home}rate_bg.png");
+
+            p {
+                margin: 3px 0px 0px;
+                font-size: 13px;
+            }
+            h3 {
+                margin-top: -4px;
+                sup {
+                    top: -5px;
+                }
+            }
+
+        }
+    }
+    .home-quote{
+        height: 144px;
+        width: 940px;
+        background-color: #f2f2f2;
+        margin-top: 48px;
+        margin-bottom: 48px;
+    }
+}
+
+.home-logo {
+    text-indent: -9999px;
+    float: left;
+    line-height: 25px;
+    margin-bottom: 21px;
+    background: url("@{home}logos.png") no-repeat;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+.home-logo-economist {
+    width: 61px;
+    margin-right: 68px;
+}
+
+@backgroundPosTC: 61px + 68px;
+
+.home-logo-techcrunch {
+    background-position: -@backgroundPosTC;
+    width: 78px;
+}
+
+@backgroundPosVB: @backgroundPosTC + 78px + 50px;
+
+.home-logo-venturebeat {
+    background-position:  -@backgroundPosVB;
+    width: 104px;
+}
+
+@backgroundPosF: @backgroundPosVB + 104px + 50px;
+
+.home-logo-forbes {
+    background-position:  -@backgroundPosF;
+    width: 64px;
+}
+
+@backgroundPosCnn: @backgroundPosF + 64px + 50px;
+
+.home-logo-cnn {
+    background-position:  -@backgroundPosCnn;
+    width: 40px;
+}
+
+@backgroundPosYF: @backgroundPosCnn + 40px + 50px;
+
+.home-logo-yahoofinance {
+    background-position:  -@backgroundPosYF;
+    width: 68px;
+}
+
+@backgroundPosSO: @backgroundPosYF + 68px + 50px;
+
+.home-logo-spiegelonline {
+    background-position:  -@backgroundPosSO;
+    width: 48px;
+}
+
+@backgroundPosFAZ: @backgroundPosSO + 48px + 50px;
+
+.home-logo-faz {
+    background-position:  -@backgroundPosFAZ;
+    width: 106px;
+    margin-right: 0px;
+}
+
+#home-easy-free-secure {
+    h2 {
+        margin-bottom: 0px;
+    }
+
+    .icon {
+        width: 68px;
+        height: 68px;
+        margin-right: 16px;
+        float: left;
+    }
+}
+
+#featured-investments {
+  h4 {
+    margin: 30px 0 20px;
+    font-size: 20px;
+  }
+}
+/*
+#featured-investments {
+    h4 {
+        margin-top: 28px;
+    }
+    table {
+        width: 100%;
+        font-size: 16px;
+
+        thead th {
+            background-color: @grayLight;
+            text-align: left;
+            font-weight: normal;
+            font-size: @fontSizeSmall;
+        }
+
+        thead th.first, tbody td.first {
+            padding-left: 6px;
+        }
+
+        .cntr {
+            text-align: center;
+        }
+
+        thead th, tbody td {
+            border-bottom: 1px solid @lineGray;
+            padding: 6px 0px;
+        }
+
+        td.td-progress {
+            width: 96px + 32px;
+
+            .simple-progress {
+                float: left;
+                width: 96px;
+                border: 1px solid @lineGray;
+                .rounded-corners;
+                background: @grayLight;
+                box-shadow: px 1px 1px;
+                height: 10px;
+                margin: (@baseLineHeight - 10px) / 2 0px;
+                margin-right: 6px;
+
+                .simple-bar {
+                    background-color: @investorBlue;
+                    height: 10px;
+                    .rounded-corners;
+                }
+            }
+        }
+    }
+}
+*/
+
+#home-news {
+  img {
+    margin-bottom: 5px;
+  }
+
+  p.source {
+    float: left;
+    font-weight: 600;
+  }
+
+  p.cdate {
+    float: right;
+  }
+
+  h4 {
+    font-size: 20px;
+    clear: both;
+    margin: 30px 0 20px;
+  }
+
+  .cont h4 {
+    margin: 10px 0 5px;
+  }
+}
+
+a.fss {
+    font-weight: 600;
+}
+
+.bottom-boxes {
+  margin: 20px auto 0;
+
+  table {
+    width: 100%;
+
+    .left, .right {
+      width: 50%;
+
+      .content {
+        display: inline-block;
+        width: 360px;
+        margin: 30px 60px;
+        text-align: center;
+
+        .btn {
+          display: block;
+          width: 260px;
+          margin: auto;
+        }
+      }
+    }
+
+    .left {
+      border-right: 1px solid @c-positive;
+      background: @borrowerGreenLighter;
+      text-align: right;
+    }
+
+    .right {
+      background: @investorBlueLight;
+    }
+  }
+  h2 {
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 7px;
+  }
+}
+
+.header-text {
+  height: 141px;
+  h2 {
+    text-align: center;
+    line-height: 139px;
+    font-family: "Open Sans";
+    font-size: 38px;
+  }
+}

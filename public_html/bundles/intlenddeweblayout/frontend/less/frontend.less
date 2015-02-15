@@ -1,0 +1,88 @@
+/**
+ * Load files before bootstrap.less for compatibility with IE9-10
+ * (Internet Explorer 9 ignores any overrides and uses the first-declared tags/parameters in the css code)
+ */
+//@import "frontend/plugin/bootstrap-select.less";
+
+/**
+ * Bootstrap and theme config
+ */
+//@import "frontend/plugin/bootstrap.less";
+@import "frontend/config/bootstrap.less"; // variables.less is called inside bootstrap.less
+//@import "frontend/config/theme-config";
+@import "frontend/base/mixins";
+
+// Grid system and page structure
+@import "frontend/base/scaffolding.less";
+@import "frontend/base/grid.less";
+@import "frontend/base/layouts.less";
+
+// Grid system and page structure
+@import "frontend/base/header";
+@import "frontend/base/body";
+@import "frontend/base/footer";
+
+// Base CSS
+@import "frontend/base/type.less";
+@import "frontend/base/forms.less";
+@import "frontend/base/tables.less";
+
+// Components: common
+@import "frontend/base/sprites.less";
+@import "frontend/base/dropdowns.less";
+@import "frontend/base/wells.less";
+@import "frontend/base/slider.less";
+
+// Components: Buttons & Alerts
+@import "frontend/base/buttons.less";
+@import "frontend/base/button-groups.less";
+@import "frontend/base/alerts.less";
+
+// Components: Nav
+@import "frontend/base/navs.less";
+
+// Components: Popovers
+@import "frontend/base/modals.less";
+//@import "frontend/base/tooltip.less";
+@import "frontend/base/popovers.less";
+
+// Components: Misc
+@import "frontend/base/media.less";
+@import "frontend/base/progress-bars.less";
+@import "frontend/base/accordion.less";
+
+// Plugins
+@import "frontend/plugin/lionbars.less";
+@import "frontend/plugin/jquery-ui-1.9.2.custom.less";
+@import "frontend/plugin/bootstrap-select.less";
+@import "frontend/plugin/bootstrap-datepicker.less";
+@import "frontend/plugin/fontawesome/less/font-awesome.less";
+
+// Partials
+@import "frontend/partials/dashboard.less";
+@import "frontend/partials/promo.less";
+@import "frontend/partials/cart.less";
+@import "frontend/partials/_investor-start-carousel.less";
+@import "frontend/partials/intloop.cookie-warning.less";
+
+// Bundles
+@import "frontend/bundles/user.less";
+@import "frontend/bundles/signup.less";
+@import "frontend/bundles/loan.less";
+@import "frontend/bundles/loan-table.less";
+@import "frontend/bundles/loan-manager.less";
+@import "frontend/bundles/loan-request.less";
+
+// CMS
+@import "frontend/cms/common";
+@import "frontend/cms/landingpages";
+@import "frontend/cms/homepage";
+@import "frontend/cms/borrower.less";
+@import "frontend/cms/investor.less";
+@import "frontend/cms/how-it-works.less";
+@import "frontend/cms/about-us.less";
+@import "frontend/cms/press.less";
+@import "frontend/cms/blog.less";
+
+// DEV
+@import "frontend/dev/symfony.less";

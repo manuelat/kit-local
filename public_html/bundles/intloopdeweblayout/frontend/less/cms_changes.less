@@ -1,0 +1,442 @@
+@import "config/variables.less";
+
+// appears multiple times
+.container-case .container {
+    padding-top: 48px;
+}
+
+.title-lead {
+    font-size: 38px;
+    font-weight: 100;
+}
+
+
+// Changes for HOMEPAGE
+
+.header-top {
+
+    &.header-new {
+        background-image: url("/bundles/intloopdeweblayout/frontend/images/cms/home/Hero-home_02_02.jpg");
+        min-height: 631px;
+        margin-top: -48px;
+    }
+    //  lender-getting-started
+    &.lender-getting-started {
+        background-image: url("/bundles/intloopdeweblayout/frontend/images/cms/lender/Hero-geld-anlegen_02.jpg");
+        margin-top: -48px;
+    }
+
+    .main-title {
+        h1 {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
+.header-new .pull-down {
+    bottom: -275px;
+}
+
+.header-new .pull-down .span6 {
+    background: @white;
+}
+
+.header-new {
+    .span6 {
+        border-radius: @baseBorderRadius;
+        .borrower, .investor {
+            padding: 0 35px;
+        }
+    }
+    .main-title{
+        h1 {
+            color: @white;
+        }
+
+        p {
+            font-size: @fontSizeSmall + 1;
+            color: @white;
+            &.text-right {
+                padding-top: 60px;
+                font-size: @fontSizeSmall;
+            }
+        }
+    }
+}
+
+
+.header-new {
+    .voucher {
+        position: relative;
+        .voucher-details {
+            position: absolute;
+            top: 10px;
+            right: -17px;
+            background: #46aff5;
+            color: @white;
+            width: 115px;
+            border-radius: @borderRadiusLarge @borderRadiusLarge @borderRadiusLarge 0;
+            font-size: @baseFontSize - 3;
+            padding: 10px;
+            div:nth-child(2) {
+                font-size: @headingsFontSizeH1;
+                border-top: 1px solid @white;
+                border-bottom: 1px solid @white;
+                padding: 7px 0;
+                height: 27px;
+                font-weight: bold;
+            }
+        }
+
+    }
+    .styled {
+        border-top: 1px solid @baseBackground;
+        padding-top: 23px;
+        li {
+            &:before {
+                content: "\f058";
+            }
+
+            border-bottom: 0;
+        }
+    }
+
+}
+
+.logos .item blockquote {
+
+    &:after {
+        right: 21px;
+        color: #5c6266;
+        bottom: -14px;
+    }
+    &:before {
+        color: #5c6266;
+        top: 8px;
+        left: 33px;
+    }
+}
+
+.logos p em {
+    color: #3f9cd9;
+
+    &:before {
+        content: "\f06e";
+        color: #3f9cd9;
+        font-family: @iconFontFamilyAwesome;
+        font-size: 20px;
+        padding-right: 7px;
+    }
+}
+
+// Changes for Lender getting started
+
+.lender-getting-started {
+    p {
+        color: @brandColor4;
+        &.text-center {
+            padding-top: 75px;
+            margin-left: -70px;
+        }
+    }
+
+}
+
+#lenderCarousel, #borrowerCarousel {
+    text-align: left;
+    .carousel-inner {
+        margin-top: 0;
+    }
+    .carousel-indicators {
+        .active, li:hover {
+            background: #c6bcb2;
+        }
+        li {
+            margin: 0;
+            height: 10px;
+            width: 12px;
+            color: #c6bcb2;
+        }
+    }
+    blockquote:before {
+        top: 8px;
+    }
+}
+
+.risks .span1 i {
+    border: 2px solid #7fc6f7;
+    opacity: 70%;
+}
+
+.risks .grade-bg {
+    background: url("/bundles/intloopdeweblayout/frontend/images/cms/lender/bg-risk-classes.png") 26px 16px no-repeat;
+}
+
+.container-wrapper {
+    &.blue {
+        background-color: @brandColorCTA;
+        color: @white;
+    }
+}
+
+.blue {
+    h4 {
+        color: @white;
+    }
+
+    a {
+        color: @white;
+        text-decoration: underline;
+    }
+    .span5 {
+        .pull-left {
+            width: 128px;
+            &:last-child {
+                width: 205px;
+            }
+        }
+    }
+}
+
+.benefits-lender .row:first-of-type {
+    h3 {
+        border-bottom: 2px solid @brandColorCTA;
+        padding-bottom: 16px;
+    }
+}
+
+// Changes for Borrower getting started
+
+.benefits-borrower .row:first-of-type {
+    h3 {
+        border-bottom: 2px solid @brandColor2CTA;
+        padding-bottom: 16px;
+    }
+}
+
+.borrower-update {
+
+    h1 {
+        color: @white;
+        margin-bottom: 25px;
+        margin-top: -20px;
+    }
+
+    .loan-calculator {
+        background-image: url("/bundles/intloopdeweblayout/frontend/images/cms/borrower/02-00-kredit-beantragen_02.jpg");
+        background-position: 50% 0;
+        padding-bottom: 0;
+        padding-top: 48px;
+    }
+}
+
+.loan-calculator-benefits {
+
+        .inline {
+            background: url("/bundles/intloopdeweblayout/frontend/images/cms/borrower/loan-calculator-benefits.png") top left repeat-x;
+            margin-bottom: -15px;
+            color: red;
+            padding: 19px 13px 18px;
+
+            li {
+                &:nth-child(2) {
+                    padding: 0 0 0 57px;
+                }
+
+                &:before {
+                    content: "\f058";
+                    font-family: @iconFontFamilyAwesome;
+                    font-size: @baseFontSize;
+                    padding-right: 7px;
+                }
+            }
+        }
+}
+
+.container-wrapper .container.loan-calculator-benefits {
+    padding: 0;
+}
+
+.cta {
+    p {
+        color: @white;
+        padding-top: 12px;
+
+        &:before {
+            content: "\f132";
+            font-family: @iconFontFamilyAwesome;
+            font-size: @baseFontSize;
+            padding-right: 3px;
+
+        }
+    }
+}
+
+// Changes for Rates-and-fees-investor
+
+.investor .loan-types .padding-box {
+    background: @brandColor7;
+}
+
+.investor .loan-types .row:last-child {
+    padding-top: 40px;
+}
+
+.cms-page {
+
+    .styled {
+
+        li:before {
+            content: "\f058";
+        }
+    }
+}
+
+
+.container-wrapper.odd .styled li {
+   border-bottom-color: @brandColor6;
+}
+
+.strategy .facts, .funds .facts, .apply .facts {
+    padding-bottom: 42px;
+}
+
+.facts {
+
+
+    .panel-default {
+        background-color: #ebebeb;
+    }
+
+    h4 {
+        padding: 18px 11px 12px 18px;
+        margin-bottom: 0;
+
+        a {
+            color: @brandColor4;
+            font-weight: bold;
+
+            &:before {
+                content: "\f164";
+                font-family: @iconFontFamilyAwesome;
+                font-size: @baseLineHeight;
+                padding-right: 3px;
+                color: #9b9ea0;
+            }
+        }
+    }
+
+    .panel-default > .panel-heading {
+        background-color: #dbdbdb;
+    }
+
+    .panel-body {
+        padding: 23px 50px 44px 18px;
+    }
+}
+
+.collapsed .icon-plus-sign, .collapsed .icon-minus-sign {
+    font-family: @iconFontFamilyAwesome;
+    font-size: @baseFontSize + 4;
+    color: #203340;
+}
+
+.icon-minus-sign:before {
+    content: "\f146";
+}
+
+.collapsed .icon-minus-sign:before {
+    content: "\f0fe";
+}
+
+.credit-management .span1:before, .apply .info-icon:before {
+    content: "\f05a";
+    font-family: @iconFontFamilyAwesome;
+    font-size: 42px;
+    color: @white;
+    position: absolute;
+    top: 21px;
+    left: 10px;
+}
+
+.credit-management .facts {
+    padding: 37px 0 28px;
+}
+
+.info-box {
+    color: @white;
+    min-height: 165px;
+
+    h3 {
+        color: @white;
+        padding-top: 21px;
+    }
+}
+
+.blue-info-box {
+    background: url("/bundles/intloopdeweblayout/frontend/images/cms/rates-and-fees-investor/blue-box-bg.png") 20px 0 repeat-y;
+}
+
+.orange-info-box {
+    background: url("/bundles/intloopdeweblayout/frontend/images/cms/rates-and-fees-borrower/orange-box-bg.png") 20px 0 repeat-y;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.risk-assessment {
+    background: url("/bundles/intloopdeweblayout/frontend/images/cms/rates-and-fees-investor/risk-assessment.jpg") 50% 0 no-repeat @brandColor7;
+
+    h3 {
+        margin-bottom: 24px;
+    }
+
+    .pull-right {
+        background: url("/bundles/intloopdeweblayout/frontend/images/cms/rates-and-fees-investor/team-bg.png") top left repeat-x;
+        padding: 4px 19px 3px 22px;
+    }
+}
+
+.investor .fees {
+    background-image: url("/bundles/intloopdeweblayout/frontend/images/cms/rates-and-fees-investor/bg-investor-fees.jpg");
+
+    h1 {
+        text-align: left;
+        color: @white;
+    }
+
+    p {
+        font-size: @fontSizeSmall + 1;
+        color: @white;
+        &.text-right {
+            padding-top: 11px;
+        }
+    }
+
+}
+
+
+// Changes for Rates-and-fees-borrower
+
+.borrower .fees {
+    color: @white;
+    background-image: url("/bundles/intloopdeweblayout/frontend/images/cms/rates-and-fees-borrower/Hero-leitfaden_02.jpg");
+    min-height: 336px;
+    h1 {
+        color: @white;
+        text-align: left;
+    }
+    .text-right {
+        padding-right: 111px;
+    }
+}
+
+.apply {
+    .styled li {
+        border-bottom: none;
+        &:before {
+            color: @white;
+        }
+    }
+}
