@@ -1,0 +1,96 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+
+<div class="container">
+    <div class="row">
+    <div class="col-xs-12 col-sm-8 col-md-8 hidden-lg">
+        <form action="" method="post" role="form">
+            <h1>{{ 'Profil erstellen' }}</h1>
+            <h2>{{ 'Personliche Angaben' }}</h2>
+            <div class="row form-group">
+                <div class="col-xs-6">
+                    <select class="form-control">
+                        <option>{{ 'Herr*' }}</option>
+                        <option>{{ 'Frau*' }}</option>
+                    </select>
+                </div>
+
+                <div class="col-xs-6">
+                    <select class="form-control">
+                        <option>{{ 'Titel*' }}</option>
+                        <option>{{ 'Prof.*' }}</option>
+                        <option>{{ 'Prof. Dr.*' }}</option>
+                        <option>{{ 'Dr.*' }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="user_name">{{ 'Vorname*' }}</label>
+                <input type="text" placeholder="Enter vorname" id="user_name" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="user_last_name">{{ 'Nachname*' }}</label>
+                <input type="text" placeholder="Enter nachname" id="user_last_name" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="user_company_name">{{ 'Firmenname*' }}</label>
+                <input type="text" placeholder="Enter firmenname" id="user_company_name" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="user_cellphone">{{ 'Telefonnummer*' }}</label>
+                <input type="tel" placeholder="Enter telefonnummer" id="user_cellphone" class="form-control">
+            </div>
+
+            <h2>{{ 'Zugangsdaten' }}</h2>
+            <div class="form-group">
+                <label for="user_email">{{ 'Email address*' }}</label>
+                <input type="email" placeholder="Enter email" id="user_email" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="user_password">{{ 'Password*' }}</label>
+                <input type="password" placeholder="Password" id="user_password" class="form-control">
+            </div>
+
+            <h2>{{ 'Haben Sie einen Gutschein-Code?' }}</h2>
+            <div class="form-group">
+                <label for="promo_code">{{ 'Gutschein-Code (freiwillig)*' }}</label>
+                <input type="text" placeholder=" Enter gutschein-Code" id="promo_code" class="form-control">
+            </div>
+
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="">
+                    {{ 'Hiermit akzeptiere ich die' }}
+                    <a target="_blank" href="">{{ 'Nutzungsbedingungen' }}</a>
+                </label>
+            </div>
+
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="">
+                    {{ 'Ich willige in die Erhebung, Verarbeitung und Nutzung meiner personenbezogenen Daten, wie in der' }}
+                    <a target="_blank" href="">{{ 'Datenschutzerklärung' }}</a>
+                    {{ 'beschrieben, ein.' }}
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="">
+                    {{ 'Ich bin damit einverstanden, dass mich die Zencap Deutschland GmbH per E-Mail und SMS über weitere interessante Angebote informiert und hierfür meine obigen Angaben verwendet. (freiwillig)' }}
+                </label>
+            </div>
+
+            <div class="row">
+                <p class="col-xs-12 text-center">
+                    <button class="btn btn-default" type="submit">{{ 'Weiter' }}</button>
+                </p>
+            </div>
+
+        </form>
+    </div>
+</div>
+</div>
+
+{% endblock body %}

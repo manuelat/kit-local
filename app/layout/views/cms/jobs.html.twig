@@ -1,0 +1,163 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+
+<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false">
+</script>
+
+<script>
+    function initialize()
+    {
+        var mapProp = {
+            center:new google.maps.LatLng(52.524837, 13.388861),
+            zoom:18,
+            mapTypeId:google.maps.MapTypeId.ROADMAP
+        };
+        var map=new google.maps.Map(document.getElementById("googleMap") ,mapProp);
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+<div class="cms-page">
+    <div class="container-wrapper">
+        <div class="container"><img class="img-responsive" src="https://d1x3gb5zl465n8.cloudfront.net/de/career/header_07-c.jpg" alt="Career at Zencap"> </div>
+    </div>
+    <div class="container-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-7">
+                    <h3>Zencap is your place</h3>
+                    <p>Want to make a change in SME financing? At Zencap we strive to make this happen.</p>
+                    <p>Zencap was founded based on a simple idea: to create a marketplace where companies and investors come together. Without detour via banks.</p>
+                    <p>After only a couple of months, we already funded credits worth more than one million euro. Whether it is financing new machines or developing new products: Zencap supports growth-oriented companies to further expand their businesses while investors earn an attractive yield. By this jobs and economic growth are secured.</p>
+                    <p>And, we want to make a change in more markets and regions, our team is growing fast. Every day at Zencap is different, with new challenges and full of opportunities to change the way how companies borrow and how people invest money.</p>
+                    <p>Working at Zencap means to take risks, to learn and to grow. We want to enable everybody to become the best she or he can, not wasting time or talent due to a strict hierarchy. That’s why we have a flat management structure, welcoming innovative forward-looking thinking and ideas. As our aim is to reshape banking industry, we don’t dress up in tie and shirt. </p>
+                    <p><strong>Join us and help us to make a difference in financing!</strong></p>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-sm-offset-2"> <img src="https://d1x3gb5zl465n8.cloudfront.net/de/career/norahermans2.jpg" alt="Nora Hermans">
+                    <div class="desp-20"></div>
+                    <h3>Contact</h3>
+                    <p>Don't hesitate to contact Nora our Head of HR, if you have any question concerning your application.</p>
+                    <p><strong>Nora Hermans</strong><br>
+                        Head of HR</p>
+                    <p><a href="mailto:career@zencap.de"><i class="fa fa-envelope fa-small"></i> career@zencap.de</a> <br>
+                        <i class="fa fa-phone fa-small"></i> +49 30 2084900 26</p>
+                    <p><a href="http://de.linkedin.com/pub/nora-hermans/78/51/3a1/en"><i class="fa fa-linkedin-square fa-large"></i></a>&nbsp;&nbsp;&nbsp;<a href="https://www.xing.com/profile/Nora_Hermans"><i class="fa fa-xing-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-wrapper odd">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1 class="text-center">Jobs</h1>
+                    <p>Choose one of the next areas to see the available positions.</p>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <h3><a href="/career-engineering-product"><i class="fa fa-cog fa-small"></i> Engineering, Design<br>&nbsp; &nbsp; and Product Management</a></h3>
+                    <ul>
+                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/senior-graphic-designer.pdf" target="_blank">Senior Graphic Designer (m/f)</a></li>
+                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/senior-graphic-designer.pdf" target="_blank">Senior Product Manager (m/f)</a></li>
+                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/php-dev.pdf" target="_blank">Senior PHP Developer (m/f)</a></li>
+                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/qa-test.pdf" target="_blank">QA Automation Test Engineer (m/f)</a></li>
+                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/working-student-quality-assurance.pdf" target="_blank">Working Student (m/f) Quality Assurance</a></li>
+                    </ul>
+                    <h3><a href="/career-operations-and-customer-care"><i class="fa fa-file fa-small"></i> Operations and Customer Care </a></h3>
+                    <ul>
+                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/intern-business-an.pdf" target="_blank">Intern (m/f) Business Analysis</a></li>
+                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/credit-analyst-nl.pdf" target="_blank">Credit Analyst (m/f) for the Dutch Market</a></li>
+                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/customer-care-agent-nl.pdf" target="_blank">Customer Care Agent (m/f) for the Dutch market</a></li>
+                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/intern-business-process-nl.pdf" target="_blank">Intern (m/f) Business Process Analysis for the Dutch Market</a></li>
+                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/junior-business-process-analyst.pdf" target="_blank">Junior Business Process Analyst (m/f)</a></li>
+                    </ul>
+                    <h3><a href="/career-data-risk"><i class="fa fa-align-left fa-small"></i> Data, Business Intelligence and Risk</a></h3>
+                    <ul>
+                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/intern-risk-management.pdf" target="_blank">Intern (m/f) Risk Management</a></li>
+                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/intern-bi.pdf" target="_blank">Intern (m/f) Business Intelligence</a></li>
+                    </ul>
+                    <h3><a href="/career-finance-and-legal"><i class="fa fa-eur fa-small"></i> Finance and Legal</a></h3>
+                    <ul>
+                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/rechtsreferendar-wissenschaftlicher-de.pdf" target="_blank">Rechtsreferendar (m/w)</a></li>
+                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/head-finance.pdf" target="_blank">Head (m/f) of Finance</a></li>
+                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/finance-assistant-part-time.pdf" target="_blank">Finance Assistant (m/f), part-time (20h)</a></li>
+                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/working-student-finance.pdf" target="_blank">Working Student (m/f) Finance</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <h3><a href="/career-human-resources-and-office-management"><i class="fa fa-user fa-small"></i> Human Resources and Office Management</a></h3>
+                    <div class="desp-20"></div>
+                    <h3><a href="/career-marketing"><i class="fa fa-bullhorn fa-small"></i> Marketing</a></h3>
+                    <ul>
+                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/content-mkt-manager.pdf" target="_blank">Content Marketing Manager (m/f)</a></li>
+                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/mkt-manager-nl.pdf" target="_blank">Marketing Manager (m/f) for the Dutch Market</a></li>
+                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/jr-comm-manager.pdf" target="_blank">Junior Communications Manager (m/f)</a></li>
+                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/head-mkt-on.pdf" target="_blank">Head (m/f) of Marketing, Focus Online</a></li>
+                    </ul>
+                    <h3><a href="/career-sales-business-dev"><i class="fa fa-headphones fa-small"></i> Sales and Business Development</a></h3>
+                    <ul>
+                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/senior-associate-focus-smes-de.pdf" target="_blank">Senior Associate (m/f), Focus SMEs – German Market</a></li>
+                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/senior-associate-focus-partners-de.pdf" target="_blank">Senior Associate (m/f), Focus Partners – German Market</a></li>
+                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/intern-business-dev-es.pdf" target="_blank">Intern (m/f) Business Development Spain</a></li>
+                        <br>
+                        <small>Amsterdam</small>
+                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/senior-associate-focus-smes-nl.pdf" target="_blank">Senior Associate, Focus SMEs (m/f) – Dutch Market</a></li>
+                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/senior-associate-focus-partners-nl.pdf" target="_blank">Senior Associate (m/f), Focus Partners - Dutch Market</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-wrapper blockquote">
+        <div class="container">
+            <h2 class="faux-h1 text-center">Meet our team</h2>
+            <div class="row">
+                <div class="col-xs-12 col-sm-8">
+                    <blockquote>
+                        <p>From day one, I had the opportunity to learn new things. Zencap is a dynamic and international company – every day there is a new challenge. Our team is passionate and eager to tackle each task. Therefore, I see great potential to grow personally and professionally.</p>
+                        <p><em>Leticia from Spain</em></p>
+                    </blockquote>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-sm-offset-1">
+                    <img alt="Leticia from Spain" src="https://d1x3gb5zl465n8.cloudfront.net/de/career/leticia.jpg" class="img-circle">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-8">
+                    <blockquote>
+                        <p>From the very first day, I have been part of an amazing team and was given the opportunity to take responsibilities for my own projects. The atmosphere in the office is a great motivation for coming in in the morning and I enjoy the both challenging and fun work a lot.</p>
+                        <p><em>Jakob Dordevic, Working Student HR</em></p>
+                    </blockquote>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-sm-offset-1">
+                    <img alt="" src="https://d1x3gb5zl465n8.cloudfront.net/de/career/jakob.jpg" class="img-circle">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-8">
+                    <blockquote>
+                        <p>It is not often that you can control the destiny of your organization and rapidly shape the customer experience. At Zencap there is rarely a day that goes by where I can't see the results of my work. There is nothing standing in your way to getting things done other than your own willingness and ability to get them done. Zencap is a place for the hungry. It is a place for those who seek excellence in FinTech.</p>
+                        <p><em>Kyle from the USA</em></p>
+                    </blockquote>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-sm-offset-1">
+                    <img alt="" src="https://d1x3gb5zl465n8.cloudfront.net/de/career/kyle.jpg" class="img-circle">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-wrapper odd">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="faux-h1 text-center">Visit us</h2>
+                    <div id="googleMap" class="col-xs-12"></div>
+                    <small>Johannisstraße 20 • 10117 Berlin</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

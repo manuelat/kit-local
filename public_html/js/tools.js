@@ -37,7 +37,6 @@ $(function() {
      * Slider -> Loan amount calculator ( loan amount calculator for 10.000€ credit up to 150.000€; default value of credit is 25.000€ )
      * // has 1 handler
      */
-
     $( "#slider-range-min" ).slider({
         range: "min",
         value: 25000,

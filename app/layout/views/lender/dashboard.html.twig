@@ -1,0 +1,241 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-sm-12">
+        {#<div class="page-header">#}
+            <h1>Anleger-Dashboard</h1>
+        {#</div>#}
+        </div>
+    </div>
+
+    <div class="group-accordion">
+        <h2 class="bg-success">
+            <a data-toggle="collapse" href="#dash-collapse1" aria-expanded="false" aria-controls="dash-collapse1">
+                Meine investitionen
+                <i class="indicator glyphicon glyphicon-chevron-up glyphicon-chevron-down pull-right"></i>
+            </a>
+        </h2>
+        <div class="collapse" id="dash-collapse1">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <div class="text-center">Investiertes Kapital</div>
+                                <div class="text-center large-subheading">1000000,00 €</div>
+                            </h4>
+                        </div>
+                        <div class="panel-body text-center">
+                            <div class="panel-item">
+                                <div class="col-xs-12">Erhaltene Tilgung</div>
+                                <div class="col-xs-12">1000000,00 €</div>
+                            </div>
+                            <div class="panel-item">
+                                <div class="col-xs-12">Ausstehende Tilgung</div>
+                                <div class="col-xs-12">1000000,00 €</div>
+                            </div>
+                            <div class="panel-item">
+                                <div class="col-xs-12">Abschreibungen</div>
+                                <div class="col-xs-12">1000000,00 €</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>{# end .col-sm-4 #}
+
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <div class="text-center">Zinsen investiertes Kapital</div>
+                                <div class="text-center large-subheading">
+                                    1000000,00 €
+                                </div>
+                            </h4>
+                        </div>
+                        <div class="panel-body text-center">
+                            <div class="panel-item">
+                                <div class="col-xs-12">Erhaltene Zinszahlungen</div>
+                                <div class="col-xs-12">1000000,00 €</div>
+                            </div>
+                            <div class="panel-item">
+                                <div class="col-xs-12">Ausstehende Zinszahlungen</div>
+                                <div class="col-xs-12">1000000,00 €</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>{# end .col-sm-4 #}
+
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <div class="text-center">Jährliche Nettorendite</div>
+                                <div class="text-center large-subheading">
+                                    20,00 %
+                                </div>
+                            </h4>
+                        </div>
+                        <div class="panel-body text-center">
+                            <div class="panel-item">
+                                <div class="col-xs-12">Erhaltene Rendite</div>
+                                <div class="col-xs-12">20,00 %</div>
+                            </div>
+                            <div class="panel-item">
+                                <div class="col-xs-12">Voraussichtliche Rendite</div>
+                                <div class="col-xs-12">20,00 %</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>{# end .col-sm-4 #}
+            </div>
+
+        </div>
+    </div>{# end .group-accordion#}
+
+
+    <div class="group-accordion">
+        <h2 class="bg-success">
+            <a data-toggle="collapse" href="#dash-collapse2" aria-expanded="false" aria-controls="dash-collapse2">
+                Mein Konto
+                <i class="indicator glyphicon glyphicon-chevron-up glyphicon-chevron-down pull-right"></i>
+            </a>
+        </h2>
+        <div class="collapse" id="dash-collapse2">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="panel panel-default green">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <div class="text-center">Verfügbares Limit</div>
+                                <div class="text-center large-subheading">
+                                    10.000,00 €
+                                </div>
+                            </h4>
+                        </div>
+                        <div class="panel-body text-center">
+                            <div class="panel-item">
+                                <div class="col-xs-12">Investitionslimit</div>
+                                <div class="col-xs-12">100.000,00 €</div>
+                            </div>
+                            <div class="panel-item">
+                                <div class="col-xs-12">Investiertes Kapital</div>
+                                <div class="col-xs-12">100.000,00 €</div>
+                            </div>
+                            <div class="panel-item">
+                                <div class="col-xs-12">Aktive Gebote</div>
+                                <div class="col-xs-12">
+                                    100.000,00 €
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>{# end .col-sm-6 #}
+                <div class="col-sm-6">
+                    <div class="panel-group accordion">
+                        <div class="panel panel-default green">
+                            <div class="panel-body text-center">
+                                <div class="panel-item green">
+                                    <div class="col-xs-12">
+                                        Kontotyp Standard
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <a href="">Kostenloses Upgrade</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>{# end .col-sm-6 #}
+            </div>
+        </div>
+    </div>{# end .group-accordion#}
+
+
+    <div class="group-accordion">
+        <h2 class="bg-success">
+            <a data-toggle="collapse" href="#dash-collapse3" aria-expanded="false" aria-controls="dash-collapse3">
+                Meine Zahlungen
+                <i class="indicator glyphicon glyphicon-chevron-up glyphicon-chevron-down pull-right"></i>
+            </a>
+        </h2>
+        <div class="collapse" id="dash-collapse3">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="panel panel-default green">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <div class="text-center">Nächste Zahlung</div>
+                                <div class="text-center large-subheading">
+                                    100.000,00 €
+                                    <div class="text-center">(17.07.2014)</div>
+                                </div>
+                            </h4>
+                        </div>
+                        <div class="panel-body text-center">
+                            <div class="panel-item">
+                                <div class="col-xs-12">Tilgung</div>
+                                <div class="col-xs-12">
+                                    100.000,00 €
+                                </div>
+                            </div>
+                            <div class="panel-item">
+                                <div class="col-xs-12">Zinsen</div>
+                                <div class="col-xs-12">
+                                    100.000,00 €
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>{# end .col-sm-6 #}
+                <div class="col-sm-6">
+                    <div class="panel panel-default green">
+                        <div class="panel-body text-center">
+                            <div class="panel-item green">
+                                <div class="col-xs-12">
+                                    Letzte Zahlung
+                                    17.07.2014
+                                </div>
+                                <div class="col-xs-12">
+                                    100,00 €
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>{# end .col-sm-6 #}
+            </div>
+        </div>
+    </div>{# end .group-accordion#}
+
+
+    <div class="group-accordion">
+        <h2 class="bg-success">
+            <a data-toggle="collapse" href="#dash-collapse4" aria-expanded="false" aria-controls="dash-collapse4">
+                Mein Portofolio
+                <i class="indicator glyphicon glyphicon-chevron-up glyphicon-chevron-down pull-right"></i>
+            </a>
+        </h2>
+        <div class="collapse" id="dash-collapse4">
+            PORTFOLIO - LOREM IPSUM
+
+        </div>
+    </div>{# end .group-accordion#}
+
+    <div class="group-accordion">
+        <h2 class="bg-success">
+            <a data-toggle="collapse" href="#dash-collapse5" aria-expanded="false" aria-controls="dash-collapse5">
+                Aktuelle Kreditprojekte
+                <i class="indicator glyphicon glyphicon-chevron-up glyphicon-chevron-down pull-right"></i>
+            </a>
+        </h2>
+        <div class="collapse" id="dash-collapse5">
+                LOAN PROJECTS - LOREM IPSUM
+
+        </div>
+    </div>{# end .group-accordion#}
+</div>
+
+{% endblock body %}

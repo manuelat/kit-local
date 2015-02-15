@@ -1,0 +1,116 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+
+<div class="cms-page blog">
+    <div class="container-wrapper hidden-xs">
+        <div class="container">
+            <img src="https://d1x3gb5zl465n8.cloudfront.net/de/blog/blog_header.jpg" alt="">
+        </div>
+    </div>
+    <div class="container-wrapper site-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-8">
+                    {% for i in 1..36 %}
+                    <article class="row">
+                        <div class="col-xs-6">
+                            <a href="/blog-article-40"><img class="img-responsive" src="https://d1x3gb5zl465n8.cloudfront.net/de/blog/mauerfall-20141110/thumb.jpg"></a>
+                        </div>
+                        <div class="col-xs-6">
+                            <small class="text-muted">10.11.2014</small>
+                            <h3><a href="/blog-article-40">Deutschlands Mittelstand 25 Jahre nach Mauerfall</a></h3>
+                            <p class="hidden-xs">25 Jahre nach dem Mauerfall haben sich die neuen und die alten Bundesländer stark angenähert. Dennoch gibt es immer noch gravierende Unterschiede. Eine Infografik des Kreditmarktplatzes Zencap zeigt die wirtschaftlichen Divergenzen zwischen dem Osten und Westen der Bundesrepublik<a class="link-borrower" href="/blog-article-40"> Mehr lesen ...</a></p>
+                        </div>
+                    </article>
+                    <hr/>
+                    {% endfor %}
+
+                    {#
+                    [block:blog-article-40-thumb]
+                    [block:blog-article-39-thumb]
+                    [block:blog-article-35-thumb]
+                    [block:blog-article-33-thumb]
+                    [block:blog-article-31-thumb]
+                    [block:blog-article-32-thumb]
+                    [block:blog-article-30-thumb]
+                    [block:blog-article-29-thumb]
+                    [block:blog-article-28-thumb]
+                    [block:blog-article-27-thumb]
+                    [block:blog-article-26-thumb]
+                    [block:blog-article-25-thumb]
+                    [block:blog-article-24-thumb]
+                    [block:blog-article-23-thumb]
+                    [block:blog-article-21-thumb]
+                    [block:blog-article-20-thumb]
+                    [block:blog-article-19-thumb]
+                    [block:blog-article-18-thumb]
+                    [block:blog-article-17-thumb]
+                    [block:blog-article-16-thumb]
+                    [block:blog-article-15-thumb]
+                    [block:blog-article-14-thumb]
+                    [block:blog-article-13-thumb]
+                    [block:blog-article-22-thumb]
+                    [block:blog-article-12-thumb]
+                    [block:blog-article-11-thumb]
+                    [block:blog-article-10-thumb]
+                    [block:blog-article-09-thumb]
+                    [block:blog-article-08-thumb]
+                    [block:blog-article-07-thumb]
+                    [block:blog-article-06-thumb]
+                    [block:blog-article-05-thumb]
+                    [block:blog-article-04-thumb]
+                    [block:blog-article-03-thumb]
+                    [block:blog-article-02-blog]
+                    [block:blog-article-01-thumb]
+                    #}
+
+                </div>
+                <div class="hidden-xs col-sm-4">
+                    <aside class="well">
+                        <p class="faux-h3">Zencap-Blog</p>
+                        <p>Sie wollen mehr über die Unternehmen auf Zencap erfahren? Sie sind auf der Suche nach spannend aufbereiteten Fakten zur Mittelstandsfinanzierung? Sie fragen sich, was ist die beste Anlagestrategie in Zeiten niedriger Sparzinsen? Dann verfolgen Sie regelmäßig den Zencap-Blog. Natürlich antworten wir auch gern auf Ihre Fragen. Schreiben Sie uns unter <a class="link-borrower" href="mailto:info@zencap.de">info@zencap.de</a> </p>
+                    </aside>
+
+                    {#[block:blog-categories]#}
+
+                    {# begins 'block:blog-categories' #}
+                    <p class="desp-20"></p>
+
+                    <aside class="well well-mini">
+                        <p class="faux-h2">Kategorien</p>
+                    </aside>
+
+                    <aside class="blog-categories">
+                        <p class="faux-h3">
+                            <a href="/blog-categorie-01"><i class="fa fa-bullhorn"></i> Zencap News</a>
+                        </p>
+                        <hr>
+                        <p class="faux-h3">
+                            <a href="/blog-categorie-02"><i class="fa fa-briefcase"></i> Kreditnehmer & Partner</a>
+                        </p>
+                        <hr>
+                        <p class="faux-h3">
+                            <a href="/blog-categorie-03"><i class="fa fa-signal"></i> Unternehmergeist</a>
+                        </p>
+                    </aside>
+
+                    <p class="desp-20"></p>
+                    {# ends 'block:blog-categories' #}
+
+                    <aside>
+                       {# <p>[block:twitter-blog]</p>#}
+
+                        <p>
+                            <a {#style="margin-top:24px; width:300px; height: 400px;"#} class="twitter-timeline" href="https://twitter.com/ZencapDE" data-widget-id="494781689214689282">Tweets de @ZencapDE</a>
+                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                        </p>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}
+

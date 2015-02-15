@@ -81,18 +81,24 @@
 
 .main-title {
     h1 {
-        color: @white;
+        margin-bottom: 20px;
     }
 
     p {
         font-size: @fontSizeSmall + 1;
         color: @white;
-        &.text-left {
-            padding-top: 55px;
-        }
     }
 }
 
+@media (max-width: 768px) {
+
+    .main-title {
+        h1 {
+            font-size: 16px;
+        }
+
+    }
+}
 
 .header-top {
     background-color: @gray5;
@@ -107,50 +113,6 @@
 
 }
 
-
-/*
-.testimonials {
-
-    .detail-box-wrapper {
-        .clearfix;
-        margin-bottom: @gridGutterWidth;
-
-        img {
-
-        }
-
-        > p {
-            background-color: @white;
-            margin-bottom: 0;
-            height: @verticalRhythm;
-            line-height: @verticalRhythm;
-        }
-
-        .detail-box {
-            .detail-box-style;
-            background-color: @baseBackground;
-            width: 33.33%;
-            height: @verticalRhythm + @gridGutterWidth;
-
-            &.loan-amount {
-            }
-
-            &.years {
-            }
-
-            &.interest-rate {
-            }
-
-        }
-    }
-}
-
-.benefits {
-
-    .row {
-        .row-gutter-style;
-    }
-}*/
 
 // TABS
 
@@ -194,4 +156,9 @@
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
     border: 1px solid #edf0f2;
+}
+
+.carousel {
+    text-align: center;
+    display: inline-block;
 }

@@ -1,16 +1,15 @@
 
 
-
-@import 'bootstrap/bootstrap.less';
-
+@import 'bootstrap-mixins.less';
 @import 'config/variables.less';
-
+//
 @import 'base/mixins.less';
 @import 'base/body.less';
 @import 'base/layouts.less';
 @import 'base/type.less';
 @import 'base/wells.less';
 @import 'base/tables.less';
+@import 'base/alerts.less';
 
 // Components: Buttons & Alerts
 @import 'base/buttons.less';
@@ -18,9 +17,10 @@
 @import 'base/media.less';
 @import 'base/accordion.less';
 @import 'base/progress-bars.less';
+@import 'base/icons.less';
 
 @import 'cms/common.less';
-//@import 'cms/press.less';
+@import 'cms/press.less';
 @import 'cms/blog.less';
 @import 'cms/homepage.less';
 
@@ -32,15 +32,28 @@
 
 //@import 'partials/top-menu.less'; // my own file
 
-
-
-
+.top-image {
+    background: url(https://d1uuy7l9kfwygp.cloudfront.net/bundles/intlenddeweblayout/frontend/images/cms/home/Hero-home_02_02.jpg) top center no-repeat transparent;
+    color: #fff;
+    h1 {
+        text-transform: uppercase;
+    }
+    .angebot {
+        height: 250px;
+    }
+    .right-side {
+        padding-bottom: 40px;
+    }
+}
 
 /*
 ==========================================================================
    Variables
    ========================================================================== */
-
+.odd {
+    background-color: @baseBackground;
+    background-size: 100%;
+}
 
 
 @media (min-width: 992px) {

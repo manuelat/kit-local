@@ -2,37 +2,39 @@
 
 {% block body %}
 
-<div class="cms-page homepage">
+    <div class="cms-page homepage">
     <!-- begins cms block 'il-hp' -->
     <div class="container-wrapper main-title main-image hidden-xs hidden-sm">
         <div class="container">
             <div class="row">
-                <div class="col-xs-7">
-                    <h1 class="text-white">INNOVATIVE <br> UNTERNEHMENSKREDITE </h1>
+                <div class="col-xs-8">
+                    <h1>INNOVATIVE <br> UNTERNEHMENSKREDITE </h1>
+
                     <p>Zencap ist Deutschlands führender Kreditmarktplatz, <br> der Unternehmen
                         direkt mit Investoren zusammenbringt</p>
                 </div>
-                <div class="col-xs-5">
-                    <div class="voucher"></div>
-                    <p class="text-right">Wulf Schlichte von Incultura hat mit 50.000 € von 65 Investoren
+                <div class="col-xs-5 col-xs-offset-7">
+                    <p class="text-left">Wulf Schlichte von Incultura hat mit 50.000 € von <br>65 Investoren
                         eine neue Espressobar eröffnet</p>
                 </div>
             </div>
         </div>
     </div>
-
+    
     <div class="container hidden-md hidden-lg xs-main-image">
         <div class="row">
             <div class="col-xs-12">
-                <h1 class="text-white">INNOVATIVE <br> UNTERNEHMENSKREDITE </h1>
+                 <h1>INNOVATIVE <br> UNTERNEHMENSKREDITE </h1>
             </div>
         </div>
+        {#<img class="img-responsive" src="https://d1x3gb5zl465n8.cloudfront.net/de/blog/blog_header.jpg" alt=""/>#}
     </div>
 
     <div class="container-wrapper hidden-md hidden-lg">
-        <div class="container">
+        <div class="container odd">
             <div class="row">
                 <div class="pull-top">
+
                     <div class="col-xs-5 col-xs-offset-1">
                         <a href="/borrower-getting-started" class="btn btn-lg btn-brrwr">Jetzt
                             Zinssatz ermitteln</a>
@@ -42,14 +44,15 @@
                             Geld investieren</a>
                     </div>
                 </div>
-                <hr class="col-xs-12" />
-                <img class="img-responsive" src="https://d1x3gb5zl465n8.cloudfront.net/de/home/press/logos_update2.png" alt=""/>
+                    <hr class="col-xs-12" />
+                    <img class="img-responsive" src="https://d1x3gb5zl465n8.cloudfront.net/de/home/press/logos_update2.png" alt=""/>
+
             </div>
         </div>
     </div>
 
-    <div class="container-wrapper header-top odd hidden-xs hidden-sm">
-        <div class="container">
+    <div class="container-wrapper header-top hidden-xs hidden-sm">
+        <div class="container odd">
             <div class="row">
                 <div class="pull-down">
                     <div class="hidden-xs hidden-sm col-md-6">
@@ -97,10 +100,11 @@
     </div>
     <!-- end .header-top -->
 
+
     <div class="container-wrapper hidden-xs hidden-sm">
-        <div class="container press">
+        <div class="container press" style="min-height: 267px;">
             <div class="row">
-                <div class="col-xs-10 col-xs-offset-1 logos">
+                <div class="col-xs-12 logos">
                     <div id="homepageCarousel" class="carousel slide">
                         <!-- Carousel items -->
                         <div class="carousel-inner row">
@@ -152,7 +156,7 @@
                             </div>
                             <div class="item col-xs-12">
                                 <a href="https://d1x3gb5zl465n8.cloudfront.net/de/press/articles/140410_sueddeutsche-zeitung_das-problem-mit-dem-geld.pdf"
-                                   target="_blank"><img class="col-xs-offset-3 col-sm-offset-4"
+                                   target="_blank"><img
                                         src="https://d1x3gb5zl465n8.cloudfront.net/de/press/suddeutsche_zeitung.png"
                                         alt="Süddeutsche Zeitung"></a>
                                 <blockquote>
@@ -200,18 +204,62 @@
 
 
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    {#<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             $('.carousel').carousel({
                 interval: 5000
             })
         });
-    </script>
+    </script>#}
 
     <!-- end cms block 'il-hp' -->
 
     <!-- begins cms block 'il-hp-bottom' -->
+
+    <!--<div class="container-wrapper testimonials">
+    <div class="container">
+        <p class="faux-h1">Erfolgreiche Kreditprojekte</p>
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="detail-box-wrapper">
+                    <img src="https://d1x3gb5zl465n8.cloudfront.net/home/projekte/derperfektewurf.jpg" width="460" height="192" alt="DIRK NOWITZKI - DER PERFEKTE WURF">
+                    <p class="faux-h2">NOWITZKI - DER PERFEKTE WURF</p>
+                    <div class="detail-box loan-amount">
+                        <p>100.000&nbsp;€ <small>Kreditbetrag</small></p>
+                    </div>
+                    <div class="detail-box years">
+                        <p>72 <small>Investoren</small></p>
+                    </div>
+                    <div class="detail-box interest-rate">
+                        <p>6,51% <small>Zinssatz</small></p>
+                    </div>
+                </div>
+                <p class="faux-h3">Wachstumsfinanzierung in Rekordzeit</p>
+                <p>Die Produktionsfirma BROADVIEW TV GmbH des Produzenten Leopold Hoesch hat eine Kinodoku über den deutschen NBA-Basketballer Dirk Nowitzki gedreht. Der Kredit sollte den weltweiten Vertrieb dieses Films finanzieren.</p>
+                <p><a href="/darlehen-anfrage/index">Weitere Projekte entdecken</a></p>
+            </div>
+            <div class="col-xs-6">
+                <div class="detail-box-wrapper">
+					<iframe style="margin-bottom:-5px" src="//player.vimeo.com/video/91600511" width="460" height="192" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    <p class="faux-h2">CADmium</p>
+                    <div class="detail-box loan-amount">
+                        <p>50.000&nbsp;€ <small>Kreditbetrag</small></p>
+                    </div>
+                    <div class="detail-box years">
+                        <p>63 <small>Investoren</small></p>
+                    </div>
+                    <div class="detail-box interest-rate">
+                        <p>6,50% <small>Zinssatz</small></p>
+                    </div>
+                </div>
+                <p class="faux-h3">Weiterentwicklung eines Quadrocopters</p>
+                <p>Die CADmium GmbH ist seit 1999 im Bereich Entwicklung<br>und Fertigung von Prototypen für große Konzerne tätig.<br> Der Kredit trug zur Finanzierung der Weiterentwicklung und Fertigung von einer Vorserie eines neuen, robusten und erschwinglichen Flugrobotors bei.</p>
+                <p><a href="/darlehen-anfrage/index">Weitere Projekte entdecken</a></p>
+            </div>
+        </div>
+    </div>
+</div>-->
 
     <div class="container-wrapper odd blockquote">
         <div class="container">
@@ -287,6 +335,6 @@
     <!-- ends cms block 'il-hp-bottom' -->
 
 
-</div>
+    </div>
 
 {% endblock body %}
