@@ -15,25 +15,34 @@
     }
 }
 
-// loan credit projects table
+// bid button for a loan
+
+.bid-item {
+    position: relative;
+}
+
 .bid-form {
-    width: 200px;
+    width: 135px;
+    position: absolute;
+    top: 0;
+    left: -51px;
 
     .inp-value {
         width: 65px;
         height: 32px;
-        border-radius: 4px;
+        border-radius: 4px 0 0 4px;
         float: left;
         border: 1px solid #5c6266;
         padding-left: 7px;
-        :focus {
-            border: 1px solid green;
-        }
+        margin-right: -3px;
     }
 
     .place-bid {
         width: 70px;
         float: left;
+        &.btn {
+            border-radius: 0 4px 4px 0;
+        }
     }
 }
 

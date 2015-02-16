@@ -3,63 +3,22 @@
 {% block body %}
 
 <div class="container">
-    <div class="row">
-        <div class="col-xs-2">Kreditprojekt</div>
-        <div class="col-xs-1">Kategorie</div>
-        <div class="col-xs-1">Betrag</div>
-        <div class="col-xs-1">Zinssatz</div>
-        <div class="col-xs-1">Laufzeit</div>
-        <div class="col-xs-2">% finanziert</div>
-        <div class="col-xs-2">Noch offen</div>
-        <div class="col-xs-1">Restzeit</div>
-        <div class="col-xs-1">Anlegen</div>
-    </div>
-    <div class="row">
-        <div class="col-xs-2">Reparaturprojekt Ölpipelines in Nigeria</div>
-        <div class="col-xs-1"><i class="categoryIcon"></i></div>
-        <div class="col-xs-1">150.000 €</div>
-        <div class="col-xs-1">6,99%</div>
-        <div class="col-xs-1">4 Jahre</div>
-        <div class="col-xs-2">
-            <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                    <span class="sr-only">60% Complete</span>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-2">60.000 €</div>
-        <div class="col-xs-1">18 Tage</div>
-        <div class="col-xs-1">
-            <div class="bid-item">
-                <div class="invest"><input type="button" value="bid" /></div>
-                <div class="bid-form hidden">
-                    <input class="inp-value" style="width: 30px;" type="text" name="" />
-                    <input class="place-bid" type="button" value="bid" />
-                </div>
-                <div class="bid-value hidden"><span>-</span>
-                    <a href="javascript:void(0)" class="edit">[e]</a>
-                    <a href="javascript:void(0)" class="remove">[x]</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
     <table class="table">
-    <thead>
-    <tr>
-        <td>Kreditprojek</td>
-        <td>Kategorie</td>
-        <td>Betrag</td>
-        <td>Zinssatz</td>
-        <td>Laufzeit</td>
-        <td>% finanziert</td>
-        <td>Noch offen</td>
-        <td>Restzeit</td>
-        <td>Anlegen</td>
-    </tr>
-    </thead>
-    <tbody>
+        <thead>
+        <tr>
+            <td>Kreditprojek</td>
+            <td>Kategorie</td>
+            <td>Betrag</td>
+            <td>Zinssatz</td>
+            <td>Laufzeit</td>
+            <td>% finanziert</td>
+            <td>Noch offen</td>
+            <td>Restzeit</td>
+            <td>Anlegen</td>
+        </tr>
+        </thead>
+        <tbody>
     {% for art in articles %}
     <tr>
         <td>{{ art.title }}</td>
@@ -92,7 +51,7 @@
     </tr>
     {% endfor %}
     </tbody>
-</table>
+    </table>
 
 </div><!-- end .container -->
 
@@ -102,35 +61,65 @@
      {{ parent() }}
 
      <script>
+
+         function show_button(item) {
+             item.children('.bid-form').addClass('hidden');
+             item.children('.bid-value').addClass('hidden');
+             item.children('.invest').removeClass('hidden');
+         }
+
+         function show_form(item) {
+             item.children('.bid-form').removeClass('hidden');
+             item.children('.bid-value').addClass('hidden');
+             item.children('.invest').addClass('hidden');
+         }
+
+         function show_completed_form(item, inputValue) {
+             item.children('.bid-value').children('span').html(inputValue);
+             item.children('.bid-form').addClass('hidden');
+             item.children('.bid-value').removeClass('hidden');
+             item.children('.invest').addClass('hidden');
+             // should have an ajax call to a script to add in sessoin or in db
+         }
+
+         function remove_form(item) {
+             item.children('.bid-form').addClass('hidden');
+             item.children('.bid-value').addClass('hidden');
+             item.children('.invest').removeClass('hidden');
+             item.children('.bid-form').children('.inp-value').val('');
+         }
+
+         function edit_form(item) {
+             item.children('.bid-form').removeClass('hidden');
+             item.children('.bid-value').addClass('hidden');
+             item.children('.invest').addClass('hidden');
+         }
+
+
          $(function(){
              $('.invest input').click(function(){
                  var item = $(this).parent().parent();
-                 item.children('.bid-form').removeClass('hidden');
-                 item.children('.bid-value').addClass('hidden');
-                 item.children('.invest').addClass('hidden');
+                 show_form(item);
              });
              $('.bid-form .place-bid').click(function(){
                  var item = $(this).parent().parent();
                  var inputValue = $(this).parent().children('.inp-value').val();
-                 item.children('.bid-value').children('span').html(inputValue);
-                 item.children('.bid-form').addClass('hidden');
-                 item.children('.bid-value').removeClass('hidden');
-                 item.children('.invest').addClass('hidden');
+                 if ( inputValue == '' || inputValue == undefined ) {
+                     show_button(item);
+                     return;
+                 }
+                 show_completed_form(item, inputValue);
              });
              $('.bid-value .remove').click(function(){
                  var item = $(this).parent().parent();
-                 item.children('.bid-form').addClass('hidden');
-                 item.children('.bid-value').addClass('hidden');
-                 item.children('.invest').removeClass('hidden');
-                 item.children('.bid-form').children('.inp-value').val('');
+                 remove_form(item);
              });
              $('.bid-value .edit').click(function(){
                  var item = $(this).parent().parent();
-                 item.children('.bid-form').removeClass('hidden');
-                 item.children('.bid-value').addClass('hidden');
-                 item.children('.invest').addClass('hidden');
+                 edit_form(item);
              });
          });
+
      </script>
 
  {% endblock %}
