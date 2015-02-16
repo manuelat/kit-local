@@ -1,0 +1,81 @@
+{% extends 'help/_layout.html.twig' %}
+
+{% block body %}
+    <div class="container">
+
+
+        <h1 class="page-header">Templates</h1>
+
+        <h4>Extension for templates will always be <code>.html.twig</code></h4>
+
+        <p>Templates are located in <code>app/layout/views/</code></p>
+        <p>Here you must create a folder for section and a file for view</p>
+        <p>Ex: <code>users/profile.html.twig</code> or <code>users/register.html.twig</code></p>
+
+        <p>The view should extend main layout</p>
+        <pre><code>{{ '{%' }} extends 'layout.html.twig' {{ '%}' }}</code></pre>
+
+
+        <h1 class="page-header">PHP Scripts</h1>
+
+        <h4>Extension for scripts will always be <code>.php</code></h4>
+
+        <p>Php scripts will be find in <code>app/modules/</code> and will have the same structure as template views.</p>
+
+        <table class="table table-bordered table-condensed">
+            <tr>
+                <th>Template View</th>
+                <th>PHP Script</th>
+            </tr>
+            {% for ex in examples %}
+                {% set ind = loop.index %}
+            <tr>
+                <td><code>app/layout/views/<span class="dir dir-{{ ind }}">{{ ex[0] }}</span>/<span class="dir dirs-{{ ind }}">{{ ex[1] }}</span>.html.twig</code></td>
+                <td><code>app/modules/<span class="dir dir-{{ ind }}">{{ ex[0] }}</span>/<span class="dir dirs-{{ ind }}">{{ ex[1] }}</span>.php</code></td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <h4>PHP script example content:</h4>
+
+        <pre><code>{{ php_code | raw }}</code></pre>
+
+        <h1>Routes</h1>
+
+        <p>Routes file is in <code>app/config/routes.yml</code></p>
+        <p>you may include other files adding:
+<pre>
+imports:
+    - { resource: routes_users.yml }
+    - { resource: routes_articles.yml }
+</pre></p>
+
+        <p>Routes declaration ar in symfony framework style but more simple (for purpose of this SDK)</p>
+        <pre><code>
+homepage:
+    path: /
+
+articles:
+    path: /articles
+
+articles_details:
+    path: /articles/details/{id}/{title}
+    defaults: { id: 0, title: 'default article' }
+</code></pre>
+
+    </div>
+{% endblock %}
+
+{% block js %}
+    {{ parent() }}
+<script>
+$(function(){
+    $('.dir').hover(function(){
+        var alt = $(this).attr('class').replace('dir ', '');
+        $('.' + alt).addClass('label-info');
+    }, function(){
+        $('.dir').removeClass('label-info');
+    });
+});
+</script>
+{% endblock %}
