@@ -3,56 +3,13 @@
 {% block body %}
 
 <div class="container">
+    <div class="row">
 
-    <table class="table">
-        <thead>
-        <tr>
-            <td>Kreditprojek</td>
-            <td>Kategorie</td>
-            <td>Betrag</td>
-            <td>Zinssatz</td>
-            <td>Laufzeit</td>
-            <td>% finanziert</td>
-            <td>Noch offen</td>
-            <td>Restzeit</td>
-            <td>Anlegen</td>
-        </tr>
-        </thead>
-        <tbody>
-    {% for art in articles %}
-    <tr>
-        <td>{{ art.title }}</td>
-        <td><i class="categoryIcon"></i></td>
-        <td class="text-right">{{ art.amount }}</td>
-        <td class="text-right">{{ art.interest }}</td>
-        <td>{{ art.duration }}</td>
-        <td>
-            <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                    <span class="sr-only">{{ art.funded }}e</span>
-                </div>
-            </div>
-        </td>
-        <td class="text-right">{{ art.amount_pending }}</td>
-        <td class="text-center">{{ art.days_left }}</td>
-        <td>
-            <div class="bid-item">
-                <div class="invest"><input type="button" value="Anlegen" class="btn btn-nvstr btn-invest btn-block" /></div>
-                <div class="bid-form hidden">
-                    <input class="inp-value" type="text" name="" />
-                    <input type="button" value="Biten" class="place-bid btn btn-nvstr btn-invest"/>
-                </div>
-                <div class="bid-value hidden"><span>-</span>
-                    <a href="javascript:void(0)" class="edit btn-edit">✎</a>
-                    <a href="javascript:void(0)" class="remove"><i class="glyphicon glyphicon-remove"></i></a>
-                </div>
-            </div>
-        </td>
-    </tr>
-    {% endfor %}
-    </tbody>
-    </table>
+        <table class="table custom-table">
+           {% include '_partials/tables/loanProjectsTable.html.twig' %}
+        </table>
 
+    </div>
 </div><!-- end .container -->
 
 {% endblock %}

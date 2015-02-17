@@ -132,37 +132,6 @@ $(function() {
     $( "#years" ).val( $( "#slider-range-year" ).slider( "values", 0 ) + " Jahre" + " - " + $( "#slider-range-year" ).slider( "values", 1 ) +
     " Jahre" );
 
-
-    /**
-     * Extends the Loan project row with another table and thus appear more details about that loan on small devices
-     */
-
-    $('.loan-details').click(function(e){
-        // cancel url event
-        e.preventDefault();
-        // remove all gray classes from tr
-        $('tr.gray').each(function(){
-            $(this).removeClass('gray');
-        });
-        // add gray class on selected tr
-        $(this).addClass('gray');
-        // set next element which is actually the extendable row
-        var elem = $(this).next();
-        // add gray class on next element
-        elem.addClass('gray');
-        // if next tr element has hidden class
-        if ( elem.hasClass('hidden') ) {
-            // add hidden class on others
-            $('.loan-details-extended').addClass('hidden');
-            // remove hidden class from current next element
-            elem.removeClass('hidden');
-        } else {
-            // add class hidden on all next elements
-            elem.addClass('hidden');
-        }
-    });
-
-
     /**
      * Adds the sidebar loan filter that appears only on small devices (width < 768px)
      */

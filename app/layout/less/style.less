@@ -32,24 +32,12 @@
 
 //@import 'partials/top-menu.less'; // my own file
 
-.top-image {
-    background: url(https://d1uuy7l9kfwygp.cloudfront.net/bundles/intlenddeweblayout/frontend/images/cms/home/Hero-home_02_02.jpg) top center no-repeat transparent;
-    color: #fff;
-    h1 {
-        text-transform: uppercase;
-    }
-    .angebot {
-        height: 250px;
-    }
-    .right-side {
-        padding-bottom: 40px;
-    }
-}
 
 /*
 ==========================================================================
    Variables
    ========================================================================== */
+
 .odd {
     background-color: @baseBackground;
     background-size: 100%;
@@ -93,19 +81,12 @@
    ========================================================================== */
 
 /*
-      .panel-item  = nume pus de mine
+      .panel-item  = own class
 
       */
 
 
 /* Landscape phones and portrait tablets */
-@media (max-width: 767px) {
-    .col-sm-4 {
-        /*background: red;
-        border-right: 1px solid green;
-        margin-bottom: 30px;*/
-    }
-}
 
 .panel-item {
     border: 1px solid #fff;
@@ -131,7 +112,7 @@
    FAQ custom styles
    ========================================================================== */
 
-/*  regulile de mai jos trb date DOAR la faq si nu la toate, pt k dispar si din dashboard */
+/* rules below must be applied only for faq, not all because they disappear from dashboard */
 
 // arrow
 
@@ -277,21 +258,6 @@
         z-index: 100;
     }
 
-
-    /* .row-offcanvas-right {
-         right: 0;
-     }*/
-
-    /*   .row-offcanvas-right
-       .sidebar-offcanvas {
-           right: -300px; *//* 6 columns *//*
-       }
-   
-       .row-offcanvas-right.active {
-           right: 300px; *//* 6 columns *//*
-       }*/
-
-
     .sidebar-offcanvas {
         position: absolute;
         top: 0;
@@ -312,139 +278,5 @@
 
         }
     }
-    /*.row-offcanvas-left {
-        left: 0;
-    }*/
-
-    /* .row-offcanvas-left
-     .sidebar-offcanvas {
-         left: -62%; *//* 6 columns *//*
-     }
- */
-
-    /*.row-offcanvas-left.active {
-        left: 30em; *//* 6 columns *//*
-    }*/
-
-
 }
 
-/* ==========================================================================
-   LOAN PROJECTS
-   ========================================================================== */
-
-.loan-details-extended {
-    table {
-        margin-bottom: 0;
-    }
-
-    table th {
-        border-bottom: 1px solid #fff;
-        border-top: 1px solid #fff;
-    }
-
-    table td, table th {
-        padding-left: 0;
-    }
-
-    .table > thead > tr > th,
-    .table > tbody > tr > th,
-    .table > thead > tr > td,
-    .table > tbody > tr > td {
-        border-bottom: 2px solid #ccc;
-
-    }
-
-    .table > thead > tr > th,
-    .table > tbody > tr > th {
-        margin-left: -8px;
-        margin-right: -8px;
-
-    }
-
-    /*.header-frame {
-        background: red;
-    }
-*/
-    /*.header-frame tr {
-        background: pink;
-    }*/
-
-    .progress {
-        width: 40px;
-        height: 10px;
-        margin: 5px 6px;
-    }
-
-    .percentage {
-        width: 38px;
-    }
-
-}
-
-/* Formatted needed for current design.... */
-
-// trial to truncate text
-
-.truncate(@di) {
-    width: @di; /*  20em; 
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;     /** IE6+, Firefox 7+, Opera 11+, Chrome, Safari **/
-    -o-text-overflow: ellipsis;  /** Opera 9 & 10 **/
-}
-// end trial
-
-
-.table.custom-table th {
-    background: #edf0f2;
-}
-
-.table.custom-table > thead > tr > th,
-.table.custom-table > tbody > tr > th,
-.table.custom-table > tfoot > tr > th,
-.table.custom-table > thead > tr > td,
-.table.custom-table > tbody > tr > td,
-.table.custom-table > tfoot > tr > td {
-    padding-left: 0px;
-    padding-right: 0px;
-    border-bottom: 1px solid #ccc;
-}
-
-// class used by javascript to add a background color
-.gray td {
-    background: #ccc;
-}
-
-
-
-/* end Formatted .... */
-
-
-/*
- * Typography
- * --------------------------------------------------
- */
-
-
-/* Landscape phones and portrait tablets */
-/*
-
-@media (max-width: 767px) {
-    h1 {
-        font-size: 2.3em; // 14px * 2.3 = 32.2   -> fits the word Angeler - Dashboard
-        */
-/*margin-bottom: 0.5em;*//*
-
-    }
-
-    h2 {
-        font-size: 1.7em;  // 14px * 1.7 = 23.8
-        */
-/*margin-bottom: 0.5em;*//*
-
-
-    }
-
-}*/

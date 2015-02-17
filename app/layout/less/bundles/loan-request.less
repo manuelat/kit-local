@@ -10,6 +10,7 @@
 }
 
 .lender-place-bid {
+    min-height: 192px;
     .btn-lg {
         padding: 11px 16px;
     }
@@ -70,7 +71,6 @@
 }
 
 
-
 @media (max-width: 480px) {
     .lender-request-details {
         font-size: 13px;
@@ -112,10 +112,6 @@ iframe[src^='http://marketing.net.zencap'] {
             vertical-align: middle;
         }
 
-        .loan-title {
-            padding-left: 10px;
-        }
-
         .more {
             font-size: 20px;
             font-weight: bold;
@@ -123,10 +119,22 @@ iframe[src^='http://marketing.net.zencap'] {
     }
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 480px) and (max-width: 600px) {
     .custom-table {
-        .col-xs-1 {
-            width: 30px;
+        .sm-width {
+            width: 20px;
         }
+    }
+}
+
+.custom-table {
+    .sm-width {
+        width: 15px;
+    }
+
+    .grade-small {
+        margin-left: 5px;
+        /*height: @baseLineHeight * 2;*/
+        vertical-align: middle;
     }
 }

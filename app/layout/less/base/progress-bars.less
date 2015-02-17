@@ -1,32 +1,37 @@
-//
-// Progress bars
-// --------------------------------------------------
+/*
+ * Progress bars
+ * --------------------------------------------------
+ */
 
-// my style
+// progress bar styled for small devices
+
 .custom-progress {
     height: @baseLineHeight * 2;
     background-color: #bbd0ef;
     margin-bottom: 0;
     max-width: 80%;
     margin-left: 11%;
+
+    .progress-bar {
+        font-size: 11px;
+        /*text-wrap: none;*/
+        height: 40px;
+        line-height: 40px;
+    }
+}
+
+// progress bar styled for large devices
+
+.default-progress {
+    &.progress {
+        width: 40px;
+        margin: 5px 6px 0 0;
+        height: 10px;
+    }
 }
 
 .loan-progress {
     max-width: 60%;
 }
 
-.custom-table {
-    .grade-small {
-        margin-left: 0;
-        height: @baseLineHeight * 2;
-        vertical-align: middle;
-        margin-right: 5px;
-    }
-}
 
-.progress-bar {
-    font-size: 11px;
-    /*text-wrap: none;*/
-    height: 40px;
-    line-height: 40px;
-}

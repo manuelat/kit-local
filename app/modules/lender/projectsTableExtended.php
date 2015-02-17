@@ -16,9 +16,19 @@ $articles[] = array(
     'amount' => '90.000 €',
     'interest' => '16,99% ',
     'duration' => '6 Monate',
-    'funded' => '54%',
+    'funded' => '100%',
     'amount_pending' => '46.000 €',
     'days_left' => '4 Tage',
+);
+
+$articles[] = array(
+    'title' => 'Italienische Gastlichkeit in Verden',
+    'amount' => '25.000 €',
+    'interest' => '8,62% ',
+    'duration' => '1 Jahr',
+    'funded' => '1%',
+    'amount_pending' => '74.200 €',
+    'days_left' => '24 Tage',
 );
 
 return array(
