@@ -148,6 +148,6 @@ class TwigData extends Helper
 
     public function getOutput()
     {
-        return $this->output;
+        return array_merge(array(), $this->output);
     }
 }
