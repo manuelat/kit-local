@@ -36,8 +36,16 @@ class SdkRouter extends Singleton
         }
     }
 
+    public function getRoutes()
+    {
+        return $this->routes;
+    }
+
     public function generate($name, array $parameters=array())
     {
+        if ( gettype($name) != 'string' ) {
+            throw new Exception('$name must be of type string, ' . gettype($name) . ' given');
+        }
         if ( isset($this->routes[$name]) ) {
             if ( isset($this->routes[$name]['defaults']) ) {
                 $defaults = $this->routes[$name]['defaults'];

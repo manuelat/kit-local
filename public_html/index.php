@@ -4,14 +4,7 @@
  * https://getcomposer.org/doc/04-schema.md
  */
 
-define('SYSTEM',    dirname(__DIR__));
-define('LAYOUT',    SYSTEM . '/app/layout/');
-define('MODULES',   SYSTEM . '/app/modules/');
-define('LIBS',      SYSTEM . '/app/libs/');
-define('CONFIG',    SYSTEM . '/app/config/');
-define('LESS',      LAYOUT . '/less/');
-define('PUBLIC_DOC',SYSTEM . '/public_html');
-
+require_once dirname(__DIR__) . '/app/config/config.php';
 require_once SYSTEM . '/vendor/autoload.php';
 
 Twig_Autoloader::register();
@@ -46,11 +39,10 @@ $htmlContent = $twig->render(
     $twigData->getOutput()
 );
 
-//$less = new lessc();
-//$less->compileFile(LESS . '/style.less', PUBLIC_DOC . '/css/style.css');
-
-$parser = new Less_Parser();
-$parser->parseFile( LESS . '/style.less' );
-file_put_contents(PUBLIC_DOC . '/css/style.css', $parser->getCss());
+if ( php_sapi_name() != 'cli' ) {
+    $parser = new Less_Parser();
+    $parser->parseFile(LESS . '/style.less');
+    file_put_contents(PUBLIC_DOC . '/css/style.css', $parser->getCss());
+}
 
 echo $htmlContent;

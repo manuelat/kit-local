@@ -9,6 +9,12 @@ class TwigData extends Helper
     const TEMPLATE_EXTENSION = '.html.twig';
     const SCRIPT_EXTENSION = '.php';
 
+    /**
+     * forced path used for testing purpose
+     * @var null
+     */
+    protected $forcedPath = null;
+
     protected $template = '';
     protected $templateDefault = '';
 
@@ -21,6 +27,8 @@ class TwigData extends Helper
 
     protected $dirs = array();
 
+    protected static $instance = null;
+
     public static function getDefaultSection()
     {
         return 'home';
@@ -31,13 +39,31 @@ class TwigData extends Helper
         return 'index';
     }
 
-    public function __construct(Array $templateDirectories = array())
+    /**
+     * This class is not a singleton but it can be instantiated and used as a singleton
+     *
+     * @return null|static
+     */
+    static public function getInstance(Array $templateDirectories = array())
     {
+        if ( null === self::$instance ) {
+            self::$instance = new self($templateDirectories);
+        }
+        return self::$instance;
+    }
+
+    protected function __construct(Array $templateDirectories = array())
+    {
+        if ( null !== self::$instance ) {
+            return self::$instance;
+        }
         $this->request = Request::createFromGlobals();
         foreach ($templateDirectories as &$v) {
             $v = Utils::inc($v);
         }
         $this->dirs = array_reverse($templateDirectories);
+
+        self::$instance = $this;
 
         $this->setSectionViewByPath();
     }
@@ -149,5 +175,21 @@ class TwigData extends Helper
     public function getOutput()
     {
         return array_merge(array(), $this->output);
+    }
+
+    /**
+     * @return null
+     */
+    public function getForcedPath()
+    {
+        return $this->forcedPath;
+    }
+
+    /**
+     * @param null $forcedPath
+     */
+    public function setForcedPath($forcedPath)
+    {
+        $this->forcedPath = $forcedPath;
     }
 }
