@@ -1,5 +1,7 @@
 <?php
 
+use Symfony\Component\Yaml\Yaml;
+
 class SdkRouter extends Singleton
 {
     protected $routes = array();
@@ -18,6 +20,17 @@ class SdkRouter extends Singleton
     public function registerRoutes(array $routes=array())
     {
         foreach ($routes as $name => $item) {
+            if ( $name == 'imports' ) {
+                $skroute = SdkRouter::getInstance();
+                foreach ($item as $route) {
+                    $_new_routes = Yaml::parse(file_get_contents(CONFIG . '/' . $route['resource']));
+                    $skroute->registerRoutes($_new_routes);
+                }
+                continue;
+            }
+            if ( ! isset($item['path']) ) {
+                continue;
+            }
             $defaults = ( isset($item['defaults']) ) ? $item['defaults'] : array();
             $this->register($name, $item['path'], $defaults);
         }
