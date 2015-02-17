@@ -9,6 +9,8 @@ $articles[] = array(
     'funded' => '96%',
     'amount_pending' => '146.000 €',
     'days_left' => '13 Tage',
+    'risk_class' => 'grade-a',
+    'risk_title' => 'A+',
 );
 
 $articles[] = array(
@@ -19,6 +21,8 @@ $articles[] = array(
     'funded' => '100%',
     'amount_pending' => '46.000 €',
     'days_left' => '4 Tage',
+    'risk_class' => 'grade-b',
+    'risk_title' => 'B',
 );
 
 $articles[] = array(
@@ -29,6 +33,8 @@ $articles[] = array(
     'funded' => '1%',
     'amount_pending' => '74.200 €',
     'days_left' => '24 Tage',
+    'risk_class' => 'grade-c',
+    'risk_title' => 'C',
 );
 
 return array(

@@ -17,7 +17,7 @@
 <tbody>
 {% for art in articles %}
     <tr>
-        <td class="hidden-md hidden-lg grade-b sm-width">A+</td>
+        <td class="hidden-md hidden-lg {{ art.risk_class }} sm-width">{{ art.risk_title }}</td>
         <td class="loan-title"><a href="">{{ art.title }}</a></td>
         <td class="hidden-md hidden-lg">
             {{ art.interest }}<br>{{ art.duration }}
@@ -32,7 +32,7 @@
         </td>
         <td class="hidden-xs hidden-sm"><i class="categoryIcon"></i></td>
         <td class="hidden-xs hidden-sm text-right">{{ art.amount }}</td>
-        <td class="hidden-xs hidden-sm text-right">{{ art.interest }}<span class="grade grade-b grade-small">A+</span>
+        <td class="hidden-xs hidden-sm text-right">{{ art.interest }}<span class="grade {{ art.risk_class }} grade-small">{{ art.risk_title }}</span>
         </td>
         <td class="hidden-xs hidden-sm">{{ art.duration }}</td>
         <td class="hidden-xs hidden-sm">
@@ -53,7 +53,7 @@
                     <input class="inp-value" type="text" name=""/>
                     <input type="button" value="Biten" class="place-bid btn btn-nvstr btn-invest"/>
                 </div>
-                <div class="bid-value hidden"><span>-</span>
+                <div class="bid-value text-right hidden"><span>-</span>
                     <a href="javascript:void(0)" class="edit btn-edit">✎</a>
                     <a href="javascript:void(0)" class="remove"><i class="glyphicon glyphicon-remove"></i></a>
                 </div>
