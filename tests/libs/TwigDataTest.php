@@ -12,9 +12,4 @@ class TwigDataTest extends PHPUnit_Framework_TestCase
 
         $this->assertSame($tda->getForcedPath(), $tdb->getForcedPath());
     }
-
-    public function test_twigData_dont_direct_load()
-    {
-        $td = new TwigData(array());
-    }
 }

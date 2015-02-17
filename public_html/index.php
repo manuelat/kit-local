@@ -21,7 +21,7 @@ $routes = Yaml::parse(file_get_contents(CONFIG . '/routes.yml'));
 $route = SdkRouter::getInstance();
 $route->registerRoutes($routes);
 
-$twigData = new TwigData($directories);
+$twigData = TwigData::getInstance($directories);
 $loader = new Twig_Loader_Filesystem($twigData->getDirs());
 
 $twig_config = array();
