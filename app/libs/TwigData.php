@@ -140,6 +140,12 @@ class TwigData extends Helper
 
     public function loadScript()
     {
+        if ( is_file(MODULES . '/modules.php') ) {
+            $modules = require_once MODULES . '/modules.php';
+            if ( is_array($modules) ) {
+                $this->output = array_merge($this->output, $modules);
+            }
+        }
         $file = $this->getScript();
         if ( is_file($file) ) {
             $output = require_once $file;
