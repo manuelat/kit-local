@@ -42,6 +42,18 @@ $articles[] = array(
     'risk_title' => 'C',
 );
 
+$articles[] = array(
+    'title' => 'Zukunftsorientierte giftfreie Unkrautbekämpfung',
+    'amount' => '75.000 €',
+    'interest' => '8,12% ',
+    'duration' => '4 Jahre',
+    'funded' => '1%',
+    'amount_pending' => '74.200 €',
+    'days_left' => '24 Stunden',
+    'risk_class' => 'grade-c-minus',
+    'risk_title' => 'C-',
+);
+
 return array(
     'name' => 'Twig designer',
     'articles' => $articles,

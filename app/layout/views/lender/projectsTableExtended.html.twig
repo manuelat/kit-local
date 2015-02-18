@@ -4,18 +4,22 @@
 
 <div class="container">
 
+    <div class="row">
+        <h1 class="hidden-xs col-md-12 col-lg-12">{{ 'Aktuelle Kreditprojekte' }}</h1>
+    </div>
+
     <div class="row row-offcanvas row-offcanvas-right">
 
         <div class="col-xs-12">
             <div class="row">
-                <div class="col-xs-9 col-sm-6">{{ 'Aktuelle Kreditprojekte' }}</div>
+                <div class="col-xs-9 hidden-sm hidden-lg">{{ 'Aktuelle Kreditprojekte' }}</div>
                 <div class="col-xs-3 pull-right hidden-sm hidden-md hidden-lg">
                     <button id="filter-btn" data-toggle="offcanvas" class="btn btn-primary pull-right" type="button">{{ 'Filtern' }}</button>
                 </div>
             </div>
         </div>
 
-        <div id="sidebar-filter" class="sidebar-offcanvas hidden-lg">
+        <div id="sidebar-filter" class="sidebar-offcanvas">
                 <div class="row">
                     <div class="col-sm-12 hidden-sm hidden-md hidden-lg">
                         <a href="#" id="filter-close" class="pull-right">{{ 'X' }}</a>
