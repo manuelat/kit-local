@@ -38,6 +38,5 @@ $articles[] = array(
 );
 
 return array(
-    'name' => 'Twig designer',
-    'articles' => $articles,
+    '_articles' => $articles,
 );
