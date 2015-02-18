@@ -36,6 +36,16 @@ class SdkRouter extends Singleton
         }
     }
 
+    public function redirect($name, array $parameters=array())
+    {
+        if ( preg_match('/\//', $name) ) {
+            header("Location: " . $name);
+        } else {
+            header("Location: " . $this->generate($name, $parameters));
+        }
+        die;
+    }
+
     public function getRoutes()
     {
         return $this->routes;
