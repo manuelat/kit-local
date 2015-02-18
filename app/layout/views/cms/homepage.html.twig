@@ -25,13 +25,13 @@
     <div class="container hidden-md hidden-lg xs-main-image">
         <div class="row">
             <div class="col-xs-12">
-                 <h1>INNOVATIVE <br> UNTERNEHMENSKREDITE </h1>
+                 <h1 class="text-white">INNOVATIVE <br> UNTERNEHMENSKREDITE </h1>
             </div>
         </div>
         {#<img class="img-responsive" src="https://d1x3gb5zl465n8.cloudfront.net/de/blog/blog_header.jpg" alt=""/>#}
     </div>
 
-    <div class="container-wrapper odd hidden-md hidden-lg">
+    <div class="container-wrapper hidden-md hidden-lg">
         <div class="container">
             <div class="row">
                 <div class="pull-top">
@@ -244,7 +244,21 @@
 
     <!-- end cms block 'il-hp' -->
 
+    {#  THIS IS A PARTIAL, NOT TO PUT IN CMS #}
+    <div class="container-wrapper">
+        <div class="container">
+            <div class="row">
+                <h2 class="faux-h1 text-center">Aktuelle Kreditprojekte</h2>
+                <table class="table custom-table">
+                    {% include '_partials/tables/loanProjectsTable.html.twig' %}
+                </table>
+            </div>
+        </div>
+    </div>
+    {# end PARTIAL #}
+
     <!-- begins cms block 'il-hp-bottom' -->
+
 
     <div class="container-wrapper odd blockquote">
         <div class="container">
@@ -272,83 +286,7 @@
         </div>
     </div>
 
-    <div class="container-wrapper">
-        <div class="container">
-            <div class="row">
-                <h2 class="faux-h1 text-center">Aktuelle Kreditprojekte</h2>
-                <table class="table custom-table">
-                    {#{% include '_partials/tables/loanProjectsTable.html.twig' %}#}
-                    <thead>
-                    <tr>
-                        <th class="hidden-md hidden-lg"></th>
-                        <th>Kreditprojekt</th>
-                        <th class="hidden-md hidden-lg"></th>
-                        <th class="hidden-xs hidden-sm">Kategorie</th>
-                        <th>Betrag</th>
-                        <th class="hidden-md hidden-lg"></th>
-                        <th class="hidden-xs hidden-sm">Zinssatz</th>
-                        <th class="hidden-xs hidden-sm">Laufzeit</th>
-                        <th class="hidden-xs hidden-sm">% finanziert</th>
-                        <th class="hidden-xs hidden-sm">Noch offen</th>
-                        <th class="hidden-xs hidden-sm">Restzeit</th>
-                        <th class="hidden-xs hidden-sm">Anlegen</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    {% for art in articles %}
-                        <tr>
-                            <td class="hidden-md hidden-lg {{ art.risk_class }} sm-width">{{ art.risk_title }}</td>
-                            <td class="loan-title"><a href="">{{ art.title }}</a></td>
-                            <td class="hidden-md hidden-lg">
-                                {{ art.interest }}<br>{{ art.duration }}
-                            </td>
-                            <td class="hidden-md hidden-lg sm-width">
-                                <div class="progress custom-progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                                         style="min-width: 2em; width: 60%;">
-                                        {{ art.funded }}
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="hidden-xs hidden-sm"><i class="categoryIcon"></i></td>
-                            <td class="hidden-xs hidden-sm text-right">{{ art.amount }}</td>
-                            <td class="hidden-xs hidden-sm text-right">{{ art.interest }}<span class="grade {{ art.risk_class }} grade-small">{{ art.risk_title }}</span>
-                            </td>
-                            <td class="hidden-xs hidden-sm">{{ art.duration }}</td>
-                            <td class="hidden-xs hidden-sm">
-                                <div class="progress default-progress pull-left">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                                         style="width: 60%;">
-                                    </div>
-                                </div>
-                                <div class="percentage pull-left text-right">{{ art.funded }}</div>
-                            </td>
-                            <td class="hidden-xs hidden-sm text-right">{{ art.amount_pending }}</td>
-                            <td class="hidden-xs hidden-sm text-center">{{ art.days_left }}</td>
-                            <td class="hidden-xs hidden-sm">
-                                <div class="bid-item">
-                                    <div class="invest"><input type="button" value="Anlegen" class="btn btn-nvstr btn-invest btn-block"/>
-                                    </div>
-                                    <div class="bid-form hidden">
-                                        <input class="inp-value" type="text" name=""/>
-                                        <input type="button" value="Biten" class="place-bid btn btn-nvstr btn-invest"/>
-                                    </div>
-                                    <div class="bid-value text-right hidden"><span>-</span>
-                                        <a href="javascript:void(0)" class="edit btn-edit">✎</a>
-                                        <a href="javascript:void(0)" class="remove"><i class="glyphicon glyphicon-remove"></i></a>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="hidden-md hidden-lg sm-width">
-                                <a href="" class="more"><i class="glyphicon glyphicon-chevron-right"></i></a>
-                            </td>
-                        </tr>
-                    {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
+
 
     <div class="container-wrapper">
         <div class="container">

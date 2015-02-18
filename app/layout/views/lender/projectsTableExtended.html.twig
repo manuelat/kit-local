@@ -3,13 +3,110 @@
 {% block body %}
 
 <div class="container">
-    <div class="row">
 
-        <table class="table custom-table">
-           {% include '_partials/tables/loanProjectsTable.html.twig' %}
-        </table>
+    <div class="row row-offcanvas row-offcanvas-right">
 
+        <div class="col-xs-12">
+            <div class="row">
+                <div class="col-xs-9 col-sm-6">{{ 'Aktuelle Kreditprojekte' }}</div>
+                <div class="col-xs-3 pull-right hidden-sm hidden-md hidden-lg">
+                    <button id="filter-btn" data-toggle="offcanvas" class="btn btn-primary pull-right" type="button">{{ 'Filtern' }}</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="sidebar-filter" class="sidebar-offcanvas hidden-lg">
+                <div class="row">
+                    <div class="col-sm-12 hidden-sm hidden-md hidden-lg">
+                        <a href="#" id="filter-close" class="pull-right">{{ 'X' }}</a>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <form action="" method="get" role="form" id="filter-bar">
+
+                        <p>{{ 'Kategorie' }}</p>
+
+                        <div class="radio">
+                            <label>
+                                <input type="radio" id="" name="option" value="option1" checked>
+                                {{ 'Betriebsmittelfinanzierung' }}
+                            </label>
+                        </div>
+
+                        <div class="radio">
+                            <label>
+                                <input type="radio" id="" name="option" value="option2">
+                                {{ 'Investition in Anlagevermögen' }}
+                            </label>
+                        </div>
+
+                        <div class="radio">
+                            <label>
+                                <input type="radio" id="" name="option" value="option3">
+                                {{ 'Wachstumkapital' }}
+                            </label>
+                        </div>
+
+                        <div class="radio">
+                            <label>
+                                <input type="radio" id="" name="option" value="option4">
+                                {{ 'Tilgung von Steuer-oder Versicherungsverbindlichkeiten' }}
+                            </label>
+                        </div>
+
+                        <div class="radio">
+                            <label>
+                                <input type="radio" id="" name="option" value="option5">
+                                {{ 'Sonstige' }}
+                            </label>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-4">
+                                <p>{{ 'Kreditbetrag' }}</p>
+                                <div id="slider-range-amount"></div>
+                                <p class="text-center">
+                                    <label for="amount"></label>
+                                    <input type="text" id="amount" class="text-center" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                                </p>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-4">
+                                <p>{{ 'Zinssatz' }}</p>
+                                <div id="slider-range-interest"></div>
+                                <p class="text-center">
+                                    <label for="interest"></label>
+                                    <input type="text" id="interest" class="text-center" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                                </p>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-4">
+                                <p>{{ 'Laufzeit' }}</p>
+                                <div id="slider-range-year"></div>
+                                <p class="text-center">
+                                    <label for="years"></label>
+                                    <input type="text" id="years" class="text-center" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                                </p>
+                            </div>
+                        </div><!-- end .row -->
+
+                        <div class="row">
+                            <p class="col-xs-12 text-center">
+                                <input type="submit" class="btn btn-primary" value="Filtern">
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div><!-- end .sidebar-offcanvas -->
+
+            <table class="table custom-table">
+               {% include '_partials/tables/loanProjectsTable.html.twig' %}
+            </table>
+
+        </div>
     </div>
+
 </div><!-- end .container -->
 
 {% endblock %}
