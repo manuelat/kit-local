@@ -1,7 +1,7 @@
 <?php
 
-$articles = array();
-$articles[] = array(
+$_articles = array();
+$_articles[] = array(
     'title' => 'Vorfinanzierung von Filmrechten',
     'amount' => '150.000 €',
     'interest' => '6,99% ',
@@ -13,7 +13,7 @@ $articles[] = array(
     'risk_title' => 'A+',
 );
 
-$articles[] = array(
+$_articles[] = array(
     'title' => 'Investition in Maschinenpark für einen',
     'amount' => '90.000 €',
     'interest' => '16,99% ',
@@ -25,7 +25,7 @@ $articles[] = array(
     'risk_title' => 'B',
 );
 
-$articles[] = array(
+$_articles[] = array(
     'title' => 'Italienische Gastlichkeit in Verden',
     'amount' => '25.000 €',
     'interest' => '8,62% ',
@@ -39,5 +39,5 @@ $articles[] = array(
 
 return array(
     'name' => 'Twig designer',
-    'articles' => $articles,
+    '_articles' => $_articles,
 );
