@@ -2,7 +2,7 @@ imports:
     - { resource: routes_help.yml }
 
 homepage:
-    path: /asd
+    path: /cms/homepage
 
 articles:
     path: /articles
