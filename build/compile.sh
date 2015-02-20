@@ -19,7 +19,7 @@ DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
 cd $DIR
 
-cp layout/layout.html.twig ../app/layout/theme/
+cp layout/layout.html.twig ../app/layout/views/
 
 if [[ "--no-bower" == $1 || "-n" == $1 ]]; then
     cp bootstrap/variables.less ../public_html/bower/bootstrap/less/variables.less
