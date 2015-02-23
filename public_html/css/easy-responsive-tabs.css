@@ -73,7 +73,7 @@ h2.resp-accordion {
 }
 
 h2.resp-tab-active {
-    border-bottom: 0px solid #c1c1c1 !important;
+    border-bottom: 1px solid #fff !important;
     margin-bottom: 0px !important;
     padding: 10px 15px !important;
 }

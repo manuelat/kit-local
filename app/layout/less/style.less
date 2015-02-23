@@ -10,6 +10,7 @@
 @import 'base/wells.less';
 @import 'base/tables.less';
 @import 'base/alerts.less';
+@import 'base/tooltip.less';
 
 // Components: Buttons & Alerts
 @import 'base/buttons.less';
@@ -183,7 +184,9 @@
 @gradeSmallWidth: 16px;
 @gradeMediumWidth: 24px;
 @gradeLargeWidth: 32px;
-@gradeExtraLargeWidth: 92px;
+@gradeGreaterWidth: 50px;
+@gradeWiderWidth: 65px;
+@gradeExtraLargeWidth: 85px;
 
 
 .gradeIconDimensions(@di) {
@@ -204,6 +207,16 @@
 
 .grade-large {
     .gradeIconDimensions(@gradeLargeWidth);
+    font-size: @gradeMediumWidth;
+}
+
+.grade-greater {
+    .gradeIconDimensions(@gradeGreaterWidth);
+    font-size: @gradeMediumWidth;
+}
+
+.grade-wider {
+    .gradeIconDimensions(@gradeWiderWidth);
     font-size: @gradeMediumWidth;
 }
 
@@ -240,6 +253,12 @@
     }
     span {
         vertical-align: middle;
+    }
+}
+
+.grades-wrapper {
+    .grade-greater, .grade-extra-large, .grade-wider {
+        margin-left: 0;
     }
 }
 
