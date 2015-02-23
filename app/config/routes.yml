@@ -10,3 +10,6 @@ articles:
 articles_details:
     path: /articles/details/{id}/{title}
     defaults: { id: 0, title: 'default article' }
+
+loanDetails:
+    path: /others/loanDetails
