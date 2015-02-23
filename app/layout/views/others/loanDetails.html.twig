@@ -29,7 +29,7 @@
         </div>
         <div class="row">
             <div class="col-xs-12">
-                <h4 class="faux-h3"><i class="categoryIcon" data-original-title="" title=""></i>Betriebsmittelfinanzierung
+                <h4 class="faux-h3"><i class="categoryIcon" data-original-title="" title="">3 </i> Betriebsmittelfinanzierung
                 </h4>
             </div>
         </div>
@@ -130,22 +130,40 @@
 {% endblock %}
 
 
+{% block css %}
+    {{ parent() }}
+    <link rel="stylesheet" href="/css/easy-responsive-tabs.css"/>
+{% endblock %}
 
- {% block js %}
-     {{ parent() }}
 
-     <script>
-         $(function(){
-             $('#lenderInvestTabs').easyResponsiveTabs({
-                 activetab_bg: '#edf0f2',
-                 inactive_bg: '#edf0f2',
-                 active_border_color: '#fff',
-                 active_content_border_color: '#edf0f2'
-             });
+{% block js %}
+    {{ parent() }}
+    <script src="/js/easyResponsiveTabs.js"></script>
 
-             $('[data-toggle="tooltip"]').tooltip();
-         });
+    <script>
+        $(function(){
 
-     </script>
+            $('#parentHorizontalTab').easyResponsiveTabs({
+                activetab_bg: '#edf0f2',
+                inactive_bg: '#edf0f2',
+                active_border_color: '#fff',
+                active_content_border_color: '#edf0f2',
+                type: 'default', //Types: default, vertical, accordion
+                width: 'auto', //auto or any width like 600px
+                fit: true, // 100% fit in a container
+                tabidentify: 'hor_1', // The tab groups identifier
+                activate: function(event) { // Callback function if tab is switched
+//                     var $tab = $(this);
+//                     var $info = $('#nested-tabInfo');
+//                     var $name = $('span', $info);
+//                     $name.text($tab.text());
+//                     $info.show();
+                }
+            });
 
- {% endblock %}
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+
+    </script>
+
+{% endblock %}

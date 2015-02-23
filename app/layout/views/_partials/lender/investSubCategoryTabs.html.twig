@@ -1,15 +1,15 @@
 {# Tabs that turn into Accordion on small devices #}
 
-<div id="lenderInvestTabs">
-    <ul class="nav nav-tabs resp-tabs-list">
+<!--Horizontal Tab-->
+<div id="parentHorizontalTab">
+    <ul class="nav nav-tabs resp-tabs-list hor_1">
         <li class="active"><a data-toggle="tab" href="#companyInfo" role="presentation">Kurzinformation</a></li>
         <li><a data-toggle="tab" href="#businessProfile" role="presentation">Unternehmensprofil</a></li>
         <li><a data-toggle="tab" href="#creditScore" role="presentation">Bonität</a></li>
         <li><a data-toggle="tab" href="#financials" role="presentation">Finanzkennzahlen</a></li>
     </ul>
-    <div class="resp-tabs-container tab-content">
-        <div id="companyInfo" class="tab-pane active">
-
+    <div class="resp-tabs-container hor_1">
+        <div id="#companyInfo">
             <div class="container">
                 <h3>Unternehmensinformationen</h3>
                 <div class="row">
@@ -60,45 +60,43 @@
                     </div>
                 </div>
             </div>
+        </div><!-- end #companyInfo -->
 
-        </div>
-        <div id="businessProfile" class="tab-pane">
+        <div id="businessProfile">
             {% if app.user is empty %}
 
-            Bitte <a href="">melden Sie sich an</a>, um diese Informationen anzusehen
+                Bitte <a href="">melden Sie sich an</a>, um diese Informationen anzusehen
 
             {% else %}
-            <div class="row">
-                <div class="col-xs-12 col-sm-4">
-                    <h3>Was macht Ihr Unternehmen?</h3>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4">
+                        <h3>Was macht Ihr Unternehmen?</h3>
+                    </div>
+                    <div class="col-xs-12 col-sm-8">
+                        <p>Das Unternehmen ist ein sogenannter EPC-contractor, d.h. ein Unternehmen, welches Anlagenbauprojekte und die Lieferungen weltweit plant und schlüsselfertig übergibt. Dazu gehören Projekte im Bereich Öl und Gas (z.B. Pipelinebau, Raffineriebau), Umwelt (Recyclinganlagen, Wasseraufbereitung), Infrastruktur (Hafenanlagen) und erneuerbare Energien. Abnehmer sind in der Regel Unternehmen vor Ort, primär in Schwellen- und Entwicklungsländern.</p>
+                    </div>
                 </div>
-                <div class="col-xs-12 col-sm-8">
-                    <p>Das Unternehmen ist ein sogenannter EPC-contractor, d.h. ein Unternehmen, welches Anlagenbauprojekte und die Lieferungen weltweit plant und schlüsselfertig übergibt. Dazu gehören Projekte im Bereich Öl und Gas (z.B. Pipelinebau, Raffineriebau), Umwelt (Recyclinganlagen, Wasseraufbereitung), Infrastruktur (Hafenanlagen) und erneuerbare Energien. Abnehmer sind in der Regel Unternehmen vor Ort, primär in Schwellen- und Entwicklungsländern.</p>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4">
+                        <h3>Warum ist es sicher, Ihnen einen Kredit zu gewähren?</h3>
+                    </div>
+                    <div class="col-xs-12 col-sm-8">
+                        <p>TBS ist viele Jahre in diesem Segment tätig und hat Erfahrung. Auftraggeber ist die nigrianiische Tochterges. der Firma Chevron aus den USA. Es ist ein nigerianischer Partner vor Ort eingbunden. Die Leistungen werden gemeinsam mit Chevron festgelegt, durch Inspektionen abgenommen und dann nach einem Servicevertrag 14 Tage später vergütet. Die Durchführung liegt bei einem Unternehmen, welches sich mit morastigem Boden auskennt. TBS macht die Planung, Überwachung und Organisation des Projektes. Das Projekt ist profitabel kalkuliert.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 col-sm-4">
-                    <h3>Warum ist es sicher, Ihnen einen Kredit zu gewähren?</h3>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4">
+                        <h3>Wofür soll der Kredit verwendet werden?</h3>
+                    </div>
+                    <div class="col-xs-12 col-sm-8">
+                        <p>Die Finanzierung dient der Vorbereitung und Ingangsetzung von Reparaturen und Ersetzung von maroden Pipelines im Nigerdelta, die von den Bohrlöchern zu den Hauptpipelines laufen. Dazu gehört die Baustelleneinrichtung und die Vorfinanzierung des Equipments vor Ort. Die Pipelines sind ca. 20 Jahre alt und müssen gewartet oder ersetzt werden, da ansonsten Ölaustritte die Umwelt verschmutzen.  Nigeria ist auf sauberes Öl angewiesen, da es der Hauptdevisenbringer des Landes ist. Dies bedingt aber auch eine umweltgrechte Produktion, die auf diese Weise sicherer wird.</p>
+                    </div>
                 </div>
-                <div class="col-xs-12 col-sm-8">
-                    <p>TBS ist viele Jahre in diesem Segment tätig und hat Erfahrung. Auftraggeber ist die nigrianiische Tochterges. der Firma Chevron aus den USA. Es ist ein nigerianischer Partner vor Ort eingbunden. Die Leistungen werden gemeinsam mit Chevron festgelegt, durch Inspektionen abgenommen und dann nach einem Servicevertrag 14 Tage später vergütet. Die Durchführung liegt bei einem Unternehmen, welches sich mit morastigem Boden auskennt. TBS macht die Planung, Überwachung und Organisation des Projektes. Das Projekt ist profitabel kalkuliert.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 col-sm-4">
-                    <h3>Wofür soll der Kredit verwendet werden?</h3>
-                </div>
-                <div class="col-xs-12 col-sm-8">
-                    <p>Die Finanzierung dient der Vorbereitung und Ingangsetzung von Reparaturen und Ersetzung von maroden Pipelines im Nigerdelta, die von den Bohrlöchern zu den Hauptpipelines laufen. Dazu gehört die Baustelleneinrichtung und die Vorfinanzierung des Equipments vor Ort. Die Pipelines sind ca. 20 Jahre alt und müssen gewartet oder ersetzt werden, da ansonsten Ölaustritte die Umwelt verschmutzen.  Nigeria ist auf sauberes Öl angewiesen, da es der Hauptdevisenbringer des Landes ist. Dies bedingt aber auch eine umweltgrechte Produktion, die auf diese Weise sicherer wird.</p>
-                </div>
-            </div>
             {% endif %}
 
-        </div>
-        <div id="creditScore" class="tab-pane">
+        </div><!-- end #businessProfile -->
 
-            {#Bitte <a href="">melden Sie sich an</a>, um diese Informationen anzusehen#}
-
+        <div id="creditScore">
             <div class="row">
                 <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
                     <h3>Zencap-Risikoklasse (Ausfallrisiko in %)</h3>
@@ -161,12 +159,10 @@
                     <p>Alle Kreditprojekte auf der Zencap-Plattform werden sorgfältig von unseren erfahrenen Kredit-Experten geprüft. Neben den Finanzdaten der Unternehmen (Bilanzen, Gewinn- und Verlustrechnungen) basiert unsere Risikoeinschätzung auf der historischen Bonitätsbewertung der Creditreform. Die Creditreform hat in 130 Jahren Unternehmensgeschichte ein unvergleichliches Know-how in der Bonitätsanalyse entwickelt und ist Marktführer für hochqualitative Wirtschaftsauskünfte in Deutschland. Kern dieser Auskünfte bildet die eigene, umfassende Firmendatenbank &ndash; mit rund 3,9 Millionen Einträgen die weltweit größte Ihrer Art.</p>
                 </div>
             </div>
+        </div><!-- end #creditScore -->
 
-        </div>
-        <div id="financials" class="tab-pane">
-
+        <div id="financials">
             Bitte <a href="/login">melden Sie sich an</a>, um diese Informationen anzusehen
-
-        </div>
+        </div><!-- end #financials -->
     </div>
 </div>
