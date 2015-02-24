@@ -1,0 +1,63 @@
+footer {
+    background-color: @footerBackground;
+    padding: @verticalRhythm 0;
+    color: @white;
+
+    a {
+        color: darken(@white, 20%);
+
+        &:hover {
+            color: darken(@white, 5%);
+        }
+    }
+
+     ul li {
+        line-height: 24px;
+    }
+}
+
+.logo-wrapper {
+    span {
+        font-size: 28px;
+        font-weight: 300;
+        vertical-align: middle;
+        margin-left: 20px;
+    }
+    img {
+        display: inline-block;
+    }
+}
+
+
+.copyright a {
+    padding: 0 12px;
+}
+
+/* targeting xs  */
+@media (min-width: 320px) and (max-width: 768px) {
+    .copyright span {
+        display: block;
+        color: darken(@white, 20%);
+    }
+    .copyright a {
+        padding: 0 2px;
+        color: @white;
+    }
+}
+
+/* targeting sm  */
+@media (min-width: 768px) and (max-width: 900px) {
+    .copyright a {
+        padding: 0 7px;
+    }
+}
+
+/* targeting xs */
+.hidden-sm {
+    &.logo-wrapper {
+        span {
+            font-size: 18px;
+            margin-left: 0;
+        }
+    }
+}

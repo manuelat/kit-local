@@ -2,6 +2,8 @@
 
 {% block body %}
 
+    {% include '_partials/headers/header.html.twig' %}
+
     <div class="cms-page homepage">
     <!-- begins cms block 'il-hp' -->
     <div class="container-wrapper main-title main-image hidden-xs hidden-sm">
@@ -335,7 +337,10 @@
 
     <!-- ends cms block 'il-hp-bottom' -->
 
-
     </div>
 
+    {% include '_partials/footers/footer.html.twig' %}
+
 {% endblock body %}
+
+
