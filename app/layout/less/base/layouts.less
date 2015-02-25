@@ -8,25 +8,43 @@ body {
 }
 
 .container {
-
     .row {
         position: relative;
     }
-
 }
 
 .container-wrapper {
-
     &.odd {
         background-color: @baseBackground;
-
     }
-
-    > .container {
-        padding: @verticalRhythm 0;
-    }
-
 }
+
+.odd {
+    background-color: @baseBackground;
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .container {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1025px) {
+    .container {
+        width: 940px;
+
+    }
+}
+
+
+// use instead of .container-wrapper > .container => padding: 48px 0;
+.padding-48 {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+}
+
 
 // USE FOR PADDING PURPOSES
 
@@ -67,6 +85,13 @@ body {
 .desp-48 {
     clear: both;
     height: 48px;
+    line-height: 0;
+    overflow: hidden;
+}
+
+.desp-68 {
+    clear: both;
+    height: 68px;
     line-height: 0;
     overflow: hidden;
 }

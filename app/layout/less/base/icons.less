@@ -17,11 +17,45 @@ i.btn-edit {
     font-style: normal;
 }
 
-.icon-linkedin:before {
-    content: "\f0e1";
-    font-family: "FontAwesome";
-}
+
 
 .icon-social-media {
+    padding: 24px 0 48px 0;
 
+    span {
+        display: inline-block;
+        margin-right: 5px;
+        background: #ccc;
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+
+        &:hover {
+            background: @white;
+        }
+    }
+
+    i {
+        font-size: 18px;
+        font-family: "FontAwesome";
+        line-height: 30px;
+        color: @footerBackground;
+        font-style: normal;
+    }
+}
+
+.icon-linkedin:before {
+    content: "\f0e1";
+}
+
+.icon-google-plus:before {
+    content: "\f0d5";
+}
+
+.icon-facebook-sign:before {
+    content: "\f09a";
+}
+
+.icon-twitter-sign:before {
+    content: "\f099";
 }
