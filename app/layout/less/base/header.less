@@ -1,7 +1,7 @@
 /* cookie bar */
 
 .navbartop {
-    background-color: #203340;
+    background-color: @footerBackground;
     color: #fff;
     height: 48px;
     margin-top: 0;
@@ -28,6 +28,40 @@
     display: table;
     height: 100%;
     width: 100%;
+}
+
+/* user details bar */
+
+ul.info {
+    li {
+        height: 48px;
+        line-height: 48px;
+        padding: 0 16px;
+
+        &:hover {
+            background: @white;
+            a {
+                color: @footerBackground;
+            }
+        }
+
+        a {
+            color: @white;
+            display: block;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        &.blue {
+            background: @brandColor;
+            &:hover {
+                a {
+                    color: @white;
+                }
+            }
+        }
+    }
 }
 
 /* header */
@@ -94,8 +128,8 @@ header {
         li {
             position: relative;
             border-left: 1px solid @baseBackground;
-            height: 48px;
-            line-height: 48px;
+            height: 49px;
+            line-height: 49px;
 
             a {
                 text-decoration: none;
@@ -123,7 +157,7 @@ header {
 
     ul.dropdown.submenu-hover {
         position: absolute;
-        top: 48px;
+        top: 49px;
         left: -1px;
         display: none;
 

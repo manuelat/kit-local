@@ -4,6 +4,8 @@
 
     {% include '_partials/headers/header.html.twig' %}
 
+    {#{% include '_partials/headers/account-header.html.twig' %}#}
+
 <div class="cms-page homepage">
 
     <!-- begins cms block 'il-hp' -->
@@ -335,5 +337,72 @@
 
 
 {% endblock body %}
+
+{% block js %}
+    {{ parent() }}
+
+    <script>
+
+        function show_button(item) {
+            item.children('.bid-form').addClass('hidden');
+            item.children('.bid-value').addClass('hidden');
+            item.children('.invest').removeClass('hidden');
+        }
+
+        function show_form(item) {
+            item.children('.bid-form').removeClass('hidden');
+            item.children('.bid-value').addClass('hidden');
+            item.children('.invest').addClass('hidden');
+        }
+
+        function show_completed_form(item, inputValue) {
+            item.children('.bid-value').children('span').html(inputValue);
+            item.children('.bid-form').addClass('hidden');
+            item.children('.bid-value').removeClass('hidden');
+            item.children('.invest').addClass('hidden');
+            // should have an ajax call to a script to add in sessoin or in db
+        }
+
+        function remove_form(item) {
+            item.children('.bid-form').addClass('hidden');
+            item.children('.bid-value').addClass('hidden');
+            item.children('.invest').removeClass('hidden');
+            item.children('.bid-form').children('.inp-value').val('');
+        }
+
+        function edit_form(item) {
+            item.children('.bid-form').removeClass('hidden');
+            item.children('.bid-value').addClass('hidden');
+            item.children('.invest').addClass('hidden');
+        }
+
+
+        $(function(){
+            $('.invest input').click(function(){
+                var item = $(this).parent().parent();
+                show_form(item);
+            });
+            $('.bid-form .place-bid').click(function(){
+                var item = $(this).parent().parent();
+                var inputValue = $(this).parent().children('.inp-value').val();
+                if ( inputValue == '' || inputValue == undefined ) {
+                    show_button(item);
+                    return;
+                }
+                show_completed_form(item, inputValue);
+            });
+            $('.bid-value .remove').click(function(){
+                var item = $(this).parent().parent();
+                remove_form(item);
+            });
+            $('.bid-value .edit').click(function(){
+                var item = $(this).parent().parent();
+                edit_form(item);
+            });
+        });
+
+    </script>
+
+{% endblock %}
 
 
