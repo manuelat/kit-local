@@ -10,64 +10,62 @@
     </ul>
     <div class="resp-tabs-container hor_1">
         <div id="#companyInfo">
-            <div class="container">
-                <h3>Unternehmensinformationen</h3>
-                <div class="row">
-                    <div class="col-xs-6 xs-increase-width">
-                        <table class="table">
-                            <tbody>
-                            <tr>
-                                <th>Firmenname</th>
-                                <td>
-                                    Bitte <a href="/login">melden Sie sich an</a>, um diese Informationen anzusehen                    </td>
-                            </tr>
-                            <tr>
-                                <th>Branche</th>
-                                <td>Dienstleistungen</td>
-                            </tr>
-                            <tr>
-                                <th>Ort</th>
-                                <td>Berlin</td>
-                            </tr>
-                            <tr>
-                                <th>Rechtsform</th>
-                                <td>GmbH</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="col-xs-6 xs-increase-width">
-                        <table class="table">
-                            <tbody>
-                            <tr>
-                                <th>Gründungsdatum</th>
-                                <td>01.10.1990</td>
-                            </tr>
-                            <tr>
-                                <th>Anzahl Mitarbeiter</th>
-                                <td>7</td>
-                            </tr>
-                            <tr>
-                                <th>Persönliche Bürgschaft</th>
-                                <td class="text-success">Bürgschaft vorhanden <i class="icon-ok"></i></td>
-                            </tr>
-                            <tr>
-                                <th>Kreditzweck</th>
-                                <td>Wachstumskapital</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
+            <h3>Unternehmensinformationen</h3>
+            <div class="row">
+                <div class="col-xs-6 xs-increase-width">
+                    <table class="table">
+                        <tbody>
+                        <tr>
+                            <th>Firmenname</th>
+                            <td>
+                                Bitte <a href="/login">melden Sie sich an</a>, um diese Informationen anzusehen </td>
+                        </tr>
+                        <tr>
+                            <th>Branche</th>
+                            <td>Dienstleistungen</td>
+                        </tr>
+                        <tr>
+                            <th>Ort</th>
+                            <td>Berlin</td>
+                        </tr>
+                        <tr>
+                            <th>Rechtsform</th>
+                            <td>GmbH</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-xs-6 xs-increase-width">
+                    <table class="table">
+                        <tbody>
+                        <tr>
+                            <th>Gründungsdatum</th>
+                            <td>01.10.1990</td>
+                        </tr>
+                        <tr>
+                            <th>Anzahl Mitarbeiter</th>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <th>Persönliche Bürgschaft</th>
+                            <td class="text-success">Bürgschaft vorhanden <i class="icon-ok"></i></td>
+                        </tr>
+                        <tr>
+                            <th>Kreditzweck</th>
+                            <td>Wachstumskapital</td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div><!-- end #companyInfo -->
 
         <div id="businessProfile">
-            {% if app.user is empty %}
+            {#{% if app.user is empty %}
 
                 Bitte <a href="">melden Sie sich an</a>, um diese Informationen anzusehen
 
-            {% else %}
+            {% else %}#}
                 <div class="row">
                     <div class="col-xs-12 col-sm-4">
                         <h3>Was macht Ihr Unternehmen?</h3>
@@ -92,7 +90,7 @@
                         <p>Die Finanzierung dient der Vorbereitung und Ingangsetzung von Reparaturen und Ersetzung von maroden Pipelines im Nigerdelta, die von den Bohrlöchern zu den Hauptpipelines laufen. Dazu gehört die Baustelleneinrichtung und die Vorfinanzierung des Equipments vor Ort. Die Pipelines sind ca. 20 Jahre alt und müssen gewartet oder ersetzt werden, da ansonsten Ölaustritte die Umwelt verschmutzen.  Nigeria ist auf sauberes Öl angewiesen, da es der Hauptdevisenbringer des Landes ist. Dies bedingt aber auch eine umweltgrechte Produktion, die auf diese Weise sicherer wird.</p>
                     </div>
                 </div>
-            {% endif %}
+            {#{% endif %}#}
 
         </div><!-- end #businessProfile -->
 
