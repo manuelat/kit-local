@@ -1,0 +1,98 @@
+/* ==========================================================================
+   Dashboard custom styles
+   ========================================================================== */
+
+// general rules
+.dash {
+    .panel-default > .panel-heading {
+        color: white;
+        font-weight: bold;
+        background-color: #189cf1;
+    }
+
+    .panel-body {
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .panel-heading {
+        border-radius: 0;
+        padding: 0 15px;
+
+        h4 {
+            height: 110px;
+            line-height: 37px;
+            font-weight: bold;
+            font-size: 17px;
+
+            > .large-subheading {
+                font-size: 38px;
+                font-weight: 100;
+            }
+        }
+    }
+
+    .panel-default {
+        border: none;
+    }
+
+    .panel {
+        box-shadow: none;
+    }
+
+    .panel-item {
+        background-color: #e8f5fe;
+    }
+}
+
+// override some rules
+.dash-green {
+    .panel-default > .panel-heading {
+        background-color: #54bb2e;
+    }
+
+    .panel-item {
+        background-color: #edf8ea;
+    }
+}
+
+// override some rules
+.dash-lead {
+    a {
+        color: @white;
+        text-decoration: underline;
+    }
+
+    .panel-body > .panel-item {
+        padding: 15px 10px;
+        background-color: #54bb2e;
+        color: @white;
+        font-weight: 500;
+    }
+}
+
+/* Landscape phones and portrait tablets */
+
+.panel-item {
+    margin: -6px 0 8px;
+    padding: 5px 3px;
+    height: 50px;
+
+    &:first-child {
+        padding-top: 8px;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+.group-accordion {
+    margin-bottom: 20px;
+    .bg-success {
+        margin: 0;
+        padding: 0;
+    }
+
+}

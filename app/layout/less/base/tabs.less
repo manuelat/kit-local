@@ -1,0 +1,42 @@
+// TABS
+
+.nav-tabs {
+    background-color: #edf0f2;
+    border-bottom: 0 none;
+    height: 48px;
+}
+
+.nav-tabs > li > a {
+    border-color: #edf0f2;
+    border-radius: 0;
+    border-style: solid none !important;
+    border-width: 4px 0 !important;
+    height: 100%;
+    line-height: 40px;
+    padding: 0 20px;
+    &:hover {
+        background: #fff;
+        border-bottom-color: #fff !important;
+    }
+}
+
+.nav-tabs > .active > a {
+    border-bottom-color: #fff !important;
+}
+
+.nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #fff;
+    border-color: #fff transparent;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    border: 1px solid #edf0f2;
+}

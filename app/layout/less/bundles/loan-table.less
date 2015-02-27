@@ -101,6 +101,17 @@
     }
 }
 
+.custom-table > thead > tr > th,
+.custom-table > tbody > tr > th,
+.custom-table > tfoot > tr > th,
+.custom-table > thead > tr > td,
+.custom-table > tbody > tr > td,
+.custom-table > tfoot > tr > td  {
+    padding: 6px 3px;
+    height: 35px;
+    vertical-align: middle;
+}
+
 .custom-table {
     .sm-width {
         width: 15px;
@@ -122,9 +133,17 @@
         }
     }
 
-    @media (min-width: 480px) and (max-width: 1024px) {
+    @media (min-width: 480px) and (max-width: 1023px) {
         .loan-title {
-            width: 55%;
+            width: 54%;
         }
     }
+}
+
+.custom-table tr th:first-child,
+.custom-table tr td:first-child,
+.custom-table tr th:last-child,
+.custom-table tr td:last-child {
+    padding-left: 9px;
+    padding-right: 0;
 }

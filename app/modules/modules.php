@@ -7,7 +7,7 @@
 
 $articles = array();
 $articles[] = array(
-    'title' => 'Vorfinanzierung von Filmrechten',
+    'title' => 'Vorfinanzierung von Filmrechten in Maschinenpark für einen Filmrechten in Maschinenpark für',
     'category' => '1',
     'amount' => '150.000 €',
     'interest' => '6,99% ',
@@ -62,7 +62,15 @@ $articles[] = array(
     'filled' => '70%',
 );
 
+
+$text = array();
+
+/* Dashboard tooltip text */
+
+$text = 'Die Zinsen aus aktiven Geboten zeigen die zu erwartenden Zinszahlungen vor Service-Gebühren. Diese Zinsen erhalten Sie, wenn alle Kredite, in die Sie investiert haben, erfolgreich sind und die jeweiligen Beträge an die Unternehmer ausgezahlt werden.';
+
 return array(
     'name' => 'Twig designer',
     'articles' => $articles,
+    'text_tooltip' => $text,
 );
