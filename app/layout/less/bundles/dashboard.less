@@ -54,6 +54,11 @@
     .panel-item {
         background-color: #edf8ea;
     }
+
+    a {
+        color: @white;
+        text-decoration: underline;
+    }
 }
 
 // override some rules
@@ -93,6 +98,19 @@
     .bg-success {
         margin: 0;
         padding: 0;
+        background: #189cf1;
+        a {
+            color: @white;
+            font-size: 17px;
+            font-weight: bold;
+        }
     }
+}
 
+.glyphicon-plus:before {
+    content: "-";
+}
+
+.collapsed .glyphicon-minus:before {
+    content: "+";
 }

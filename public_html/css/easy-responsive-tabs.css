@@ -5,7 +5,7 @@
     font-family: 'Segoe UI';
 }*/
 
-ul.resp-tabs-list, p {
+ul.resp-tabs-list {
     margin: 0px;
     padding: 0px;
 }
@@ -35,7 +35,7 @@ h2.resp-accordion {
 
 .resp-tab-content {
     display: none;
-    /*padding: 15px;*/
+    padding: 15px 0;
     border: 0;
 }
 
@@ -132,20 +132,32 @@ h2.resp-tab-title:last-child {
 }
 
 .resp-arrow {
-    width: 0;
-    height: 0;
+    width: 20px;
+    height: 20px;
     float: right;
-    margin-top: 3px;
-    border-left: 6px solid transparent;
+    margin-top: -4px;
+    /*border-left: 6px solid transparent;
     border-right: 6px solid transparent;
-    border-top: 12px solid #c1c1c1;
+    border-top: 12px solid #c1c1c1;*/
+    font-size: 25px;
+    line-height: 25px;
+    color: #2682bf;
+    font-weight: bold;
+}
+
+.resp-arrow:after {
+    content: "+";
+}
+
+h2.resp-tab-active span.resp-arrow:after {
+    content: "-";
 }
 
 h2.resp-tab-active span.resp-arrow {
     border: none;
-    border-left: 6px solid transparent;
+    /*border-left: 6px solid transparent;
     border-right: 6px solid transparent;
-    border-bottom: 12px solid #9B9797;
+    border-bottom: 12px solid #9B9797;*/
 }
 
 /*-----------Accordion styles-----------*/

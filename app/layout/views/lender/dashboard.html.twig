@@ -8,25 +8,34 @@
 <div class="container padding-48">
 
     <div class="row">
-        <div class="col-lg-9">
+        <div class="col-md-10 col-lg-9">
             <h1>Anleger-Dashboard</h1>
         </div>
-        <div class="col-lg-3">
+        <div class="col-md-2 col-lg-3">
             <a href="" class="btn btn-lg btn-nvstr btn-block pull-right">Jetzt anlegen</a>
         </div>
     </div>
 
-    <div class="{#hidden-xs hidden-sm hidden-md#} dash">
+    <!-- Panels visible for tablets, desktop (hidden for mobile) -->
+    <div class="hidden-xs visible-sm visible-md visible-lg dash">
 
         {% include '_partials/lender/investmentPanels.html.twig' %}
 
-    </div><!-- end .hidden-xs hidden-sm hidden-md -->
+    </div><!-- end .hidden-xs -->
+
+    <!-- Panels visible for mobile (hidden for tablets, desktop) -->
+
+    <div class="visible-xs hidden-sm hidden-md hidden-lg dash">
+
+        {% include '_partials/lender/investmentPanelsMobile.html.twig' %}
+
+    </div><!-- end .visible-xs -->
 
     <div class="row">
-        <div class="col-lg-6">
+        <div class="hidden-xs col-sm-12 col-md-6 col-lg-6">
             <h2>Die Zencap-Klassen</h2>
         </div>
-        <div class="col-lg-6">
+        <div class="hidden-xs col-sm-12 col-md-6 col-lg-6">
 
             <h2>Aktuelle Kreditprojekte</h2>
 
@@ -60,38 +69,31 @@
         </div>
     </div>
 
-    {% for i in 1..3 %}
-    <div class="row">
 
-        <div class="col-xs-4">
-            <h3>Was macht Ihr Unternehmen?</h3>
-        </div>
-
-        <div class="col-xs-8">
-            <p>Unser Unternehmen repräsentiert sich derzeit als qualifizierte Montagefirma "vor Ort". Wir sind in erster Linie auf Einrichtung kompletter Lüftungsanlagen spezialisiert. Zu unseren Dienstleistungen gehören: Erstellung und Wartung von Heizungs-, Sanitär-, Lüftungs-, Klima- und Kälteanlagen. Herstellung, Einbau und Wartung von Steuerungstechnik für Heizung und Lüftung. Einbau von genormten Baufertigteilen. Planung von gebäudetechnischen Anlagen und Demontage in der Gebäudetechnik</p>
-        </div>
-
-    </div>
-    {% endfor %}
 </div>
 
 {% endblock body %}
 
- {% block js %}
-     {{ parent() }}
+{% block js %}
+    {{ parent() }}
 
-     <script>
-         $(function(){
-             // activate tooltip
-            $('[data-toggle="tooltip"]').tooltip();
+    <script>
+     $(function(){
+         // activate tooltip
+        $('[data-toggle="tooltip"]').tooltip();
 
-             // activate tabs
-             $('[data-toggle="tab"]').click(function (e) {
-                 e.preventDefault();
-                 $(this).tab('show');
-             });
+         // activate tabs
+         $('[data-toggle="tab"]').click(function (e) {
+             e.preventDefault();
+             $(this).tab('show');
          });
 
-     </script>
+         // activate accordion
+         $('.collapse').collapse({
+             'toggle': false
+         });
+     });
+
+    </script>
 {% endblock %}
 
