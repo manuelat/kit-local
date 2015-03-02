@@ -63,6 +63,70 @@ $articles[] = array(
 );
 
 
+/* NETHERLANDS */
+
+$articles_nl = array();
+$articles_nl[] = array(
+    'title' => 'Voorfinanciering grote projecten',
+    'category' => '1',
+    'amount' => '150.000 €',
+    'interest' => '6,99% ',
+    'duration' => '2 jaren',
+    'funded' => '96%',
+    'amount_pending' => '146.000 €',
+    'days_left' => '13 dagen',
+    'risk_class' => 'grade-a',
+    'risk_title' => 'A+',
+    'filled' => '20%',
+);
+
+$articles_nl[] = array(
+    'title' => 'Inkoop materialen voor grote opdracht.',
+    'category' => '3',
+    'amount' => '25.000 €',
+    'interest' => '8,62% ',
+    'duration' => '6 maanden',
+    'funded' => '70%',
+    'amount_pending' => '74.200 €',
+    'days_left' => '16 dagen',
+    'risk_class' => 'grade-c',
+    'risk_title' => 'C',
+    'filled' => '60%',
+);
+
+/* SPAIN */
+
+$articles_es = array();
+$articles_es[] = array(
+    'title' => 'Resina Plástica - Fabricación depósitos agua, bolsas, cable',
+    'category' => '1',
+    'amount' => '150.000 €',
+    'interest' => '6,99% ',
+    'duration' => '2 años',
+    'funded' => '96%',
+    'amount_pending' => '146.000 €',
+    'days_left' => '17 Días',
+    'risk_class' => 'grade-a',
+    'risk_title' => 'A+',
+    'filled' => '20%',
+);
+
+$articles_es[] = array(
+    'title' => 'Instalación de Unidad de Suministro: Deposito de Gasoil Low Cost',
+    'category' => '3',
+    'amount' => '25.000 €',
+    'interest' => '8,62% ',
+    'duration' => '6 meses',
+    'funded' => '70%',
+    'amount_pending' => '74.200 €',
+    'days_left' => '16 dagen',
+    'risk_class' => 'grade-c',
+    'risk_title' => 'C',
+    'filled' => '60%',
+);
+
+
+
 $text = array();
 
 /* Dashboard tooltip text */
@@ -72,5 +136,7 @@ $text = 'Die Zinsen aus aktiven Geboten zeigen die zu erwartenden Zinszahlungen 
 return array(
     'name' => 'Twig designer',
     'articles' => $articles,
+    'articles_nl' => $articles_nl,
+    'articles_es' => $articles_es,
     'text_tooltip' => $text,
 );

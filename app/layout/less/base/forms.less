@@ -1,0 +1,64 @@
+/* forms from credit projects: dropdown, search */
+
+.form-control {
+    box-shadow: none;
+
+    &:focus {
+        box-shadow: none;
+        border-color: #ccc;
+    }
+}
+
+.input-search {
+    position: relative;
+
+    .fa-search {
+        position: absolute;
+        top: 10px;
+        left: 15px;
+        opacity: 0.5;
+    }
+
+    .form-control {
+        padding: 10px 40px;
+    }
+}
+
+.radio-handler {
+    position: relative;
+
+    input[type="radio"] {
+        position: absolute;
+        top: 25px;
+        left: 20px;
+        height: 30px;
+    }
+
+    .btn-selected, .btn-selected:focus, .btn-selected:hover {
+        background: #93C0DF;
+        color: @white !important;
+        box-shadow: 0 -3px 0 #79a4c2 inset;
+    }
+}
+
+#filter-bar {
+    .radio + .radio {
+        margin-top: -15px;
+    }
+
+    ul.dropdown-menu {
+        top: 20px;
+    }
+
+    .dropdown-toggle {
+        background: @white;
+        border: 1px solid @brandColor6;
+        box-shadow: 0 -3px 0 #e6e6e6 inset;
+        color: @brandColor3;
+        margin-top: -10px;
+    }
+
+    p strong {
+        font-size: 12px;
+    }
+}

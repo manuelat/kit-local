@@ -124,7 +124,7 @@
     }
 
     .loan-title {
-        width: 27%;
+        width: 26%;
     }
 
     @media (max-width: 480px) {
@@ -146,6 +146,15 @@
 .custom-table tr td:last-child {
     padding-left: 9px;
     padding-right: 0;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .custom-table tr th:first-child,
+    .custom-table tr td:first-child,
+    .custom-table tr th:last-child,
+    .custom-table tr td:last-child {
+        padding-left: 4px;
+    }
 }
 
 .custom-table tr td.loan-title a {
