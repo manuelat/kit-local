@@ -140,10 +140,11 @@
     }
 }
 
-.custom-table tr th:first-child,
-.custom-table tr td:first-child,
-.custom-table tr th:last-child,
-.custom-table tr td:last-child {
+/* style for first and last child displayed on mobile */
+.table.custom-table tr th:first-child.hidden-lg,
+.table.custom-table tr td:first-child.hidden-lg,
+.table.custom-table tr th:last-child.hidden-lg,
+.table.custom-table tr td:last-child.hidden-lg {
     padding-left: 9px;
     padding-right: 0;
 }
@@ -161,4 +162,21 @@
     height: 40px;
     display: block;
     overflow: hidden;
+}
+
+//active biddings
+.custom-table tr td.bid-amount {
+    padding-right: 25px;
+}
+
+// portfolio
+.portolio-table {
+    .custom-table > thead > tr > th,
+    .custom-table > tbody > tr > th,
+    .custom-table > tfoot > tr > th,
+    .custom-table > thead > tr > td,
+    .custom-table > tbody > tr > td,
+    .custom-table > tfoot > tr > td {
+        padding: 6px 20px;
+    }
 }

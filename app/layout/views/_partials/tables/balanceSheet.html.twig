@@ -1,0 +1,45 @@
+<table class="table">
+    <tr>
+        <th>
+            <h3 class="faux-h4">Gewinn- und Verlustrechnung</h3>
+            <p></p>
+        </th>
+        <th>
+            <h3 class="faux-h4">Aktuelles Jahr</h3>
+            <p>31.12.2014</p>
+        </th>
+        <th>
+            <h3 class="faux-h4">Jahresabschluss</h3>
+            <p>31.12.2013</p>
+        </th>
+        <th>
+            <h3 class="faux-h4">Jahresabschluss</h3>
+            <p>31.12.2012</p>
+        </th>
+    </tr>
+
+    {% for finance in financial_data %}
+    <tr>
+        <td>{{ finance.title }}</td>
+        <td>{{ finance.data_2014 }}</td>
+        <td>{{ finance.data_2013 }}</td>
+        <td>{{ finance.data_2012 }}</td>
+    </tr>
+    {% endfor %}
+
+    <tr>
+        <th>
+            <h3 class="faux-h4">Bilanz</h3>
+        </th>
+    </tr>
+
+    {% for balance in balance_data %}
+        <tr>
+            <td>{{ balance.title }}</td>
+            <td>{{ balance.data_2014 }}</td>
+            <td>{{ balance.data_2013 }}</td>
+            <td>{{ balance.data_2012 }}</td>
+        </tr>
+    {% endfor %}
+
+</table>

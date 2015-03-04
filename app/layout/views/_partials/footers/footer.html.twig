@@ -42,33 +42,33 @@
             <div class="col-sm-3">
                 <strong>Unternehmen</strong>
                 <ul class="list-unstyled">
-                    <li><a href="/unternehmen-erste-schritte-31.html">Erste Schritte</a></li>
-                    <li><a href="/unternehmen-kosten-kriterien-21.html">Kosten &amp; Kriterien</a></li>
-                    <li><a href="/nutzungsbedingungen-kreditnehmer-111.html">AGB</a></li>
-                    <li><a href="/unternehmen-hilfe-16.html">Häufige Fragen</a></li>
+                    <li><a href="{{ path('borrowerGettingStarted') }}">Kredit beantragen</a></li>
+                    <li><a href="{{ path('ratesFeesBorrower') }}">Onlinekredit</a></li>
+                    <li><a href="{{ path('conditionsBorrower') }}">AGB</a></li>
+                    <li><a href="">Häufige Fragen</a></li>
                 </ul>
             </div>
             <div class="col-sm-3">
                 <strong>Investoren</strong>
                 <ul class="list-unstyled">
-                    <li><a href="/investoren-erste-schritte-5.html">Erste Schritte</a></li>
-                    <li><a href="/darlehen-anfrage/index">Aktuelle Kreditprojekte</a></li>
-                    <li><a href="/anleger-renditen-gebuehren-22.html">Renditen &amp; Gebühren</a></li>
-                    <li><a href="/konto-optionen-28.html">Account-Optionen</a></li>
-                    <li><a href="/nutzungsbedingungen-32.html">AGB</a></li>
-                    <li><a href="/anleger-hilfe-17.html">Häufige Fragen</a></li>
+                    <li><a href="{{ path('lenderGettingStarted') }}">Geldanlage</a></li>
+                    <li><a href="{{ path('creditProjects') }}">Aktuelle Kreditprojekte</a></li>
+                    <li><a href="{{ path('ratesFeesInvestor') }}">Renditen</a></li>
+                    <li><a href="{{ path('account_options') }}">Account-Optionen</a></li>
+                    <li><a href="{{ path('conditionsInvestor') }}">AGB</a></li>
+                    <li><a href="">Häufige Fragen</a></li>
                 </ul>
             </div>
             <div class="col-sm-3">
                 <strong>Zencap</strong>
                 <ul class="list-unstyled">
-                    <li><a href="/wie-es-funktioniert-18.html">Wie es funktioniert</a></li>
-                    <li><a href="/partner-programm-91.html">Partnerprogramm</a></li>
-                    <li><a href="/presse-36.html">Presse</a></li>
-                    <li><a href="/blog/-79.html">Blog</a></li>
-                    <li><a href="/ueber-uns-13.html">Über uns</a></li>
-                    <li><a href="/career-107.html">Jobs</a></li>
-                    <li><a href="/hilfe-23.html">Häufige Fragen</a></li>
+                    <li><a href="{{ path('howItWorks') }}">Wie es funktioniert</a></li>
+                    <li>{#<a href="">#}Partnerprogramm{#</a>#}</li>
+                    <li><a href="{{ path('press') }}">Presse</a></li>
+                    <li><a href="{{ path('blog') }}">Blog</a></li>
+                    <li><a href="{{ path('about_us') }}">Über uns</a></li>
+                    <li><a href="{{ path('jobs') }}">Jobs</a></li>
+                    <li><a href="">Häufige Fragen</a></li>
                 </ul>
             </div>
             <div class="col-sm-3">
@@ -110,9 +110,9 @@
         <div class="row">
             <div class="col-xs-12 text-center copyright">
                 <span>&copy; 2015 Zencap Deutschland GmbH. Alle Rechte vorbehalten.</span>
-                <a href="/kontakt-14.html">Kontakt</a>
-                <a href="/privacy-33.html">Datenschutzerklärung</a>
-                <a href="/impressum-15.html">Impressum</a>
+                <a href="{{ path('contact') }}">Kontakt</a>
+                <a href="{{ path('privacy') }}">Datenschutzerklärung</a>
+                <a href="{{ path('imprint') }}">Impressum</a>
             </div>
         </div>
     </div>

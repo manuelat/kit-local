@@ -1,0 +1,28 @@
+<nav class="main">
+    <ul class="list-unstyled main-menu">
+
+        <!--Include your navigation here-->
+        <li class="text-right"><a href="#" id="nav-close">X</a></li>
+        <li><a href="#">Vorname  Nachname <span class="icon"></span></a></li>
+        <li><a href="#">Profil <span class="icon"></span></a></li>
+        <li><a href="#">Abmelden <span class="icon"></span></a></li>
+        <li><a href="#">Gewählte Kredite <span class="value">150,000 €</span> <span class="icon"></span></a></li>
+        <li><a href="{{ path('dashboard') }}">Dashboard<span class="icon"></span></a></li>
+        <li><a href="{{ path('invest') }}">Anlegen <span class="icon"></span></a></li>
+        <li><a href="{{ path('active_biddings') }}">Gebote <span class="icon"></span></a></li>
+        <li><a href="{{ path('portfolio') }}">Portofolio <span class="icon"></span></a></li>
+        <li><a href="{{ path('premium_account') }}">Premium-account <span class="icon"></span></a></li>
+        <li><a href="#">Hilfe</a></li>
+    </ul>
+</nav>
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <a class="navbar-brand" href="#">
+        <img src="/bundles/intlendweblayout/frontend/images/logo.png" alt="Example" />
+    </a>
+    <div class="navbar-header pull-right">
+        <a id="nav-expander" class="nav-expander fixed">
+            {#MENU#} &nbsp;<i class="fa fa-bars fa-lg"></i>
+        </a>
+    </div>
+</div>

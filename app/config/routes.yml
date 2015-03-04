@@ -13,3 +13,72 @@ articles_details:
 
 loanDetails:
     path: /others/loanDetails
+
+dashboard:
+    path: /lender/dashboard
+
+invest:
+    path: /lender/invest
+
+active_biddings:
+    path: /lender/activeBiddings
+
+portfolio:
+    path: /lender/portfolio
+
+premium_account:
+    path: /lender/premiumAccount
+
+creditProjects:
+    path: /lender/projectsTableExtended
+
+blog:
+    path: /cms/blog
+
+openBlogArticle:
+    path: /cms/blogArticle40
+
+lenderGettingStarted:
+    path: /cms/lenderGettingStarted
+
+borrowerGettingStarted:
+    path: /cms/borrowerGettingStarted
+
+ratesFeesInvestor:
+    path: /cms/ratesFeesInvestor
+
+ratesFeesBorrower:
+    path: /cms/ratesFeesBorrower
+
+conditionsBorrower:
+    path: /cms/conditionsB
+
+conditionsInvestor:
+    path: /cms/conditionsI
+
+howItWorks:
+    path: /cms/works
+
+jobs:
+    path: /cms/jobs
+
+press:
+    path: /cms/press
+
+options:
+    path: /cms/options
+
+contact:
+    path: /cms/contact
+
+imprint:
+    path: /cms/imprint
+
+privacy:
+    path: /cms/privacy
+
+about_us:
+    path: /cms/about
+
+account_options:
+    path: /cms/options

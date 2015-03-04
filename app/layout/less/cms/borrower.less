@@ -1,3 +1,6 @@
+/* ==========================================================================
+   Rates and fees borrower
+   ========================================================================== */
 .borrower {
 
     .fees {
@@ -10,61 +13,25 @@
         h1 {
             font-size: 30px;
         }
-        // I commented it all out
-        /*margin-top: -@verticalRhythm; // /* TODO: best solution to move up?*/
-
-
-        /*.container {
-        }
-
-        .table {
-          .box-shadow(@containerBoxShadow);
-          margin-bottom: @verticalRhythm;
-        }
-      }
-
-      .response {
-
-        #callMeBackContainer {
-          .clearfix();
-
-          form + .btn {
-            margin-top: @gridGutterWidth * 3/4;
-            .btn-block;
-          }
-        }
-
-        .span6 {
-          .clearfix;
-        }
-
-        .response-icon {
-          @iconWidth: @gridColumnWidth + @gridGutterWidth;
-
-          color: @white;
-          background-color: @brandColor2;
-          font-size: 52px;
-          width: @iconWidth;
-          height: @iconWidth;
-          line-height: @iconWidth;
-          .text-center;
-          .pull-left;
-          .box-shadow(@containerBoxShadow);
-        }
-
-        .form-group {
-          background-color: @white;
-          padding: @gridGutterWidth;
-          width: (@gridColumnWidth * 5) + (@gridGutterWidth * 2);
-          .pull-left;
-          .box-shadow(@containerBoxShadow);
-        }*/
     }
 
-    .facts .panel-default {
-        background-color: #ebebeb;
-    }
+    .xs-main-image {
+        background-image: url("https://d1x3gb5zl465n8.cloudfront.net/de/bundles/images/borrower/hero-leitfaden_04.jpg");
+        background-size: 100%;
+        background-repeat: no-repeat;
 
+        @media (min-width: 320px) and (max-width: 480px) {
+            h1 {
+                font-size: 14px;
+            }
+        }
+
+        @media (min-width: 480px) and (max-width: 600px) {
+            h1 {
+                font-size: 23px;
+            }
+        }
+    }
 
     .benefits-borrower h3 {
         border-bottom: 2px solid #ff8c19;
@@ -72,3 +39,147 @@
     }
 
 }
+
+.facts {
+    .panel-default {
+        background-color: #ebebeb;
+    }
+
+    h4 {
+        margin-bottom: 0;
+
+        a {
+            color: @brandColor4;
+            font-weight: bold;
+            &:before {
+                content: "\f164";
+                font-family: "FontAwesome";
+                font-size: 20px;
+                padding-right: 3px;
+                color: #9b9ea0;
+            }
+        }
+    }
+
+    .panel-default > .panel-heading {
+        background-color: #dbdbdb;
+    }
+}
+
+// accordion
+.fa-minus-square:before {
+    content: "\f146";
+}
+
+.collapsed .fa-minus-square:before {
+    content: "\f0fe";
+}
+
+/* end rates and fees borrower  */
+
+/* ==========================================================================
+   Borrower getting started
+   ========================================================================== */
+
+.calculate-loan {
+    background: url('https://d1x3gb5zl465n8.cloudfront.net/de/bundles/images/borrower/02-00-kredit-beantragen_05.jpg') 50% 0;
+}
+
+.loan-calculator-container {
+
+    background: white;
+    overflow: hidden;
+
+    #offerInput {
+        font-size: 23px;
+        height: 48px;
+        margin: 0 0 20px;
+        padding: 6px 12px;
+        max-width: 195px;
+        .border-radius(@borderRadiusLarge);
+        border: 1px solid @brandColor6;
+    }
+
+    .radio-buttons {
+        float: left;
+        width: 79px;
+
+        &:nth-child(1) {
+            width: 92px;
+        }
+
+        label {
+            margin-left: 0;
+            margin-right: 10px !important;
+            padding: 3px;
+            display: inline-block;
+            font-weight: 600;
+        }
+
+        input {
+            display: block;
+        }
+    }
+
+    /*.custom-circle {
+        border: 1px solid @brandColor6;
+        border-radius: 15px;
+        height: 21px;
+        width: 21px;
+        float: left;
+    }*/
+
+    .loan-calculator {
+        padding-top: 54px;
+    }
+
+    .result-box {
+        background: @brandColor2;
+        color: @white;
+        padding-top: 50px;
+
+        .subheading {
+            font-size: @headingsFontSizeH2;
+        }
+
+        p small {
+            color: #f6d1b7;
+        }
+    }
+}
+
+.loan-conditions {
+    background: url("/bundles/intloopdeweblayout/frontend/images/cms/borrower/loan-calculator-benefits.png") top left repeat-x;
+
+    .list-inline {
+        color: @white;
+        padding: 19px 30px 18px;
+
+        li {
+            &:nth-child(2) {
+                padding: 0 41px 0 57px;
+            }
+
+            &:before {
+                content: "\f058";
+                font-family: @iconFontFamilyAwesome;
+                font-size: @baseFontSize;
+                padding-right: 7px;
+            }
+        }
+    }
+}
+
+.cta {
+    p {
+        padding-top: 12px;
+        &:before {
+            content: "\f132";
+            font-family: "FontAwesome";
+            font-size: @headingsFontSizeH5;
+            padding-right: 3px;
+        }
+    }
+}
+
+/* end borrower getting started  */

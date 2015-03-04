@@ -26,22 +26,32 @@
 </head>
 <body>
 
-    {% block top_menu %}
+    {% block header %}
 
-        {#{% include '_partials/headers/top-menu.html.twig' %}#}
+        {% include '_partials/headers/header.html.twig' %}
 
-    {% endblock top_menu %}
+        {#{% if is_granted('ROLE_BORROWER') or is_granted('ROLE_LENDER')  %}
+            {% include '_partials/headers/account-header.html.twig' %}
+        {% else %}
+            {% include '_partials/headers/header.html.twig' %}
+        {% endif %}#}
+
+    {% endblock header %}
 
     {% block body %}
 
     {% endblock body %}
 
+    {% block footer %}
+        {% include '_partials/footers/footer.html.twig' %}
+    {% endblock footer %}
+
     {% block js %}
-    <script src="/bower/jquery/dist/jquery.min.js"></script>
-    <script src="/bower/jquery-ui/jquery-ui.min.js"></script>
-    <script src="/bower/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="/js/pluginMenu.js"></script>
-    <script src="/js/tools.js"></script>
+        <script src="/bower/jquery/dist/jquery.min.js"></script>
+        <script src="/bower/jquery-ui/jquery-ui.min.js"></script>
+        <script src="/bower/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="/js/pluginMenu.js"></script>
+        <script src="/js/tools.js"></script>
     {% endblock %}
 
 </body>

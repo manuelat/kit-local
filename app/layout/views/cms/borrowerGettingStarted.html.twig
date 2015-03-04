@@ -2,7 +2,8 @@
 
 {% block body %}
 
-<div class="container padding-48">
+<!-- Content visible for mobile, tablets (hidden for desktop) -->
+<div class="container">
 
     <div class="row">
         <div class="col-xs-12 hidden-lg">
@@ -75,104 +76,130 @@
     </div><!-- end .row -->
 
 </div>
-
-
+<!-- end .hidden-lg -->
 
 <div class="cms-page borrower">
 
-{#
-    <div class="container-wrapper loan-calculator" style="background-image:url('https://d1x3gb5zl465n8.cloudfront.net/de/bundles/images/borrower/02-00-kredit-beantragen_05.jpg'); background-position: 50% 0;">
-        <h1>Ihr Firmenkredit: Jetzt persönliche Rate ermitteln</h1>
-        <div class="container loan-calculator-container">
+    <!-- Content visible for desktop (hidden for mobile, tablets) -->
+    <div class="container-wrapper hidden-xs hidden-sm hidden-md visible-lg calculate-loan">
+        <div class="desp-30"></div>
+        <h1 class="text-white text-center">Ihr Firmenkredit: Jetzt persönliche Rate ermitteln</h1>
+        <div class="container">
             <div class="row">
-                <div class="col-xs-8" style="margin-bottom:20px;">
-                    <!--<p class="faux-h3">Ihr persönlicher Geschäftskredit</p>-->
-                    <div class="row" style="margin-top:28px;">
-                        <div class="col-xs-2">
-                            <label>Ihr Kreditbetrag</label>
+                <div class="loan-calculator-container">
+                    <div class="col-lg-8 loan-calculator">
+                        <div class="row">
+                            <div class="col-xs-2">
+                                <label>Ihr Kreditbetrag</label>
+                            </div>
+                            <div class="col-xs-4"><input id="offerInput" type="text" placeholder="max. 150.000 €"></div>
+                            <div class="col-xs-5">
+                                <div id="offerSlider"></div>
+                            </div>
                         </div>
-                        <div class="col-xs-3"><input id="offerInput" type="text" placeholder="max. 150.000 €"></div>
-                        <div class="col-xs-3">
-                            <div id="offerSlider"></div>
+                        <div class="desp-20"></div>
+                        <div class="row">
+                            <div class="col-xs-2">
+                                <label>Ihre Kreditlaufzeit</label>
+                            </div>
+                            <div class="col-xs-10">
+
+                                <div class="radio-buttons">
+                                    <input type="radio" id="months_6" name="months" value="6" class="month">
+                                    <label for="months_6">6 Monate</label>
+                                    {#<div class="custom-circle">
+                                        <span class="selected"></span>
+                                    </div>#}
+                                </div>
+
+                                <div class="radio-buttons">
+                                    <input type="radio" id="months_12" name="months" value="12" class="month">
+                                    <label for="months_12">1 Jahr</label>
+                                    {#<div class="custom-circle">
+                                        <span class="selected"></span>
+                                    </div>#}
+                                </div>
+
+                                <div class="radio-buttons">
+                                    <input type="radio" id="months_24" name="months" value="24" class="month" checked="checked">
+                                    <label for="months_24">2 Jahre</label>
+                                    {#<div class="custom-circle">
+                                        <span class="selected"></span>
+                                    </div>#}
+                                </div>
+
+                                <div class="radio-buttons">
+                                    <input type="radio" id="months_36" name="months" value="36" class="month">
+                                    <label for="months_36">3 Jahre</label>
+                                    {#<div class="custom-circle">
+                                        <span class="selected"></span>
+                                    </div>#}
+                                </div>
+
+                                <div class="radio-buttons">
+                                    <input type="radio" id="months_48" name="months" value="48" class="month">
+                                    <label for="months_48">4 Jahre</label>
+                                    {#<div class="custom-circle">
+                                        <span class="selected"></span>
+                                    </div>#}
+                                </div>
+
+                                <div class="radio-buttons">
+                                    <input type="radio" id="months_60" name="months" value="60" class="month">
+                                    <label for="months_60">5 Jahre</label>
+                                    {#<div class="custom-circle">
+                                        <span class="selected"></span>
+                                    </div>#}
+                                </div>
+
+                            </div>
                         </div>
                     </div>
-                    <div class="row" style="margin-bottom:-12px;">
-                        <div class="col-xs-2">
-                            <label>Ihre Kreditlaufzeit</label>
+                    <div class="col-lg-4 result-box">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <p class="pull-left">Monatliche Zahlung</p>
+                                <p id="monthlyPayment" class="subheading pull-right">5.000 €</p>
+                            </div>
                         </div>
-                        <div class="col-xs-6">
-
-                            <div class="radio-buttons">
-                                <input type="radio" id="months_6" name="months" value="6" class="month">
-                                <label for="months_6">6 Monate</label>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <p class="pull-left"><strong>Gesamtbetrag</strong></p>
+                                <p id="totalPayment" class="subheading pull-right"><strong>150.000 €</strong></p>
                             </div>
-
-                            <div class="radio-buttons">
-                                <input type="radio" id="months_12" name="months" value="12" class="month">
-                                <label for="months_12">1 Jahr</label>
+                        </div>
+                        <div class="desp-25"></div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <p><small>Die oben genannten Zahlen enthalten Zencap-Gebühren in Höhe von <span id="feeAmount"> 2.000 €</span> und basieren auf der Risikoklasse A+.</small></p>
                             </div>
-
-                            <div class="radio-buttons">
-                                <input type="radio" id="months_24" name="months" value="24" class="month" checked="checked">
-                                <label for="months_24">2 Jahre</label>
-                            </div>
-
-                            <div class="radio-buttons">
-                                <input type="radio" id="months_36" name="months" value="36" class="month">
-                                <label for="months_36">3 Jahre</label>
-                            </div>
-
-                            <div class="radio-buttons">
-                                <input type="radio" id="months_48" name="months" value="48" class="month">
-                                <label for="months_48">4 Jahre</label>
-                            </div>
-
-                            <div class="radio-buttons">
-                                <input type="radio" id="months_60" name="months" value="60" class="month">
-                                <label for="months_60">5 Jahre</label>
-                            </div>
-
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-4 result-box">
-                    <div class="row">
-                        <div class="col-xs-4">
-                            <p class="pull-left">Monatliche Zahlung</p>
-                            <p id="monthlyPayment" class="pull-right">5.000 €</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-4">
-                            <p class="pull-left"><strong>Gesamtbetrag</strong></p>
-                            <p id="totalPayment" class="pull-right"><strong>150.000 €</strong></p>
-                        </div>
-                    </div>
-                    <div class="row pull-down">
-                        <div class="col-xs-4">
-                            <p><small>Die oben genannten Zahlen enthalten Zencap-Gebühren in Höhe von <span id="feeAmount"> 2.000 €</span> und basieren auf der Risikoklasse A+.</small></p>
-                        </div>
-                    </div>
+                <div class="loan-conditions">
+                <div class="lg-12">
+                    <ul class="list-inline">
+                        <li><strong>Mindestumsatz: 100.000 €</strong></li>
+                        <li><strong>Bilanzanforderung: Buchführung nach HGB</strong></li>
+                        <li><strong>Mindestunternehmensalter: 2 Jahre</strong></li>
+                    </ul>
+                </div>
                 </div>
             </div>
         </div>
 
-        <div class="container loan-calculator-benefits">
-            <ul class="inline">
-                <li><strong>Mindestumsatz: 100.000 €</strong></li>
-                <li><strong>Bilanzanforderung: Buchführung nach HGB</strong></li>
-                <li><strong>Mindestunternehmensalter: 2 Jahre</strong></li>
-            </ul>
-        </div>
-
         <div class="container cta">
-            <a id="loan-submit-1" class="btn btn-lg btn-brrwr" type="submit" href="/loan-request/register#baseForm">Jetzt Kredit beantragen</a>
-            <p>TÜV geprüfte Datensicherheit</p>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <a id="loan-submit-1" class="btn btn-lg btn-brrwr" type="submit" href="">Jetzt Kredit beantragen</a>
+                    <p class="text-white">TÜV geprüfte Datensicherheit</p>
+                </div>
+            </div>
         </div>
 
     </div>
+    <!-- end .visible-lg -->
 
-    #}
     <div class="container-wrapper">
         <div class="container padding-48">
             <h2 class="faux-h1 text-center">In drei Schritten zu Ihrem Geschäftskredit</h2>
@@ -208,7 +235,6 @@
         </div>
     </div>
 
-
     <div class="container-wrapper odd blockquote small-quote-pad">
         <div class="container padding-48">
             <h3 class="faux-h1 text-center">Unkomplizierter und schneller Prozess</h3>
@@ -221,8 +247,8 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-8">
                                 <blockquote>
-                                    <p>Mit der Finanzierung bei Zencap schaffen wir uns ein zweites Standbein. So sind wir in Zeiten von Basel III unabhängiger von der Hausbank. Außerdem schätzen wir den unkomplizierten und sehr professionellen Prozess bei Zencap.</p>
-                                    <p><em>Axel Jünke, Geschäftsführer</em></p>
+                                    <p class="text-left">Mit der Finanzierung bei Zencap schaffen wir uns ein zweites Standbein. So sind wir in Zeiten von Basel III unabhängiger von der Hausbank. Außerdem schätzen wir den unkomplizierten und sehr professionellen Prozess bei Zencap.</p>
+                                    <p class="text-left"><em>Axel Jünke, Geschäftsführer</em></p>
                                 </blockquote>
                             </div>
                             <div class="hidden-xs col-xs-12 col-sm-3">
@@ -332,9 +358,9 @@
         </div>
     </div>
 
+</div>
 
-    </div>
-    <script src="/bundles/intlendweblayout/js/sliderCalculator.js"></script>
+    {#<script src="/bundles/intlendweblayout/js/sliderCalculator.js"></script>#}
     <!--
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript">
@@ -347,3 +373,17 @@
 
 
 {% endblock body %}
+
+{% block js %}
+
+    {{ parent() }}
+
+    <script>
+
+        $(function(){
+            $("#offerSlider").slider();
+        });
+
+    </script>
+
+{% endblock js %}

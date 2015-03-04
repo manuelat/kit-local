@@ -9,7 +9,7 @@ Header visible for desktop  ( hidden for phones and tablets )
 
             <div class="row">
                 <div class="col-md-8">
-                    <a class="" href="#">
+                    <a href="{{ path('homepage') }}">
                         <img src="/bundles/intlendweblayout/frontend/images/logo.png" alt="Zencap"/>
                     </a>
                 </div>
@@ -26,29 +26,29 @@ Header visible for desktop  ( hidden for phones and tablets )
                     <div class="site-menu">
                         <ul class="dropdown list-inline">
                             <li>
-                                <a href="/firmenkredit-rate-ermitteln-31.html">Ihr Firmenkredit</a>
+                                <a href="">Ihr Firmenkredit</a>
                                 <ul class="dropdown submenu-hover list-unstyled">
-                                    <li><a href="/firmenkredit-rate-ermitteln-31.html">Kredit beantragen</a></li>
-                                    <li><a href="/onlinekredit-beantragen-21.html">Leitfaden</a></li>
-                                    <li><a href="/unternehmen-faq-16.html">Häufige Fragen</a></li>
+                                    <li><a href="{{ path('borrowerGettingStarted') }}">Kredit beantragen</a></li>
+                                    <li><a href="{{ path('ratesFeesBorrower') }}">Leitfaden</a></li>
+                                    <li><a href="">Häufige Fragen</a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="/geldanlage-unternehmen-5.html">Ihre Investition</a>
+                                <a href="">Ihre Investition</a>
                                 <ul class="dropdown submenu-hover list-unstyled">
-                                    <li><a href="/geldanlage-unternehmen-5.html">Geld anlegen</a></li>
-                                    <li><a href="/rendite-22.html">Renditen &amp; Gebühren</a></li>
-                                    <li><a href="/investoren-hilfe-17.html">Häufige Fragen</a></li>
+                                    <li><a href="{{ path('lenderGettingStarted') }}">Geld anlegen</a></li>
+                                    <li><a href="{{ path('ratesFeesInvestor') }}">Renditen &amp; Gebühren</a></li>
+                                    <li><a href="">Häufige Fragen</a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="/darlehen-anfrage/index">Kreditprojekte</a>
+                                <a href="{{ path('creditProjects') }}">Kreditprojekte</a>
                             </li>
                             <li>
-                                <a href="/wie-es-funktioniert-18.html">So funktioniert's</a>
+                                <a href="{{ path('howItWorks') }}">So funktioniert's</a>
                             </li>
                             <li>
-                                <a href="/blog/-79.html">Blog</a>
+                                <a href="{{ path('blog') }}">Blog</a>
                             </li>
                         </ul>
                     </div>
@@ -81,13 +81,13 @@ Header visible for desktop  ( hidden for phones and tablets )
                         <div class="site-sub-menu">
                             <ul class="investorSubmenu">{# for borrower must be this class => borrowerSubmenu #}
                                 <li class="sub-selected">
-                                    <a href="/geldanlage-unternehmen-5.html">Geld anlegen</a>
+                                    <a href="{{ path('lenderGettingStarted') }}">Geld anlegen</a>
                                 </li>
                                 <li>
-                                    <a href="/rendite-22.html">Renditen &amp; Gebühren</a>
+                                    <a href="{{ path('ratesFeesInvestor') }}">Renditen &amp; Gebühren</a>
                                 </li>
                                 <li>
-                                    <a href="/investoren-hilfe-17.html">Häufige Fragen</a>
+                                    <a href="">Häufige Fragen</a>
                                 </li>
                             </ul>
                         </div>
@@ -107,4 +107,6 @@ Header visible for desktop  ( hidden for phones and tablets )
 Header visible for phones and tablets  ( hidden for desktop )
 ========================================================================== -->
 
-{% include '_partials/headers/header-mobile.html.twig' %}
+<div class="hidden-lg">
+    {% include '_partials/headers/header-mobile.html.twig' %}
+</div>

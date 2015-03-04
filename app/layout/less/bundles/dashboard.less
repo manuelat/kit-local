@@ -45,6 +45,18 @@
     }
 }
 
+@media (min-width: 600px) and (max-width: 1024px) {
+    .dash .panel-heading {
+        h4 {
+            font-size: 14px;
+
+            > .large-subheading {
+                font-size: 31px;
+            }
+        }
+    }
+}
+
 // override some rules
 .dash-green {
     .panel-default > .panel-heading {
@@ -136,4 +148,84 @@
 
 .collapsed .glyphicon-minus:before {
     content: "+";
+}
+
+/* ==========================================================================
+   Invest Category
+   ========================================================================== */
+
+.display-limit {
+    margin-top: 20px;
+    font-size: @baseFontSize;
+    font-weight: 600;
+    color: @grayLight;
+}
+
+/* ==========================================================================
+   Premium account
+   ========================================================================== */
+
+.premium-well {
+    min-height: 364px;
+    margin-bottom: 20px;
+
+    hr {
+        border-top-color: @white;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 800px) {
+    .premium-well {
+        min-height: 405px;
+    }
+}
+
+.icon-info {
+    background-image: url("/bundles/intlendweblayout/frontend/images/sprite.png?verified");
+    height: 102px;
+    width: 102px;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.icon-get-started {
+    background-position: -416px -226px;
+}
+
+.icon-blue .icon-get-started {
+    background-position: -312px -223px;
+}
+
+.icon-post {
+    background-position: -312px -327px;
+}
+
+.icon-blue .icon-post {
+    background-position: -416px -330px;
+}
+
+.icon-currency {
+    background-position: -104px -327px;
+}
+
+.icon-blue .icon-currency {
+    background-position: -104px -223px;
+}
+
+.list-items {
+    list-style: outside none none;
+    padding-left: 0;
+
+    li {
+        position: relative;
+        padding: 0 0 14px 24px;
+
+        &:before {
+            content: '\f054';
+            font-family: @iconFontFamilyAwesome;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
 }

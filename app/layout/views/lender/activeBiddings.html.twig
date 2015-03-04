@@ -1,0 +1,27 @@
+{% extends 'layout.html.twig' %}
+
+{% block header %}
+
+    {% include '_partials/headers/account-header.html.twig' %}
+
+{% endblock header %}
+
+{% block body %}
+
+    <div class="container padding-48">
+
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>Aktive Gebote</h1>
+                <p>Auf dieser Seite finden Sie eine Übersicht aller Kreditprojekte, in die Sie investiert haben, deren Gesamtbetrag jedoch noch nicht vollständig finanziert worden ist. Sobald Zencap das Geld aller Investoren erhalten hat, wird der Kreditbetrag dem Kreditnehmer ausgezahlt. Dies kann bis zu einer Woche dauern. Sobald der Kreditnehmer den Betrag erhalten hat, wird das Kreditprojekt als “finanziert” markiert und die Rückzahlungsphase startet. Ab diesem Zeitpunkt finden Sie das Projekt unter dem Reiter “Portfolio” und Sie erhalten monatliche Auszahlungen. Wird ein Kreditprojekt nicht vollständig finanziert, wird der Anlagebetrag in Ihrem Dashboard erneut unter "verfügbares Limit" bzw. "verfügbares Guthaben" angezeigt.</p>
+                <p><strong>0 Kredite</strong></p>
+            </div>
+        </div>
+
+        <table class="table custom-table">
+            {% include '_partials/tables/activeBiddingsTable.html.twig' %}
+        </table>
+
+    </div><!-- .container -->
+
+{% endblock body %}
