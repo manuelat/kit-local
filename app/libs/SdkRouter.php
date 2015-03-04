@@ -34,6 +34,7 @@ class SdkRouter extends Singleton
             $defaults = ( isset($item['defaults']) ) ? $item['defaults'] : array();
             $this->register($name, $item['path'], $defaults);
         }
+//        print_r($this->routes);
     }
 
     public function redirect($name, array $parameters=array())
@@ -55,6 +56,10 @@ class SdkRouter extends Singleton
     {
         if ( gettype($name) != 'string' ) {
             throw new Exception('$name must be of type string, ' . gettype($name) . ' given');
+        }
+        if ($name === '' || empty($name)) {
+            error_log('Empty Route found'."\n", 3, dirname(dirname(__DIR__)).'/error.log');
+            return '';
         }
         if ( isset($this->routes[$name]) ) {
             if ( isset($this->routes[$name]['defaults']) ) {
@@ -93,7 +98,8 @@ class SdkRouter extends Singleton
 
             return $url;
         } else {
-            throw new Exception('Route ' . $name . ' not defined');
+            //throw new Exception('Route ' . $name . ' not defined');
+            error_log('Route ' . $name . ' not defined'."\n", 3, dirname(dirname(__DIR__)).'/error.log');
         }
     }
 }
