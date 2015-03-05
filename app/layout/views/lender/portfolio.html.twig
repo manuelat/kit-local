@@ -22,6 +22,76 @@
             <table class="table custom-table">
                 {% include '_partials/tables/portfolioTable.html.twig' %}
             </table>
+
+
+
+            {# DATA BELOW IS JUST FOR TESTING NL + ES, SHOULD BE DELETED #}
+
+            {# ================ START TO DELETE ====================== #}
+            <table class="table custom-table">
+                {# ================ NETHERLANDS ====================== #}
+                <thead>
+                <tr>
+                    <th>Actief sinds</th>
+                    <th class="hidden-xs hidden-sm">Kredietprojecten</th>
+                    <th class="text-center">Categorie</th>
+                    <th class="hidden-xs hidden-sm text-center">Rentevoet</th>
+                    <th class="hidden-xs hidden-sm"> Resterende duur</th>
+                    <th class="hidden-xs hidden-sm">Investeringsbedrag</th>
+                    <th class="hidden-xs hidden-sm text-center">Aflossing in behandeling</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for art in articles_nl %}
+                    <tr>
+                        <td>10.01.2014</td>
+                        <td class="loan-title">
+                            <a href="{{ path('loanDetails') }}">{{ art.title }}</a>
+                        </td>
+                        <td class="hidden-xs hidden-sm text-center"><i class="categoryIcon">{{ art.category }}</i></td>
+                        <td class="text-right">{{ art.interest }}</td>
+                        <td class="text-center">{{ art.days_left }}</td>
+                        <td class="hidden-xs hidden-sm text-right">{{ art.amount }}</td>
+                        <td class="hidden-xs hidden-sm text-right">{{ art.amount_pending }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+
+             {# ================ SPAIN ====================== #}
+            <table class="table custom-table">
+                <thead>
+                <tr>
+                    <th>Activa desde</th>
+                    <th class="hidden-xs hidden-sm">Proyectos de préstamos</th>
+                    <th class="text-center">Categoría</th>
+                    <th class="hidden-xs hidden-sm text-center">Tipo de interés</th>
+                    <th class="hidden-xs hidden-sm">Tiempo restante</th>
+                    <th class="hidden-xs hidden-sm">Importe de inversión</th>
+                    <th class="hidden-xs hidden-sm text-center">Amortización pendiente</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for art in articles_es %}
+                    <tr>
+                        <td>10.01.2014</td>
+                        <td class="loan-title">
+                            <a href="{{ path('loanDetails') }}">{{ art.title }}</a>
+                        </td>
+                        <td class="hidden-xs hidden-sm text-center"><i class="categoryIcon">{{ art.category }}</i></td>
+                        <td class="text-right">{{ art.interest }}</td>
+                        <td class="text-center">{{ art.days_left }}</td>
+                        <td class="hidden-xs hidden-sm text-right">{{ art.amount }}</td>
+                        <td class="hidden-xs hidden-sm text-right">{{ art.amount_pending }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            {# ================ END TO DELETE ====================== #}
+
+
+
         </div>
 
     </div><!-- .container -->

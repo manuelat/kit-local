@@ -94,6 +94,20 @@ $articles_nl[] = array(
     'filled' => '60%',
 );
 
+$articles_nl[] = array(
+    'title' => 'Werkkapitaal voor verbouwing kapsalon.',
+    'category' => '4',
+    'amount' => '125.000 €',
+    'interest' => '11,62% ',
+    'duration' => '2 jaren',
+    'funded' => '30%',
+    'amount_pending' => '34.200 €',
+    'days_left' => '1 dag',
+    'risk_class' => 'grade-b',
+    'risk_title' => 'A',
+    'filled' => '20%',
+);
+
 /* SPAIN */
 
 $articles_es = array();
@@ -119,10 +133,24 @@ $articles_es[] = array(
     'duration' => '6 meses',
     'funded' => '70%',
     'amount_pending' => '74.200 €',
-    'days_left' => '16 dagen',
+    'days_left' => '13 horas',
     'risk_class' => 'grade-c',
     'risk_title' => 'C',
     'filled' => '60%',
+);
+
+$articles_es[] = array(
+    'title' => 'Linea de productos software para la Administración Local',
+    'category' => '4',
+    'amount' => '125.000 €',
+    'interest' => '18,62% ',
+    'duration' => '2 Años',
+    'funded' => '20%',
+    'amount_pending' => '64.200 €',
+    'days_left' => '7 Días',
+    'risk_class' => 'grade-b',
+    'risk_title' => 'B',
+    'filled' => '30%',
 );
 
 
