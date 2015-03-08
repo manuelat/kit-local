@@ -77,8 +77,26 @@ imprint:
 privacy:
     path: /cms/privacy
 
+institutional:
+    path: /cms/institutionalInvestors
+
 about_us:
     path: /cms/about
 
 account_options:
     path: /cms/options
+
+login:
+    path: /others/login
+
+profile:
+    path: /others/profile
+
+changePassword:
+    path: /others/changePassword
+
+registerLender:
+    path: /others/registerLender
+
+registerBorrower:
+    path: /others/registerBorrower

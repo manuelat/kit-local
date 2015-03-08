@@ -1,11 +1,23 @@
-// Icons dimensions
+// General rules
+i {
+    font-family: "Lend-Ico";
+    font-style: normal;
+    font-weight: 400;
+    vertical-align: middle;
+}
+
+h1 i, h2 i, h3 i {
+    font-size: @baseFontSize;
+}
+
+// Icons dimensions & color
 
 .fa-large {
     font-size: 20px;
 }
 
 .fa-medium {
-    font-size: 18px;
+    font-size: @headingsFontSizeH3;
 }
 
 .fa-small {
@@ -20,7 +32,7 @@
 
 .fa-question-circle {
     opacity: 0.5;
-    font-size: 16px;
+    font-size: @headingsFontSizeH4;
     &:hover {
         opacity: 1;
     }
@@ -45,7 +57,7 @@
     }
 
     i {
-        font-size: 18px;
+        font-size: @headingsFontSizeH3;
         font-family: "FontAwesome";
         line-height: 30px;
         color: @footerBackground;
@@ -71,12 +83,8 @@
 
 /* end Icons footer */
 
-i.btn-edit {
-    font-family: "Lend-Ico";
-    font-style: normal;
-    font-weight: 400;
-    vertical-align: middle;
-}
+
+// Other icons
 
 .input-group-addon {
     font-family: "Lend-Ico";

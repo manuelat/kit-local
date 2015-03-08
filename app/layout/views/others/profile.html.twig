@@ -1,0 +1,124 @@
+{% extends 'layout.html.twig' %}
+
+{% block header %}
+
+    {% include '_partials/headers/account-header.html.twig' %}
+
+{% endblock header %}
+
+{% block body %}
+
+<div class="container padding-48">
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-12 col-lg-offset-0">
+            <h1>Mein Profil</h1>
+            <p>Sie möchten Ihre Angaben ändern? Kein Problem! Kontaktieren Sie einfach unseren Kundenservice (030 2084900 11).</p>
+            <h2 class="faux-h3">
+                Persönliche Angaben
+                <a class="editProfile" href="javascript:void(0)"><i>✎</i> Bearbeiten</a>
+            </h2>
+        </div>
+    </div><!-- end .row -->
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-0">
+            <form action="" method="post" id="profileUpdateForm">
+                <ul class="list-unstyled">
+                    <li>
+                        <p><strong>vorname nachname</strong></p>
+                    </li>
+                    <li>
+                        <p><strong>E-Mail Adresse</strong></p>
+                    </li>
+                    <li>
+                        <p>qa+lender_live@zencap.de</p>
+                    </li>
+                    <li>
+                        <p><strong>Adresse</strong></p>
+                    </li>
+                    <li class="show-data hidden">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Straße" id="userProfile_street" class="form-control" maxlength="200" required="required">
+                                    <p class="text-danger" role="alert">
+                                        Bitte geben Sie eine Straße ein
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Nummer" id="userProfile_street_number" class="form-control" maxlength="200" required="required">
+                                    <p class="text-danger" role="alert">
+                                        Bitte geben Sie eine Nummer ein
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    <input type="text" placeholder="PLZ" id="userProfile_postal_code" class="form-control">
+                                    <p class="text-danger" role="alert">
+                                        Bitte geben Sie eine PLZ ein
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                            <div class="form-group">
+                                <input type="text" placeholder="Stadt" id="userProfile_city" class="form-control" maxlength="200" required="required">
+                                <p class="text-danger" role="alert">
+                                    Bitte geben Sie eine Stadt ein
+                                </p>
+                            </div>
+                        </div>
+                        </div>
+                    </li>
+                    <li>
+                        <p><strong>Mobiltelefon</strong></p>
+                    </li>
+                    <li class="show-data hidden">
+                        <div class="form-group">
+                            <input type="text" placeholder="Stadt" id="userProfile_cellphone" class="form-control" maxlength="20" required="required">
+                            <p class="text-danger" role="alert">
+                                Bitte geben Sie eine Telefonnummer ein
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+
+                <div>Passwort <a href="{{ path('changePassword') }}"> <i>✎</i> Passwort ändern</a></div>
+
+                <p>••••••</p>
+
+                <div class="show-data hidden">
+                    <button type="submit" class="btn btn-lg btn-nvstr">Speichern</button>
+                    <button type="button" class="btn btn-lg editProfile">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div><!-- end .row -->
+
+</div><!-- .container -->
+
+{% endblock body %}
+
+{% block js %}
+     {{ parent() }}
+
+    <script>
+        $(function(){
+            $('.editProfile').click(function(e){
+                e.preventDefault();
+                $('.show-data').each(function(){
+                    if ($(this).hasClass('hidden')) {
+                        $(this).removeClass('hidden');
+                    } else {
+                        $(this).addClass('hidden');
+                    }
+                });
+            });
+        });
+
+    </script>
+
+{% endblock js %}

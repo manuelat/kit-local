@@ -1,0 +1,42 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+
+<div class="container padding-48">
+
+    <div class="row user-login">
+
+        <div class="col-xs-12 col-sm-5">
+            <h1>Mein Konto</h1>
+            <p>Sie haben bereits ein Nutzerkonto? Loggen Sie sich bitte ein.</p>
+            <form action="" method="post">
+                <div class="form-group">
+                    <label for="username" class="hidden">Email</label>
+                    <input type="text" class="form-control col-lg-12" placeholder="E-Mail-Adresse" required="required" value="" name="_username" id="username">
+                    <label for="password" class="hidden">Password</label>
+                    <input type="text" class="form-control col-lg-12" placeholder="Passwort" required="required" name="_password" id="password" autocomplete="off">
+                </div>
+                <a href="" class="forgotPassword pull-right">Passwort vergessen?</a>
+                <input type="submit" value="Anmelden" name="_submit" id="_submit" class="btn btn-lg col-lg-12">
+            </form>
+        </div>
+
+        <div class="col-xs-12 col-sm-5 col-sm-offset-2">
+            <div class="desp-10 col-xs-12 hidden-sm hidden-md hidden-lg"></div>
+            <h1>Profil erstellen</h1>
+            <p>Neu bei Zencap? Registrieren Sie sich jetzt kostenlos.</p>
+            <p>
+                <a href="{{ path('registerLender') }}" class="btn btn-lg btn-nvstr btn-block">
+                    Investoren - Jetzt investieren
+                </a>
+            </p>
+            <a href="{{ path('registerBorrower') }}" class="btn btn-lg btn-brrwr btn-block">
+                Unternehmen - Jetzt Kredit beantragen
+            </a>
+        </div>
+
+    </div><!-- end .row -->
+
+</div><!-- end .container -->
+
+{% endblock %}
