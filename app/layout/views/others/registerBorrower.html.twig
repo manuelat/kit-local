@@ -2,7 +2,7 @@
 
 {% block body %}
 
-<form action="" method="post" role="form" class="form-register" id="registerBorrower">
+<form action="" method="post" role="form" class="form-register" id="register_borrower_form">
     <div class="container padding-48">
 
         <div class="row">
@@ -45,7 +45,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-xs-12 col-sm-4">
+                            <div class="col-xs-8 col-sm-6 col-md-4">
                                 <div class="btn-group btn-block">
                                     <button data-toggle="dropdown" class="form-control btn dropdown-toggle" type="button" aria-expanded="false">
                                         <span class="pull-left">{{ 'Titel' }}</span>
@@ -65,8 +65,8 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-2 col-lg-4 col-lg-offset-0">
                         <div class="form-group">
-                            <label for="borrower_name" class="required">{{ 'Vorname' }}</label>
-                            <input type="text" placeholder="Enter vorname" id="borrower_name" class="form-control">
+                            <label for="borrower_first_name" class="required">{{ 'Vorname' }}</label>
+                            <input type="text" placeholder="Enter vorname" id="borrower_first_name" class="form-control">
                         </div>
                     </div>
 
@@ -193,7 +193,7 @@
                         <h2 class="faux-h3">{{ 'Haben Sie einen Gutschein-Code?' }}</h2>
                         <div class="row form-group">
                             <div class="col-xs-12 col-sm-8 col-md-6">
-                                <label for="" class="required">Umsatz im letzten Geschäftsjahr (in €)</label>
+                                <label class="required">Umsatz im letzten Geschäftsjahr (in €)</label>
                                 <div class="btn-group btn-block">
                                     <button data-toggle="dropdown" class="form-control btn dropdown-toggle" type="button" aria-expanded="false">
                                         <span class="pull-left">{{ 'Bitte wählen ...' }}</span>
@@ -211,7 +211,7 @@
                             <div class="desp-20 hidden-lg"></div>
 
                             <div class="col-xs-12 col-sm-8 col-md-6">
-                                <label for="" class="required">Alter des Unternehmens</label>
+                                <label class="required">Alter des Unternehmens</label>
                                 <div class="btn-group btn-block">
                                     <button data-toggle="dropdown" class="form-control btn dropdown-toggle" type="button" aria-expanded="false">
                                         <span class="pull-left">{{ 'Bitte wählen ...' }}</span>
@@ -229,7 +229,7 @@
                             <div class="desp-20"></div>
 
                             <div class="col-xs-12 col-sm-8 col-md-6">
-                                <label for="" class="required">Rechtsform</label>
+                                <label class="required">Rechtsform</label>
                                 <div class="btn-group btn-block">
                                     <button data-toggle="dropdown" class="form-control btn dropdown-toggle" type="button" aria-expanded="false">
                                         <span class="pull-left">{{ 'Bitte wählen ...' }}</span>
@@ -277,6 +277,8 @@
                                     <a target="_blank" href="">{{ 'Nutzungsbedingungen' }}</a></label>
                             </div>
 
+                            <div class="desp-25"></div>
+
                             <div class="checkbox-buttons">
                                 <input type="checkbox" class="hidden" value="" name="userborrower_privacy" id="userborrower_privacy" required="required">
                                 <div class="custom-square">
@@ -286,6 +288,8 @@
                                     <a target="_blank" href="">{{ 'Datenschutzerklärung' }}</a>
                                     {{ 'beschrieben, ein.' }}</label>
                             </div>
+
+                            <div class="desp-25"></div>
 
                             <div class="checkbox-buttons">
                                 <input type="checkbox" class="hidden" value="" name="userborrower_newsletter_subscription" id="userborrower_newsletter_subscription">
@@ -313,11 +317,15 @@
 
     <div class="container-wrapper odd hidden-xs hidden-sm hidden-md col-lg-12">
         <div class="container padding-48">
-            <p class="text-right">
+            <div class="text-right">
                 <button class="btn btn-lg btn-brrwr" type="submit">{{ 'Weiter' }}</button>
-            </p>
+            </div>
+            <div class="desp-10"></div>
+            <a href="" class="pull-right" data-toggle="tooltip" href="#" data-original-title="Another one here too" data-placement="top"><i class="fa fa-lock"></i> Sichere Übertragung (SSL)</a>
         </div>
     </div><!-- .container-wrapper -->
+
+    <div class="clearfix"></div>
 
 </form>
 
@@ -332,6 +340,7 @@
             var password_unhide = 'anzeigen'; // translate('global.password.unhide');
             var password_hide = 'verstecken';  // translate('global.password.hide');
 
+            // switch password type
             $('.input-icon-eye').click(function(){
                 if ( $('#borrower_password').attr('type') == 'password' ) {
                     $('#borrower_password').attr('type','text');
@@ -341,6 +350,9 @@
                     $(this).children('.password-mask').html(password_unhide);
                 }
             });
+
+            // activate tooltip
+            $('[data-toggle="tooltip"]').tooltip();
         });
 
     </script>

@@ -1,0 +1,183 @@
+{% extends 'layout.html.twig' %}
+
+{% block header %}
+
+    {% include '_partials/headers/account-header.html.twig' %}
+
+{% endblock header %}
+
+{% block body %}
+
+<div class="container padding-48">
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <h2 class="faux-h3">Einzahlung</h2>
+            <hr>
+            <p>Bitte überweisen Sie Ihren gewünschten Anlage-Betrag auf Ihr Zencap-Bankkonto. Bitte beachten Sie, dass eine Überweisung einige Tage dauern kann. Sobald der Betrag eingegangen ist, wird er Ihrem verfügbaren Guthaben gutgeschrieben und Sie erhalten von uns eine Benachrichtigung per E-Mail. Danach können Sie mit dem Geld in Kreditprojekte investieren und Ihr Portfolio ganz nach Belieben selbst gestalten.</p>
+            <table>
+                <tbody><tr>
+                    <td>Kontoinhaber:</td>
+                    <td>ddddd</td>
+                </tr>
+                <tr>
+                    <td>Bankleitzahl:</td>
+                    <td>WIREDEMMXXX</td>
+                </tr>
+                <tr>
+                    <td>Kontonummer:</td>
+                    <td>DE39512308007850000204</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+
+        <div class="col-xs-12 col-sm-6">
+            <h2 class="faux-h3">Auszahlung</h2>
+            <hr>
+            <p>Bitte geben Sie an, welchen Betrag Sie von Ihrem Zencap-Bankkonto auf Ihr privates Bankkonto überweisen möchten. Bitte beachten Sie, dass Sie ausschließlich Geld auszahlen können, das aktuell nicht in Gebote investiert ist. Bei Rückfragen wenden Sie sich gern an unseren Kundenservice.</p>
+            <table>
+                <tbody>
+                <tr>
+                    <td>Kontoinhaber:</td>
+                    <td>
+                        ddddd
+                     </td>
+                </tr>
+                <tr>
+                    <td>Bankleitzahl:</td>
+                    <td>
+                        DRESDEFFJ37
+                    </td>
+                </tr>
+                <tr>
+                    <td>Kontonummer: </td>
+                    <td>
+                        xxxx-664
+                    </td>
+
+                </tr>
+
+                </tbody>
+            </table>
+            <br>
+            <form method="post" action="" id="cash-out-form">
+                <table>
+                    <tbody>
+                    <tr>
+                        <td>Verfügbares Guthaben:</td>
+                        <td>
+                            0,00 €
+                        </td>
+                    </tr>
+                    <tr><td colspan="2"></td></tr>
+                    <tr>
+                        <td>Überweisungsbetrag:</td>
+                        <td>
+                            <div class="form-group" id="withdraw">
+                                <input type="text" class="form-control" value="" name="amount">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <p class="text-danger" role="alert">
+                                Bitte geben Sie einen Betrag unter 0,00 € an.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="btn btn-block" type="submit">Auszahlen</button>
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div><!-- end .row -->
+
+    <div class="row">
+        <div class="col-xs-12">
+
+            <h2 class="faux-h3">Letzte Transaktionen</h2>
+
+            <div class="row">
+                <form action="" method="get">
+
+                    <div class="col-xs-6 col-sm-3 col-md-2">
+                        <div class="form-group" id="withdraw">
+                            <label for="">von</label>
+                            <input type="text" class="form-control" value="" name="">
+                        </div>
+                    </div>
+
+                    <div class="col-xs-6 col-sm-3 col-md-2">
+                        <div class="form-group">
+                            <label for="">bis</label>
+                            <input type="text" class="form-control" value="" name="">
+                        </div>
+                    </div>
+
+                    <div class="col-xs-6 col-xs-offset-3 col-sm-2 col-sm-offset-0">
+                        <div class="desp-25"></div>
+                        <button class="btn btn-block" type="submit">Anzeigen</button>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-2">
+                        <div class="desp-25"></div>
+                        <a href="">Filter zurücksetzen</a>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-2 hidden-md hidden-lg">
+                        <div class="desp-25"></div>
+                        <a href="">Transaktionen exportieren</a>
+                    </div>
+
+                    <div class="hidden-xs hidden-sm col-md-3 col-md-offset-1">
+                        <div class="desp-25"></div>
+                        <a href="" class="pull-right">Transaktionen exportieren</a>
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="desp-20 hidden-md hidden-lg"></div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Zahlungsdatum</th>
+                            <th>Vorgang</th>
+                            <th class="text-right">Umsatz</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>13.02.2015</td>
+                        <td>Einzahlung</td>
+                        <td class="text-right">+10.000,00 €</td>
+                    </tr>
+                    <tr>
+                        <td>7.02.2015</td>
+                        <td>Einzahlung</td>
+                        <td class="text-right">+110.000,00 €</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div><!-- end .container -->
+
+
+{% endblock body %}

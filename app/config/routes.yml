@@ -26,8 +26,17 @@ active_biddings:
 portfolio:
     path: /lender/portfolio
 
-premium_account:
-    path: /lender/premiumAccount
+premium_lender_form:
+    path: /lender/premium_lender_form
+
+lenderUpgradeThreeSteps:
+    path: /cms/lenderUpgradeThreeSteps
+
+lenderUpgradeThreeSteps_2:
+    path: /cms/lenderUpgradeThreeSteps_2
+
+premium_lender_account_details:
+    path: /lender/premium_lender_account_details
 
 creditProjects:
     path: /lender/projectsTableExtended
