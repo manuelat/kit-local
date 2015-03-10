@@ -55,10 +55,11 @@ class SdkRouter extends Singleton
     public function generate($name, array $parameters=array())
     {
         if ( gettype($name) != 'string' ) {
+            Monolog::err('$name must be of type string, ' . gettype($name) . ' given');
             throw new Exception('$name must be of type string, ' . gettype($name) . ' given');
         }
         if ($name === '' || empty($name)) {
-            error_log('Empty Route found'."\n", 3, dirname(dirname(__DIR__)).'/error.log');
+            Monolog::info('Empty Route found');
             return '';
         }
         if ( isset($this->routes[$name]) ) {
@@ -99,7 +100,7 @@ class SdkRouter extends Singleton
             return $url;
         } else {
             //throw new Exception('Route ' . $name . ' not defined');
-            error_log('Route ' . $name . ' not defined'."\n", 3, dirname(dirname(__DIR__)).'/error.log');
+            Monolog::info('Route ' . $name . ' not defined');
         }
     }
 }
