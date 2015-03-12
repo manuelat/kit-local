@@ -38,6 +38,12 @@ lenderUpgradeThreeSteps_2:
 premium_lender_account_details:
     path: /lender/premium_lender_account_details
 
+lender_complete:
+    path: lender/lender_complete
+
+lender_checkout:
+    path: lender/lender_checkout
+
 creditProjects:
     path: /lender/projectsTableExtended
 

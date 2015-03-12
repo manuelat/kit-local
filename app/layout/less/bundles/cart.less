@@ -1,0 +1,92 @@
+.cartDetails {
+    background-color: @wellBackground;
+    margin-left: 0;
+    margin-right: 0;
+
+    p {
+        color: @brandColor4;
+        font-size: @headingsFontSizeH2;
+        margin: 0 0 5px;
+    }
+
+    .review-button {
+        background: none repeat scroll 0 0 #fff;
+        box-shadow: 0 -3px 0 #e6e6e6 inset;
+        color: @brandColor3;
+    }
+
+}
+
+
+.lender_complete_steps {
+    margin: 0;
+
+    .badge {
+        background-color: #999;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        line-height: 30px;
+        padding: 0;
+        margin-right: 10px;
+        font-size: 14px;
+    }
+
+    li {
+        color: #999;
+        background: @brandColor7;
+        height: 48px;
+        line-height: 48px;
+        margin-left: 0;
+        text-align: center;
+
+        &:after {
+            border-style: solid;
+            border-width: 24px 0 24px 20px;
+            content: "";
+            display: block;
+            position: absolute;
+            right: -20px;
+            top: 0;
+            width: 0;
+            z-index: 9;
+        }
+    }
+
+    li.active {
+        background: @brandColor;
+        color: #fff;
+
+        .badge {
+            color: @brandColor;
+            background: @white;
+        }
+    }
+
+    .step1:after  {
+        border-color: transparent @brandColor7;
+    }
+
+    .step1.active:after {
+        border-color: transparent @brandColor;
+    }
+
+    .step2:after {
+        display: none;
+    }
+
+    li.done {
+        background: #6ab2e1;
+        color: @white;
+
+        .badge {
+            color: @brandColor;
+            background: @white;
+        }
+
+        &:after  {
+            border-color: transparent #6ab2e1;
+        }
+    }
+
+}
