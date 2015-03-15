@@ -46,3 +46,19 @@ if ( php_sapi_name() != 'cli' ) {
 }
 
 echo $htmlContent;
+
+if ( isset($_GET['debug']) ) {
+    printf('<fieldset style="margin: 10px; padding: 0 5px;"><legend>Loaded Template</legend><b>%s</b></fieldset>', $twigData->getTemplate());
+    echo '<pre>';
+    print_r($_GET);
+    echo '</pre>';
+    echo '<fieldset style="margin: 10px; padding: 0 5px;"><legend>Included files</legend>';
+    $files = get_included_files();
+    foreach ($files as $f) {
+        if ( preg_match('/vendor/', $f) ) {
+            continue;
+        }
+        echo $f . "<br>\n";
+    }
+    echo '</fieldset>';
+}
