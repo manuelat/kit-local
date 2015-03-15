@@ -12,12 +12,17 @@
 
     <div class="row">
         <div class="col-xs-12">
-            <ol class="lender_complete_steps list-inline">
+            <ol class="lender_complete_steps list-inline hidden-xs">
                 <li class="step1 active col-xs-6 faux-h3"><span class="badge">1</span>Eingabe der persönlichen Daten</li>
                 <li class="step2 col-xs-6 faux-h3"><span class="badge">2</span>Bestätigung der Gebote</li>
             </ol>
+            <div class="faux-h3 visible-xs hidden-sm hidden-md hidden-lg">
+                Step 1 of 2
+            </div>
+            <hr class="visible-xs hidden-sm hidden-md hidden-lg"/>
         </div>
-    </div>
+    </div><!-- end .row -->
+
 
     <div class="desp-48"></div>
 
@@ -26,7 +31,7 @@
             <h2 class="faux-h3">Gebotsübersicht</h2>
             <p>Sie möchten zum ersten Mal auf Zencap ein Gebot abgeben. Bitte füllen Sie zuvor das untenstehende Formular zu Ihrer Person und den Zahlungsdaten aus. Im nächsten Schritt können Sie Ihre Gebote nochmals überprüfen und bestätigen.</p>
         </div>
-    </div>
+    </div><!-- end .row -->
 
     <div class="row padding-48 cartDetails">
         <div class="col-xs-12">
@@ -52,12 +57,12 @@
             <div class="desp-20 col-xs-12 hidden-sm hidden-md hidden-lg"></div>
 
             <div class="col-xs-12 col-xs-offset-1 col-sm-4 col-sm-offset-1">
-                <a class="btn btn-lg review-button" href="{{ path('invest') }}">
+                <a class="btn btn-lg btn-white" href="{{ path('invest') }}">
                     <i class="fa fa-edit"></i> Gebote ändern
                 </a>
             </div>
         </div>
-    </div>
+    </div><!-- end .row -->
 
 </div><!-- end .container -->
 

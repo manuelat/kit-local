@@ -12,11 +12,11 @@
             <form action="" method="post">
                 <div class="form-group">
                     <label for="username" class="hidden">Email</label>
-                    <input type="text" class="form-control col-lg-12" placeholder="E-Mail-Adresse" required="required" value="" name="_username" id="username">
+                    <input type="text" class="form-control col-lg-12 custom-input" placeholder="E-Mail-Adresse" required="required" value="" name="_username" id="username">
                     <label for="password" class="hidden">Password</label>
-                    <input type="text" class="form-control col-lg-12" placeholder="Passwort" required="required" name="_password" id="password" autocomplete="off">
+                    <input type="text" class="form-control col-lg-12 custom-input" placeholder="Passwort" required="required" name="_password" id="password" autocomplete="off">
                 </div>
-                <a href="" class="forgotPassword pull-right">Passwort vergessen?</a>
+                <a href="{{ path('forgot_password') }}" class="forgotPassword pull-right"><strong>Passwort vergessen?</strong></a>
                 <input type="submit" value="Anmelden" name="_submit" id="_submit" class="btn btn-lg col-lg-12">
             </form>
         </div>

@@ -1,0 +1,28 @@
+<div id="iban-calculator" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="modal-title">Lassen sie Ihre IBAN und BIC berechnen</h3>
+            </div>
+            <form id="iban-calculator-form">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="bank-code-number">{{ 'Bankleitzahl' }}</label>
+                        <input type="text" id="bank-code-number" class="form-control" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="bank-account-number">{{ 'Kontonummer' }}</label>
+                        <input type="text" id="bank-account-number" class="form-control" required="required">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white btn-default" data-dismiss="modal">Abbrechen</button>
+                    <button type="submit" class="btn btn-primary">IBAN / BIC berechnen</button>
+                </div>
+            </form>
+        </div><!-- end .modal-content -->
+    </div><!-- end .modal-dialog -->
+</div><!-- end .modal -->
+
+

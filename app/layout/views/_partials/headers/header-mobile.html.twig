@@ -5,10 +5,21 @@
         <li class="text-right"><a href="#" id="nav-close">X</a></li>
         <li><a href="{{ path('login') }}">Anmelden/Registrieren <span class="icon"></span></a></li>
         <li><a href="#">Hilfe <span class="icon"></span></a></li>
-        <li><a href="#">Menu <span class="icon"></span></a></li>
-        <li><a href="#">Unternehmen <span class="icon"></span></a></li>
-        <li><a href="#">Investoren <span class="icon"></span></a></li>
-        <li><a href="#">Dropdown</a>
+        <li><a href="#">Ihr Firmenkredit</a>
+            <ul class="list-unstyled">
+                <li class="sub-nav"><a href="{{ path('borrowerGettingStarted') }}">Kredit beantragen <span class="icon"></span></a></li>
+                <li class="sub-nav"><a href="{{ path('ratesFeesBorrower') }}">Leitfaden <span class="icon"></span></a></li>
+                <li class="sub-nav"><a href="#">Häufige Fragen <span class="icon"></span></a></li>
+            </ul>
+        </li>
+        <li><a href="#">Ihre Investition</a>
+            <ul class="list-unstyled">
+                <li class="sub-nav"><a href="{{ path('lenderGettingStarted') }}">Geld anlegen <span class="icon"></span></a></li>
+                <li class="sub-nav"><a href="{{ path('ratesFeesInvestor') }}">Renditen &amp; Gebühren <span class="icon"></span></a></li>
+                <li class="sub-nav"><a href="#">Häufige Fragen <span class="icon"></span></a></li>
+            </ul>
+        </li>
+        {#<li><a href="#">Dropdown</a>
             <ul class="list-unstyled">
                 <li class="sub-nav"><a href="#">Sub Menu One <span class="icon"></span></a></li>
                 <li class="sub-nav"><a href="#">Sub Menu Two <span class="icon"></span></a></li>
@@ -16,10 +27,10 @@
                 <li class="sub-nav"><a href="#">Sub Menu Four <span class="icon"></span></a></li>
                 <li class="sub-nav"><a href="#">Sub Menu Five <span class="icon"></span></a></li>
             </ul>
-        </li>
-        <li><a href="#">Kreditprojekte <span class="icon"></span></a></li>
-        <li><a href="#">So Funktioniert's <span class="icon"></span></a></li>
-        <li><a href="#">Blog <span class="icon"></span></a></li>
+        </li>#}
+        <li><a href="{{ path('creditProjects') }}">Kreditprojekte <span class="icon"></span></a></li>
+        <li><a href="{{ path('howItWorks') }}">So Funktioniert's <span class="icon"></span></a></li>
+        <li><a href="{{ path('blog') }}">Blog <span class="icon"></span></a></li>
     </ul>
 </nav>
 

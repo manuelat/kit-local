@@ -33,16 +33,3 @@
 
 
 {% endblock body %}
-
-{% block js %}
-    {{ parent() }}
-
-    <script>
-        $(function(){
-            // activate tooltip
-            $('[data-toggle="tooltip"]').tooltip();
-
-        });
-
-    </script>
-{% endblock %}
