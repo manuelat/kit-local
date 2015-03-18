@@ -10,22 +10,17 @@
     }
 
     .benefits-lender h3 {
-        border-bottom: 2px solid @brandColorCTA;
         padding-bottom: 16px;
+        margin-top: 5%;
     }
 
-    /*.three-steps {
-      margin-top: -@verticalRhythm; //TODO: best solution to move up?
+    // add border only on desktop
+    @media (min-width: 1024px) {
+        .benefits-lender h3 {
+            border-bottom: 2px solid @brandColorCTA;
+            margin-top: 0;
+        }
     }
-
-    .risks {
-
-      .row {
-        margin-bottom: @verticalRhythm / 2;
-
-        .last-of-type-margin-bottom;
-      }
-    } */
 
     .fees {
 

@@ -34,8 +34,16 @@
     }
 
     .benefits-borrower h3 {
-        border-bottom: 2px solid #ff8c19;
         padding-bottom: 16px;
+        margin-top: 5%;
+    }
+
+    // add border only on desktop
+    @media (min-width: 1024px) {
+        .benefits-borrower h3 {
+            border-bottom: 2px solid #ff8c19;
+            margin-top: 0;
+        }
     }
 
 }
