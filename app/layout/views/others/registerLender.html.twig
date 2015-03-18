@@ -30,7 +30,7 @@
                         <h2 class="faux-h3">{{ 'Personliche Angaben' }} <small class="pull-right">* Pflichtfeld</small></h2>
                         <div class="row form-group">
 
-                            <div class="col-xs-12 col-sm-6">
+                            <div class="col-xs-12">
                                 <div class="radio-buttons">
                                     <input type="radio" class="hidden" value="male" name="lender_gender" id="lender_gender_m" required="required">
                                     <div class="custom-circle">
@@ -48,7 +48,7 @@
                                 <label for="lender_gender" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                             </div>
 
-                            <div class="col-xs-8 col-sm-6 col-md-4">
+                            <!--<div class="col-xs-8 col-sm-6 col-md-4">
                                 <div class="btn-group btn-block">
                                     <button data-toggle="dropdown" class="form-control btn dropdown-toggle" type="button" aria-expanded="false">
                                         <span class="pull-left">{{ 'Titel' }}</span>
@@ -62,7 +62,7 @@
                                         <li><a href="#">{{ 'Dr.' }}</a></li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div>-->
 
                         </div>
                     </div>
@@ -71,7 +71,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-2 col-lg-4 col-lg-offset-0">
                         <div class="form-group">
-                            <label for="lender_first_name" class="required">{{ 'Vorname' }}</label>
+                            <label for="lender_first_name" class="required hidden-xs">{{ 'Vorname' }}</label>
                             <input type="text" placeholder="Enter vorname" id="lender_first_name" class="form-control" required="required">
                             <label for="lender_first_name" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                         </div>
@@ -79,33 +79,23 @@
 
                     <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0">
                         <div class="form-group">
-                            <label for="lender_last_name" class="required">{{ 'Nachname' }}</label>
+                            <label for="lender_last_name" class="required hidden-xs">{{ 'Nachname' }}</label>
                             <input type="text" placeholder="Enter nachname" id="lender_last_name" class="form-control" required="required">
                             <label for="lender_last_name" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                         </div>
                     </div>
 
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
-                        <div class="alert alert-info" role="alert">
-                            Bitte geben Sie Ihren vollen Namen so an, wie er in Ihrem Pass oder Personalausweis steht.
-                        </div>
-                    </div>
                 </div><!-- end .row -->
 
                 <div class="row">
                     <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
                         <div class="form-group">
-                            <label for="lender_cellphone" class="required">{{ 'Mobiltelefonnummer' }}</label>
+                            <label for="lender_cellphone" class="required hidden-xs">{{ 'Mobiltelefonnummer' }}</label>
                             <input type="text" placeholder="Enter firmenname" id="lender_cellphone" class="form-control" required="required">
                             <label for="lender_cellphone" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                         </div>
                     </div>
 
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
-                        <div class="alert alert-info" role="alert">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                        </div>
-                    </div>
                 </div><!-- end .row -->
 
                 <div class="row">
@@ -117,49 +107,39 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
                         <div class="form-group">
-                            <label for="lender_email" class="required">{{ 'Email address' }}</label>
+                            <label for="lender_email" class="required hidden-xs">{{ 'Email address' }}</label>
                             <input type="email" placeholder="Enter email" id="lender_email" class="form-control" required="required">
                             <label for="lender_email" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                         </div>
                     </div>
 
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
-                        <div class="alert alert-info" role="alert">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                        </div>
-                    </div>
                 </div><!-- end .row -->
 
                 <div class="row">
                     <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
                         <div class="form-group">
-                            <label for="lender_password" class="required">{{ 'Password' }}</label>
+                            <label for="lender_password" class="required hidden-xs">{{ 'Password' }}</label>
                             <input type="password" placeholder="Password" id="lender_password" class="form-control" required="required">
                             <label for="lender_password" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                         </div>
                     </div>
 
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
-                        <div class="alert alert-info" role="alert">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                        </div>
-                    </div>
                 </div><!-- end .row -->
 
-                <div class="row">
+                <!--<div class="row">
                     <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
                         <h2 class="faux-h3">{{ 'Haben Sie einen Gutschein-Code?' }}</h2>
                     </div>
-                </div><!-- end .row -->
+                </div>
 
-                <div class="row">
+                 <div class="row">
                     <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
                         <div class="form-group">
                             <label for="promo_code">{{ 'Gutschein-Code (freiwillig)' }}</label>
                             <input type="text" placeholder=" Enter gutschein-Code" id="promo_code" class="form-control">
                         </div>
                     </div>
-                </div><!-- end .row -->
+                </div>-->
 
                 <div class="row">
                     <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
