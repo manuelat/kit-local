@@ -25,6 +25,7 @@
 @import 'base/icons.less';
 @import 'base/tabs.less';
 @import 'base/sliders.less';
+@import 'base/carousel.less';
 
 @import 'cms/press.less';
 @import 'cms/blog.less';
@@ -236,7 +237,7 @@
  */
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 992px) {
     .row-offcanvas {
         position: relative;
         -webkit-transition: all 0.25s ease-out;
@@ -260,12 +261,22 @@
 
     .row-offcanvas.active {
         .sidebar-offcanvas {
-            top: 0;
+            top: -24px;
             right: 0;
             display: block;
 
         }
     }
+
+    @media (min-width: 768px) and (max-width: 992px) {
+        .row-offcanvas.active {
+            .sidebar-offcanvas {
+                top: -48px;
+            }
+        }
+    }
+
+
 }
 
 @media screen and (min-width: 1024px) {
