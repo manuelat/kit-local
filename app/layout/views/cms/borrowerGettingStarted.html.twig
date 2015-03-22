@@ -92,7 +92,7 @@
     <div class="row odd">
         <div class="desp-10 visible-xs visible-sm hidden-md hidden-lg"></div>
 
-        <div class="col-xs-12 col-sm-5 col-sm-offset-1 hidden-lg">
+        <div class="col-xs-12 hidden-lg">
             <label for="amount">{{ 'Ihr Kreditbetrag' }}</label>
             <div class="row">
                 <div class="col-xs-8">
@@ -106,7 +106,7 @@
 
         <div class="desp-10 hidden-sm hidden-md hidden-lg"></div>
 
-        <div class="col-xs-12 col-sm-5 hidden-lg">
+        <div class="col-xs-12 hidden-lg">
             <label for="loan-duration">{{ 'Ihre Kreditlaufzeit' }}</label><br>
             <div class="row">
                 <div class="col-xs-8">
@@ -125,18 +125,22 @@
 
     <div class="row dark-grey">
 
-        <div class="desp-10 visible-xs visible-sm hidden-md hidden-lg"></div>
+        <div class="desp-20 visible-xs visible-sm visible-md hidden-lg"></div>
 
-        <div class="col-xs-12 col-sm-10 col-sm-offset-1 hidden-lg">
+        <div class="col-xs-12 hidden-lg">
             <div class="row">
-                <div class="col-xs-7">
+                <div class="col-xs-7 col-sm-4">
                     <span id="monthlyRate"><strong>{{ '1.117 €' }}</strong></span><br>
                     <label for="monthlyRate">{{ 'Monatliche Zahlung' }}</label>
                 </div>
-                <div class="col-xs-5 text-right">
+                <div class="col-xs-5 text-right col-sm-2">
                     <span id="totalSum"><strong>{{ '26.808 €' }}</strong></span><br>
                     <label for="totalSum">{{ 'Gesamtbetrag' }}</label>
                 </div>
+                <div class="desp-10 hidden-sm hidden-md hidden-lg"></div>
+                <p class="col-xs-12 col-sm-6 hidden-lg">
+                    <a href="#" type="submit" class="btn btn-lg btn-brrwr">{{ 'Jetzt Kredit beantragen' }}</a>
+                </p>
             </div><!-- end .row -->
         </div>
 
@@ -147,6 +151,7 @@
 
     <div class="desp-20 hidden-lg"></div>
 
+    {#
     <div class="row">
         <p class="col-xs-12 text-center hidden-lg">
             <a href="#" type="submit" class="btn btn-lg btn-brrwr">{{ 'Jetzt Kredit beantragen' }}</a>
@@ -155,6 +160,8 @@
             {{ 'Wir sind keine Bank und müssen kein teures Filialnetz unterhalten. Diese Einsparungen geben wir direkt an Sie weiter.' }}
         </div>
     </div><!-- end .row -->
+
+    #}
 
     <!-- end Kajetan proposal -->
 
@@ -289,54 +296,51 @@
         <div class="container padding-48">
             <h2 class="faux-h1 text-center">In drei Schritten zu Ihrem Geschäftskredit</h2>
             <div class="row">
-                <p class="col-xs-10 col-xs-offset-1 hidden-xs hidden-sm visible-md visible-lg">
+                <p class="hidden-xs hidden-sm col-md-10 col-md-offset-1">
                     <img class="img-responsive" src="https://d1x3gb5zl465n8.cloudfront.net/de/bundles/images/borrower/steps.png" alt="">
                 </p>
             </div>
             <div class="row">
                 {#<img class="pull-left" alt="" src="/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-2.png" />#}
                 <div class="col-xs-12 col-md-4">
-                    <h3 class="hidden-xs hidden-sm visible-md visible-lg">Finanzierungsanfrage stellen</h3>
-                    <p class="hidden-xs hidden-sm visible-md visible-lg">Erfüllen Sie unsere Mindestanforderungen, können Sie Ihren Firmenkredit in nur 15 Minuten beantragen: Bequem mit wenigen Klicks registrieren, ein aussagekräftiges Unternehmensprofil erstellen und die erforderlichen Finanzkennzahlen hochladen. </p>
-
-                    <div class="col-xs-12 hidden-md hidden-lg">
-                        <img class="pull-left" alt="" src="/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-1.png" />
-                        <div class="col-xs-7 col-sm-6 col-md-9">
-                            <h3>Finanzierungsanfrage stellen</h3>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <img class="pull-left hidden-md hidden-lg" alt="" src="/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-1.png" />
+                            <div class="col-xs-7 col-sm-6 col-md-12">
+                                <h3>Finanzierungsanfrage stellen</h3>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 hidden-md hidden-lg">
-                        <p>Erfüllen Sie unsere Mindestanforderungen, können Sie Ihren Firmenkredit in nur 15 Minuten beantragen: Bequem mit wenigen Klicks registrieren, ein aussagekräftiges Unternehmensprofil erstellen und die erforderlichen Finanzkennzahlen hochladen. </p>
-                    </div>
-
-                </div>
-
-                <div class="col-xs-12 col-md-4">
-                    <h3 class="hidden-xs hidden-sm visible-md visible-lg">Finanzierungszusage erhalten</h3>
-                    <p class="hidden-xs hidden-sm visible-md visible-lg">Unsere erfahrenen Kreditanalysten prüfen Ihren vollständigen Antrag innerhalb von nur 48 Stunden – natürlich kostenfrei. Danach erhalten Sie Ihr individuelles Zinsangebot. Sobald Sie dieses annehmen, wird Ihr Projekt automatisch zur Finanzierung freigeschaltet.</p>
-
-                    <div class="col-xs-12 hidden-md hidden-lg">
-                        <img class="pull-left" alt="" src="/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-1.png" />
-                        <div class="col-xs-7 col-sm-6 col-md-9">
-                            <h3>Finanzierungszusage erhalten</h3>
+                        <div class="col-xs-12">
+                            <p>Erfüllen Sie unsere Mindestanforderungen, können Sie Ihren Firmenkredit in nur 15 Minuten beantragen: Bequem mit wenigen Klicks registrieren, ein aussagekräftiges Unternehmensprofil erstellen und die erforderlichen Finanzkennzahlen hochladen. </p>
                         </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 hidden-md hidden-lg">
-                        <p>Unsere erfahrenen Kreditanalysten prüfen Ihren vollständigen Antrag innerhalb von nur 48 Stunden – natürlich kostenfrei. Danach erhalten Sie Ihr individuelles Zinsangebot. Sobald Sie dieses annehmen, wird Ihr Projekt automatisch zur Finanzierung freigeschaltet.</p>
                     </div>
                 </div>
 
                 <div class="col-xs-12 col-md-4">
-                    <h3 class="hidden-xs hidden-sm visible-md visible-lg">Geldeingang verbuchen</h3>
-                    <p class="hidden-xs hidden-sm visible-md visible-lg">Ist Ihr Kreditprojekt finanziert, erhalten Sie Ihren Kreditvertrag. Senden Sie diesen unterschrieben an uns zurück, zahlen wir Ihren Geschäftskredit innerhalb weniger Tage aus. Die monatliche Rückzahlung erfolgt danach einfach und bequem per Lastschrift.</p>
-                    <div class="col-xs-12 hidden-md hidden-lg">
-                        <img class="pull-left" alt="" src="/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-1.png" />
-                        <div class="col-xs-7 col-sm-6 col-md-9">
-                            <h3>Geldeingang verbuchen</h3>
+
+                        <div class="col-xs-12"><div class="row">
+                            <img class="pull-left hidden-md hidden-lg" alt="" src="/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-1.png" />
+                            <div class="col-xs-7 col-sm-6 col-md-12">
+                                <h3>Finanzierungszusage erhalten</h3>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <p>Unsere erfahrenen Kreditanalysten prüfen Ihren vollständigen Antrag innerhalb von nur 48 Stunden – natürlich kostenfrei. Danach erhalten Sie Ihr individuelles Zinsangebot. Sobald Sie dieses annehmen, wird Ihr Projekt automatisch zur Finanzierung freigeschaltet.</p>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-12 hidden-md hidden-lg">
+                </div>
+
+                <div class="col-xs-12 col-md-4">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <img class="pull-left hidden-md hidden-lg" alt="" src="/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-1.png" />
+                            <div class="col-xs-7 col-sm-6 col-md-12">
+                                <h3>Geldeingang verbuchen</h3>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
                         <p>Ist Ihr Kreditprojekt finanziert, erhalten Sie Ihren Kreditvertrag. Senden Sie diesen unterschrieben an uns zurück, zahlen wir Ihren Geschäftskredit innerhalb weniger Tage aus. Die monatliche Rückzahlung erfolgt danach einfach und bequem per Lastschrift.</p>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -356,7 +360,7 @@
 
     <div class="container-wrapper odd blockquote small-quote-pad">
         <div class="container padding-48">
-            <h3 class="faux-h1 text-center">Unkomplizierter und schneller Prozess</h3>
+            <div class="faux-h1 text-center">Unkomplizierter und schneller Prozess</div>
 
             <div id="borrowerCarousel" class="carousel slide col-xs-12">
                 <!-- Carousel items -->
@@ -364,13 +368,13 @@
                     <div class="active item">
 
                         <div class="row">
-                            <div class="col-xs-12 col-sm-8">
+                            <div class="col-xs-12 col-sm-8 col-md-8">
                                 <blockquote>
                                     <p class="text-left">Mit der Finanzierung bei Zencap schaffen wir uns ein zweites Standbein. So sind wir in Zeiten von Basel III unabhängiger von der Hausbank. Außerdem schätzen wir den unkomplizierten und sehr professionellen Prozess bei Zencap.</p>
                                     <p class="text-left"><em>Axel Jünke, Geschäftsführer</em></p>
                                 </blockquote>
                             </div>
-                            <div class="hidden-xs col-xs-12 col-sm-3">
+                            <div class="hidden-xs col-xs-12 col-sm-4 col-md-3 col-md-offset-1">
                                 <img alt="" src="https://d1uuy7l9kfwygp.cloudfront.net/bundles/intlendweblayout/frontend/images/cms/borrower/axel-juehnke-cadmium.jpg" class="img-circle" />
                             </div>
                         </div>
