@@ -38,7 +38,7 @@
 
             <!-- carousel with table fees visible on mobile, small tablets -->
             <div class="row">
-                <div id="fees-borrower" class="carousel slide col-xs-12 col-sm-12 hidden-md hidden-lg">
+                <div id="fees-borrower" class="carousel slide col-xs-12 col-sm-8 col-sm-offset-2">
                         <!-- Carousel items -->
                         <div class="carousel-inner">
                             <div class="active item">
@@ -160,6 +160,7 @@
                     </div><!-- #fees-borrower -->
             </div>
             <!-- end .carousel -->
+{#
 
             <!-- table fees visible on desktop-->
             <div class="row">
@@ -264,6 +265,7 @@
                 </div>
             </div>
             <!-- end table fees -->
+#}
 
             <div class="row">
                 <div class="col-xs-12">
@@ -301,7 +303,7 @@
 
 
 
-    <div class="container-wrapper borrower-steps odd hidden-xs col-sm-12">
+    <div class="container-wrapper borrower-steps odd hidden-xs hidden-sm col-md-12">
         <div class="container padding-48">
 
             {#  THIS IMAGE SHOULD BE REPLACED!!!  #}
@@ -329,14 +331,10 @@
     <div class="container-wrapper apply">
         <div class="container padding-48">
             <div class="row">
-                {# <div class="col-xs-3 col-sm-2 col-md-1">
-                     &#123;&#35;<img src="/bundles/intloopdeweblayout/frontend/images/cms/rates-and-fees-borrower/borrower-step-1.png"
-                         alt="">&#35;&#125;
-                     <img src="https://d1uuy7l9kfwygp.cloudfront.net/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-1.png" alt=""/>
-                 </div>#}
+                <h2 class="faux-h1 text-center col-xs-12">In drei Schritten zu Ihrem schnellen Kredit</h2>
                 <div class="col-xs-12">
                     <img class="pull-left"
-                         src="https://d1uuy7l9kfwygp.cloudfront.net/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-1.png"
+                         src="/bundles/intlenddeweblayout/frontend/images/cms/rates-and-fees-borrower/borrower-step-1.png"
                          alt=""/>
 
                     <h3 class="title-lead col-xs-8 col-sm-10">Finanzierungsanfrage stellen</h3>
@@ -363,29 +361,25 @@
                         <tr>
                             <th>Finanzierungsdauer</th>
                             <th>Finanzierungsart</th>
-                            <th class="hidden-xs">Dauer</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
                             <th class="text-orange hidden-xs visible-sm visible-md visible-lg">Kurzfristig</th>
                             <th class="text-orange visible-xs hidden-sm">Kurzfristig <br>(6 Monate)</th>
-                            <td>Auftragsfinanzierung, <br>Vorfinanzierung, <br>Projektfinanzierung</td>
-                            <th class="hidden-xs visible-sm visible-md visible-lg">6 Monate</th>
+                            <td>Auftragsfinanzierung, Vorfinanzierung, Projektfinanzierung</td>
                         </tr>
                         <tr>
                             <th class="text-orange hidden-xs visible-sm visible-md visible-lg">Mittelfristig</th>
                             <th class="text-orange visible-xs hidden-sm">Mittelfristig <br>(12 - 24 Monate)</th>
-                            <td>Liquidität, Betriebsmittel, <br>Vorräte wie Lageraufstockung</td>
-                            <th class="hidden-xs visible-sm visible-md visible-lg">1 bis 2 Jahre</th>
+                            <td>Liquidität, Betriebsmittel, Vorräte wie Lageraufstockung</td>
                         </tr>
                         <tr>
                             <th class="text-orange hidden-xs visible-sm visible-md visible-lg">Langfristig</th>
                             <th class="text-orange visible-xs hidden-sm">Langfristig <br>(36 - 60 Monate</th>
-                            <td>Finanzierung von Maschinen,<br> Fahrzeugen, Software, <br>Lizenzen sowie Betriebs- und
+                            <td>Finanzierung von Maschinen, Fahrzeugen, Software, <br>Lizenzen sowie Betriebs- und
                                 Geschäftsausstattung
                             </td>
-                            <th class="hidden-xs visible-sm visible-md visible-lg">3 bis 5 Jahre</th>
                         </tr>
                         </tbody>
                     </table>
@@ -395,7 +389,7 @@
                     <p>Um mit der Prüfung zu beginnen, benötigen wir die letzten zwei Jahresabschlüsse und eine aktuelle
                         BWA. </p>
 
-                    <div class="facts hidden-xs visible-sm visible-md visible-lg">
+                    <div class="facts hidden-xs hidden-sm visible-md visible-lg">
                         <div id="accordion-1" class="panel-group">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
@@ -436,14 +430,10 @@
         <div class="container padding-48">
             <div class="row">
                 <div class="col-xs-12">
-                   {# <img class="pull-left"
-                        src="/bundles/intloopdeweblayout/frontend/images/cms/rates-and-fees-borrower/borrower-step-2.png"
-                        alt="">#}
-
-                    <img class="pull-left"
-                         src="https://d1uuy7l9kfwygp.cloudfront.net/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-1.png"
-                         alt=""/>
-                        <h3 class="title-lead col-xs-8 col-sm-10">Finanzierungszusage erhalten</h3>
+                   <img class="pull-left"
+                        src="/bundles/intlenddeweblayout/frontend/images/cms/rates-and-fees-borrower/borrower-step-2.png"
+                        alt="">
+                    <h3 class="title-lead col-xs-8 col-sm-10">Finanzierungszusage erhalten</h3>
                 </div>
                 <div class="col-xs-12 col-md-11 col-md-offset-1">
                     <p>Liegt uns der vollständige Antrag vor, prüfen wir diesen innerhalb von 48 Stunden und treffen
@@ -462,12 +452,9 @@
         <div class="container padding-48">
             <div class="row">
                 <div class="col-xs-12">
-                    {#<img
-                        src="/bundles/intloopdeweblayout/frontend/images/cms/rates-and-fees-borrower/borrower-step-3.png"
-                        alt="">#}
                     <img class="pull-left"
-                         src="https://d1uuy7l9kfwygp.cloudfront.net/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-1.png"
-                         alt=""/>
+                        src="/bundles/intlenddeweblayout/frontend/images/cms/rates-and-fees-borrower/borrower-step-3.png"
+                        alt="">
                     <h3 class="title-lead col-xs-8 col-sm-10">Geldeingang verbuchen</h3>
 
                 </div>
@@ -484,7 +471,7 @@
                     <p>Die Rückzahlung erfolgt bequem per Lastschrift. Im Falle eines drohenden Zahlungsverzugs
                         informieren Sie uns bitte frühzeitig, damit wir gemeinsam eine Lösung finden.</p>
 
-                    <div class="facts hidden-xs visible-sm visible-md visible-lg">
+                    <div class="facts hidden-xs hidden-sm visible-md visible-lg">
                         <div id="accordion-3" class="panel-group">
                             <div class="panel panel-default">
                                 <div class="panel-heading">

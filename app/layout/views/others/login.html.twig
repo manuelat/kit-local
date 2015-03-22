@@ -7,25 +7,24 @@
     <div class="row user-login">
 
         <div class="col-xs-12 col-sm-5">
-            <h1>Mein Konto</h1>
+            <h1 class="faux-h1">Mein Konto</h1>
             <p>Sie haben bereits ein Nutzerkonto? Loggen Sie sich bitte ein.</p>
             <form action="" method="post">
                 <div class="form-group">
                     <label for="username" class="hidden">Email</label>
-                    <input type="text" class="form-control col-lg-12 custom-input" placeholder="E-Mail-Adresse" required="required" value="" name="_username" id="username">
+                    <input type="text" class="form-control col-xs-12 custom-input" placeholder="E-Mail-Adresse" required="required" value="" name="_username" id="username">
                     <label for="password" class="hidden">Password</label>
-                    <input type="text" class="form-control col-lg-12 custom-input" placeholder="Passwort" required="required" name="_password" id="password" autocomplete="off">
+                    <input type="text" class="form-control col-xs-12 custom-input" placeholder="Passwort" required="required" name="_password" id="password" autocomplete="off">
                 </div>
                 <a href="{{ path('forgot_password') }}" class="forgotPassword pull-right"><strong>Passwort vergessen?</strong></a>
-                <input type="submit" value="Anmelden" name="_submit" id="_submit" class="btn btn-lg col-lg-12">
+                <input type="submit" value="Anmelden" name="_submit" id="_submit" class="btn btn-lg col-xs-12">
             </form>
         </div>
 
         <hr class="col-xs-12 hidden-sm hidden-md hidden-lg"/>
 
         <div class="col-xs-12 col-sm-5 col-sm-offset-2">
-            <div class="desp-10 col-xs-12 hidden-sm hidden-md hidden-lg"></div>
-            <h1>Profil erstellen</h1>
+            <h1 class="faux-h1">Profil erstellen</h1>
             <p>Neu bei Zencap? Registrieren Sie sich jetzt kostenlos.</p>
             <p>
                 <a href="{{ path('registerLender') }}" class="btn btn-lg btn-nvstr btn-block">
