@@ -1,13 +1,127 @@
-/* forms from credit projects: dropdown, search */
+/* general rules */
 
-.form-control {
-    box-shadow: none;
+input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:focus {
+    border-color: @errorText;
+}
+
+
+// Form controls
+// -------------------------
+
+// Shared size and type resets
+select,
+.select2, // custom select
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+    .box-sizing(border-box);
+   // .box-shadow(~"0 0 0 transparent !important");
+    box-shadow: 0 0 0 transparent !important;
+    width: 100%;
+    height: @inputHeight;
 
     &:focus {
-        box-shadow: none;
-        border-color: #ccc;
+        //.box-shadow(~"0 0 5px rgba(0,0,0,.2)");
+        box-shadow: 0 0 5px rgba(0,0,0,.2);
+        border-color: @brandColor3;
+        color: #5c6266;
+        outline: 0;
+        outline: thin dotted \9; /* IE6-9 */
+    }
+
+    &[disabled],
+    &[readonly] {
+
+        &:focus {
+            border-color: @inputBorder;
+        }
+
+        &[required] {
+
+            &:focus {
+                //.box-shadow(~"0 0 0 transparent !important");
+                box-shadow: 0 0 0 transparent !important;
+                border-color: @inputBorder !important;
+            }
+        }
+    }
+
+    &[required] {
+
+        &:focus { // especially for textareas
+            color: @textColor;
+            /*.box-shadow(~"0 0 5px rgba(0,0,0,.2) !important");*/
+            box-shadow: 0 0 5px rgba(0,0,0,.2);
+            border-color: @inputFocusColor !important;
+        }
+    }
+
+    &.error {
+        border: 1px solid @errorBorderInput;
     }
 }
+
+// label styling
+
+label.required:after {
+    content: ' *';
+}
+
+label.text-danger {
+    font-size: @headingsFontSizeH6;
+    line-height: 16px;
+}
+
+label, input, button, select, textarea {
+    font-size: @headingsFontSizeH5;
+    font-weight: normal;
+    line-height: 20px;
+}
+
+.form-group label.placeholder {
+    background: none repeat scroll 0 0 #edf0f2;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #8e959a;
+    cursor: default;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 6px;
+}
+
+// dropdowns styling
+
+.btn.dropdown-toggle {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #c7d2d9;
+    box-shadow: 0 -3px 0 #e6e6e6 inset;
+    color: #5c6266 !important;
+    width: 100%;
+
+    &:hover, &:focus {
+        background: none repeat scroll 0 0 #fff;
+        box-shadow: 0 -3px 0 #e6e6e6 inset;
+    }
+}
+
+.btn-group.open .dropdown-toggle {
+    background: none repeat scroll 0 0 #fff;
+}
+
+// search input
 
 .input-search {
     position: relative;
@@ -24,6 +138,8 @@
     }
 }
 
+// should be deleted if not used radion buttons
+/*
 .radio-handler {
     position: relative;
 
@@ -39,26 +155,223 @@
         color: @white !important;
         box-shadow: 0 -3px 0 #79a4c2 inset;
     }
-}
+}*/
 
 #filter-bar {
     .radio + .radio {
         margin-top: -15px;
     }
 
-    ul.dropdown-menu {
-        top: 20px;
+    .dropdown-toggle {
+        margin-top: -10px;
     }
 
-    .dropdown-toggle {
-        background: @white;
-        border: 1px solid @brandColor6;
-        box-shadow: 0 -3px 0 #e6e6e6 inset;
-        color: @brandColor3;
-        margin-top: -10px;
+    ul.dropdown-menu {
+        top: 20px;
     }
 
     p strong {
         font-size: 12px;
     }
+
+    @media (min-width: 320px) and (max-width: 992px) {
+        .dropdown-menu > li > a {
+            white-space: normal;
+        }
+
+        .dropdown-menu {
+            width: 100%;
+        }
+    }
+
+    @media (min-width: 992px)  {
+        .col-md-3.ui-custom-item, .col-lg-3.ui-custom-item {
+            width: 22%;
+        }
+    }
+
 }
+
+ul.dropdown-menu {
+    top: 32px;
+}
+
+.dropdown-toggle {
+    background: @white;
+    border: 1px solid @brandColor6;
+    box-shadow: 0 -3px 0 #e6e6e6 inset;
+    color: @brandColor3;
+}
+
+/* premium lender account details pagination */
+@media (min-width: 1024px)  {
+    .premium-pagination .btn {
+        padding: 6px 7px;
+    }
+}
+
+.user-login {
+    margin-top: 48px;
+    margin-bottom: 48px;
+    background: url("/bundles/intlendwebuser/frontend/images/vertical-line.png") 51% 0 repeat-y;
+
+    h1 {
+        margin-bottom: 0.25em;
+    }
+
+    p {
+        font-size: @headingsFontSizeH5 - 1;
+    }
+
+    .forgotPassword {
+        margin: 10px 0 30px 0;
+    }
+
+}
+
+// hide vertical line on mobile
+
+@media (min-width: 320px) and (max-width: 667px) {
+    .user-login {
+        background: none;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+// custom radio button
+
+.custom-circle {
+    border: 1px solid @brandColor6;
+    border-radius: 15px;
+    height: 22px;
+    width: 22px;
+    float: left;
+    margin-bottom: 12px;
+    position: relative;
+
+    .selected {
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        border-radius: 8px;
+        border: 7px solid;
+    }
+}
+
+// custom checkbox
+.custom-square {
+    border: 1px solid #c7d2d9;
+    border-radius: 6px;
+    height: 20px;
+    margin-right: 10px;
+    width: 20px;
+    position: relative;
+    float: left;
+
+    .glyphicon {
+        left: 4px;
+        top: -1px;
+        font-size: 10px;
+    }
+}
+
+.checkbox-buttons label {
+    width: 89%;
+}
+
+/* lender/borrower registration */
+.form-register {
+    h2 {
+        background-color: @brandColor7;
+        height: 48px;
+        line-height: 48px;
+        margin: 0 0 24px;
+        padding: 0 10px;
+
+        small {
+            margin-top: 18px;
+            font-size: 12px;
+            color: #8e959a;
+            font-weight: 600;
+        }
+    }
+
+    @media (min-width: 320px) and (max-width: 479px) {
+        h2 {
+            font-size: 15px;
+        }
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .radio-buttons {
+        float: left;
+        margin-right: 30px;
+        line-height: 28px;
+
+        .custom-circle {
+            margin-right: 12px;
+        }
+    }
+
+}
+
+// center align button on mobile
+@media (min-width: 320px) and (max-width: 768px) {
+    .place-btn {
+        text-align: center;
+    }
+}
+
+// right align button from tablet to desktop
+@media (min-width: 768px) {
+    .place-btn {
+        text-align: right;
+    }
+}
+
+
+// custom input
+
+.form-group {
+    .custom-input {
+        font-size: 20px;
+        height: 48px;
+        line-height: 133%;
+        margin: 0 0 20px;
+        padding: 6px 12px;
+        width: 100%;
+    }
+}
+
+.input-group-pass {
+    position: relative;
+
+    .input-icon-eye {
+        position: absolute;
+        cursor: pointer;
+        top: 7px;
+        right: 10px;
+
+        .fa-eye {
+            font-size: 21px;
+            opacity: 0.7;
+        }
+    }
+}
+
+
+
+
+
+// edit user's account profile
+@media (min-width: 320px) and (max-width: 479px) {
+    h2 a.editProfile {
+        display: block;
+        padding-top: 10px;
+    }
+}
+
