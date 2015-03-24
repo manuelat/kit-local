@@ -1,72 +1,111 @@
 <thead>
 <tr>
-    <th class="hidden-md hidden-lg"></th>
+    {# LG .. #}
+    <th class="visible-lg">Kreditprojekt</th>
+    <th class="visible-lg">Kategorie</th>
+    <th class="visible-lg">Betrag</th>
+    <th class="visible-lg">Zinssatz</th>
+    <th class="visible-lg">Laufzeit</th>
+    <th class="visible-lg">% finantiert</th>
+    <th class="visible-lg">Noch offen</th>
+    <th class="visible-lg">Restzeit</th>
+    <th class="visible-lg">Anlegen</th>
+
+    {# XS SM MD .. #}
+    <th class="visible-xs visible-sm visible-md">a</th>
+    <th class="visible-xs visible-sm visible-md">Titel</th>
+    <th class="visible-xs visible-sm visible-md">Laufzeit</th>
+    <th class="visible-xs visible-sm visible-md">Zins</th>
+    <th class="visible-xs visible-sm visible-md">Betrag / %finanziert</th>
+    <th class="visible-xs visible-sm visible-md">b</th>
+
+    {#
+    <th class="hidden-md hidden-lg">a</th>
+    <th class="visible-xs visible-sm hidden-md hidden-lg">Titel</th>
     <th>Kreditprojekt</th>
-    <th class="hidden-md hidden-lg"></th>
+    <th class="visible-xs visible-sm hidden-md hidden-lg">b</th>
+    <th class="visible-xs visible-sm">c</th>
     <th class="hidden-xs hidden-sm">Kategorie</th>
-    <th class="text-center">Betrag</th>
-    {#<th class="hidden-sm hidden-md hidden-lg"><button id="filter-btn" data-toggle="offcanvas" class="btn btn-primary pull-right" type="button"><i class="fa fa-bars fa-lg fa-white"></i></button></th>#}
-    <th class="hidden-md hidden-lg"></th>
+    <th class="text-center hidden-xs hidden-sm">Betrag</th>
+    {#<th class="hidden-sm hidden-md hidden-lg"><button id="filter-btn" data-toggle="offcanvas" class="btn btn-primary pull-right" type="button"><i class="fa fa-bars fa-lg fa-white"></i></button></th># }
+    <th class="hidden-md hidden-lg hidden-sm hidden-xs">d</th>
     <th class="hidden-xs hidden-sm text-center">Zinssatz</th>
     <th class="hidden-xs hidden-sm">Laufzeit</th>
     <th class="hidden-xs hidden-sm">% finanziert</th>
     <th class="hidden-xs hidden-sm text-center">Noch offen</th>
     <th class="hidden-xs hidden-sm text-center">Restzeit</th>
     <th class="hidden-xs hidden-sm">Anlegen</th>
+    {# small screen.. # }
+    <th class="visible-xs">Laufzeit</th>
+    #}
 </tr>
 </thead>
 <tbody>
 {% for art in articles %}
     <tr>
-        <td class="hidden-md hidden-lg {{ art.risk_class }} sm-width">{{ art.risk_title }}</td>
-        <td class="loan-title">
-            <a href="{{ path('loanDetails') }}">{{ art.title }}</a>
-        </td>
-        <td class="hidden-md hidden-lg">
-            {{ art.interest }}<br>{{ art.duration }}
-        </td>
-        <td class="hidden-md hidden-lg sm-width-bar">
-            <div class="progress custom-progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="{{ art.filled }}" aria-valuemin="0" aria-valuemax="100"
-                     style="min-width: 2em; width: {{ art.filled }};">
-                </div>
-                <div class="full-amount">
-                    {{ art.amount }}
-                </div>
-            </div>
-        </td>
-        <td class="hidden-xs hidden-sm text-center"><i class="categoryIcon">{{ art.category }}</i></td>
-        <td class="hidden-xs hidden-sm text-right">{{ art.amount }}</td>
-        <td class="hidden-xs hidden-sm text-right">{{ art.interest }}<span class="grade {{ art.risk_class }} grade-small">{{ art.risk_title }}</span>
-        </td>
-        <td class="hidden-xs hidden-sm">{{ art.duration }}</td>
-        <td class="hidden-xs hidden-sm">
-            <div class="progress default-progress progress-update pull-left">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                     style="width: {{ art.filled }};">
-                </div>
-            </div>
-            <div class="percentage pull-right">{{ art.funded }}</div>
-        </td>
-        <td class="hidden-xs hidden-sm text-right">{{ art.amount_pending }}</td>
-        <td class="hidden-xs hidden-sm text-center">{{ art.days_left }}</td>
-        <td class="hidden-xs hidden-sm">
-            <div class="bid-item">
-                <div class="invest"><input type="button" value="Anlegen" class="btn btn-nvstr btn-invest btn-block"/>
-                </div>
-                <div class="bid-form hidden">
-                    <input class="inp-value" type="text" name=""/>
-                    <input type="button" value="Biten" class="place-bid btn btn-nvstr btn-invest"/>
-                </div>
-                <div class="bid-value text-right hidden"><span>-</span>
-                    <a href="javascript:void(0)" class="edit">✎</a>
-                    <a href="javascript:void(0)" class="remove"><i class="glyphicon glyphicon-remove"></i></a>
-                </div>
-            </div>
-        </td>
-        <td class="hidden-md hidden-lg sm-width">
-            <a href="{{ path('loanDetails') }}" class="more"><i class="glyphicon glyphicon-chevron-right"></i></a>
-        </td>
+        <td class="sm-width"></td>
+        <td><a href="{{ path('loanDetails') }}">{{ art.title }}</a></td> {# Kreditproject #}
+        <td>+++</td>
+        <td colspan="3">alfa <span class="hidden-xs hidden-sm hidden-md">[img]</span> <div class="visible-xs visible-sm visible-md hidden-lg"></div> beta</td>
+        <td>+++</td>
     </tr>
+
 {% endfor %}
 </tbody>
+
+{#
+<tr>
+    <td class="hidden-md hidden-lg {{ art.risk_class }} sm-width">{{ art.risk_title }}/a</td> {# first row # }
+    <td class="visible-xs visible-sm">{{ art.interest }}/b</td> {# Kreditprojekt # }
+    <td class="loan-title">
+        <a href="{{ path('loanDetails') }}">{{ art.title }}</a>/d {# Kreditproject # }
+    </td>
+    <td class="visible-xs visible-sm">{{ art.duration }}/c</td> {# Laufzeit # }
+    <td class="hidden-md hidden-lg">
+        {{ art.interest }}<br>{{ art.duration }}/e {# Zinssatz / Laufzeit # }
+    </td>
+    <td class="hidden-md hidden-lg sm-width-bar">
+        <div class="progress custom-progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="{{ art.filled }}" aria-valuemin="0" aria-valuemax="100"
+                 style="min-width: 2em; width: {{ art.filled }};">
+            </div>
+            <div class="full-amount">
+                {{ art.amount }}
+            </div>
+        </div>
+        /f {# progress bar #
+    </td>
+    <td class="hidden-xs hidden-sm text-center"><i class="categoryIcon">{{ art.category }}</i>/g</td> {# Kategorie # }
+    <td class="hidden-xs hidden-sm text-right">{{ art.amount }}/h</td> {# Betrag #
+    <td class="hidden-xs hidden-sm text-right">{{ art.interest }}<span class="grade {{ art.risk_class }} grade-small">{{ art.risk_title }}</span>/i</td> {# Zinssatz # }
+    <td class="hidden-xs hidden-sm">{{ art.duration }}/j</td>
+    <td class="hidden-xs hidden-sm">
+        <div class="progress default-progress progress-update pull-left">
+            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                 style="width: {{ art.filled }};">
+            </div>
+        </div>
+        <div class="percentage pull-right">{{ art.funded }}</div>/k {# finanziert # }
+    </td>
+    <td class="hidden-xs hidden-sm text-right">{{ art.amount_pending }}/l</td> {# noch offen # }
+    <td class="hidden-xs hidden-sm text-center">{{ art.days_left }}/m</td> {# restzeit # }
+    <td class="hidden-xs hidden-sm">
+        <div class="bid-item">
+            <div class="invest"><input type="button" value="Anlegen" class="btn btn-nvstr btn-invest btn-block"/>
+            </div>
+            <div class="bid-form hidden">
+                <input class="inp-value" type="text" name=""/>
+                <input type="button" value="Biten" class="place-bid btn btn-nvstr btn-invest"/>
+            </div>
+            <div class="bid-value text-right hidden"><span>-</span>
+                <a href="javascript:void(0)" class="edit">✎</a>
+                <a href="javascript:void(0)" class="remove"><i class="glyphicon glyphicon-remove"></i></a>
+            </div>
+        </div>/n {# Anlegen # }
+    </td>
+    <td class="hidden-md hidden-lg sm-width">
+        <a href="{{ path('loanDetails') }}" class="more"><i class="glyphicon glyphicon-chevron-right"></i></a>
+        /o {# right arrow # }
+    </td>
+</tr>
+#}
