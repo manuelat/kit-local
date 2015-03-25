@@ -12,36 +12,27 @@
 <div class="container padding-48">
 
     <div class="row">
-        <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+        <div class="hidden-xs hidden-sm col-md-9 col-lg-9">
             <h1>Anleger-Dashboard</h1>
         </div>
-        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+        <div class="hidden-xs hidden-sm col-md-3 col-lg-3">
             <a href="{{ path('invest') }}" class="btn btn-lg btn-nvstr btn-block pull-right">Jetzt anlegen</a>
         </div>
     </div>
 
     <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
 
-    <!-- Panels visible for tablets, desktop (hidden for mobile) -->
-    <div class="hidden-xs visible-sm visible-md visible-lg dash">
+    <div class="dash">
 
         {% include '_partials/lender/investmentPanels.html.twig' %}
 
     </div><!-- end .hidden-xs -->
 
-    <!-- Panels visible for mobile (hidden for tablets, desktop) -->
-
-    <div class="visible-xs hidden-sm hidden-md hidden-lg dash">
-
-        {% include '_partials/lender/investmentPanelsMobile.html.twig' %}
-
-    </div><!-- end .visible-xs -->
-
     <div class="row">
-        <div class="hidden-xs col-sm-12 col-md-6 col-lg-6">
+        <div class="col-xs-12 col-md-6 col-lg-6">
             <h2>Die Zencap-Klassen</h2>
         </div>
-        <div class="hidden-xs col-sm-12 col-md-6 col-lg-6">
+        <div class="hidden-xs hidden-sm col-md-6 col-lg-6">
 
             <h2>Aktuelle Kreditprojekte</h2>
 
@@ -61,7 +52,7 @@
                 </div>
                 <div role="tabpanel" class="tab-pane" id="last-chance">
                     {#{% include '_partials/lender/dashboardPromoTabs.html.twig' %}#}
-                    Lorem ipsum
+                    LOREM IPSUM
                 </div>
                 <div role="tabpanel" class="tab-pane" id="new">
                     {% include '_partials/lender/dashboardPromoTabs.html.twig' %}

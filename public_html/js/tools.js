@@ -1,3 +1,35 @@
+/*  accordion handling on dashboard */
+
+function collapseOnResize(){
+    // only for desktop
+    if ($(document).width() > 991) {
+        // get all link inside class lg-no-collapse
+        $('.lg-no-collapse').each(function(){
+            // if has data-toggle=collapse
+            if ( $(this).attr('data-toggle') == 'collapse' ) {
+                // remove data-toggle collapse
+                $(this).attr('data-toggle', '');
+                // change url to javascrit:void(0)
+                $(this).attr('href', 'javascript:void(0);');
+            }
+        });
+        // make sure that all are displayed on desktop
+        $('.panel-collapse').collapse('show');
+    } else {
+        // get all links inside class lg-no-collapse
+        $('.lg-no-collapse').each(function(){
+            // if has data-toggle != collapse
+            if ( $(this).attr('data-toggle') != 'collapse' ) {
+                // add data-toggle collapse
+                $(this).attr('data-toggle', 'collapse');
+                // get the id to regenerate url hashtag
+                var newId = $(this).attr('id').replace('a-', '#');
+                // apply new href
+                $(this).attr('href', newId);
+            }
+        });
+    }
+}
 $(function() {
 
     /* plugin Menu Expander*/
@@ -157,6 +189,15 @@ $(function() {
 
     $('[data-toggle="tooltip"]').tooltip();
 
+    /**
+     * activate dashboard accordion
+     */
 
+    $(window).load(function() {
+        setTimeout(collapseOnResize, 500);
+    });
+    $(window).resize(function() {
+        collapseOnResize();
+    });
 
 });
