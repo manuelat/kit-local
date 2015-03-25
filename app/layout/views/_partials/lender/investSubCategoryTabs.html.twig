@@ -17,8 +17,7 @@
                         <tbody>
                         <tr>
                             <th>Firmenname</th>
-                            <td>
-                                Bitte <a href="/login">melden Sie sich an</a>, um diese Informationen anzusehen </td>
+                            <td>Bitte <a href="/login">melden Sie sich an</a>, um diese Informationen anzusehen </td>
                         </tr>
                         <tr>
                             <th>Branche</th>
@@ -163,10 +162,10 @@
 
             Bitte <a href="">melden Sie sich an</a>, um diese Informationen anzusehen
 
-            {% include '_partials/tables/finanzkennzahlen.html.twig' %}
+            {#{% include '_partials/tables/finanzkennzahlen.html.twig' %}#}
 
 
-            {#{% include '_partials/tables/balanceSheet.html.twig' %}#}
         </div><!-- end #financials -->
     </div>
+            {% include '_partials/tables/balanceSheet.html.twig' %}
 </div>
