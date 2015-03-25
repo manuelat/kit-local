@@ -26,6 +26,9 @@ active_biddings:
 portfolio:
     path: /lender/portfolio
 
+lender_portfolio_loans:
+    path: /lender/lender_portfolio_loan_detail
+
 premium_lender_form:
     path: /lender/premium_lender_form
 
