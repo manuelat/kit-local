@@ -1,0 +1,77 @@
+/* ==========================================================================
+Lender portfolio loand detail
+========================================================================== */
+
+// accordion
+.payments {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    .panel-default > .panel-heading {
+        color: white;
+        font-weight: bold;
+        background-color: #189cf1;
+    }
+
+    .panel-body {
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .panel-heading {
+        border-radius: 0;
+        padding: 0 15px;
+
+        h4 {
+            position: relative;
+            height: 60px;
+            line-height: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            padding-top: 10px;
+
+            a:hover, a:focus {
+                color: @white;
+            }
+
+            span {
+                display: block;
+            }
+
+            i {
+                position: absolute;
+                top: 25px;
+                right: 0;
+            }
+        }
+    }
+
+    .panel-default {
+        border: none;
+    }
+
+    .panel {
+        box-shadow: none;
+    }
+
+    .panel-item {
+        height: 35px;
+        line-height: 33px;
+
+        &:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        &:nth-child(odd) {
+            background-color: @white;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .panel-group .panel {
+        margin-bottom: -4px;
+    }
+}

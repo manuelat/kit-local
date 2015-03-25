@@ -1,0 +1,242 @@
+{% extends 'layout.html.twig' %}
+
+{% block header %}
+
+    {% include '_partials/headers/account-header.html.twig' %}
+
+{% endblock header %}
+
+{% block body %}
+
+<div class="container padding-48">
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+            <h1 class="faux-h2"><a href="{{ path('portfolio') }}" class="visible-xs visible-sm hidden-md hidden-lg pull-left"><i class="fa fa-arrow-left"></i> &nbsp;</a>
+            Weiterentwicklung Quadrocopter</h1>
+        </div>
+        <div class="hidden-xs hidden-sm col-md-4 col-lg-4  text-right">
+            <a href="{{ path('portfolio') }}"><i class="fa fa-arrow-left"></i> zurück zur Auflistung</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="hidden-xs hidden-sm col-md-12 col-lg-12">
+            <h2 class="faux-h3"><i class="categoryIcon" data-original-title="" title="">3 </i> Betriebsmittelfinanzierung</h2>
+        </div>
+    </div>
+
+    <div class="row add-negative-margin">
+        <div class="col-xs-12 col-sm-6">
+            {% include '_partials/tables/loan_default_summary_table.html.twig' %}
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            {% include '_partials/tables/lender_investments_table.html.twig' %}
+        </div>
+    </div><!-- end .row -->
+
+    {# DATA BELOW IS JUST FOR TESTING NL + ES, SHOULD BE DELETED #}
+
+    {# ================ START TO DELETE ====================== #}
+
+    {# ================ SPAIN ====================== #}
+
+    <h1> TESTING SPAIN</h1>
+    <div class="row add-negative-margin">
+        <div class="col-xs-12 col-sm-6">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th colspan="2">Resumen</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td>Nº de préstamo</td>
+                    <td>#890191784</td>
+                </tr>
+                <tr>
+                    <td>Fecha de desembolso</td>
+                    <td>10/09/2014</td>
+                </tr>
+                <tr>
+                    <td>Importe Neto</td>
+                    <td>60.000 €</td>
+                </tr>
+                <tr>
+                    <td>Tipo de interés</td>
+                    <td> 6,99%<span class="grade grade-c grade-small">C</span></td>
+                </tr>
+                <tr>
+                    <td>Comisión de servicio</td>
+                    <td>1.00%</td>
+                </tr>
+                <tr>
+                    <td>Plazo</td>
+                    <td>36 Meses</td>
+                </tr>
+                <tr>
+                    <td>Estado</td>
+                    <td>Activo</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th colspan="3">Su inversión</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td></td>
+                    <td>Recibido</td>
+                    <td>Programado</td>
+                </tr>
+                <tr>
+                    <td>Capital</td>
+                    <td>1.697,71 €</td>
+                    <td>10.000,00 €</td>
+                </tr>
+                <tr>
+                    <td>Intereses</td>
+                    <td>415,22 €</td>
+                    <td>1.269,34 €</td>
+                </tr>
+                <tr>
+                    <td>Comisión por pagos atrasados</td>
+                    <td>0,00 €</td>
+                    <td>0,00 €</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>2.112,93 €</td>
+                    <td>11.269,34 €</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    {# ================ NETHERLAND ====================== #}
+
+    <h1> TESTING NETHERLAND</h1>
+    <div class="row add-negative-margin">
+        <div class="col-xs-12 col-sm-6">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th colspan="2">Samenvatting</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td>Kredietnummer</td>
+                    <td>#776235040</td>
+                </tr>
+                <tr>
+                    <td>Uitbetalingsdatum</td>
+                    <td>25-02-2015</td>
+                </tr>
+                <tr>
+                    <td>Nettobedrag</td>
+                    <td>€ 10.000</td>
+                </tr>
+                <tr>
+                    <td>Rentevoet</td>
+                    <td> 5,06%<span class="grade grade-a grade-small">A</span></td>
+                </tr>
+                <tr>
+                    <td>Servicekosten</td>
+                    <td>1.00%</td>
+                </tr>
+                <tr>
+                    <td>Termijn</td>
+                    <td>24 Maanden</td>
+                </tr>
+                <tr>
+                    <td>Status</td>
+                    <td>Actief</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <table class="table ">
+                <thead>
+                <tr>
+                    <th colspan="3">Uw investering</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td></td>
+                    <td>Ontvangen</td>
+                    <td>Verwacht</td>
+                </tr>
+                <tr class="even">
+                    <td>Hoofdsom</td>
+                    <td>€ 1.697,71</td>
+                    <td>€ 10.000,00 </td>
+                </tr>
+                <tr class="even">
+                    <td>Rente</td>
+                    <td>€ 415,22</td>
+                    <td>€ 1.269,34</td>
+                </tr>
+                <tr class="even">
+                    <td>Kosten voor achterstallige betalingen</td>
+                    <td>€ 0,00</td>
+                    <td>€ 0,00</td>
+                </tr>
+                <tr class="even">
+                    <td class="custom-footer">Totaal</td>
+                    <td class="custom-footer">€ 2.112,93</td>
+                    <td class="custom-footer">€ 11.269,34</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!--  END NL  -->
+
+    {# ================ END TO DELETE ====================== #}
+
+
+    <div class="row">
+        <div class="col-xs-12">
+            <p class="faux-h3">Zahlungsverlauf</p>
+        </div>
+    </div>
+
+    <div class="row add-negative-margin">
+        <div class="col-xs-12 col-sm-12 hidden-md hidden-lg payments">
+            {% include '_partials/tables/payment_history_table_mobile.html.twig' %}
+        </div>
+        <div class="hidden-xs hidden-sm col-md-12 col-lg-12 payments">
+            {% include '_partials/tables/payment_history_table.html.twig' %}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <p class="faux-h3">Zahlungsplan (nach Service-Gebühr) <i data-original-title="Lorem Ipsum." class="fa fa-question-circle" data-toggle="tooltip" data-placement="top" title=""></i> <sup>1</sup></p>
+        </div>
+    </div>
+
+    <div class="row add-negative-margin">
+        <div class="col-xs-12 col-sm-12 hidden-md hidden-lg payments">
+            {% include '_partials/tables/payment_plan_table_mobile.html.twig' %}
+        </div>
+        <div class="hidden-xs hidden-sm col-md-12 col-lg-12 payments">
+            {% include '_partials/tables/payment_plan_table.html.twig' %}
+        </div>
+    </div>
+
+</div><!-- end .container -->
+
+{% endblock body %}
