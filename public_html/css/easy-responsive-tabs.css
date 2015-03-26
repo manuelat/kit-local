@@ -25,6 +25,7 @@ ul.resp-tabs-list {
     padding: 0px;
     background-color: #fff;
     clear: left;
+    overflow: hidden;
 }
 
 h2.resp-accordion {
