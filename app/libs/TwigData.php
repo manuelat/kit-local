@@ -133,6 +133,14 @@ class TwigData extends Helper
         }
     }
 
+    public function getParam($id, $default=null)
+    {
+        $request = Request::createFromGlobals()->getPathInfo();
+        $items = @explode('/', $request);
+
+        return ( isset($items[$id]) ) ? $items[$id] : $default;
+    }
+
     public function getScript()
     {
         return Utils::inc(MODULES . '/' . $this->section . '/' . $this->view . self::SCRIPT_EXTENSION);
