@@ -1,47 +1,26 @@
-.lender-request-details {
-    padding: 13px 20px 15px;
-    text-align: center;
-    font-weight: 600;
-    font-size: 16px;
-
-    &.well {
-        min-height: 192px;
-    }
-}
-
-.lender-place-bid {
-    min-height: 192px;
-    .btn-lg {
-        padding: 11px 16px;
-    }
-    #funding_amount {
-        height: 46px;
-    }
-}
-
-
-@media (max-width: 480px) {
-    .well.lender-place-bid {
-        padding: 10px;
-    }
-
-    .lender-place-bid  {
-        .available-limit strong {
-            font-size: 13px;
-        }
-
-        .btn-lg {
-            padding: 11px 2px;
-        }
-    }
-}
-
-
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 992px) {
     .lender-request-details {
-        font-size: 13px;
+        margin-left: -15px;
+        margin-right: -15px;
+        padding: 15px;
     }
 }
+
+.lender-request-details {
+    span {
+        font-size: 15px;
+        font-weight: 600;
+    }
+}
+
+#funding_amount {
+    height: 35px;
+}
+
+.available-limit {
+    margin-top: -4px;
+}
+
 
 iframe[src^='https://marketing.net.zencap'],
 iframe[src^='http://marketing.net.zencap'] {
