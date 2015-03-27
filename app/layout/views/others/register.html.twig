@@ -1,0 +1,138 @@
+{% extends 'layout.html.twig' %}
+
+{% block css %}
+    {{ parent() }}
+<style>
+.register-step {
+    padding: 0;
+    margin: 0;
+}
+.register-step > li {
+    background: #dff0d8;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: block;
+    clear: both;
+    line-height: 45px;
+    margin-bottom: 2px;
+}
+.register-step > li > a .number {
+    font-size: 18px;
+}
+.register-step > li > a .text {
+    padding-left: 5px;
+}
+.register-step > li.inactiv {
+    background: #edf0f2;
+}
+.register-step > li.inactiv > a .number {
+    background: #dee4e7;
+    color: #20337d;
+}
+.register-step > li.inactiv > a .text {
+    color: #20337d;
+}
+.register-step > li:hover,
+.register-step > li.activ {
+    background: #fff;
+}
+.register-step > li a {
+    display: block;
+}
+.register-step > li > a .number,
+.register-step > li > a .text {
+    color: #4a9566;
+}
+.register-step > li:hover > a .number,
+.register-step > li.activ > a .number {
+    background: #203340;
+    color: #fff;
+}
+.register-step > li:hover > a .text,
+.register-step > li.activ > a .text {
+    color: #203340;
+}
+.register-step > li > a .number {
+    display: block;
+    width: 45px;
+    height: 45px;
+    background: #b2dba1;
+    text-align: center;
+    float: left;
+}
+@media screen and (max-width: 992px)  {
+    .register-step {
+    }
+    .register-step .register-step-item {
+        float: left;
+        clear: none;
+    }
+    .register-step .register-step-item .number {
+        border-right: 1px solid #fff;
+    }
+    .register-step .register-step-item .text {
+        display: none;
+    }
+    .register-step .register-step-item.inactiv .number {
+        background: #999999;
+        color: #fff;
+    }
+    .register-step .register-step-item.activ .number {
+        background: #741b47;
+    }
+    .register-step .register-step-item.activ .text {
+        display: block;
+        background: #eee;
+        float: left;
+        width: 75%;
+    }
+}
+</style>
+{% endblock %}
+
+{% block js %}
+    {{ parent() }}
+    <script>
+        function stepsResize() {
+            if ($(document).width() < 992) {
+                var div_width = $('.register-step').width();
+                var new_width = div_width - ($('.register-step-item').length * 45);
+                $('.register-step .activ .text').css({'width': new_width + 'px'});
+            }
+        }
+        $(function(){
+            $(window).load(function() {
+                stepsResize();
+            });
+            $(window).resize(function() {
+                stepsResize();
+            });
+        });
+    </script>
+{% endblock %}
+
+{% block body %}
+
+    -{{ step }}-
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <ul class="register-step">
+                    <li class="register-step-item {% if step < 1 %}inactiv{% endif %}{% if step == 1 %}activ{% endif %}"><a href="/others/register/"><span class="number">1</span> <span class="text">text 1</span></a></li>
+                    <li class="register-step-item {% if step < 2 %}inactiv{% endif %}{% if step == 2 %}activ{% endif %}"><a href="/others/register/2"><span class="number">2</span> <span class="text">text 2</span></a></li>
+                    <li class="register-step-item {% if step < 3 %}inactiv{% endif %}{% if step == 3 %}activ{% endif %}"><a href="/others/register/3"><span class="number">3</span> <span class="text">text 3</span></a></li>
+                    <li class="register-step-item {% if step < 4 %}inactiv{% endif %}{% if step == 4 %}activ{% endif %}"><a href="/others/register/4"><span class="number">4</span> <span class="text">text 4</span></a></li>
+                    <li class="register-step-item {% if step < 5 %}inactiv{% endif %}{% if step == 5 %}activ{% endif %}"><a href="/others/register/5"><span class="number">5</span> <span class="text">text 5</span></a></li>
+                    <li class="register-step-item {% if step < 6 %}inactiv{% endif %}{% if step == 6 %}activ{% endif %}"><a href="/others/register/6"><span class="number">6</span> <span class="text">text 6</span></a></li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-md-8">
+
+                {% include 'others/register/step-' ~ step ~ '.html.twig' %}
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -138,7 +138,7 @@ class TwigData extends Helper
         $request = Request::createFromGlobals()->getPathInfo();
         $items = @explode('/', $request);
 
-        return ( isset($items[$id]) ) ? $items[$id] : $default;
+        return ( isset($items[$id]) && !empty($items[$id]) ) ? $items[$id] : $default;
     }
 
     public function getScript()
