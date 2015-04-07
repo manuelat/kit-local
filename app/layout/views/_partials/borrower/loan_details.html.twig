@@ -1,0 +1,129 @@
+<form action="" method="post" role="form" class="form-register" id="">
+
+    <div class="desp-10 hidden-md hidden-lg"></div>
+    <h1 class="faux-h2">{{ '2 | Kreditprojektdetails' }}</h1>
+    <p>Beschreiben Sie bitte kurz das Projekt. Es reichen bereits wenige Sätze. Unser Marketing-Team unterstützt Sie gern in der öffentlich-wirksamen Formulierung. Für nähere Informationen zu den Fragen, klicken Sie bitte auf die kleinen Symbole neben den Überschriften.
+    </p>
+
+    <div class="row add-negative-margin">
+        <div class="col-xs-12">
+            <h2 class="faux-h3">{{ 'Kreditdaten' }} <small class="pull-right">* Pflichtfeld</small></h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="form-group">
+                <label class="required hidden-xs hidden-sm" for="loan_request_title">Name des Projekts</label> <i data-original-title="Lorem Ipsum" class="fa fa-globe hidden-xs hidden-sm" data-toggle="tooltip" data-placement="top" title=""></i>
+                <input type="text" required="required" class="form-control" id="loan_request_title" placeholder="Name des Projekts">
+                <label role="alert" class="text-danger hidden" for="loan_request_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+            </div>
+        </div>
+
+    </div><!-- end .row -->
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="form-group">
+                <label class="required hidden-xs hidden-sm" for="loan_request_principal_amount">Kreditbetrag (€, in 1000€-Schritten)</label> <i data-original-title="Lorem Ipsum" class="fa fa-globe hidden-xs hidden-sm" data-toggle="tooltip" data-placement="top" title=""></i>
+                <input type="text" required="required" class="form-control" id="loan_request_principal_amount" placeholder="Kreditbetrag">
+                <label role="alert" class="text-danger hidden" for="loan_request_principal_amount">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            <label class="required hidden-xs hidden-sm">Laufzeit</label> <i data-original-title="Lorem Ipsum" class="fa fa-globe hidden-xs hidden-sm" data-toggle="tooltip" data-placement="top" title=""></i>
+            <div class="btn-group btn-block">
+                <button data-toggle="dropdown" class="form-control btn dropdown-toggle form-group" type="button" aria-expanded="false">
+                    <span class="pull-left">{{ 'Bitte wählen Sie die Laufzeit' }}</span>
+                    <span class="fa fa-chevron-down pull-right"></span>
+                </button>
+                <ul role="menu" class="dropdown-menu col-xs-12">
+                    <li><a href="#">{{ 'Bitte wählen Sie die Laufzeit' }}</a></li>
+                    <li><a href="#">{{ '6 Monate' }}</a></li>
+                    <li><a href="#">{{ '12 Monate' }}</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-ok pull-right"></i>{{ '24 Monate' }}</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div><!-- end .row -->
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <label class="required hidden-xs hidden-sm">Kreditzweck</label> <i data-original-title="Lorem Ipsum" class="fa fa-globe hidden-xs hidden-sm" data-toggle="tooltip" data-placement="top" title=""></i>
+            <div class="btn-group btn-block">
+                <button data-toggle="dropdown" class="form-control btn dropdown-toggle form-group" type="button" aria-expanded="false">
+                    <span class="pull-left">{{ 'Bitte wählen Sie eine Kategorie' }}</span>
+                    <span class="fa fa-chevron-down pull-right"></span>
+                </button>
+                <ul role="menu" class="dropdown-menu col-xs-12">
+                    <li><a href="#">{{ 'Bitte wählen Sie eine Kategorie' }}</a></li>
+                    <li><a href="#">{{ 'Betriebsmittelfinanzierung' }}</a></li>
+                    <li><a href="#">{{ 'Investition in Anlagevermögen' }}</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-ok pull-right"></i>{{ 'Wachstumskapital' }}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div><!-- end .row -->
+
+    <div class="row add-negative-margin">
+        <div class="col-xs-12">
+            <h2 class="faux-h3">{{ 'Kreditbeschreibung' }}</h2>
+        </div>
+    </div><!-- end .row -->
+
+    <div class="row">
+        <div class="col-xs-12">
+            <p>Im Folgenden haben Sie die Möglichkeit, Ihr Unternehmen und Ihren Kreditbedarf aussagekräftig darzustellen. Diese Angaben werden registrierten Investoren nach Freischalten des Kreditprojektes angezeigt. Je besser sich potenzielle Investoren ein Bild von Ihrem Unternehmen und Kreditprojekt machen können, desto größer die Chancen einer erfolgreichen Finanzierung. Falls Sie anonym bleiben wollen, gestalten Sie die Beschreibung so, dass keine Rückschlüsse auf Ihr Unternehmen möglich sind.</p>
+        </div>
+    </div><!-- end .row -->
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="form-group">
+                <label class="required hidden-xs hidden-sm" for="loan_request_business_description">Was macht Ihr Unternehmen?</label> <i data-original-title="Lorem Ipsum" class="fa fa-globe hidden-xs hidden-sm" data-toggle="tooltip" data-placement="top" title=""></i>
+                <textarea rows="6" maxlength="1000" required="required" id="loan_request_business_description" class="form-control" placeholder="Was macht Ihr Unternehmen?"></textarea>
+                <div id="loan_request_business_description_counter" class="counter">0/1000</div>
+            </div>
+        </div>
+    </div><!-- end .row -->
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="form-group">
+                <label class="required hidden-xs hidden-sm" for="loan_request_purpose_description">Wofür soll der Kredit verwendet werden?</label> <i data-original-title="Lorem Ipsum" class="fa fa-globe hidden-xs hidden-sm" data-toggle="tooltip" data-placement="top" title=""></i>
+                <textarea rows="6" maxlength="1000" required="required" id="loan_request_purpose_description" class="form-control" placeholder="Wofür soll der Kredit verwendet werden?"></textarea>
+                <div id="loan_request_purpose_description_counter" class="counter">0/1000</div>
+            </div>
+        </div>
+    </div><!-- end .row -->
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="form-group">
+                <label class="required hidden-xs hidden-sm" for="loan_request_borrower_reliability">Warum ist es sicher, Ihnen einen Kredit zu gewähren?</label> <i data-original-title="Lorem Ipsum" class="fa fa-globe hidden-xs hidden-sm" data-toggle="tooltip" data-placement="top" title=""></i>
+                <textarea rows="6" maxlength="1000" required="required" id="loan_request_borrower_reliability" class="form-control" placeholder="Warum ist es sicher, Ihnen einen Kredit zu gewähren?"></textarea>
+                <div id="loan_request_borrower_reliability_counter" class="counter">0/1000</div>
+            </div>
+        </div>
+    </div><!-- end .row -->
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="form-group">
+                <div class="checkbox-buttons">
+                    <input type="checkbox" class="hidden" value="" name="" id="loan_request_needed_by_company" required="required">
+                    <div class="custom-square">
+                        <span></span> <!-- add class .selected when user clicks -->
+                    </div>
+                    <label for="loan_request_needed_by_company" class="required">  {{ 'Hiermit bestätige ich, dass der Kredit ausschließlich für unternehmerische Zwecke verwendet wird' }}. </label>
+                    <label for="loan_request_needed_by_company" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                </div>
+            </div><!-- end .form-group -->
+        </div>
+    </div><!-- end .row -->
+
+</form>
+
+

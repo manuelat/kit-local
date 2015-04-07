@@ -121,3 +121,8 @@ registerLender:
 
 registerBorrower:
     path: /others/registerBorrower
+
+loan_request:
+    path: /borrower/loan_request/{step}
+    defaults: { step: 1 }
+

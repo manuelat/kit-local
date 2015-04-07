@@ -1,0 +1,67 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+<div class="padding-48">
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-xs-12 col-md-4 col-lg-4">
+                <ul class="register-step">
+                    <li class="register-step-item {% if step < 1 %}inactiv{% endif %}{% if step == 1 %}activ{% endif %}"><a href="/borrower/loan_request/1"><span class="number">1</span> <span class="text">Unternehmensprofil</span></a></li>
+                    <li class="register-step-item {% if step < 2 %}inactiv{% endif %}{% if step == 2 %}activ{% endif %}"><a href="/borrower/loan_request/2"><span class="number">2</span> <span class="text">Kreditprojektdetails</span></a></li>
+                    <li class="register-step-item {% if step < 3 %}inactiv{% endif %}{% if step == 3 %}activ{% endif %}"><a href="/borrower/loan_request/3"><span class="number">3</span> <span class="text">Zeichnungsberechtigte</span></a></li>
+                    <li class="register-step-item {% if step < 4 %}inactiv{% endif %}{% if step == 4 %}activ{% endif %}"><a href="/borrower/loan_request/4"><span class="number">4</span> <span class="text">Bürgen</span></a></li>
+                    <li class="register-step-item {% if step < 5 %}inactiv{% endif %}{% if step == 5 %}activ{% endif %}"><a href="/borrower/loan_request/5"><span class="number">5</span> <span class="text">Upload der Dokumente</span></a></li>
+                    <li class="register-step-item {% if step < 6 %}inactiv{% endif %}{% if step == 6 %}activ{% endif %}"><a href="/borrower/loan_request/6"><span class="number">6</span> <span class="text">Prüfen & Abschicken</span></a></li>
+                </ul>
+            </div>
+
+            <div class="col-xs-12 col-md-8 col-lg-8">
+
+                {% include '_partials/borrower/' ~ loan_steps.step ~ '.html.twig' %}
+
+            </div>
+
+            <div class="desp-20 col-xs-12 hidden-lg"></div>
+
+        </div><!-- .row -->
+
+    </div><!-- .container -->
+
+    <div class="container-wrapper form-footer odd">
+        <div class="container padding-48">
+            <div class="row">
+                <div class="col-xs-12 screen-align-btn">
+                    <button class="btn btn-lg btn-brrwr" type="submit">{{ 'Speichern & Weiter' }}</button>
+                </div>
+            </div>
+        </div>
+    </div><!-- end .container-wrapper -->
+
+    <div class="clearfix"></div>
+
+</div><!-- end .padding-48 -->
+
+{% endblock body %}
+
+{% block js %}
+    {{ parent() }}
+    <script>
+        function stepsResize() {
+            if ($(document).width() < 992) {
+                var div_width = $('.register-step').width();
+                var new_width = div_width - ($('.register-step-item').length * 45);
+                $('.register-step .activ .text').css({'width': new_width + 'px'});
+            }
+        }
+        $(function(){
+            $(window).load(function() {
+                stepsResize();
+            });
+            $(window).resize(function() {
+                stepsResize();
+            });
+        });
+    </script>
+{% endblock %}

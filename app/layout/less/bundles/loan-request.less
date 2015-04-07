@@ -1,29 +1,133 @@
-@media (min-width: 320px) and (max-width: 992px) {
-    .lender-request-details {
-        margin-left: -15px;
-        margin-right: -15px;
-        padding: 15px;
+/* ==========================================================================
+  Loan request MENU
+   ========================================================================== */
+
+.register-step {
+    padding: 0;
+    margin: 0;
+}
+
+.register-step > li {
+    background: #dff0d8;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: block;
+    clear: both;
+    line-height: 48px;
+    margin-bottom: 2px;
+    font-size: @headingsFontSizeH3;
+    font-weight: 300;
+}
+
+.register-step > li > a .number {
+    font-size: 18px;
+}
+
+.register-step > li > a .text {
+    padding-left: 15px;
+}
+
+.register-step > li.inactiv {
+    background: #edf0f2;
+}
+
+.register-step > li.inactiv > a .number {
+    background: #dee4e7;
+    color: @brandColor4;
+}
+
+.register-step > li.inactiv > a .text {
+    color: @brandColor4;
+}
+
+/*.register-step > li:hover,*/
+.register-step > li.activ {
+    background: #fff;
+}
+
+/*.register-step-item:hover {
+    background: darken(@successBackground, 10%);
+}*/
+
+.register-step > li.activ {
+    font-weight: 600;
+}
+
+.register-step > li a {
+    display: block;
+}
+.register-step > li > a .number,
+.register-step > li > a .text {
+    color: #4a9566;
+}
+
+/*.register-step > li:hover > a .number,*/
+.register-step > li.activ > a .number {
+    background: #203340;
+    color: #fff;
+}
+
+.register-step > li:hover > a .text,
+.register-step > li.activ > a .text {
+    color: #203340;
+}
+
+.register-step > li > a .number {
+    display: block;
+    width: 48px;
+    height: 48px;
+    background: #b2dba1;
+    text-align: center;
+    float: left;
+}
+
+@media screen and (max-width: 992px)  {
+    .register-step {
+        margin: 0 -15px;
+    }
+
+    .register-step .register-step-item {
+        float: left;
+        clear: none;
+    }
+
+    .register-step .register-step-item .number {
+        border-right: 1px solid #fff;
+    }
+
+    .register-step .register-step-item .text {
+        display: none;
+    }
+
+    .register-step > li {
+        line-height: 45px;
+    }
+
+    .register-step > li > a .number {
+        width: 45px;
+        height: 45px;
+    }
+
+    .register-step > li > a .number,
+    .register-step > li > a .text {
+        color: @white;
+    }
+
+    .register-step .register-step-item.inactiv .number {
+        background: #999999;
+        color: #fff;
+    }
+
+    .register-step .register-step-item.activ .number {
+        background: #741b47;
+    }
+
+    .register-step .register-step-item.activ .text {
+        display: block;
+        background: #eee;
+        color: #eee;
+        float: left;
+        width: 75%;
     }
 }
-
-.lender-request-details {
-    span {
-        font-size: 15px;
-        font-weight: 600;
-    }
-}
-
-#funding_amount {
-    height: 35px;
-}
-
-.available-limit {
-    margin-top: -4px;
-}
-
-
-iframe[src^='https://marketing.net.zencap'],
-iframe[src^='http://marketing.net.zencap'] {
-    display: none;
-}
-

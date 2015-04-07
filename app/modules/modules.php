@@ -109,7 +109,6 @@ $articles_nl[] = array(
 );
 
 /* SPAIN */
-
 $articles_es = array();
 $articles_es[] = array(
     'title' => 'Resina Plástica - Fabricación depósitos agua, bolsas, cable',
@@ -153,7 +152,32 @@ $articles_es[] = array(
     'filled' => '30%',
 );
 
+$loan_request = array();
 
+$loan_request[1] = array(
+    'step' => 'company_details',
+    'category' => 'Unternehmensprofil',
+);
+$loan_request[2] = array(
+    'step' => 'loan_details',
+    'category' => 'Kreditprojektdetails ',
+);
+$loan_request[] = array(
+    'step' => '3',
+    'category' => 'Zeichnungsberechtigte',
+);
+$loan_request[] = array(
+    'step' => '4',
+    'category' => 'Bürgen',
+);
+$loan_request[5] = array(
+    'step' => 'upload_documents',
+    'category' => 'Upload der Dokumente',
+);
+$loan_request[] = array(
+    'step' => '6',
+    'category' => 'Prüfen & Abschicken',
+);
 
 $text = array();
 
@@ -161,9 +185,13 @@ $text = array();
 
 $text = 'Die Zinsen aus aktiven Geboten zeigen die zu erwartenden Zinszahlungen vor Service-Gebühren. Diese Zinsen erhalten Sie, wenn alle Kredite, in die Sie investiert haben, erfolgreich sind und die jeweiligen Beträge an die Unternehmer ausgezahlt werden.';
 
+$step_url = $this->getParam(3, 1);
+
 return array(
     'name' => 'Twig designer',
-    'articles' => $articles,
+    'articles' => $articles, // list of data from loan projects table
+    'loan_steps' => $loan_request[$step_url], // step template to load
+    'step' => $step_url, // numeric current step from URL (default = 1)
     'articles_nl' => $articles_nl,
     'articles_es' => $articles_es,
     'text_tooltip' => $text,

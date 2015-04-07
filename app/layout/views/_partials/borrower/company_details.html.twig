@@ -1,0 +1,203 @@
+<form action="" method="post" role="form" class="form-register" id="">
+
+    <div class="desp-10 hidden-md hidden-lg"></div>
+    <h1 class="faux-h2">{{ '1 | Unternehmensprofil' }}</h1>
+    <p>Erstellen Sie hier bitte Ihr Unternehmensprofil, indem Sie alle Details wahrheitsgetreu angeben.</p>
+    <p>Ihre Informationen werden über unseren Server absolut sicher übermittelt. Dies stellen wir mit SSL-Verschlüsselung sicher.</p>
+
+    <div class="row add-negative-margin">
+        <div class="col-xs-12">
+            <h2 class="faux-h3">{{ 'Firmenidentifikation' }} <small class="pull-right">* Pflichtfeld</small></h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-8">
+            <div class="form-group">
+                <label class="required hidden-xs hidden-sm" for="loan_request_company_name">Firmenname</label> <i data-original-title="Lorem Ipsum" class="fa fa-globe hidden-xs hidden-sm" data-toggle="tooltip" data-placement="top" title=""></i>
+                <!-- add class 'disabled' for the input -->
+                <input type="text" required="required" class="form-control" id="loan_request_company_name" placeholder="Firmenname">
+                <label role="alert" class="text-danger hidden" for="loan_request_company_name">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+            <label class="required hidden-xs hidden-sm">Rechtsform</label> <i data-original-title="Lorem Ipsum" class="fa fa-globe hidden-xs hidden-sm" data-toggle="tooltip" data-placement="top" title=""></i>
+            <div class="btn-group btn-block">
+                <button data-toggle="dropdown" class="form-control btn dropdown-toggle" type="button" aria-expanded="false">
+                    <span class="pull-left">{{ 'GmbH & Co. KG' }}</span>
+                    <span class="fa fa-chevron-down pull-right"></span>
+                </button>
+                <ul role="menu" class="dropdown-menu col-xs-12">
+                    <li><a href="#"><i class="glyphicon glyphicon-ok pull-right"></i>{{ 'GmbH & Co. KG' }}</a></li>
+                    <li><a href="#">{{ 'nichts ausgewählt.' }}</a></li>
+                    <li><a href="#">{{ 'GmbH' }}</a></li>
+                    <li><a href="#">{{ 'UG (haftungsbeschränkt)' }}</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+    </div><!-- end .row -->
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="form-group">
+
+                <div class="checkbox-buttons">
+                    <input type="checkbox" class="hidden" value="" name="loan_request_company_name_public" id="borrower_revenue" required="required">
+                    <div class="custom-square">
+                        <span></span> <!-- add class .selected when user clicks -->
+                    </div>
+                    <label for="loan_request_company_name_public">  {{ 'Ich möchte nicht, dass mein Firmenname und die URL der Firmenwebseite registrierten Investoren auf der Plattform angezeigt wird' }}. <i data-original-title="Lorem ipsum." class="fa fa-question-circle" data-toggle="tooltip" data-placement="top" title=""></i></label>
+                    <label for="loan_request_company_name_public" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                </div>
+
+                <div class="desp-25"></div>
+
+                <div class="checkbox-buttons">
+                    <input type="checkbox" class="hidden" value="" name="legal_form_changed" id="legal_form_changed" required="required">
+                    <div class="custom-square">
+                        <span></span>
+                    </div>
+                    <label for="legal_form_changed"> {{ 'Rechtsformänderung: Sofern Sie in den letzten 3 Jahren Ihre Rechtsform verändert haben, klicken Sie bitte hier.' }}</label>
+                    <label for="legal_form_changed" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                </div>
+            </div><!-- end .form-group -->
+        </div>
+    </div><!-- end .row -->
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-9">
+            <div class="form-group">
+                <label for="loan_request_company_street" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Straße' }}</label>
+                <input type="text" id="loan_request_company_street" class="form-control" placeholder="Straße" required="required">
+                <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="form-group">
+                <label for="loan_request_company_street_number" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Nummer' }}</label>
+                <input type="text" id="loan_request_company_street_number" class="form-control" placeholder="Nummer" required="required">
+                <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+            </div>
+        </div>
+    </div><!-- end .row -->
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-5">
+            <div class="form-group">
+                <label for="loan_request_company_postal_code" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'PLZ' }}</label>
+                <input type="text" id="loan_request_company_postal_code" class="form-control" placeholder="PLZ" required="required">
+                <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-7">
+            <div class="form-group">
+                <label for="loan_request_company_city" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Ort' }}</label>
+                <input type="text" id="loan_request_company_city" class="form-control" placeholder="Ort" required="required">
+                <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+            </div>
+        </div>
+    </div><!-- end .row -->
+
+    <hr class="hidden-xs hidden-sm">
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-5">
+            <div class="form-group">
+                <label class="required hidden-xs hidden-sm" for="loan_request_company_register_number">Handelsregisternummer</label>
+                <input type="text" required="required" class="form-control" id="loan_request_company_register_number" placeholder="Handelsregisternummer">
+                <label role="alert" class="text-danger hidden" for="loan_request_company_register_number">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-7">
+            <label class="required hidden-xs hidden-sm">Handelsregister</label> <i data-original-title="Lorem Ipsum" class="fa fa-globe hidden-xs hidden-sm" data-toggle="tooltip" data-placement="top" title=""></i>
+            <div class="btn-group btn-block">
+                <button data-toggle="dropdown" class="form-control btn dropdown-toggle" type="button" aria-expanded="false">
+                    <span class="pull-left">{{ 'Aachen' }}</span>
+                    <span class="fa fa-chevron-down pull-right"></span>
+                </button>
+                <ul role="menu" class="dropdown-menu col-xs-12">
+                    <li><a href="#">{{ 'nichts ausgewählt.' }}</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-ok pull-right"></i>{{ 'Aachen' }}</a></li>
+                    <li><a href="#">{{ 'Altenburg' }}</a></li>
+                    <li><a href="#">{{ 'Amberg' }}</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+    </div><!-- end .row -->
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-5">
+            <div class="form-group">
+                <label class="required hidden-xs hidden-sm" for="loan_request_company_vat_number">USt-ID</label>
+                <input type="text" required="required" class="form-control" id="loan_request_company_vat_number" placeholder="USt-ID">
+                <label role="alert" class="text-danger hidden" for="loan_request_company_vat_number">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+            </div>
+        </div>
+    </div><!-- end .row -->
+
+    <div class="row add-negative-margin">
+        <div class="col-xs-12">
+            <h2 class="faux-h3">{{ 'Unternehmensdaten' }}</h2>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-xs-12 col-sm-6">
+            <label class="required hidden-xs hidden-sm">Branche</label> <i data-original-title="Lorem Ipsum" class="fa fa-globe hidden-xs hidden-sm" data-toggle="tooltip" data-placement="top" title=""></i>
+            <div class="btn-group btn-block">
+                <button data-toggle="dropdown" class="form-control btn dropdown-toggle" type="button" aria-expanded="false">
+                    <span class="pull-left">{{ 'Bitte wählen Sie die Branche' }}</span>
+                    <span class="fa fa-chevron-down pull-right"></span>
+                </button>
+                <ul role="menu" class="dropdown-menu col-xs-12">
+                    <li><a href="#"><i class="glyphicon glyphicon-ok pull-right"></i>{{ 'Bitte wählen Sie die Branche' }}</a></li>
+                    <li><a href="#">{{ 'Bauen' }}</a></li>
+                    <li><a href="#">{{ 'Dienstleistungen' }}</a></li>
+                    <li><a href="#">{{ 'Finanzen' }}</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+
+        <div class="col-xs-12 col-sm-6">
+            <div class="form-group">
+                <label class="required hidden-xs hidden-sm" for="loan_request_company_foundation_date">Gründungsdatum</label> <i data-original-title="Lorem Ipsum" class="fa fa-globe hidden-xs hidden-sm" data-toggle="tooltip" data-placement="top" title=""></i>
+                <input type="text" required="required" class="form-control" id="loan_request_company_foundation_date" placeholder="Gründungsdatum (TT.MM.JJJJ)">
+                <label role="alert" class="text-danger hidden" for="loan_request_company_foundation_date">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+            </div>
+        </div>
+    </div><!-- end .row -->
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <div class="form-group">
+                <label class="required hidden-xs hidden-sm" for="loan_request_company_employees_number">Anzahl Mitarbeiter</label> <i data-original-title="Lorem Ipsum" class="fa fa-globe hidden-xs hidden-sm" data-toggle="tooltip" data-placement="top" title=""></i>
+                <input type="text" required="required" class="form-control" id="loan_request_company_employees_number" placeholder="Anzahl Mitarbeiter" maxlength="25">
+                <label role="alert" class="text-danger hidden" for="loan_request_company_employees_number">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+            </div>
+        </div>
+    </div><!-- end .row -->
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="form-group">
+                <label for="loan_request_company_biggest_client_revenue_percentage">Gibt es einen Kunden, der mehr als 10% des Umsatzes ausmacht? Wenn ja, geben Sie an, wie viel Prozent des Umsatzes vom größten Kunden stammen.</label>
+                <div class="input-group col-xs-12 col-sm-5">
+                    <input type="text" class="form-control" maxlength="3" name="loan_request_company_biggest_client_revenue_percentage" id="loan_request_company_biggest_client_revenue_percentage">
+                    <span class="input-group-addon">%</span>
+                </div>
+            </div>
+
+        </div>
+    </div><!-- end .row -->
+
+</form>
