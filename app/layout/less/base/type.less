@@ -107,21 +107,28 @@ h6 {
     font-size: @headingsFontSizeH6;
 }
 
+// H tags on mobile
+
+@media (min-width: 320px) and (max-width: 667px) {
+    .faux-h1 {
+        font-size: 1.6em; // 22.4px
+    }
+}
+
 .title-lead {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 100;
 }
 
 @media (min-width: 600px) {
     .title-lead {
         font-size: 38px;
-        margin-top: 5px;
     }
 }
 
 @media (min-width: 992px) {
     .title-lead {
-        margin-left: -7px;
+        margin-left: 3px;
     }
 }
 

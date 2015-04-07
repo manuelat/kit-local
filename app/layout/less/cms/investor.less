@@ -1,5 +1,29 @@
 .investor {
 
+    .xs-main-image {
+        background-image: url("/bundles/intlenddeweblayout/frontend/images/cms/lender/Hero-geld-anlegen_02.jpg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+
+        h1 {
+            margin-bottom: 0;
+        }
+
+        @media (min-width: 320px) and (max-width: 480px) {
+            h1 {
+                font-size: 14px;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (min-width: 480px) and (max-width: 667px) {
+            h1 {
+                font-size: 23px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
     .main-title p:nth-child(2) {
         color: @brandColor4;
     }
@@ -14,11 +38,18 @@
         margin-top: 5%;
     }
 
+    @media (max-width: 1023px) {
+        .lender-invest-steps h3 {
+            padding-bottom: 16px;
+            margin-top: 7%;
+        }
+    }
+
     // add border only on desktop
     @media (min-width: 1024px) {
         .benefits-lender h3 {
             border-bottom: 2px solid @brandColorCTA;
-            margin-top: 0;
+            margin-top: 4px;
         }
     }
 
@@ -33,22 +64,6 @@
             background: @white;
         }
 
-        /*
-             .span6 {
-               .box-shadow(@containerBoxShadow);
-               background-color: @white;
-             }
-
-             .padding-box {
-               padding: @gridGutterWidth;
-             }
-
-             .styled {
-               i {
-                 color: #2682bf;
-               }
-             }
-          */
         .table {
 
             td,

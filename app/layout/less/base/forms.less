@@ -11,8 +11,10 @@ input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:fo
 }
 
 
-@media (min-width: 320px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 767px) {
     .form-footer {
+        margin-bottom: -24px;
+
         .screen-align-btn {
             text-align: center;
         }
@@ -96,6 +98,7 @@ input[type="color"],
         border: 1px solid @errorBorderInput;
     }
 }
+
 
 // label styling
 
@@ -303,7 +306,7 @@ ul.dropdown-menu {
     width: 89%;
 }
 
-/* lender/borrower registration/lender-complete */
+/* lender/borrower registration/lender-complete/loan-request process */
 .form-register {
     h2 {
         background-color: @brandColor7;
@@ -318,6 +321,19 @@ ul.dropdown-menu {
             color: #8e959a;
             font-weight: 600;
         }
+    }
+
+    textarea {
+        height: 144px;
+        padding: 4px 6px;
+    }
+
+    .counter {
+        color: #8e959a;
+        font-size: 12px;
+        line-height: 16px;
+        text-align: right;
+        margin-top: 10px;
     }
 
     @media (min-width: 320px) and (max-width: 479px) {
@@ -351,22 +367,6 @@ ul.dropdown-menu {
         }
     }
 }
-
-
-// center align button on mobile
-@media (min-width: 320px) and (max-width: 768px) {
-    .place-btn {
-        text-align: center;
-    }
-}
-
-// right align button from tablet to desktop
-@media (min-width: 768px) {
-    .place-btn {
-        text-align: right;
-    }
-}
-
 
 // custom input
 

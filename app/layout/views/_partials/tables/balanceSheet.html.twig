@@ -1,6 +1,6 @@
 {# if I use visible-lg table will not be displayed at full width #}
 {# table for large devices LG #}
-<table class="table balance-sheet hidden-xs hidden-sm hidden-md">
+<table class="table hidden-xs hidden-sm hidden-md">
     <thead>
     <tr>
         <th><h4>Gewinn- und Verlustrechnung</h4><p>&nbsp;</p></th>
@@ -119,7 +119,7 @@
 </table>
 
 {# 1 #}
-<table class="table balance-sheet hidden-lg">
+<table class="table hidden-lg">
     <thead>
     <tr>
         <th><h4>Aktuelles Jahr</h4></th>
@@ -206,7 +206,7 @@
 </table>
 
 {# 2 #}
-<table class="table balance-sheet hidden-lg">
+<table class="table hidden-lg">
     <thead>
     <tr>
         <th><h4>Jahresabschluss</h4></th>
@@ -293,7 +293,7 @@
 </table>
 
 {# 3 #}
-<table class="table balance-sheet hidden-lg">
+<table class="table hidden-lg">
     <thead>
     <tr>
         <th><h4>Jahresabschluss</h4></th>
@@ -379,52 +379,3 @@
     </tbody>
 </table>
 
-{#
-
-<table class="table">
-    <tr>
-        <th>
-            <h3 class="faux-h4">Gewinn- und Verlustrechnung</h3>
-            <p></p>
-        </th>
-        <th>
-            <h3 class="faux-h4">Aktuelles Jahr</h3>
-            <p>31.12.2014</p>
-        </th>
-        <th>
-            <h3 class="faux-h4">Jahresabschluss</h3>
-            <p>31.12.2013</p>
-        </th>
-        <th>
-            <h3 class="faux-h4">Jahresabschluss</h3>
-            <p>31.12.2012</p>
-        </th>
-    </tr>
-
-    {% for finance in financial_data %}
-    <tr>
-        <td>{{ finance.title }}</td>
-        <td>{{ finance.data_2014 }}</td>
-        <td>{{ finance.data_2013 }}</td>
-        <td>{{ finance.data_2012 }}</td>
-    </tr>
-    {% endfor %}
-
-    <tr>
-        <th>
-            <h3 class="faux-h4">Bilanz</h3>
-        </th>
-    </tr>
-
-    {% for balance in balance_data %}
-        <tr>
-            <td>{{ balance.title }}</td>
-            <td>{{ balance.data_2014 }}</td>
-            <td>{{ balance.data_2013 }}</td>
-            <td>{{ balance.data_2012 }}</td>
-        </tr>
-    {% endfor %}
-
-</table>
-
-#}

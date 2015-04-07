@@ -4,10 +4,13 @@
 
     {#{% include '_partials/headers/account-header.html.twig' %}#}
 
+
 <div class="cms-page homepage">
 
     <!-- begins cms block 'il-hp' -->
-    <div class="container-wrapper main-title main-image hidden-xs hidden-sm">
+
+    <!--  H1 just for md and lg -->
+    <div class="container-wrapper main-title main-image hidden-xs hidden-sm visible-md visible-lg">
         <div class="container padding-48">
             <div class="row">
                 <div class="col-xs-7">
@@ -25,36 +28,64 @@
         </div>
     </div>
 
-    <div class="container hidden-md hidden-lg xs-main-image">
+    <!--  H1 just for xs and sm -->
+    <div class="container visible-xs visible-sm hidden-md hidden-lg xs-main-image">
         <div class="row">
             <div class="col-xs-12">
                 <h1 class="text-white">INNOVATIVE <br> UNTERNEHMENSKREDITE </h1>
             </div>
         </div>
-        <!--<img class="img-responsive" src="https://d1x3gb5zl465n8.cloudfront.net/de/blog/blog_header.jpg" alt=""/>-->
     </div>
 
-    <div class="container-wrapper hidden-md hidden-lg">
-        <div class="container padding-48">
+    <!--  Buttons with 2 words -->
+    <div class="container-wrapper visible-xs hidden-sm hidden-md hidden-lg special-buttons">
+        <div class="container">
+            <div class="desp-24"></div>
             <div class="row">
-                <div class="pull-top">
-
-                    <div class="col-xs-5 col-xs-offset-1">
-                        <a href="{{ path('borrowerGettingStarted') }}" class="btn btn-lg btn-brrwr">Jetzt
-                            Zinssatz ermitteln</a>
-                    </div>
-                    <div class="col-xs-5">
-                        <a href="{{ path('lenderGettingStarted') }}" class="btn btn-lg btn-nvstr ">Jetzt
-                            Geld investieren</a>
-                    </div>
+                <div class="col-xs-6 hidden-sm">
+                    <a href="{{ path('borrowerGettingStarted') }}" class="btn btn-block btn-lg btn-brrwr">
+                        Zinssatz <br>ermitteln</a>
                 </div>
-                <hr class="col-xs-12" />
-                <img class="img-responsive" src="https://d1x3gb5zl465n8.cloudfront.net/de/home/press/logos_update2.png" alt=""/>
+                <div class="col-xs-6 hidden-sm">
+                    <a href="{{ path('lenderGettingStarted') }}" class="btn btn-block btn-lg btn-nvstr ">
+                        Geld <br>investieren</a>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="container-wrapper odd header-top hidden-xs hidden-sm">
+    <!--  Buttons with 3 words -->
+    <div class="container-wrapper visible-sm hidden-xs hidden-md hidden-lg special-buttons">
+        <div class="container">
+            <div class="desp-24"></div>
+            <div class="row">
+                <div class="hidden-xs col-sm-6">
+                    <a href="{{ path('borrowerGettingStarted') }}" class="btn btn-block btn-lg btn-brrwr">
+                        Jetzt Zinssatz ermitteln</a>
+                </div>
+                <div class="hidden-xs col-sm-6">
+                    <a href="{{ path('lenderGettingStarted') }}" class="btn btn-block btn-lg btn-nvstr ">
+                        Jetzt Geld investieren</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-wrapper visible-xs visible-sm hidden-md hidden-lg">
+        <div class="container">
+            <div class="row">
+                <hr/>
+                <img class="img-responsive"
+                     src="https://d1x3gb5zl465n8.cloudfront.net/de/home/press/logos_update2.png" alt=""/>
+
+                <div class="desp-24"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container-wrapper odd header-top hidden-xs hidden-sm visible-md visible-lg">
         <div class="container padding-48">
             <div class="row">
                 <div class="pull-down">
@@ -103,7 +134,7 @@
     </div>
     <!-- end .header-top -->
 
-    <div class="container-wrapper hidden-xs hidden-sm">
+    <div class="container-wrapper hidden-xs hidden-sm visible-md visible-lg">
         <div class="container padding-48 press">
             <div class="row">
                 <div class="col-xs-12 logos">
@@ -251,7 +282,7 @@
     <div class="container-wrapper">
         <div class="container padding-48">
             <div class="row">
-                <div class="col-xs-6 text-center">
+                <div class="col-xs-12 col-sm-6 text-center">
                     <h3>Ihr Unternehmenskredit</h3>
 
                     <p>Werden Sie unabhängiger von Banken.<br>
@@ -260,34 +291,13 @@
                     <p><a href="{{ path('borrowerGettingStarted') }}" class="btn btn-lg btn-brrwr">Jetzt Zinssatz
                             ermitteln</a></p>
                 </div>
-                <div class="col-xs-6 text-center">
+                <div class="col-xs-12 col-sm-6 text-center">
                     <h3>Ihre Investition</h3>
 
                     <p>Profitieren Sie vom Erfolgsmodell Mittelstand.<br>
                         Attraktive Rendite und volle Transparenz.</p>
 
                     <p><a href="{{ path('lenderGettingStarted') }}" class="btn btn-lg btn-nvstr">Jetzt registrieren</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-wrapper odd">
-        <div class="container padding-48">
-            <div class="row">
-                <div class="col-xs-12">
-                    <h2 class="faux-h1 text-center">Kredite für Unternehmen</h2>
-
-                    <p>Zencap ist Deutschlands größter Kreditmarktplatz für Unternehmenskredite und die am schnellsten
-                        wachsende Crowdlending-Plattform Kontinentaleuropas.
-                        Unternehmen erhalten unkompliziert einen maßgeschneiderten Kredit; Anleger Zugang zu einer neuen
-                        Anlageklasse, um Geld zu investieren.
-                        Die Kredite von Unternehmen fallen üblicherweise in die Kategorien "Wachstumskapital", "Kredite
-                        für Investitionen in Anlagevermögen" sowie "Betriebsmittelfinanzierung".
-                        Unternehmer schätzen an Zencap eine schnelle Kreditentscheidung, attraktive Konditionen und
-                        flexible Rahmenbedingungen für ihren Kredit.
-                        Private Anleger profitieren von attraktiven Renditen, monatlichen Rückzahlungen und einer
-                        professionellen Risikoprüfung.</p>
                 </div>
             </div>
         </div>

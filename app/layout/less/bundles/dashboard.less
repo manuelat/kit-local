@@ -60,6 +60,23 @@
     .panel-item {
         background-color: #e8f5fe;
     }
+
+    .fa-question-circle:hover {
+        color: @white;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 992px) {
+   .move {
+        padding-left: 15px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+   .move {
+        text-align: center;
+    }
 }
 
 /* desktop */
@@ -72,7 +89,7 @@
         height: 40px;
 
         &:first-child {
-            padding-top: 8px;
+            padding-top: 12px;
         }
 
         &:last-child {
@@ -91,7 +108,7 @@
             height: 40px;
 
             &:first-child {
-                padding-top: 8px;
+                padding-top: 12px;
             }
 
             &:last-child {
@@ -113,21 +130,32 @@
             margin-bottom: 0;
         }
     }
+
 }
 
 
 // override some rules
 .dash-green {
-    .panel-default > .panel-heading {
-        background-color: #54bb2e;
-    }
 
     .panel-item {
         background-color: #edf8ea;
     }
 
+    .panel-default > .panel-heading, .green {
+        background-color: #54bb2e;
+        color: @white;
+    }
+
     a {
         color: @white;
+    }
+}
+
+@media (min-width: 992px) {
+    #dash-7, #dash-8 {
+        .panel-body {
+            min-height: 120px;
+        }
     }
 }
 
@@ -149,8 +177,6 @@
         }
     }
 }
-
-
 
 
 .glyphicon-plus:before {

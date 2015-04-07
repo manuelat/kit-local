@@ -119,13 +119,36 @@
     }
 }
 
-.carousel {
-    text-align: center;
-    display: inline-block;
-}
-
 .small-quote-pad {
     blockquote {
-        padding: 24px 32px;
+        padding: 24px 37px;
+    }
+}
+
+// styling blockquotes on mobile
+@media (min-width: 320px) and (max-width: 640px) and (orientation: portrait) {
+    .small-quote-pad {
+        blockquote:before {
+            top: 34px;
+        }
+        blockquote:after {
+            bottom: -5px;
+        }
+        blockquote:after, blockquote:before {
+            font-size: 79px;
+        }
+        blockquote {
+            font-size: 15px;
+        }
+    }
+}
+
+/*  lender/borrower getting started  */
+@media (min-width: 992px) {
+    .borrower-credit-steps, .lender-invest-steps {
+        h3 {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
     }
 }

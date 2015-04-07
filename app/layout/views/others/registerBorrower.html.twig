@@ -2,339 +2,326 @@
 
 {% block body %}
 
-<form action="" method="post" role="form" class="form-register" id="register_borrower_form">
-    <div class="container padding-48">
+<div class="padding-48">
+    <form action="" method="post" role="form" class="form-register" id="register_borrower_form">
+        <div class="container">
 
-        <div class="row">
+            <div class="row">
 
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-0">
-                <h1>{{ 'Profil erstellen' }}</h1>
-            </div>
-
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-0">
-                <p class="text-right">
-                    <a href="{{ path('login') }}"><i class="key-icon">p</i> <strong>Bereits registriert?</strong></a>
-                </p>
-            </div>
-
-            <div class="desp-20 col-xs-12 hidden-lg"></div>
-
-        </div><!-- .row -->
-
-        <div class="row">
-
-            <div class="col-xs-12">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
-                        <h2 class="faux-h3">{{ 'Personliche Angaben' }} <small class="pull-right">* Pflichtfeld</small></h2>
-                        <div class="row form-group">
-                            <div class="col-xs-12">
-                                <div class="radio-buttons">
-                                    <input type="radio" class="hidden" value="male" name="borrower_gender" id="borrower_gender_m" required="required">
-                                    <div class="custom-circle">
-                                        <span></span> <!-- add class .selected when user clicks -->
-                                    </div>
-                                    <label for="borrower_gender_m" class="required"> {{ 'Herr' }}</label>
-                                </div>
-                                <div class="radio-buttons">
-                                    <input type="radio" class="hidden" value="female" name="borrower_gender" id="borrower_gender_f" required="required">
-                                    <div class="custom-circle">
-                                        <span></span>
-                                    </div>
-                                    <label for="borrower_gender_f" class="required"> {{ 'Frau' }}</label>
-                                </div>
-                                <div class="clearfix"></div>
-                                <label for="borrower_gender" class="text-danger" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
-                            </div>
-
-                            {#<div class="col-xs-8 col-sm-6 col-md-4">
-                                <div class="btn-group btn-block">
-                                    <button data-toggle="dropdown" class="form-control btn dropdown-toggle" type="button" aria-expanded="false">
-                                        <span class="pull-left">{{ 'Titel' }}</span>
-                                        <span class="fa fa-chevron-down pull-right"></span>
-                                    </button>
-                                    <ul role="menu" class="dropdown-menu">
-                                        <li><a href="#"><i class="glyphicon glyphicon-ok pull-right"></i>{{ 'Titel' }}</a></li>
-                                        <li><a href="#">{{ 'Prof.' }}</a></li>
-                                        <li><a href="#">{{ 'Prof. Dr.' }}</a></li>
-                                    </ul>
-                                </div>
-                            </div>#}
-                        </div>
-                    </div>
-                </div><!-- end .row -->
-
-                <div class="row">
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-2 col-lg-4 col-lg-offset-0">
-                        <div class="form-group">
-                            <label for="borrower_first_name" class="required hidden-xs">{{ 'Vorname' }}</label>
-                            <input type="text" placeholder="Enter vorname" id="borrower_first_name" class="form-control" required="required">
-                            <label for="borrower_first_name" class="text-danger" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0">
-                        <div class="form-group">
-                            <label for="borrower_last_name" class="required hidden-xs">{{ 'Nachname' }}</label>
-                            <input type="text" placeholder="Enter nachname" id="borrower_last_name" class="form-control" required="required">
-                            <label for="borrower_last_name" class="text-danger" role="alert hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
-                        </div>
-                    </div>
-
-                </div><!-- end .row -->
-
-                <div class="row">
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-4 col-lg-offset-0">
-
-                        <div class="form-group">
-                            <label for="borrower_company_name" class="required hidden-xs">{{ 'Firmenname' }}</label>
-                            <input type="text" placeholder="Enter firmenname" id="borrower_company_name" class="form-control" required="required">
-                            <label for="borrower_company_name" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-4 col-lg-offset-0">
-                        <label class="required hidden-xs">Rechtsform</label>
-                        <div class="btn-group btn-block">
-                            <button data-toggle="dropdown" class="form-control btn dropdown-toggle" type="button" aria-expanded="false">
-                                <span class="pull-left">{{ 'Bitte wählen ...' }}</span>
-                                <span class="fa fa-chevron-down pull-right"></span>
-                            </button>
-                            <ul role="menu" class="dropdown-menu">
-                                <li><a href="#"><i class="glyphicon glyphicon-ok pull-right"></i>{{ 'Bitte wählen ...' }}
-                                    </a></li>
-                                <li><a href="#">{{ 'GmbH' }}</a></li>
-                                <li><a href="#">{{ 'UG' }}</a></li>
-                                <li><a href="#">{{ 'GmbH & Co. KG' }}</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="desp-20 hidden-lg"></div>
-
-                </div><!-- end .row -->
-
-                {#<div class="row">
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
-
-                        <div class="form-group">
-                            <label for="borrower_position">{{ 'Position (freiwillig)' }}</label>
-                            <input type="text" placeholder="Enter firmenname" id="borrower_position" class="form-control">
-                        </div>
-                    </div>
-
-                </div>#}
-
-                <div class="row">
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-2 col-lg-4 col-lg-offset-0">
-
-                        <div class="form-group">
-                            <label for="borrower_cellphone" class="required hidden-xs">{{ 'Telefonnummer' }}</label>
-                            <input type="tel" placeholder="Enter telefonnummer" required="required" id="borrower_cellphone" class="form-control">
-                            <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
-                        </div>
-                    </div>
-
-                   {# <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0">
-
-                        <div class="form-group">
-                            <label for="borrower_landline">{{ 'Alternative Telefonnummer (freiwillig)' }}</label>
-                            <input type="tel" placeholder="Enter telefonnummer" id="borrower_landline" class="form-control">
-                        </div>
-                    </div>
-
-                    <div class="clearfix"></div>#}
-
-                </div><!-- end .row -->
-
-                <div class="row">
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
-                        <div class="form-group">
-
-                            <div class="checkbox-buttons">
-                                <input type="checkbox" class="hidden" value="" name="borrower_terms_and_conditions" id="borrower_revenue" required="required">
-                                <div class="custom-square">
-                                    <span></span> <!-- add class .selected when user clicks -->
-                                </div>
-                                <label for="borrower_revenue" class="required">  {{ 'Lorem ipsum dolor sit amet, consectetur adipiscing elit' }}</label>
-                                <label for="borrower_revenue" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
-                            </div>
-
-                            <div class="desp-25"></div>
-
-                            <div class="checkbox-buttons">
-                                <input type="checkbox" class="hidden" value="" name="borrower_privacy" id="borrower_company_age" required="required">
-                                <div class="custom-square">
-                                    <span></span>
-                                </div>
-                                <label for="borrower_company_age" class="required"> {{ 'Lorem ipsum dolor sit amet, consectetur adipiscing elit' }}</label>
-                                <label for="borrower_company_age" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
-                            </div>
-
-                        </div><!-- end .form-group -->
-                    </div>
-                </div><!-- end .row -->
-
-                <div class="row">
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
-                        <h2 class="faux-h3">{{ 'Zugangsdaten' }}</h2>
-                    </div>
-                </div><!-- end .row -->
-
-                <div class="row">
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
-                        <div class="form-group">
-                            <label for="borrower_email" class="required hidden-xs">{{ 'Email address' }}</label>
-                            <input type="email" placeholder="Enter email" id="borrower_email" class="form-control" required="required">
-                            <label for="borrower_email" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
-                        </div>
-                    </div>
-
-                </div><!-- end .row -->
-
-                <div class="row">
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
-                        <div class="form-group">
-                            <label for="borrower_password" class="required hidden-xs">{{ 'Password' }}</label>
-                            <div class="input-group-pass">
-                                <input type="password" placeholder="Password" id="borrower_password" class="form-control" required="required">
-                                <label for="borrower_password" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
-                                <div class="input-icon-eye">
-                                    <i class="fa fa-eye"></i>
-                                    <span class="password-mask">anzeigen</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div><!-- end .row -->
-
-                <!--<div class="row">
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
-                        <h2 class="faux-h3">{{ 'Unternehmensdaten' }}</h2>
-                        <div class="row form-group">
-                            <div class="col-xs-12 col-sm-8 col-md-6">
-                                <label class="required hidden-xs">Umsatz im letzten Geschäftsjahr (in €)</label>
-                                <div class="btn-group btn-block">
-                                    <button data-toggle="dropdown" class="form-control btn dropdown-toggle" type="button" aria-expanded="false">
-                                        <span class="pull-left">{{ 'Bitte wählen ...' }}</span>
-                                        <span class="fa fa-chevron-down pull-right"></span>
-                                    </button>
-                                    <ul role="menu" class="dropdown-menu">
-                                        <li><a href="#"><i class="glyphicon glyphicon-ok pull-right"></i>{{ 'Bitte wählen ...' }}
-                                            </a></li>
-                                        <li><a href="#">{{ 'Weniger als 100.000' }}</a></li>
-                                        <li><a href="#">{{ 'Mindestens 100.000' }}</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="desp-20 hidden-lg"></div>
-
-                            <div class="col-xs-12 col-sm-8 col-md-6">
-                                <label class="required hidden-xs">Alter des Unternehmens</label>
-                                <div class="btn-group btn-block">
-                                    <button data-toggle="dropdown" class="form-control btn dropdown-toggle" type="button" aria-expanded="false">
-                                        <span class="pull-left">{{ 'Bitte wählen ...' }}</span>
-                                        <span class="fa fa-chevron-down pull-right"></span>
-                                    </button>
-                                    <ul role="menu" class="dropdown-menu">
-                                        <li><a href="#"><i class="glyphicon glyphicon-ok pull-right"></i>{{ 'Bitte wählen ...' }}
-                                            </a></li>
-                                        <li><a href="#">{{ 'Jünger als zwei Jahre' }}</a></li>
-                                        <li><a href="#">{{ 'Älter als zwei Jahre' }}</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div> -->
-
-                {#<div class="row">
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
-                        <h2 class="faux-h3">{{ 'Haben Sie einen Gutschein-Code?' }}</h2>
-                    </div>
+                <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-0">
+                    <h1>{{ 'Profil erstellen' }}</h1>
                 </div>
 
-                <div class="row">
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
-                        <div class="form-group">
-                            <label for="promo_code">{{ 'Gutschein-Code (freiwillig)' }}</label>
-                            <input type="text" placeholder=" Enter gutschein-Code" id="promo_code" class="form-control">
+                <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-0">
+                    <p class="text-right">
+                        <a href="{{ path('login') }}"><i class="key-icon">p</i> <strong>Bereits registriert?</strong></a>
+                    </p>
+                </div>
+
+                <div class="desp-20 col-xs-12 hidden-lg"></div>
+
+            </div><!-- .row -->
+
+            <div class="row">
+
+                <div class="col-xs-12">
+                    <div class="row add-negative-margin">
+                        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
+                            <h2 class="faux-h3">{{ 'Personliche Angaben' }} <small class="pull-right">* Pflichtfeld</small></h2>
+                        </div>
+                    </div><!-- end .row -->
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
+                            <div class="row form-group">
+                                <div class="col-xs-12">
+                                    <div class="radio-buttons">
+                                        <input type="radio" class="hidden" value="male" name="borrower_gender" id="borrower_gender_m" required="required">
+                                        <div class="custom-circle">
+                                            <span></span> <!-- add class .selected when user clicks -->
+                                        </div>
+                                        <label for="borrower_gender_m" class="required"> {{ 'Herr' }}</label>
+                                    </div>
+                                    <div class="radio-buttons">
+                                        <input type="radio" class="hidden" value="female" name="borrower_gender" id="borrower_gender_f" required="required">
+                                        <div class="custom-circle">
+                                            <span></span>
+                                        </div>
+                                        <label for="borrower_gender_f" class="required"> {{ 'Frau' }}</label>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <label for="borrower_gender" class="text-danger" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div><!-- end .row -->
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-2 col-lg-4 col-lg-offset-0">
+                            <div class="form-group">
+                                <label for="borrower_first_name" class="required hidden-xs">{{ 'Vorname' }}</label>
+                                <input type="text" placeholder="Enter vorname" id="borrower_first_name" class="form-control" required="required">
+                                <label for="borrower_first_name" class="text-danger" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0">
+                            <div class="form-group">
+                                <label for="borrower_last_name" class="required hidden-xs">{{ 'Nachname' }}</label>
+                                <input type="text" placeholder="Enter nachname" id="borrower_last_name" class="form-control" required="required">
+                                <label for="borrower_last_name" class="text-danger" role="alert hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                            </div>
+                        </div>
+
+                    </div><!-- end .row -->
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-4 col-lg-offset-0">
+
+                            <div class="form-group">
+                                <label for="borrower_company_name" class="required hidden-xs">{{ 'Firmenname' }}</label>
+                                <input type="text" placeholder="Enter firmenname" id="borrower_company_name" class="form-control" required="required">
+                                <label for="borrower_company_name" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-4 col-lg-offset-0">
+                            <label class="required hidden-xs">Rechtsform</label>
+                            <div class="btn-group btn-block">
+                                <button data-toggle="dropdown" class="form-control btn dropdown-toggle" type="button" aria-expanded="false">
+                                    <span class="pull-left">{{ 'Bitte wählen ...' }}</span>
+                                    <span class="fa fa-chevron-down pull-right"></span>
+                                </button>
+                                <ul role="menu" class="dropdown-menu col-xs-12">
+                                    <li><a href="#"><i class="glyphicon glyphicon-ok pull-right"></i>{{ 'Bitte wählen ...' }}
+                                        </a></li>
+                                    <li><a href="#">{{ 'GmbH' }}</a></li>
+                                    <li><a href="#">{{ 'UG' }}</a></li>
+                                    <li><a href="#">{{ 'GmbH & Co. KG' }}</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="desp-20 hidden-lg"></div>
+
+                    </div><!-- end .row -->
+
+                    {#<div class="row">
+                        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
+
+                            <div class="form-group">
+                                <label for="borrower_position">{{ 'Position (freiwillig)' }}</label>
+                                <input type="text" placeholder="Enter firmenname" id="borrower_position" class="form-control">
+                            </div>
+                        </div>
+
+                    </div>#}
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-2 col-lg-4 col-lg-offset-0">
+
+                            <div class="form-group">
+                                <label for="borrower_cellphone" class="required hidden-xs">{{ 'Telefonnummer' }}</label>
+                                <input type="tel" placeholder="Enter telefonnummer" required="required" id="borrower_cellphone" class="form-control">
+                                <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                            </div>
+                        </div>
+
+                       {# <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0">
+
+                            <div class="form-group">
+                                <label for="borrower_landline">{{ 'Alternative Telefonnummer (freiwillig)' }}</label>
+                                <input type="tel" placeholder="Enter telefonnummer" id="borrower_landline" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="clearfix"></div>#}
+
+                    </div><!-- end .row -->
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
+                            <div class="form-group">
+
+                                <div class="checkbox-buttons">
+                                    <input type="checkbox" class="hidden" value="" name="borrower_revenue" id="borrower_revenue" required="required">
+                                    <div class="custom-square">
+                                        <span></span> <!-- add class .selected when user clicks -->
+                                    </div>
+                                    <label for="borrower_revenue" class="required">  {{ 'Lorem ipsum dolor sit amet, consectetur adipiscing elit' }}</label>
+                                    <label for="borrower_revenue" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                                </div>
+
+                                <div class="desp-15"></div>
+
+                                <div class="checkbox-buttons">
+                                    <input type="checkbox" class="hidden" value="" name="borrower_company_age" id="borrower_company_age" required="required">
+                                    <div class="custom-square">
+                                        <span></span>
+                                    </div>
+                                    <label for="borrower_company_age" class="required"> {{ 'Lorem ipsum dolor sit amet, consectetur adipiscing elit' }}</label>
+                                    <label for="borrower_company_age" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                                </div>
+
+                            </div><!-- end .form-group -->
+                        </div>
+                    </div><!-- end .row -->
+
+                    <div class="row add-negative-margin">
+                        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
+                            <h2 class="faux-h3">{{ 'Zugangsdaten' }}</h2>
+                        </div>
+                    </div><!-- end .row -->
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
+                            <div class="form-group">
+                                <label for="borrower_email" class="required hidden-xs">{{ 'Email address' }}</label>
+                                <input type="email" placeholder="Enter email" id="borrower_email" class="form-control" required="required">
+                                <label for="borrower_email" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                            </div>
+                        </div>
+
+                    </div><!-- end .row -->
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
+                            <div class="form-group">
+                                <label for="borrower_password" class="required hidden-xs">{{ 'Password' }}</label>
+                                <div class="input-group-pass">
+                                    <input type="password" placeholder="Password" id="borrower_password" class="form-control" required="required">
+                                    <label for="borrower_password" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                                    <div class="input-icon-eye">
+                                        <i class="fa fa-eye"></i>
+                                        <span class="password-mask">anzeigen</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div><!-- end .row -->
+
+                    <!--<div class="row">
+                        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
+                            <h2 class="faux-h3">{{ 'Unternehmensdaten' }}</h2>
+                            <div class="row form-group">
+                                <div class="col-xs-12 col-sm-8 col-md-6">
+                                    <label class="required hidden-xs">Umsatz im letzten Geschäftsjahr (in €)</label>
+                                    <div class="btn-group btn-block">
+                                        <button data-toggle="dropdown" class="form-control btn dropdown-toggle" type="button" aria-expanded="false">
+                                            <span class="pull-left">{{ 'Bitte wählen ...' }}</span>
+                                            <span class="fa fa-chevron-down pull-right"></span>
+                                        </button>
+                                        <ul role="menu" class="dropdown-menu">
+                                            <li><a href="#"><i class="glyphicon glyphicon-ok pull-right"></i>{{ 'Bitte wählen ...' }}
+                                                </a></li>
+                                            <li><a href="#">{{ 'Weniger als 100.000' }}</a></li>
+                                            <li><a href="#">{{ 'Mindestens 100.000' }}</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="desp-20 hidden-lg"></div>
+
+                                <div class="col-xs-12 col-sm-8 col-md-6">
+                                    <label class="required hidden-xs">Alter des Unternehmens</label>
+                                    <div class="btn-group btn-block">
+                                        <button data-toggle="dropdown" class="form-control btn dropdown-toggle" type="button" aria-expanded="false">
+                                            <span class="pull-left">{{ 'Bitte wählen ...' }}</span>
+                                            <span class="fa fa-chevron-down pull-right"></span>
+                                        </button>
+                                        <ul role="menu" class="dropdown-menu">
+                                            <li><a href="#"><i class="glyphicon glyphicon-ok pull-right"></i>{{ 'Bitte wählen ...' }}
+                                                </a></li>
+                                            <li><a href="#">{{ 'Jünger als zwei Jahre' }}</a></li>
+                                            <li><a href="#">{{ 'Älter als zwei Jahre' }}</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div> -->
+
+                    {#<div class="row">
+                        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
+                            <h2 class="faux-h3">{{ 'Haben Sie einen Gutschein-Code?' }}</h2>
                         </div>
                     </div>
-                </div>#}
 
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
+                            <div class="form-group">
+                                <label for="promo_code">{{ 'Gutschein-Code (freiwillig)' }}</label>
+                                <input type="text" placeholder=" Enter gutschein-Code" id="promo_code" class="form-control">
+                            </div>
+                        </div>
+                    </div>#}
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
+                            <div class="form-group">
+
+                                <div class="checkbox-buttons">
+                                    <input type="checkbox" class="hidden" value="" name="borrower_terms_and_conditions" id="borrower_terms_and_conditions" required="required">
+                                    <div class="custom-square">
+                                        <span></span> <!-- add class .selected when user clicks -->
+                                    </div>
+                                    <label for="borrower_terms_and_conditions" class="required">  {{ 'Hiermit akzeptiere ich die' }}
+                                        <a target="_blank" href="{{ path('conditionsBorrower') }}">{{ 'Nutzungsbedingungen' }}</a></label>
+                                    <label for="borrower_terms_and_conditions" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                                </div>
+
+                                <div class="desp-25"></div>
+
+                                <div class="checkbox-buttons">
+                                    <input type="checkbox" class="hidden" value="" name="borrower_privacy" id="borrower_privacy" required="required">
+                                    <div class="custom-square">
+                                        <span></span>
+                                    </div>
+                                    <label for="borrower_privacy" class="required"> {{ 'Ich willige in die Erhebung, Verarbeitung und Nutzung meiner personenbezogenen Daten, wie in der' }}
+                                        <a target="_blank" href="{{ path('privacy') }}">{{ 'Datenschutzerklärung' }}</a>
+                                        {{ 'beschrieben, ein.' }}</label>
+                                    <label for="borrower_privacy" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                                </div>
+
+                                <div class="desp-25"></div>
+
+                                <div class="checkbox-buttons">
+                                    <input type="checkbox" class="hidden" value="" name="borrower_newsletter_subscription" id="borrower_newsletter_subscription">
+                                    <div class="custom-square">
+                                        <span class="glyphicon glyphicon-ok"></span>
+                                    </div>
+                                    <label for="borrower_newsletter_subscription"> {{ 'Ich bin damit einverstanden, dass mich die Zencap Deutschland GmbH per E-Mail und SMS über weitere interessante Angebote informiert und hierfür meine obigen Angaben verwendet. (freiwillig)' }}</label>
+                                </div>
+
+                            </div><!-- end .form-group -->
+                        </div>
+                    </div><!-- end .row -->
+
+                </div><!-- .col-xs-12 -->
+
+            </div><!-- .row -->
+
+        </div><!-- .container -->
+
+        <div class="container-wrapper form-footer odd">
+            <div class="container padding-48">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
-                        <div class="form-group">
-
-                            <div class="checkbox-buttons">
-                                <input type="checkbox" class="hidden" value="" name="borrower_terms_and_conditions" id="borrower_terms_and_conditions" required="required">
-                                <div class="custom-square">
-                                    <span></span> <!-- add class .selected when user clicks -->
-                                </div>
-                                <label for="borrower_terms_and_conditions" class="required">  {{ 'Hiermit akzeptiere ich die' }}
-                                    <a target="_blank" href="{{ path('conditionsBorrower') }}">{{ 'Nutzungsbedingungen' }}</a></label>
-                                <label for="borrower_terms_and_conditions" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
-                            </div>
-
-                            <div class="desp-25"></div>
-
-                            <div class="checkbox-buttons">
-                                <input type="checkbox" class="hidden" value="" name="borrower_privacy" id="borrower_privacy" required="required">
-                                <div class="custom-square">
-                                    <span></span>
-                                </div>
-                                <label for="borrower_privacy" class="required"> {{ 'Ich willige in die Erhebung, Verarbeitung und Nutzung meiner personenbezogenen Daten, wie in der' }}
-                                    <a target="_blank" href="{{ path('privacy') }}">{{ 'Datenschutzerklärung' }}</a>
-                                    {{ 'beschrieben, ein.' }}</label>
-                                <label for="borrower_privacy" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
-                            </div>
-
-                            <div class="desp-25"></div>
-
-                            <div class="checkbox-buttons">
-                                <input type="checkbox" class="hidden" value="" name="borrower_newsletter_subscription" id="borrower_newsletter_subscription">
-                                <div class="custom-square">
-                                    <span class="glyphicon glyphicon-ok"></span>
-                                </div>
-                                <label for="borrower_newsletter_subscription"> {{ 'Ich bin damit einverstanden, dass mich die Zencap Deutschland GmbH per E-Mail und SMS über weitere interessante Angebote informiert und hierfür meine obigen Angaben verwendet. (freiwillig)' }}</label>
-                            </div>
-
-                        </div><!-- end .form-group -->
-                    </div>
-                </div><!-- end .row -->
-
-                <div class="row">
-                    <p class="col-xs-12 hidden-lg text-center">
+                    <div class="col-xs-12 screen-align-btn">
                         <button class="btn btn-lg btn-brrwr" type="submit">{{ 'Weiter' }}</button>
-                    </p>
-                    <div class="col-xs-12 hidden-lg text-center">
-                        <a href="" class=" text-muted" data-toggle="tooltip" href="#" data-original-title="Another one here too" data-placement="top"><i class="fa fa-lock"></i> Sichere Übertragung (SSL)</a>
+                        <div class="desp-10"></div>
+                        <a href="" class="text-muted" data-toggle="tooltip" href="#" data-original-title="Another one here too" data-placement="top"><i class="fa fa-lock"></i> Sichere Übertragung (SSL)</a>
                     </div>
-                </div><!-- end .row -->
-
-            </div><!-- .col-xs-12 -->
-
-        </div><!-- .row -->
-
-    </div><!-- .container -->
-
-    <div class="container-wrapper odd hidden-xs hidden-sm hidden-md col-lg-12">
-        <div class="container padding-48">
-            <div class="text-right">
-                <button class="btn btn-lg btn-brrwr" type="submit">{{ 'Weiter' }}</button>
+                </div>
             </div>
-            <div class="desp-10"></div>
-            <a href="" class="pull-right text-muted" data-toggle="tooltip" href="#" data-original-title="Another one here too" data-placement="top"><i class="fa fa-lock"></i> Sichere Übertragung (SSL)</a>
-        </div>
-    </div><!-- .container-wrapper -->
+        </div><!-- end .container-wrapper -->
 
-    <div class="clearfix"></div>
+        <div class="clearfix"></div>
 
-</form>
+    </form>
+
+</div><!-- end .padding-48 -->
 
 {% endblock body %}
 

@@ -2,7 +2,9 @@
 <tr>
     <th class="hidden-md hidden-lg"></th>
     <th>Kreditprojekt</th>
-    <th class="hidden-md hidden-lg"></th>
+    <th class="hidden-sm hidden-md hidden-lg"></th>
+    <th class="hidden-xs visible-sm hidden-md hidden-lg">Laufzeit</th>
+    <th class="hidden-xs visible-sm hidden-md hidden-lg">Zinssatz</th>
     <th class="hidden-xs hidden-sm">Kategorie</th>
     <th class="text-center">Betrag</th>
     <th class="hidden-md hidden-lg"></th>
@@ -21,16 +23,19 @@
         <td class="loan-title">
             <a href="{{ path('loanDetails') }}">{{ art.title }}</a>
         </td>
-        <td class="hidden-md hidden-lg">
+        <td class="hidden-sm hidden-md hidden-lg">
             {{ art.interest }}<br>{{ art.duration }}
         </td>
+        <td class="hidden-xs visible-sm hidden-md hidden-lg"> 4 jahre</td>
+        <td class="hidden-xs visible-sm hidden-md hidden-lg">{{ art.interest }}</td>
+
         <td class="hidden-md hidden-lg sm-width-bar">
             <div class="progress custom-progress">
                 <div class="progress-bar" role="progressbar" aria-valuenow="{{ art.filled }}" aria-valuemin="0" aria-valuemax="100"
                      style="min-width: 2em; width: {{ art.filled }};">
                 </div>
                 <div class="full-amount">
-                    {{ art.amount }}
+                    {{ art.amount }}<span>Mein Gebot</span>
                 </div>
             </div>
         </td>

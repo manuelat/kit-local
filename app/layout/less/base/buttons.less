@@ -91,7 +91,6 @@
 // Small
 .btn-sm {
     font-size: @fontSizeSmall;
-    //  padding: (@paddingSmallVertical + @btnShadowWidth) @paddingSmallHorizontal;
     padding: @paddingSmall;
     .border-top-radius(@baseBorderRadius);
     .border-right-radius(@baseBorderRadius);
@@ -102,7 +101,6 @@
 // Mini
 .btn-mini {
     font-size: @fontSizeMini;
-    //  padding: (@paddingMiniVertical + @btnShadowWidth) @paddingMiniHorizontal;
     padding: @paddingMini;
     .border-top-radius(@borderRadiusSmall);
     .border-right-radius(@borderRadiusSmall);
@@ -114,6 +112,14 @@
     display: block;
     width: 100%;
 }
+
+/*@media (min-width: 320px) and (max-width: 640px) {
+    .btn-lg {
+        font-size: 1em; // 10px
+        padding: 5px 16px;
+    }
+}*/
+
 
 // Set the backgrounds
 // -------------------------
