@@ -59,7 +59,8 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-2 col-lg-4 col-lg-offset-0">
                             <div class="form-group">
-                                <label for="borrower_first_name" class="required hidden-xs">{{ 'Vorname' }}</label>
+                                <label for="borrower_first_name" class="required hidden-xs hidden-sm">{{ 'Vorname' }}</label>
+                                <!-- add class 'error' for the input to make the border red  when the alert is also present -->
                                 <input type="text" placeholder="Enter vorname" id="borrower_first_name" class="form-control" required="required">
                                 <label for="borrower_first_name" class="text-danger" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                             </div>
@@ -67,7 +68,8 @@
 
                         <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0">
                             <div class="form-group">
-                                <label for="borrower_last_name" class="required hidden-xs">{{ 'Nachname' }}</label>
+                                <label for="borrower_last_name" class="required hidden-xs hidden-sm">{{ 'Nachname' }}</label>
+                                <!-- add class 'error' for the input to make the border red  when the alert is also present -->
                                 <input type="text" placeholder="Enter nachname" id="borrower_last_name" class="form-control" required="required">
                                 <label for="borrower_last_name" class="text-danger" role="alert hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                             </div>
@@ -79,16 +81,16 @@
                         <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-4 col-lg-offset-0">
 
                             <div class="form-group">
-                                <label for="borrower_company_name" class="required hidden-xs">{{ 'Firmenname' }}</label>
+                                <label for="borrower_company_name" class="required hidden-xs hidden-sm">{{ 'Firmenname' }}</label>
                                 <input type="text" placeholder="Enter firmenname" id="borrower_company_name" class="form-control" required="required">
                                 <label for="borrower_company_name" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                             </div>
                         </div>
 
                         <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-4 col-lg-offset-0">
-                            <label class="required hidden-xs">Rechtsform</label>
+                            <label class="required hidden-xs hidden-sm">Rechtsform</label>
                             <div class="btn-group btn-block">
-                                <button data-toggle="dropdown" class="form-control btn dropdown-toggle" type="button" aria-expanded="false">
+                                <button data-toggle="dropdown" class="form-control btn dropdown-toggle form-group" type="button" aria-expanded="false">
                                     <span class="pull-left">{{ 'Bitte wählen ...' }}</span>
                                     <span class="fa fa-chevron-down pull-right"></span>
                                 </button>
@@ -101,8 +103,6 @@
                                 </ul>
                             </div>
                         </div>
-
-                        <div class="desp-20 hidden-lg"></div>
 
                     </div><!-- end .row -->
 
@@ -121,7 +121,7 @@
                         <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-2 col-lg-4 col-lg-offset-0">
 
                             <div class="form-group">
-                                <label for="borrower_cellphone" class="required hidden-xs">{{ 'Telefonnummer' }}</label>
+                                <label for="borrower_cellphone" class="required hidden-xs hidden-sm">{{ 'Telefonnummer' }}</label>
                                 <input type="tel" placeholder="Enter telefonnummer" required="required" id="borrower_cellphone" class="form-control">
                                 <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                             </div>
@@ -152,8 +152,6 @@
                                     <label for="borrower_revenue" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                                 </div>
 
-                                <div class="desp-15"></div>
-
                                 <div class="checkbox-buttons">
                                     <input type="checkbox" class="hidden" value="" name="borrower_company_age" id="borrower_company_age" required="required">
                                     <div class="custom-square">
@@ -176,7 +174,7 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
                             <div class="form-group">
-                                <label for="borrower_email" class="required hidden-xs">{{ 'Email address' }}</label>
+                                <label for="borrower_email" class="required hidden-xs hidden-sm">{{ 'Email address' }}</label>
                                 <input type="email" placeholder="Enter email" id="borrower_email" class="form-control" required="required">
                                 <label for="borrower_email" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                             </div>
@@ -187,7 +185,7 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
                             <div class="form-group">
-                                <label for="borrower_password" class="required hidden-xs">{{ 'Password' }}</label>
+                                <label for="borrower_password" class="required hidden-xs hidden-sm">{{ 'Password' }}</label>
                                 <div class="input-group-pass">
                                     <input type="password" placeholder="Password" id="borrower_password" class="form-control" required="required">
                                     <label for="borrower_password" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
@@ -272,8 +270,6 @@
                                     <label for="borrower_terms_and_conditions" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                                 </div>
 
-                                <div class="desp-25"></div>
-
                                 <div class="checkbox-buttons">
                                     <input type="checkbox" class="hidden" value="" name="borrower_privacy" id="borrower_privacy" required="required">
                                     <div class="custom-square">
@@ -284,8 +280,6 @@
                                         {{ 'beschrieben, ein.' }}</label>
                                     <label for="borrower_privacy" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                                 </div>
-
-                                <div class="desp-25"></div>
 
                                 <div class="checkbox-buttons">
                                     <input type="checkbox" class="hidden" value="" name="borrower_newsletter_subscription" id="borrower_newsletter_subscription">
