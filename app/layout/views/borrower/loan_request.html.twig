@@ -1,6 +1,9 @@
 {% extends 'layout.html.twig' %}
 
 {% block body %}
+
+{% include '_partials/borrower/offcanvas_loan_menu.html.twig' %}
+
 <div class="padding-48">
     <div class="container">
 
@@ -41,6 +44,7 @@
 
     <div class="clearfix"></div>
 
+
 </div><!-- end .padding-48 -->
 
 {% endblock body %}
@@ -48,6 +52,7 @@
 {% block js %}
     {{ parent() }}
     <script>
+        /* horizontal loan request menu */
         function stepsResize() {
             if ($(document).width() < 992) {
                 var div_width = $('.register-step').width();
@@ -63,5 +68,21 @@
                 stepsResize();
             });
         });
+
+
+        /* offcanvas loan request menu */
+
+        $(function(){
+            // remove the menu from DOM on desktop
+            if ($(document).width() > 992) {
+                $('#sidebar-loan-menu').remove();
+            }
+
+            $('#nav-remove').click(function(){
+                $('#sidebar-loan-menu').addClass('hidden');
+
+            });
+        });
+
     </script>
 {% endblock %}

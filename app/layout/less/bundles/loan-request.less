@@ -126,7 +126,6 @@
     .register-step .register-step-item.activ .text {
         display: block;
         background: #eee;
-        color: #eee;
         float: left;
         width: 75%;
         height: 45px;
@@ -189,5 +188,43 @@
         color: @brandColor7;
         display: block;
         font-size: 62px;
+    }
+}
+
+/* offcanvas loan request menu */
+
+@media screen and (max-width: 992px) {
+    .offcanvas-loan-menu {
+        position: absolute;
+        top: 0;
+        /*right: -300px;*/
+        right: 0;
+        width: 300px;
+        z-index: 200;
+        background: #fff;
+        border: 1px solid #c7d2d9;
+        padding: 10px 5px;
+        /* display: none;*/
+        transition: right 0.3s ease-in-out 0s;
+    }
+
+    .right-menu li {
+        border-bottom: 1px solid #323949;
+        font-size: 18px;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 12px;
+
+        &:hover {
+            background: #ccc;
+        }
+
+        a {
+            color: #6F7D8C;
+
+            &:hover {
+                color: black;
+            }
+        }
     }
 }
