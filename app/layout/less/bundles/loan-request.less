@@ -129,5 +129,65 @@
         color: #eee;
         float: left;
         width: 75%;
+        height: 45px;
+        overflow: hidden;
+    }
+}
+
+/* check marks */
+.user-borrower {
+    .styled {
+        padding: 0;
+        list-style-type: none;
+
+        i {
+            color: @brandColor2;
+        }
+    }
+
+}
+
+.action-links  {
+    a:first-child {
+        margin-right: 8px;
+    }
+
+    a:last-of-type {
+        margin-right: 0;
+    }
+}
+
+.add-box {
+    border: 2px solid @grayLighter;
+    padding: 48px 20px;
+}
+
+.upload-docs {
+    .add-box {
+        min-height: 108px;
+        padding-top: 84px;
+        position: relative;
+    }
+
+    #file-upload-input {
+        position: absolute;
+        top: 85px;
+        left: 70px;
+    }
+
+    p {
+        color: #8e959a;
+    }
+}
+
+#dropzone {
+    height: 253px;
+    padding-top: 72px;
+    border: 2px dashed @grayLighter;
+
+    i {
+        color: @brandColor7;
+        display: block;
+        font-size: 62px;
     }
 }

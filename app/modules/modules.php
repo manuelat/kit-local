@@ -162,20 +162,20 @@ $loan_request[2] = array(
     'step' => 'loan_details',
     'category' => 'Kreditprojektdetails ',
 );
-$loan_request[] = array(
-    'step' => '3',
+$loan_request[3] = array(
+    'step' => 'approved_signatories',
     'category' => 'Zeichnungsberechtigte',
 );
-$loan_request[] = array(
-    'step' => '4',
+$loan_request[4] = array(
+    'step' => 'warrantors_list',
     'category' => 'Bürgen',
 );
 $loan_request[5] = array(
     'step' => 'upload_documents',
     'category' => 'Upload der Dokumente',
 );
-$loan_request[] = array(
-    'step' => '6',
+$loan_request[6] = array(
+    'step' => 'summary',
     'category' => 'Prüfen & Abschicken',
 );
 

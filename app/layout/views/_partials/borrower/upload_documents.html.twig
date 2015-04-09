@@ -1,1 +1,89 @@
-<p>step 5</p>
+<form action="" method="post" role="form" class="form-register" id="">
+
+    <div class="desp-10 hidden-md hidden-lg"></div>
+
+    <h1 class="faux-h2">{{ '5 | Upload der Dokumente' }}</h1>
+
+    <div class="row add-negative-margin">
+        <div class="col-xs-12">
+            <h2 class="faux-h3">{{ 'Bitte laden Sie hier Ihre Dokumente hoch ' }}</h2>
+        </div>
+    </div><!-- end .row -->
+
+    <div class="row user-borrower">
+        <div class="col-xs-12">
+            <p>Um Ihr Kreditprojekt zu verifizieren, benötigen wir noch folgende Dokumente von Ihnen:</p>
+            <ul class="styled">
+                <li><i class="fa fa-lg fa-check"></i>
+                    <strong>Geprüfte Jahresabschlüsse (Bilanz, GuV), der letzten beiden abgeschlossenen Geschäftsjahre.</strong>
+                </li>
+                <li><i class="fa fa-lg fa-check"></i>
+                    <strong>Aktuelle BWA (nicht älter als 2 Monate) mit Vorjahres-Vergleichszahlen sowie Summen-und Saldenliste.</strong>
+                </li>
+            </ul>
+            Ihre Informationen werden über unseren Server durch SSL-Verschlüsselung zu 100% sicher übermittelt. Sollte es Probleme beim Hochladen der Dokumente geben, senden Sie uns diese bitte per E-Mail an unternehmen@zencap.de.<p></p>
+        </div>
+    </div><!-- end .row -->
+
+    <div class="row upload-docs">
+        <div class="col-xs-12 col-sm-12 col-md-6">
+            <div class="add-box text-center">
+                <input type="file" id="file-upload-input" class="hidden" />
+                <button class="btn btn-lg btn-brrwr"><i class="fa fa-lg fa-arrow-circle-o-up"></i> Hochladen</button>
+                <div class="desp-5"></div>
+                <p>
+                    <small>
+                        Drücken Sie STRG, um mehre Dokumente gleichzeitig auszuwählen
+                    </small>
+                </p>
+            </div>
+        </div>
+        {# hide drag and drop on mobile and table #}
+        <div class="hidden-xs hidden-sm col-md-6">
+            <div class="text-center" id="dropzone">
+                <p><i class="fa fa-file"></i> Ziehen Sie Ihre Dokumente mit der Maus auf dieses Feld</p>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <div id="error-box"></div>
+            <p><small>Sie können Dateien bis zu einer Größe von 4 MB in den Formaten .pdf, .jpg, .png, .xls, .xlsx, .doc, .docx und .bmp hochladen</small></p>
+        </div>
+    </div><!-- end .row -->
+
+    <div class="row" id="documents-table">
+        <div class="col-xs-12">
+            <div id="document-list">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th class="col-xs-6 col-sm-6">Dateiname</th>
+                        <th class="col-xs-3 col-sm-3">Erstellt am</th>
+                        <th class="col-xs-3 col-sm-3"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="col-xs-6 col-sm-6"><a target="_blank" href="">BWA.PNG</a></td>
+                        <td class="col-xs-3 col-sm-3">05.09.2014</td>
+                        <td class="col-xs-3 col-sm-3 text-right">
+                            <div>
+                                <a href="">Löschen</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-xs-6 col-sm-6"><a target="_blank" href="">1.PNG</a></td>
+                        <td class="col-xs-3 col-sm-3">25.09.2012</td>
+                        <td class="col-xs-3 col-sm-3 text-right">
+                            <div>
+                                <a href="">Löschen</a>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div><!-- end .row -->
+
+</form>
