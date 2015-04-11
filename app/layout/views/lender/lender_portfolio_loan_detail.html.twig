@@ -230,9 +230,11 @@
 
     <div class="row add-negative-margin">
         <div class="col-xs-12 col-sm-12 hidden-md hidden-lg payments">
+            {# accordion on mobile and tablet #}
             {% include '_partials/tables/payment_plan_table_mobile.html.twig' %}
         </div>
         <div class="hidden-xs hidden-sm col-md-12 col-lg-12 payments">
+            {# table on desktop #}
             {% include '_partials/tables/payment_plan_table.html.twig' %}
         </div>
     </div>

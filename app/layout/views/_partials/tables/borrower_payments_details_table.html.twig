@@ -11,7 +11,7 @@
     </tr>
     </thead>
     <tbody>
-        {% for art in articles %}
+    {% for art in articles %}
     <tr>
         <td>{{ art.date }}</td>
         <td class="text-right">{{ art.amount }}</td>
@@ -21,6 +21,6 @@
         <td class="hidden-xs hidden-sm text-right">{{ art.outstanding_principal }}</td>
         <td class="hidden-xs hidden-sm text-right">{{ art.state }}</td>
     </tr>
-        {% endfor %}
+    {% endfor %}
     </tbody>
 </table>
