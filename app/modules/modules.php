@@ -12,12 +12,23 @@ $articles[] = array(
     'amount' => '150.000 €',
     'interest' => '6,99% ',
     'duration' => '2 Jahre',
+    'duration_months' => '24 Monate',
     'funded' => '96%',
     'amount_pending' => '146.000 €',
     'days_left' => '13 Tage',
     'risk_class' => 'grade-a',
     'risk_title' => 'A+',
     'filled' => '20%',
+    'monthly_payment'=>'1.231 €',
+    'outstanding_principal'=>'8.123 €',
+    'state'=>'Unpaid',
+    'aktion'=>'View',
+    'date'=>'16.02.2015',
+    'interest_amount'=>'200 €',
+    'interest_rate' => '6,99% ',
+    'interest_carried'=>'0 €',
+    'principal'=>'320 €',
+
 );
 
 $articles[] = array(
@@ -25,6 +36,7 @@ $articles[] = array(
     'category' => '2',
     'amount' => '90.000 €',
     'interest' => '16,99% ',
+    'interest_rate' => '16,99% ',
     'duration' => '6 Monate',
     'funded' => '100%',
     'amount_pending' => '46.000 €',
@@ -32,6 +44,12 @@ $articles[] = array(
     'risk_class' => 'grade-b',
     'risk_title' => 'B',
     'filled' => '35%',
+    'date'=>'01.07.2015',
+    'interest_amount'=>'350 €',
+    'interest_carried'=>'0 €',
+    'state'=>'Paid',
+    'principal'=>'470 €',
+    'outstanding_principal'=>'8.123 €',
 );
 
 $articles[] = array(
@@ -39,6 +57,7 @@ $articles[] = array(
     'category' => '3',
     'amount' => '25.000 €',
     'interest' => '8,62% ',
+    'interest_rate' => '8,62% ',
     'duration' => '1 Jahr',
     'funded' => '70%',
     'amount_pending' => '74.200 €',
@@ -46,6 +65,12 @@ $articles[] = array(
     'risk_class' => 'grade-c',
     'risk_title' => 'C',
     'filled' => '60%',
+    'date'=>'16.02.2015',
+    'interest_amount'=>'480 €',
+    'interest_carried'=>'0 €',
+    'state'=>'Pending',
+    'principal'=>'650 €',
+    'outstanding_principal'=>'3.230 €',
 );
 
 $articles[] = array(
@@ -53,6 +78,7 @@ $articles[] = array(
     'category' => '4',
     'amount' => '75.000 €',
     'interest' => '8,12% ',
+    'interest_rate' => '8,12% ',
     'duration' => '4 Jahre',
     'funded' => '1%',
     'amount_pending' => '74.200 €',
@@ -60,6 +86,12 @@ $articles[] = array(
     'risk_class' => 'grade-c-minus',
     'risk_title' => 'C-',
     'filled' => '70%',
+    'date'=>'21.05.2015',
+    'interest_amount'=>'600 €',
+    'interest_carried'=>'0 €',
+    'state'=>'Paid',
+    'principal'=>'640 €',
+    'outstanding_principal'=>'5.420 €',
 );
 
 

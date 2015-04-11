@@ -1,0 +1,29 @@
+<!--
+==========================================================================
+USED FOR TESTING, THIS VIEW MUST BE DELETED ...
+========================================================================== -->
+
+<nav class="main">
+    <ul class="list-unstyled main-menu">
+
+        <!--Include your navigation here-->
+        <li class="text-right"><a href="#" id="nav-close">X</a></li>
+        <li><a href="#">Vorname  Nachname <span class="icon"></span></a></li>
+        <li><a href="{{ path('profile') }}">Profil <span class="icon"></span></a></li>
+        <li><a href="#">Abmelden <span class="icon"></span></a></li>
+        <li><a href="{{ path('cockpit') }}">Mein Kredit <span class="icon"></span></a></li>
+        <li><a href="{{ path('payments_overview') }}">Payment plans<span class="icon"></span></a></li>
+        <li><a href="#">Hilfe</a></li>
+    </ul>
+</nav>
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <a class="navbar-brand" href="#">
+        <img src="/bundles/intlendweblayout/frontend/images/logo.png" alt="Example" />
+    </a>
+    <div class="navbar-header pull-right">
+        <a id="nav-expander" class="nav-expander fixed">
+            {#MENU#} &nbsp;<i class="fa fa-bars fa-lg"></i>
+        </a>
+    </div>
+</div>

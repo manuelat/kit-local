@@ -1,12 +1,9 @@
 <!--
 ==========================================================================
-Header visible for desktop  ( hidden for phones and tablets )
+USED FOR TESTING, THIS VIEW MUST BE DELETED ...
 ========================================================================== -->
 
 <div class="hidden-xs hidden-sm hidden-md">
-
-    {# must include the cookie bar #}
-    {#{% include '_partials/headers/cookiesWarning.html.twig' %}#}
 
     {% include '_partials/headers/top-nav.html.twig' %}
     <header>
@@ -25,19 +22,10 @@ Header visible for desktop  ( hidden for phones and tablets )
                     <div class="site-menu">
                         <ul class="dropdown list-inline">
                             <li>
-                                <a href="{{ path('dashboard') }}">Dashboard</a>
+                                <a href="{{ path('cockpit') }}">Mein Kredit</a>
                             </li>
                             <li>
-                                <a href="{{ path('invest') }}">Anlegen</a>
-                            </li>
-                            <li>
-                                <a href="{{ path('active_biddings') }}">Gebote</a>
-                            </li>
-                            <li>
-                                <a href="{{ path('portfolio') }}">Portofolio</a>
-                            </li>
-                            <li>
-                                <a href="{{ path('lenderUpgradeThreeSteps') }}">Premium-account</a>
+                                <a href="{{ path('payments_overview') }}">Payment plans</a>
                             </li>
                             <li>
                                 <a href="">Hilfe</a>
@@ -76,5 +64,5 @@ Header visible for desktop  ( hidden for phones and tablets )
 Header visible for phones and tablets  ( hidden for desktop )
 ========================================================================== -->
 <div class="hidden-lg">
-    {% include '_partials/headers/account-header-mobile.html.twig' %}
+    {% include '_partials/headers/account_header_mobile_borrower_for_testing.html.twig' %}
 </div>

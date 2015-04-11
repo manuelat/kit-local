@@ -126,3 +126,18 @@ loan_request:
     path: /borrower/loan_request/{step}
     defaults: { step: 1 }
 
+loan_request_3_new:
+    path: /borrower/loan_request/3/new
+
+loan_request_approved_signatories_list:
+    path: /borrower/loan_request/approved_signatories_list
+    defaults: { step: 3 }
+
+payments_overview:
+    path: /borrower/payments_overview
+
+payments_details:
+    path: /borrower/payments_details
+
+cockpit:
+    path: /borrower/cockpit
