@@ -38,7 +38,7 @@
 
             <!-- carousel with table fees visible on mobile, small tablets -->
             <div class="row">
-                <div id="fees-borrower" class="carousel slide col-xs-12 col-sm-8 col-sm-offset-2">
+                <div id="fees-borrower" class="carousel slide col-xs-12 col-sm-8 col-sm-offset-2 col-lg-offset-0 col-lg-12">
                         <!-- Carousel items -->
                         <div class="carousel-inner">
                             <div class="active item">
@@ -512,4 +512,19 @@
 
 </div>
 
+{% endblock %}
+
+{% block js %}
+    {{ parent() }}
+    <script>
+        $(function(){
+            if ($(document).width() > 991) {
+                $('.carousel-control').addClass('hidden-lg');
+                $('.carousel-inner').children('.item').each(function(){
+                    $(this).addClass('active');
+                    $(this).addClass('col-lg-4');
+                });
+            }
+        });
+    </script>
 {% endblock %}
