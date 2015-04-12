@@ -4,6 +4,7 @@
 @import 'config/variables.less';
 //
 @import 'base/mixins.less';
+@import 'base/grades.less';
 @import 'base/body.less';
 @import 'base/layouts.less';
 @import 'base/header.less';
@@ -16,9 +17,7 @@
 @import 'base/tooltip.less';
 @import 'base/forms.less';
 
-// Components: Buttons & Alerts
 @import 'base/buttons.less';
-
 @import 'base/media.less';
 @import 'base/accordion.less';
 @import 'base/progress-bars.less';
@@ -49,240 +48,9 @@
 @import 'base/header-mobile.less';
 
 
-/*
-==========================================================================
-   Variables
-   ========================================================================== */
 
 
 
 
 
 
-
-/* ==========================================================================
-   Homepage custom styles
-   ========================================================================== */
-
-// style needed only if we decide to target this range
-//if we don't delete also this class from html
-
-/*
-
-@media screen and (min-width: 600px) and (max-width: 767px)  {
-
-    .customWidth {
-        background: red;
-        margin: 0 16.6667%;
-    }
-}
-
-*/
-
-
-
-
-/* ==========================================================================
-   FAQ custom styles
-   ========================================================================== */
-
-
-// arrow
-
-
-.faq {
-
-    .glyphicon-chevron-up:before {
-        content: "\e113";
-    }
-
-    .collapsed .glyphicon-chevron-down:before {
-        content: "\e114";
-    }
-
-    .panel {
-        box-shadow: none;
-    }
-
-    .panel-default {
-        border-color: #ffffff;
-    }
-
-    .panel-default > .panel-heading {
-        background-color: #fff;
-        border-bottom: 1px solid #ddd;
-
-        a:hover {
-            text-decoration: none;
-            cursor: pointer;
-        }
-    }
-
-    .panel-body, .panel-heading {
-        padding-left: 0;
-    }
-
-    .panel-group .panel-heading + .panel-collapse > .panel-body {
-        border-color: #ffffff;
-    }
-}
-
-/* ==========================================================================
-   ACCOUNT custom styles
-   ========================================================================== */
-
-
-/* ==========================================================================
-   GRADES
-   ========================================================================== */
-
-/* ------------------ Grades --------------------*/
-
-
-// Grade colors
-
-@gradeA-plus-color: #3f91c7;
-@gradeAcolor: #8fbfd5;
-@gradeBcolor: #08b958;
-@gradeCcolor: #92d050;
-@gradeC-minus-color: #e9af00;
-
-// Grade dimension
-
-@gradeSmallWidth: 16px;
-@gradeMediumWidth: 24px;
-@gradeLargeWidth: 32px;
-@gradeGreaterWidth: 50px;
-@gradeWiderWidth: 65px;
-@gradeExtraLargeWidth: 85px;
-
-
-.gradeIconDimensions(@di) {
-    width: @di;
-    height: @di;
-    line-height: @di;
-}
-
-.grade-small {
-    .gradeIconDimensions(@gradeSmallWidth);
-    font-size: @gradeSmallWidth - 4;
-}
-
-.grade-medium {
-    .gradeIconDimensions(@gradeMediumWidth);
-    font-size: @gradeSmallWidth - 2;
-}
-
-.grade-large {
-    .gradeIconDimensions(@gradeLargeWidth);
-    font-size: @gradeMediumWidth;
-}
-
-.grade-greater {
-    .gradeIconDimensions(@gradeGreaterWidth);
-    font-size: @gradeMediumWidth;
-}
-
-.grade-wider {
-    .gradeIconDimensions(@gradeWiderWidth);
-    font-size: @gradeMediumWidth;
-}
-
-.grade-extra-large {
-    .gradeIconDimensions(@gradeExtraLargeWidth);
-    font-size: @gradeMediumWidth + 14;
-}
-
-.grade {
-    color: @white;
-    font-weight: bold;
-    display: inline-block;
-    text-align: center;
-    margin-left: 4px;
-
-    &.grade-a-plus {
-        background-color: @gradeA-plus-color;
-    }
-
-    &.grade-a {
-        background-color: @gradeAcolor;
-    }
-
-    &.grade-b {
-        background-color: @gradeBcolor;
-    }
-
-    &.grade-c {
-        background-color: @gradeCcolor;
-    }
-
-    &.grade-c-minus {
-        background-color: @gradeC-minus-color;
-    }
-    /*span {
-        vertical-align: middle;
-    }*/
-}
-
-.grades-wrapper {
-    .grade-greater, .grade-extra-large, .grade-wider {
-        margin-left: 0;
-    }
-}
-
-
-/*  FILTER EXPANDER FOR LOAN PROJECTS  */
-
-/*
- * Off Canvas
- * --------------------------------------------------
- */
-
-
-@media screen and (max-width: 992px) {
-    .row-offcanvas {
-        position: relative;
-        -webkit-transition: all 0.25s ease-out;
-        -moz-transition: all 0.25s ease-out;
-        -o-transition: all 0.25s ease-out;
-        transition: all 0.25s ease-out;
-        z-index: 100;
-    }
-
-    .sidebar-offcanvas {
-        position: absolute;
-        top: 0;
-        right: -300px;
-        width: 300px;
-        min-height: 500px;
-        z-index: 1000;
-        background: #fff;
-        border: 1px solid #c7d2d9;
-        padding: 10px;
-        display: none;
-    }
-
-    .row-offcanvas.active {
-        .sidebar-offcanvas {
-            top: -48px;
-            right: 0;
-            display: block;
-
-        }
-    }
-
-}
-
-@media screen and (min-width: 1024px) {
-    .row.row-offcanvas {
-        margin-left: 0;
-        margin-right: 0;
-
-    }
-}
-
-#filter-btn {
-    .fa-lg {
-        font-size: 1.2em;
-    }
-}

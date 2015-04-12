@@ -108,13 +108,6 @@
     }
 }
 
-/*@media (min-width: 992px) {
-    .custom-table {
-        margin-left: 15px;
-        margin-right: 15px;
-        background: red;
-    }
-}*/
 
 .custom-table > thead > tr > th,
 .custom-table > tbody > tr > th,
@@ -221,4 +214,62 @@
 .loan-header {
     background: #edf0f2;
     font-weight: bold;
+}
+
+
+
+/*  FILTER EXPANDER FOR LOAN PROJECTS  */
+
+/*
+ * Off Canvas
+ * --------------------------------------------------
+ */
+
+
+@media screen and (max-width: 992px) {
+    .row-offcanvas {
+        position: relative;
+        -webkit-transition: all 0.25s ease-out;
+        -moz-transition: all 0.25s ease-out;
+        -o-transition: all 0.25s ease-out;
+        transition: all 0.25s ease-out;
+        z-index: 100;
+    }
+
+    .sidebar-offcanvas {
+        position: absolute;
+        top: 0;
+        right: -300px;
+        width: 300px;
+        min-height: 500px;
+        z-index: 1000;
+        background: #fff;
+        border: 1px solid #c7d2d9;
+        padding: 10px;
+        display: none;
+    }
+
+    .row-offcanvas.active {
+        .sidebar-offcanvas {
+            top: -48px;
+            right: 0;
+            display: block;
+
+        }
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    .row.row-offcanvas {
+        margin-left: 0;
+        margin-right: 0;
+
+    }
+}
+
+#filter-btn {
+    .fa-lg {
+        font-size: 1.2em;
+    }
 }

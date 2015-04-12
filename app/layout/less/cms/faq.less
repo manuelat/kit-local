@@ -1,0 +1,43 @@
+/* ==========================================================================
+   FAQ custom styles
+   ========================================================================== */
+
+// arrow
+
+
+.faq {
+
+    .glyphicon-chevron-up:before {
+        content: "\e113";
+    }
+
+    .collapsed .glyphicon-chevron-down:before {
+        content: "\e114";
+    }
+
+    .panel {
+        box-shadow: none;
+    }
+
+    .panel-default {
+        border-color: #ffffff;
+    }
+
+    .panel-default > .panel-heading {
+        background-color: #fff;
+        border-bottom: 1px solid #ddd;
+
+        a:hover {
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+
+    .panel-body, .panel-heading {
+        padding-left: 0;
+    }
+
+    .panel-group .panel-heading + .panel-collapse > .panel-body {
+        border-color: #ffffff;
+    }
+}
