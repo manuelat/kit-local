@@ -23,13 +23,16 @@
             position: relative;
             line-height: 25px;
             padding: 5px 0;
-            font-size: 14px;
+            font-size: 17px;
             font-weight: bold;
             text-align: center;
 
             &.panel-big {
                 height: 85px;
-                font-size: 17px;
+            }
+            &.panel-middle {
+                height: 60px;
+                font-size: 16px;
             }
             /*> .large-subheading {
                 font-size: 38px;
@@ -72,6 +75,17 @@
     .fa-question-circle:hover {
         color: @white;
     }
+
+}
+
+@media (min-width: 320px) and (max-width: 992px) {
+    .dash .panel-title, .dash .panel-heading h4.panel-big, .dash .panel-heading h4.panel-middle {
+        height: 80px;
+    }
+
+    .dash .panel-heading h4.panel-middle {
+        font-size: 14px;
+    }
 }
 
 
@@ -86,13 +100,13 @@
     }
 }
 @media (min-width: 768px) and (max-width: 992px) {
-   .move {
+    .move {
         padding-left: 15px;
     }
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
-   .move {
+    .move {
         text-align: center;
     }
 }
