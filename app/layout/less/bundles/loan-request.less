@@ -201,11 +201,17 @@
         right: 0;
         width: 300px;
         z-index: 200;
-        background: #fff;
-        border: 1px solid #c7d2d9;
         padding: 10px 5px;
         /* display: none;*/
         transition: right 0.3s ease-in-out 0s;
+        background: #fff;
+        border: 1px solid #c7d2d9;
+        height: 480px;
+        nav ol > li.no-bg {
+            &:hover {
+                background: #fff;
+            }
+        }
     }
 
     .right-menu li {
