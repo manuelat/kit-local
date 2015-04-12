@@ -1,5 +1,11 @@
 /*  accordion handling on dashboard */
 
+function resizeOffcanvasHeight() {
+    $('#sidebar-loan-menu')
+        .children('.offcanvas-loan-menu')
+        .height($(window).height());
+}
+
 function collapseOnResize(){
     // only for desktop
     if ($(document).width() > 991) {

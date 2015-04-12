@@ -69,21 +69,25 @@
         $(function(){
             $(window).load(function() {
                 stepsResize();
+                resizeOffcanvasHeight();
             });
             $(window).resize(function() {
                 stepsResize();
+                resizeOffcanvasHeight();
             });
-        });
 
+            /* offcanvas loan request menu */
 
-        /* offcanvas loan request menu */
-
-        $(function(){
             // remove the menu from DOM on desktop
             if ($(document).width() > 992) {
                 $('#sidebar-loan-menu').remove();
             }
 
+            // display popup menu selector when click on text
+            $('.register-step-item .text').click(function(e){
+                e.preventDefault();
+                $('#sidebar-loan-menu').removeClass('hidden');
+            });
             $('#nav-remove').click(function(){
                 $('#sidebar-loan-menu').addClass('hidden');
 
