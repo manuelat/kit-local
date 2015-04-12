@@ -105,3 +105,34 @@
     }
 
 }
+
+
+.fixed-cart {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 500;
+    background-color: @wellBackground;
+    margin-left: 0;
+    margin-right: 0;
+
+    p {
+        color: @brandColor4;
+        font-size: @headingsFontSizeH2;
+        margin: 0 0 5px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .fixed-cart {
+
+        p {
+            font-size: 15px;
+        }
+
+        button {
+            font-size: 15px;
+        }
+    }
+}
