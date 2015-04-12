@@ -21,30 +21,38 @@
 
         h4 {
             position: relative;
-            height: 85px;
             line-height: 25px;
             padding: 5px 0;
+            font-size: 14px;
             font-weight: bold;
-            font-size: 17px;
             text-align: center;
 
+            &.panel-big {
+                height: 85px;
+                font-size: 17px;
+            }
             /*> .large-subheading {
                 font-size: 38px;
                 font-weight: 100;
             }*/
-
-            a:hover, a:focus {
+            a {
                 color: @white;
+                span {
+                    color: @white;
+                }
             }
 
             span {
                 display: block;
             }
 
-            i.fa-plus-square {
-                position: absolute;
-                top: 25px;
-                right: 0;
+            .square-box {
+                i.fa-plus-square {
+                    position: absolute;
+                    top: 6px;
+                    right: 15px;
+                    cursor: pointer;
+                }
             }
         }
     }
@@ -67,6 +75,16 @@
 }
 
 
+@media (max-width: 992px) {
+    .square-box {
+        padding-right: 35px;
+    }
+}
+@media (min-width: 992px) {
+    .text-right-md {
+        text-align: right;
+    }
+}
 @media (min-width: 768px) and (max-width: 992px) {
    .move {
         padding-left: 15px;
