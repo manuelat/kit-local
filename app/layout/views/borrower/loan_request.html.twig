@@ -1,5 +1,11 @@
 {% extends 'layout.html.twig' %}
 
+{% block header %}
+    {# should be deleted #}
+    {% include '_partials/headers/account_header_borrower_for_testing.html.twig' %}
+
+{% endblock header %}
+
 {% block body %}
 
 {% include '_partials/borrower/offcanvas_loan_menu.html.twig' %}

@@ -7,7 +7,7 @@
 
 $articles = array();
 $articles[] = array(
-    'title' => 'Vorfinanzierung von Filmrechten in Maschinenpark für einen Filmrechten in Maschinenpark für',
+    'title' => 'Vorfinanzierung von Filmrechten in Maschinenpark',
     'category' => '1',
     'amount' => '150.000 €',
     'interest' => '6,99% ',

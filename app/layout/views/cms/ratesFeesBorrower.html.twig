@@ -38,7 +38,7 @@
 
             <!-- carousel with table fees visible on mobile, small tablets -->
             <div class="row">
-                <div id="fees-borrower" class="carousel slide col-xs-12 col-sm-8 col-sm-offset-2 col-lg-offset-0 col-lg-12">
+                <div id="fees-borrower" class="carousel slide col-xs-12 col-sm-8 col-sm-offset-2 col-md-12 col-md-offset-0 ">
                         <!-- Carousel items -->
                         <div class="carousel-inner">
                             <div class="active item">
@@ -160,112 +160,6 @@
                     </div><!-- #fees-borrower -->
             </div>
             <!-- end .carousel -->
-{#
-
-            <!-- table fees visible on desktop-->
-            <div class="row">
-                <div class="hidden-xs hidden-sm col-md-4">
-                    <table class="table">
-                        <caption>Maximaler Service</caption>
-                        <thead>
-                        <tr>
-                            <th>Leistung</th>
-                            <th>Kosten</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>Zencap-Konto</td>
-                            <th class="text-orange">kostenlos</th>
-                        </tr>
-                        <tr>
-                            <td>Kreditangebot</td>
-                            <th class="text-orange">kostenlos</th>
-                        </tr>
-                        <tr>
-                            <td>Individuelle Beratung</td>
-                            <th class="text-orange">kostenlos</th>
-                        </tr>
-                        <tr>
-                            <td>Vorzeitige Rückzahlung</td>
-                            <th class="text-orange">kostenlos</th>
-                        </tr>
-                        <tr>
-                            <td>Bonitätsprüfung</td>
-                            <th class="text-orange">kostenlos</th>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="hidden-xs hidden-sm col-md-4">
-                    <table class="table">
-                        <caption>Faire Zinsen</caption>
-                        <thead>
-                        <tr>
-                            <th>Bonitätsklasse</th>
-                            <th>Nominalzins</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>A+</td>
-                            <th class="text-orange">3,99 % - 5,99 %</th>
-                        </tr>
-                        <tr>
-                            <td>A</td>
-                            <th class="text-orange">4,48 % - 6,80 %</th>
-                        </tr>
-                        <tr>
-                            <td>B</td>
-                            <th class="text-orange">5,41 % - 8,44 %</th>
-                        </tr>
-                        <tr>
-                            <td>C</td>
-                            <th class="text-orange">7,30 % - 11,91 %</th>
-                        </tr>
-                        <tr>
-                            <td>C-</td>
-                            <th class="text-orange">11,32 % - 15,64 %</th>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="hidden-xs hidden-sm col-md-4">
-                    <table class="table">
-                        <caption>Transparente Gebühren *</caption>
-                        <thead>
-                        <tr>
-                            <th>Laufzeit</th>
-                            <th>Gebühren</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>6 Monate</td>
-                            <th class="text-orange">1 %</th>
-                        </tr>
-                        <tr>
-                            <td>12 Monate</td>
-                            <th class="text-orange">2 %</th>
-                        </tr>
-                        <tr>
-                            <td>24 Monate</td>
-                            <th class="text-orange">3 %</th>
-                        </tr>
-                        <tr>
-                            <td>36 Monate</td>
-                            <th class="text-orange">4 %</th>
-                        </tr>
-                        <tr>
-                            <td>48/60 Monate</td>
-                            <th class="text-orange">4,5 %</th>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <!-- end table fees -->
-#}
 
             <div class="row">
                 <div class="col-xs-12">
@@ -519,10 +413,11 @@
     <script>
         $(function(){
             if ($(document).width() > 991) {
+                $('.carousel-control').addClass('hidden-md');
                 $('.carousel-control').addClass('hidden-lg');
                 $('.carousel-inner').children('.item').each(function(){
                     $(this).addClass('active');
-                    $(this).addClass('col-lg-4');
+                    $(this).addClass('col-md-4');
                 });
             }
         });

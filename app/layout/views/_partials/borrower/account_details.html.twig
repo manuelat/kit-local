@@ -1,0 +1,73 @@
+<div class="row add-negative-margin">
+    <div class="col-xs-12">
+        <h2 class="faux-h3">{{ 'Your account details' }}</h2>
+    </div><!-- .col-xs-12 -->
+</div><!-- end .row -->
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="form-group">
+            <label for="borrower_bank_account_holder" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Kontoinhaber' }}</label>
+            <input type="text" id="borrower_bank_account_holder" placeholder="Kontoinhaber" class="form-control" required="required">
+            <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+        </div>
+    </div>
+</div><!-- end .row -->
+
+<div class="row">
+    <div class="col-xs-12 col-md-6">
+        <div class="form-group">
+            <label for="borrower_bank_account_number" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'IBAN' }}</label>
+            <input type="text" id="borrower_bank_account_number" placeholder="IBAN" class="form-control" required="required" maxlength="22">
+            <label for="borrower_bank_account_number" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+        </div>
+    </div>
+
+    <!-- Button trigger modal -->
+    <div class="col-xs-12 col-md-6">
+        <div class="form-group">
+            <label class="hidden-xs hidden-sm visible-md visible-lg">{{ 'IBAN berechnen' }}</label>
+            <button type="button" id="borrower-iban-modal" class="btn btn-block">{{ 'IBAN berechnen' }}</button>
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+</div><!-- end .row -->
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="form-group">
+            <label for="borrower_bank_account_typed_bic_code" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'BIC' }}</label>
+            <input type="password" id="borrower_bank_account_typed_bic_code" placeholder="BIC" class="form-control" required="required">
+            <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+        </div>
+    </div>
+
+    <div class="col-xs-12">
+        <div class="form-group">
+            <label for="borrower_bank_account_bic_code" class="required  hidden-xs hidden-sm visible-md visible-lg">{{ 'Name der Bank' }}</label>
+            <div class="btn-group btn-block hidden">
+                <button data-toggle="dropdown" class="form-control btn dropdown-toggle" type="button" aria-expanded="false">
+                    <span class="pull-left">{{ '' }}</span>
+                    <span class="fa fa-chevron-down pull-right"></span>
+                </button>
+                <ul role="menu" class="dropdown-menu">
+                    <li><a href="#"><i class="glyphicon glyphicon-ok pull-right"></i>{{ '' }}
+                        </a></li>
+                    <li><a href="#">{{ '' }}</a></li>
+                </ul>
+            </div>
+            <label class="placeholder">Commerzbank Gf 261 Hamburg</label>
+        </div>
+    </div>
+
+    <div class="clearfix visible-lg-block"></div>
+
+</div><!-- end .row -->
+
+<div class="row">
+    <div class="col-xs-12">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+</div><!-- end .row -->

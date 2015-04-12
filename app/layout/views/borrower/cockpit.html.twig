@@ -1,1 +1,79 @@
-aici pun partea de mein kredit
+{% extends 'layout.html.twig' %}
+
+{% block header %}
+    {# should be deleted #}
+    {% include '_partials/headers/account_header_borrower_for_testing.html.twig' %}
+
+{% endblock header %}
+
+{% block body %}
+
+<div class="padding-48">
+
+    <form action="" method="post" role="form" class="form-register" id="register_borrower_form">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1>Congratulations, we are ready to list your project!</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptat</p>
+                </div>
+            </div><!-- end .row -->
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    {% include '_partials/tables/borrower_loan_offer_table.html.twig' %}
+                    {% include '_partials/tables/borrower_offer_repayment_table.html.twig' %}
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    {% include '_partials/borrower/account_details.html.twig' %}
+                </div>
+            </div><!-- end .row -->
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <hr/>
+                    <p><small><sup>1</sup>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small></p>
+                </div>
+            </div><!-- end .row -->
+
+        </div><!-- end .container -->
+
+        <div class="container-wrapper form-footer odd">
+            <div class="container padding-48">
+                <div class="row">
+                    <div class="col-xs-12 screen-align-btn">
+                        <button class="btn btn-lg btn-brrwr" type="submit">{{ 'Confirm project and start funging phase' }}</button>
+                    </div>
+                </div>
+            </div>
+        </div><!-- end .container-wrapper -->
+
+        <div class="clearfix"></div>
+
+    </form>
+
+</div><!-- end .padding-48 -->
+
+
+{#  MODAL #}
+
+{% include '_partials/borrower/iban_calculator_modal.html.twig' %}
+
+
+{% endblock body %}
+
+
+{% block js %}
+    {{ parent() }}
+
+    <script>
+        $(function(){
+
+            $('#borrower-iban-modal').click(function(){
+                $('#borrower-iban-calculator').modal('show');
+            });
+        });
+    </script>
+{% endblock js %}

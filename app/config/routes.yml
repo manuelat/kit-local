@@ -141,3 +141,6 @@ payments_details:
 
 cockpit:
     path: /borrower/cockpit
+
+status:
+    path: /borrower/status
