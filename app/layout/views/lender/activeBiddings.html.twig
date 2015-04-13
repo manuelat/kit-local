@@ -39,16 +39,18 @@
             <tr>
                 <th class="hidden-md hidden-lg"></th>
                 <th>Kredietproject</th>
-                <th class="hidden-md hidden-lg"></th>
+                <th class="hidden-sm hidden-md hidden-lg"></th>
+                <th class="hidden-xs visible-sm hidden-md hidden-lg text-right">Rentevoet</th>
+                <th class="hidden-xs visible-sm hidden-md hidden-lg text-right">Zinssatz</th>
                 <th class="hidden-xs hidden-sm">Categorie</th>
-                <th class="text-center">Bedrag</th>
+                <th class="text-right">Bedrag</th>
                 <th class="hidden-md hidden-lg"></th>
                 <th class="hidden-xs hidden-sm text-center">Rentevoet</th>
                 <th class="hidden-xs hidden-sm">Termijn</th>
                 <th class="hidden-xs hidden-sm">% gefinancierd</th>
                 <th class="hidden-xs hidden-sm text-center">In behandeling</th>
                 <th class="hidden-xs hidden-sm text-center">Resterende duur</th>
-                <th class="hidden-xs hidden-sm">Investeren</th>
+                <th class="hidden-xs hidden-sm text-center">Investeren</th>
             </tr>
             </thead>
             <tbody>
@@ -58,10 +60,13 @@
                     <td class="loan-title">
                         <a href="{{ path('loanDetails') }}">{{ art.title }}</a>
                     </td>
-                    <td class="hidden-md hidden-lg">
+                    <td class="hidden-sm hidden-md hidden-lg text-right">
                         {{ art.interest }}<br>{{ art.duration }}
                     </td>
-                    <td class="hidden-md hidden-lg sm-width-bar">
+                    <td class="hidden-xs visible-sm hidden-md hidden-lg text-right"> 4 jahre</td>
+                    <td class="hidden-xs visible-sm hidden-md hidden-lg text-right">{{ art.interest }}</td>
+
+                    <td class="hidden-md hidden-lg text-right">
                         {{ art.amount }}
                     </td>
                     <td class="hidden-xs hidden-sm text-center"><i class="categoryIcon">{{ art.category }}</i></td>
@@ -70,11 +75,16 @@
                     </td>
                     <td class="hidden-xs hidden-sm">{{ art.duration }}</td>
                     <td class="hidden-xs hidden-sm">
-                        {{ art.amount }}
+                        <div class="progress default-progress progress-update pull-left">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                                 style="width: {{ art.filled }};">
+                            </div>
+                        </div>
+                        <div class="percentage pull-right">{{ art.funded }}</div>
                     </td>
                     <td class="hidden-xs hidden-sm text-right">{{ art.amount_pending }}</td>
                     <td class="hidden-xs hidden-sm text-center">{{ art.days_left }}</td>
-                    <td class="hidden-xs hidden-sm">
+                    <td class="hidden-xs hidden-sm text-right bid-amount">
                         {{ art.amount_pending }}
                     </td>
                     <td class="hidden-md hidden-lg sm-width">
@@ -94,16 +104,19 @@
             <tr>
                 <th class="hidden-md hidden-lg"></th>
                 <th>Proyecto de préstamo</th>
-                <th class="hidden-md hidden-lg"></th>
+                <th class="hidden-sm hidden-md hidden-lg"></th>
+                <th class="hidden-xs visible-sm hidden-md hidden-lg text-right">Plazo</th>
+                <th class="hidden-xs visible-sm hidden-md hidden-lg text-right">Tipo de interés</th>
+
                 <th class="hidden-xs hidden-sm">Categoría</th>
-                <th class="text-center">Importe</th>
+                <th class="text-right">Importe</th>
                 <th class="hidden-md hidden-lg"></th>
                 <th class="hidden-xs hidden-sm text-center">Tipo de interés</th>
                 <th class="hidden-xs hidden-sm">Plazo</th>
                 <th class="hidden-xs hidden-sm">% financiado</th>
                 <th class="hidden-xs hidden-sm text-center">Pendiente</th>
                 <th class="hidden-xs hidden-sm text-center">Tiempo restante</th>
-                <th class="hidden-xs hidden-sm">Invertir</th>
+                <th class="hidden-xs hidden-sm text-center">Invertir</th>
             </tr>
             </thead>
             <tbody>
@@ -113,10 +126,13 @@
                     <td class="loan-title">
                         <a href="{{ path('loanDetails') }}">{{ art.title }}</a>
                     </td>
-                    <td class="hidden-md hidden-lg">
+                    <td class="hidden-sm hidden-md hidden-lg text-right">
                         {{ art.interest }}<br>{{ art.duration }}
                     </td>
-                    <td class="hidden-md hidden-lg sm-width-bar">
+                    <td class="hidden-xs visible-sm hidden-md hidden-lg text-right"> 4 jahre</td>
+                    <td class="hidden-xs visible-sm hidden-md hidden-lg text-right">{{ art.interest }}</td>
+
+                    <td class="hidden-md hidden-lg text-right">
                         {{ art.amount }}
                     </td>
                     <td class="hidden-xs hidden-sm text-center"><i class="categoryIcon">{{ art.category }}</i></td>
@@ -125,11 +141,16 @@
                     </td>
                     <td class="hidden-xs hidden-sm">{{ art.duration }}</td>
                     <td class="hidden-xs hidden-sm">
-                        {{ art.amount }}
+                        <div class="progress default-progress progress-update pull-left">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                                 style="width: {{ art.filled }};">
+                            </div>
+                        </div>
+                        <div class="percentage pull-right">{{ art.funded }}</div>
                     </td>
                     <td class="hidden-xs hidden-sm text-right">{{ art.amount_pending }}</td>
                     <td class="hidden-xs hidden-sm text-center">{{ art.days_left }}</td>
-                    <td class="hidden-xs hidden-sm">
+                    <td class="hidden-xs hidden-sm text-right bid-amount">
                         {{ art.amount_pending }}
                     </td>
                     <td class="hidden-md hidden-lg sm-width">
