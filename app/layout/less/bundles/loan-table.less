@@ -93,21 +93,6 @@
     }
 }
 
-@media (min-width: 320px) and (max-width: 992px) {
-    .cancel-padding {
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
-
-@media (min-width: 480px) and (max-width: 600px) {
-    .custom-table {
-        .sm-width {
-            width: 20px;
-        }
-    }
-}
-
 
 .custom-table > thead > tr > th,
 .custom-table > tbody > tr > th,
@@ -147,6 +132,15 @@
     }
 }
 
+
+@media (min-width: 480px) and (max-width: 600px) {
+    .custom-table {
+        .sm-width {
+            width: 20px;
+        }
+    }
+}
+
 @media (min-width: 767px) and (max-width: 991px) {
     .custom-table {
         .sm-width {
@@ -156,23 +150,15 @@
     }
 }
 
+
 /* style for first and last child displayed on mobile */
 .table.custom-table tr th:first-child.hidden-lg,
 .table.custom-table tr td:first-child.hidden-lg,
 .table.custom-table tr th:last-child.hidden-lg,
 .table.custom-table tr td:last-child.hidden-lg {
-    /*padding-left: 9px;*/
     padding-right: 0;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
-    .custom-table tr th:first-child,
-    .custom-table tr td:first-child,
-    .custom-table tr th:last-child,
-    .custom-table tr td:last-child {
-        padding-left: 4px;
-    }
-}
 
 .custom-table tr td.loan-title a {
     height: 40px;
@@ -181,30 +167,13 @@
 }
 
 //active biddings
+
 .custom-table tr td.bid-amount {
     padding-right: 25px;
 }
 
-.portolio-table {
-    .custom-table > thead > tr > th,
-    .custom-table > tbody > tr > th,
-    .custom-table > tfoot > tr > th,
-    .custom-table > thead > tr > td,
-    .custom-table > tbody > tr > td,
-    .custom-table > tfoot > tr > td {
-        padding: 6px 13px;
-    }
-}
-
 
 // confirm offer borrower
-
-@media (min-width: 767px)  {
-    .xs-row {
-        margin-left: 0;
-        margin-right: 0;
-    }
-}
 
 .loan-item {
     padding-top: 10px;
