@@ -6,7 +6,8 @@
     <th class="hidden-sm hidden-md hidden-lg"></th>
     <th class="hidden-xs hidden-sm text-center">Kategorie</th>
     <th class="hidden-xs text-right">Sollzins</th>
-    <th class="hidden-xs text-center">Restlaufzeit</th>
+    <th class="hidden-xs text-right hidden-md hidden-lg">Laufzeit</th>
+    <th class="hidden-xs hidden-sm text-center">Restlaufzeit</th>
     <th class="hidden-xs hidden-sm text-center">Anlagebetrag</th>
     <th class="text-right">Ausstehend</th>
     <th class="hidden-md hidden-lg"></th>
@@ -29,7 +30,8 @@
 
         <td class="hidden-xs hidden-sm text-center"><i class="categoryIcon">{{ art.category }}</i></td>
         <td class="hidden-xs text-right">{{ art.interest }}</td>
-        <td class="hidden-xs text-center">{{ art.days_left }}</td>
+        <td class="hidden-xs text-right hidden-md hidden-lg">{{ art.duration }}</td>
+        <td class="hidden-xs hidden-sm text-center">{{ art.days_left }}</td>
         <td class="hidden-xs hidden-sm text-right">{{ art.amount }}</td>
         <td class="text-right">{{ art.amount_pending }}</td>
         <td class="hidden-md hidden-lg sm-width">

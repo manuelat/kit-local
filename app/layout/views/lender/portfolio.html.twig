@@ -41,7 +41,8 @@
                         <th class="hidden-sm hidden-md hidden-lg"></th>
                         <th class="hidden-xs hidden-sm text-center">Categorie</th>
                         <th class="hidden-xs text-right">Rentevoet</th>
-                        <th class="hidden-xs text-center">Resterende duur</th>
+                        <th class="hidden-xs text-right hidden-md hidden-lg">Termijn</th>
+                        <th class="hidden-xs hidden-sm text-center">Resterende duur</th>
                         <th class="hidden-xs hidden-sm text-center">Investeringsbedrag</th>
                         <th class="text-right">Aflossing in behandeling</th>
                         <th class="hidden-md hidden-lg"></th>
@@ -64,7 +65,8 @@
 
                             <td class="hidden-xs hidden-sm text-center"><i class="categoryIcon">{{ art.category }}</i></td>
                             <td class="hidden-xs text-right">{{ art.interest }}</td>
-                            <td class="hidden-xs text-center">{{ art.days_left }}</td>
+                            <td class="hidden-xs text-right hidden-md hidden-lg">{{ art.duration }}</td>
+                            <td class="hidden-xs hidden-sm text-center">{{ art.days_left }}</td>
                             <td class="hidden-xs hidden-sm text-right">{{ art.amount }}</td>
                             <td class="text-right">{{ art.amount_pending }}</td>
                             <td class="hidden-md hidden-lg sm-width">
@@ -90,12 +92,14 @@
                         <th class="hidden-sm hidden-md hidden-lg"></th>
                         <th class="hidden-xs hidden-sm text-center">Categoría</th>
                         <th class="hidden-xs text-right">Tipo de interés</th>
-                        <th class="hidden-xs text-center">Tiempo restante</th>
+                        <th class="hidden-xs text-right hidden-md hidden-lg">Plazo</th>
+                        <th class="hidden-xs hidden-sm text-center">Tiempo restante</th>
                         <th class="hidden-xs hidden-sm text-center">Importe de inversión</th>
                         <th class="text-right">Amortización pendiente</th>
                         <th class="hidden-md hidden-lg"></th>
                     </tr>
                     </thead>
+
                     <tbody>
                     {% for art in articles_es %}
                         <tr>
@@ -113,7 +117,8 @@
 
                             <td class="hidden-xs hidden-sm text-center"><i class="categoryIcon">{{ art.category }}</i></td>
                             <td class="hidden-xs text-right">{{ art.interest }}</td>
-                            <td class="hidden-xs text-center">{{ art.days_left }}</td>
+                            <td class="hidden-xs text-right hidden-md hidden-lg">{{ art.duration }}</td>
+                            <td class="hidden-xs hidden-sm text-center">{{ art.days_left }}</td>
                             <td class="hidden-xs hidden-sm text-right">{{ art.amount }}</td>
                             <td class="text-right">{{ art.amount_pending }}</td>
                             <td class="hidden-md hidden-lg sm-width">
