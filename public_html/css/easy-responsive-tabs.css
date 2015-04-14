@@ -33,6 +33,9 @@ h2.resp-accordion {
     padding: 5px;
     display: none;
 }
+h2.resp-accordion a {
+    color: #fff;
+}
 
 .resp-tab-content {
     display: none;
@@ -133,17 +136,24 @@ h2.resp-tab-title:last-child {
 }
 
 .resp-arrow {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     float: right;
-    margin-top: -4px;
+    opacity: 0.5;
+    /*margin-top: -4px;*/
     /*border-left: 6px solid transparent;
     border-right: 6px solid transparent;
     border-top: 12px solid #c1c1c1;*/
-    font-size: 25px;
-    line-height: 25px;
+    font-size: 18px;
+    line-height: 14px;
     color: #2682bf;
     font-weight: bold;
+    background: #fff;
+    border-radius: 2px;
+    text-align: center;
+}
+.resp-arrow:hover {
+    opacity: 1;
 }
 
 .resp-arrow:after {
@@ -199,6 +209,9 @@ h2.resp-accordion:first-child {
 
     h2.resp-accordion {
         display: block;
+        border-color: #fff !important;
+        border-style: solid !important;
+        border-width: 0 0 1px 0 !important;
     }
 
     .resp-vtabs .resp-tab-content {

@@ -141,26 +141,54 @@
     <script src="/js/easyResponsiveTabs.js"></script>
 
     <script>
-        $(function(){
-
-            $('#parentHorizontalTab').easyResponsiveTabs({
-                activetab_bg: '#189cf1',
-                inactive_bg: '#189cf1',
-                active_border_color: '#189cf1',
-                active_content_border_color: 'pink',
-                type: 'default', //Types: default, vertical, accordion
-                width: 'auto', //auto or any width like 600px
-                fit: true, // 100% fit in a container
-                tabidentify: 'hor_1', // The tab groups identifier
-                activate: function(event) { // Callback function if tab is switched
+        function prepareTabsAccordion() {
+            if ($(document).width() < 992) {
+                // Accordion
+                $('#parentHorizontalTab').easyResponsiveTabs({
+                    activetab_bg: '#189cf1',
+                    inactive_bg: '#189cf1',
+                    active_border_color: '#189cf1',
+                    active_content_border_color: 'pink',
+                    type: 'default', //Types: default, vertical, accordion
+                    width: 'auto', //auto or any width like 600px
+                    fit: true, // 100% fit in a container
+                    tabidentify: 'hor_1', // The tab groups identifier
+                    activate: function(event) { // Callback function if tab is switched
 //                     var $tab = $(this);
 //                     var $info = $('#nested-tabInfo');
 //                     var $name = $('span', $info);
 //                     $name.text($tab.text());
 //                     $info.show();
-                }
+                    }
+                });
+            } else {
+                // tabs
+                $('#parentHorizontalTab').easyResponsiveTabs({
+                    activetab_bg: '#edf0f2',
+                    inactive_bg: '#edf0f2',
+                    active_border_color: '#edf0f2',
+                    active_content_border_color: 'pink',
+                    type: 'default', //Types: default, vertical, accordion
+                    width: 'auto', //auto or any width like 600px
+                    fit: true, // 100% fit in a container
+                    tabidentify: 'hor_1', // The tab groups identifier
+                    activate: function(event) { // Callback function if tab is switched
+//                     var $tab = $(this);
+//                     var $info = $('#nested-tabInfo');
+//                     var $name = $('span', $info);
+//                     $name.text($tab.text());
+//                     $info.show();
+                    }
+                });
+            }
+        }
+        $(function(){
+            $(window).load(function() {
+                prepareTabsAccordion();
             });
-
+            $(window).resize(function() {
+                prepareTabsAccordion();
+            });
         });
 
     </script>
