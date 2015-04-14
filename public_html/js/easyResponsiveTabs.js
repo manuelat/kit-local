@@ -129,8 +129,7 @@
                 if (options.closed !== true && !(options.closed === 'accordion' && !$respTabsList.is(':visible')) && !(options.closed === 'tabs' && $respTabsList.is(':visible'))) {
                     $($respTabs.find('.resp-accordion.' + options.tabidentify)[tabNum]).addClass('resp-tab-active').css({
                         'background-color': options.activetab_bg + ' !important',
-                        'border-color': options.active_border_color,
-                        'background': '#edf0f2'
+                        'border-color': options.active_border_color
                     });
 
 

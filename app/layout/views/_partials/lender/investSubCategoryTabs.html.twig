@@ -12,51 +12,53 @@
 
         <div class="resp-tabs-container hor_1">
             <div id="#companyInfo">
-                <h3>Unternehmensinformationen</h3>
-                <div class="row">
-                    <div class="col-xs-6 xs-increase-width">
-                        <table class="table">
-                            <tbody>
-                            <tr>
-                                <th>Firmenname</th>
-                                <td>Bitte <a href="/login">melden Sie sich an</a>, um diese Informationen anzusehen </td>
-                            </tr>
-                            <tr>
-                                <th>Branche</th>
-                                <td>Dienstleistungen</td>
-                            </tr>
-                            <tr>
-                                <th>Ort</th>
-                                <td>Berlin</td>
-                            </tr>
-                            <tr>
-                                <th>Rechtsform</th>
-                                <td>GmbH</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="col-xs-6 xs-increase-width">
-                        <table class="table">
-                            <tbody>
-                            <tr>
-                                <th>Gründungsdatum</th>
-                                <td>01.10.1990</td>
-                            </tr>
-                            <tr>
-                                <th>Anzahl Mitarbeiter</th>
-                                <td>7</td>
-                            </tr>
-                            <tr>
-                                <th>Persönliche Bürgschaft</th>
-                                <td class="text-success">Bürgschaft vorhanden <i class="icon-ok"></i></td>
-                            </tr>
-                            <tr>
-                                <th>Kreditzweck</th>
-                                <td>Wachstumskapital</td>
-                            </tr>
-                            </tbody>
-                        </table>
+                <div class="move-block">
+                    <h3>Unternehmensinformationen</h3>
+                    <div class="row">
+                        <div class="col-xs-6 xs-increase-width">
+                            <table class="table">
+                                <tbody>
+                                <tr>
+                                    <th>Firmenname</th>
+                                    <td>Bitte <a href="/login">melden Sie sich an</a>, um diese Informationen anzusehen </td>
+                                </tr>
+                                <tr>
+                                    <th>Branche</th>
+                                    <td>Dienstleistungen</td>
+                                </tr>
+                                <tr>
+                                    <th>Ort</th>
+                                    <td>Berlin</td>
+                                </tr>
+                                <tr>
+                                    <th>Rechtsform</th>
+                                    <td>GmbH</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-xs-6 xs-increase-width">
+                            <table class="table">
+                                <tbody>
+                                <tr>
+                                    <th>Gründungsdatum</th>
+                                    <td>01.10.1990</td>
+                                </tr>
+                                <tr>
+                                    <th>Anzahl Mitarbeiter</th>
+                                    <td>7</td>
+                                </tr>
+                                <tr>
+                                    <th>Persönliche Bürgschaft</th>
+                                    <td class="text-success">Bürgschaft vorhanden <i class="icon-ok"></i></td>
+                                </tr>
+                                <tr>
+                                    <th>Kreditzweck</th>
+                                    <td>Wachstumskapital</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div><!-- end #companyInfo -->
@@ -67,6 +69,7 @@
                     Bitte <a href="">melden Sie sich an</a>, um diese Informationen anzusehen
 
                 {% else %}#}
+                <div class="move-block">
                     <div class="row">
                         <div class="col-xs-12 col-sm-4">
                             <h3>Was macht Ihr Unternehmen?</h3>
@@ -92,83 +95,95 @@
                         </div>
                     </div>
                 {#{% endif %}#}
+                    </div>
 
             </div><!-- end #businessProfile -->
 
             <div id="creditScore">
                 <div class="row">
                     <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
-                        <h3>Zencap-Risikoklasse (Ausfallrisiko in %)</h3>
-                        <div class="desp-20"></div>
-                        <div class="grades-wrapper">
-                            <div class="grade grade-a-plus grade-greater pull-left" data-toggle="tooltip" data-placement="top" title="2,09%">A+</div>
-                            <div class="grade grade-a grade-greater pull-left" data-toggle="tooltip" data-placement="top" title="3,59%">A</div>
-                            <div class="grade grade-b grade-greater pull-left" data-toggle="tooltip" data-placement="top" title="4,23%">B</div>
-                            <div class="grade grade-c grade-greater pull-left" data-toggle="tooltip" data-placement="top" title="0,60%">C</div>
-                            <div class="grade grade-c-minus grade-greater pull-left" data-toggle="tooltip" data-placement="top" title="0,16%">C-</div>
+                        <div class="move-block">
+                            <h3>Zencap-Risikoklasse (Ausfallrisiko in %)</h3>
+                            <div class="desp-20"></div>
+                            <div class="grades-wrapper">
+                                <div class="grade grade-a-plus grade-greater pull-left" data-toggle="tooltip" data-placement="top" title="2,09%">A+</div>
+                                <div class="grade grade-a grade-greater pull-left" data-toggle="tooltip" data-placement="top" title="3,59%">A</div>
+                                <div class="grade grade-b grade-greater pull-left" data-toggle="tooltip" data-placement="top" title="4,23%">B</div>
+                                <div class="grade grade-c grade-greater pull-left" data-toggle="tooltip" data-placement="top" title="0,60%">C</div>
+                                <div class="grade grade-c-minus grade-greater pull-left" data-toggle="tooltip" data-placement="top" title="0,16%">C-</div>
+                            </div>
                         </div>
                         <div class="desp-20"></div>
                     </div>
                     <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
-                        <h3>Bonitätsentwicklung der vergangenen 2 Jahre</h3>
-                        <p>Leider sind aktuell keine Daten der CreditReform verfügbar. Wir bitten um Ihr Verständnis.</p>
+                        <div class="move-block">
+                            <h3>Bonitätsentwicklung der vergangenen 2 Jahre</h3>
+                            <p>Leider sind aktuell keine Daten der CreditReform verfügbar. Wir bitten um Ihr Verständnis.</p>
+                        </div>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="hidden-xs hidden-sm col-md-6 col-lg-6">
-                        <h3>Zencap-Risikoklasse (Ausfallrisiko in %)</h3>
-                        <div class="desp-48"></div>
-                        <div class="grades-wrapper">
-                            <div class="grade grade-a-plus grade-extra-large pull-left" data-toggle="tooltip" data-placement="top" title="2,09%">A+</div>
-                            <div class="grade grade-a grade-extra-large pull-left" data-toggle="tooltip" data-placement="top" title="3,59%">A</div>
-                            <div class="grade grade-b grade-extra-large pull-left" data-toggle="tooltip" data-placement="top" title="4,23%">B</div>
-                            <div class="grade grade-c grade-extra-large pull-left" data-toggle="tooltip" data-placement="top" title="0,60%">C</div>
-                            <div class="grade grade-c-minus grade-extra-large pull-left" data-toggle="tooltip" data-placement="top" title="0,16%">C-</div>
+                        <div class="move-block">
+                            <h3>Zencap-Risikoklasse (Ausfallrisiko in %)</h3>
+                            <div class="desp-48"></div>
+                            <div class="grades-wrapper">
+                                <div class="grade grade-a-plus grade-extra-large pull-left" data-toggle="tooltip" data-placement="top" title="2,09%">A+</div>
+                                <div class="grade grade-a grade-extra-large pull-left" data-toggle="tooltip" data-placement="top" title="3,59%">A</div>
+                                <div class="grade grade-b grade-extra-large pull-left" data-toggle="tooltip" data-placement="top" title="4,23%">B</div>
+                                <div class="grade grade-c grade-extra-large pull-left" data-toggle="tooltip" data-placement="top" title="0,60%">C</div>
+                                <div class="grade grade-c-minus grade-extra-large pull-left" data-toggle="tooltip" data-placement="top" title="0,16%">C-</div>
+                            </div>
                         </div>
                         <div class="desp-48"></div>
                     </div>
                     <div class="hidden-xs col-sm-6 hidden-md hidden-lg">
-                        <h3>Zencap-Risikoklasse (Ausfallrisiko in %)</h3>
-                        <div class="desp-48"></div>
-                        <div class="grades-wrapper">
-                            <div class="grade grade-a-plus grade-wider pull-left" data-toggle="tooltip" data-placement="top" title="2,09%">A+</div>
-                            <div class="grade grade-a grade-wider pull-left" data-toggle="tooltip" data-placement="top" title="3,59%">A</div>
-                            <div class="grade grade-b grade-wider pull-left" data-toggle="tooltip" data-placement="top" title="4,23%">B</div>
-                            <div class="grade grade-c grade-wider pull-left" data-toggle="tooltip" data-placement="top" title="0,60%">C</div>
-                            <div class="grade grade-c-minus grade-wider pull-left" data-toggle="tooltip" data-placement="top" title="0,16%">C-</div>
+                        <div class="move-block">
+                            <h3>Zencap-Risikoklasse (Ausfallrisiko in %)</h3>
+                            <div class="desp-48"></div>
+                            <div class="grades-wrapper">
+                                <div class="grade grade-a-plus grade-wider pull-left" data-toggle="tooltip" data-placement="top" title="2,09%">A+</div>
+                                <div class="grade grade-a grade-wider pull-left" data-toggle="tooltip" data-placement="top" title="3,59%">A</div>
+                                <div class="grade grade-b grade-wider pull-left" data-toggle="tooltip" data-placement="top" title="4,23%">B</div>
+                                <div class="grade grade-c grade-wider pull-left" data-toggle="tooltip" data-placement="top" title="0,60%">C</div>
+                                <div class="grade grade-c-minus grade-wider pull-left" data-toggle="tooltip" data-placement="top" title="0,16%">C-</div>
+                            </div>
                         </div>
                         <div class="desp-48"></div>
                     </div>
 
                     <div class="hidden-xs col-sm-6 col-md-6 col-lg-6">
-
-
-
-                        <h3>Bonitätsentwicklung der vergangenen 2 Jahre</h3>
-                        <p>Leider sind aktuell keine Daten der CreditReform verfügbar. Wir bitten um Ihr Verständnis.</p>
+                        <div class="move-block">
+                            <h3>Bonitätsentwicklung der vergangenen 2 Jahre</h3>
+                            <p>Leider sind aktuell keine Daten der CreditReform verfügbar. Wir bitten um Ihr Verständnis.</p>
+                        </div>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-xs-12 col-sm-6">
-                        <h3>Die Bedeutung der Zencap-Risikoklassen</h3>
-                        <p>Die Unternehmen, in die Sie investieren können, sind je nach Ausfallrisiko in die 5 Zencap-Anlageklassen A+ bis C- eingeteilt. Die Einteilung basiert auf der durchschnittlichen, geschätzten Wahrscheinlichkeit, dass bei der Rückzahlung des Kredits Zahlungsstörungen auftreten, d.h. der Kredit nicht bzw. nicht vollständig zurückgezahlt werden kann. Diese Wahrscheinlichkeit ist für Unternehmen der Klasse A+ am geringsten und für Unternehmen der Klasse C- am höchsten. Ein Beispiel: Wenn Sie in 100 Kredite der Klasse A+ investieren, müssen Sie bei 0,75 Krediten mit eingeschränkter bzw. ausbleibender Rückzahlung rechnen.
-                        </p>
-                        <div class="credit-score-approved">
-                            <span class="approved-icon"><i class="fa fa-check"></i></span><span class="approved-by">
-                            <img src="https://d1uuy7l9kfwygp.cloudfront.net/bundles/intlendweblayout/frontend/images/schufa.png"><br>
-                            Schufa-geprüfter Bürge</span>
+                        <div class="move-block">
+                            <h3>Die Bedeutung der Zencap-Risikoklassen</h3>
+                            <p>Die Unternehmen, in die Sie investieren können, sind je nach Ausfallrisiko in die 5 Zencap-Anlageklassen A+ bis C- eingeteilt. Die Einteilung basiert auf der durchschnittlichen, geschätzten Wahrscheinlichkeit, dass bei der Rückzahlung des Kredits Zahlungsstörungen auftreten, d.h. der Kredit nicht bzw. nicht vollständig zurückgezahlt werden kann. Diese Wahrscheinlichkeit ist für Unternehmen der Klasse A+ am geringsten und für Unternehmen der Klasse C- am höchsten. Ein Beispiel: Wenn Sie in 100 Kredite der Klasse A+ investieren, müssen Sie bei 0,75 Krediten mit eingeschränkter bzw. ausbleibender Rückzahlung rechnen.
+                            </p>
+                            <div class="credit-score-approved">
+                                <span class="approved-icon"><i class="fa fa-check"></i></span><span class="approved-by">
+                                <img src="https://d1uuy7l9kfwygp.cloudfront.net/bundles/intlendweblayout/frontend/images/schufa.png"><br>
+                                Schufa-geprüfter Bürge</span>
+                            </div>
                         </div>
                     </div>
                     <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
                     <div class="col-xs-12 col-sm-6">
-                        <h3>Wie Zencap CREFO-Daten nutzt</h3>
-                        <p>Alle Kreditprojekte auf der Zencap-Plattform werden sorgfältig von unseren erfahrenen Kredit-Experten geprüft. Neben den Finanzdaten der Unternehmen (Bilanzen, Gewinn- und Verlustrechnungen) basiert unsere Risikoeinschätzung auf der historischen Bonitätsbewertung der Creditreform. Die Creditreform hat in 130 Jahren Unternehmensgeschichte ein unvergleichliches Know-how in der Bonitätsanalyse entwickelt und ist Marktführer für hochqualitative Wirtschaftsauskünfte in Deutschland. Kern dieser Auskünfte bildet die eigene, umfassende Firmendatenbank &ndash; mit rund 3,9 Millionen Einträgen die weltweit größte Ihrer Art.</p>
-                        <div class="credit-score-approved">
-                            <span class="approved-icon"><i class="fa fa-check"></i></span><span class="approved-by">
-                            <img src="https://d1uuy7l9kfwygp.cloudfront.net/bundles/intlendweblayout/frontend/images/creditreform.png"><br>
-                            Creditreform-geprüftes Unternehmen</span>
+                        <div class="move-block">
+                            <h3>Wie Zencap CREFO-Daten nutzt</h3>
+                            <p>Alle Kreditprojekte auf der Zencap-Plattform werden sorgfältig von unseren erfahrenen Kredit-Experten geprüft. Neben den Finanzdaten der Unternehmen (Bilanzen, Gewinn- und Verlustrechnungen) basiert unsere Risikoeinschätzung auf der historischen Bonitätsbewertung der Creditreform. Die Creditreform hat in 130 Jahren Unternehmensgeschichte ein unvergleichliches Know-how in der Bonitätsanalyse entwickelt und ist Marktführer für hochqualitative Wirtschaftsauskünfte in Deutschland. Kern dieser Auskünfte bildet die eigene, umfassende Firmendatenbank &ndash; mit rund 3,9 Millionen Einträgen die weltweit größte Ihrer Art.</p>
+                            <div class="credit-score-approved">
+                                <span class="approved-icon"><i class="fa fa-check"></i></span><span class="approved-by">
+                                <img src="https://d1uuy7l9kfwygp.cloudfront.net/bundles/intlendweblayout/frontend/images/creditreform.png"><br>
+                                Creditreform-geprüftes Unternehmen</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -178,8 +193,9 @@
 
                 <div class="row">
                     <div class="col-xs-12">
-
-                        Bitte <a href="">melden Sie sich an</a>, um diese Informationen anzusehen
+                        <div class="move-block">
+                            Bitte <a href="">melden Sie sich an</a>, um diese Informationen anzusehen
+                        </div>
                     </div>
                 </div>
 
