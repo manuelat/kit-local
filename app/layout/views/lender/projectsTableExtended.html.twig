@@ -12,6 +12,30 @@
 
         {% include '_partials/lender/offcanvasSliders.html.twig' %}
 
+        <div class="row">
+            <div class="hidden-xs hidden-sm col-md-12">
+                <hr />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="hidden-xs hidden-sm col-md-9"><strong>1-29 von 29 Kredite</strong></div>
+            <div class="hidden-xs hidden-sm col-md-3">
+                <form action="">
+                    <div class="input-search">
+                        <i class="fa fa-search"></i>
+                        <input type="text" placeholder="Suchen" class="form-control" name="search" value="">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="hidden-xs desp-20"></div>
+
+        <table class="table custom-table">
+            {% include '_partials/tables/loanProjectsTable.html.twig' %}
+        </table>
+
     </div>
 
 </div><!-- end .container -->
@@ -82,27 +106,6 @@
          });
 
         /* end bid button */
-
-        /* should be deleted if no longer used in layout */
-
-         /* input radio that turns into a button*/
-
-        /*$(function(){
-            $('.radio-handler button.btn').click(function(){
-                var that = this;
-                // reset
-                $('div.radio-handler').each(function(){
-                    $(this).children('button').addClass('btn-primary');
-                    $(this).children('button').removeClass('btn-selected');
-                    $(this).children('input').prop("checked", false);
-                });
-                // select current
-                $(that).removeClass('btn-primary');
-                $(that).addClass('btn-selected');
-                $(that).parent().children('label').children('input').prop("checked", true);
-            });
-        });*/
-
 
      </script>
 

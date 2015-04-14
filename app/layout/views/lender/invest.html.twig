@@ -12,10 +12,10 @@
 <div class="container padding-48">
 
     <div class="row">
-        <div class="hidden-xs col-sm-8 col-md-8 col-lg-8">
+        <div class="hidden-xs hidden-sm col-md-8 col-lg-8">
             <h1>{{ 'Aktuelle Kreditprojekte' }}</h1>
         </div>
-        <div class="hidden-xs col-sm-4 col-md-4 col-lg-4">
+        <div class="hidden-xs hidden-sm col-md-4 col-lg-4">
             <small class="pull-right display-limit">Verfügbares Limit <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="top" title="asfdsfasdf"></i>
                 <span id="amount-limit">10.000,00 €</span>
             </small>
@@ -27,7 +27,190 @@
 
         {% include '_partials/lender/offcanvasSliders.html.twig' %}
 
+        <div class="row">
+            <div class="hidden-xs hidden-sm col-md-12">
+                <hr />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="hidden-xs hidden-sm col-md-9"><strong>1-29 von 29 Kredite</strong></div>
+            <div class="hidden-xs hidden-sm col-md-3">
+                <form action="">
+                    <div class="input-search">
+                        <i class="fa fa-search"></i>
+                        <input type="text" placeholder="Suchen" class="form-control" name="search" value="">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="hidden-xs desp-20"></div>
+
+        <table class="table custom-table">
+            {% include '_partials/tables/loanProjectsTable.html.twig' %}
+        </table>
+
     </div>
+
+    {# DATA BELOW IS JUST FOR TESTING NL + ES, SHOULD BE DELETED #}
+
+    {# ================ START TO DELETE ====================== #}
+
+    {# ================ NETHERLANDS ====================== #}
+    <table class="table custom-table">
+        <thead>
+        <tr>
+            <th class="hidden-md hidden-lg"></th>
+            <th>Kredietproject</th>
+            <th class="hidden-md hidden-lg"></th>
+            <th class="hidden-xs hidden-sm">Categorie</th>
+            <th class="text-center">Bedrag</th>
+            <th class="hidden-md hidden-lg"></th>
+            <th class="hidden-xs hidden-sm text-center">Rentevoet</th>
+            <th class="hidden-xs hidden-sm">Termijn</th>
+            <th class="hidden-xs hidden-sm">% gefinancierd</th>
+            <th class="hidden-xs hidden-sm text-center">In behandeling</th>
+            <th class="hidden-xs hidden-sm text-center">Resterende duur</th>
+            <th class="hidden-xs hidden-sm">Investeren</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for art in articles_nl %}
+            <tr>
+                <td class="hidden-md hidden-lg {{ art.risk_class }} sm-width">{{ art.risk_title }}</td>
+                <td class="loan-title">
+                    <a href="{{ path('loanDetails') }}">{{ art.title }}</a>
+                </td>
+                <td class="hidden-md hidden-lg">
+                    {{ art.interest }}<br>{{ art.duration }}
+                </td>
+                <td class="hidden-md hidden-lg sm-width-bar">
+                    <div class="progress custom-progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="{{ art.filled }}" aria-valuemin="0" aria-valuemax="100"
+                             style="min-width: 2em; width: {{ art.filled }};">
+                        </div>
+                        <div class="full-amount">
+                            {{ art.amount }}
+                        </div>
+                    </div>
+                </td>
+                <td class="hidden-xs hidden-sm text-center"><i class="categoryIcon">{{ art.category }}</i></td>
+                <td class="hidden-xs hidden-sm text-right">{{ art.amount }}</td>
+                <td class="hidden-xs hidden-sm text-right">{{ art.interest }}<span class="grade {{ art.risk_class }} grade-small">{{ art.risk_title }}</span>
+                </td>
+                <td class="hidden-xs hidden-sm">{{ art.duration }}</td>
+                <td class="hidden-xs hidden-sm">
+                    <div class="progress default-progress progress-update pull-left">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                             style="width: {{ art.filled }};">
+                        </div>
+                    </div>
+                    <div class="percentage pull-right">{{ art.funded }}</div>
+                </td>
+                <td class="hidden-xs hidden-sm text-right">{{ art.amount_pending }}</td>
+                <td class="hidden-xs hidden-sm text-center">{{ art.days_left }}</td>
+                <td class="hidden-xs hidden-sm">
+                    <div class="bid-item">
+                        <div class="invest"><input type="button" value="Investeren" class="btn btn-nvstr btn-invest btn-block"/>
+                        </div>
+                        <div class="bid-form hidden">
+                            <input class="inp-value" type="text" name=""/>
+                            <input type="button" value="Biten" class="place-bid btn btn-nvstr btn-invest"/>
+                        </div>
+                        <div class="bid-value text-right hidden"><span>-</span>
+                            <a href="javascript:void(0)" class="edit">✎</a>
+                            <a href="javascript:void(0)" class="remove"><i class="glyphicon glyphicon-remove"></i></a>
+                        </div>
+                    </div>
+                </td>
+                <td class="hidden-md hidden-lg sm-width">
+                    <a href="{{ path('loanDetails') }}" class="more"><i class="glyphicon glyphicon-chevron-right"></i></a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    {# ================ SPAIN ====================== #}
+    <table class="table custom-table">
+        <thead>
+        <tr>
+            <th class="hidden-md hidden-lg"></th>
+            <th>Proyecto de préstamo</th>
+            <th class="hidden-md hidden-lg"></th>
+            <th class="hidden-xs hidden-sm">Categoría</th>
+            <th class="text-center">Importe</th>
+            <th class="hidden-md hidden-lg"></th>
+            <th class="hidden-xs hidden-sm text-center">Tipo de interés</th>
+            <th class="hidden-xs hidden-sm">Plazo</th>
+            <th class="hidden-xs hidden-sm">% financiado</th>
+            <th class="hidden-xs hidden-sm text-center">Pendiente</th>
+            <th class="hidden-xs hidden-sm text-center">Tiempo restante</th>
+            <th class="hidden-xs hidden-sm">Invertir</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for art in articles_es %}
+            <tr>
+                <td class="hidden-md hidden-lg {{ art.risk_class }} sm-width">{{ art.risk_title }}</td>
+                <td class="loan-title">
+                    <a href="{{ path('loanDetails') }}">{{ art.title }}</a>
+                </td>
+                <td class="hidden-md hidden-lg">
+                    {{ art.interest }}<br>{{ art.duration }}
+                </td>
+                <td class="hidden-md hidden-lg sm-width-bar">
+                    <div class="progress custom-progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="{{ art.filled }}" aria-valuemin="0" aria-valuemax="100"
+                             style="min-width: 2em; width: {{ art.filled }};">
+                        </div>
+                        <div class="full-amount">
+                            {{ art.amount }}
+                        </div>
+                    </div>
+                </td>
+                <td class="hidden-xs hidden-sm text-center"><i class="categoryIcon">{{ art.category }}</i></td>
+                <td class="hidden-xs hidden-sm text-right">{{ art.amount }}</td>
+                <td class="hidden-xs hidden-sm text-right">{{ art.interest }}<span class="grade {{ art.risk_class }} grade-small">{{ art.risk_title }}</span>
+                </td>
+                <td class="hidden-xs hidden-sm">{{ art.duration }}</td>
+                <td class="hidden-xs hidden-sm">
+                    <div class="progress default-progress progress-update pull-left">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                             style="width: {{ art.filled }};">
+                        </div>
+                    </div>
+                    <div class="percentage pull-right">{{ art.funded }}</div>
+                </td>
+                <td class="hidden-xs hidden-sm text-right">{{ art.amount_pending }}</td>
+                <td class="hidden-xs hidden-sm text-center">{{ art.days_left }}</td>
+                <td class="hidden-xs hidden-sm">
+                    <div class="bid-item">
+                        <div class="invest"><input type="button" value="Invertir" class="btn btn-nvstr btn-invest btn-block"/>
+                        </div>
+                        <div class="bid-form hidden">
+                            <input class="inp-value" type="text" name=""/>
+                            <input type="button" value="Biten" class="place-bid btn btn-nvstr btn-invest"/>
+                        </div>
+                        <div class="bid-value text-right hidden"><span>-</span>
+                            <a href="javascript:void(0)" class="edit btn-edit">✎</a>
+                            <a href="javascript:void(0)" class="remove"><i class="glyphicon glyphicon-remove"></i></a>
+                        </div>
+                    </div>
+                </td>
+                <td class="hidden-md hidden-lg sm-width">
+                    <a href="{{ path('loanDetails') }}" class="more"><i class="glyphicon glyphicon-chevron-right"></i></a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    {# ================ END TO DELETE ====================== #}
+
+
+</div>
 
 </div><!-- end .container -->
 
@@ -68,3 +251,73 @@
 
 
 {% endblock body %}
+
+
+{% block js %}
+    {{ parent() }}
+
+    <script>
+
+        /* bid button */
+        function show_button(item) {
+            item.children('.bid-form').addClass('hidden');
+            item.children('.bid-value').addClass('hidden');
+            item.children('.invest').removeClass('hidden');
+        }
+
+        function show_form(item) {
+            item.children('.bid-form').removeClass('hidden');
+            item.children('.bid-value').addClass('hidden');
+            item.children('.invest').addClass('hidden');
+        }
+
+        function show_completed_form(item, inputValue) {
+            item.children('.bid-value').children('span').html(inputValue);
+            item.children('.bid-form').addClass('hidden');
+            item.children('.bid-value').removeClass('hidden');
+            item.children('.invest').addClass('hidden');
+            // should have an ajax call to a script to add in sessoin or in db
+        }
+
+        function remove_form(item) {
+            item.children('.bid-form').addClass('hidden');
+            item.children('.bid-value').addClass('hidden');
+            item.children('.invest').removeClass('hidden');
+            item.children('.bid-form').children('.inp-value').val('');
+        }
+
+        function edit_form(item) {
+            item.children('.bid-form').removeClass('hidden');
+            item.children('.bid-value').addClass('hidden');
+            item.children('.invest').addClass('hidden');
+        }
+
+        $(function(){
+            $('.invest input').click(function(){
+                var item = $(this).parent().parent();
+                show_form(item);
+            });
+            $('.bid-form .place-bid').click(function(){
+                var item = $(this).parent().parent();
+                var inputValue = $(this).parent().children('.inp-value').val();
+                if ( inputValue == '' || inputValue == undefined ) {
+                    show_button(item);
+                    return;
+                }
+                show_completed_form(item, inputValue);
+            });
+            $('.bid-value .remove').click(function(){
+                var item = $(this).parent().parent();
+                remove_form(item);
+            });
+            $('.bid-value .edit').click(function(){
+                var item = $(this).parent().parent();
+                edit_form(item);
+            });
+        });
+
+        /* end bid button */
+
+    </script>
+
+{% endblock %}

@@ -105,12 +105,51 @@ h6 {
     font-size: @headingsFontSizeH6;
 }
 
-// H tags on mobile
+// H tags on mobile and tablet
 
-@media (min-width: 320px) and (max-width: 667px) {
-    .faux-h1 {
-        font-size: 1.6em; // 22.4px
+@media (min-width: 320px) and (max-width: 767px) {
+    h1, .faux-h1 {
+        font-size: 18px;
+        margin-bottom: 18px;
+        font-weight: bold;
     }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    h1, .faux-h1 {
+        font-size: 22px;
+        margin-bottom: 22px;
+        font-weight: bold;
+    }
+}
+
+
+@media (min-width: 320px) and (max-width: 767px) {
+    h2, .faux-h2 {
+        font-size: 16px;
+        font-weight: bold;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    h2, .faux-h2 {
+        font-size: 18px;
+        font-weight: bold;
+    }
+}
+
+
+@media (min-width: 320px) and (max-width: 767px) {
+    h3, .faux-h3 {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    h3, .faux-h3 {
+        font-size: 16px;
+    }
+
 }
 
 .title-lead {
