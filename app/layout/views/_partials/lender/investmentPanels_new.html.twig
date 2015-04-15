@@ -1,0 +1,119 @@
+<h2>Meine investitionen</h2>
+
+<div class="row add-negative-margin">
+
+    <style>
+        .invest-item {
+            border-bottom: 1px solid #fff;
+            height: 30px;
+            line-height: 30px;
+        }
+        .invest-item-header {
+            height: 55px;
+            line-height: 22px;
+            padding-top: 5px;
+        }
+        .invest-item-blue,
+        .invest-item-green {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .invest-item-blue {
+            background: lightblue;
+        }
+        .invest-item-green {
+            background: lightgreen;
+        }
+        .invest-item-blue .invest-item-header,
+        .invest-item-green .invest-item-header {
+            color: #fff;
+        }
+        .invest-item-header span {
+            font-size: 110%;
+        }
+        .invest-item-header {
+            font-size: 140%;
+        }
+        .invest-item-blue .invest-item-header {
+            background: royalblue;
+        }
+        .invest-item-green .invest-item-header {
+            background: forestgreen;
+        }
+        .invest {
+
+        }
+        .invest-item .padding-left {
+            padding-left: 10px;
+        }
+        .invest-item .padding-right {
+            padding-right: 10px;
+        }
+    </style>
+
+    {% for i in 1..9 %}
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 invest{% if i%2 == 0 %} invest-item-blue{% else %} invest-item-green{% endif %}">
+        <div class="">
+            <div class="invest-item invest-item-header">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="large-subheading text-center">10.000,00 &euro;</div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="text-center">
+                            <span>Investiertes Kapital <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="top" title="{{ text_tooltip }}"></i></span>
+                        </div>
+                    </div>
+                    <i class="fa fa-medium fa-minus-square fa-plus-square hidden-md hidden-lg"></i>
+                </div>
+            </div>
+            {% for j in 1..3 %}
+            <div class="row invest-item">
+                <div class="col-xs-6">
+                    <div class="padding-left">left</div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="padding-right text-right">right</div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        {#
+        <div class="panel-heading" role="tab" id="head-dash-1">
+            <h4 class="panel-title panel-middle">
+                <div class="row square-box">
+                    <a class="lg-no-collapse" id="a-dash-1" data-toggle="collapse" href="#dash-1" aria-expanded="true" aria-controls="dash-1">
+                        <div class="col-xs-12 large-subheading">
+                            10.000,00 €
+                        </div>
+                        <div class="col-xs-12">
+                            <span>Investiertes Kapital <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="top" title="{{ text_tooltip }}"></i></span>
+                        </div>
+                        <i class="fa fa-medium fa-minus-square fa-plus-square hidden-md hidden-lg"></i>
+                    </a>
+                </div>
+            </h4>
+        </div>
+
+        <div id="dash-1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="head-dash-1">
+            <div class="panel-body">
+                <div class="panel-item">
+                    <div class="pull-left">Erhaltene Tilgung</div>
+                    <div class="pull-right">1000000,00 €</div>
+                </div>
+                <div class="panel-item">
+                    <div class="pull-left">Ausstehende Tilgung</div>
+                    <div class="pull-right">1000000,00 €</div>
+                </div>
+                <div class="panel-item">
+                    <div class="pull-left">Abschreibungen</div>
+                    <div class="pull-right">1000000,00 €</div>
+                </div>
+            </div>
+        </div>
+        #}
+
+    </div>
+    {% endfor %}
+</div>
