@@ -1,10 +1,12 @@
-/*  accordion handling on dashboard */
+//set offcanvas loan request menu height
 
 function resizeOffcanvasHeight() {
     $('#sidebar-loan-menu')
         .children('.offcanvas-loan-menu')
         .height($(window).height());
 }
+
+/*  accordion handling on dashboard */
 
 function collapseOnResize(){
     // only for desktop

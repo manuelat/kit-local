@@ -2,38 +2,39 @@
 <tr>
     <th class="hidden-md hidden-lg"></th>
     <th class="hidden-xs">Kreditprojekt</th>
-    <th class="hidden-md hidden-lg text-center">Laufzeit</br>Zins</th>
+    <th class="hidden-md hidden-lg text-center sm-width-ratio">Laufzeit</br>Zins</th>
     <th class="hidden-xs hidden-sm">Kategorie</th>
-    <th class="text-center">Kredit-</br>Betrag</th>
-    {#<th class="hidden-sm hidden-md hidden-lg"><button id="filter-btn" data-toggle="offcanvas" class="btn btn-primary pull-right" type="button"><i class="fa fa-bars fa-lg fa-white"></i></button></th>#}
-   {# <th class="hidden-md hidden-lg"></th>#}
+    <th class="hidden-md hidden-lg text-center">Kredit-</br>Betrag</th>
+    <th class="hidden-xs hidden-sm text-center">Betrag</th>
     <th class="hidden-xs hidden-sm text-center">Zinssatz</th>
     <th class="hidden-xs hidden-sm">Laufzeit</th>
     <th class="hidden-xs hidden-sm">% finanziert</th>
     <th class="hidden-xs hidden-sm text-center">Noch offen</th>
     <th class="hidden-xs hidden-sm text-center">Restzeit</th>
-    <th class="text-center">Anlegen</th>
+    <th class="text-center sm-width-bid">Anlegen</th>
 </tr>
 </thead>
 <tbody>
 {% for art in articles %}
     <tr>
-        <td class="hidden-md hidden-lg {{ art.risk_class }} sm-width">{{ art.risk_title }}</td>
+        <td class="hidden-md hidden-lg {{ art.risk_class }} sm-width text-center"><a href="{{ path('loanDetails') }}">{{ art.risk_title }}</a></td>
         <td class="hidden-xs loan-title">
             <a href="{{ path('loanDetails') }}">{{ art.title }}</a>
         </td>
-        <td class="hidden-md hidden-lg text-center">
-            {{ art.duration }}<br>{{ art.interest }}
+        <td class="hidden-md hidden-lg text-center sm-width-ratio">
+            <a href="{{ path('loanDetails') }}">{{ art.duration }}<br>{{ art.interest }}</a>
         </td>
         <td class="hidden-md hidden-lg sm-width-bar">
-            <div class="progress custom-progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="{{ art.filled }}" aria-valuemin="0" aria-valuemax="100"
-                     style="min-width: 2em; width: {{ art.filled }};">
+            <a href="{{ path('loanDetails') }}">
+                <div class="progress custom-progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="{{ art.filled }}" aria-valuemin="0" aria-valuemax="100"
+                         style="min-width: 2em; width: {{ art.filled }};">
+                    </div>
+                    <div class="full-amount">
+                        {{ art.amount }}
+                    </div>
                 </div>
-                <div class="full-amount">
-                    {{ art.amount }}
-                </div>
-            </div>
+            </a>
         </td>
         <td class="hidden-xs hidden-sm text-center"><i class="categoryIcon">{{ art.category }}</i></td>
         <td class="hidden-xs hidden-sm text-right">{{ art.amount }}</td>
@@ -50,23 +51,20 @@
         </td>
         <td class="hidden-xs hidden-sm text-right">{{ art.amount_pending }}</td>
         <td class="hidden-xs hidden-sm text-center">{{ art.days_left }}</td>
-        <td>
+        <td class="sm-width-bid">
             <div class="bid-item pull-right">
                 <div class="invest"><input type="button" value="Anlegen" class="btn btn-nvstr btn-invest btn-block"/>
                 </div>
                 <div class="bid-form hidden">
                     <input class="inp-value" type="text" name=""/>
-                    <input type="button" value="Biten" class="place-bid btn btn-nvstr btn-invest"/>
+                    <button class="place-bid btn btn-nvstr btn-invest"><i class="fa fa-lg fa-check"></i></button>
                 </div>
                 <div class="bid-value text-right hidden"><span>-</span>
                     <a href="javascript:void(0)" class="edit">✎</a>
-                    <a href="javascript:void(0)" class="remove"><i class="glyphicon glyphicon-remove"></i></a>
+                    <a href="javascript:void(0)" class="remove"><i class="fa fa-times"></i></a>
                 </div>
             </div>
         </td>
-       {# <td class="hidden-md hidden-lg sm-width">
-            <a href="{{ path('loanDetails') }}" class="more"><i class="glyphicon glyphicon-chevron-right"></i></a>
-        </td>#}
     </tr>
 {% endfor %}
 </tbody>
