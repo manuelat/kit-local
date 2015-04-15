@@ -36,18 +36,30 @@ function collapseOnResize(){
         });
     }
 }
+/**
+ * add overlay background when menu is expanded
+ */
+function bgExpanded() {
+    if ($('body').hasClass('nav-expanded')) {
+        $('#dark-overlay').removeClass('hidden');
+    } else {
+        $('#dark-overlay').addClass('hidden');
+    }
+}
 $(function() {
 
     /* plugin Menu Expander*/
 
     //Navigation Menu Slider
-    $('#nav-expander').on('click',function(e){
+    $('#nav-expander').on('click', function(e){
         e.preventDefault();
         $('body').toggleClass('nav-expanded');
+        bgExpanded();
     });
-    $('#nav-close').on('click',function(e){
+    $('#nav-close').on('click', function(e){
         e.preventDefault();
         $('body').removeClass('nav-expanded');
+        bgExpanded();
     });
 
 

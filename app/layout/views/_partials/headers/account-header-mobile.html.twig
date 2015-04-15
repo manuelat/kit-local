@@ -1,18 +1,17 @@
 <nav class="main">
     <ul class="list-unstyled main-menu">
+        <li class="no-bg no-border"><a href="javascript:void(0)" id="nav-close"><i class="fa fa-lg fa-caret-left"></i> Züruck</a></li>
+        <li><a href="{{ path('dashboard') }}">Dashboard</a></li>
+        <li><a href="{{ path('invest') }}">Anlegen</a></li>
+        <li><a href="{{ path('active_biddings') }}">Aktive Gebote</a></li>
+        <li><a href="{{ path('portfolio') }}">Portofolio</a></li>
+        <li><a href="{{ path('lenderUpgradeThreeSteps') }}">Premium Account</a></li>
+        <li><a href="javascript:void(0)">Hilfe</a></li>
+    </ul>
 
-        <!--Include your navigation here-->
-        <li class="text-right"><a href="#" id="nav-close">X</a></li>
-        <li><a href="#">Vorname  Nachname <span class="icon"></span></a></li>
-        <li><a href="{{ path('profile') }}">Profil <span class="icon"></span></a></li>
-        <li><a href="#">Abmelden <span class="icon"></span></a></li>
-        <li><a href="#">Gewählte Kredite <span class="value">150,000 €</span> <span class="icon"></span></a></li>
-        <li><a href="{{ path('dashboard') }}">Dashboard<span class="icon"></span></a></li>
-        <li><a href="{{ path('invest') }}">Anlegen <span class="icon"></span></a></li>
-        <li><a href="{{ path('active_biddings') }}">Gebote <span class="icon"></span></a></li>
-        <li><a href="{{ path('portfolio') }}">Portofolio <span class="icon"></span></a></li>
-        <li><a href="{{ path('lenderUpgradeThreeSteps') }}">Premium-account <span class="icon"></span></a></li>
-        <li><a href="#">Hilfe</a></li>
+    <ul class="list-unstyled main-menu bottom-menu">
+        <li><a href="{{ path('profile') }}">Mein Profil</a></li>
+        <li class="no-border"><a href="javascript:void(0)">Logout</a></li>
     </ul>
 </nav>
 
@@ -26,3 +25,4 @@
         </a>
     </div>
 </div>
+
