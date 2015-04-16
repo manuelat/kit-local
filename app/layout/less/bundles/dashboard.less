@@ -12,7 +12,7 @@
 
     .panel-body {
         padding: 0;
-        overflow: hidden;
+        /*overflow: hidden;*/
     }
 
     .panel-heading {
@@ -21,27 +21,39 @@
 
         h4 {
             position: relative;
-            line-height: 25px;
-            padding: 5px 0;
+            line-height: 34px;
             font-size: 17px;
             font-weight: bold;
             text-align: center;
+            /*margin: 0;*/
 
-            &.panel-big {
-                height: 85px;
-            }
-            &.panel-middle {
-                height: 60px;
-                font-size: 16px;
-            }
-            /*> .large-subheading {
-                font-size: 38px;
-                font-weight: 100;
+           /* &.panel-big {
+                height: 106px;
+                padding: 5px 0;
             }*/
+
+            &.panel-middle {
+                height: 80px;
+                font-size: 16px;
+                padding-top: 10px;
+            }
             a {
                 color: @white;
+
                 span {
                     color: @white;
+                }
+
+                > .large-subheading {
+                    font-size: 38px;
+                    font-weight: 100;
+                }
+
+                @media (min-width: 320px) and (max-width: 991px) {
+                    > .large-subheading {
+                        font-size: 20px;
+                        font-weight: bold;
+                    }
                 }
             }
 
@@ -52,7 +64,7 @@
             .square-box {
                 i.fa-plus-square {
                     position: absolute;
-                    top: 6px;
+                    top: 10px;
                     right: 15px;
                     cursor: pointer;
                 }
@@ -79,12 +91,23 @@
 }
 
 @media (min-width: 320px) and (max-width: 992px) {
-    .dash .panel-title, .dash .panel-heading h4.panel-big, .dash .panel-heading h4.panel-middle {
-        height: 80px;
+    .dash .panel-title, .dash .panel-heading h4.panel-middle {
+        height: 60px;
     }
+
+    /*font-size: 14px;
+    font-weight: bold;
+    height: 60px;
+    line-height: 20px;
+    padding-top: 10px;*/
+
 
     .dash .panel-heading h4.panel-middle {
         font-size: 14px;
+    }
+
+    .dash .panel-heading h4 {
+        line-height: 20px;
     }
 }
 
@@ -114,9 +137,9 @@
         padding: 8px;
         height: 40px;
 
-        &:first-child {
+       /* &:first-child {
             padding-top: 12px;
-        }
+        }*/
 
         &:last-child {
             margin-bottom: 0;
@@ -129,7 +152,7 @@
 @media (min-width: 320px) and (max-width: 992px) {
     .dash {
         .panel-item {
-            margin: -6px 0 8px;
+            /*margin: -6px 0 8px;*/
             padding: 15px;
             height: 40px;
 
