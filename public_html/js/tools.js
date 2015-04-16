@@ -59,7 +59,7 @@ $(function() {
         $('body').toggleClass('nav-expanded');
         bgExpanded();
     });
-    $('#nav-close').on('click', function(e){
+    $('.nav-close').on('click', function(e){
         e.preventDefault();
         $('body').removeClass('nav-expanded');
         bgExpanded();
