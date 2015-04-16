@@ -2,43 +2,33 @@
 <tr>
     <th class="hidden-md hidden-lg"></th>
     <th>Kreditprojekt</th>
-    <th class="hidden-md hidden-lg"></th>
-    <th class="hidden-xs hidden-sm">Kategorie</th>
-    <th class="text-center">Betrag</th>
-    <th class="hidden-md hidden-lg"></th>
-    <th class="hidden-xs hidden-sm text-center">Zinssatz</th>
-    <th class="hidden-xs hidden-sm">Laufzeit</th>
+    <th class="hidden-sm hidden-md hidden-lg"></th>
+    <th class="hidden-xs hidden-sm text-center">Kategorie</th>
+    <th class="hidden-xs hidden-sm text-center">Betrag</th>
+    <th class="hidden-xs text-right">Zinssatz</th>
+    <th class="hidden-xs text-right">Laufzeit</th>
     <th class="hidden-xs hidden-sm">% finanziert</th>
     <th class="hidden-xs hidden-sm text-center">Noch offen</th>
     <th class="hidden-xs hidden-sm text-center">Restzeit</th>
-    <th class="hidden-xs hidden-sm text-center">Gebot</th>
+    <th class="text-right">Gebot</th>
+    <th class="hidden-md hidden-lg"></th>
 </tr>
 </thead>
 <tbody>
 {% for art in articles %}
     <tr>
-        <td class="hidden-md hidden-lg {{ art.risk_class }} sm-width">{{ art.risk_title }}</td>
+        <td class="hidden-md hidden-lg {{ art.risk_class }} sm-width text-center"><a href="{{ path('loanDetails') }}">{{ art.risk_title }}</a></td>
         <td class="loan-title">
             <a href="{{ path('loanDetails') }}">{{ art.title }}</a>
         </td>
-        <td class="hidden-md hidden-lg">
-            {{ art.interest }}<br>{{ art.duration }}
-        </td>
-        <td class="hidden-md hidden-lg sm-width-bar">
-            <div class="progress custom-progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="{{ art.filled }}" aria-valuemin="0" aria-valuemax="100"
-                     style="min-width: 2em; width: {{ art.filled }};">
-                </div>
-                <div class="full-amount">
-                    {{ art.amount }}
-                </div>
-            </div>
+        <td class="hidden-sm hidden-md hidden-lg text-right">
+            <a href="{{ path('loanDetails') }}">{{ art.interest }}<br>{{ art.duration }}</a>
         </td>
         <td class="hidden-xs hidden-sm text-center"><i class="categoryIcon">{{ art.category }}</i></td>
         <td class="hidden-xs hidden-sm text-right">{{ art.amount }}</td>
-        <td class="hidden-xs hidden-sm text-right">{{ art.interest }}<span class="grade {{ art.risk_class }} grade-small">{{ art.risk_title }}</span>
+        <td class="hidden-xs text-right">{{ art.interest }}<span class="grade {{ art.risk_class }} grade-small hidden-xs hidden-sm">{{ art.risk_title }}</span>
         </td>
-        <td class="hidden-xs hidden-sm">{{ art.duration }}</td>
+        <td class="hidden-xs text-right">{{ art.duration }}</td>
         <td class="hidden-xs hidden-sm">
             <div class="progress default-progress progress-update pull-left">
                 <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
@@ -49,11 +39,11 @@
         </td>
         <td class="hidden-xs hidden-sm text-right">{{ art.amount_pending }}</td>
         <td class="hidden-xs hidden-sm text-center">{{ art.days_left }}</td>
-        <td class="hidden-xs hidden-sm text-right bid-amount">
+        <td class="text-right">
             {{ art.amount_pending }}
         </td>
-        <td class="hidden-md hidden-lg sm-width">
-            <a href="{{ path('loanDetails') }}" class="more"><i class="glyphicon glyphicon-chevron-right"></i></a>
+        <td class="hidden-xs hidden-md hidden-lg sm-width text-center">
+            <a href="{{ path('loanDetails') }}" class="more"><i class="fa fa-lg fa-caret-right"></i></a>
         </td>
     </tr>
 {% endfor %}

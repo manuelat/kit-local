@@ -16,7 +16,7 @@
 <tbody>
 {% for art in articles %}
     <tr>
-        <td class="hidden-md hidden-lg {{ art.risk_class }} sm-width">{{ art.risk_title }}</td>
+        <td class="hidden-md hidden-lg {{ art.risk_class }} sm-width text-center"><a href="{{ path('loanDetails') }}">{{ art.risk_title }}</a></td>
 
         <td class="hidden-xs hidden-sm">10.01.2014</td>
 
@@ -25,7 +25,7 @@
         </td>
 
         <td class="hidden-sm hidden-md hidden-lg text-right">
-            {{ art.interest }}<br>{{ art.duration }}
+            <a href="{{ path('loanDetails') }}">{{ art.interest }}<br>{{ art.duration }}</a>
         </td>
 
         <td class="hidden-xs hidden-sm text-center"><i class="categoryIcon">{{ art.category }}</i></td>
@@ -34,8 +34,8 @@
         <td class="hidden-xs hidden-sm text-center">{{ art.days_left }}</td>
         <td class="hidden-xs hidden-sm text-right">{{ art.amount }}</td>
         <td class="text-right">{{ art.amount_pending }}</td>
-        <td class="hidden-md hidden-lg sm-width">
-            <a href="{{ path('loanDetails') }}" class="more"><i class="glyphicon glyphicon-chevron-right"></i></a>
+        <td class="hidden-xs hidden-md hidden-lg sm-width text-center">
+            <a href="{{ path('loanDetails') }}" class="more"><i class="fa fa-lg fa-caret-right"></i></a>
         </td>
     </tr>
 {% endfor %}

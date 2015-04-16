@@ -19,7 +19,7 @@
 <tbody>
 {% for art in articles %}
     <tr>
-        <td class="hidden-md hidden-lg {{ art.risk_class }} sm-width"><a href="{{ path('loanDetails') }}">{{ art.risk_title }}</a></td>
+        <td class="hidden-md hidden-lg {{ art.risk_class }} sm-width text-center"><a href="{{ path('loanDetails') }}">{{ art.risk_title }}</a></td>
         <td class="loan-title">
             <a href="{{ path('loanDetails') }}">{{ art.title }}</a>
         </td>
@@ -50,7 +50,7 @@
         <td class="hidden-xs hidden-sm text-right bid-amount">
             {{ art.amount_pending }}
         </td>
-        <td class="hidden-xs hidden-md hidden-lg sm-width">
+        <td class="hidden-xs hidden-md hidden-lg sm-width text-center">
             <a href="{{ path('loanDetails') }}" class="more"><i class="fa fa-lg fa-caret-right"></i></a>
         </td>
     </tr>
