@@ -7,13 +7,18 @@ USED FOR TESTING, THIS VIEW MUST BE DELETED ...
     <ul class="list-unstyled main-menu">
 
         <!--Include your navigation here-->
-        <li class="text-right"><a href="#" id="nav-close">X</a></li>
-        <li><a href="#">Vorname  Nachname <span class="icon"></span></a></li>
-        <li><a href="{{ path('profile') }}">Profil <span class="icon"></span></a></li>
-        <li><a href="#">Abmelden <span class="icon"></span></a></li>
-        <li><a href="{{ path('cockpit') }}">Mein Kredit <span class="icon"></span></a></li>
-        <li><a href="{{ path('payments_overview') }}">Payment plans<span class="icon"></span></a></li>
+        <li class="no-bg no-border"><a href="javascript:void(0)" id="nav-close"><i class="fa fa-lg fa-caret-left"></i> Züruck</a></li>
+        <li><a href="#">Vorname  Nachname</a></li>
+        <li><a href="{{ path('profile') }}">Profil</a></li>
+        <li><a href="#">Abmelden</a></li>
+        <li><a href="{{ path('cockpit') }}">Mein Kredit</a></li>
+        <li><a href="{{ path('payments_overview') }}">Payment plans</a></li>
         <li><a href="#">Hilfe</a></li>
+    </ul>
+
+    <ul class="list-unstyled main-menu bottom-menu">
+        <li><a href="{{ path('profile') }}">Mein Profil</a></li>
+        <li class="no-border"><a href="javascript:void(0)">Logout</a></li>
     </ul>
 </nav>
 

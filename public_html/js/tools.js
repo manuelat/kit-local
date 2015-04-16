@@ -43,6 +43,7 @@ function collapseOnResize(){
  */
 function bgExpanded() {
     if ($('body').hasClass('nav-expanded')) {
+        $('#dark-overlay').height($(document).height());
         $('#dark-overlay').removeClass('hidden');
     } else {
         $('#dark-overlay').addClass('hidden');
