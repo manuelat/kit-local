@@ -13,7 +13,16 @@
         <div class="row">
             <div class="col-xs-12">
                 <h1>Aktive Gebote</h1>
-                <p>Auf dieser Seite finden Sie eine Übersicht aller Kreditprojekte, in die Sie investiert haben, deren Gesamtbetrag jedoch noch nicht vollständig finanziert worden ist. Sobald Zencap das Geld aller Investoren erhalten hat, wird der Kreditbetrag dem Kreditnehmer ausgezahlt. Dies kann bis zu einer Woche dauern. Sobald der Kreditnehmer den Betrag erhalten hat, wird das Kreditprojekt als “finanziert” markiert und die Rückzahlungsphase startet. Ab diesem Zeitpunkt finden Sie das Projekt unter dem Reiter “Portfolio” und Sie erhalten monatliche Auszahlungen. Wird ein Kreditprojekt nicht vollständig finanziert, wird der Anlagebetrag in Ihrem Dashboard erneut unter "verfügbares Limit" bzw. "verfügbares Guthaben" angezeigt.</p>
+
+                <p>Auf dieser Seite finden Sie eine Übersicht aller Kreditprojekte, in die Sie investiert haben, deren
+                    Gesamtbetrag jedoch noch nicht vollständig finanziert worden ist. Sobald Zencap das Geld aller
+                    Investoren erhalten hat, wird der Kreditbetrag dem Kreditnehmer ausgezahlt. Dies kann bis zu einer
+                    Woche dauern. Sobald der Kreditnehmer den Betrag erhalten hat, wird das Kreditprojekt als
+                    “finanziert” markiert und die Rückzahlungsphase startet. Ab diesem Zeitpunkt finden Sie das Projekt
+                    unter dem Reiter “Portfolio” und Sie erhalten monatliche Auszahlungen. Wird ein Kreditprojekt nicht
+                    vollständig finanziert, wird der Anlagebetrag in Ihrem Dashboard erneut unter "verfügbares Limit"
+                    bzw. "verfügbares Guthaben" angezeigt.</p>
+
                 <p><strong>0 Kredite</strong></p>
             </div>
         </div>
@@ -32,138 +41,136 @@
         {# ================ START TO DELETE ====================== #}
 
         {# ================ NETHERLANDS ====================== #}
-    <div class="row">
-    <div class="col-xs-12 cancel-padding">
-        <table class="table custom-table">
-            <thead>
-            <tr>
-                <th class="hidden-md hidden-lg"></th>
-                <th>Kredietproject</th>
-                <th class="hidden-sm hidden-md hidden-lg"></th>
-                <th class="hidden-xs visible-sm hidden-md hidden-lg text-right">Rentevoet</th>
-                <th class="hidden-xs visible-sm hidden-md hidden-lg text-right">Zinssatz</th>
-                <th class="hidden-xs hidden-sm">Categorie</th>
-                <th class="text-right">Bedrag</th>
-                <th class="hidden-xs hidden-md hidden-lg"></th>
-                <th class="hidden-xs hidden-sm text-center">Rentevoet</th>
-                <th class="hidden-xs hidden-sm">Termijn</th>
-                <th class="hidden-xs hidden-sm">% gefinancierd</th>
-                <th class="hidden-xs hidden-sm text-center">In behandeling</th>
-                <th class="hidden-xs hidden-sm text-center">Resterende duur</th>
-                <th class="hidden-xs hidden-sm text-center">Investeren</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% for art in articles_nl %}
-                <tr>
-                    <td class="hidden-md hidden-lg {{ art.risk_class }} sm-width"><a href="{{ path('loanDetails') }}">{{ art.risk_title }}</a></td>
-                    <td class="loan-title">
-                        <a href="{{ path('loanDetails') }}">{{ art.title }}</a>
-                    </td>
-                    <td class="hidden-sm hidden-md hidden-lg text-right">
-                        <a href="{{ path('loanDetails') }}">{{ art.interest }}<br>{{ art.duration }}</a>
-                    </td>
-                    <td class="hidden-xs visible-sm hidden-md hidden-lg text-right"> 4 jahre</td>
-                    <td class="hidden-xs visible-sm hidden-md hidden-lg text-right">{{ art.interest }}</td>
+        <div class="row">
+            <div class="col-xs-12 cancel-padding">
+                <table class="table custom-table">
+                    <thead>
+                    <tr>
+                        <th class="hidden-md hidden-lg"></th>
+                        <th>Kredietproject</th>
+                        <th class="hidden-sm hidden-md hidden-lg"></th>
+                        <th class="hidden-xs visible-sm hidden-md hidden-lg text-right">Rentevoet</th>
+                        <th class="hidden-xs visible-sm hidden-md hidden-lg text-right">Zinssatz</th>
+                        <th class="hidden-xs hidden-sm">Categorie</th>
+                        <th class="text-right">Bedrag</th>
+                        <th class="hidden-xs hidden-sm text-center">Rentevoet</th>
+                        <th class="hidden-xs hidden-sm">Termijn</th>
+                        <th class="hidden-xs hidden-sm">% gefinancierd</th>
+                        <th class="hidden-xs hidden-sm text-center">In behandeling</th>
+                        <th class="hidden-xs hidden-sm text-center">Resterende duur</th>
+                        <th class="hidden-xs hidden-sm text-center">Investeren</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for art in articles_nl %}
+                        <tr>
+                            <td class="hidden-md hidden-lg {{ art.risk_class }} sm-width text-center"><a
+                                    href="{{ path('loanDetails') }}">{{ art.risk_title }}</a></td>
+                            <td class="loan-title">
+                                <a href="{{ path('loanDetails') }}">{{ art.title }}</a>
+                            </td>
+                            <td class="hidden-sm hidden-md hidden-lg text-right">
+                                <a href="{{ path('loanDetails') }}">{{ art.interest }}<br>{{ art.duration }}</a>
+                            </td>
+                            <td class="hidden-xs visible-sm hidden-md hidden-lg text-right"> 4 jahre</td>
+                            <td class="hidden-xs visible-sm hidden-md hidden-lg text-right">{{ art.interest }}</td>
 
-                    <td class="hidden-md hidden-lg text-right">
-                        {{ art.amount }}
-                    </td>
-                    <td class="hidden-xs hidden-sm text-center"><i class="categoryIcon">{{ art.category }}</i></td>
-                    <td class="hidden-xs hidden-sm text-right">{{ art.amount }}</td>
-                    <td class="hidden-xs hidden-sm text-right">{{ art.interest }}<span class="grade {{ art.risk_class }} grade-small">{{ art.risk_title }}</span>
-                    </td>
-                    <td class="hidden-xs hidden-sm">{{ art.duration }}</td>
-                    <td class="hidden-xs hidden-sm">
-                        <div class="progress default-progress progress-update pull-left">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                                 style="width: {{ art.filled }};">
-                            </div>
-                        </div>
-                        <div class="percentage pull-right">{{ art.funded }}</div>
-                    </td>
-                    <td class="hidden-xs hidden-sm text-right">{{ art.amount_pending }}</td>
-                    <td class="hidden-xs hidden-sm text-center">{{ art.days_left }}</td>
-                    <td class="hidden-xs hidden-sm text-right bid-amount">
-                        {{ art.amount_pending }}
-                    </td>
-                    <td class="hidden-xs hidden-md hidden-lg sm-width">
-                        <a href="{{ path('loanDetails') }}" class="more"><i class="fa fa-lg fa-caret-right"></i></a>
-                    </td>
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
-    </div>
-    </div>
+                            <td class="hidden-md hidden-lg text-right">
+                                {{ art.amount }}
+                            </td>
+                            <td class="hidden-xs hidden-sm text-center"><i class="categoryIcon">{{ art.category }}</i>
+                            </td>
+                            <td class="hidden-xs hidden-sm text-right">{{ art.amount }}</td>
+                            <td class="hidden-xs hidden-sm text-right">{{ art.interest }}<span
+                                    class="grade {{ art.risk_class }} grade-small">{{ art.risk_title }}</span>
+                            </td>
+                            <td class="hidden-xs hidden-sm">{{ art.duration }}</td>
+                            <td class="hidden-xs hidden-sm">
+                                <div class="progress default-progress progress-update pull-left">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                         aria-valuemax="100"
+                                         style="width: {{ art.filled }};">
+                                    </div>
+                                </div>
+                                <div class="percentage pull-right">{{ art.funded }}</div>
+                            </td>
+                            <td class="hidden-xs hidden-sm text-right">{{ art.amount_pending }}</td>
+                            <td class="hidden-xs hidden-sm text-center">{{ art.days_left }}</td>
+                            <td class="hidden-xs hidden-sm text-right bid-amount">
+                                {{ art.amount_pending }}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
         {# ================ SPAIN ====================== #}
-    <div class="row">
-    <div class="col-xs-12 cancel-padding">
-        <table class="table custom-table">
-            <thead>
-            <tr>
-                <th class="hidden-md hidden-lg"></th>
-                <th>Proyecto de préstamo</th>
-                <th class="hidden-sm hidden-md hidden-lg"></th>
-                <th class="hidden-xs visible-sm hidden-md hidden-lg text-right">Plazo</th>
-                <th class="hidden-xs visible-sm hidden-md hidden-lg text-right">Tipo de interés</th>
-                <th class="hidden-xs hidden-sm">Categoría</th>
-                <th class="text-right">Importe</th>
-                <th class="hidden-xs hidden-md hidden-lg"></th>
-                <th class="hidden-xs hidden-sm text-center">Tipo de interés</th>
-                <th class="hidden-xs hidden-sm">Plazo</th>
-                <th class="hidden-xs hidden-sm">% financiado</th>
-                <th class="hidden-xs hidden-sm text-center">Pendiente</th>
-                <th class="hidden-xs hidden-sm text-center">Tiempo restante</th>
-                <th class="hidden-xs hidden-sm text-center">Invertir</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% for art in articles_es %}
-                <tr>
-                    <td class="hidden-md hidden-lg {{ art.risk_class }} sm-width"><a href="{{ path('loanDetails') }}">{{ art.risk_title }}</a></td>
-                    <td class="loan-title">
-                        <a href="{{ path('loanDetails') }}">{{ art.title }}</a>
-                    </td>
-                    <td class="hidden-sm hidden-md hidden-lg text-right">
-                        <a href="{{ path('loanDetails') }}">{{ art.interest }}<br>{{ art.duration }}</a>
-                    </td>
-                    <td class="hidden-xs visible-sm hidden-md hidden-lg text-right"> 4 jahre</td>
-                    <td class="hidden-xs visible-sm hidden-md hidden-lg text-right">{{ art.interest }}</td>
+        <div class="row">
+            <div class="col-xs-12 cancel-padding">
+                <table class="table custom-table">
+                    <thead>
+                    <tr>
+                        <th class="hidden-md hidden-lg"></th>
+                        <th>Proyecto de préstamo</th>
+                        <th class="hidden-sm hidden-md hidden-lg"></th>
+                        <th class="hidden-xs visible-sm hidden-md hidden-lg text-right">Plazo</th>
+                        <th class="hidden-xs visible-sm hidden-md hidden-lg text-right">Tipo de interés</th>
+                        <th class="hidden-xs hidden-sm">Categoría</th>
+                        <th class="text-right">Importe</th>
+                        <th class="hidden-xs hidden-sm text-center">Tipo de interés</th>
+                        <th class="hidden-xs hidden-sm">Plazo</th>
+                        <th class="hidden-xs hidden-sm">% financiado</th>
+                        <th class="hidden-xs hidden-sm text-center">Pendiente</th>
+                        <th class="hidden-xs hidden-sm text-center">Tiempo restante</th>
+                        <th class="hidden-xs hidden-sm text-center">Invertir</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for art in articles_es %}
+                        <tr>
+                            <td class="hidden-md hidden-lg {{ art.risk_class }} sm-width text-center"><a
+                                    href="{{ path('loanDetails') }}">{{ art.risk_title }}</a></td>
+                            <td class="loan-title">
+                                <a href="{{ path('loanDetails') }}">{{ art.title }}</a>
+                            </td>
+                            <td class="hidden-sm hidden-md hidden-lg text-right">
+                                <a href="{{ path('loanDetails') }}">{{ art.interest }}<br>{{ art.duration }}</a>
+                            </td>
+                            <td class="hidden-xs visible-sm hidden-md hidden-lg text-right"> 4 jahre</td>
+                            <td class="hidden-xs visible-sm hidden-md hidden-lg text-right">{{ art.interest }}</td>
 
-                    <td class="hidden-md hidden-lg text-right">
-                        {{ art.amount }}
-                    </td>
-                    <td class="hidden-xs hidden-sm text-center"><i class="categoryIcon">{{ art.category }}</i></td>
-                    <td class="hidden-xs hidden-sm text-right">{{ art.amount }}</td>
-                    <td class="hidden-xs hidden-sm text-right">{{ art.interest }}<span class="grade {{ art.risk_class }} grade-small">{{ art.risk_title }}</span>
-                    </td>
-                    <td class="hidden-xs hidden-sm">{{ art.duration }}</td>
-                    <td class="hidden-xs hidden-sm">
-                        <div class="progress default-progress progress-update pull-left">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                                 style="width: {{ art.filled }};">
-                            </div>
-                        </div>
-                        <div class="percentage pull-right">{{ art.funded }}</div>
-                    </td>
-                    <td class="hidden-xs hidden-sm text-right">{{ art.amount_pending }}</td>
-                    <td class="hidden-xs hidden-sm text-center">{{ art.days_left }}</td>
-                    <td class="hidden-xs hidden-sm text-right bid-amount">
-                        {{ art.amount_pending }}
-                    </td>
-                    <td class="hidden-xs hidden-md hidden-lg sm-width">
-                        <a href="{{ path('loanDetails') }}" class="more"><i class="fa fa-lg fa-caret-right"></i></a>
-                    </td>
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
-    </div>
-    </div>
+                            <td class="hidden-md hidden-lg text-right">
+                                {{ art.amount }}
+                            </td>
+                            <td class="hidden-xs hidden-sm text-center"><i class="categoryIcon">{{ art.category }}</i>
+                            </td>
+                            <td class="hidden-xs hidden-sm text-right">{{ art.amount }}</td>
+                            <td class="hidden-xs hidden-sm text-right">{{ art.interest }}<span
+                                    class="grade {{ art.risk_class }} grade-small">{{ art.risk_title }}</span>
+                            </td>
+                            <td class="hidden-xs hidden-sm">{{ art.duration }}</td>
+                            <td class="hidden-xs hidden-sm">
+                                <div class="progress default-progress progress-update pull-left">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                         aria-valuemax="100"
+                                         style="width: {{ art.filled }};">
+                                    </div>
+                                </div>
+                                <div class="percentage pull-right">{{ art.funded }}</div>
+                            </td>
+                            <td class="hidden-xs hidden-sm text-right">{{ art.amount_pending }}</td>
+                            <td class="hidden-xs hidden-sm text-center">{{ art.days_left }}</td>
+                            <td class="hidden-xs hidden-sm text-right bid-amount">
+                                {{ art.amount_pending }}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
         {# ================ END TO DELETE ====================== #}
-
-
 
 
     </div><!-- .container -->
