@@ -45,8 +45,10 @@ function bgExpanded() {
     if ($('body').hasClass('nav-expanded')) {
         $('#dark-overlay').height($(document).height());
         $('#dark-overlay').removeClass('hidden');
+        $('#nav-expander').addClass('hidden');
     } else {
         $('#dark-overlay').addClass('hidden');
+        $('#nav-expander').removeClass('hidden');
     }
 }
 $(function() {
