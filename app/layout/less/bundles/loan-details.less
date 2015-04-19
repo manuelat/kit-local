@@ -33,6 +33,30 @@ iframe[src^='http://marketing.net.zencap'] {
     display: none;
 }
 
+@media (min-width: 320px) and (max-width: 991px) {
+    #companyInfo {
+        .table {
+            margin-bottom: 0;
+        }
+    }
+}
+
+#creditScore .grades-wrapper {
+    margin: 60px 0 0;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #creditScore figure {
+        height: 99px;
+    }
+}
+
+@media (min-width: 992px) {
+    #creditScore figure {
+        height: 136px;
+    }
+}
+
 .credit-score-approved {
     background-color: #edf0f2;
     height: 96px;
@@ -54,7 +78,16 @@ iframe[src^='http://marketing.net.zencap'] {
     text-align: center;
 }
 
+#financials {
+    .table.hidden-lg {
+        th, td {
+            white-space: nowrap;
+        }
+    }
+}
+
 #financials thead h4 {
     margin: 35px 0 30px;
+    font-size: 16px;
 }
 
