@@ -1,6 +1,7 @@
 <table class="table table-striped custom-table">
     <thead>
     <tr>
+        <th class=""></th>
         <th class="loan-title">Kreditprojekt</th>
         <th class="text-right">Betrag</th>
         <th class="hidden-xs text-center">Laufzeit</th>
@@ -9,10 +10,12 @@
         <th class="hidden-xs hidden-sm text-right">Ausstehend Tilgung</th>
         <th class="hidden-xs hidden-sm text-right">Status</th>
         <th class="text-right">Aktion</th>
+        <th></th>
     </tr>
     </thead>
     <tbody>
         <tr>
+            <td></td>
             <td class="loan-title"><a href="{{ path('payments_details') }}">{{ articles[0].title }}</a></td>
             <td class="text-right">{{ articles[0].amount }}</td>
             <td class="hidden-xs text-center">{{ articles[0].duration_months }}</td>
@@ -21,6 +24,7 @@
             <td class="hidden-xs hidden-sm text-right">{{ articles[0].outstanding_principal }}</td>
             <td class="hidden-xs hidden-sm text-right">Rückzahlung</td>
             <td class="text-right"><a href="{{ path('payments_details') }}">{{ articles[0].aktion }}</a></td>
+            <td></td>
         </tr>
     </tbody>
 </table>

@@ -2,6 +2,7 @@
 <tr>
     <th class="hidden-md hidden-lg"></th>
     <th class="hidden-xs hidden-sm">Aktiv seit</th>
+    <th class="hidden-md hidden-lg"></th>
     <th>Kreditprojekt</th>
     <th class="hidden-sm hidden-md hidden-lg"></th>
     <th class="hidden-xs hidden-sm text-center">Kategorie</th>
@@ -10,6 +11,7 @@
     <th class="hidden-xs hidden-sm text-center">Restlaufzeit</th>
     <th class="hidden-xs hidden-sm text-center">Anlagebetrag</th>
     <th class="text-right">Ausstehend</th>
+    <th class="hidden-xs"></th>
 </tr>
 </thead>
 <tbody>
@@ -18,7 +20,7 @@
         <td class="hidden-md hidden-lg {{ art.risk_class }} sm-width text-center"><a href="{{ path('loanDetails') }}">{{ art.risk_title }}</a></td>
 
         <td class="hidden-xs hidden-sm">10.01.2014</td>
-
+        <td class="hidden-md hidden-lg"></td>
         <td class="loan-title">
             <a href="{{ path('lender_portfolio_loans') }}">{{ art.title }}</a>
         </td>
@@ -33,6 +35,7 @@
         <td class="hidden-xs hidden-sm text-center">{{ art.days_left }}</td>
         <td class="hidden-xs hidden-sm text-right">{{ art.amount }}</td>
         <td class="text-right">{{ art.amount_pending }}</td>
+        <td class="hidden-xs"></td>
     </tr>
 {% endfor %}
 </tbody>

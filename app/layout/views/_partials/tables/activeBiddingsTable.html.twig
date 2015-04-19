@@ -1,28 +1,27 @@
 <thead>
 <tr>
     <th class="hidden-md hidden-lg"></th>
+    <th></th>
     <th>Kreditprojekt</th>
     <th class="hidden-sm hidden-md hidden-lg"></th>
     <th class="hidden-xs visible-sm hidden-md hidden-lg text-right">Laufzeit</th>
     <th class="hidden-xs visible-sm hidden-md hidden-lg text-right">Zinssatz</th>
     <th class="hidden-xs hidden-sm">Kategorie</th>
     <th class="text-right">Betrag</th>
-
-    {#<th class="hidden-xs hidden-md hidden-lg"></th>#}
-
-
     <th class="hidden-xs hidden-sm text-center">Zinssatz</th>
     <th class="hidden-xs hidden-sm">Laufzeit</th>
     <th class="hidden-xs hidden-sm">% finanziert</th>
     <th class="hidden-xs hidden-sm text-center">Noch offen</th>
     <th class="hidden-xs hidden-sm text-center">Restzeit</th>
     <th class="hidden-xs hidden-sm text-center">Gebot</th>
+    <th class="hidden-xs"></th>
 </tr>
 </thead>
 <tbody>
 {% for art in articles %}
     <tr>
         <td class="hidden-md hidden-lg {{ art.risk_class }} sm-width text-center"><a href="{{ path('loanDetails') }}">{{ art.risk_title }}</a></td>
+        <td></td>
         <td class="loan-title">
             <a href="{{ path('loanDetails') }}">{{ art.title }}</a>
         </td>
@@ -53,12 +52,7 @@
         <td class="hidden-xs hidden-sm text-right bid-amount">
             {{ art.amount_pending }}
         </td>
-
-        {#<td class="hidden-xs hidden-md hidden-lg sm-width">
-            <a href="{{ path('loanDetails') }}" class="more"><i class="fa fa-lg fa-caret-right"></i></a>
-        </td>#}
-
-
+        <td class="hidden-xs"></td>
     </tr>
 {% endfor %}
 </tbody>
