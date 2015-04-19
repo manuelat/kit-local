@@ -3,40 +3,31 @@
 
         <!--Include your navigation here-->
         <li class="no-bg no-border"><a href="javascript:void(0)" class="nav-close"><i class="fa fa-lg fa-caret-left"></i> Züruck</a></li>
-        <li><a href="{{ path('login') }}">Anmelden/Registrieren <span class="icon"></span></a></li>
-        <li><a href="#">Hilfe <span class="icon"></span></a></li>
+        <li><a href="{{ path('login') }}">Anmelden/Registrieren </a></li>
+        <li><a href="#">Hilfe </a></li>
         <li><a href="#">Ihr Firmenkredit</a>
             <ul class="list-unstyled">
-                <li class="sub-nav"><a href="{{ path('borrowerGettingStarted') }}">Kredit beantragen <span class="icon"></span></a></li>
-                <li class="sub-nav"><a href="{{ path('ratesFeesBorrower') }}">Leitfaden <span class="icon"></span></a></li>
-                <li class="sub-nav"><a href="#">Häufige Fragen <span class="icon"></span></a></li>
+                <li class="sub-nav"><a href="{{ path('borrowerGettingStarted') }}">Kredit beantragen </a></li>
+                <li class="sub-nav"><a href="{{ path('ratesFeesBorrower') }}">Leitfaden </a></li>
+                <li class="sub-nav"><a href="#">Häufige Fragen </a></li>
             </ul>
         </li>
         <li><a href="#">Ihre Investition</a>
             <ul class="list-unstyled">
-                <li class="sub-nav"><a href="{{ path('lenderGettingStarted') }}">Geld anlegen <span class="icon"></span></a></li>
-                <li class="sub-nav"><a href="{{ path('ratesFeesInvestor') }}">Renditen &amp; Gebühren <span class="icon"></span></a></li>
-                <li class="sub-nav"><a href="#">Häufige Fragen <span class="icon"></span></a></li>
+                <li class="sub-nav"><a href="{{ path('lenderGettingStarted') }}">Geld anlegen </a></li>
+                <li class="sub-nav"><a href="{{ path('ratesFeesInvestor') }}">Renditen &amp; Gebühren </a></li>
+                <li class="sub-nav"><a href="#">Häufige Fragen </a></li>
             </ul>
         </li>
-        {#<li><a href="#">Dropdown</a>
-            <ul class="list-unstyled">
-                <li class="sub-nav"><a href="#">Sub Menu One <span class="icon"></span></a></li>
-                <li class="sub-nav"><a href="#">Sub Menu Two <span class="icon"></span></a></li>
-                <li class="sub-nav"><a href="#">Sub Menu Three <span class="icon"></span></a></li>
-                <li class="sub-nav"><a href="#">Sub Menu Four <span class="icon"></span></a></li>
-                <li class="sub-nav"><a href="#">Sub Menu Five <span class="icon"></span></a></li>
-            </ul>
-        </li>#}
-        <li><a href="{{ path('creditProjects') }}">Kreditprojekte <span class="icon"></span></a></li>
-        <li><a href="{{ path('howItWorks') }}">So Funktioniert's <span class="icon"></span></a></li>
-        <li><a href="{{ path('blog') }}">Blog <span class="icon"></span></a></li>
+        <li><a href="{{ path('creditProjects') }}">Kreditprojekte </a></li>
+        <li><a href="{{ path('howItWorks') }}">So Funktioniert's </a></li>
+        <li><a href="{{ path('blog') }}">Blog </a></li>
     </ul>
 </nav>
 
 <div class="navbar navbar-inverse navbar-fixed-top">
-    <a class="navbar-brand" href="#">
-        <img src="/bundles/intlendweblayout/frontend/images/logo.png" alt="Example" />
+    <a class="navbar-brand" href="{{ path('homepage') }}">
+        <img src="/bundles/intlendweblayout/frontend/images/logo.png" alt="Zencap" />
     </a>
     <div class="navbar-header pull-right">
         <a id="nav-expander" class="nav-expander fixed">
