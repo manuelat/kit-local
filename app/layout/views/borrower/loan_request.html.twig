@@ -10,7 +10,7 @@
 
 {% include '_partials/borrower/offcanvas_loan_menu.html.twig' %}
 
-<div class="padding-48">
+<div class="spacing">
     <div class="container">
 
         <div class="row">
@@ -39,7 +39,7 @@
     </div><!-- .container -->
 
     <div class="container-wrapper form-footer odd">
-        <div class="container padding-48">
+        <div class="container spacing">
             <div class="row">
                 <div class="col-xs-12 screen-align-btn">
                     <button class="btn btn-lg btn-brrwr" type="submit">{{ 'Speichern & Weiter' }}</button>
@@ -51,7 +51,7 @@
     <div class="clearfix"></div>
 
 
-</div><!-- end .padding-48 -->
+</div><!-- end .spacing -->
 
 {% endblock body %}
 
@@ -60,7 +60,7 @@
     <script>
         /* horizontal loan request menu */
         function stepsResize() {
-            if ($(document).width() < 992) {
+            if ($(document).width() > 675 && $(document).width() < 992) {
                 var div_width = $('.register-step').width();
                 var new_width = div_width - ($('.register-step-item').length * 45);
                 $('.register-step .activ .text').css({'width': new_width + 'px'});
@@ -85,8 +85,10 @@
 
             // display popup menu selector when click on text
             $('.register-step-item .text').click(function(e){
-                e.preventDefault();
-                $('#sidebar-loan-menu').removeClass('hidden');
+                if ($(document).width() > 675 && $(document).width() < 992) {
+                    e.preventDefault();
+                    $('#sidebar-loan-menu').removeClass('hidden');
+                }
             });
             $('#nav-remove, .nav-close-menu').click(function(e){
                 e.preventDefault();
