@@ -1,14 +1,13 @@
 {% extends 'layout.html.twig' %}
 
 {% block header %}
-    {# should be deleted #}
     {% include '_partials/headers/account_header_borrower_for_testing.html.twig' %}
 
 {% endblock header %}
 
 {% block body %}
 
-<div class="padding-48">
+<div class="spacing">
 
     <form action="" method="post" role="form" class="form-register" id="register_borrower_form">
 
@@ -41,7 +40,7 @@
         </div><!-- end .container -->
 
         <div class="container-wrapper form-footer odd">
-            <div class="container padding-48">
+            <div class="container spacing">
                 <div class="row">
                     <div class="col-xs-12 screen-align-btn">
                         <button class="btn btn-lg btn-brrwr" type="submit">{{ 'Confirm project and start funging phase' }}</button>
@@ -54,7 +53,7 @@
 
     </form>
 
-</div><!-- end .padding-48 -->
+</div><!-- end .spacing -->
 
 
 {#  MODAL #}
