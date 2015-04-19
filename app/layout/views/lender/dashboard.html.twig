@@ -18,13 +18,13 @@
         <div class="hidden-xs hidden-sm col-md-3 col-lg-3">
             <a href="{{ path('invest') }}" class="btn btn-lg btn-nvstr btn-block pull-right">Jetzt anlegen</a>
         </div>
-    </div>
+    </div><!-- end .row -->
 
     <div class="dash">
 
         {% include '_partials/lender/investmentPanels.html.twig' %}
 
-    </div><!-- end .hidden-xs -->
+    </div><!-- end .dash -->
 
     <div class="row">
         <div class="col-xs-12 col-md-6 col-lg-6">
@@ -50,8 +50,7 @@
                     {% include '_partials/lender/dashboardPromoTabs.html.twig' %}
                 </div>
                 <div role="tabpanel" class="tab-pane" id="last-chance">
-                    {#{% include '_partials/lender/dashboardPromoTabs.html.twig' %}#}
-                    LOREM IPSUM
+                    {% include '_partials/lender/dashboardPromoTabs.html.twig' %}
                 </div>
                 <div role="tabpanel" class="tab-pane" id="new">
                     {% include '_partials/lender/dashboardPromoTabs.html.twig' %}
@@ -63,7 +62,7 @@
             </div>
 
         </div>
-    </div>
+    </div><!-- end .row -->
 
     <div class="row">
         <div class="col-xs-12">
@@ -74,7 +73,7 @@
                 </small>
             </p>
         </div>
-    </div>
+    </div><!-- end .row -->
 
 
 </div>

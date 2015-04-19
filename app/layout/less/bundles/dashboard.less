@@ -12,7 +12,6 @@
 
     .panel-body {
         padding: 0;
-        /*overflow: hidden;*/
     }
 
     .panel-heading {
@@ -25,12 +24,6 @@
             font-size: 17px;
             font-weight: bold;
             text-align: center;
-            /*margin: 0;*/
-
-           /* &.panel-big {
-                height: 106px;
-                padding: 5px 0;
-            }*/
 
             &.panel-middle {
                 height: 80px;
@@ -45,7 +38,7 @@
                 }
 
                 > .large-subheading {
-                    font-size: 38px;
+                    font-size: 33px;
                     font-weight: 100;
                 }
 
@@ -90,17 +83,11 @@
 
 }
 
-@media (min-width: 320px) and (max-width: 992px) {
+/* mobile and tablet */
+@media (min-width: 320px) and (max-width: 991px) {
     .dash .panel-title, .dash .panel-heading h4.panel-middle {
         height: 60px;
     }
-
-    /*font-size: 14px;
-    font-weight: bold;
-    height: 60px;
-    line-height: 20px;
-    padding-top: 10px;*/
-
 
     .dash .panel-heading h4.panel-middle {
         font-size: 14px;
@@ -111,18 +98,19 @@
     }
 }
 
-
 @media (max-width: 992px) {
     .square-box {
         padding-right: 35px;
     }
 }
+
 @media (min-width: 992px) {
     .text-right-md {
         text-align: right;
     }
 }
-@media (min-width: 320px) and (max-width: 992px) {
+
+@media (min-width: 320px) and (max-width: 991px) {
     .move {
         padding-left: 15px;
     }
@@ -132,14 +120,9 @@
 
 .dash {
     .panel-item {
-        margin: -6px 0 8px;
-        /*padding: 5px 3px;*/
         padding: 8px;
         height: 40px;
-
-       /* &:first-child {
-            padding-top: 12px;
-        }*/
+        border-bottom: 2px solid #fff;
 
         &:last-child {
             margin-bottom: 0;
@@ -149,16 +132,12 @@
 
 /* mobile and tablet */
 
-@media (min-width: 320px) and (max-width: 992px) {
+@media (min-width: 320px) and (max-width: 991px) {
     .dash {
         .panel-item {
-            /*margin: -6px 0 8px;*/
             padding: 15px;
             height: 40px;
-
-            &:first-child {
-                padding-top: 12px;
-            }
+            line-height: 5px;
 
             &:last-child {
                 margin-bottom: 0;
@@ -168,10 +147,6 @@
             h4 {
                 font-size: 14px;
                 text-align: left;
-
-                /*> .large-subheading {
-                    font-size: 31px;
-                }*/
             }
         }
 
@@ -181,7 +156,6 @@
     }
 
 }
-
 
 // override some rules
 .dash-green {
@@ -193,6 +167,10 @@
     .panel-default > .panel-heading, .green {
         background-color: #54bb2e;
         color: @white;
+    }
+
+    .green {
+        border-bottom: none;
     }
 
     a {
@@ -227,7 +205,6 @@
     }
 }
 
-
 .glyphicon-plus:before {
     content: "-";
 }
@@ -246,8 +223,6 @@
     font-weight: 600;
     color: @grayLight;
 }
-
-
 
 /* ==========================================================================
    Premium account

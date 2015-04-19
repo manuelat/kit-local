@@ -1,30 +1,31 @@
-<!--
-==========================================================================
-USED FOR TESTING, THIS VIEW MUST BE DELETED ...
-========================================================================== -->
-
 <nav class="main">
     <ul class="list-unstyled main-menu">
 
         <!--Include your navigation here-->
         <li class="no-bg no-border"><a href="javascript:void(0)" class="nav-close"><i class="fa fa-lg fa-caret-left"></i> Züruck</a></li>
-        <li><a href="#">Vorname  Nachname</a></li>
-        <li><a href="{{ path('profile') }}">Profil</a></li>
-        <li><a href="#">Abmelden</a></li>
         <li><a href="{{ path('cockpit') }}">Mein Kredit</a></li>
         <li><a href="{{ path('payments_overview') }}">Payment plans</a></li>
         <li><a href="#">Hilfe</a></li>
+        <li>Loan request</li>
+        <li><a href="">1 - Unternehmensprofil</a></li>
+        <li><a href="">2 - Kreditprojektdetails</a></li>
+        <li><a href="">3 - Zeichnungsberechtigte</a></li>
+        <li><a href="">4 - Bürgen</a></li>
+        <li><a href="">5 - Upload der Dokumente</a></li>
+        <li><a href="">6 - Prüfen & Abschicken</a></li>
+
     </ul>
 
     <ul class="list-unstyled main-menu bottom-menu">
+        <li><a href="#">Vorname  Nachname</a></li>
         <li><a href="{{ path('profile') }}">Mein Profil</a></li>
         <li class="no-border"><a href="javascript:void(0)">Logout</a></li>
     </ul>
 </nav>
 
 <div class="navbar navbar-inverse navbar-fixed-top">
-    <a class="navbar-brand" href="#">
-        <img src="/bundles/intlendweblayout/frontend/images/logo.png" alt="Example" />
+    <a class="navbar-brand" href="{{ path('homepage') }}">
+        <img src="/bundles/intlendweblayout/frontend/images/logo.png" alt="Zencap" />
     </a>
     <div class="navbar-header pull-right">
         <a id="nav-expander" class="nav-expander fixed">
