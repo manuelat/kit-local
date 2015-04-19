@@ -231,12 +231,12 @@
     }
 
     .sidebar-offcanvas {
-        position: absolute;
+        position: fixed;
         top: 0;
         right: -22em;
         width: 22em;
-        min-height: 500px;
-        z-index: 1000;
+        height: 100%;
+        z-index: 5000;
         background: #fff;
         padding: 10px;
         display: none;
@@ -244,7 +244,7 @@
 
     .row-offcanvas.active {
         .sidebar-offcanvas {
-            top: -48px;
+            top: 51px;
             right: 0;
             display: block;
 
@@ -253,6 +253,12 @@
 
 }
 
+@media (max-width: 767px) {
+    .spacing-slider {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
 @media (min-width: 320px) and (max-width: 767px) {
     .row-offcanvas.active {
         .sidebar-offcanvas {
