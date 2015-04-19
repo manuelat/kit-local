@@ -196,8 +196,11 @@ $(function() {
         var elem = $('.row-offcanvas');
         if ( elem.hasClass('active') ) {
             elem.removeClass('active');
+            //$('#dark-overlay').addClass('hidden');
         } else {
             elem.addClass('active');
+            //$('#dark-overlay').height($(document).height());
+            //$('#dark-overlay').removeClass('hidden');
         }
         $('#filter-close').on('click',function(e){
             e.preventDefault();
