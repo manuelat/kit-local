@@ -8,330 +8,316 @@
 
 {% block body %}
 
-<form action="" method="post" role="form" class="form-register" id="premium_lender_form">
-    <div class="container padding-48">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-0">
-                <h1>{{ 'Persönliche Angaben' }}</h1>
-            </div>
-            <div class="desp-20 col-xs-12 hidden-lg"></div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
-                        <h2 class="faux-h3">{{ 'Personliche Angaben' }}</h2>
-                        <div class="row form-group">
+<div class="spacing">
+    <form action="" method="post" role="form" class="form-register" id="premium_lender_form">
+        <div class="container">
 
-                            <div class="col-xs-12 col-sm-6">
-                                <div class="radio-buttons">
-                                    <input type="radio" class="hidden" value="male" name="premium_lender_gender" id="premium_lender_gender_m" required="required">
-                                    <div class="custom-circle">
-                                        <span class="selected"></span>
-                                    </div>
-                                    <label for="premium_lender_gender_m" class="required"> {{ 'Herr' }}</label>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <h1 class="faux-h1">{{ 'Persönliche Angaben' }}</h1>
+                </div>
+            </div><!-- end .row -->
+
+            <div class="row add-negative-margin">
+                <div class="col-xs-12 col-md-8">
+                    <h2 class="faux-h3">{{ 'Persönliche Angaben' }} <small class="pull-right">* Pflichtfeld</small></h2>
+                </div>
+            </div><!-- end .row -->
+
+
+            <div class="row">
+
+                <div class="col-xs-12 col-md-8">
+
+                    <div class="row form-group">
+                        <div class="col-xs-12">
+                            <div class="radio-buttons">
+                                <input type="radio" class="hidden" value="male" name="premium_lender_gender" id="premium_lender_gender_m" required="required">
+                                <div class="custom-circle">
+                                    <span class="selected"></span>
                                 </div>
-                                <div class="radio-buttons">
-                                    <input type="radio" class="hidden" value="female" name="premium_lender_gender" id="premium_lender_gender_f" required="required">
-                                    <div class="custom-circle">
-                                        <span></span>
-                                    </div>
-                                    <label for="premium_lender_gender_f" class="required"> {{ 'Frau' }}</label>
-                                </div>
-                                <label for="premium_lender_gender" class="text-danger" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                                <label for="premium_lender_gender_m" class="required"> {{ 'Herr' }}</label>
                             </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-2 col-lg-4 col-lg-offset-0">
-                        <div class="form-group">
-                            <label for="premium_lender_first_name" class="required">{{ 'Vorname(n)' }}</label>
-                            <!-- add class 'error' for the input to make the border red  when the alert is also present -->
-                            <input type="text" placeholder="" id="premium_lender_first_name" class="form-control" required="required">
-                            <label for="premium_lender_first_name" class="text-danger" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0">
-                        <div class="form-group">
-                            <label for="premium_lender_last_name" class="required">{{ 'Nachname' }}</label>
-                            <!-- add class 'error' for the input to make the border red  when the alert is also present -->
-                            <input type="text" placeholder="" id="premium_lender_last_name" class="form-control" required="required">
-                            <label for="premium_lender_last_name" class="text-danger" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-5 col-md-offset-2 col-lg-5 col-lg-offset-0">
-                        <div class="form-group">
-                            <label for="premium_lender_street" class="required">{{ 'Straße' }}</label>
-                            <!-- add class 'error' for the input to make the border red  when the alert is also present -->
-                            <input type="text" placeholder="" id="premium_lender_street" class="form-control" required="required" maxlength="200">
-                            <label for="premium_lender_street" class="text-danger" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-3 col-md-offset-0 col-lg-3 col-lg-offset-0">
-                        <div class="form-group">
-                            <label for="premium_lender_street_number" class="required">{{ 'Nummer' }}</label>
-                            <input type="text" placeholder="" id="premium_lender_street_number" class="form-control" required="required" maxlength="10">
-                            <label for="premium_lender_street_number" class="text-danger" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-3 col-md-offset-2 col-lg-3 col-lg-offset-0">
-                        <div class="form-group">
-                            <label for="premium_lender_postal_code" class="required">{{ 'Postleitzahl' }}</label>
-                            <input type="text" placeholder="" id="premium_lender_postal_code" class="form-control" required="required" maxlength="20">
-                            <label for="premium_lender_postal_code" class="text-danger" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-5 col-md-offset-0 col-lg-5 col-lg-offset-0">
-                        <div class="form-group">
-                            <label for="premium_lender_city" class="required">{{ 'Stadt' }}</label>
-                            <input type="text" placeholder="" id="premium_lender_city" class="form-control" required="required" maxlength="200">
-                            <label for="premium_lender_city" class="text-danger" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
-                        </div>
-                    </div>
-
-                    <div class="clearfix"></div>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-sm-offset-2 col-md-5 col-md-offset-2 col-lg-5 col-lg-offset-0">
-                        <div class="form-group">
-                            <label for="premium_lender_birthday" class="required">{{ 'Geburtsdatum' }}</label>
-                            <input type="text" placeholder="" id="premium_lender_birthday" class="form-control" placeholder="TT.MM.JJJJ" required="required">
-                            <label for="premium_lender_birthday" class="text-danger" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-sm-offset-2 col-md-5 col-md-offset-2 col-lg-5 col-lg-offset-0">
-                        <div class="form-group">
-                            <label for="premium_lender_cellphone" class="required">{{ 'Mobiltelefonnummer' }}</label>
-                            <input type="text" placeholder="" id="premium_lender_cellphone" class="form-control" required="required">
-                            <label for="premium_lender_cellphone" class="text-danger" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
-                        <h2 class="faux-h3">{{ 'Bankverbindung' }} <i title="" data-placement="top" data-toggle="tooltip" class="fa fa-question-circle" data-original-title="Die Zinsen aus aktiven Geboten zeigen die zu erwartenden Zinszahlungen vor Service-Gebühren. Diese Zinsen erhalten Sie, wenn alle Kredite, in die Sie investiert haben, erfolgreich sind und die jeweiligen Beträge an die Unternehmer ausgezahlt werden."></i></h2>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
-                        <div class="form-group">
-                            <label for="premium_lender_bank_account_holder" class="required">{{ 'Kontoinhaber' }}</label>
-                            <input type="text" placeholder="" id="premium_lender_bank_account_holder" class="form-control" required="required" maxlength="100">
-                            <label for="premium_lender_bank_account_holder" class="text-danger" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-2 col-lg-4 col-lg-offset-0">
-                        <div class="form-group">
-                            <label for="premium_lender_bank_account_number" class="required">{{ 'IBAN' }}</label>
-                            <input type="text" placeholder="" id="premium_lender_bank_account_number" class="form-control" required="required" maxlength="22">
-                            <label for="premium_lender_bank_account_number" class="text-danger" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
-                        </div>
-                    </div>
-
-                    <!-- Button trigger modal -->
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0">
-                        <div class="form-group">
-                            <label>{{ 'IBAN berechnen' }}</label>
-                            <button type="button" id="iban-modal" class="btn btn-block">{{ 'IBAN berechnen' }}</button>
-                        </div>
-                    </div>
-
-                    <div class="clearfix"></div>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-sm-offset-2 col-md-5 col-md-offset-2 col-lg-5 col-lg-offset-0">
-                        <div class="form-group">
-                            <label for="premium_lender_bank_account_bic_code" class="required">{{ 'BIC' }}</label>
-                            <input type="password" placeholder="" id="premium_lender_bank_account_bic_code" class="form-control" required="required">
-                            <label for="premium_lender_bank_account_bic_code" class="text-danger" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
-                        <h2 class="faux-h3">{{ 'Identifikation' }}</h2>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
-                        <label class="required">Art</label>
-                        <div class="btn-group btn-block">
-                            <button data-toggle="dropdown" class="form-control btn dropdown-toggle" type="button" aria-expanded="false">
-                                <span class="pull-left">{{ 'Personalausweis' }}</span>
-                                <span class="fa fa-chevron-down pull-right"></span>
-                            </button>
-                            <ul role="menu" class="dropdown-menu col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-12 col-lg-offset-0">
-                                <li><a href="#"><i class="glyphicon glyphicon-ok pull-right"></i>{{ 'Personalausweis' }}
-                                    </a></li>
-                                <li><a href="#">{{ 'Reisepass' }}</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="desp-20"></div>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
-                        <div class="form-group">
-                            <label for="premium_lender_identification_id_number" class="required">{{ 'Nummer des Identifikations-Dokuments' }}</label>
-                            <input type="text" id="premium_lender_identification_id_number" class="form-control" required="required">
-                            <label for="premium_lender_identification_id_number" class="text-danger" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
-                        <div class="form-group">
-                            <label for="identification_place_of_issue" class="required">{{ 'Ausstellungsort' }}</label>
-                            <input type="text" id="identification_place_of_issue" class="form-control" required="required">
-                            <label for="identification_place_of_issue" class="text-danger" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
-                        <div class="form-group">
-                            <label for="premium_lender_identification_issue_date" class="required">{{ 'Erstellt am' }}</label>
-                            <input type="text" id="premium_lender_identification_issue_date" class="form-control" placeholder="TT.MM.JJJJ" required="required">
-                            <label for="premium_lender_identification_issue_date" class="text-danger" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-2 col-lg-4 col-lg-offset-0">
-                        <div class="form-group">
-                            <label for="premium_lender_city_of_birth" class="required">{{ 'Geburtsort' }}</label>
-                            <input type="text" id="premium_lender_city_of_birth" class="form-control" required="required">
-                            <label for="premium_lender_city_of_birth" class="text-danger" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0">
-                        <div class="form-group">
-                            <label for="premium_lender_birth_name">{{ 'Geburtsname' }}</label>
-                            <input type="text" id="premium_lender_birth_name" class="form-control" required="required">
-                            <label for="premium_lender_birth_name" class="text-danger" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
-                        <label class="required">Staatsangehörigkeit</label>
-                        <div class="btn-group btn-block">
-                            <button data-toggle="dropdown" class="form-control btn dropdown-toggle" type="button" aria-expanded="false">
-                                <span class="pull-left">{{ 'Deutschland' }}</span>
-                                <span class="fa fa-chevron-down pull-right"></span>
-                            </button>
-                            <ul role="menu" class="dropdown-menu col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-12 col-lg-offset-0">
-                                <li><a href="#"><i class="glyphicon glyphicon-ok pull-right"></i>{{ 'Deutschland' }}
-                                    </a></li>
-                                <li><a href="#">{{ '-------------------' }}</a></li>
-                                <li><a href="#">{{ 'Afghanistan' }}</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="desp-20"></div>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-0">
-                        <div class="form-group">
-                            <div class="checkbox-buttons">
-                                <input type="checkbox" class="hidden" value="" name="premium_lender_no_cancellation_period" id="premium_lender_no_cancellation_period" required="required">
-                                <div class="custom-square">
-                                    <span></span> <!-- add class .selected when user clicks -->
-                                </div>
-                                <label for="premium_lender_no_cancellation_period" class="required">
-                                    {{ 'Ich erkläre mich ausdrücklich damit einverstanden, dass die Wirecard Bank AG nach Annahme meines Antrages auf Abschluss des Vertrags, aber noch vor Ablauf der Widerrufsfrist mit der Ausführung dieses Vertrages beginnt.' }}
-                                </label>
-                                <label role="alert" class="text-danger hidden" for="premium_lender_no_cancellation_period">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
-                            </div>
-                            <div class="checkbox-buttons">
-                                <input type="checkbox" class="hidden" value="" name="premium_lender_bank_account_access_permit" id="premium_lender_bank_account_access_permit" required="required">
-                                <div class="custom-square">
+                            <div class="radio-buttons">
+                                <input type="radio" class="hidden" value="female" name="premium_lender_gender" id="premium_lender_gender_f" required="required">
+                                <div class="custom-circle">
                                     <span></span>
                                 </div>
-                                <label for="premium_lender_bank_account_access_permit" class="required">
-                                    {{ 'Ich ermächtige die Zencap Connect GmbH Zahlungen von meinem Konto mittels Lastschrift einzuziehen. Zugleich weise ich mein Kreditinstitut an, die von der Zencap Connect GmbH auf mein Konto gezogenen Lastschriften einzulösen.' }}
-                                   </label>
-                                <label role="alert" class="text-danger hidden" for="premium_lender_bank_account_access_permit">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                                <label for="premium_lender_gender_f" class="required"> {{ 'Frau' }}</label>
                             </div>
+                            <div class="clearfix"></div>
+                            <label for="premium_lender_gender" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                        </div>
+                    </div><!-- end .row -->
 
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="form-group">
+                                <label for="premium_lender_first_name" class="required hidden-xs hidden-sm">{{ 'Vorname(n)' }}</label>
+                                <!-- add class 'error' for the input to make the border red  when the alert is also present -->
+                                <input type="text" placeholder="Vorname(n)" id="premium_lender_first_name" class="form-control" required="required">
+                                <label for="premium_lender_first_name" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="form-group">
+                                <label for="premium_lender_last_name" class="required hidden-xs hidden-sm">{{ 'Nachname' }}</label>
+                                <!-- add class 'error' for the input to make the border red  when the alert is also present -->
+                                <input type="text" placeholder="Nachname" id="premium_lender_last_name" class="form-control" required="required">
+                                <label for="premium_lender_last_name" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                            </div>
+                        </div>
+                    </div><!-- end .row -->
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-9">
+                            <div class="form-group">
+                                <label for="premium_lender_street" class="required hidden-xs hidden-sm">{{ 'Straße' }}</label>
+                                <!-- add class 'error' for the input to make the border red  when the alert is also present -->
+                                <input type="text" placeholder="Straße" id="premium_lender_street" class="form-control" required="required" maxlength="200">
+                                <label for="premium_lender_street" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-3">
+                            <div class="form-group">
+                                <label for="premium_lender_street_number" class="required hidden-xs hidden-sm">{{ 'Nummer' }}</label>
+                                <input type="text" placeholder="Nummer" id="premium_lender_street_number" class="form-control" required="required" maxlength="10">
+                                <label for="premium_lender_street_number" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                            </div>
+                        </div>
+                    </div><!-- end .row -->
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="form-group">
+                                <label for="premium_lender_postal_code" class="required hidden-xs hidden-sm">{{ 'Postleitzahl' }}</label>
+                                <input type="text" placeholder="Postleitzahl" id="premium_lender_postal_code" class="form-control" required="required" maxlength="20">
+                                <label for="premium_lender_postal_code" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-8">
+                            <div class="form-group">
+                                <label for="premium_lender_city" class="required hidden-xs hidden-sm">{{ 'Stadt' }}</label>
+                                <input type="text" placeholder="Stadt" id="premium_lender_city" class="form-control" required="required" maxlength="200">
+                                <label for="premium_lender_city" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                            </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+
+                    </div><!-- end .row -->
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="form-group">
+                                <label for="premium_lender_birthday" class="required hidden-xs hidden-sm">{{ 'Geburtsdatum' }}</label>
+                                <input type="text" placeholder="Geburtsdatum" id="premium_lender_birthday" class="form-control" placeholder="TT.MM.JJJJ" required="required">
+                                <label for="premium_lender_birthday" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                            </div>
                         </div>
                     </div>
-                </div>
 
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="form-group">
+                                <label for="premium_lender_cellphone" class="required hidden-xs hidden-sm">{{ 'Mobiltelefonnummer' }}</label>
+                                <input type="text" placeholder="Mobiltelefonnummer" id="premium_lender_cellphone" class="form-control" required="required">
+                                <label for="premium_lender_cellphone" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                            </div>
+                        </div>
+                    </div><!-- end .row -->
+
+                    <div class="row add-negative-margin">
+                        <div class="col-xs-12">
+                            <h2 class="faux-h3">{{ 'Bankverbindung' }} <i title="" data-placement="top" data-toggle="tooltip" class="fa fa-question-circle" data-original-title="Die Zinsen aus aktiven Geboten zeigen die zu erwartenden Zinszahlungen vor Service-Gebühren. Diese Zinsen erhalten Sie, wenn alle Kredite, in die Sie investiert haben, erfolgreich sind und die jeweiligen Beträge an die Unternehmer ausgezahlt werden."></i></h2>
+                        </div>
+                    </div><!-- end .row -->
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <label for="premium_lender_bank_account_holder" class="required hidden-xs hidden-sm">{{ 'Kontoinhaber' }}</label>
+                                <input type="text" placeholder="Kontoinhaber" id="premium_lender_bank_account_holder" class="form-control" required="required" maxlength="100">
+                                <label for="premium_lender_bank_account_holder" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                            </div>
+                        </div>
+                    </div><!-- end .row -->
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="form-group">
+                                <label for="premium_lender_bank_account_number" class="required hidden-xs hidden-sm">{{ 'IBAN' }}</label>
+                                <input type="text" placeholder="IBAN" id="premium_lender_bank_account_number" class="form-control" required="required" maxlength="22">
+                                <label for="premium_lender_bank_account_number" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                            </div>
+                        </div>
+
+                        <!-- Button trigger modal -->
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="form-group">
+                                <label class="required hidden-xs hidden-sm">{{ 'IBAN berechnen' }}</label>
+                                <button type="button" id="iban-modal" class="btn btn-block">{{ 'IBAN berechnen' }}</button>
+                            </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+
+                    </div><!-- end .row -->
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="form-group">
+                                <label for="premium_lender_bank_account_bic_code" class="required hidden-xs hidden-sm">{{ 'BIC' }}</label>
+                                <input type="text" placeholder="BIC" id="premium_lender_bank_account_bic_code" class="form-control" required="required">
+                                <label for="premium_lender_bank_account_bic_code" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                            </div>
+                        </div>
+                    </div><!-- end .row -->
+
+                    <div class="row add-negative-margin">
+                        <div class="col-xs-12">
+                            <h2 class="faux-h3">{{ 'Identifikation' }}</h2>
+                        </div>
+                    </div><!-- end .row -->
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <label class="required hidden-xs hidden-sm">Art</label>
+                            <div class="btn-group btn-block">
+                                <button data-toggle="dropdown" class="form-control btn dropdown-toggle" type="button" aria-expanded="false">
+                                    <span class="pull-left">{{ 'Personalausweis' }}</span>
+                                    <span class="fa fa-chevron-down pull-right"></span>
+                                </button>
+                                <ul role="menu" class="dropdown-menu col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-12 col-lg-offset-0">
+                                    <li><a href="#"><i class="glyphicon glyphicon-ok pull-right"></i>{{ 'Personalausweis' }}
+                                        </a></li>
+                                    <li><a href="#">{{ 'Reisepass' }}</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="desp-20"></div>
+
+                    </div><!-- end .row -->
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <label for="premium_lender_identification_id_number" class="required hidden-xs hidden-sm">{{ 'Nummer des Identifikations-Dokuments' }}</label>
+                                <input type="text" id="premium_lender_identification_id_number" placeholder="Nummer des Identifikations-Dokuments" class="form-control" required="required">
+                                <label for="premium_lender_identification_id_number" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                            </div>
+                        </div>
+                    </div><!-- end .row -->
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <label for="identification_place_of_issue" class="required hidden-xs hidden-sm">{{ 'Ausstellungsort' }}</label>
+                                <input type="text" id="identification_place_of_issue" class="form-control" placeholder="Ausstellungsort" required="required">
+                                <label for="identification_place_of_issue" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                            </div>
+                        </div>
+                    </div><!-- end .row -->
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <label for="premium_lender_identification_issue_date" class="required hidden-xs hidden-sm">{{ 'Erstellt am' }}</label>
+                                <input type="text" id="premium_lender_identification_issue_date" class="form-control" placeholder="TT.MM.JJJJ" required="required">
+                                <label for="premium_lender_identification_issue_date" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                            </div>
+                        </div>
+                    </div><!-- end .row -->
+
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <div class="form-group">
+                                <label for="premium_lender_city_of_birth" class="required hidden-xs hidden-sm">{{ 'Geburtsort' }}</label>
+                                <input type="text" id="premium_lender_city_of_birth" class="form-control" placeholder="Geburtsort" required="required">
+                                <label for="premium_lender_city_of_birth" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-md-6">
+                            <div class="form-group">
+                                <label for="premium_lender_birth_name" class="hidden-xs hidden-sm">{{ 'Geburtsname' }}</label>
+                                <input type="text" id="premium_lender_birth_name" class="form-control" placeholder="Geburtsname" required="required">
+                                <label for="premium_lender_birth_name" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                            </div>
+                        </div>
+                    </div><!-- end .row -->
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <label class="required hidden-xs hidden-sm">Staatsangehörigkeit</label>
+                            <div class="btn-group btn-block">
+                                <button data-toggle="dropdown" class="form-control btn dropdown-toggle" type="button" aria-expanded="false">
+                                    <span class="pull-left">{{ 'Deutschland' }}</span>
+                                    <span class="fa fa-chevron-down pull-right"></span>
+                                </button>
+                                <ul role="menu" class="dropdown-menu col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-12 col-lg-offset-0">
+                                    <li><a href="#"><i class="glyphicon glyphicon-ok pull-right"></i>{{ 'Deutschland' }}
+                                        </a></li>
+                                    <li><a href="#">{{ '-------------------' }}</a></li>
+                                    <li><a href="#">{{ 'Afghanistan' }}</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="desp-20"></div>
+
+                    </div><!-- end .row -->
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <div class="checkbox-buttons">
+                                    <input type="checkbox" class="hidden" value="" name="premium_lender_no_cancellation_period" id="premium_lender_no_cancellation_period" required="required">
+                                    <div class="custom-square">
+                                        <span></span> <!-- add class .selected when user clicks -->
+                                    </div>
+                                    <label for="premium_lender_no_cancellation_period" class="required">
+                                        {{ 'Ich erkläre mich ausdrücklich damit einverstanden, dass die Wirecard Bank AG nach Annahme meines Antrages auf Abschluss des Vertrags, aber noch vor Ablauf der Widerrufsfrist mit der Ausführung dieses Vertrages beginnt.' }}
+                                    </label>
+                                    <label role="alert" class="text-danger hidden" for="premium_lender_no_cancellation_period">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                                </div>
+                                <div class="checkbox-buttons">
+                                    <input type="checkbox" class="hidden" value="" name="premium_lender_bank_account_access_permit" id="premium_lender_bank_account_access_permit" required="required">
+                                    <div class="custom-square">
+                                        <span></span>
+                                    </div>
+                                    <label for="premium_lender_bank_account_access_permit" class="required">
+                                        {{ 'Ich ermächtige die Zencap Connect GmbH Zahlungen von meinem Konto mittels Lastschrift einzuziehen. Zugleich weise ich mein Kreditinstitut an, die von der Zencap Connect GmbH auf mein Konto gezogenen Lastschriften einzulösen.' }}
+                                       </label>
+                                    <label role="alert" class="text-danger hidden" for="premium_lender_bank_account_access_permit">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div><!-- end .row -->
+
+                </div><!-- .col-xs-12 -->
+            </div><!-- end .row -->
+        </div><!-- .container -->
+
+        <div class="container-wrapper form-footer odd">
+            <div class="container spacing">
                 <div class="row">
-                    <p class="col-xs-12 hidden-lg text-center">
+                    <div class="col-xs-12 screen-align-btn">
                         <button class="btn btn-lg btn-nvstr" type="submit">{{ 'Antrag zur Kontoeröffnung stellen' }}</button>
-                        {# link below is just to go to the neext step, should be deleted #}
-                        <a href="{{ path('lenderUpgradeThreeSteps_2') }}">{{ 'Antrag zur Kontoeröffnung stellen' }}</a>
-                        {# end link #}
-                    </p>
+                    </div>
                 </div>
+            </div>
+        </div><!-- .container-wrapper -->
 
-            </div><!-- .col-xs-12 -->
-        </div><!-- end .row -->
-    </div><!-- .container -->
+        <div class="clearfix"></div>
 
-    <div class="container-wrapper odd hidden-xs hidden-sm hidden-md col-lg-12">
-        <div class="container padding-48">
-            <p class="text-right">
-                <button class="btn btn-lg btn-nvstr" type="submit">{{ 'Antrag zur Kontoeröffnung stellen' }}</button>
-                {# link below is just to go to the neext step, should be deleted #}
-                <a href="{{ path('lenderUpgradeThreeSteps_2') }}">{{ 'Antrag zur Kontoeröffnung stellen' }}</a>
-                {# end link #}
-            </p>
-        </div>
-    </div><!-- .container-wrapper -->
-
-    <div class="clearfix"></div>
-
-</form>
+    </form>
+</div><!-- end .spacing -->
 
 <!--
 
