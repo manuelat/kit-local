@@ -39,56 +39,7 @@ function collapseOnResize(){
     }
 }
 
-/**
- * add overlay background when menu is expanded
- */
-/*function bgExpanded() {
-    if ($('body').hasClass('nav-expanded')) {
-        $('#dark-overlay').height($(document).height());
-        $('#dark-overlay').removeClass('hidden');
-        $('#nav-expander').addClass('hidden');
-    } else {
-        $('#dark-overlay').addClass('hidden');
-        $('#nav-expander').removeClass('hidden');
-    }
-}*/
-
 $(function() {
-
-    /* plugin Menu Expander*/
-
-    //Navigation Menu Slider
-   /* $('#nav-expander').on('click', function(e){
-        e.preventDefault();
-        $('body').toggleClass('nav-expanded');
-        bgExpanded();
-    });
-    $('.nav-close').on('click', function(e){
-        e.preventDefault();
-        $('body').removeClass('nav-expanded');
-        bgExpanded();
-    });
-
-
-    // Initialize navgoco with default options
-    $(".main-menu").navgoco({
-        caret: '<span class="caret"></span>',
-        accordion: false,
-        openClass: 'open',
-        save: true,
-        cookie: {
-            name: 'navgoco',
-            expires: false,
-            path: '/'
-        },
-        slide: {
-            duration: 300,
-            easing: 'swing'
-        }
-    });*/
-
-    /* end plugin Menu Slider*/
-
 
     /**
      * Slider -> Loan amount calculator ( loan amount calculator for 10.000€ credit up to 150.000€; default value of credit is 25.000€ )
@@ -190,26 +141,13 @@ $(function() {
     " Jahre" );
 
     /**
-     * Adds the sidebar loan filter that appears only on small devices (width < 768px)
+     * Toggle loan filter on mobile and tablet
      */
 
-   /* $('#filter-btn').click(function(e) {
+    $('#filter-btn').click(function(e) {
         e.preventDefault();
-        var elem = $('.row-offcanvas');
-        if ( elem.hasClass('active') ) {
-            elem.removeClass('active');
-            //$('#dark-overlay').addClass('hidden');
-        } else {
-            elem.addClass('active');
-            //$('#dark-overlay').height($(document).height());
-            //$('#dark-overlay').removeClass('hidden');
-        }
-        $('#filter-close').on('click',function(e){
-            e.preventDefault();
-            elem.removeClass('active');
-        });
-
-    });*/
+        $('#filter-section').slideToggle('slow');
+    });
 
     /**
      * activate tooltip

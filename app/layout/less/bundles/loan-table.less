@@ -161,6 +161,7 @@
 }
 
 //active biddings
+
 .custom-table tr td.sm-width-bid {
     padding-right: 15px;
 }
@@ -173,99 +174,21 @@
 }
 
 .loan-header {
-    background: #edf0f2;
+    background: @brandColor7;
     font-weight: bold;
 }
 
 
+//  filter expander for loan projects
 
-/*  FILTER EXPANDER FOR LOAN PROJECTS  */
-
-/*
- * Off Canvas
- * --------------------------------------------------
- */
-
-/*
-@media screen and (max-width: 991px) {
-    .row-offcanvas {
-        position: relative;
-        -webkit-transition: all 0.25s ease-out;
-        -moz-transition: all 0.25s ease-out;
-        -o-transition: all 0.25s ease-out;
-        transition: all 0.25s ease-out;
-        z-index: 100;
-    }
-
-    .sidebar-offcanvas {
-        position: absolute;
-        top: 0;
-        right: -22em;
-        width: 22em;
-        min-height: 500px;
-        z-index: 5000;
-        background: #fff;
-        padding: 10px;
+@media (min-width: 320px) and (max-width: 991px) {
+    #filter-section {
         display: none;
     }
-
-    .row-offcanvas.active {
-        .sidebar-offcanvas {
-            top: -48px;
-            right: 0;
-            display: block;
-
-        }
-    }
-
 }
-
-@media (max-width: 767px) {
-    .spacing-slider {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-}
-
-@media (min-width: 320px) and (max-width: 767px) {
-    .row-offcanvas.active {
-        .sidebar-offcanvas {
-            top: -20px;
-        }
-    }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-    .row-offcanvas.active {
-        .sidebar-offcanvas {
-            top: -24px;
-        }
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .row.row-offcanvas {
-        margin-left: 0;
-        margin-right: 0;
-
-    }
-}*/
 
 #filter-btn {
     .fa-lg {
         font-size: 1.2em;
-    }
-}
-
-
- #filter-close {
-    .fa-lg {
-        font-size: 1.4em;
-    }
-}
-
-@media (min-width: 320px) and (max-width: 991px) {
-    #sidebar-filter {
-        display: none;
     }
 }
