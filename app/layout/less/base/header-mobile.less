@@ -3,6 +3,7 @@
    Top menu custom styles
    ========================================================================== */
 
+/*
 a.nav-expander {
     background: none repeat scroll 0 0 #ccc;
     color: #FFFFFF;
@@ -218,3 +219,80 @@ a.nav-expander {
     opacity: 0.5;
     z-index: 1000;
 }
+*/
+
+.navbar {
+    min-height: 50px;
+    box-shadow: 2px 1px 5px 2px rgba(0,0,0,0.1);
+}
+
+.navbar-nav .divider {
+    border: 1px solid red;
+}
+
+.navbar-inverse {
+    background-color: #f1f1f1;
+    border-color: #f1f1f1;
+}
+
+.navbar-brand > img {
+    width: 80px;
+    height: 18px;
+}
+
+.navbar-inverse .navbar-collapse {
+    border-color: transparent;
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color: transparent;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background: @brandColor3;
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+    background: @white;
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+    background: @brandColor3;
+
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: @brandColor3;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+    color: @brandColor3;
+    background: @white;
+}
+
+/*
+@media (min-width: 768px) and (max-width: 991px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-nav,
+    .navbar-nav.navbar-right {
+        float: none !important;
+    }
+    .navbar-nav > li {
+        float: none;
+    }
+    .navbar-form {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+        float: right;
+    }
+    .navbar-collapse.collapse {
+        //display: none !important;
+    }
+}
+*/
