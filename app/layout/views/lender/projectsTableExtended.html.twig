@@ -8,15 +8,13 @@
         <h1 class="hidden-xs hidden-sm col-md-12 col-lg-12">{{ 'Aktuelle Kreditprojekte' }}</h1>
     </div>
 
-    <div class="row row-offcanvas row-offcanvas-right">
-
         {% include '_partials/lender/offcanvasSliders.html.twig' %}
 
         <div class="row">
             <div class="hidden-xs hidden-sm col-md-12">
                 <hr />
             </div>
-        </div>
+        </div><!-- end .row -->
 
         <div class="row">
             <div class="hidden-xs hidden-sm col-md-9"><strong>1-29 von 29 Kredite</strong></div>
@@ -28,15 +26,17 @@
                     </div>
                 </form>
             </div>
-        </div>
+        </div><!-- end .row -->
 
-        <div class="hidden-xs desp-20"></div>
+        <div class="hidden-xs hidden-sm desp-20"></div>
 
-        <table class="table custom-table">
-            {% include '_partials/tables/loanProjectsTable.html.twig' %}
-        </table>
-
-    </div>
+        <div class="row">
+            <div class="col-xs-12 cancel-padding">
+                <table class="table custom-table">
+                    {% include '_partials/tables/loanProjectsTable.html.twig' %}
+                </table>
+            </div>
+        </div><!-- end .row -->
 
 </div><!-- end .container -->
 
@@ -103,6 +103,49 @@
                  var item = $(this).parent().parent();
                  edit_form(item);
              });
+
+            /* $('#filter-btn').click(function(){
+                 var alfa = $('#sidebar-filter').attr('style');
+                 if (typeof alfa == 'undefined') {
+                     $('#sidebar-filter').fadeOut('slow');
+                 } else {
+                     if (alfa.match(/none/g)) {
+                         $('#sidebar-filter').fadeIn('slow');
+                     } else {
+                         $('#sidebar-filter').fadeOut('slow');
+                     }
+                 }
+             });*/
+
+             /*$('#filter-btn').click(function(e) {
+                 e.preventDefault();
+                 var elem = $('#sidebar-filter');
+                 if ( elem.hasClass('active') ) {
+                     elem.removeClass('active');
+                     $('#sidebar-filter').slideDown('slow');
+                     //$('#dark-overlay').addClass('hidden');
+                 } else {
+                     elem.addClass('active');
+                     //$('#dark-overlay').height($(document).height());
+                     //$('#dark-overlay').removeClass('hidden');
+                 }
+                 $('#filter-close').on('click',function(e){
+                     e.preventDefault();
+                     elem.removeClass('active');
+                 });
+             });*/
+
+             $('#filter-btn').click(function(e) {
+                 e.preventDefault();
+                 var elem = $('#sidebar-filter');
+                 $('#sidebar-filter').slideToggle('slow');
+                 $('#filter-close').on('click',function(e){
+                     e.preventDefault();
+                     elem.hide();
+                 });
+             });
+
+
          });
 
         /* end bid button */

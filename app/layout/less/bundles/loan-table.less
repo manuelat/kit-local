@@ -151,15 +151,18 @@
 }
 
 .custom-table tr td.loan-title a {
-    height: 40px;
     display: block;
-    overflow: hidden;
 }
 
 @media (max-width: 767px) {
     .custom-table tr td {
         font-size: 13px;
     }
+}
+
+//active biddings
+.custom-table tr td.sm-width-bid {
+    padding-right: 15px;
 }
 
 // confirm offer borrower
@@ -183,7 +186,7 @@
  * --------------------------------------------------
  */
 
-
+/*
 @media screen and (max-width: 991px) {
     .row-offcanvas {
         position: relative;
@@ -246,10 +249,23 @@
         margin-right: 0;
 
     }
-}
+}*/
 
 #filter-btn {
     .fa-lg {
         font-size: 1.2em;
+    }
+}
+
+
+ #filter-close {
+    .fa-lg {
+        font-size: 1.4em;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 991px) {
+    #sidebar-filter {
+        display: none;
     }
 }

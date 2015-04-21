@@ -38,10 +38,11 @@ function collapseOnResize(){
         });
     }
 }
+
 /**
  * add overlay background when menu is expanded
  */
-function bgExpanded() {
+/*function bgExpanded() {
     if ($('body').hasClass('nav-expanded')) {
         $('#dark-overlay').height($(document).height());
         $('#dark-overlay').removeClass('hidden');
@@ -50,13 +51,14 @@ function bgExpanded() {
         $('#dark-overlay').addClass('hidden');
         $('#nav-expander').removeClass('hidden');
     }
-}
+}*/
+
 $(function() {
 
     /* plugin Menu Expander*/
 
     //Navigation Menu Slider
-    $('#nav-expander').on('click', function(e){
+   /* $('#nav-expander').on('click', function(e){
         e.preventDefault();
         $('body').toggleClass('nav-expanded');
         bgExpanded();
@@ -83,7 +85,7 @@ $(function() {
             duration: 300,
             easing: 'swing'
         }
-    });
+    });*/
 
     /* end plugin Menu Slider*/
 
@@ -191,7 +193,7 @@ $(function() {
      * Adds the sidebar loan filter that appears only on small devices (width < 768px)
      */
 
-    $('#filter-btn').click(function(e) {
+   /* $('#filter-btn').click(function(e) {
         e.preventDefault();
         var elem = $('.row-offcanvas');
         if ( elem.hasClass('active') ) {
@@ -207,7 +209,7 @@ $(function() {
             elem.removeClass('active');
         });
 
-    });
+    });*/
 
     /**
      * activate tooltip
