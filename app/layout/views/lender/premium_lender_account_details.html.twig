@@ -8,7 +8,7 @@
 
 {% block body %}
 
-<div class="container padding-48">
+<div class="container spacing">
 
     <div class="row">
         <div class="col-xs-12 col-sm-6">
@@ -102,7 +102,7 @@
 
     <div class="row">
         <div class="col-xs-12">
-
+            <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
             <h2 class="faux-h3">Letzte Transaktionen</h2>
 
             <div class="row">
@@ -148,7 +148,7 @@
             <div class="desp-20 hidden-md hidden-lg"></div>
 
             <div class="row">
-                <div class="col-xs-12">
+                <div class="col-xs-12 cancel-padding">
                     <table class="table table-bordered table-striped">
                     <thead>
                         <tr>
@@ -170,26 +170,28 @@
                     </tr>
 
                     </tbody>
-                </table>
+                    </table>
                 </div>
-            </div>
+            </div><!-- end .row -->
 
             <div class="row">
-                <div class="col-xs-4 col-sm-2 col-md-1 col-lg-1 premium-pagination">
-                    <div class="btn-group btn-block">
-                        <button data-toggle="dropdown" class="form-control btn dropdown-toggle" type="button" aria-expanded="false">
-                            <span class="pull-left">{{ '15' }}</span>
-                            <span class="fa fa-chevron-down pull-right"></span>
-                        </button>
-                        <ul role="menu" class="dropdown-menu">
-                            <li><a href="#"><i class="glyphicon glyphicon-ok pull-right"></i>{{ '15' }}
-                                </a></li>
-                            <li><a href="#">{{ '30' }}</a></li>
-                            <li><a href="#">{{ '60' }}</a></li>
-                        </ul>
+                <div class="col-xs-4 col-sm-2 col-md-1 col-lg-1">
+                    <div class="btn-group btn-block pagination">
+                        <div class="per-page">
+                            <button data-toggle="dropdown" class="form-control btn dropdown-toggle" type="button" aria-expanded="false">
+                                <span class="pull-left">{{ '15' }}</span>
+                                <span class="fa fa-chevron-down pull-right"></span>
+                            </button>
+                            <ul role="menu" class="dropdown-menu">
+                                <li><a href="#"><i class="fa fa-check pull-right"></i>{{ '15' }}
+                                    </a></li>
+                                <li><a href="#">{{ '30' }}</a></li>
+                                <li><a href="#">{{ '60' }}</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </div><!-- end .row -->
 
         </div>
     </div>
