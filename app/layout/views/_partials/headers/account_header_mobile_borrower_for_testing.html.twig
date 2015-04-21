@@ -1,3 +1,8 @@
+<!--
+==========================================================================
+USED TO TEST LOGGED IN ~ BORROWER ~ ON MOBILE AND TABLET  ...
+========================================================================== -->
+
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -16,22 +21,19 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="fixed-navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="{{ path('cockpit') }}">Mein Kredit</a></li>
-                <li><a href="{{ path('payments_overview') }}">Payment plans</a></li>
-                <li><a href="#">Hilfe</a></li>
-                <li><a href="#">Loan request</a></li>
+                <li class="main"><a href="{{ path('cockpit') }}">Mein Kredit</a></li>
+                <li class="main"><a href="{{ path('payments_overview') }}">Payment plans</a></li>
+                <li class="main"><a href="#">Hilfe</a></li>
+                <li class="main"><a href="#">Loan request</a></li>
                 <li><a href="">1 - Unternehmensprofil</a></li>
                 <li><a href="">2 - Kreditprojektdetails</a></li>
                 <li><a href="">3 - Zeichnungsberechtigte</a></li>
                 <li><a href="">4 - Bürgen</a></li>
                 <li><a href="">5 - Upload der Dokumente</a></li>
                 <li><a href="">6 - Prüfen & Abschicken</a></li>
-            </ul>
-
-            <ul class="nav navbar-nav bottom-menu">
-                <li><a href="#">Vorname Nachname</a></li>
-                <li><a href="{{ path('profile') }}">Mein Profil</a></li>
-                <li class="no-border"><a href="javascript:void(0)">Logout</a></li>
+                <li class="main"><a href="#">Vorname Nachname</a></li>
+                <li class="main"><a href="{{ path('profile') }}">Mein Profil</a></li>
+                <li class="main"><a href="javascript:void(0)">Logout</a></li>
             </ul>
 
             {#<ul class="nav navbar-nav">
