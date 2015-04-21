@@ -42,13 +42,21 @@ a:hover, a:focus {
 
 @media (min-width: 320px) and (max-width: 991px) {
     .return {
-
         span {
             width: 1em;
         }
-
         h1 {
             width: 90%;
+        }
+        > h1 {
+            background: url(/images/left-arrow.png) left 56% no-repeat;
+            padding-left: 15px;
+        }
+        > h1 > a {
+            padding-left: 20px;
+            margin-left: -20px;
+            color: #000;
+            display: block;
         }
     }
 }
