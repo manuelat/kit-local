@@ -7,9 +7,21 @@ Structure of folders in the project
 
 _partials
     headers
-        header-borrower.html.twig -> the header used when the user is logged in as a borrower
-        header-lender.html.twig -> the header used when the user is logged in as a lender
-        header-logged-out.html.twig -> the header used when the user is NOT logged in
+        LOGGED OUT
+        header.html.twig -> the header used for DESKTOP when the user is NOT logged in
+        header-mobile.html.twig -> the header used for MOBILE, TABLET when the user is NOT logged in
+
+        LOGGED IN
+        account-header-mobile.html.twig -> the header used for MOBILE, TABLET when the LENDER is logged in
+        account_header_borrower_for_testing.html.twig -> the header used for MOBILE, TABLET when the BORROWER is logged in
+        account-header.html.twig -> the header user for DESKTOP when the user is logged in
+
     footers
-        footer-default.html.twig -> the footer used for desktop
-        footer-mobile.html.twig -> the footer used for mobile
+        footer.html.twig -> the footer used for mobile, tablet and desktop
+
+IMPORTANT!!!!
+
+line 320 from variables.less -> bootstrap instead of @screen-sm-min put @screen-md-min;
+// Navbar collapse
+//** Point at which the navbar becomes uncollapsed.
+@grid-float-breakpoint:     @screen-md-min;
