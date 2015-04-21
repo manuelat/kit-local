@@ -79,34 +79,40 @@
 
     {# ================ NETHERLANDS ====================== #}
 
-    {#<table class="table custom-table">
+    <div class="row">
+        <div class="col-xs-12 cancel-padding">
+
+    <table class="table custom-table">
         <thead>
         <tr>
             <th class="hidden-md hidden-lg"></th>
-            <th>Kredietproject</th>
-            <th class="hidden-md hidden-lg"></th>
+            <th class="hidden-xs"></th>
+            <th class="hidden-xs">Kredietproject</th>
+            <th class="hidden-md hidden-lg text-center sm-width-ratio">Laufzeit</br>Zins</th>
             <th class="hidden-xs hidden-sm">Categorie</th>
-            <th class="text-center">Bedrag</th>
-            <th class="hidden-md hidden-lg"></th>
+            <th class="hidden-md hidden-lg text-center">Kredit-</br>Bedrag</th>
+            <th class="hidden-xs hidden-sm text-center">Betrag</th>
             <th class="hidden-xs hidden-sm text-center">Rentevoet</th>
             <th class="hidden-xs hidden-sm">Termijn</th>
             <th class="hidden-xs hidden-sm">% gefinancierd</th>
             <th class="hidden-xs hidden-sm text-center">In behandeling</th>
             <th class="hidden-xs hidden-sm text-center">Resterende duur</th>
-            <th class="hidden-xs hidden-sm">Investeren</th>
+            <th class="text-center sm-width-bid">Investeren</th>
         </tr>
         </thead>
         <tbody>
         {% for art in articles_nl %}
             <tr>
-                <td class="hidden-md hidden-lg {{ art.risk_class }} sm-width">{{ art.risk_title }}</td>
-                <td class="loan-title">
+                <td class="hidden-md hidden-lg {{ art.risk_class }} sm-width text-center"> <a href="{{ path('loanDetails') }}">{{ art.risk_title }}</a></td>
+                <td class="hidden-xs"></td>
+                <td class="hidden-xs loan-title">
                     <a href="{{ path('loanDetails') }}">{{ art.title }}</a>
                 </td>
-                <td class="hidden-md hidden-lg">
-                    {{ art.interest }}<br>{{ art.duration }}
+                <td class="hidden-md hidden-lg text-center sm-width-ratio">
+                    {{ art.duration }}<br>{{ art.interest }}
                 </td>
                 <td class="hidden-md hidden-lg sm-width-bar">
+                    <a href="{{ path('loanDetails') }}">
                     <div class="progress custom-progress">
                         <div class="progress-bar" role="progressbar" aria-valuenow="{{ art.filled }}" aria-valuemin="0" aria-valuemax="100"
                              style="min-width: 2em; width: {{ art.filled }};">
@@ -115,6 +121,7 @@
                             {{ art.amount }}
                         </div>
                     </div>
+                    </a>
                 </td>
                 <td class="hidden-xs hidden-sm text-center"><i class="categoryIcon">{{ art.category }}</i></td>
                 <td class="hidden-xs hidden-sm text-right">{{ art.amount }}</td>
@@ -131,8 +138,8 @@
                 </td>
                 <td class="hidden-xs hidden-sm text-right">{{ art.amount_pending }}</td>
                 <td class="hidden-xs hidden-sm text-center">{{ art.days_left }}</td>
-                <td class="hidden-xs hidden-sm">
-                    <div class="bid-item">
+                <td class="sm-width-bid right-position">
+                    <div class="bid-item pull-right">
                         <div class="invest"><input type="button" value="Investeren" class="btn btn-nvstr btn-invest btn-block"/>
                         </div>
                         <div class="bid-form hidden">
@@ -145,43 +152,49 @@
                         </div>
                     </div>
                 </td>
-                <td class="hidden-md hidden-lg sm-width">
-                    <a href="{{ path('loanDetails') }}" class="more"><i class="glyphicon glyphicon-chevron-right"></i></a>
-                </td>
             </tr>
         {% endfor %}
         </tbody>
-    </table>#}
+    </table>
+
+        </div>
+    </div>
 
     {# ================ SPAIN ====================== #}
-    {#<table class="table custom-table">
+
+    <div class="row">
+        <div class="col-xs-12 cancel-padding">
+            <table class="table custom-table">
         <thead>
         <tr>
             <th class="hidden-md hidden-lg"></th>
-            <th>Proyecto de préstamo</th>
-            <th class="hidden-md hidden-lg"></th>
+            <th class="hidden-xs"></th>
+            <th class="hidden-xs">Proyecto de préstamo</th>
+            <th class="hidden-md hidden-lg text-center sm-width-ratio">Plazo</br>Tipo de interés</th>
             <th class="hidden-xs hidden-sm">Categoría</th>
-            <th class="text-center">Importe</th>
-            <th class="hidden-md hidden-lg"></th>
+            <th class="hidden-md hidden-lg text-center">Kredit-</br>Betrag</th>
+            <th class="hidden-xs hidden-sm text-center">Importe</th>
             <th class="hidden-xs hidden-sm text-center">Tipo de interés</th>
             <th class="hidden-xs hidden-sm">Plazo</th>
             <th class="hidden-xs hidden-sm">% financiado</th>
             <th class="hidden-xs hidden-sm text-center">Pendiente</th>
             <th class="hidden-xs hidden-sm text-center">Tiempo restante</th>
-            <th class="hidden-xs hidden-sm">Invertir</th>
+            <th class="text-center sm-width-bid">Invertir</th>
         </tr>
         </thead>
         <tbody>
         {% for art in articles_es %}
             <tr>
-                <td class="hidden-md hidden-lg {{ art.risk_class }} sm-width">{{ art.risk_title }}</td>
-                <td class="loan-title">
+                <td class="hidden-md hidden-lg {{ art.risk_class }} sm-width text-center"> <a href="{{ path('loanDetails') }}">{{ art.risk_title }}</a></td>
+                <td class="hidden-xs"></td>
+                <td class="hidden-xs loan-title">
                     <a href="{{ path('loanDetails') }}">{{ art.title }}</a>
                 </td>
-                <td class="hidden-md hidden-lg">
-                    {{ art.interest }}<br>{{ art.duration }}
+                <td class="hidden-md hidden-lg text-center sm-width-ratio">
+                    {{ art.duration }}<br>{{ art.interest }}
                 </td>
                 <td class="hidden-md hidden-lg sm-width-bar">
+                    <a href="{{ path('loanDetails') }}">
                     <div class="progress custom-progress">
                         <div class="progress-bar" role="progressbar" aria-valuenow="{{ art.filled }}" aria-valuemin="0" aria-valuemax="100"
                              style="min-width: 2em; width: {{ art.filled }};">
@@ -190,6 +203,7 @@
                             {{ art.amount }}
                         </div>
                     </div>
+                    </a>
                 </td>
                 <td class="hidden-xs hidden-sm text-center"><i class="categoryIcon">{{ art.category }}</i></td>
                 <td class="hidden-xs hidden-sm text-right">{{ art.amount }}</td>
@@ -206,8 +220,8 @@
                 </td>
                 <td class="hidden-xs hidden-sm text-right">{{ art.amount_pending }}</td>
                 <td class="hidden-xs hidden-sm text-center">{{ art.days_left }}</td>
-                <td class="hidden-xs hidden-sm">
-                    <div class="bid-item">
+                <td class="sm-width-bid right-position">
+                    <div class="bid-item pull-right">
                         <div class="invest"><input type="button" value="Invertir" class="btn btn-nvstr btn-invest btn-block"/>
                         </div>
                         <div class="bid-form hidden">
@@ -220,14 +234,12 @@
                         </div>
                     </div>
                 </td>
-                <td class="hidden-md hidden-lg sm-width">
-                    <a href="{{ path('loanDetails') }}" class="more"><i class="glyphicon glyphicon-chevron-right"></i></a>
-                </td>
             </tr>
         {% endfor %}
         </tbody>
-    </table>#}
-
+    </table>
+        </div>
+    </div>
     {# ================ END TO DELETE ====================== #}
 
 

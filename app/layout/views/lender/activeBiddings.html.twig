@@ -47,6 +47,7 @@
                     <thead>
                     <tr>
                         <th class="hidden-md hidden-lg"></th>
+                        <th></th>
                         <th>Kredietproject</th>
                         <th class="hidden-sm hidden-md hidden-lg"></th>
                         <th class="hidden-xs visible-sm hidden-md hidden-lg text-right">Rentevoet</th>
@@ -59,6 +60,7 @@
                         <th class="hidden-xs hidden-sm text-center">In behandeling</th>
                         <th class="hidden-xs hidden-sm text-center">Resterende duur</th>
                         <th class="hidden-xs hidden-sm text-center">Investeren</th>
+                        <th></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -66,6 +68,7 @@
                         <tr>
                             <td class="hidden-md hidden-lg {{ art.risk_class }} sm-width text-center"><a
                                     href="{{ path('loanDetails') }}">{{ art.risk_title }}</a></td>
+                            <td></td>
                             <td class="loan-title">
                                 <a href="{{ path('loanDetails') }}">{{ art.title }}</a>
                             </td>
@@ -99,6 +102,7 @@
                             <td class="hidden-xs hidden-sm text-right bid-amount">
                                 {{ art.amount_pending }}
                             </td>
+                            <td></td>
                         </tr>
                     {% endfor %}
                     </tbody>
@@ -112,6 +116,7 @@
                     <thead>
                     <tr>
                         <th class="hidden-md hidden-lg"></th>
+                        <th></th>
                         <th>Proyecto de préstamo</th>
                         <th class="hidden-sm hidden-md hidden-lg"></th>
                         <th class="hidden-xs visible-sm hidden-md hidden-lg text-right">Plazo</th>
@@ -124,6 +129,7 @@
                         <th class="hidden-xs hidden-sm text-center">Pendiente</th>
                         <th class="hidden-xs hidden-sm text-center">Tiempo restante</th>
                         <th class="hidden-xs hidden-sm text-center">Invertir</th>
+                        <th></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -131,6 +137,7 @@
                         <tr>
                             <td class="hidden-md hidden-lg {{ art.risk_class }} sm-width text-center"><a
                                     href="{{ path('loanDetails') }}">{{ art.risk_title }}</a></td>
+                            <td></td>
                             <td class="loan-title">
                                 <a href="{{ path('loanDetails') }}">{{ art.title }}</a>
                             </td>
@@ -164,6 +171,7 @@
                             <td class="hidden-xs hidden-sm text-right bid-amount">
                                 {{ art.amount_pending }}
                             </td>
+                            <td></td>
                         </tr>
                     {% endfor %}
                     </tbody>
