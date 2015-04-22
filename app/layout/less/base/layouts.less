@@ -27,22 +27,23 @@ body {
     background-color: #ccc;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+// Container widths
 
+//md
+@media (min-width: 768px) and (max-width: 991px) {
     .container {
         width: 100%;
     }
 }
 
-@media (min-width: 1025px) {
+//lg onwards
+@media (min-width: 992px) {
     .container {
         width: 940px;
         padding-right: 0;
         padding-left: 0;
-
     }
 }
-
 
 // use instead of .container-wrapper > .container => padding: 48px 0;
 .spacing {
@@ -166,14 +167,6 @@ body {
 .desp-51 {
     clear: both;
     height: 51px;
-    line-height: 0;
-    overflow: hidden;
-}
-
-// check to use if it's used .desp-68 after the final version
-.desp-68 {
-    clear: both;
-    height: 68px;
     line-height: 0;
     overflow: hidden;
 }

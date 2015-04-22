@@ -217,11 +217,15 @@ label, input, button, select, textarea {
     color: @brandColor3;
 }
 
-/*  pagination */
-@media (min-width: 1024px)  {
+/*  pagination md */
+@media (min-width: 992px)  {
     .per-page {
         .btn {
             padding: 6px 7px;
+        }
+
+        .fa-chevron-down {
+            margin-top: 7%;
         }
     }
 }
@@ -229,10 +233,6 @@ label, input, button, select, textarea {
 .per-page {
     .dropdown-menu {
         margin: 0;
-    }
-
-    .fa-chevron-down {
-        margin-top: 7%;
     }
 }
 
@@ -384,15 +384,21 @@ label, input, button, select, textarea {
 
 
 // custom input
-
 .form-group {
     .custom-input {
-        font-size: 20px;
-        height: 48px;
-        line-height: 133%;
         margin: 0 0 20px;
         padding: 6px 12px;
-        width: 100%;
+    }
+}
+
+@media (min-width: 767px) {
+    .form-group {
+        .custom-input {
+            font-size: 20px;
+            height: 48px;
+            line-height: 133%;
+            width: 100%;
+        }
     }
 }
 
