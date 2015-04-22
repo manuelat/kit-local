@@ -1,14 +1,12 @@
 {% extends 'layout.html.twig' %}
 
 {% block header %}
-    {# should be deleted #}
+
     {% include '_partials/headers/account_header_borrower_for_testing.html.twig' %}
 
 {% endblock header %}
 
 {% block body %}
-
-{% include '_partials/borrower/offcanvas_loan_menu.html.twig' %}
 
 <div class="spacing">
     <div class="container">
@@ -83,13 +81,6 @@
                 $('#sidebar-loan-menu').remove();
             }
 
-            // display popup menu selector when click on text
-//            $('.register-step-item .text').click(function(e){
-//                if ($(document).width() > 675 && $(document).width() < 992) {
-//                    e.preventDefault();
-//                    $('#sidebar-loan-menu').removeClass('hidden');
-//                }
-//            });
             $('#nav-remove, .nav-close-menu').click(function(e){
                 e.preventDefault();
                 $('#sidebar-loan-menu').addClass('hidden');
