@@ -10,6 +10,7 @@ input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:fo
     margin-top: 48px;
 }
 
+/* targeting xs  */
 @media (min-width: 320px) and (max-width: 767px) {
 
     .form-footer {
@@ -18,6 +19,7 @@ input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:fo
     }
 }
 
+/* targeting sm  */
 @media (min-width: 768px) and (max-width: 991px) {
 
     .form-footer {
@@ -26,7 +28,7 @@ input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:fo
     }
 }
 
-
+/* targeting xs  */
 @media (min-width: 320px) and (max-width: 767px) {
 
     .screen-align-btn {
@@ -64,13 +66,11 @@ input[type="tel"],
 input[type="color"],
 .uneditable-input {
     .box-sizing(border-box);
-   // .box-shadow(~"0 0 0 transparent !important");
     box-shadow: 0 0 0 transparent !important;
     width: 100%;
     height: @inputHeight;
 
     &:focus {
-        //.box-shadow(~"0 0 5px rgba(0,0,0,.2)");
         box-shadow: 0 0 5px rgba(0,0,0,.2);
         border-color: @brandColor3;
         color: #5c6266;
@@ -88,7 +88,6 @@ input[type="color"],
         &[required] {
 
             &:focus {
-                //.box-shadow(~"0 0 0 transparent !important");
                 box-shadow: 0 0 0 transparent !important;
                 border-color: @inputBorder !important;
             }
@@ -99,7 +98,6 @@ input[type="color"],
 
         &:focus { // especially for textareas
             color: @textColor;
-            /*.box-shadow(~"0 0 5px rgba(0,0,0,.2) !important");*/
             box-shadow: 0 0 5px rgba(0,0,0,.2);
             border-color: @inputFocusColor !important;
         }
@@ -218,6 +216,7 @@ label, input, button, select, textarea {
 }
 
 /*  pagination md */
+
 @media (min-width: 992px)  {
     .per-page {
         .btn {
@@ -286,6 +285,7 @@ label, input, button, select, textarea {
 }
 
 // custom checkbox
+
 .custom-square {
     border: 1px solid #c7d2d9;
     border-radius: 6px;
@@ -307,6 +307,7 @@ label, input, button, select, textarea {
 }
 
 /* lender/borrower registration/lender-complete/loan-request process */
+
 .form-register {
     h2 {
         background-color: @brandColor7;
@@ -345,13 +346,6 @@ label, input, button, select, textarea {
         margin-top: 10px;
     }
 
-
-    /*@media (min-width: 320px) and (max-width: 767px) {
-        h2 {
-            font-size: 15px;
-        }
-    }*/
-
     .form-group {
         margin-bottom: 20px;
     }
@@ -382,8 +376,8 @@ label, input, button, select, textarea {
 }
 
 
-
 // custom input
+
 .form-group {
     .custom-input {
         margin: 0 0 20px;
@@ -421,11 +415,4 @@ label, input, button, select, textarea {
     }
 }
 
-// edit user's account profile
-@media (min-width: 320px) and (max-width: 479px) {
-    h2 a.editProfile {
-        display: block;
-        padding-top: 10px;
-    }
-}
 
