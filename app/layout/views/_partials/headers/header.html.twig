@@ -30,7 +30,7 @@ Header visible for desktop  ( hidden for phones and tablets )
                     <div class="site-menu">
                         <ul class="dropdown list-inline">
                             <li>
-                                <a href="">Ihr Firmenkredit</a>
+                                <a href="{{ path('borrowerGettingStarted') }}">Ihr Firmenkredit</a>
                                 <ul class="dropdown submenu-hover list-unstyled">
                                     <li><a href="{{ path('borrowerGettingStarted') }}">Kredit beantragen</a></li>
                                     <li><a href="{{ path('ratesFeesBorrower') }}">Leitfaden</a></li>
@@ -38,7 +38,7 @@ Header visible for desktop  ( hidden for phones and tablets )
                                 </ul>
                             </li>
                             <li>
-                                <a href="">Ihre Investition</a>
+                                <a href="{{ path('lenderGettingStarted') }}">Ihre Investition</a>
                                 <ul class="dropdown submenu-hover list-unstyled">
                                     <li><a href="{{ path('lenderGettingStarted') }}">Geld anlegen</a></li>
                                     <li><a href="{{ path('ratesFeesInvestor') }}">Renditen &amp; Gebühren</a></li>
