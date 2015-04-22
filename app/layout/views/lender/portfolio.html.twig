@@ -45,8 +45,7 @@
                         <th class="hidden-xs text-right hidden-md hidden-lg">Termijn</th>
                         <th class="hidden-xs hidden-sm text-center">Resterende duur</th>
                         <th class="hidden-xs hidden-sm text-center">Investeringsbedrag</th>
-                        <th class="text-right">Aflossing in behandeling</th>
-                        <th></th>
+                        <th class="text-right right-position">Aflossing in behandeling</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -70,7 +69,7 @@
                             <td class="hidden-xs text-right hidden-md hidden-lg">{{ art.duration }}</td>
                             <td class="hidden-xs hidden-sm text-center">{{ art.days_left }}</td>
                             <td class="hidden-xs hidden-sm text-right">{{ art.amount }}</td>
-                            <td class="text-right">{{ art.amount_pending }}</td>
+                            <td class="text-right right-position">{{ art.amount_pending }}</td>
                         </tr>
                     {% endfor %}
                     </tbody>
@@ -95,8 +94,7 @@
                     <th class="hidden-xs text-right hidden-md hidden-lg">Plazo</th>
                     <th class="hidden-xs hidden-sm text-center">Tiempo restante</th>
                     <th class="hidden-xs hidden-sm text-center">Importe de inversión</th>
-                    <th class="text-right">Amortización pendiente</th>
-                    <th></th>
+                    <th class="text-right right-position">Amortización pendiente</th>
                 </tr>
                 </thead>
 
@@ -121,8 +119,7 @@
                         <td class="hidden-xs text-right hidden-md hidden-lg">{{ art.duration }}</td>
                         <td class="hidden-xs hidden-sm text-center">{{ art.days_left }}</td>
                         <td class="hidden-xs hidden-sm text-right">{{ art.amount }}</td>
-                        <td class="text-right">{{ art.amount_pending }}</td>
-                        <td></td>
+                        <td class="text-right right-position">{{ art.amount_pending }}</td>
                     </tr>
                 {% endfor %}
                 </tbody>

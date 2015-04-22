@@ -10,8 +10,7 @@
     <th class="hidden-xs text-right hidden-md hidden-lg">Laufzeit</th>
     <th class="hidden-xs hidden-sm text-center">Restlaufzeit</th>
     <th class="hidden-xs hidden-sm text-center">Anlagebetrag</th>
-    <th class="text-right">Ausstehend</th>
-    <th></th>
+    <th class="text-right right-position">Ausstehend</th>
 </tr>
 </thead>
 <tbody>
@@ -34,8 +33,7 @@
         <td class="hidden-xs text-right hidden-md hidden-lg">{{ art.duration }}</td>
         <td class="hidden-xs hidden-sm text-center">{{ art.days_left }}</td>
         <td class="hidden-xs hidden-sm text-right">{{ art.amount }}</td>
-        <td class="text-right">{{ art.amount_pending }}</td>
-        <td></td>
+        <td class="text-right right-position">{{ art.amount_pending }}</td>
     </tr>
 {% endfor %}
 </tbody>
