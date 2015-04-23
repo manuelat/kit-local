@@ -15,12 +15,12 @@
 
             <div class="col-xs-12 col-md-4 col-lg-4">
                 <ul class="register-step">
-                    <li class="register-step-item {% if step < 1 %}inactiv{% endif %}{% if step == 1 %}activ{% endif %}"><a href="/borrower/loan_request/1"><span class="number">1</span> <span class="text">Unternehmensprofil</span></a></li>
-                    <li class="register-step-item {% if step < 2 %}inactiv{% endif %}{% if step == 2 %}activ{% endif %}"><a href="/borrower/loan_request/2"><span class="number">2</span> <span class="text">Kreditprojektdetails</span></a></li>
-                    <li class="register-step-item {% if step < 3 %}inactiv{% endif %}{% if step == 3 %}activ{% endif %}"><a href="/borrower/loan_request/3"><span class="number">3</span> <span class="text">Zeichnungsberechtigte</span></a></li>
-                    <li class="register-step-item {% if step < 4 %}inactiv{% endif %}{% if step == 4 %}activ{% endif %}"><a href="/borrower/loan_request/4"><span class="number">4</span> <span class="text">Bürgen</span></a></li>
-                    <li class="register-step-item {% if step < 5 %}inactiv{% endif %}{% if step == 5 %}activ{% endif %}"><a href="/borrower/loan_request/5"><span class="number">5</span> <span class="text">Upload der Dokumente</span></a></li>
-                    <li class="register-step-item {% if step < 6 %}inactiv{% endif %}{% if step == 6 %}activ{% endif %}"><a href="/borrower/loan_request/6"><span class="number">6</span> <span class="text">Prüfen & Abschicken</span></a></li>
+                    <li class="register-step-item {% if step < 1 %}inactive{% endif %}{% if step == 1 %}active{% endif %}"><a href="/borrower/loan_request/1"><span class="number">1</span> <span class="text">Unternehmensprofil</span></a></li>
+                    <li class="register-step-item {% if step < 2 %}inactive{% endif %}{% if step == 2 %}active{% endif %}"><a href="/borrower/loan_request/2"><span class="number">2</span> <span class="text">Kreditprojektdetails</span></a></li>
+                    <li class="register-step-item {% if step < 3 %}inactive{% endif %}{% if step == 3 %}active{% endif %}"><a href="/borrower/loan_request/3"><span class="number">3</span> <span class="text">Zeichnungsberechtigte</span></a></li>
+                    <li class="register-step-item {% if step < 4 %}inactive{% endif %}{% if step == 4 %}active{% endif %}"><a href="/borrower/loan_request/4"><span class="number">4</span> <span class="text">Bürgen</span></a></li>
+                    <li class="register-step-item {% if step < 5 %}inactive{% endif %}{% if step == 5 %}active{% endif %}"><a href="/borrower/loan_request/5"><span class="number">5</span> <span class="text">Upload der Dokumente</span></a></li>
+                    <li class="register-step-item {% if step < 6 %}inactive{% endif %}{% if step == 6 %}active{% endif %}"><a href="/borrower/loan_request/6"><span class="number">6</span> <span class="text">Prüfen & Abschicken</span></a></li>
                 </ul>
             </div>
 
@@ -61,7 +61,7 @@
             if ($(document).width() > 675 && $(document).width() < 992) {
                 var div_width = $('.register-step').width();
                 var new_width = div_width - ($('.register-step-item').length * 45);
-                $('.register-step .activ .text').css({'width': new_width + 'px'});
+                $('.register-step .active .text').css({'width': new_width + 'px'});
             }
         }
         $(function(){

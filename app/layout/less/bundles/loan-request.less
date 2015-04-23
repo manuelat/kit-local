@@ -28,27 +28,22 @@
     padding-left: 15px;
 }
 
-.register-step > li.inactiv {
+.register-step > li.inactive {
     background: #edf0f2;
 }
 
-.register-step > li.inactiv > a .number {
+.register-step > li.inactive > a .number {
     background: #dee4e7;
     color: @brandColor4;
 }
 
-.register-step > li.inactiv > a .text {
+.register-step > li.inactive > a .text {
     color: @brandColor4;
 }
 
-/*.register-step > li:hover,*/
 .register-step > li.activ {
     background: #fff;
 }
-
-/*.register-step-item:hover {
-    background: darken(@successBackground, 10%);
-}*/
 
 .register-step > li.activ {
     font-weight: 600;
@@ -62,14 +57,13 @@
     color: #4a9566;
 }
 
-/*.register-step > li:hover > a .number,*/
-.register-step > li.activ > a .number {
+.register-step > li.active > a .number {
     background: #203340;
     color: #fff;
 }
 
 .register-step > li:hover > a .text,
-.register-step > li.activ > a .text {
+.register-step > li.active > a .text {
     color: #203340;
 }
 
@@ -114,16 +108,16 @@
         color: @white;
     }
 
-    .register-step .register-step-item.inactiv .number {
+    .register-step .register-step-item.inactive .number {
         background: #999999;
         color: #fff;
     }
 
-    .register-step .register-step-item.activ .number {
+    .register-step .register-step-item.active .number {
         background: #741b47;
     }
 
-    .register-step .register-step-item.activ .text {
+    .register-step .register-step-item.active .text {
         display: block;
         background: #eee;
         float: left;
@@ -141,7 +135,7 @@
         width: 100%;
         height: 45px;
     }
-    .register-step .register-step-item.activ .text {
+    .register-step .register-step-item.active .text {
         display: none;
         background: #eee;
         float: left;
