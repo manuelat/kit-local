@@ -1,7 +1,7 @@
 {% extends 'layout.html.twig' %}
 
 {% block header %}
-    {# should be deleted #}
+
     {% include '_partials/headers/account_header_borrower_for_testing.html.twig' %}
 
 {% endblock header %}
@@ -20,12 +20,13 @@
     </div>
 
     <div class="row">
-        <div class="col-xs-12 col-sm-6"><a href="">Version 2 - active since 02.03.2015</a></div>
-        <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
-        <div class="col-xs-12 col-sm-6"><a href="">Version 1 - active from 01.01.2015 to 01.03.2015</a></div>
+        <div class="col-xs-12">
+            <ul class="list-inline">
+                <li><a href="">Version 2 - active since 02.03.2015</a></li>
+                <li><a href="">Version 1 - active from 01.01.2015 to 01.03.2015</a></li>
+            </ul>
+        </div>
     </div>
-
-    <div class="desp-20"></div>
 
     <div class="row add-negative-margin">
         <div class="col-xs-12 col-sm-12 hidden-md hidden-lg payments">
