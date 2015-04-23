@@ -107,6 +107,9 @@ account_options:
 login:
     path: /others/login
 
+login_partner:
+    path: /others/login_partner
+
 profile:
     path: /others/profile
 

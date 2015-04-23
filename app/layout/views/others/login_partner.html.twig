@@ -7,13 +7,12 @@
     <div class="row user-login">
 
         <div class="col-xs-12 col-sm-5">
-            <h1 class="faux-h1">Mein Konto</h1>
-            <p>Sie haben bereits ein Nutzerkonto? Loggen Sie sich bitte ein.</p>
+            <h1 class="faux-h1">Partner-Login</h1>
+            <p>Bitte melden Sie sich an:</p>
             <form action="" method="post">
                 <div class="form-group">
-                    <label for="username" class="hidden">Email</label>
                     <input type="text" class="form-control col-xs-12 custom-input" placeholder="E-Mail-Adresse" required="required" value="" name="_username" id="username">
-                    <label for="password" class="hidden">Password</label>
+                    <input type="text" class="form-control col-xs-12 custom-input" placeholder="ScoreCollect ID" required="required" value="" name="_client" id="client_id">
                     <input type="text" class="form-control col-xs-12 custom-input" placeholder="Passwort" required="required" name="_password" id="password" autocomplete="off">
                 </div>
                 <a href="{{ path('forgot_password') }}" class="forgotPassword pull-right"><strong>Passwort vergessen?</strong></a>
@@ -24,25 +23,10 @@
         <hr class="col-xs-12 hidden-sm hidden-md hidden-lg"/>
 
         <div class="col-xs-12 col-sm-5 col-sm-offset-2">
-            <h1 class="faux-h1">Profil erstellen</h1>
-            <p>Neu bei Zencap? Registrieren Sie sich jetzt kostenlos.</p>
-            <p>
-                <a href="{{ path('registerLender') }}" class="btn btn-lg btn-nvstr btn-block">
-                    Investoren - Jetzt investieren
-                </a>
-            </p>
-            <a href="{{ path('registerBorrower') }}" class="btn btn-lg btn-brrwr btn-block">
-                Unternehmen - Jetzt Kredit beantragen
-            </a>
+            <img src="https://d1uuy7l9kfwygp.cloudfront.net/bundles/intlendweblayout/frontend/images/logo_scoreCollect.png" alt="SCoreCollect Logo">
         </div>
 
     </div><!-- end .row -->
-
-    <div class="desp-20 hidden-md hidden-lg"></div>
-
-    <h5 class="text-right">
-        <a href="{{ path('login_partner') }}"> Partner-Login</a>
-    </h5>
 
 </div><!-- end .container -->
 
