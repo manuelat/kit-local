@@ -98,6 +98,9 @@ privacy:
 institutional:
     path: /cms/institutionalInvestors
 
+affiliate:
+    path: /cms/affiliate
+
 about_us:
     path: /cms/about
 

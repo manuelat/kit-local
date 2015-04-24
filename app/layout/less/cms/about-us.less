@@ -1,10 +1,32 @@
 .about-us {
-
     .header-top {
-        background-color: @investor;
         background-image: url("/bundles/intlendweblayout/frontend/images/cms/about_us/about-us-bg.jpg");
-        background-repeat: no-repeat;
-        background-position: 50% 0;
-        height: 432px;
+    }
+}
+
+/*  background on mobile */
+@media (max-width: 767px) {
+    .about-us {
+        .header-top {
+            height: 130px;
+        }
+    }
+}
+
+/* background on tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+    .about-us {
+        .header-top {
+            height: 290px;
+        }
+    }
+}
+
+/* background on desktop */
+@media (min-width: 992px) {
+    .about-us {
+        .header-top {
+            height: 432px;
+        }
     }
 }
