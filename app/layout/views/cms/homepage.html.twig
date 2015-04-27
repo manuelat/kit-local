@@ -2,74 +2,42 @@
 
 {% block body %}
 
-    {#{% include '_partials/headers/account-header.html.twig' %}#}
-
-
 <div class="cms-page homepage">
 
     <!-- begins cms block 'il-hp' -->
 
-    <!--  H1 just for md and lg -->
-    <div class="container-wrapper main-title main-image hidden-xs hidden-sm visible-md visible-lg">
+    <div class="container-wrapper main-image">
         <div class="container spacing">
             <div class="row">
-                <div class="col-xs-7">
-                    <h1 class="text-white">INNOVATIVE <br> UNTERNEHMENSKREDITE </h1>
-
-                    <p>Zencap ist Deutschlands führender Kreditmarktplatz, <br> der Unternehmen
-                        direkt mit Investoren zusammenbringt</p>
+                <div class="col-xs-12 col-sm-12 col-md-7">
+                    <h1>INNOVATIVE <br> UNTERNEHMENSKREDITE </h1>
+                    <p class="hidden-xs hidden-sm">Zencap ist Deutschlands führender Kreditmarktplatz, <br> der
+                        Unternehmen direkt mit Investoren zusammenbringt</p>
                 </div>
-                <div class="col-xs-5">
+                <div class="hidden-xs hidden-sm col-md-5">
                     <div class="voucher"></div>
                     <p class="text-right">Wulf Schlichte von Incultura hat mit 50.000 € von <br>65 Investoren
                         eine neue Espressobar eröffnet</p>
                 </div>
             </div>
         </div>
-    </div>
+    </div><!-- end .main-image -->
 
-    <!--  H1 just for xs and sm -->
-    <div class="container visible-xs visible-sm hidden-md hidden-lg xs-main-image">
-        <div class="row">
-            <div class="col-xs-12">
-                <h1 class="text-white">INNOVATIVE <br> UNTERNEHMENSKREDITE </h1>
-            </div>
-        </div>
-    </div>
-
-    <!--  Buttons with 2 words -->
-    <div class="container-wrapper visible-xs hidden-sm hidden-md hidden-lg special-buttons">
+    <!--  Buttons only on mobile and tablet -->
+    <div class="container-wrapper visible-xs visible-sm hidden-md hidden-lg special-buttons ">
         <div class="container">
-            <div class="desp-24"></div>
             <div class="row">
-                <div class="col-xs-6 hidden-sm">
-                    <a href="{{ path('borrowerGettingStarted') }}" class="btn btn-block btn-lg btn-brrwr">
-                        Zinssatz <br>ermitteln</a>
+                <div class="col-xs-6">
+                    <a href="{{ path('borrowerGettingStarted') }}   {#/borrower-getting-started#} " class="btn btn-block btn-lg btn-brrwr">
+                        Jetzt Zinssatz <br>ermitteln</a>
                 </div>
-                <div class="col-xs-6 hidden-sm">
-                    <a href="{{ path('lenderGettingStarted') }}" class="btn btn-block btn-lg btn-nvstr ">
-                        Geld <br>investieren</a>
+                <div class="col-xs-6">
+                    <a href="{{ path('lenderGettingStarted') }}  {#/lender-getting-started#}  " class="btn btn-block btn-lg btn-nvstr ">
+                        Jetzt Geld <br>investieren</a>
                 </div>
             </div>
         </div>
-    </div>
-
-    <!--  Buttons with 3 words -->
-    <div class="container-wrapper visible-sm hidden-xs hidden-md hidden-lg special-buttons">
-        <div class="container">
-            <div class="desp-24"></div>
-            <div class="row">
-                <div class="hidden-xs col-sm-6">
-                    <a href="{{ path('borrowerGettingStarted') }}" class="btn btn-block btn-lg btn-brrwr">
-                        Jetzt Zinssatz ermitteln</a>
-                </div>
-                <div class="hidden-xs col-sm-6">
-                    <a href="{{ path('lenderGettingStarted') }}" class="btn btn-block btn-lg btn-nvstr ">
-                        Jetzt Geld investieren</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    </div><!-- end .special-buttons -->
 
     <div class="container-wrapper visible-xs visible-sm hidden-md hidden-lg">
         <div class="container">
@@ -77,15 +45,12 @@
                 <hr/>
                 <img class="img-responsive"
                      src="https://d1x3gb5zl465n8.cloudfront.net/de/home/press/logos_update2.png" alt=""/>
-
                 <div class="desp-24"></div>
             </div>
         </div>
-    </div>
+    </div><!-- end .container-wrapper -->
 
-
-
-    <div class="container-wrapper odd header-top hidden-xs hidden-sm visible-md visible-lg">
+    <div class="container-wrapper odd hidden-xs hidden-sm visible-md visible-lg tiles">
         <div class="container spacing">
             <div class="row">
                 <div class="pull-down">
@@ -107,7 +72,8 @@
                                 </ul>
                             </div>
                         </div>
-                    </div><!-- end .hidden-xs .hidden-sm .col-md-6 -->
+                    </div>
+                    <!-- end .hidden-xs .hidden-sm .col-md-6 -->
 
                     <div class="hidden-xs hidden-sm col-md-6">
                         <div class="white-box">
@@ -131,11 +97,10 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- end .header-top -->
+    </div><!-- end .tiles -->
 
-    <div class="container-wrapper hidden-xs hidden-sm visible-md visible-lg">
-        <div class="container spacing press">
+    <div class="container-wrapper hidden-xs hidden-sm visible-md visible-lg press">
+        <div class="container spacing">
             <div class="row">
                 <div class="col-xs-12 logos">
                     <div id="homepageCarousel" class="carousel slide" style="min-height: 215px;">
@@ -143,7 +108,8 @@
                         <div class="carousel-inner row">
                             <div class="active item col-xs-12">
                                 <a href="https://d1x3gb5zl465n8.cloudfront.net/de/press/articles/2014-07-01_boersen-zeitung_Zencap_brisantes-Finanzierungsneuland.pdf"
-                                   target="_blank"><img src="https://d1x3gb5zl465n8.cloudfront.net/de/press/borsen.png" alt="Börsenzeitung"></a>
+                                   target="_blank"><img src="https://d1x3gb5zl465n8.cloudfront.net/de/press/borsen.png"
+                                                        alt="Börsenzeitung"></a>
                                 <blockquote>
                                     <p>&nbsp;Das Zencap-Prinzip wird sich in Deutschland wie zuvor in Großbritannien und
                                         den USA etablieren. Mit der Fokussierung auf kleine Mittelständler greift Zencap
@@ -157,7 +123,9 @@
 
                             <div class="item col-xs-12">
                                 <a href="https://d1x3gb5zl465n8.cloudfront.net/de/press/articles/140410_sueddeutsche-zeitung_das-problem-mit-dem-geld.pdf"
-                                   target="_blank"><img src="https://d1x3gb5zl465n8.cloudfront.net/de/press/frankfurterallgemeine.png" alt="Frankfurter Allgemeine"></a>
+                                   target="_blank"><img
+                                        src="https://d1x3gb5zl465n8.cloudfront.net/de/press/frankfurterallgemeine.png"
+                                        alt="Frankfurter Allgemeine"></a>
                                 <blockquote>
                                     <p>&nbsp;Experten halten Online-Kredite für Mittelständler für eine realistische
                                         Alternative zur klassischen Bankenfinanzierung (…). Vor allem für kleinere
@@ -171,7 +139,9 @@
 
                             <div class="item col-xs-12">
                                 <a href="http://www.handelsblatt.com/unternehmen/leasing-spezial/neue-samwer-plattform-jungunternehmer-finanzieren-den-mittelstand/9931626.html"
-                                   target="_blank"><img src="https://d1uuy7l9kfwygp.cloudfront.net/bundles/intlendweblayout/frontend/images/cms/press/handelsblatt.png" alt="Handeslblatt"></a>
+                                   target="_blank"><img
+                                        src="https://d1uuy7l9kfwygp.cloudfront.net/bundles/intlendweblayout/frontend/images/cms/press/handelsblatt.png"
+                                        alt="Handeslblatt"></a>
                                 <blockquote>
                                     <p>Die Internetplattform Zencap vermittelt Darlehen an Firmen – nach gründlicher
                                         Bonitätsprüfung und zum Missfallen vieler Banken (…). Zwar laufen viele Prozesse
@@ -186,7 +156,9 @@
                             <div class="item col-xs-12">
 
                                 <a href="https://d1x3gb5zl465n8.cloudfront.net/de/press/articles/140410_sueddeutsche-zeitung_das-problem-mit-dem-geld.pdf"
-                                   target="_blank"><img src="https://d1x3gb5zl465n8.cloudfront.net/de/press/suddeutsche_zeitung.png" alt="Süddeutsche Zeitung"></a>
+                                   target="_blank"><img
+                                        src="https://d1x3gb5zl465n8.cloudfront.net/de/press/suddeutsche_zeitung.png"
+                                        alt="Süddeutsche Zeitung"></a>
                                 <blockquote>
                                     <p>Die Finanzierung der vielen Mittelständler ist zunehmend ein Problem. Durchs
                                         Raster fallen die Unternehmen, die das Rückgrat des Wirtschaftsstandorts
@@ -205,7 +177,7 @@
             </div>
             <!-- end .presse -->
         </div>
-    </div>
+    </div><!-- end .press -->
 
     <div class="container-wrapper odd how-zencap-works">
         <div class="container spacing">
@@ -226,12 +198,11 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- end .how-zencap-works -->
+    </div><!-- end .how-zencap-works -->
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript">
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('.carousel').carousel({
                 interval: 5000
             })
@@ -255,29 +226,24 @@
 
     <div class="container-wrapper odd blockquote">
         <div class="container spacing">
-            <h2 class="faux-h1 text-center">Das sagen unsere Unternehmer</h2>
+            <h2 class="faux-h1 text-center">Echte Alternative zu traditionellen Banken</h2>
 
-            <div class="row">
+            <div class="row add-negative-margin">
                 <div class="hidden-xs hidden-sm col-md-5">
                     <blockquote>
-                        <p>"Ich habe nicht das Gefühl, dass Banken nennenswert daran interessiert sind den Mittelstand
-                            zu fördern. Und es erfüllt einen daher natürlich mit einem gewissen Stolz zu sehen, dass es
-                            Anleger gibt, die an das eigene Geschäftsmodell glauben und einem ihr Geld anvertrauen."</p>
+                        <p>"In den ersten 12 Monaten konnten wir bereits Kredite im Wert von mehr als 13 Millionen Euro vollfinanzieren. Mit dieser Zahl setzen wir uns an die Spitze aller europäischen Kreditmarktplätze: kein anderer Online-Marktplatz hat dies im ersten Jahr seines Bestehens erreicht."</p>
 
-                        <p><em>Wulf Schlichte, Geschäftsführer InCultura GmbH, Aachen</em></p>
+                        <p><em>Dr. Matthias Knecht, Mitgründer und Geschäftsführer von Zencap</em></p>
                     </blockquote>
                 </div>
                 <div class="col-xs-12 col-md-7">
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item"
-                                src="//player.vimeo.com/video/109218135?title=0&amp;byline=0&amp;portrait=0" width="540"
-                                height="304" frameborder="0" webkitallowfullscreen mozallowfullscreen
-                                allowfullscreen></iframe>
+                        <iframe class="embed-responsive-item" width="534" height="300" src="https://www.youtube.com/embed/vcPdjNcUEvQ?rel=0" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div><!-- end .blockquote -->
 
     <div class="container-wrapper">
         <div class="container spacing">
@@ -288,7 +254,7 @@
                     <p>Werden Sie unabhängiger von Banken.<br>
                         Bequem online und zu Top-Konditionen.</p>
 
-                    <p><a href="{{ path('borrowerGettingStarted') }}" class="btn btn-lg btn-brrwr">Jetzt Zinssatz
+                    <p><a href="{{ path('borrowerGettingStarted') }}  {#/loan-request/register#baseForm#} " class="btn btn-lg btn-brrwr">Jetzt Zinssatz
                             ermitteln</a></p>
                 </div>
                 <div class="col-xs-12 col-sm-6 text-center">
@@ -297,11 +263,20 @@
                     <p>Profitieren Sie vom Erfolgsmodell Mittelstand.<br>
                         Attraktive Rendite und volle Transparenz.</p>
 
-                    <p><a href="{{ path('lenderGettingStarted') }}" class="btn btn-lg btn-nvstr">Jetzt registrieren</a></p>
+                    <p><a href="{{ path('lenderGettingStarted') }}  {#/register/lender/#}" class="btn btn-lg btn-nvstr">Gratis-Anlegerkonto eröffnen</a>
+                    </p>
                 </div>
             </div>
         </div>
-    </div>
+    </div><!-- end .container-wrapper -->
+
+    <div class="container-wrapper odd">
+        <div class="container spacing">
+            <h2 class="faux-h1 text-center">Kredite für Unternehmen</h2>
+            <p>Zencap ist Deutschlands größter Kreditmarktplatz für Unternehmenskredite und die am schnellsten wachsende Crowdlending-Plattform Kontinentaleuropas. Unternehmen erhalten unkompliziert einen maßgeschneiderten Kredit; Anleger Zugang zu einer neuen Anlageklasse, um Geld zu investieren. Die Kredite von Unternehmen fallen üblicherweise in die Kategorien "Wachstumskapital", "Kredite für Investitionen in Anlagevermögen" sowie "Betriebsmittelfinanzierung". Unternehmer schätzen an Zencap eine schnelle Kreditentscheidung, attraktive Konditionen und flexible Rahmenbedingungen für ihren Kredit. Private Anleger profitieren von attraktiven Renditen, monatlichen Rückzahlungen und einer professionellen Risikoprüfung.</p>
+
+        </div>
+    </div><!-- end .container-wrapper -->
 
     <!-- ends cms block 'il-hp-bottom' -->
 
@@ -349,25 +324,25 @@
         }
 
 
-        $(function(){
-            $('.invest input').click(function(){
+        $(function () {
+            $('.invest input').click(function () {
                 var item = $(this).parent().parent();
                 show_form(item);
             });
-            $('.bid-form .place-bid').click(function(){
+            $('.bid-form .place-bid').click(function () {
                 var item = $(this).parent().parent();
                 var inputValue = $(this).parent().children('.inp-value').val();
-                if ( inputValue == '' || inputValue == undefined ) {
+                if (inputValue == '' || inputValue == undefined) {
                     show_button(item);
                     return;
                 }
                 show_completed_form(item, inputValue);
             });
-            $('.bid-value .remove').click(function(){
+            $('.bid-value .remove').click(function () {
                 var item = $(this).parent().parent();
                 remove_form(item);
             });
-            $('.bid-value .edit').click(function(){
+            $('.bid-value .edit').click(function () {
                 var item = $(this).parent().parent();
                 edit_form(item);
             });

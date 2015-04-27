@@ -3,51 +3,43 @@
     .main-image {
         background-image: url("/bundles/intlenddeweblayout/frontend/images/cms/home/Hero-home_02_02.jpg");
         background-position: 50% 0;
-        min-height: 408px;
+        background-color: @gray5;
 
         .voucher {
             height: 240px;
         }
-    }
 
-    .xs-main-image {
-        background-image: url("/bundles/intlenddeweblayout/frontend/images/cms/home/Hero-home_02_02.jpg");
-        background-size: 140%;
-        background-repeat: no-repeat;
-        position: relative;
-        background-position: 50% 30% ;
-
-
-        h1 {
-            padding-top: 15px;
-            font-size: 26px;
-        }
-
-        .container {
-            padding: 0;
-        }
-
-    }
-
-    // set a height for background image
-    @media (min-width: 640px) and (max-width: 800px) {
-        .xs-main-image {
-            height: 140px;
+        h1, p {
+            color: @white;
         }
     }
 
-    // set a font-size for h1 on certain screens
-    @media (min-width: 320px) and (max-width: 667px) and (orientation: portrait) {
-        .xs-main-image {
-            h1 {
-                font-size: 15px;
-                font-weight: 500;
-            }
+    /*  background on mobile */
+    @media (max-width: 767px) {
+        .main-image {
+            height: 150px;
+            background-size: cover;
+            background-position: 29% 0;
         }
     }
 
-    // styling for only the buttons under the background image
-    @media (min-width: 320px) and (max-width: 667px) {
+    /* background on tablet */
+    @media (min-width: 768px) and (max-width: 991px) {
+        .main-image {
+            height: 180px;
+            background-size: cover;
+        }
+    }
+
+    /* background on desktop */
+    @media (min-width: 992px) {
+        .main-image {
+            min-height: 408px;
+        }
+    }
+
+    // styling for the buttons under the background image
+    @media (min-width: 320px) and (max-width: 991px) {
         .special-buttons {
             .btn-lg {
                 font-size: 1em; // 10px
@@ -56,7 +48,31 @@
         }
     }
 
-    .header-top {
+    .special-buttons {
+        position: absolute;
+        left: 0;
+        width: 100%;
+    }
+
+    /*  place buttons on mobile */
+    @media (min-width: 320px) and (max-width: 767px) {
+        .special-buttons {
+            top: 165px;
+        }
+    }
+
+    /*  place buttons on tablet */
+    @media (min-width: 768px) and (max-width: 991px) {
+        .special-buttons {
+            top: 200px;
+        }
+    }
+
+    .tiles {
+
+        .container {
+            min-height: @verticalRhythm * 6; // 48px * 6 = 288px
+        }
 
         .pull-down {
             bottom: -188px;
@@ -76,7 +92,7 @@
         .styled {
             padding-bottom: 20px;
             margin-bottom: 0;
-            margin-left: -38px;
+            margin-left: -40px;
             li {
                 &:before {
                     content: "\f058";
@@ -86,7 +102,6 @@
             }
         }
     }
-
 }
 
 .logos .item blockquote {
