@@ -1,18 +1,12 @@
+/* ==========================================================================
+   Partner
+   ========================================================================== */
+
 .partnership {
     background-image: url(https://d1x3gb5zl465n8.cloudfront.net/de/lp/partner/bg3.jpg);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
-}
-
-/* center img on mobile */
-@media (max-width: 767px) {
-    .programs {
-        img  {
-            margin: 0 auto;
-            display: block;
-        }
-    }
 }
 
 /*  background height on mobile */
@@ -33,5 +27,107 @@
 @media (min-width: 992px) {
     .partnership {
         height: 340px;
+    }
+}
+
+/* center img on mobile */
+@media (max-width: 767px) {
+    .programs {
+        img  {
+            margin: 0 auto;
+            display: block;
+        }
+    }
+}
+
+/* ==========================================================================
+   Affiliate
+   ========================================================================== */
+
+.bkg-program {
+    background-image: url(https://d1x3gb5zl465n8.cloudfront.net/de/lp/partner/bg2-2.jpg);
+    background-repeat: no-repeat;
+    background-position: right 50%;
+    height: 240px;
+    background-size: cover;
+}
+
+/*  background height on tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+    .bkg-program {
+        height: 190px;
+    }
+}
+
+.table-earnings {
+    td  {
+        padding: 15px 10px 10px 0;
+    }
+
+    tr {
+        border-bottom: 1px solid #dee1e3;
+
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+}
+
+.lead-investor {
+    color: #2694CF;
+}
+
+.lead-brrwr {
+    color: @brandColor2CTA;
+}
+
+.affiliate-benefits {
+    .styled li {
+        border-bottom: 0;
+        line-height: 1.5em;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .affiliate-benefits {
+        .styled {
+            margin-left: -40px;
+        }
+    }
+}
+
+/* background on desktop */
+@media (min-width: 992px) {
+    .investor-earning {
+        background-image: url(https://d1x3gb5zl465n8.cloudfront.net/de/lp/partner/affiliate-borrower-bg3.jpg);
+        background-repeat: no-repeat;
+        background-position: bottom;
+    }
+}
+
+/* background on desktop */
+@media (min-width: 992px) {
+     .brrwr-earning {
+        background-image: url(https://d1x3gb5zl465n8.cloudfront.net/de/lp/partner/affiliate-investor-bg3.jpg);
+        background-repeat: no-repeat;
+        background-position: bottom;
+    }
+}
+
+.faq-affiliate {
+    .accordion-group {
+        border-bottom: 1px solid @white;
+
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+
+    .accordion-heading {
+        margin: 15px 0;
+    }
+
+    .accordion-inner {
+        padding: 20px 0;
     }
 }

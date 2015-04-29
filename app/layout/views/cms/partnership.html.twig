@@ -3,12 +3,15 @@
 {% block body %}
 
 <div class="cms-page investor">
+
     <div class="container">
         <div class="page-head">
             <h1 class="text-center">Werden Sie Partner von Zencap</h1>
         </div>
-    </div>
-    <div class="container-wrapper partnership"></div>
+    </div><!-- end .container -->
+
+    <div class="container-wrapper partnership"></div><!-- end .container-wrapper -->
+
     <div class="container-wrapper">
         <div class="container spacing">
             <h3>Zencap - Deutschlands führender Marktplatz für Unternehmenskredite</h3>
@@ -18,7 +21,8 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div><!-- end .container-wrapper -->
+
     <div class="container-wrapper odd programs">
         <div class="container spacing">
             <p class="faux-h2 text-center">Wählen Sie das passende Partner-Programm</p>
@@ -27,21 +31,21 @@
                     <img class="img-responsive" src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/partner/affiliate.png" alt="Affiliate">
                     <h3>Affiliate</h3>
                     <p>Sie haben eine Website zu Finanzierungs- oder Anlagethemen? Melden Sie sich jetzt beim Zencap-Affiliate-Programm an.</p>
-                    <div><a href="/affiliate-95.html" class="btn btn-medium btn-brrwr">Erfahren Sie mehr</a></div>
+                    <div><a href="{{ path('affiliate') }} {# /partner-affiliate #}" class="btn btn-medium btn-brrwr">Erfahren Sie mehr</a></div>
                 </div>
                 <div class="desp-20 visible-xs hidden-sm hiden-md hidden-lg"></div>
                 <div class="col-xs-12 col-sm-3">
                     <img class="img-responsive" src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/partner/business-partner.png" alt="Berate">
                     <h3>Berater</h3>
                     <p>Sie beraten Unternehmen bei der Finanzierung? Bei Zencap erhalten Ihre Kunden sicher und unbürokratische Kredite zu attraktiven Konditionen.</p>
-                    <div><a href="/berate-92.html" class="btn btn-medium btn-brrwr">Erfahren Sie mehr</a></div>
+                    <div><a href="{{ path('consultant') }}   {# /business-partner #}" class="btn btn-medium btn-brrwr">Erfahren Sie mehr</a></div>
                 </div>
                 <div class="desp-20 visible-xs hidden-sm hiden-md hidden-lg"></div>
                 <div class="col-xs-12 col-sm-3">
                     <img class="img-responsive" src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/partner/blogger.png" alt="Blogger">
                     <h3>Blogger</h3>
                     <p>Sie bloggen zu den neuesten Trends und Entwicklungen rund um die Themen alternative Finanzierung und Mittelstand? Dann informieren Sie sich jetzt über unser Blogger-Programm.</p>
-                    <div><a href="/partner-blogger-93.html" class="btn btn-medium btn-brrwr">Erfahren Sie mehr</a></div>
+                    <div><a href="{{ path('blogger') }}   {# /blogger-partner #}" class="btn btn-medium btn-brrwr">Erfahren Sie mehr</a></div>
                 </div>
                 <div class="desp-20 visible-xs hidden-sm hiden-md hidden-lg"></div>
                 <div class="col-xs-12 col-sm-3">
@@ -49,11 +53,12 @@
                     <h3>Unternehmen</h3>
                     <p>Sie haben Kunden oder Geschäftspartner die eine Finanzierung suchen?<br>
                         Lernen Sie wie Zencap auch Ihren Erfolg steigern kann.</p>
-                    <div><a href="/partner-unternehmen" class="btn btn-medium btn-brrwr">Erfahren Sie mehr</a></div>
+                    <div><a href="{{ path('business') }}   {# /partner-unternehmen #}" class="btn btn-medium btn-brrwr">Erfahren Sie mehr</a></div>
                 </div>
             </div>
         </div>
-    </div>
+    </div><!-- end .container-wrapper -->
+
 </div>
 
 {% endblock %}

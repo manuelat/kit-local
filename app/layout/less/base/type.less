@@ -44,6 +44,30 @@ p {
     margin: 0 0 @baseLineHeight;
 }
 
+@media (min-width: 320px) and (max-width: 767px) {
+    .lead {
+        font-size: @baseFontSize;
+    }
+}
+
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .page-head {
+        padding-top: 20px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .page-head {
+        padding-top: 24px;
+    }
+}
+
+@media (min-width: 992px) {
+    .page-head {
+        padding-top: 48px;
+    }
+}
 
 
 // Headings
@@ -69,14 +93,6 @@ h1,
 .faux-h1 {
     font-size: @headingsFontSizeH1;
     margin-bottom: @verticalRhythm * 0.8;
-
-    + .lead {
-        margin-top: -(@verticalRhythm / 2);
-    }
-
-    + h4 {
-        margin-top: -(@verticalRhythm * 0.4);
-    }
 }
 
 h2,
@@ -150,23 +166,28 @@ h6 {
     h3, .faux-h3 {
         font-size: 16px;
     }
-
 }
 
 .title-lead {
-    font-size: 20px;
-    font-weight: 100;
+    font-size: 38px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 320px) and (max-width: 767px) {
     .title-lead {
-        font-size: 38px;
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .title-lead {
+        font-size: 22px;
     }
 }
 
 @media (min-width: 992px) {
     .title-lead {
         margin-left: 3px;
+        font-weight: 100;
     }
 }
 

@@ -74,6 +74,9 @@ conditionsBorrower:
 conditionsInvestor:
     path: /cms/conditionsI
 
+partnership:
+    path: /cms/partnership
+
 howItWorks:
     path: /cms/works
 
@@ -100,6 +103,15 @@ institutional:
 
 affiliate:
     path: /cms/affiliate
+
+blogger:
+    path: /cms/blogger
+
+consultant:
+    path: /cms/consultant
+
+business:
+    path: /cms/business
 
 about_us:
     path: /cms/about

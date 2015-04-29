@@ -1,3 +1,10 @@
+.header-top {
+    background-color: @gray5;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+}
+
 .cms-page {
 
     .styled {
@@ -87,22 +94,6 @@
     }
 }
 
-/*@media (max-width: 768px) {
-
-    .main-title {
-        h1 {
-            font-size: 16px;
-        }
-    }
-}*/
-
-.header-top {
-    background-color: @gray5;
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-size: cover;
-}
-
 .small-quote-pad {
     blockquote {
         padding: 24px 37px;
@@ -127,14 +118,41 @@
     }
 }
 
-
-
 /*  lender/borrower getting started  */
 @media (min-width: 992px) {
     .borrower-credit-steps, .lender-invest-steps {
         h3 {
             margin-left: -15px;
             margin-right: -15px;
+        }
+    }
+}
+
+/* vertical align partner program icons */
+.icons-row {
+    height: 102px;
+
+    h3 {
+        margin-top: 20px;
+    }
+
+    .icons-size {
+        height: 100%;
+
+        img {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .icons-row {
+        img {
+            width: 40px;
         }
     }
 }
