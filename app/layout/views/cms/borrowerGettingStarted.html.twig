@@ -3,7 +3,7 @@
 {% block body %}
 
 <!-- Content visible for mobile, tablets (hidden for desktop) -->
-<div class="container spacing hidden-lg">
+<div class="container spacing">
 
     <div class="row">
         <div class="col-xs-12 hidden-lg">
@@ -90,9 +90,9 @@
     <!-- Kajetan proposal -->
 
     <div class="row odd">
-        <div class="desp-10 visible-xs visible-sm hidden-md hidden-lg"></div>
+        <div class="desp-10"></div>
 
-        <div class="col-xs-12 hidden-lg">
+        <div class="col-xs-12">
             <label for="amount">{{ 'Ihr Kreditbetrag' }}</label>
             <div class="row">
                 <div class="col-xs-8">
@@ -104,9 +104,9 @@
             </div>
         </div>
 
-        <div class="desp-10 hidden-sm hidden-md hidden-lg"></div>
+        <div class="desp-10"></div>
 
-        <div class="col-xs-12 hidden-lg">
+        <div class="col-xs-12">
             <label for="loan-duration">{{ 'Ihre Kreditlaufzeit' }}</label><br>
             <div class="row">
                 <div class="col-xs-8">
@@ -118,16 +118,16 @@
             </div><!-- end .row -->
         </div>
 
-        <div class="desp-10 visible-xs visible-sm hidden-md hidden-lg"></div>
+        <div class="desp-10"></div>
 
     </div><!-- end .row -->
 
 
-    <div class="row dark-grey">
+    <div class="row">
 
-        <div class="desp-20 visible-xs visible-sm visible-md hidden-lg"></div>
+        <div class="desp-10"></div>
 
-        <div class="col-xs-12 hidden-lg">
+        <div class="col-xs-12">
             <div class="row">
                 <div class="col-xs-7 col-sm-4">
                     <span id="monthlyRate"><strong>{{ '1.117 €' }}</strong></span><br>
@@ -138,14 +138,11 @@
                     <label for="totalSum">{{ 'Gesamtbetrag' }}</label>
                 </div>
                 <div class="desp-10 hidden-sm hidden-md hidden-lg"></div>
-                <p class="col-xs-12 col-sm-6 hidden-lg">
+                <p class="col-xs-12 col-sm-6">
                     <a href="#" type="submit" class="btn btn-lg btn-brrwr">{{ 'Jetzt Kredit beantragen' }}</a>
                 </p>
             </div><!-- end .row -->
         </div>
-
-        <div class="desp-10 hidden-sm hidden-md hidden-lg"></div>
-
 
     </div><!-- end .row -->
 
@@ -171,6 +168,10 @@
 <div class="cms-page borrower">
 
     <!-- Content visible for desktop (hidden for mobile, tablets) -->
+
+    {# LOAN CALCULATOR #}
+
+    {#
     <div class="container-wrapper hidden-xs hidden-sm hidden-md visible-lg calculate-loan">
         <div class="desp-30"></div>
         <h1 class="text-white text-center">Ihr Firmenkredit: Jetzt persönliche Rate ermitteln</h1>
@@ -187,7 +188,7 @@
                                 <div id="offerSlider"></div>
                             </div>
                         </div>
-                        <div class="desp-20"></div>
+                        <div class="desp-10"></div>
                         <div class="row">
                             <div class="col-xs-2">
                                 <label><strong>Ihre Kreditlaufzeit</strong></label>
@@ -288,6 +289,8 @@
         </div>
 
     </div>
+
+    #}
     <!-- end .visible-lg -->
 
     <!-- TO DO: REPLACE THE borrower-benefit-1.png  WITH THE CORECT IMAGE ON ALL 3 STEPS!!!!!!!!!!!!!!!!!  -->
@@ -303,13 +306,15 @@
             <div class="row">
                 {#<img class="pull-left" alt="" src="/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-2.png" />#}
                 <div class="col-xs-12 col-md-4">
-                    <div class="row">
-                        <div class="col-xs-12">
+                    <div class="row helper">
+                        <div class="col-xs-12 helper-inner">
                             <img class="pull-left hidden-md hidden-lg" alt="" src="/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-1.png" />
-                            <div class="col-xs-7 col-sm-6 col-md-12">
+                            <div class="col-xs-7 col-sm-6 col-md-12 pull-left helper-inner">
                                 <h3>Finanzierungsanfrage stellen</h3>
                             </div>
+
                         </div>
+                        <div class="desp-10 hidden-md hidden-lg"></div>
                         <div class="col-xs-12">
                             <p>Erfüllen Sie unsere Mindestanforderungen, können Sie Ihren Firmenkredit in nur 15 Minuten beantragen: Bequem mit wenigen Klicks registrieren, ein aussagekräftiges Unternehmensprofil erstellen und die erforderlichen Finanzkennzahlen hochladen. </p>
                         </div>
@@ -317,13 +322,14 @@
                 </div>
 
                 <div class="col-xs-12 col-md-4">
-                    <div class="row">
-                        <div class="col-xs-12">
-                                <img class="pull-left hidden-md hidden-lg" alt="" src="/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-1.png" />
-                                <div class="col-xs-7 col-sm-6 col-md-12">
-                                    <h3>Finanzierungszusage erhalten</h3>
-                                </div>
+                    <div class="row helper">
+                        <div class="col-xs-12 helper-inner">
+                            <img class="pull-left hidden-md hidden-lg" alt="" src="/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-1.png" />
+                            <div class="col-xs-7 col-sm-6 col-md-12 pull-left helper-inner">
+                                <h3>Finanzierungszusage erhalten</h3>
                             </div>
+                        </div>
+                        <div class="desp-10 hidden-md hidden-lg"></div>
                         <div class="col-xs-12">
                             <p>Unsere erfahrenen Kreditanalysten prüfen Ihren vollständigen Antrag innerhalb von nur 48 Stunden – natürlich kostenfrei. Danach erhalten Sie Ihr individuelles Zinsangebot. Sobald Sie dieses annehmen, wird Ihr Projekt automatisch zur Finanzierung freigeschaltet.</p>
                         </div>
@@ -331,13 +337,14 @@
                 </div>
 
                 <div class="col-xs-12 col-md-4">
-                    <div class="row">
-                        <div class="col-xs-12">
+                    <div class="row helper">
+                        <div class="col-xs-12 helper-inner">
                             <img class="pull-left hidden-md hidden-lg" alt="" src="/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-1.png" />
-                            <div class="col-xs-7 col-sm-6 col-md-12">
+                            <div class="col-xs-7 col-sm-6 col-md-12 pull-left helper-inner">
                                 <h3>Geldeingang verbuchen</h3>
                             </div>
                         </div>
+                        <div class="desp-10 hidden-md hidden-lg"></div>
                         <div class="col-xs-12">
                         <p>Ist Ihr Kreditprojekt finanziert, erhalten Sie Ihren Kreditvertrag. Senden Sie diesen unterschrieben an uns zurück, zahlen wir Ihren Geschäftskredit innerhalb weniger Tage aus. Die monatliche Rückzahlung erfolgt danach einfach und bequem per Lastschrift.</p>
                     </div>
@@ -433,35 +440,38 @@
             <div class="row">
 
                 <div class="col-xs-12 col-md-4">
-                    <div class="row">
-                        <div class="col-xs-12">
+                    <div class="row visual">
+                        <div class="col-xs-12 visual-inner">
                             <img class="pull-left" alt="" src="/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-1.png" />
-                            <div class="col-xs-7 col-sm-6 col-md-9">
+                            <div class="col-xs-7 col-sm-6 col-md-9 visual-inner">
                                 <h3>Verlässliche Rahmenbedingungen</h3>
                             </div>
                         </div>
+                        <div class="desp-10"></div>
                         <p class="col-xs-12 col-md-9 col-md-offset-3">Unsere Kreditentscheidung erfolgt innerhalb von maximal 48 Stunden, denn Planbarkeit ist entscheidend für Ihren Unternehmenserfolg. So machen Sie sich unabhängig von Ihrer Hausbank und stellen Ihre Unternehmensfinanzierung auf ein zweites Standbein.</p>
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-4">
-                    <div class="row">
-                        <div class="col-xs-12">
+                    <div class="row visual">
+                        <div class="col-xs-12 visual-inner">
                             <img class="pull-left" alt="" src="/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-2.png" />
-                            <div class="col-xs-7 col-sm-6 col-md-9">
+                            <div class="col-xs-7 col-sm-6 col-md-9 visual-inner">
                                 <h3>Attraktive Konditionen</h3>
                             </div>
                         </div>
+                        <div class="desp-10"></div>
                         <p class="col-xs-12 col-md-9 col-md-offset-3">Wir sind persönlich für Sie da –ganz ohne teures Filialnetz. Ihren Kredit erhalten Sie bereits ab 3,99 % p.a. – ohne versteckte Gebühren und die Stellung dinglicher Sicherheiten. Gleichzeitig befreien wir Sie von unnötigen Berichtspflichten und komplizierten Kreditklauseln.</p>
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-4">
-                    <div class="row">
-                        <div class="col-xs-12">
+                    <div class="row visual">
+                        <div class="col-xs-12 visual-inner">
                             <img class="pull-left" alt="" src="/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-3.png" />
-                            <div class="col-xs-7 col-sm-6 col-md-9">
+                            <div class="col-xs-7 col-sm-6 col-md-9 visual-inner">
                                 <h3>Flexible Abwicklung</h3>
                             </div>
                         </div>
+                        <div class="desp-10"></div>
                         <p class="col-xs-12 col-md-9 col-md-offset-3">Verabschieden Sie sich von den Öffnungszeiten Ihrer Bank. Bleiben Sie bei Ihrer Unternehmensfinanzierung genauso beweglich wie gegenüber Ihren Kunden. Bei vorzeitiger Rückzahlung Ihres Firmenkredits berechnen wir keinerlei Gebühren.</p>
                     </div>
                 </div>
@@ -470,7 +480,8 @@
 
             <div class="row">
                 <div class="col-xs-12 text-center">
-                    <p><a id="loan-submit-2" class="btn btn-lg btn-brrwr" type="submit" href="/loan-request/register#baseForm">Jetzt Kredit beantragen</a></p>
+                    <a id="loan-submit-2" class="btn btn-lg btn-brrwr" type="submit" href="/loan-request/register#baseForm">Jetzt Kredit beantragen</a>
+                    <div class="desp-10"></div>
                     <p>Oder noch <a href="/kreditnehmer-hilfe-16.html?faq">Fragen zum Thema?</a></p>
                 </div>
             </div>

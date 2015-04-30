@@ -12,15 +12,29 @@
     background: none;
 }
 
+.carousel-control.right {
+    right: 15px;
+}
+
+.carousel-control.left {
+    left: 15px;
+}
+
 .carousel-control {
     top: -257px;
     color: @brandColor2CTA;
     opacity: 1;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    text-align: inherit;
+    width: auto;
+
+    span {
+        display: block;
+        margin-top: 265px;
+    }
 }
 
 .carousel-control:hover {
     color: @brandColor2CTA;
     opacity: 0.8;
 }
-

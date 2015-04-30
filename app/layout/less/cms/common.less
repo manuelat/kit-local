@@ -135,17 +135,19 @@
     h3 {
         margin-top: 20px;
     }
+}
 
-    .icons-size {
-        height: 100%;
+.icons-size {
+    height: 100%;
 
-        img {
-            position: relative;
-            top: 50%;
-            transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-            -webkit-transform: translateY(-50%);
-        }
+    img {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
     }
 }
 
@@ -156,3 +158,103 @@
         }
     }
 }
+
+
+/* vertical align icons and text  */
+
+.visual-inner {
+    height: 100%;
+
+    h3 {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        margin: 0 0 0 0;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+    .visual {
+        height: 45px;
+    }
+
+    .visual-inner {
+        img {
+            width: 45px;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .visual {
+        height: 50px;
+    }
+
+    .visual-inner {
+        img {
+            width: 50px;
+        }
+    }
+}
+
+
+@media (min-width: 992px) {
+
+    .visual {
+        height: 60px;
+    }
+
+    .visual-inner {
+        img {
+            width: 60px;
+        }
+    }
+}
+
+
+/* vertical align image and text for borrower and investor  */
+@media (min-width: 320px) and (max-width: 991px) {
+    .helper-inner {
+        height: 100%;
+
+        h3 {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            margin: 0 0 0 0;
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+    .helper {
+        height: 45px;
+    }
+
+    .helper-inner {
+        img {
+            width: 45px;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .helper {
+        height: 50px;
+    }
+
+    .helper-inner {
+        img {
+            width: 50px;
+        }
+    }
+}
+

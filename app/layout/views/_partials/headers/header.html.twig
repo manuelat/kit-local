@@ -2,11 +2,11 @@
 ==========================================================================
 Header visible for desktop  ( hidden for phones and tablets )
 ========================================================================== -->
+<div class="desp-51 hidden-md hidden-lg"></div>
 
+{#{% include '_partials/headers/cookiesWarning.html.twig' %}#}
 
 <div class="hidden-xs hidden-sm">
-    {# must include the cookie bar #}
-    {% include '_partials/headers/cookiesWarning.html.twig' %}
 
     <header>
         <div class="container">
@@ -104,7 +104,6 @@ Header visible for desktop  ( hidden for phones and tablets )
     </header>
 </div><!-- end .hidden-xs hidden-sm hidden-md -->
 
-<div class="desp-51 hidden-md hidden-lg"></div>
 
 <!--
 ==========================================================================
@@ -112,9 +111,6 @@ Header visible for phones and tablets  ( hidden for desktop )
 ========================================================================== -->
 
 <div class="hidden-md hidden-lg">
-
-    {# must include the cookie bar #}
-    {% include '_partials/headers/cookiesWarning.html.twig' %}
 
     {% include '_partials/headers/header-mobile.html.twig' %}
 </div>

@@ -1,55 +1,14 @@
 .investor {
 
-    .xs-main-image {
-        background-image: url("/bundles/intlenddeweblayout/frontend/images/cms/lender/Hero-geld-anlegen_02.jpg");
-        background-size: 100%;
-        background-repeat: no-repeat;
-
-        h1 {
-            margin-bottom: 0;
-        }
-
-        @media (min-width: 320px) and (max-width: 480px) {
-            h1 {
-                font-size: 14px;
-                margin-bottom: 20px;
-            }
-        }
-
-        @media (min-width: 480px) and (max-width: 667px) {
-            h1 {
-                font-size: 23px;
-                margin-bottom: 20px;
-            }
-        }
-    }
-
     .main-title p:nth-child(2) {
         color: @brandColor4;
-    }
-
-    .benefits-lender h3 span {
-        border-bottom: 2px solid @brandColorCTA;
-        padding-bottom: 16px;
-    }
-
-    .benefits-lender h3 {
-        padding-bottom: 16px;
-        margin-top: 5%;
-    }
-
-    @media (max-width: 1023px) {
-        .lender-invest-steps h3 {
-            padding-bottom: 16px;
-            margin-top: 7%;
-        }
     }
 
     // add border only on desktop
     @media (min-width: 992px) {
         .benefits-lender h3 {
             border-bottom: 2px solid @brandColorCTA;
-            margin-top: 4px;
+            padding-bottom: 16px;
         }
     }
 
@@ -74,8 +33,41 @@
         }
     }
 
+    /* background on tablet */
+    @media (min-width: 767px) and (max-width: 991px) {
+        .fees {
+            background: cover;
+            height: 430px;
+        }
+    }
+
     .lender-getting-started {
         background-image: url("/bundles/intlenddeweblayout/frontend/images/cms/lender/Hero-geld-anlegen_02.jpg");
+    }
+
+    /*  background on mobile */
+    @media (max-width: 767px) {
+        .lender-getting-started {
+            height: 150px;
+        }
+    }
+
+    /* background on tablet */
+    @media (min-width: 768px) and (max-width: 991px) {
+        .lender-getting-started {
+            height: 180px;
+        }
+    }
+
+    /* background on desktop */
+    @media (min-width: 992px) {
+        .lender-getting-started {
+            height: 335px;
+
+            h1 {
+                margin-bottom: 20px;
+            }
+        }
     }
 
     .loan-types {
