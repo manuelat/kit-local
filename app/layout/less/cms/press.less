@@ -1,48 +1,56 @@
-.press {
+.media-response {
 
-    min-height: 267px;
+    blockquote {
+        padding-top: 0;
+        padding-bottom: 0;
 
-    .media-response {
-
-
-        blockquote {
-            padding-top: 0;
-            padding-bottom: 0;
-
-            &:before,
-            &:after {
-                color: inherit;
-            }
-
-            &:before {
-                // creates the quote icon
-                top: @verticalRhythm / 2;
-            }
-
-            &:after {
-                // creates the quote icon
-                bottom: 0;
-            }
-
-            p {
-                font-size: @baseFontSize;
-                font-weight: @baseFontWeight;
-            }
-
-            + p {
-                padding-left: (@gridPaddingLargeWidth * 1.5);
-                margin-top: @baseLineHeight;
-
-                .last-of-type-margin-bottom;
-            }
+        &:before,
+        &:after {
+            color: inherit;
         }
-    }
 
-    .press-materials {
+        &:before {
+            // creates the quote icon
+            top: @verticalRhythm / 2;
+        }
 
-        img {
-            margin-bottom: @gridGutterWidth / 4;
+        &:after {
+            // creates the quote icon
+            bottom: 0;
+        }
+
+        p {
+            font-size: @baseFontSize;
+            font-weight: @baseFontWeight;
+        }
+
+        + p {
+            padding-left: (@gridPaddingLargeWidth * 1.5);
+            margin-top: @baseLineHeight;
+
+            .last-of-type-margin-bottom;
         }
     }
 }
 
+.press-materials {
+
+    img {
+        margin-bottom: @gridGutterWidth / 4;
+    }
+}
+
+
+// styling blockquotes on mobile
+@media (min-width: 320px) and (max-width: 767px) {
+    .media-response {
+
+        blockquote:before {
+            top: 15px;
+        }
+
+        blockquote + p {
+            padding-left: 23px;
+        }
+    }
+}

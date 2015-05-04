@@ -94,7 +94,7 @@
     }
 }
 
-.small-quote-pad {
+/*.small-quote-pad {
     blockquote {
         padding: 24px 37px;
     }
@@ -114,6 +114,32 @@
         }
         blockquote {
             font-size: 15px;
+        }
+    }
+}*/
+
+.blockquote {
+    blockquote {
+        padding: 24px 52px;
+    }
+}
+
+// styling blockquotes on mobile
+@media (min-width: 320px) and (max-width: 767px) {
+    .blockquote, .media-response {
+
+        blockquote {
+            padding: 20px 23px;
+            font-size: 14px;
+        }
+        blockquote:before {
+            top: 34px;
+        }
+        blockquote:after {
+            bottom: -5px;
+        }
+        blockquote:after, blockquote:before {
+            font-size: 60px;
         }
     }
 }

@@ -9,37 +9,36 @@
             height: 240px;
         }
 
+        // position voucher on tablet
+        @media (min-width: 768px) and (max-width: 991px) {
+            .voucher {
+                height: 187px;
+            }
+        }
+
         h1, p {
             color: @white;
         }
     }
 
-    /*  background on mobile */
+    /*  background height on mobile */
     @media (max-width: 767px) {
         .main-image {
-            height: 150px;
+            height: 164px;
             background-size: cover;
             background-position: 29% 0;
         }
     }
 
-    /* background on tablet */
-    @media (min-width: 768px) and (max-width: 991px) {
-        .main-image {
-            height: 180px;
-            background-size: cover;
-        }
-    }
-
-    /* background on desktop */
-    @media (min-width: 992px) {
+    /* background height on tablet and desktop */
+    @media (min-width: 768px) {
         .main-image {
             min-height: 408px;
         }
     }
 
     // styling for the buttons under the background image
-    @media (min-width: 320px) and (max-width: 991px) {
+    @media (min-width: 320px) and (max-width: 767px) {
         .special-buttons {
             .btn-lg {
                 font-size: 1em; // 10px
@@ -57,14 +56,7 @@
     /*  place buttons on mobile */
     @media (min-width: 320px) and (max-width: 767px) {
         .special-buttons {
-            top: 165px;
-        }
-    }
-
-    /*  place buttons on tablet */
-    @media (min-width: 768px) and (max-width: 991px) {
-        .special-buttons {
-            top: 200px;
+            top: 177px;
         }
     }
 
@@ -80,6 +72,13 @@
             position: absolute;
         }
 
+        // position boxes on tablet
+        @media (min-width: 768px) and (max-width: 991px) {
+            .pull-down {
+                bottom: -248px;
+            }
+        }
+
         .white-box {
             background: @white;
             border-radius: @baseBorderRadius;
@@ -88,6 +87,14 @@
         .borrower, .investor {
             padding: 0 35px;
         }
+
+        // decrease spacing on tablet
+        @media (min-width: 768px) and (max-width: 991px) {
+            .borrower, .investor {
+                padding: 0 15px;
+            }
+        }
+
 
         .styled {
             padding-bottom: 20px;
@@ -104,16 +111,22 @@
     }
 }
 
+// center img on mobile and tablet
+@media (min-width: 320px) and (max-width: 991px) {
+    .how-zencap-works img {
+        margin: 0 auto;
+    }
+}
+
 .logos .item blockquote {
 
     &:after {
         right: 21px;
-        color: #5c6266;
+        color: @brandColor3;
         bottom: 45px;
     }
     &:before {
-        color: #5c6266;
-        top: 47px;
+        color: @brandColor3;
         left: 20px;
     }
 }
@@ -136,8 +149,30 @@
     }
 }
 
-.blockquote {
-    blockquote {
-        padding: 24px 52px;
+
+.press-quotes {
+    min-height: 267px;
+}
+
+/*@media (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
+    .press-quotes {
+        min-height: 430px;
+    }
+}*/
+
+// styling blockquotes on mobile
+@media (min-width: 320px) and (max-width: 767px) {
+    .logos .item blockquote {
+        font-size: 14px;
+        padding: 20px 32px;
+
+        &:after, &:before {
+            font-size: 60px;
+        }
+
+        &:before {
+            top: 34px;
+            left: 10px;
+        }
     }
 }
