@@ -156,6 +156,42 @@ label, input, button, select, textarea {
     background: none repeat scroll 0 0 #fff;
 }
 
+.dropdown-menu > li > a {
+    padding: 3px 12px;
+}
+
+.bootstrap-select.btn-group .dropdown-menu li {
+    position: relative;
+
+    .fa-check {
+        position: absolute;
+        right: 15px;
+        top: 6px;
+    }
+}
+
+.bootstrap-select.btn-group .btn .filter-option {
+    left: 8px;
+    overflow: hidden;
+    position: absolute;
+    right: 25px;
+    text-align: left;
+}
+
+.bootstrap-select.btn-group .btn .caret {
+    background-image: url("/bundles/intlendweblayout/frontend/images/general/select_arrow.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: medium none !important;
+    height: 20px;
+    margin-top: -9px;
+    position: absolute;
+    right: 3px;
+    top: 50%;
+    vertical-align: middle;
+    width: 20px;
+}
+
 // search input
 
 .input-search {
@@ -169,7 +205,8 @@ label, input, button, select, textarea {
     }
 
     .form-control {
-        padding: 10px 40px;
+        padding: 0 40px;
+        height: 31px;
     }
 }
 
@@ -180,6 +217,8 @@ label, input, button, select, textarea {
 
     .dropdown-toggle {
         margin-top: -10px;
+        height: 32px;
+        overflow: hidden;
     }
 
     ul.dropdown-menu {
@@ -200,9 +239,35 @@ label, input, button, select, textarea {
         }
     }
 
-    @media (min-width: 992px)  {
-        .col-md-3.ui-custom-item, .col-lg-3.ui-custom-item {
-            width: 22%;
+    // set slider width on mobile
+    @media (min-width: 320px) and (max-width: 767px) {
+        .col-xs-12.ui-custom-item {
+            width: 97.2%;
+
+            .spacing-slider {
+                margin-left: 8px;
+            }
+        }
+    }
+
+    // set slider width on tablet
+    @media (min-width: 768px) and (max-width: 991px) {
+        .col-sm-3.ui-custom-item {
+            width: 24.7%;
+        }
+    }
+
+    // set slider width on desktop
+    @media (min-width: 992px) {
+        .col-md-2.ui-custom-item, .col-lg-2.ui-custom-item {
+            width: 19.4%;
+        }
+    }
+
+    // tablet and desktop
+    @media (min-width: 768px)  {
+        ul.dropdown-menu {
+            min-width: 430px;
         }
     }
 

@@ -1,25 +1,21 @@
 <form action="" method="get" role="form" id="filter-bar">
 
-    <div class="col-xs-12 col-sm-3 col-md-2 col-md-offset-0">
+    <div class="col-xs-12 col-sm-3 col-md-3 col-md-offset-0">
         <p><strong>{{  'Kategorie' }}</strong></p>
-        <div class="btn-group btn-block">
-            <button type="button" class="form-control btn dropdown-toggle" data-toggle="dropdown">
-                <span class="pull-left">Alle</span>
-                <span class="fa fa-chevron-down pull-right"></span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-                <li><a href="#"><i class="fa fa-check pull-right"></i>{{ 'Betriebsmittelfinanzierung' }}</a></li>
-                <li><a href="#">{{ 'Investition in Anlagevermögen' }}</a></li>
-                <li><a href="#">{{ 'Wachstumkapital' }}</a></li>
-                <li><a href="#">{{ 'Tilgung von Steuer-oder Versicherungsverbindlichkeiten' }}</a></li>
-                <li><a href="#">{{ 'Sonstige' }}</a></li>
-            </ul>
-        </div>
+
+        <select name="filter[category]" id="filter_category" class="show-tick selectpicker">
+            <option value="">Alle</option>
+            <option value="working_capital">Betriebsmittelfinanzierung</option>
+            <option value="asset_purchase">Investition in Anlagevermögen</option>
+            <option value="expansion_growth_capital">Wachstumskapital</option>
+            <option value="tax_liability">Tilgung von Steuer- oder Versicherungsverbindlichkeiten</option>
+            <option value="other">Sonstige</option>
+        </select>
     </div>
 
     <div class="desp-10 visible-xs hidden-sm hidden-md hidden-lg"></div>
 
-    <div class="col-xs-12 col-sm-3 col-md-3 col-md-offset-0 ui-custom-item">
+    <div class="col-xs-12 col-sm-3 col-md-2 col-md-offset-0 ui-custom-item">
         <p><strong>{{ 'Kreditbetrag' }}</strong></p>
         <div class="spacing-slider">
             <div id="slider-range-amount"></div>
@@ -31,7 +27,7 @@
         <div class="desp-10 hidden-md hidden-lg"></div>
     </div>
 
-    <div class="col-xs-12 col-sm-3 col-md-3 col-md-offset-0 ui-custom-item">
+    <div class="col-xs-12 col-sm-3 col-md-2 col-md-offset-0 ui-custom-item">
         <p><strong>{{ 'Zinssatz' }}</strong></p>
         <div class="spacing-slider">
             <div id="slider-range-interest"></div>
@@ -43,7 +39,7 @@
         <div class="desp-10 hidden-md hidden-lg"></div>
     </div>
 
-    <div class="col-xs-12 col-sm-3 col-md-3 col-md-offset-0 ui-custom-item">
+    <div class="col-xs-12 col-sm-3 col-md-2 col-md-offset-0 ui-custom-item">
         <p><strong>{{ 'Laufzeit' }}</strong></p>
         <div class="spacing-slider">
             <div id="slider-range-year"></div>
