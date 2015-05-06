@@ -3,6 +3,13 @@
    ========================================================================== */
 .borrower {
 
+    // bigger h3 on tablet
+    @media (min-width: 768px) and (max-width: 991px) {
+        h3, .faux-h3 {
+            font-size: 20px;
+        }
+    }
+
     .fees {
         background-image: url("https://d1x3gb5zl465n8.cloudfront.net/de/bundles/images/borrower/hero-leitfaden_04.jpg");
     }
@@ -31,12 +38,29 @@
 
     // add border only on desktop
     @media (min-width: 992px) {
-        .benefits-borrower h3 {
-            border-bottom: 2px solid #ff8c19;
-            padding-bottom: 16px;
+        .benefits-borrower {
+            h3 {
+                border-bottom: 2px solid #ff8c19;
+                padding-bottom: 16px;
+            }
+
+            .text {
+                margin-left: -5px;
+            }
         }
     }
 
+    @media (min-width: 320px) and (max-width: 767px) {
+        .table-terms {
+            margin-left: -15px;
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 991px) {
+    #fees-borrower .table caption {
+        margin-bottom: 10px;
+    }
 }
 
 // desktop
@@ -74,6 +98,14 @@
     }
 }
 
+@media (min-width: 320px) and (max-width: 991px) {
+    .borrower-steps {
+        h2 {
+            margin-bottom: 0;
+        }
+    }
+}
+
 // accordion
 .fa-minus-square:before {
     content: "\f146";
@@ -84,12 +116,109 @@
 }
 
 
+
 /* end rates and fees borrower  */
 
 /* ==========================================================================
    Borrower getting started
    ========================================================================== */
+.calculate-rate {
+    background: url('https://d1x3gb5zl465n8.cloudfront.net/de/bundles/images/borrower/02-00-kredit-beantragen_05.jpg') 50% 0;
+}
 
+.loan-widget-container {
+
+    background: white;
+    overflow: hidden;
+
+    .loan-widget {
+        padding-top: 40px;
+    }
+
+    @media (min-width: 320px ) and (max-width: 767px) {
+        .loan-widget {
+            padding-top: 25px;
+        }
+    }
+
+    .rate-box {
+        background: @brandColor2;
+        color: @white;
+        padding-top: 40px;
+
+        .subheading {
+            font-size: @headingsFontSizeH2;
+        }
+
+        @media (min-width: 320px ) and (max-width: 767px) {
+            .subheading {
+                font-size: @headingsFontSizeH3 + 5;
+            }
+        }
+
+        @media (min-width: 768px ) and (max-width: 991px) {
+            .subheading {
+                font-size: @headingsFontSizeH3;
+            }
+        }
+
+        p small {
+            color: #f6d1b7;
+        }
+    }
+
+    @media (min-width: 320px ) and (max-width: 767px) {
+        .rate-box {
+            padding-top: 25px;
+        }
+    }
+}
+
+.loan-terms {
+    background: url("/bundles/intlenddeweblayout/frontend/images/cms/borrower/loan-calculator-benefits.png") top left repeat-x;
+    min-height: 57px;
+
+    .list-inline {
+        color: #ffffff;
+        padding: 19px 19px 18px;
+
+        li {
+            &:nth-child(2) {
+                padding: 0 30px 0 30px;
+            }
+
+            &:before {
+                content: "\f058";
+                font-family: @iconFontFamilyAwesome;
+                font-size: @baseFontSize;
+                padding-right: 7px;
+            }
+        }
+
+
+
+    }
+}
+
+
+@media (min-width: 768px ) and (max-width: 991px) {
+    .loan-terms {
+        .list-inline {
+            padding: 19px 0 18px;
+
+            li {
+                font-size: 13px;
+
+                &:nth-child(2) {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+
+/* old calculator */
 .calculate-loan {
     background: url('https://d1x3gb5zl465n8.cloudfront.net/de/bundles/images/borrower/02-00-kredit-beantragen_05.jpg') 50% 0;
 }
@@ -134,6 +263,7 @@
         padding-top: 54px;
     }
 
+
     .result-box {
         background: @brandColor2;
         color: @white;
@@ -173,7 +303,6 @@
 
 .cta {
     p {
-        padding-top: 12px;
         &:before {
             content: "\f132";
             font-family: "FontAwesome";
@@ -182,6 +311,8 @@
         }
     }
 }
+
+/* old calculator */
 
 #amount, #loan-duration {
     display: block;

@@ -1,14 +1,28 @@
 .investor {
 
+    // bigger h3 on tablet
+    @media (min-width: 768px) and (max-width: 991px) {
+        h3, .faux-h3 {
+            font-size: 20px;
+        }
+    }
+
     .main-title p:nth-child(2) {
         color: @brandColor4;
     }
 
     // add border only on desktop
     @media (min-width: 992px) {
-        .benefits-lender h3 {
-            border-bottom: 2px solid @brandColorCTA;
-            padding-bottom: 16px;
+        .benefits-lender {
+
+            h3 {
+                border-bottom: 2px solid @brandColorCTA;
+                padding-bottom: 16px;
+            }
+
+            .text {
+                margin-left: -5px;
+            }
         }
     }
 

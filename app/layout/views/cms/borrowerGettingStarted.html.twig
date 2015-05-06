@@ -2,179 +2,117 @@
 
 {% block body %}
 
-<!-- Content visible for mobile, tablets (hidden for desktop) -->
-<div class="container spacing">
+    <div class="cms-page borrower">
 
-    <div class="row">
-        <div class="col-xs-12 hidden-lg">
-            <h1 class="faux-h1 text-center">{{ 'Günstige, flexible Kredite für den Mittelstand' }}</h1>
-        </div>
-    </div><!-- end .row -->
+<div class="container-wrapper calculate-rate">
+    <div class="container">
 
-    <!-- Filipe proposal -->
+        <div class="page-head">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1 class="text-white text-center">{{ 'Ihr Firmenkredit: Jetzt persönliche Rate ermitteln' }}</h1>
+                </div>
+            </div>
+        </div><!-- end .page-head -->
+
+        <div class="custom-row">
+            <div class="loan-widget-container">
+                <div class="col-xs-12 col-sm-6 loan-widget">
+                    <div class="row">
+                        <div class="col-xs-7 col-md-7">
+                            <label for="amount"><strong>{{ 'Ihr Kreditbetrag' }}</strong></label><br>
+                        </div>
+                        <div class="col-xs-5 col-md-5 text-right">
+                            <span id="amount"><strong>{{ '200.000 €' }}</strong></span>
+                        </div>
+                        <div class="col-xs-12 col-md-12">
+                            <div id="slider-range-min"></div>
+                        </div>
+                    </div>
+                    <div class="desp-20"></div>
+                    <div class="row">
+                        <div class="col-xs-7 col-md-7">
+                            <label for="loan-duration"><strong>{{ 'Ihre Kreditlaufzeit' }}</strong></label><br>
+                        </div>
+                        <div class="col-xs-5 col-md-5 text-right">
+                            <span id="loan-duration"><strong>{{ '2 Jahre' }}</strong></span>
+                        </div>
+                        <div class="col-xs-12 col-md-12">
+                            <div id="slider-loan-duration"></div>
+                        </div>
+                    </div><!-- end .row -->
+                    <div class="desp-25 hidden-sm hidden-md hidden-lg"></div>
+                </div><!-- end .col-xs-12 col-sm-6 -->
+
+                <div class="col-xs-12 col-sm-6 rate-box">
+                    <div class="row">
+                        <div class="col-xs-7 col-md-8">
+                            <label for="monthlyRate">{{ 'Monatliche Zahlung' }}</label>
+                        </div>
+                        <div class="col-xs-5 col-md-4 text-right">
+                            <span id="monthlyRate" class="subheading">{{ '1.117 €' }}</span>
+                        </div>
+                    </div><!-- end .row -->
+                    <div class="desp-10"></div>
+                    <div class="row">
+                        <div class="col-xs-7 col-md-8">
+                            <label for="totalSum"><strong>{{ 'Gesamtbetrag' }}</strong></label>
+                        </div>
+                        <div class="col-xs-5 col-md-4 text-right">
+                            <span id="totalSum" class="subheading"><strong>{{ '26.808 €' }}</strong></span>
+                        </div>
+                    </div><!-- end .row -->
+                    <div class="desp-25"></div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p>
+                                <small>Die oben genannten Zahlen enthalten Zencap-Gebühren in Höhe von <span id="feeAmount"> 2.000 €</span>
+                                    und basieren auf der Risikoklasse A+.
+                                </small>
+                            </p>
+                        </div>
+                    </div>
+                </div><!-- end .col-xs-12 col-sm-6 -->
+
+            </div><!-- end .loan-widget-container -->
+            <div class="loan-terms hidden-xs">
+                <div class="col-sm-12">
+                    <ul class="list-inline">
+                        <li><strong>Mindestumsatz: 100.000 €</strong></li>
+                        <li><strong>Bilanzanforderung: Buchführung nach HGB</strong></li>
+                        <li><strong>Mindestunternehmensalter: 2 Jahre</strong></li>
+                    </ul>
+                </div>
+            </div><!-- end .loan-terms -->
+        </div><!-- end .custom-row -->
+
+        <div class="clearfix"></div>
+
+        <div class="cta">
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+                    <a id="loan-submit-1" class="btn btn-lg btn-brrwr" type="submit" href="">Jetzt Kredit beantragen</a>
+
+                    <div class="desp-10"></div>
+                    <p class="text-white">TÜV geprüfte Datensicherheit</p>
+                </div>
+            </div>
+        </div><!-- end .cta -->
+
+    </div><!-- end .container -->
+
+</div><!-- end .calculate-rate -->
+
+
+    <!-- OLD LOAN CALCULATOR -->
+
 {#
-    <div class="row">
-        <div class="col-xs-12 col-sm-5 col-sm-offset-1 hidden-lg">
-            <div class="row">
-                <div class="col-xs-8">
-                    <label for="amount">{{ 'Ihr Kreditbetrag' }}</label><br>
-                </div>
-                <div class="col-xs-4 text-right">
-                    <span id="amount">{{ '200.000 €' }}</span>
-                </div>
-                <div class="col-xs-12">
-                    <div id="slider-range-min"></div>
-                </div>
-            </div>
-        </div>
 
-        <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
-
-        <div class="col-xs-12 col-sm-5 hidden-lg">
-            <div class="row">
-                <div class="col-xs-8">
-                    <label for="loan-duration">{{ 'Ihre Kreditlaufzeit' }}</label><br>
-                </div>
-                <div class="col-xs-4 text-right">
-                    <span id="loan-duration">{{ '2 Jahre' }}</span>
-                </div>
-                <div class="col-xs-12">
-                    <div id="slider-loan-duration"></div>
-                </div>
-            </div><!-- end .row -->
-        </div>
-    </div><!-- end .row -->
-
-    <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
-
-    <div class="row">
-        <div class="col-xs-12 col-sm-5 col-sm-offset-1 hidden-lg">
-            <div class="row">
-                <div class="col-xs-8">
-                    <label for="monthlyRate">{{ 'Monatliche Zahlung' }}</label>
-                </div>
-                <div class="col-xs-4 text-right">
-                    <span id="monthlyRate">{{ '1.117 €' }}</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
-
-        <div class="col-xs-12 col-sm-5 hidden-lg">
-            <div class="row">
-                <div class="col-xs-8">
-                    <label for="totalSum">{{ 'Gesamtbetrag' }}</label>
-                </div>
-                <div class="col-xs-4 text-right">
-                    <span id="totalSum">{{ '26.808 €' }}</span>
-                </div>
-            </div><!-- end .row -->
-        </div>
-    </div><!-- end .row -->
-
-    <div class="desp-20 hidden-lg"></div>
-
-    <div class="row">
-        <p class="col-xs-12 text-center hidden-lg">
-            <a href="#" type="submit" class="btn btn-lg btn-brrwr">{{ 'Jetzt Kredit beantragen' }}</a>
-        </p>
-        <div class="col-xs-12 text-center hidden-lg">
-            {{ 'Wir sind keine Bank und müssen kein teures Filialnetz unterhalten. Diese Einsparungen geben wir direkt an Sie weiter.' }}
-        </div>
-    </div><!-- end .row -->
-
-    <!-- end Filipe proposal -->
-#}
-
-    <!-- Kajetan proposal -->
-
-    <div class="row odd">
-        <div class="desp-10"></div>
-
-        <div class="col-xs-12">
-            <label for="amount">{{ 'Ihr Kreditbetrag' }}</label>
-            <div class="row">
-                <div class="col-xs-8">
-                    <div id="slider-range-min"></div>
-                </div>
-                <div class="col-xs-4 text-right">
-                    <span id="amount"></span>
-                </div>
-            </div>
-        </div>
-
-        <div class="desp-10"></div>
-
-        <div class="col-xs-12">
-            <label for="loan-duration">{{ 'Ihre Kreditlaufzeit' }}</label><br>
-            <div class="row">
-                <div class="col-xs-8">
-                    <div id="slider-loan-duration"></div>
-                </div>
-                <div class="col-xs-4 text-right">
-                    <span id="loan-duration"></span>
-                </div>
-            </div><!-- end .row -->
-        </div>
-
-        <div class="desp-10"></div>
-
-    </div><!-- end .row -->
-
-
-    <div class="row">
-
-        <div class="desp-10"></div>
-
-        <div class="col-xs-12">
-            <div class="row">
-                <div class="col-xs-7 col-sm-4">
-                    <span id="monthlyRate"><strong>{{ '1.117 €' }}</strong></span><br>
-                    <label for="monthlyRate">{{ 'Monatliche Zahlung' }}</label>
-                </div>
-                <div class="col-xs-5 text-right col-sm-2">
-                    <span id="totalSum"><strong>{{ '26.808 €' }}</strong></span><br>
-                    <label for="totalSum">{{ 'Gesamtbetrag' }}</label>
-                </div>
-                <div class="desp-10 hidden-sm hidden-md hidden-lg"></div>
-                <p class="col-xs-12 col-sm-6">
-                    <a href="#" type="submit" class="btn btn-lg btn-brrwr">{{ 'Jetzt Kredit beantragen' }}</a>
-                </p>
-            </div><!-- end .row -->
-        </div>
-
-    </div><!-- end .row -->
-
-    <div class="desp-20 hidden-lg"></div>
-
-    {#
-    <div class="row">
-        <p class="col-xs-12 text-center hidden-lg">
-            <a href="#" type="submit" class="btn btn-lg btn-brrwr">{{ 'Jetzt Kredit beantragen' }}</a>
-        </p>
-        <div class="col-xs-12 text-center hidden-lg">
-            {{ 'Wir sind keine Bank und müssen kein teures Filialnetz unterhalten. Diese Einsparungen geben wir direkt an Sie weiter.' }}
-        </div>
-    </div><!-- end .row -->
-
-    #}
-
-    <!-- end Kajetan proposal -->
-
-</div>
-<!-- end .hidden-lg -->
-
-<div class="cms-page borrower">
-
-    <!-- Content visible for desktop (hidden for mobile, tablets) -->
-
-    {# LOAN CALCULATOR #}
-
-    {#
     <div class="container-wrapper hidden-xs hidden-sm hidden-md visible-lg calculate-loan">
         <div class="desp-30"></div>
         <h1 class="text-white text-center">Ihr Firmenkredit: Jetzt persönliche Rate ermitteln</h1>
+
         <div class="container">
             <div class="row">
                 <div class="loan-calculator-container">
@@ -197,6 +135,7 @@
 
                                 <div class="radio-buttons">
                                     <input type="radio" id="months_6" name="months" value="6" class="month hidden">
+
                                     <div class="custom-circle">
                                         <span></span>
                                     </div>
@@ -205,6 +144,7 @@
 
                                 <div class="radio-buttons">
                                     <input type="radio" id="months_12" name="months" value="12" class="month hidden">
+
                                     <div class="custom-circle">
                                         <span></span>
                                     </div>
@@ -212,7 +152,9 @@
                                 </div>
 
                                 <div class="radio-buttons">
-                                    <input type="radio" id="months_24" name="months" value="24" class="month hidden" checked="checked">
+                                    <input type="radio" id="months_24" name="months" value="24" class="month hidden"
+                                           checked="checked">
+
                                     <div class="custom-circle">
                                         <span class="selected"></span>
                                     </div>
@@ -221,6 +163,7 @@
 
                                 <div class="radio-buttons">
                                     <input type="radio" id="months_36" name="months" value="36" class="month hidden">
+
                                     <div class="custom-circle">
                                         <span></span>
                                     </div>
@@ -229,6 +172,7 @@
 
                                 <div class="radio-buttons">
                                     <input type="radio" id="months_48" name="months" value="48" class="month hidden">
+
                                     <div class="custom-circle">
                                         <span></span>
                                     </div>
@@ -237,6 +181,7 @@
 
                                 <div class="radio-buttons">
                                     <input type="radio" id="months_60" name="months" value="60" class="month hidden">
+
                                     <div class="custom-circle">
                                         <span></span>
                                     </div>
@@ -250,31 +195,37 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <p class="pull-left">Monatliche Zahlung</p>
+
                                 <p id="monthlyPayment" class="subheading pull-right">5.000 €</p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-12">
                                 <p class="pull-left"><strong>Gesamtbetrag</strong></p>
+
                                 <p id="totalPayment" class="subheading pull-right"><strong>150.000 €</strong></p>
                             </div>
                         </div>
                         <div class="desp-25"></div>
                         <div class="row">
                             <div class="col-lg-12">
-                                <p><small>Die oben genannten Zahlen enthalten Zencap-Gebühren in Höhe von <span id="feeAmount"> 2.000 €</span> und basieren auf der Risikoklasse A+.</small></p>
+                                <p>
+                                    <small>Die oben genannten Zahlen enthalten Zencap-Gebühren in Höhe von <span
+                                            id="feeAmount"> 2.000 €</span> und basieren auf der Risikoklasse A+.
+                                    </small>
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="loan-conditions">
-                <div class="lg-12">
-                    <ul class="list-inline">
-                        <li><strong>Mindestumsatz: 100.000 €</strong></li>
-                        <li><strong>Bilanzanforderung: Buchführung nach HGB</strong></li>
-                        <li><strong>Mindestunternehmensalter: 2 Jahre</strong></li>
-                    </ul>
-                </div>
+                    <div class="lg-12">
+                        <ul class="list-inline">
+                            <li><strong>Mindestumsatz: 100.000 €</strong></li>
+                            <li><strong>Bilanzanforderung: Buchführung nach HGB</strong></li>
+                            <li><strong>Mindestunternehmensalter: 2 Jahre</strong></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -283,6 +234,8 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <a id="loan-submit-1" class="btn btn-lg btn-brrwr" type="submit" href="">Jetzt Kredit beantragen</a>
+
+                    <div class="desp-10"></div>
                     <p class="text-white">TÜV geprüfte Datensicherheit</p>
                 </div>
             </div>
@@ -290,7 +243,8 @@
 
     </div>
 
-    #}
+#}
+
     <!-- end .visible-lg -->
 
     <!-- TO DO: REPLACE THE borrower-benefit-1.png  WITH THE CORECT IMAGE ON ALL 3 STEPS!!!!!!!!!!!!!!!!!  -->
@@ -298,9 +252,11 @@
     <div class="container-wrapper borrower-credit-steps">
         <div class="container spacing">
             <h2 class="faux-h1 text-center">In drei Schritten zu Ihrem Geschäftskredit</h2>
+
             <div class="row">
                 <p class="hidden-xs hidden-sm col-md-10 col-md-offset-1">
-                    <img class="img-responsive" src="https://d1x3gb5zl465n8.cloudfront.net/de/bundles/images/borrower/steps.png" alt="">
+                    <img class="img-responsive"
+                         src="https://d1x3gb5zl465n8.cloudfront.net/de/bundles/images/borrower/steps.png" alt="">
                 </p>
             </div>
             <div class="row">
@@ -308,7 +264,9 @@
                 <div class="col-xs-12 col-md-4">
                     <div class="row helper">
                         <div class="col-xs-12 helper-inner">
-                            <img class="pull-left hidden-md hidden-lg" alt="" src="/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-1.png" />
+                            <img class="pull-left hidden-md hidden-lg" alt=""
+                                 src="/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-1.png"/>
+
                             <div class="col-xs-7 col-sm-6 col-md-12 pull-left helper-inner">
                                 <h3>Finanzierungsanfrage stellen</h3>
                             </div>
@@ -316,7 +274,9 @@
                         </div>
                         <div class="desp-10 hidden-md hidden-lg"></div>
                         <div class="col-xs-12">
-                            <p>Erfüllen Sie unsere Mindestanforderungen, können Sie Ihren Firmenkredit in nur 15 Minuten beantragen: Bequem mit wenigen Klicks registrieren, ein aussagekräftiges Unternehmensprofil erstellen und die erforderlichen Finanzkennzahlen hochladen. </p>
+                            <p>Erfüllen Sie unsere Mindestanforderungen, können Sie Ihren Firmenkredit in nur 15 Minuten
+                                beantragen: Bequem mit wenigen Klicks registrieren, ein aussagekräftiges
+                                Unternehmensprofil erstellen und die erforderlichen Finanzkennzahlen hochladen. </p>
                         </div>
                     </div>
                 </div>
@@ -324,14 +284,19 @@
                 <div class="col-xs-12 col-md-4">
                     <div class="row helper">
                         <div class="col-xs-12 helper-inner">
-                            <img class="pull-left hidden-md hidden-lg" alt="" src="/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-1.png" />
+                            <img class="pull-left hidden-md hidden-lg" alt=""
+                                 src="/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-1.png"/>
+
                             <div class="col-xs-7 col-sm-6 col-md-12 pull-left helper-inner">
                                 <h3>Finanzierungszusage erhalten</h3>
                             </div>
                         </div>
                         <div class="desp-10 hidden-md hidden-lg"></div>
                         <div class="col-xs-12">
-                            <p>Unsere erfahrenen Kreditanalysten prüfen Ihren vollständigen Antrag innerhalb von nur 48 Stunden – natürlich kostenfrei. Danach erhalten Sie Ihr individuelles Zinsangebot. Sobald Sie dieses annehmen, wird Ihr Projekt automatisch zur Finanzierung freigeschaltet.</p>
+                            <p>Unsere erfahrenen Kreditanalysten prüfen Ihren vollständigen Antrag innerhalb von nur 48
+                                Stunden – natürlich kostenfrei. Danach erhalten Sie Ihr individuelles Zinsangebot.
+                                Sobald Sie dieses annehmen, wird Ihr Projekt automatisch zur Finanzierung
+                                freigeschaltet.</p>
                         </div>
                     </div>
                 </div>
@@ -339,22 +304,27 @@
                 <div class="col-xs-12 col-md-4">
                     <div class="row helper">
                         <div class="col-xs-12 helper-inner">
-                            <img class="pull-left hidden-md hidden-lg" alt="" src="/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-1.png" />
+                            <img class="pull-left hidden-md hidden-lg" alt=""
+                                 src="/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-1.png"/>
+
                             <div class="col-xs-7 col-sm-6 col-md-12 pull-left helper-inner">
                                 <h3>Geldeingang verbuchen</h3>
                             </div>
                         </div>
                         <div class="desp-10 hidden-md hidden-lg"></div>
                         <div class="col-xs-12">
-                        <p>Ist Ihr Kreditprojekt finanziert, erhalten Sie Ihren Kreditvertrag. Senden Sie diesen unterschrieben an uns zurück, zahlen wir Ihren Geschäftskredit innerhalb weniger Tage aus. Die monatliche Rückzahlung erfolgt danach einfach und bequem per Lastschrift.</p>
-                    </div>
+                            <p>Ist Ihr Kreditprojekt finanziert, erhalten Sie Ihren Kreditvertrag. Senden Sie diesen
+                                unterschrieben an uns zurück, zahlen wir Ihren Geschäftskredit innerhalb weniger Tage
+                                aus. Die monatliche Rückzahlung erfolgt danach einfach und bequem per Lastschrift.</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-xs-12">
-                    <p class="text-center">Detaillierte Information zu Ihrer Firmenkredit-Anfrage finden Sie im <a href="/rates-and-fees-borrower" target="_blank">Leitfaden.</a></p>
+                    <p class="text-center">Detaillierte Information zu Ihrer Firmenkredit-Anfrage finden Sie im <a
+                            href="/rates-and-fees-borrower" target="_blank">Leitfaden.</a></p>
                 </div>
             </div>
             <div class="row">
@@ -377,12 +347,17 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-8 col-md-8">
                                 <blockquote>
-                                    <p>Mit der Finanzierung bei Zencap schaffen wir uns ein zweites Standbein. So sind wir in Zeiten von Basel III unabhängiger von der Hausbank. Außerdem schätzen wir den unkomplizierten und sehr professionellen Prozess bei Zencap.</p>
+                                    <p>Mit der Finanzierung bei Zencap schaffen wir uns ein zweites Standbein. So sind
+                                        wir in Zeiten von Basel III unabhängiger von der Hausbank. Außerdem schätzen wir
+                                        den unkomplizierten und sehr professionellen Prozess bei Zencap.</p>
+
                                     <p><em>Axel Jünke, Geschäftsführer</em></p>
                                 </blockquote>
                             </div>
                             <div class="hidden-xs col-xs-12 col-sm-4 col-md-3 col-md-offset-1">
-                                <img alt="" src="https://d1uuy7l9kfwygp.cloudfront.net/bundles/intlendweblayout/frontend/images/cms/borrower/axel-juehnke-cadmium.jpg" class="img-circle" />
+                                <img alt=""
+                                     src="https://d1uuy7l9kfwygp.cloudfront.net/bundles/intlendweblayout/frontend/images/cms/borrower/axel-juehnke-cadmium.jpg"
+                                     class="img-circle"/>
                             </div>
                         </div>
 
@@ -393,12 +368,21 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-8">
                                 <blockquote>
-                                    <p>Über das Crowdlending-Modell von Zencap kann erstmals eine breite Schicht von Privatanlegern in den Mittelstand investieren und Margen erzielen, die sonst nur den Banken vorbehalten blieben. Damit hilft Zencap, eine Lücke im Finanzierungsmarkt zu schließen.</p>
-                                    <p><em>Dr. Ralf Beck, Professor für BWL und Autor von <span class="nobr"><a href="https://d1uuy7l9kfwygp.cloudfront.net/bundles/intlendweblayout/frontend/images/cms/borrower/axel-juehnke-cadmium.jpg" target="_blank">Crowdinvesting - Die Investition der Vielen</a></span></em></p>
+                                    <p>Über das Crowdlending-Modell von Zencap kann erstmals eine breite Schicht von
+                                        Privatanlegern in den Mittelstand investieren und Margen erzielen, die sonst nur
+                                        den Banken vorbehalten blieben. Damit hilft Zencap, eine Lücke im
+                                        Finanzierungsmarkt zu schließen.</p>
+
+                                    <p><em>Dr. Ralf Beck, Professor für BWL und Autor von <span class="nobr"><a
+                                                    href="https://d1uuy7l9kfwygp.cloudfront.net/bundles/intlendweblayout/frontend/images/cms/borrower/axel-juehnke-cadmium.jpg"
+                                                    target="_blank">Crowdinvesting - Die Investition der
+                                                    Vielen</a></span></em></p>
                                 </blockquote>
                             </div>
                             <div class="hidden-xs col-xs-12 col-sm-3">
-                                <img alt="" src="/bundles/intlendweblayout/frontend/images/cms/investor/dr-ralf-beck.jpg" class="img-circle" />
+                                <img alt=""
+                                     src="/bundles/intlendweblayout/frontend/images/cms/investor/dr-ralf-beck.jpg"
+                                     class="img-circle"/>
                             </div>
                         </div>
 
@@ -410,12 +394,18 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-8">
                                 <blockquote>
-                                    <p>Mit der Finanzierung bei Zencap schaffen wir uns ein zweites Standbein. So sind wir in Zeiten von Basel III unabhängiger von der Hausbank. Außerdem schätzen wir den unkomplizierten und sehr professionellen Prozess bei Zencap.</p>
-                                    <p><em>Axel Jünke, Gesellschafter <a href="http://www.cadmic.de/" target="_blank">CADMIC</a></em></p>
+                                    <p>Mit der Finanzierung bei Zencap schaffen wir uns ein zweites Standbein. So sind
+                                        wir in Zeiten von Basel III unabhängiger von der Hausbank. Außerdem schätzen wir
+                                        den unkomplizierten und sehr professionellen Prozess bei Zencap.</p>
+
+                                    <p><em>Axel Jünke, Gesellschafter <a href="http://www.cadmic.de/" target="_blank">CADMIC</a></em>
+                                    </p>
                                 </blockquote>
                             </div>
                             <div class="hidden-xs col-xs-12 col-sm-3">
-                                <img alt="" src="/bundles/intlendweblayout/frontend/images/cms/borrower/axel-juehnke-cadmium.jpg" class="img-circle" />
+                                <img alt=""
+                                     src="/bundles/intlendweblayout/frontend/images/cms/borrower/axel-juehnke-cadmium.jpg"
+                                     class="img-circle"/>
                             </div>
                         </div>
 
@@ -429,7 +419,8 @@
                     <li data-target="#borrowerCarousel" data-slide-to="2"></li>
                 </ol>-->
 
-            </div><!-- end #borrowerCarousel -->
+            </div>
+            <!-- end #borrowerCarousel -->
 
         </div>
     </div>
@@ -437,50 +428,75 @@
     <div class="container-wrapper benefits-borrower">
         <div class="container spacing">
             <h2 class="faux-h1 text-center">Ihre Unternehmensfinanzierung </h2>
+
             <div class="row">
 
                 <div class="col-xs-12 col-md-4">
                     <div class="row visual">
                         <div class="col-xs-12 visual-inner">
-                            <img class="pull-left" alt="" src="/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-1.png" />
+                            <img class="pull-left" alt=""
+                                 src="/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-1.png"/>
+
                             <div class="col-xs-7 col-sm-6 col-md-9 visual-inner">
                                 <h3>Verlässliche Rahmenbedingungen</h3>
                             </div>
                         </div>
                         <div class="desp-10"></div>
-                        <p class="col-xs-12 col-md-9 col-md-offset-3">Unsere Kreditentscheidung erfolgt innerhalb von maximal 48 Stunden, denn Planbarkeit ist entscheidend für Ihren Unternehmenserfolg. So machen Sie sich unabhängig von Ihrer Hausbank und stellen Ihre Unternehmensfinanzierung auf ein zweites Standbein.</p>
+                        <div class="col-xs-12 col-md-9 col-md-offset-3">
+                            <p class="text">Unsere Kreditentscheidung erfolgt innerhalb von
+                            maximal 48 Stunden, denn Planbarkeit ist entscheidend für Ihren Unternehmenserfolg. So
+                            machen Sie sich unabhängig von Ihrer Hausbank und stellen Ihre Unternehmensfinanzierung auf
+                            ein zweites Standbein.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-4">
                     <div class="row visual">
                         <div class="col-xs-12 visual-inner">
-                            <img class="pull-left" alt="" src="/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-2.png" />
+                            <img class="pull-left" alt=""
+                                 src="/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-2.png"/>
+
                             <div class="col-xs-7 col-sm-6 col-md-9 visual-inner">
                                 <h3>Attraktive Konditionen</h3>
                             </div>
                         </div>
                         <div class="desp-10"></div>
-                        <p class="col-xs-12 col-md-9 col-md-offset-3">Wir sind persönlich für Sie da –ganz ohne teures Filialnetz. Ihren Kredit erhalten Sie bereits ab 3,99 % p.a. – ohne versteckte Gebühren und die Stellung dinglicher Sicherheiten. Gleichzeitig befreien wir Sie von unnötigen Berichtspflichten und komplizierten Kreditklauseln.</p>
+                        <div class="col-xs-12 col-md-9 col-md-offset-3">
+                            <p class="text">Wir sind persönlich für Sie da –ganz ohne teures
+                            Filialnetz. Ihren Kredit erhalten Sie bereits ab 3,99 % p.a. – ohne versteckte Gebühren und
+                            die Stellung dinglicher Sicherheiten. Gleichzeitig befreien wir Sie von unnötigen
+                            Berichtspflichten und komplizierten Kreditklauseln.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-4">
                     <div class="row visual">
                         <div class="col-xs-12 visual-inner">
-                            <img class="pull-left" alt="" src="/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-3.png" />
+                            <img class="pull-left" alt=""
+                                 src="/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-3.png"/>
+
                             <div class="col-xs-7 col-sm-6 col-md-9 visual-inner">
                                 <h3>Flexible Abwicklung</h3>
                             </div>
                         </div>
                         <div class="desp-10"></div>
-                        <p class="col-xs-12 col-md-9 col-md-offset-3">Verabschieden Sie sich von den Öffnungszeiten Ihrer Bank. Bleiben Sie bei Ihrer Unternehmensfinanzierung genauso beweglich wie gegenüber Ihren Kunden. Bei vorzeitiger Rückzahlung Ihres Firmenkredits berechnen wir keinerlei Gebühren.</p>
+                        <div class="col-xs-12 col-md-9 col-md-offset-3">
+                            <p class="text">Verabschieden Sie sich von den Öffnungszeiten
+                            Ihrer Bank. Bleiben Sie bei Ihrer Unternehmensfinanzierung genauso beweglich wie gegenüber
+                            Ihren Kunden. Bei vorzeitiger Rückzahlung Ihres Firmenkredits berechnen wir keinerlei
+                            Gebühren.</p>
+                        </div>
                     </div>
                 </div>
 
-            </div><!-- end .row -->
+            </div>
+            <!-- end .row -->
 
             <div class="row">
                 <div class="col-xs-12 text-center">
-                    <a id="loan-submit-2" class="btn btn-lg btn-brrwr" type="submit" href="/loan-request/register#baseForm">Jetzt Kredit beantragen</a>
+                    <a id="loan-submit-2" class="btn btn-lg btn-brrwr" type="submit"
+                       href="/loan-request/register#baseForm">Jetzt Kredit beantragen</a>
+
                     <div class="desp-10"></div>
                     <p>Oder noch <a href="/kreditnehmer-hilfe-16.html?faq">Fragen zum Thema?</a></p>
                 </div>
@@ -488,7 +504,7 @@
         </div>
     </div>
 
-</div>
+    </div>
 
     {#<script src="/bundles/intlendweblayout/js/sliderCalculator.js"></script>#}
     <!--
@@ -510,7 +526,7 @@
 
     <script>
 
-        $(function(){
+        $(function () {
             $("#offerSlider").slider();
         });
 
