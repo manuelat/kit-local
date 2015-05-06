@@ -156,12 +156,6 @@ $(function() {
     $('[data-toggle="tooltip"]').tooltip();
 
     /**
-     * activate custom select
-     */
-
-    $('.selectpicker').selectpicker();
-
-    /**
      * activate dashboard accordion
      */
 
