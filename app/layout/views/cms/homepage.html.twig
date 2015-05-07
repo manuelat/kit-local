@@ -41,19 +41,6 @@
 
     <div class="desp-20 odd visible-xs hidden-sm hidden-md hidden-lg"></div>
 
-    {#
-    <div class="container-wrapper visible-xs visible-sm hidden-md hidden-lg">
-        <div class="container">
-            <div class="row">
-                <hr/>
-                <img class="img-responsive"
-                     src="https://d1x3gb5zl465n8.cloudfront.net/de/home/press/logos_update2.png" alt=""/>
-                <div class="desp-24"></div>
-            </div>
-        </div>
-    </div><!-- end .container-wrapper -->
-
-#}
     <div class="container-wrapper odd hidden-xs visible-sm visible-md visible-lg tiles">
         <div class="container spacing">
             <div class="row">
@@ -62,7 +49,7 @@
                         <div class="white-box">
                             <div class="desp-20"></div>
                             <div class="text-center">
-                                <a href="{{ path('borrowerGettingStarted') }}" class="text-center btn btn-lg btn-brrwr">Jetzt
+                                <a href="/borrower-getting-started" class="text-center btn btn-lg btn-brrwr">Jetzt
                                     Zinssatz ermitteln</a>
                             </div>
                             <div class="borrower">
@@ -83,7 +70,7 @@
                         <div class="white-box">
                             <div class="desp-20"></div>
                             <div class="text-center">
-                                <a href="{{ path('lenderGettingStarted') }}" class="btn btn-lg btn-nvstr">Jetzt
+                                <a href="/lender-getting-started" class="btn btn-lg btn-nvstr">Jetzt
                                     Geld investieren</a>
                             </div>
                             <div class="investor">
@@ -105,7 +92,7 @@
 
     <div class="clearfix"></div>
 
-    <div class="container-wrapper press-quotes">
+    <div class="container-wrapper press-quotes hidden-xs">
         <div class="container spacing">
             <div class="row">
                 <div class="col-xs-12 logos">
@@ -266,8 +253,8 @@
                     <p>Werden Sie unabhängiger von Banken.<br>
                         Bequem online und zu Top-Konditionen.</p>
 
-                    <div><a href="{{ path('borrowerGettingStarted') }}  {#/loan-request/register#baseForm#} " class="btn btn-lg btn-brrwr">Jetzt Zinssatz
-                            ermitteln</a></div>
+                    <p><a href="/loan-request/register#baseForm" class="btn btn-lg btn-brrwr">Jetzt Zinssatz
+                            ermitteln</a></p>
                 </div>
                 <div class="col-xs-12 col-sm-6 text-center">
                     <h3>Ihre Investition</h3>
@@ -275,7 +262,7 @@
                     <p>Profitieren Sie vom Erfolgsmodell Mittelstand.<br>
                         Attraktive Rendite und volle Transparenz.</p>
 
-                    <p><a href="{{ path('lenderGettingStarted') }}  {#/register/lender/#}" class="btn btn-lg btn-nvstr">Gratis-Anlegerkonto eröffnen</a>
+                    <p><a href="/register/lender/" class="btn btn-lg btn-nvstr">Gratis-Anlegerkonto eröffnen</a>
                     </p>
                 </div>
             </div>
