@@ -125,6 +125,9 @@ lp-negativzinsen-vermeiden:
 lp-sparbuch:
     path: /cms/lp-sparbuch
 
+lp-sharing-economy:
+    path: /cms/lp-sharing-economy
+
 login:
     path: /others/login
 

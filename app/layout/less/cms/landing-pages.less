@@ -6,6 +6,14 @@
     background-size: cover;
 }
 
+/* background height on mobile */
+@media (min-width: 320px) and (max-width: 767px) {
+    .bkg-rate {
+        background: url('https://d1x3gb5zl465n8.cloudfront.net/de/lp/negative/header1.jpg') 33% 0 no-repeat @gray5;
+        height: 250px;
+    }
+}
+
 /* background height on tablet */
 @media (min-width: 768px) and (max-width: 991px) {
     .bkg-rate {
@@ -56,7 +64,6 @@
 
 .bkg-returns {
      background: url('https://d1x3gb5zl465n8.cloudfront.net/de/lp/sparbuch/hero-image.jpg') 50% 50% no-repeat;
-     height: 350px;
 
      h1 small {
          color: @brandColor4;
@@ -64,11 +71,28 @@
      }
  }
 
-/* desktop */
+/* background height on mobile */
+@media (min-width: 320px) and (max-width: 767px) {
+    .bkg-returns {
+        height: 220px;
+    }
+}
+
+/* background height on tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+    .bkg-savers {
+        height: 260px;
+    }
+}
+
+/* background height on desktop */
 @media (min-width: 992px) {
     .bkg-returns {
+        height: 350px;
+
         h1 small {
             font-size: 26px;
         }
     }
 }
+

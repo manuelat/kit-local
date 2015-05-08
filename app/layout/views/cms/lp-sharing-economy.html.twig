@@ -1,0 +1,817 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+
+<style>
+    .twitter a, .twitter a:hover {
+        background-color:#26c4f1;
+        box-shadow: inset 0 -3px 0 #1b89a8;
+    }
+
+    .facebook a, .facebook a:hover {
+        background-color:#306199;
+        box-shadow: inset 0 -3px 0 #22446b;
+    }
+
+    .google a, .google a:hover {
+        background-color:#e93f2e;
+        box-shadow: inset 0 -3px 0 #a32c20;
+    }
+
+    #countDown {
+        color: #26a1f3;
+        font-size: 21px;
+        font-weight: 900;
+        margin-top: -12px;
+    }
+
+    .blueish {
+        background: #e9f5fe;
+    }
+
+    th {
+        padding: 10px;
+        height: 175px;
+    }
+
+    .carousel-inn {
+        display: block;
+        float: left;
+        padding: 15px;
+    }
+
+    .carousel-inn.even {
+        background-color: #f8fcff;
+    }
+
+    .carousel-inn a span {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .special-item {
+        padding: 73px 90px;
+        min-height: 195px;
+    }
+
+    .special-item h3 {
+        margin-bottom: 0;
+    }
+
+
+</style>
+
+<div class="cms-page investor">
+
+
+
+    <div class="container-wrapper header-top"
+         style="background-color:#eefbff; background-image:url('https://d1x3gb5zl465n8.cloudfront.net/de/lp/shared-economy/bundles/hero.png'); height:420px; background-position:50% 50%; margin-top:-48px;">
+        <div class="container spacing">
+            <a href="#sharing"><img style="position:absolute;right:0;z-index:2000;"
+                                    src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/shared-economy/bundles/bubble.png"
+                                    alt="Erhalten Sie jetzt 5 % Cashback auf Ihre Anlage & freuen Sie sich über weitere Rabatte unserer Partner."></a>
+
+            <div
+                style="background-color:#edf0f2;height: 71px;width: 434px;position: absolute;right: 105px;top: -71px;z-index: 10001;">
+                <div class="over-menu" style="width: 67px; text-align: right; margin-left: 371px; height: 40px;">
+                    <a href="/kontakt-14.html"><p style="
+        padding: 6px;
+        font-weight: 800;
+        text-align: right;
+        margin-top: 31px;
+    ">Kontakt</p></a></div>
+            </div>
+            <div class="row main-title">
+                <div class="col-xs-12">
+                    <h1 style="font-size: 72px; color:#189bf2; margin-top:-4px; font-weight:900; line-height:1;">SHARING<br>
+                        ECONOMY</h1>
+
+                    <p style="margin-top:50px;">Mitfeiern & Prämien sichern.<br>
+                        Das Crowdlending-Prinzip feiert Geburtstag.</p>
+
+                    <div><a class="btn btn-lg btn-nvstr" href="#sharing">Jetzt Rabatte entdecken</a><br/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-wrapper blueish">
+        <div class="container text-center" style="min-height:140px;">
+
+            <div id="myCarousel" class="carousel slide" data-interval="5000">
+
+                <!-- Carousel items -->
+
+                <div class="carousel-inner">
+
+                    <div class="active item">
+                        <div class="carousel-inn">
+                            <a href="#sharing"><img src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/shared-economy/bundles/logos/50px/zencap.png" alt="Zencap"/>
+                                <span>5 % Cashback</span></a>
+                        </div>
+                        <div class="carousel-inn even">
+                            <a href="#sharing"><img
+                                    src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/shared-economy/bundles/logos/50px/nestpick.png" alt="nestpick"/>
+
+                                <span>10 % sparen</span></a>
+                        </div>
+                        <div class="carousel-inn">
+                            <a href="#sharing"><img
+                                    src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/shared-economy/bundles/logos/50px/zipjet.png" alt="Zip Je"/>
+
+                                <span>10 € Rabatt</span></a>
+                        </div>
+                        <div class="carousel-inn even">
+                            <a href="#sharing"><img
+                                    src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/shared-economy/bundles/logos/50px/unserp.png" alt="Unserp"/>
+
+                                <span>5 € Tankgutschein</span></a>
+                        </div>
+                        <div class="carousel-inn">
+                            <a href="#sharing"><img
+                                    src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/shared-economy/bundles/logos/50px/zeit42.png" alt="Zeit42"/>
+
+                                <span>10 % Rabatt</span></a>
+                        </div>
+                    </div>
+
+                    <div class="item">
+
+                        <div class="carousel-inn">
+                            <a href="#sharing"><img
+                                    src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/shared-economy/bundles/logos/50px/swapnights.png" alt="Swapnights"/>
+                                <span>6 Monate kostenlos Abo</span></a>
+                        </div>
+                        <div class="carousel-inn even">
+                            <a href="#sharing"><img
+                                    src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/shared-economy/bundles/logos/50px/shopw.png" alt="Shop wings"/>
+
+                                <span>5 € Rabatt</span></a>
+                        </div>
+                        <div class="carousel-inn">
+                            <a href="#sharing"><img
+                                    src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/shared-economy/bundles/logos/50px/scouter.png" alt="Scouter"/>
+
+                                <span>10 € Fahrguthaben</span></a>
+                        </div>
+                        <div class="carousel-inn even">
+                            <a href="#sharing"><img
+                                    src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/shared-economy/bundles/logos/50px/helpling.png" alt="Helpling"/>
+
+                                <span>2 Stunden Gratis</span></a>
+                        </div>
+                        <div class="carousel-inn">
+                            <a href="#sharing"><img
+                                    src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/shared-economy/bundles/logos/50px/betahause.png" alt="Betahause"/>
+
+                                <span>1 Tag Gratis</span></a>
+                        </div>
+
+                    </div>
+
+                    <div class="item special-item">
+                        <h3><a href="#">Lernen Sie unsere Partner in anderen Branchen der Sharing
+                                Economy kennen<br>und feiern Sie mit uns! Jetzt Geburtstagsgutscheine erhalten!</a></h3>
+                    </div>
+                </div>
+
+                <div class="desp-20"></div>
+
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+                <!-- Carousel nav -->
+
+                {# <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+
+                <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>#}
+
+            </div>
+        </div>
+    </div>
+
+    <a id="kunden"></a>
+
+
+    <div class="container-wrapper">
+        <div class="container spacing">
+            <h2 class="faux-h1">Wir beschenken Sie an unserem Geburtstag</h2>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <p>Zencap - der Online-Kreditmarktplatz für Unternehmenskredite feiert sein 1-jähriges Bestehen mit
+                        spannenden Themen rund um die Sharing Economy. Als Crowdlending Marktplatz gehört auch Zencap zur
+                        Sharing Economy: Viele Anleger kommen auf Zencap zusammen, um ein oder mehrere Kreditprojekte von
+                        Unternehmen des deutschen Mittelstands zu unterstützen. Investoren profitieren von einer
+                        durchschnittlichen Rendite von 6,27%, Unternehmen von fairen Zinssätzen und schnellster
+                        Auszahlung.</p>
+                </div>
+                <div class="col-xs-12 col-sm-6 cancel-padding">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#sharingEconomy" data-toggle="tab">Sharing Economy
+                                <i class="fa fa-exchange hidden-xs"></i></a></li>
+                        <li><a href="#crowdLending" data-toggle="tab">Crowdlending <i class="fa fa-group hidden-xs"></i></a></li>
+                    </ul>
+                    <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+                    <div class="tab-content move-block">
+                        <div class="tab-pane active" id="sharingEconomy">
+                            <p>Sharing Economy ist das systematische Ausleihen und Bereitstellen von Gegenständen sowie
+                                Räumen und Flächen. In Deutschland wurde die Idee bereits auf viele traditionelle
+                                Geschäftsmodelle angewendet. Ein Beispiel ist die Unternehmensfinanzierung, die durch den
+                                Online-Kreditmarktplatz Zencap einen moderne Ausrichtung erhielt.</p>
+                        </div>
+                        <div class="tab-pane" id="crowdLending">
+                            <p><a href="https://www.zencap.de/crowdlending-87.html" target="_blank">Crowdlending</a> ist
+                                eine neue Alternative der Fremdfinanzierung. Über einen Online-Kreditmarktplatz finden sich
+                                Anleger und Kreditnehmer. Beispielsweise treffen bei Zencap mittelständische Unternehmen und
+                                Anleger schnell und unkompliziert zusammen.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <a id="sharing"></a>
+
+
+    <div class="container-wrapper blueish">
+        <div class="container spacing">
+            <h2 class="faux-h1">Sharing Economy Gutscheine erhalten – So geht‘s</h2>
+
+            <div class="row icons-row hidden-xs">
+                <div class="col-sm-2 text-center">
+                    <img src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/shared-economy/bundles/steps/01.png" alt="">
+                    <div class="desp-20"></div>
+                    <p>E-Mail angeben</p>
+                </div>
+                <div class="hidden-xs col-sm-1 icons-size"><img src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/partner/next.png" alt=""></div>
+                <div class="col-sm-3 text-center">
+                    <img src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/shared-economy/bundles/steps/02.png" alt="">
+                    <div class="desp-20"></div>
+                    <p>Posteingang überprüfen<br>
+                        <small>Versand innerhalb von 24 Std.</small>
+                    </p>
+                </div>
+                <div class="hidden-xs col-sm-1 icons-size"><img src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/partner/next.png" alt=""></div>
+                <div class="col-sm-2 text-center">
+                    <img src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/shared-economy/bundles/steps/03.png" alt="">
+                    <div class="desp-20"></div>
+                    <p>Gutscheine auswählen</p>
+                </div>
+                <div class="hidden-xs col-sm-1 icons-size"><img src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/partner/next.png" alt=""></div>
+                <div class="col-sm-2 text-center">
+                    <img src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/shared-economy/bundles/steps/04.png" alt="">
+                    <div class="desp-20"></div>
+                    <p>Sparen &amp; Freuen</p>
+                </div>
+            </div>
+
+            <div class="desp-20"></div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-5">
+                    <p>Meine E-Mail Adresse lautet:</p>
+
+                    <form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+
+                        <input type=hidden name="oid" value="00Db0000000eQNo">
+                        <input type=hidden name="retURL"
+                               value="http://www.zencap.de/sharing-economy-confirm-187.html#confirm">
+                        <input id="country" name="country" type="hidden" value="Germany"/>
+                        <input id="last_name" name="last_name" type="hidden" value=""/>
+                        <input id="lead_source" name="lead_source" type="hidden" value="de-shareconomy"/>
+                        <input id="recordType" name="recordType" type="hidden" value="012b0000000DblN"/>
+                        <input style="margin-top:-14px;" type="text" name="email" value="beispiel@mail.com"
+                               class="ss-q-short" id="email" dir="auto" aria-label="  beispiel@mail.de" aria-required="true"
+                               required="" title="beispiel@mail.de">
+
+                        <input type="submit" value="Senden" class="btn btn-medium btn-nvstr">
+
+                    </form>
+                </div>
+
+                <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+
+                <div class="col-xs-12 col-sm-7">
+                    <p>Dieses Angebot gilt nur für kurze Zeit! Die Aktion läuft nur noch</p>
+
+                    <p id="countDown">3 Tage, 4 Stunden, 12 Minuten and 10 Sekunden</p>
+                </div>
+            </div>
+
+            <div class="desp-20"></div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Machen Sie Familie & Freunden eine Freude. Jetzt Rabatte teilen!</p>
+                </div>
+                <div class="col-xs-12 col-sm-3 twitter">
+                    <a class="btn btn-lg btn-block btn-nvstr"
+                       href="http://twitter.com/share?url=https://www.zencap.de/sharing-economy-185.html&amp;text=Seien Sie Teil der&hashtags=SharingEconomy. @ZencapDE feiert mit Partnern und Freunden Geburtstag –jetzt Gutscheine sichern!"
+                       target="_blank"><i class="fa fa-twitter"></i> Tweet</a>
+                </div>
+                <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+                <div class="col-xs-12 col-sm-3 facebook">
+                    <a class="btn btn-lg btn-block btn-nvstr"
+                       href="http://www.facebook.com/sharer.php?u=https://www.zencap.de/sharing-economy-185.html"
+                       target="_blank"><i class="fa fa-facebook"></i> Facebook</a>
+                </div>
+                <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+                <div class="col-xs-12 col-sm-3 google">
+                    <a class="btn btn-lg btn-block btn-nvstr"
+                       href="https://plus.google.com/share?url=https://www.zencap.de/sharing-economy-185.html"
+                       target="_blank"><i class="fa fa-google-plus"></i> Google Plus</a>
+                </div>
+                <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+                <div class="col-xs-12 col-sm-3">
+                    <a class="btn btn-lg btn-block btn-nvstr"
+                       href="mailto:?Subject=Sharing Economy&amp;Body=Seien%20Sie%20Teil%20der%20Sharing%20Economy.%20Zencap%20feiert%20mit%20Partnern%20un%20Freunden%20Geburtstag%20–%20jetzt%20Gutscheine%20sichern!%20http://goo.gl/ejC0z"
+                       target="_blank"><i class="fa fa-envelope "></i> Email</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container-wrapper">
+        <div class="container spacing">
+            <h2 class="faux-h1">Sharing Economy – Das Nutzen- statt Besitzen-Prinzip</h2>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <p>Viele traditionelle Geschäftsmodelle haben durch das Sharing Economy-Prinzip einen zeitgemäßen
+                            Anstrich erhalten.</p>
+
+                        <p>Auf dem deutschen Markt sind mittlerweile etliche Anbieter etabliert. Kaum verwunderlich also,
+                            dass der Begriff auch mediale Aufmerksamkeit genießt.</p>
+
+                        <p>Was genau verbirgt sich hinter diesem Begriff, der weltweit für Furore sorgt? Nicht weniger, als
+                            das systematische Ausleihen und Bereitstellen von Gegenständen sowie Räumen und Flächen.
+                            Natürlich ist die Idee des Tauschens-und-Teilens-anstatt-Besitzens nicht neu: bereits seit
+                            Anbeginn der Zivilisation teilen Menschen und erhöhen auf diese Weise den Wohlstand der
+                            Gemeinschaft. Der Siegeszug des Internets hat das Konzept der gemeinsamen Nutzung
+                            verschiedenster Ressourcen und Dienstleistungen jedoch auf eine neue Ebene gehoben.</p>
+
+                        <p>Wie dieses Modell in der Praxis aussieht? Klicken Sie rechts auf das Bild und erfahren Sie
+                            mehr.</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 text-center">
+                        <a href="#blogpost" target="_blank">
+                            <img class="img-responsive" src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/shared-economy/bundles/sharing-economy.png" alt="Sharing Economy">
+                        </a>
+                        <div class="desp-20"></div>
+                        <a class="btn btn-lg btn-primary btn-nvrstr" type="submit" href="/loan-request/register#baseForm">Jetzt Infografik sehen</a>
+                    </div>
+                </div><!-- end .row -->
+        </div>
+    </div><!-- end .container-wrapper -->
+
+
+    <div class="container-wrapper blueish">
+        <div class="container spacing">
+            <h2 class="faux-h1 text-center">Was kann Zencap für mich tun?</h2>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 text-center">
+                        <p>Ich möchte mehr Informationen<br>zu Anlage Optionen bei Zencap erhalten:</p>
+
+                        <div><strong>Meine E-Mail Adresse lautet</strong></div>
+                        <!--Google Form-->
+                        <script type="text/javascript">
+                            /**
+                             * @license
+                             *
+                             * H5F 1.1.1
+                             * See https://github.com/ryanseddon/H5F/ for details.
+                             *
+                             * Copyright (c) 2013 Ryan Seddon
+                             *
+                             * Permission is hereby granted, free of charge, to any person
+                             * obtaining a copy of this software and associated documentation
+                             * files (the "Software"), to deal in the Software without
+                             * restriction, including without limitation the rights to use,
+                             * copy, modify, merge, publish, distribute, sublicense, and/or sell
+                             * copies of the Software, and to permit persons to whom the
+                             * Software is furnished to do so, subject to the following
+                             * conditions:
+                             *
+                             * The above copyright notice and this permission notice shall be
+                             * included in all copies or substantial portions of the Software.
+                             *
+                             * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+                             * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+                             * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+                             * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+                             * HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+                             * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+                             * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+                             * OTHER DEALINGS IN THE SOFTWARE.
+                             */
+                            (function (e, t) {
+                                "function" == typeof define && define.amd ? define(t) : "object" == typeof module && module.exports ? module.exports = t() : e.H5F = t()
+                            })(this, function () {
+                                var e, t, a, i, n, r, l, s, o, u, d, c, v, p, f, m, b, h, g, y, w, C, N, A, E, $, x = document, k = x.createElement("input"), q = /^[a-zA-Z0-9.!#$%&'*+-\/=?\^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/, M = /[a-z][\-\.+a-z]*:\/\//i, L = /^(input|select|textarea)$/i;
+                                return r = function (e, t) {
+                                    var a = !e.nodeType || !1, i = {
+                                        validClass: "valid",
+                                        invalidClass: "error",
+                                        requiredClass: "required",
+                                        placeholderClass: "placeholder",
+                                        onSubmit: Function.prototype,
+                                        onInvalid: Function.prototype
+                                    };
+                                    if ("object" == typeof t)for (var r in i)t[r] === void 0 && (t[r] = i[r]);
+                                    if (n = t || i, a)for (var s = 0, o = e.length; o > s; s++)l(e[s]); else l(e)
+                                }, l = function (a) {
+                                    var i, r = a.elements, l = r.length, c = !!a.attributes.novalidate;
+                                    if (g(a, "invalid", o, !0), g(a, "blur", o, !0), g(a, "input", o, !0), g(a, "keyup", o, !0), g(a, "focus", o, !0), g(a, "change", o, !0), g(a, "click", u, !0), g(a, "submit", function (i) {
+                                            return e = !0, t || c || a.checkValidity() ? (n.onSubmit.call(a, i), void 0) : (w(i), void 0)
+                                        }, !1), !v())for (a.checkValidity = function () {
+                                        return d(a)
+                                    }; l--;)i = !!r[l].attributes.required, "fieldset" !== r[l].nodeName.toLowerCase() && s(r[l])
+                                }, s = function (e) {
+                                    var t = e, a = h(t), n = {
+                                        type: t.getAttribute("type"),
+                                        pattern: t.getAttribute("pattern"),
+                                        placeholder: t.getAttribute("placeholder")
+                                    }, r = /^(email|url)$/i, l = /^(input|keyup)$/i, s = r.test(n.type) ? n.type : n.pattern ? n.pattern : !1, o = p(t, s), u = m(t, "step"), v = m(t, "min"), b = m(t, "max"), g = !("" === t.validationMessage || void 0 === t.validationMessage);
+                                    t.checkValidity = function () {
+                                        return d.call(this, t)
+                                    }, t.setCustomValidity = function (e) {
+                                        c.call(t, e)
+                                    }, t.validity = {
+                                        valueMissing: a,
+                                        patternMismatch: o,
+                                        rangeUnderflow: v,
+                                        rangeOverflow: b,
+                                        stepMismatch: u,
+                                        customError: g,
+                                        valid: !(a || o || u || v || b || g)
+                                    }, n.placeholder && !l.test(i) && f(t)
+                                }, o = function (e) {
+                                    var t = C(e) || e, a = /^(input|keyup|focusin|focus|change)$/i, r = /^(submit|image|button|reset)$/i, l = /^(checkbox|radio)$/i, u = !0;
+                                    !L.test(t.nodeName) || r.test(t.type) || r.test(t.nodeName) || (i = e.type, v() || s(t), t.validity.valid && ("" !== t.value || l.test(t.type)) || t.value !== t.getAttribute("placeholder") && t.validity.valid ? (A(t, [n.invalidClass, n.requiredClass]), N(t, n.validClass)) : a.test(i) ? t.validity.valueMissing && A(t, [n.requiredClass, n.invalidClass, n.validClass]) : t.validity.valueMissing ? (A(t, [n.invalidClass, n.validClass]), N(t, n.requiredClass)) : t.validity.valid || (A(t, [n.validClass, n.requiredClass]), N(t, n.invalidClass)), "input" === i && u && (y(t.form, "keyup", o, !0), u = !1))
+                                }, d = function (t) {
+                                    var a, i, r, l, s, u = !1;
+                                    if ("form" === t.nodeName.toLowerCase()) {
+                                        a = t.elements;
+                                        for (var d = 0, c = a.length; c > d; d++)i = a[d], r = !!i.attributes.disabled, l = !!i.attributes.required, s = !!i.attributes.pattern, "fieldset" !== i.nodeName.toLowerCase() && !r && (l || s && l) && (o(i), i.validity.valid || u || (e && i.focus(), u = !0, n.onInvalid.call(t, i)));
+                                        return !u
+                                    }
+                                    return o(t), t.validity.valid
+                                }, c = function (e) {
+                                    var t = this;
+                                    t.validationMessage = e
+                                }, u = function (e) {
+                                    var a = C(e);
+                                    a.attributes.formnovalidate && "submit" === a.type && (t = !0)
+                                }, v = function () {
+                                    return E(k, "validity") && E(k, "checkValidity")
+                                }, p = function (e, t) {
+                                    if ("email" === t)return !q.test(e.value);
+                                    if ("url" === t)return !M.test(e.value);
+                                    if (t) {
+                                        var i = e.getAttribute("placeholder"), n = e.value;
+                                        return a = RegExp("^(?:" + t + ")$"), n === i ? !1 : "" === n ? !1 : !a.test(e.value)
+                                    }
+                                    return !1
+                                }, f = function (e) {
+                                    var t = {placeholder: e.getAttribute("placeholder")}, a = /^(focus|focusin|submit)$/i, r = /^(input|textarea)$/i, l = /^password$/i, s = !!("placeholder"in k);
+                                    s || !r.test(e.nodeName) || l.test(e.type) || ("" !== e.value || a.test(i) ? e.value === t.placeholder && a.test(i) && (e.value = "", A(e, n.placeholderClass)) : (e.value = t.placeholder, g(e.form, "submit", function () {
+                                        i = "submit", f(e)
+                                    }, !0), N(e, n.placeholderClass)))
+                                }, m = function (e, t) {
+                                    var a = parseInt(e.getAttribute("min"), 10) || 0, i = parseInt(e.getAttribute("max"), 10) || !1, n = parseInt(e.getAttribute("step"), 10) || 1, r = parseInt(e.value, 10), l = (r - a) % n;
+                                    return h(e) || isNaN(r) ? "number" === e.getAttribute("type") ? !0 : !1 : "step" === t ? e.getAttribute("step") ? 0 !== l : !1 : "min" === t ? e.getAttribute("min") ? a > r : !1 : "max" === t ? e.getAttribute("max") ? r > i : !1 : void 0
+                                }, b = function (e) {
+                                    var t = !!e.attributes.required;
+                                    return t ? h(e) : !1
+                                }, h = function (e) {
+                                    var t = e.getAttribute("placeholder"), a = /^(checkbox|radio)$/i, i = !!e.attributes.required;
+                                    return !(!i || "" !== e.value && e.value !== t && (!a.test(e.type) || $(e)))
+                                }, g = function (e, t, a, i) {
+                                    E(window, "addEventListener") ? e.addEventListener(t, a, i) : E(window, "attachEvent") && window.event !== void 0 && ("blur" === t ? t = "focusout" : "focus" === t && (t = "focusin"), e.attachEvent("on" + t, a))
+                                }, y = function (e, t, a, i) {
+                                    E(window, "removeEventListener") ? e.removeEventListener(t, a, i) : E(window, "detachEvent") && window.event !== void 0 && e.detachEvent("on" + t, a)
+                                }, w = function (e) {
+                                    e = e || window.event, e.stopPropagation && e.preventDefault ? (e.stopPropagation(), e.preventDefault()) : (e.cancelBubble = !0, e.returnValue = !1)
+                                }, C = function (e) {
+                                    return e = e || window.event, e.target || e.srcElement
+                                }, N = function (e, t) {
+                                    var a;
+                                    e.className ? (a = RegExp("(^|\\s)" + t + "(\\s|$)"), a.test(e.className) || (e.className += " " + t)) : e.className = t
+                                }, A = function (e, t) {
+                                    var a, i, n = "object" == typeof t ? t.length : 1, r = n;
+                                    if (e.className)if (e.className === t)e.className = ""; else for (; n--;)a = RegExp("(^|\\s)" + (r > 1 ? t[n] : t) + "(\\s|$)"), i = e.className.match(a), i && 3 === i.length && (e.className = e.className.replace(a, i[1] && i[2] ? " " : ""))
+                                }, E = function (e, t) {
+                                    var a = typeof e[t], i = RegExp("^function|object$", "i");
+                                    return !!(i.test(a) && e[t] || "unknown" === a)
+                                }, $ = function (e) {
+                                    for (var t = document.getElementsByName(e.name), a = 0; t.length > a; a++)if (t[a].checked)return !0;
+                                    return !1
+                                }, {setup: r}
+                            });
+                        </script>
+                        <link rel="alternate" type="text/xml+oembed"
+                              href="https://docs.google.com/a/zencap.de/forms/d/1lqIxLXAB8AQod2arMPjcKmKWkF9wIsDHPPfdNaGErzk/oembed?url=https://docs.google.com/a/zencap.de/forms/d/1lqIxLXAB8AQod2arMPjcKmKWkF9wIsDHPPfdNaGErzk/viewform&amp;format=xml">
+                        <div class="ss-form-container">
+                            <div class="ss-form">
+
+                                <!--Redirect-->
+                                <script type="text/javascript">var submitted = false;</script>
+                                <iframe name="hidden_iframe2" id="hidden_iframe2" style="display:none;"
+                                        onload="if(submitted) {window.location='https://www.zencap.de/sharing-economy-confirm-186.html#confirm';}"></iframe>
+                                <form
+                                    action="https://docs.google.com/a/zencap.de/forms/d/1lqIxLXAB8AQod2arMPjcKmKWkF9wIsDHPPfdNaGErzk/formResponse"
+                                    method="post" target="hidden_iframe2"
+                                    onsubmit="submitted=true;">
+
+                                    <!--
+                                    <form action="https://docs.google.com/a/zencap.de/forms/d/1lqIxLXAB8AQod2arMPjcKmKWkF9wIsDHPPfdNaGErzk/formResponse" method="POST" id="ss-form" target="_self" onsubmit="">
+                                    -->
+                                        <div class="row">
+                                            <div class="ss-form-question errorbox-good col-xs-12 col-sm-8 col-sm-offset-2" role="listitem">
+                                                <div dir="ltr" class="ss-item  ss-text">
+                                                    <div class="ss-form-entry form-group">
+                                                        <label class="ss-q-item-label" for="entry_2066705071">
+                                                            <div class="ss-q-title"></div>
+                                                            <div class="ss-q-help ss-secondary-text" dir="ltr"></div>
+                                                        </label>
+                                                        <input type="email" name="entry.2066705071"
+                                                               value="beispiel@mail.de" class="ss-q-short" id="entry_2066705071"
+                                                               dir="auto" aria-label="  beispiel@mail.de" title="beispiel@mail.de">
+                                                    </div>
+                                                </div>
+                                            </div><!-- end .ss-form-question -->
+                                        </div><!-- end .row -->
+
+                                        <input type="hidden" name="draftResponse" value="[,,&quot;630351310329261162&quot;]">
+                                        <input type="hidden" name="pageHistory" value="0">
+                                        <input type="hidden" name="fbzx" value="630351310329261162">
+                                        <input type="submit" name="submit" value="Jetzt Broschüre erhalten" id="ss-submit"
+                                               class="btn btn-lg btn-primary btn-nvstr">
+                                    </form>
+                                </div><!-- end .ss-form -->
+
+                                <script type='text/javascript'
+                                        src='/static/forms/client/js/1754000225-formviewer_prd__en_gb.js'></script>
+                                <script type="text/javascript">H5F.setup(document.getElementById('ss-form'));
+                                    _initFormViewer(
+                                        "[100,,[[[2066705071,[[2,102,,\x22beispiel@mail.de\x22]\n]\n]\n]\n]\n]\n");</script>
+                                <!--END of Google forms-->
+
+                                <p>kostenlos & unverbindlich</p>
+                        </div><!-- end .ss-form-container -->
+                    </div><!-- end .col-xs-12 -->
+
+                    <div class="desp-20 visible-xs hidden-sm hidden-md hidden-lg"></div>
+
+                    <div class="col-xs-12 col-sm-6 text-center">
+                        <p>Ich möchte mehr Informationen<br>zur Kreditaufnahme bei Zencap erhalten</p>
+
+                        <div><strong>Meine E-Mail Adresse lautet</strong></div>
+
+                        <!--Google Forms-->
+
+                        <script type="text/javascript">
+                            /**
+                             * @license
+                             *
+                             * H5F 1.1.1
+                             * See https://github.com/ryanseddon/H5F/ for details.
+                             *
+                             * Copyright (c) 2013 Ryan Seddon
+                             *
+                             * Permission is hereby granted, free of charge, to any person
+                             * obtaining a copy of this software and associated documentation
+                             * files (the "Software"), to deal in the Software without
+                             * restriction, including without limitation the rights to use,
+                             * copy, modify, merge, publish, distribute, sublicense, and/or sell
+                             * copies of the Software, and to permit persons to whom the
+                             * Software is furnished to do so, subject to the following
+                             * conditions:
+                             *
+                             * The above copyright notice and this permission notice shall be
+                             * included in all copies or substantial portions of the Software.
+                             *
+                             * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+                             * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+                             * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+                             * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+                             * HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+                             * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+                             * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+                             * OTHER DEALINGS IN THE SOFTWARE.
+                             */
+                            (function (e, t) {
+                                "function" == typeof define && define.amd ? define(t) : "object" == typeof module && module.exports ? module.exports = t() : e.H5F = t()
+                            })(this, function () {
+                                var e, t, a, i, n, r, l, s, o, u, d, c, v, p, f, m, b, h, g, y, w, C, N, A, E, $, x = document, k = x.createElement("input"), q = /^[a-zA-Z0-9.!#$%&'*+-\/=?\^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/, M = /[a-z][\-\.+a-z]*:\/\//i, L = /^(input|select|textarea)$/i;
+                                return r = function (e, t) {
+                                    var a = !e.nodeType || !1, i = {
+                                        validClass: "valid",
+                                        invalidClass: "error",
+                                        requiredClass: "required",
+                                        placeholderClass: "placeholder",
+                                        onSubmit: Function.prototype,
+                                        onInvalid: Function.prototype
+                                    };
+                                    if ("object" == typeof t)for (var r in i)t[r] === void 0 && (t[r] = i[r]);
+                                    if (n = t || i, a)for (var s = 0, o = e.length; o > s; s++)l(e[s]); else l(e)
+                                }, l = function (a) {
+                                    var i, r = a.elements, l = r.length, c = !!a.attributes.novalidate;
+                                    if (g(a, "invalid", o, !0), g(a, "blur", o, !0), g(a, "input", o, !0), g(a, "keyup", o, !0), g(a, "focus", o, !0), g(a, "change", o, !0), g(a, "click", u, !0), g(a, "submit", function (i) {
+                                            return e = !0, t || c || a.checkValidity() ? (n.onSubmit.call(a, i), void 0) : (w(i), void 0)
+                                        }, !1), !v())for (a.checkValidity = function () {
+                                        return d(a)
+                                    }; l--;)i = !!r[l].attributes.required, "fieldset" !== r[l].nodeName.toLowerCase() && s(r[l])
+                                }, s = function (e) {
+                                    var t = e, a = h(t), n = {
+                                        type: t.getAttribute("type"),
+                                        pattern: t.getAttribute("pattern"),
+                                        placeholder: t.getAttribute("placeholder")
+                                    }, r = /^(email|url)$/i, l = /^(input|keyup)$/i, s = r.test(n.type) ? n.type : n.pattern ? n.pattern : !1, o = p(t, s), u = m(t, "step"), v = m(t, "min"), b = m(t, "max"), g = !("" === t.validationMessage || void 0 === t.validationMessage);
+                                    t.checkValidity = function () {
+                                        return d.call(this, t)
+                                    }, t.setCustomValidity = function (e) {
+                                        c.call(t, e)
+                                    }, t.validity = {
+                                        valueMissing: a,
+                                        patternMismatch: o,
+                                        rangeUnderflow: v,
+                                        rangeOverflow: b,
+                                        stepMismatch: u,
+                                        customError: g,
+                                        valid: !(a || o || u || v || b || g)
+                                    }, n.placeholder && !l.test(i) && f(t)
+                                }, o = function (e) {
+                                    var t = C(e) || e, a = /^(input|keyup|focusin|focus|change)$/i, r = /^(submit|image|button|reset)$/i, l = /^(checkbox|radio)$/i, u = !0;
+                                    !L.test(t.nodeName) || r.test(t.type) || r.test(t.nodeName) || (i = e.type, v() || s(t), t.validity.valid && ("" !== t.value || l.test(t.type)) || t.value !== t.getAttribute("placeholder") && t.validity.valid ? (A(t, [n.invalidClass, n.requiredClass]), N(t, n.validClass)) : a.test(i) ? t.validity.valueMissing && A(t, [n.requiredClass, n.invalidClass, n.validClass]) : t.validity.valueMissing ? (A(t, [n.invalidClass, n.validClass]), N(t, n.requiredClass)) : t.validity.valid || (A(t, [n.validClass, n.requiredClass]), N(t, n.invalidClass)), "input" === i && u && (y(t.form, "keyup", o, !0), u = !1))
+                                }, d = function (t) {
+                                    var a, i, r, l, s, u = !1;
+                                    if ("form" === t.nodeName.toLowerCase()) {
+                                        a = t.elements;
+                                        for (var d = 0, c = a.length; c > d; d++)i = a[d], r = !!i.attributes.disabled, l = !!i.attributes.required, s = !!i.attributes.pattern, "fieldset" !== i.nodeName.toLowerCase() && !r && (l || s && l) && (o(i), i.validity.valid || u || (e && i.focus(), u = !0, n.onInvalid.call(t, i)));
+                                        return !u
+                                    }
+                                    return o(t), t.validity.valid
+                                }, c = function (e) {
+                                    var t = this;
+                                    t.validationMessage = e
+                                }, u = function (e) {
+                                    var a = C(e);
+                                    a.attributes.formnovalidate && "submit" === a.type && (t = !0)
+                                }, v = function () {
+                                    return E(k, "validity") && E(k, "checkValidity")
+                                }, p = function (e, t) {
+                                    if ("email" === t)return !q.test(e.value);
+                                    if ("url" === t)return !M.test(e.value);
+                                    if (t) {
+                                        var i = e.getAttribute("placeholder"), n = e.value;
+                                        return a = RegExp("^(?:" + t + ")$"), n === i ? !1 : "" === n ? !1 : !a.test(e.value)
+                                    }
+                                    return !1
+                                }, f = function (e) {
+                                    var t = {placeholder: e.getAttribute("placeholder")}, a = /^(focus|focusin|submit)$/i, r = /^(input|textarea)$/i, l = /^password$/i, s = !!("placeholder"in k);
+                                    s || !r.test(e.nodeName) || l.test(e.type) || ("" !== e.value || a.test(i) ? e.value === t.placeholder && a.test(i) && (e.value = "", A(e, n.placeholderClass)) : (e.value = t.placeholder, g(e.form, "submit", function () {
+                                        i = "submit", f(e)
+                                    }, !0), N(e, n.placeholderClass)))
+                                }, m = function (e, t) {
+                                    var a = parseInt(e.getAttribute("min"), 10) || 0, i = parseInt(e.getAttribute("max"), 10) || !1, n = parseInt(e.getAttribute("step"), 10) || 1, r = parseInt(e.value, 10), l = (r - a) % n;
+                                    return h(e) || isNaN(r) ? "number" === e.getAttribute("type") ? !0 : !1 : "step" === t ? e.getAttribute("step") ? 0 !== l : !1 : "min" === t ? e.getAttribute("min") ? a > r : !1 : "max" === t ? e.getAttribute("max") ? r > i : !1 : void 0
+                                }, b = function (e) {
+                                    var t = !!e.attributes.required;
+                                    return t ? h(e) : !1
+                                }, h = function (e) {
+                                    var t = e.getAttribute("placeholder"), a = /^(checkbox|radio)$/i, i = !!e.attributes.required;
+                                    return !(!i || "" !== e.value && e.value !== t && (!a.test(e.type) || $(e)))
+                                }, g = function (e, t, a, i) {
+                                    E(window, "addEventListener") ? e.addEventListener(t, a, i) : E(window, "attachEvent") && window.event !== void 0 && ("blur" === t ? t = "focusout" : "focus" === t && (t = "focusin"), e.attachEvent("on" + t, a))
+                                }, y = function (e, t, a, i) {
+                                    E(window, "removeEventListener") ? e.removeEventListener(t, a, i) : E(window, "detachEvent") && window.event !== void 0 && e.detachEvent("on" + t, a)
+                                }, w = function (e) {
+                                    e = e || window.event, e.stopPropagation && e.preventDefault ? (e.stopPropagation(), e.preventDefault()) : (e.cancelBubble = !0, e.returnValue = !1)
+                                }, C = function (e) {
+                                    return e = e || window.event, e.target || e.srcElement
+                                }, N = function (e, t) {
+                                    var a;
+                                    e.className ? (a = RegExp("(^|\\s)" + t + "(\\s|$)"), a.test(e.className) || (e.className += " " + t)) : e.className = t
+                                }, A = function (e, t) {
+                                    var a, i, n = "object" == typeof t ? t.length : 1, r = n;
+                                    if (e.className)if (e.className === t)e.className = ""; else for (; n--;)a = RegExp("(^|\\s)" + (r > 1 ? t[n] : t) + "(\\s|$)"), i = e.className.match(a), i && 3 === i.length && (e.className = e.className.replace(a, i[1] && i[2] ? " " : ""))
+                                }, E = function (e, t) {
+                                    var a = typeof e[t], i = RegExp("^function|object$", "i");
+                                    return !!(i.test(a) && e[t] || "unknown" === a)
+                                }, $ = function (e) {
+                                    for (var t = document.getElementsByName(e.name), a = 0; t.length > a; a++)if (t[a].checked)return !0;
+                                    return !1
+                                }, {setup: r}
+                            });
+                        </script>
+                        <link rel="alternate" type="text/xml+oembed"
+                              href="https://docs.google.com/a/zencap.de/forms/d/1DzL8ZX5lhlsCzaWIRpKZYiqPyZBa9OAzjb_LCBTtQX4/oembed?url=https://docs.google.com/a/zencap.de/forms/d/1DzL8ZX5lhlsCzaWIRpKZYiqPyZBa9OAzjb_LCBTtQX4/viewform&amp;format=xml">
+
+                        <div class="ss-form-container">
+                            <div class="ss-form">
+
+                                <!--Redirect-->
+                                <script type="text/javascript">var submitted = false;</script>
+                                <iframe name="hidden_iframe2" id="hidden_iframe2" style="display:none;"
+                                        onload="if(submitted) {window.location='https://www.zencap.de/sharing-economy-confirm-186.html#confirm';}"></iframe>
+                                <form
+                                    action="https://docs.google.com/a/zencap.de/forms/d/1DzL8ZX5lhlsCzaWIRpKZYiqPyZBa9OAzjb_LCBTtQX4/formResponse"
+                                    method="post" target="hidden_iframe2"
+                                    onsubmit="submitted=true;">
+
+                                    <!--
+                                    <form action="https://docs.google.com/a/zencap.de/forms/d/1DzL8ZX5lhlsCzaWIRpKZYiqPyZBa9OAzjb_LCBTtQX4/formResponse" method="POST" id="ss-form" target="_self" onsubmit="">
+                                    -->
+                                    <div class="row">
+                                        <div class="ss-form-question errorbox-good col-xs-12 col-sm-8 col-sm-offset-2" role="listitem">
+                                            <div dir="ltr" class="ss-item  ss-text">
+                                                <div class="ss-form-entry form-group">
+                                                    <label class="ss-q-item-label" for="entry_1564505828">
+                                                        <div class="ss-q-title"></div>
+                                                    </label>
+
+                                                    <input type="email" name="entry.1564505828"
+                                                           value="beispiel@mail.de" class="ss-q-short" id="entry_1564505828"
+                                                           dir="auto" aria-label="  Must be a valid email address"
+                                                           title="Must be a valid email address">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- end .row -->
+
+                                    <input type="hidden" name="draftResponse" value="[,,&quot;-216105018364875509&quot;]">
+                                    <input type="hidden" name="pageHistory" value="0">
+                                    <input type="hidden" name="fbzx" value="-216105018364875509">
+
+                                    <div class="ss-item ss-navigate">
+                                        <input type="submit" name="submit" value="Jetzt Broschüre erhalten" id="ss-submit"
+                                               class="btn btn-lg btn-primary btn-brrwr">
+                                    </div>
+                                </form>
+                            </div><!-- end .ss-form -->
+
+                            <script type='text/javascript'
+                                    src='/static/forms/client/js/1754000225-formviewer_prd__en_gb.js'></script>
+                            <script type="text/javascript">H5F.setup(document.getElementById('ss-form'));
+                                _initFormViewer(
+                                    "[100,,[[[1564505828,[[2,102,,\x22\x22]\n]\n]\n]\n]\n]\n");</script>
+                        </div><!-- end .ss-form-container -->
+
+                        <!--End of Google forms-->
+
+                        <p>kostenlos & unverbindlich</p>
+                    </div><!-- end .col-xs-12 -->
+                </div><!-- end .row -->
+        </div><!-- end .container -->
+    </div><!-- end .container-wrapper -->
+
+
+
+
+[block:lp-sharing-economy-teilnahmebedingungen]
+
+</div><!-- end .cms-page -->
+
+
+{% endblock %}
+
+
+{% block js %}
+
+{{ parent() }}
+
+<script src="https://cdn.rawgit.com/mckamey/countdownjs/master/countdown.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $(document).ready(function () {
+            $('#myCarousel').carousel({interval: 3000});
+
+            countdown.setLabels(
+                ' milissegundo| Sekunde| Minute| Stunde| Tag| semana| mês| ano| década| século| milênio',
+                ' milissegundos| Sekunden| Minuten| Stunden| Tage| semanas| meses| anos| décadas| séculos| milênios',
+                ' und ',
+                ' + ',
+                'Endet');
+
+            var timerId =
+                countdown(
+                    new Date(1435708799000),
+                    function (ts) {
+                        $('#countDown').text(ts);
+                    },
+                    countdown.DAYS | countdown.HOURS | countdown.MINUTES | countdown.SECONDS);
+        });
+    });
+</script>
+
+{% endblock %}
