@@ -1,0 +1,74 @@
+/* ==========================================================================
+    lp-negativzinsen-vermeiden
+========================================================================== */
+
+.bkg-rate {
+    background-size: cover;
+}
+
+/* background height on tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+    .bkg-rate {
+        background: url('https://d1x3gb5zl465n8.cloudfront.net/de/lp/negative/header1.jpg') 47% 0 no-repeat @gray5;
+        height: 350px;
+    }
+}
+
+/* background height on desktop */
+@media (min-width: 992px) {
+    .bkg-rate {
+        background: url('https://d1x3gb5zl465n8.cloudfront.net/de/lp/negative/header1.jpg') 24% 0 no-repeat @gray5;
+        height: 384px;
+    }
+}
+
+.bkg-savers {
+    background-size: cover;
+}
+
+/* background on mobile */
+@media (min-width: 320px) and (max-width: 767px) {
+    .bkg-savers {
+        background: url('https://d1x3gb5zl465n8.cloudfront.net/de/lp/negative/bg-image1.jpg') 15% 0 no-repeat @gray5;
+    }
+}
+
+/* background height on tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+    .bkg-savers {
+        background: url('https://d1x3gb5zl465n8.cloudfront.net/de/lp/negative/bg-image1.jpg') 26% 0 no-repeat @gray5;
+        height: 310px;
+    }
+}
+
+/* background height on desktop */
+@media (min-width: 992px) {
+    .bkg-savers {
+        background: url('https://d1x3gb5zl465n8.cloudfront.net/de/lp/negative/bg-image1.jpg') 26% 0 no-repeat @gray5;
+        height: 360px;
+    }
+}
+
+/* ==========================================================================
+    lp-sparbuch
+========================================================================== */
+
+
+.bkg-returns {
+     background: url('https://d1x3gb5zl465n8.cloudfront.net/de/lp/sparbuch/hero-image.jpg') 50% 50% no-repeat;
+     height: 350px;
+
+     h1 small {
+         color: @brandColor4;
+         font-weight: bold;
+     }
+ }
+
+/* desktop */
+@media (min-width: 992px) {
+    .bkg-returns {
+        h1 small {
+            font-size: 26px;
+        }
+    }
+}

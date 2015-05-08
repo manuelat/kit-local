@@ -119,6 +119,12 @@ about_us:
 account_options:
     path: /cms/options
 
+lp-negativzinsen-vermeiden:
+    path: /cms/lp-negativzinsen-vermeiden
+
+lp-sparbuch:
+    path: /cms/lp-sparbuch
+
 login:
     path: /others/login
 

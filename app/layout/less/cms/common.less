@@ -48,6 +48,16 @@
                     }
                 }
             }
+
+            @media (min-width: 320px) and (max-width: 767px) {
+                li {
+                    padding: @paddingBaseVertical 0 @paddingBaseVertical @gridGutterWidth * 1.5;
+
+                    &:before {
+                        top: 7px;
+                    }
+                }
+            }
         }
     }
 }
@@ -269,3 +279,7 @@
     }
 }
 
+.white-box {
+    background: @white;
+    border-radius: @baseBorderRadius;
+}
