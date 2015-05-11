@@ -29,15 +29,16 @@
         background: #e9f5fe;
     }
 
-    th {
-        padding: 10px;
-        height: 175px;
-    }
 
     .carousel-inn {
         display: block;
         float: left;
         padding: 15px;
+    }
+
+    th {
+        padding: 10px;
+        height: 175px;
     }
 
     .carousel-inn.even {
@@ -58,46 +59,125 @@
         margin-bottom: 0;
     }
 
+    .bkg-economy {
+        background-color:#eefbff;
+        background-image:url('https://d1x3gb5zl465n8.cloudfront.net/de/lp/shared-economy/bundles/hero.png');
+        height:420px;
+
+    }
+
+    @media (min-width: 320px) and (max-width: 767px) {
+        .bkg-economy {
+            background-position: 35% 0%;
+            height: 290px;
+        }
+    }
+
+    .cashback {
+        position: relative;
+    }
+
+    .cashback img {
+        position: absolute;
+        right: 16px;
+        z-index: 100;
+        top: -25px;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        .cashback img {
+            top: 8px;
+        }
+    }
+
+    .over-menu {
+        width: 73px;
+        text-align: right;
+        margin-left: 371px;
+        height: 40px;
+    }
+
+    .over-menu p {
+        padding: 28px 0 0 6px;
+        font-weight: 800;
+        text-align: right;
+        margin-top: 31px;
+    }
+
+    /* desktop */
+    @media (min-width: 992px) {
+        .hide-category {
+            background-color: #edf0f2;
+            height: 71px;
+            width: 445px;
+            position: relative;
+            right: -389px;
+            top: -501px;
+            z-index: 10001;
+        }
+    }
+
+    /* desktop */
+    @media (min-width: 992px) {
+        h1 {
+            font-size: 72px;
+        }
+    }
+
+    @media (min-width: 320px) and (max-width: 767px) {
+        h1 {
+            font-size: 54px;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        h1 {
+            font-size: 60px;
+        }
+    }
+
+     h1 {
+        color:#189bf2;
+        margin-top:-4px;
+        font-weight:900;
+        line-height:1;
+    }
 
 </style>
 
 <div class="cms-page investor">
 
-
-
-    <div class="container-wrapper header-top"
-         style="background-color:#eefbff; background-image:url('https://d1x3gb5zl465n8.cloudfront.net/de/lp/shared-economy/bundles/hero.png'); height:420px; background-position:50% 50%; margin-top:-48px;">
+    <div class="container-wrapper header-top bkg-economy">
         <div class="container spacing">
-            <a href="#sharing"><img style="position:absolute;right:0;z-index:2000;"
-                                    src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/shared-economy/bundles/bubble.png"
-                                    alt="Erhalten Sie jetzt 5 % Cashback auf Ihre Anlage & freuen Sie sich über weitere Rabatte unserer Partner."></a>
 
-            <div
-                style="background-color:#edf0f2;height: 71px;width: 434px;position: absolute;right: 105px;top: -71px;z-index: 10001;">
-                <div class="over-menu" style="width: 67px; text-align: right; margin-left: 371px; height: 40px;">
-                    <a href="/kontakt-14.html"><p style="
-        padding: 6px;
-        font-weight: 800;
-        text-align: right;
-        margin-top: 31px;
-    ">Kontakt</p></a></div>
-            </div>
-            <div class="row main-title">
-                <div class="col-xs-12">
-                    <h1 style="font-size: 72px; color:#189bf2; margin-top:-4px; font-weight:900; line-height:1;">SHARING<br>
-                        ECONOMY</h1>
-
-                    <p style="margin-top:50px;">Mitfeiern & Prämien sichern.<br>
-                        Das Crowdlending-Prinzip feiert Geburtstag.</p>
-
-                    <div><a class="btn btn-lg btn-nvstr" href="#sharing">Jetzt Rabatte entdecken</a><br/>
-                    </div>
+            <div class="row hidden-xs">
+                <div class="col-xs-12 cashback">
+                    <a href="#sharing">
+                        <img src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/shared-economy/bundles/bubble.png"
+                            alt="Erhalten Sie jetzt 5 % Cashback auf Ihre Anlage & freuen Sie sich über weitere Rabatte unserer Partner.">
+                    </a>
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1>SHARING<br>ECONOMY</h1>
+                    <div class="desp-10"></div>
+                    <p >Mitfeiern & Prämien sichern.<br>Das Crowdlending-Prinzip feiert Geburtstag.</p>
+                    <div><a class="btn btn-lg btn-nvstr" href="#sharing">Jetzt Rabatte entdecken</a><br/></div>
+                </div>
+            </div>
+            <div class="hide-category hidden-xs hidden-sm">
+                <div class="over-menu">
+                    <p><a href="/kontakt-14.html">Kontakt</a></p>
+                </div>
+            </div>
+
+
         </div>
     </div>
 
-    <div class="container-wrapper blueish">
+    <div class="container-wrapper blueish hidden-xs">
         <div class="container text-center" style="min-height:140px;">
 
             <div id="myCarousel" class="carousel slide" data-interval="5000">
