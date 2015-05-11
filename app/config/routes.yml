@@ -134,6 +134,9 @@ lp-sharing-economy-confirm-email-subscription:
 lp-sharing-economy-confirm-code:
     path: /cms/lp-sharing-economy-confirm-code
 
+lp-sharing-economy-teilnahmebedingungen:
+    path: /cms/lp-sharing-economy-teilnahmebedingungen
+
 login:
     path: /others/login
 
