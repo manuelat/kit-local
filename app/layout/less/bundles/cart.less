@@ -1,7 +1,5 @@
 .cartDetails {
     background-color: @wellBackground;
-    margin-left: 0;
-    margin-right: 0;
 
     p {
         color: @brandColor4;
@@ -11,17 +9,14 @@
 
 }
 
+/* mobile and tablet */
 @media (min-width: 320px) and (max-width: 991px) {
-    .cartDetails {
-        margin-left: -30px;
-        margin-right: -30px;
-    }
-
     .lending-rate {
         text-align: right;
     }
 }
 
+/* mobile */
 @media (min-width: 320px) and (max-width: 767px) {
     .cartDetails {
 
@@ -31,7 +26,7 @@
     }
 }
 
-
+/* tablet */
 @media (min-width: 768px) and (max-width: 991px) {
     .cartDetails {
 
@@ -42,9 +37,15 @@
 
 }
 
+/* desktop */
 @media (min-width: 992px) {
     .lending-rate {
         text-align: center;
+    }
+
+    .cartDetails {
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
