@@ -137,6 +137,9 @@ lp-sharing-economy-confirm-code:
 lp-sharing-economy-teilnahmebedingungen:
     path: /cms/lp-sharing-economy-teilnahmebedingungen
 
+lp-newfirmenkredit:
+    path: /cms/lp-newfirmenkredit
+
 login:
     path: /others/login
 

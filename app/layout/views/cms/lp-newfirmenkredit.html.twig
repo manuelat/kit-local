@@ -1,0 +1,648 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+
+    <style>
+
+    .risk-team h3 {
+        margin-top: 20px;
+        color:#3f9cd9;
+    }
+
+    .risk-team img {
+        width: 100%; display: block;
+    }
+
+    .blockquote p {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    /* tablet and desktop*/
+    @media (min-width: 768px)  {
+        .blockquote .details {
+            margin-left: 50px;
+        }
+    }
+
+    /* mobile */
+    @media (min-width: 320px) and (max-width: 767px) {
+        .blockquote .details {
+            margin-left: 24px;
+        }
+    }
+
+    .calculate-rate {
+        background-image:none;
+        background-color:#F2F1EF;
+    }
+
+    /* mobile */
+    @media (min-width: 320px) and (max-width: 767px) {
+        .calculate-rate {
+            height: auto;
+        }
+    }
+
+    .list-inline li {
+        color: #5c6266;
+    }
+
+    .list-inline li:before {
+        color: #FF8C19;
+    }
+
+    .header-top.fees {
+        background-image:url('https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/hero-leitfaden_06.jpg');
+    }
+
+    /* desktop */
+    @media (min-width: 992px)  {
+        .fees h1 {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+
+        .sum {
+            margin-top: -35px;
+            margin-left: 8px;
+        }
+
+        .header-top.fees {
+            background-position: 50% 50%;
+        }
+
+        .btn-credit p {
+            text-align: center;
+            padding-left: 24px;
+        }
+    }
+
+    /* tablet */
+    @media (min-width: 768px) and (max-width: 991px) {
+        .header-top.fees {
+            background-position: 70% 50%;
+        }
+
+        .down-arrow {
+            margin-top: -50px;
+        }
+    }
+
+    /*  mobile */
+    @media (max-width: 767px) {
+        .header-top.fees {
+            background-position: 43% 50%;
+        }
+
+        .btn-credit p {
+            text-align: center;
+        }
+    }
+
+    .grey-bar {
+        background-color: #f2f1ef;
+        height: 50px;
+    }
+
+    .grey-bar small {
+        font-size: 75%
+    }
+
+    .grey-bar img {
+        margin-left: 0px;
+    }
+
+    .grey-bar .ekomi {
+        margin-top: -15px;
+    }
+
+    .satisfaction p {
+        font-size: 24px;
+        font-weight: 800;
+        margin-top: 5px;
+        margin-bottom: 0;
+    }
+
+    .satisfaction p, .satisfaction small {
+        margin-left: 20px;
+    }
+
+    /* tablet and desktop */
+    @media (min-width: 768px) {
+        .borrower .add-space {
+            margin-top: 25px;
+        }
+    }
+
+    </style>
+
+<div class="cms-page borrower">
+
+    <div class="container-wrapper header-top fees">
+        <div class="container page-head">
+            <div class="row main-title">
+                <div class="col-xs-11 col-sm-11 col-md-7 col-md-offset-5 text-right">
+                    <h1 class="text-white">Firmenfinanzierung</h1>
+                    <h3 class="faux-h3 text-white hidden-xs">Verlässlich & Schnell über Zencap</h3>
+                    <div class="desp-30 hidden-xs hidden-sm"></div>
+                    <div class="row btn-credit hidden-xs">
+                        <div class="desp-40 visible-xs hidden-sm hidden-md hidden-lg"></div>
+                        <div class="col-xs-12 col-sm-5 col-sm-offset-7 col-md-7 col-md-offset-5">
+                            <a class="btn btn-lg btn-brrwr" href="/loan-request/register#baseForm">Jetzt
+                                Finanzierung Anfragen</a><br/>
+                            <p class="text-white hidden-xs">Firmenkredite von 10.000 € - 250.000 €</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden-xs hidden-sm col-sm-6 col-md-7 sum">
+                    <div class="text-white">Goetz Kanis hat mit 50.000 € von <br/>102
+                        Investoren seinen Vertrieb erweitert</div>
+                </div>
+                <div class="desp-48 hidden-sm hidden-md hidden-lg"></div>
+                <div class="col-xs-6 col-xs-offset-6 down-arrow">
+                    <a href="#drei-schritten"><img src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/arrow-white.png" alt="Arrow"></a>
+                </div>
+            </div>
+        </div>
+    </div><!-- end .container-wrapper -->
+
+    <div class="container-wrapper grey-bar hidden-xs hidden-sm">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-1">
+                    <img alt="Ekomi" src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/ekomi.png" class="pull-left ekomi">
+                </div>
+                <div class="col-xs-3 satisfaction">
+                    <p>94 %</p>
+                    <small>Kundenzufriedenheit</small>
+                </div>
+                <div class="col-xs-3 col-xs-offset-1">
+                    <div class="desp-5"></div>
+                    <small>,,Privatleute geben kleinen Firmen Kredite <br/>
+                        ohne eine zwischengeschaltete Bank’’, SZ
+                    </small>
+                </div>
+                <div class="col-xs-2" >
+                    <div class="desp-15"></div>
+                    <a href="/press"><img class="pull-right" src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/sued.png"></a>
+                </div>
+                <div class="col-xs-2">
+                    <div class="desp-5"></div>
+                    <img class="pull-right" src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/logos-bar.png" alt="" >
+                </div>
+            </div>
+        </div>
+    </div><!-- end .container-wrapper -->
+
+    <a id="drei-schritten"></a>
+
+    <div class="container-wrapper">
+        <div class="container spacing">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="row">
+                        <h2 class="faux-h1 text-center col-xs-12 text-danger text-uppercase">In drei Schritten zu Ihrer Finanzierung</h2>
+                        {# image below should be CHANGED #}
+                        <p class="hidden-xs col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1">
+                            <img src="/bundles/intlenddeweblayout/frontend/images/cms/lender/lender-steps.png" alt="" class="img-responsive">
+                        </p>
+                        <div class="col-xs-12 col-sm-4 col-md-3 col-md-offset-1">
+                            <h3 class="text-center">Antrag</h3>
+                            <p class="text-center">Erstellen Sie Ihren Kreditantrag.<br/>
+                                Einfach – Schnell - Kostenlos.</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-3 col-md-offset-1">
+                            <h3 class="text-center">Finanzierung</h3>
+                            <p class="text-center">Innerhalb von 48 Stunden bekommen Sie eine Antwort.</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-3 col-md-offset-1">
+                            <h3 class="text-center">Auszahlung</h3>
+                            <p class="text-center">Der Firmenkredit wird direkt auf Ihr Konto überwiesen.</p>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end .row -->
+            <div class="row cta">
+                <div class="page-head">
+                    <div class="col-xs-12 text-center">
+                        <a id="loan-submit-1" class="btn btn-lg btn-brrwr" type="submit" href="/loan-request/register#baseForm">Jetzt Finanzierung Anfragen</a>
+                        <div class="desp-10"></div>
+                        <p>TÜV geprüfte Datensicherheit</p>
+                    </div>
+                </div>
+            </div><!-- end .row -->
+        </div>
+    </div><!-- end .container-wrapper -->
+
+    <div class="container-wrapper calculate-rate">
+        <div class="container spacing">
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="faux-h1 text-center">Ihr Firmenkredit: Jetzt persönliche Rate ermitteln</h2>
+                </div>
+            </div>
+
+            <div class="custom-row">
+                <div class="loan-widget-container">
+                    <div class="col-xs-12 col-sm-7 loan-widget">
+                        <p style="color:#ff8c19" class="faux-h3">Finanzierungen von 10.000 € - 250.000 €</p>
+                        <div class="row">
+                            <div class="col-xs-7 col-md-7">
+                                <label for="amount"><strong>{{ 'Ihr Kreditbetrag' }}</strong></label><br>
+                            </div>
+                            <div class="col-xs-5 col-md-5 text-right">
+                                <span id="amount"><strong>{{ '200.000 €' }}</strong></span>
+                            </div>
+                            <div class="col-xs-12 col-md-12">
+                                <div id="slider-range-min"></div>
+                            </div>
+                        </div>
+                        <div class="desp-20"></div>
+                        <div class="row">
+                            <div class="col-xs-7 col-md-7">
+                                <label for="loan-duration"><strong>{{ 'Ihre Kreditlaufzeit' }}</strong></label><br>
+                            </div>
+                            <div class="col-xs-5 col-md-5 text-right">
+                                <span id="loan-duration"><strong>{{ '2 Jahre' }}</strong></span>
+                            </div>
+                            <div class="col-xs-12 col-md-12">
+                                <div id="slider-loan-duration"></div>
+                            </div>
+                        </div><!-- end .row -->
+                        <div class="desp-25 hidden-sm hidden-md hidden-lg"></div>
+                    </div><!-- end .col-xs-12 col-sm-6 -->
+
+                    <div class="col-xs-12 col-sm-5 rate-box">
+                        <div class="row">
+                            <div class="col-xs-7 col-md-6">
+                                <label for="monthlyRate">{{ 'Monatliche Zahlung' }}</label>
+                            </div>
+                            <div class="col-xs-5 col-md-6 text-right">
+                                <span id="monthlyRate" class="subheading">{{ '100.117 €' }}</span>
+                            </div>
+                        </div><!-- end .row -->
+                        <div class="desp-15"></div>
+                        <div class="row">
+                            <div class="col-xs-7 col-md-6">
+                                <label for="totalSum"><strong>{{ 'Gesamtbetrag' }}</strong></label>
+                            </div>
+                            <div class="col-xs-5 col-md-6 text-right">
+                                <span id="totalSum" class="subheading"><strong>{{ '2006.808 €' }}</strong></span>
+                            </div>
+                        </div><!-- end .row -->
+                        <div class="desp-25"></div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <p>
+                                    <small>Die oben genannten Zahlen enthalten Zencap-Gebühren in Höhe von <span id="feeAmount"> 2.000 €</span>
+                                        und basieren auf der Risikoklasse A+.
+                                    </small>
+                                </p>
+                            </div>
+                        </div>
+                    </div><!-- end .col-xs-12 col-sm-6 -->
+
+                </div><!-- end .loan-widget-container -->
+                <div class="loan-terms hidden-xs">
+                    <div class="col-sm-12">
+                        <ul class="list-inline">
+                            <li><strong>Mindestumsatz: 100.000 €</strong></li>
+                            <li><strong>Bilanzanforderung: Buchführung nach HGB</strong></li>
+                            <li><strong>Mindestunternehmensalter: 2 Jahre</strong></li>
+                        </ul>
+                    </div>
+                </div><!-- end .loan-terms -->
+            </div><!-- end .custom-row -->
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-md-offset-2">
+                    <ul class="styled large">
+                        <li>Keine Vorfälligkeitsgebühren</li>
+                        <li>Zinsen ab 3,99%</li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <ul class="styled large">
+                        <li>Keine versteckten Kosten</li>
+                        <li>Flexible Laufzeiten</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="desp-20 hidden-xs"></div>
+
+            <div class="cta">
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+                        <a id="loan-submit-1" class="btn btn-lg btn-brrwr" type="submit" href="/loan-request/register#baseForm">Jetzt Finanzierung Anfragen</a>
+                        <div class="desp-10"></div>
+                        <p>TÜV geprüfte Datensicherheit</p>
+                        <div><a href="#kunden"><img alt=""
+                                                    src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/arrow-grey.png"></a>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end .cta -->
+
+        </div><!-- end .container -->
+    </div><!-- end .calculate-rate -->
+
+    <div class="container-wrapper">
+        <div class="container spacing">
+            <div class="row">
+                <div class="hidden-xs col-sm-2 col-sm-offset-1"><img src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/kreditmarketplatz.png"
+                                        alt=""></div>
+                <div class="col-xs-12 col-sm-8">
+                    <p><strong>Einfach günstige Firmenfinanzierungen</strong></p>
+
+                    <p>Wir sind ein digitaler Marktplatz, der Unternehmen mit Finanzierungsbedarf mit Privatpersonen auf der
+                        Suche nach einer soliden Anlage zusammenbringt.</p>
+
+                    <p>Damit umgehen wir die Komplexität und Kosten des Bankengeschäfts und Sie können Ihr Unternehmen
+                        kostengünstig finanzieren.</p>
+                </div>
+            </div>
+        </div>
+    </div><!-- end .container-wrapper -->
+
+    <a id="kunden"></a>
+
+    <div class="container-wrapper blockquote" style="background-color:#F2F1EF;">
+        <div class="container spacing">
+            <h3 class="faux-h1 text-center">Das sagen unsere Kunden</h3>
+            <div class="row">
+                <div class="hidden-xs col-sm-2"><img alt=""
+                                        src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/quote1.png">
+                </div>
+                <div class="col-xs-12 col-sm-10">
+                    <blockquote>
+                        <p>Ich habe nicht das Gefühl, dass Banken nennenswert daran
+                            interessiert sind den Mittelstand zu fördern. Und es erfüllt einen daher natürlich mit
+                            einem gewissen Stolz zu sehen, dass es Anleger gibt, die an das eigene Geschäftsmodell
+                            glauben und einem ihr Geld anvertrauen.</p>
+                    </blockquote>
+                    <p class="details"><strong>50.000 € von 65 Anlegern, April 2014</strong><br/>
+                            Geschäftsführer Wulf Schlichte von Incultura hat eine neue Espressobar eröffnet</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="hidden-xs col-sm-2"><img alt=""
+                                        src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/quote2.png">
+                </div>
+                <div class="col-xs-12 col-sm-10">
+                    <blockquote>
+                        <p>Dadurch, dass ich meinen Firmenkredit von Privatleuten erhalten
+                            habe, die in meine Vision, mein Unternehmen glauben und mir demensprechend Vertrauen
+                            entgegenbringen, ist meine Motivation durchzustarten nochmals gestiegen. Die Abwicklung
+                            bei Zencap ist sehr leicht, unbürokratisch und für jedermann verständlich. Ich würde
+                            Zencap in jedem Fall immer einer Bank vorziehen.</p>
+                    </blockquote>
+                    <p class="details"> <strong>50.000 € von 102 Anlegern, Mai 2014</strong><br/>
+                        Unternehmer Goetz Kanis hat seinen Vertrieb für Sicherheitssysteme erweitert</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="hidden-xs col-sm-2"><img alt="" src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/quote03.png"></div>
+                <div class="col-xs-12 col-sm-10">
+                    <blockquote>
+                        <p>Mit der Finanzierung bei Zencap schaffen wir uns ein zweites
+                            Standbein. Außerdem schätzen wir den unkomplizierten und sehr professionellen Prozess
+                            bei Zencap.</p>
+                    </blockquote>
+                    <p class="details"><strong>50.000 € von 63 Anlegern, März 2014</strong><br/>
+                        Geschäftsführer Axel Jünke von der CADmium GmbH hat seinen Quadrocopter weiterentwickelt</p>
+                </div>
+            </div>
+
+
+            <div class="row cta">
+                <div class="col-xs-12 text-center page-head">
+                    <a id="loan-submit-1" class="btn btn-lg btn-brrwr" type="submit" href="/loan-request/register#baseForm">Jetzt Finanzierung Anfragen</a>
+                    <div class="desp-10"></div>
+                    <p>TÜV geprüfte Datensicherheit</p>
+                    <div >
+                        <a href="#experts"><img alt=""  src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/arrow-grey.png"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- end .container-wrapper -->
+
+    <div class="container-wrapper press-quotes hidden-xs">
+        <div class="container spacing">
+            <div class="row">
+                <div class="col-xs-12 logos text-center">
+                    <div id="homepageCarousel" class="carousel slide" style="min-height: 215px;">
+                        <!-- Carousel items -->
+                        <div class="carousel-inner row">
+                            <div class="active item col-xs-12">
+                                <a href="https://d1x3gb5zl465n8.cloudfront.net/de/press/articles/2014-07-01_boersen-zeitung_Zencap_brisantes-Finanzierungsneuland.pdf"
+                                   target="_blank"><img src="https://d1x3gb5zl465n8.cloudfront.net/de/press/borsen.png"
+                                                        alt="Börsenzeitung" class="img-responsive"></a>
+                                <blockquote>
+                                    <p>&nbsp;Das Zencap-Prinzip wird sich in Deutschland wie zuvor in Großbritannien und
+                                        den USA etablieren. Mit der Fokussierung auf kleine Mittelständler greift Zencap
+                                        das Geschäft an, in dem traditionelle Banken hauptsächlich ihr Geld
+                                        verdienen.</p>
+
+                                    <p class="text-center"><a href="/press" title="" target="_blank"><em>Zencap in der
+                                                Presse</em></a></p>
+                                </blockquote>
+                            </div>
+
+                            <div class="item col-xs-12">
+                                <a href="https://d1x3gb5zl465n8.cloudfront.net/de/press/articles/140410_sueddeutsche-zeitung_das-problem-mit-dem-geld.pdf"
+                                   target="_blank"><img
+                                        src="https://d1x3gb5zl465n8.cloudfront.net/de/press/frankfurterallgemeine.png"
+                                        alt="Frankfurter Allgemeine" class="img-responsive"></a>
+                                <blockquote>
+                                    <p>&nbsp;Experten halten Online-Kredite für Mittelständler für eine realistische
+                                        Alternative zur klassischen Bankenfinanzierung (…). Vor allem für kleinere
+                                        Unternehmen ist das Modell von Zencap interessant.</p>
+
+                                    <p class="text-center"><a href="/press" title="" target="_blank"><em>Zencap in der
+                                                Presse</em></a></p>
+                                </blockquote>
+                            </div>
+
+                            <div class="item col-xs-12">
+                                <a href="http://www.handelsblatt.com/unternehmen/leasing-spezial/neue-samwer-plattform-jungunternehmer-finanzieren-den-mittelstand/9931626.html"
+                                   target="_blank"><img
+                                        src="https://d1uuy7l9kfwygp.cloudfront.net/bundles/intlendweblayout/frontend/images/cms/press/handelsblatt.png"
+                                        alt="Handeslblatt" class="img-responsive"></a>
+                                <blockquote>
+                                    <p>Die Internetplattform Zencap vermittelt Darlehen an Firmen – nach gründlicher
+                                        Bonitätsprüfung und zum Missfallen vieler Banken (…). Zwar laufen viele Prozesse
+                                        <br>IT-gestützt, aber beim Bilanzcheck vertraut Zencap auf erfahrene Analysten.
+                                    </p>
+
+                                    <p class="text-center"><a href="/press" title="" target="_blank"><em>Zencap in der
+                                                Presse</em></a></p>
+                                </blockquote>
+                            </div>
+
+                            <div class="item col-xs-12">
+
+                                <a href="https://d1x3gb5zl465n8.cloudfront.net/de/press/articles/140410_sueddeutsche-zeitung_das-problem-mit-dem-geld.pdf"
+                                   target="_blank"><img
+                                        src="https://d1x3gb5zl465n8.cloudfront.net/de/press/suddeutsche_zeitung.png"
+                                        alt="Süddeutsche Zeitung"></a>
+                                <blockquote>
+                                    <p>Die Finanzierung der vielen Mittelständler ist zunehmend ein Problem. Durchs
+                                        Raster fallen die Unternehmen, die das Rückgrat des Wirtschaftsstandorts
+                                        Deutschlands sind (...). In diese Lücke springen nun Internetplattformen wie
+                                        Zencap.</p>
+
+                                    <p class="text-center"><a href="/press" title="" target="_blank"><em>Zencap in der
+                                                Presse</em></a></p>
+                                </blockquote>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- end .press-quotes -->
+
+    <a id="experts"></a>
+
+    <div class="container-wrapper risk-team odd">
+        <div class="container spacing">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="faux-h1 text-center">Unsere Kreditexperten</h2>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                        <img src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/thorsten.jpg" alt="">
+                        <h3>Thorsten Nahm</h3>
+                        <p><strong>Leitung Risikoanalyse</strong><br/>
+                            8+ Jahre Erfahrung</p>
+                        <small>Ehemals: Commerzbank</small>
+                </div>
+                <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                        <img src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/dominic.jpg" alt="">
+                        <h3>Dominic Tolle</h3>
+                        <p><strong>Leitung Risikoanalyse</strong><br/>
+                            8+ Jahre Erfahrung</p>
+                        <small>Ehemals: Haspa</small>
+                </div>
+                <div class="desp-20 hidden-md hidden-lg"></div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <img src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/andreas.jpg" alt="">
+                    <h3>Andreas Ecke</h3>
+                    <p><strong>Senior Kreditanalyst</strong><br/>
+                        15+ Jahre Erfahrung</p>
+                    <small>Ehemals: HSH Nordbank</small>
+                </div>
+                <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <img src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/kerstin.jpg" alt="">
+                    <h3>Kerstin Baker</h3>
+                    <p><strong>Senior Kreditanalyst</strong><br/>
+                        20+ Jahre Erfahrung</p>
+                    <small>Ehemals: Deutsche Bank</small>
+                </div>
+            </div><!-- end .row -->
+            
+        </div>
+    </div><!-- end .container-wrapper -->
+
+    <div class="container-wrapper">
+        <div class="container spacing">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="faux-h1 text-center">Nehmen Sie Kontakt mit uns auf</h2>
+                </div>
+            </div><!-- end .row -->
+
+            <div class="row">
+
+                <div class="col-xs-12 col-sm-5 col-md-4">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <a href="https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/unternehmensfinanzierung-mit-zencap.pdf" target="_blank"><img class="pull-left hidden-xs" src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/download.png" alt=""></a>
+                            <div class="col-xs-7 col-sm-6 col-md-6 add-space">
+                                <p><strong><a href="https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/unternehmensfinanzierung-mit-zencap.pdf" target="_blank">Download</a> unserer Kreditnehmerbroschüre.</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+
+                <div class="col-xs-12 col-sm-7 col-md-8">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <img class="pull-left hidden-xs hidden-sm" src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/sales.png" alt="">
+                            <div class="col-xs-12 col-sm-12 col-md-7 add-space">
+                                <p><strong>Sprechen Sie mit unseren Experten<br/>
+                                        Telefon: <span style="color:#3F9CD9;">030 / 2084900 – 17</span><br/>
+                                        Email: <a href="mailto:unternehmen@zencap.de">unternehmen@zencap.de</a></strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end .row -->
+
+            <div class="row cta">
+                <div class="col-xs-12 text-center page-head">
+                    <a id="loan-submit-1" class="btn btn-lg btn-brrwr" type="submit" href="/loan-request/register#baseForm">Jetzt Finanzierung Anfragen</a>
+                    <div class="desp-10"></div>
+                    <p>TÜV geprüfte Datensicherheit</p>
+                </div>
+            </div><!-- end .row -->
+        </div>
+    </div><!-- end .container-wrapper -->
+
+    <div class="container-wrapper odd">
+        <div class="container spacing">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="faux-h1">Firmenfinanzierung - möglich auch ohne Banken?</h2>
+                    <p>Zur Vorfinanzierung ihrer Aufträge, zur Tilgung von Steuer- oder Versicherungsverbindlichkeiten oder zur Anschaffung neuer Maschinen müssen Unternehmen liquide sein. Nicht immer ist dafür ausreichend Eigenkapital vorhanden. Unternehmer benötigen weitere Firmenfinanzierungen, um ihre Vorhaben optimal realisieren zu können. Um Zugang zum Kapitalmarkt zu erhalten, müssen mittelständische Unternehmen fast immer einen Kreditantrag bei ihrer Hausbank stellen. Damit verbunden sind oftmals strenge Finanzierungsauflagen, lange Wartezeiten sowie ein erheblicher bürokratischer Aufwand. Zudem halten sich Banken seit der Finanzkrise mit der Vergabe von Krediten zur Firmenfinanzierung zurück. Um nicht mehr so stark wie bisher von Banken abhängig zu sein, haben sich alternative Finanzierungsmöglichkeiten für <a href="https://www.zencap.de/firmenkredit-rate-ermitteln-31.html" target="_blank">Firmenkredite</a> wie die des Crowdlending etabliert.</p>
+                    <p> <a href="https://www.zencap.de/crowdlending-87.html" target="blank">Crowdlending </a> (aus dem Englischen: „Crowd“ steht für eine größere Gruppe von Menschen und „Lending“ für „Kreditgewährung“) und ist ein anderer Begriff für “Schwarmfinanzierung” bezieht sich auf die Vergabe von Krediten über einen Online-Marktplatz mit Hilfe einer Vielzahl von Investoren, die nach einer bestimmten Laufzeit feste monatliche Zins- und Tilgungsraten erhalten. Eine Risikoeinschätzung sowie  die erzielbare Rendite werden dabei individuell festgelegt. </p>
+                    <p>In Deutschland ist Zencap der führende Online-Kreditmarktplatz für Firmenfinanzierung.  Unternehmer und Investoren treffen hier zusammen, um die einzelnen Kreditprojekte zu finanzieren. Der <a href="https://www.zencap.de/crowdfunding-101.html" target="_blank">Crowdfunding</a>-Trend hat sich in den letzten Jahren im internationalen Raum sehr stark entwickelt und wächst stetig weiter. Bereits 2012 erreichte dieser Markt die Milliardengrenze. Zu beobachten sind diese Erfolge vor allem im angelsächsischen Raum, insbesondere in den Vereinigten Staaten von Amerika und Großbritannien.  Auch wenn die Zahlen im deutschsprachigen Raum noch nicht an die seine Nachbarn herankommen, werden Unternehmensfinanzierungen über Crowdlending-Plattformen auch hierzulande immer beliebter und entfalten sich zu einem immer etablierteren Finanzierungszweig. </p>
+                    <p class="text-center">Fordern Sie jetzt eine kostenlose Firmenfinanzierung an!</p>
+                </div>
+            </div><!-- end .row -->
+
+            <div class="row cta">
+                <div class="col-xs-12 text-center">
+                    <a id="loan-submit-1" class="btn btn-lg btn-brrwr" type="submit" href="/loan-request/register#baseForm">Jetzt Finanzierung Anfragen</a>
+                    <div class="desp-10"></div>
+                    <p>TÜV geprüfte Datensicherheit</p>
+                </div>
+            </div><!-- end .row -->
+        </div>
+    </div><!-- end .container-wrapper -->
+
+</div>
+
+
+{% endblock %}
+
+
+
+{% block js %}
+    {{ parent() }}
+
+
+<script type="text/javascript">
+    $(function() {
+        $('.carousel').carousel({
+            interval: 5000
+        })
+    });
+</script>
+
+{% endblock %}
