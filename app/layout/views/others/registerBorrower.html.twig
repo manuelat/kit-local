@@ -32,7 +32,8 @@
 
                     <div class="row form-group">
                         <div class="col-xs-12">
-                            <div class="radio-buttons">
+
+                            {#<div class="radio-buttons">
                                 <input type="radio" class="hidden" value="male" name="borrower_gender" id="borrower_gender_m" required="required">
                                 <div class="custom-circle">
                                     <span></span> <!-- add class .selected when user clicks -->
@@ -46,8 +47,22 @@
                                 </div>
                                 <label for="borrower_gender_f" class="required"> {{ 'Frau' }}</label>
                             </div>
-                            <div class="clearfix"></div>
                             <label for="borrower_gender" class="text-danger" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                        #}
+
+                            <div class="radio-buttons" id="userlender_gender">
+                                <label for="userlender_gender_0" class="enhanced-radio">
+                                    <!-- add class 'filled' when the user clicks -->
+                                    <i class="filled"></i></label>
+                                <input type="radio" value="m" required="required" name="userlender[gender]" id="userlender_gender_0" class="ui-helper-hidden-accessible">
+                                <label class="required" for="userlender_gender_0">Herr</label>
+                                <label for="userlender_gender_1" class="enhanced-radio">
+                                    <i></i></label>
+                                <input type="radio" value="f" required="required" name="userlender[gender]" id="userlender_gender_1" class="ui-helper-hidden-accessible">
+                                <label class="required" for="userlender_gender_1">Frau</label>
+                                <label for="borrower_gender" class="text-danger" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                            </div>
+
                         </div>
                     </div><!-- end .row -->
 
@@ -167,7 +182,36 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="form-group">
+                                <div class="checkbox">
+                                    <label for="" class="enhanced-checkbox">
+                                        <i class="fa fa-check"></i>
+                                    </label>
+                                    <input type="checkbox" value="" required="required" name="" id="" class="ui-helper-hidden-accessible">
+                                    <label class="required" for="">Hiermit akzeptiere ich die <a target="_blank" href="/geschaeftsbedingungen-privatanleger-32.html">Nutzungsbedingungen</a></label>
+                                </div>
+                                <div class="checkbox">
+                                    <label for="" class="enhanced-checkbox">
+                                        <!-- add class 'fa-check' when the user clicks -->
+                                        <i class="fa"></i>
+                                    </label>
+                                    <input type="checkbox" value="" required="required" name="" id="" class="ui-helper-hidden-accessible">
+                                    <label class="required" for="">Ich willige in die Erhebung, Verarbeitung und Nutzung meiner personenbezogenen Daten, wie in der Datenschutzerklärung beschrieben, ein.</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label for="userlender_terms_and_conditions" class="enhanced-checkbox">
+                                        <!-- add class 'fa-check' when the user clicks -->
+                                        <i class="fa"></i>
+                                    </label>
+                                    <input type="checkbox" value="1" required="required" name="" id="userlender_terms_and_conditions" class="ui-helper-hidden-accessible">
+                                    <label class="required" for="">
+                                        Ich bin damit einverstanden, dass mich die Zencap Deutschland GmbH per E-Mail und SMS über weitere interessante Angebote informiert und hierfür meine obigen Angaben verwendet. (freiwillig)
+                                    </label>
+                                    <label for="" class="text-danger" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                                </div>
+                            </div><!-- end .form-group -->
 
+
+                            <div class="form-group">
                                 <div class="checkbox-buttons">
                                     <input type="checkbox" class="hidden" value="" name="borrower_terms_and_conditions" id="borrower_terms_and_conditions" required="required">
                                     <div class="custom-square">
@@ -196,8 +240,8 @@
                                     </div>
                                     <label for="borrower_newsletter_subscription"> {{ 'Ich bin damit einverstanden, dass mich die Zencap Deutschland GmbH per E-Mail und SMS über weitere interessante Angebote informiert und hierfür meine obigen Angaben verwendet. (freiwillig)' }}</label>
                                 </div>
-
                             </div><!-- end .form-group -->
+
                         </div>
                     </div><!-- end .row -->
 
