@@ -1,0 +1,409 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+
+<style>
+    td {
+        background-color: #f2f2f2;
+        border-left: 2px solid #fff;
+        height: 50px;
+        line-height: 15px;
+        text-align: center;
+    }
+
+    td:first-child {
+        border-left: 0;
+    }
+
+    td span {
+        font-size: 12px;
+    }
+
+    .carousel-inner {
+        min-height: 290px;
+    }
+
+    /* mobile */
+    @media (min-width: 320px) and (max-width: 767px) {
+        .carousel-inner {
+            min-height: 360px;
+        }
+    }
+
+    .bkg-sparda {
+        background-image:url('https://d1x3gb5zl465n8.cloudfront.net/de/lp/sparda/bundles/hero/hero.jpg');
+        background-position: 70% 50%;
+        background-color:#f2f4f2;
+        height: 430px;
+        background-size: cover;
+    }
+
+    .carousel .carousel-indicators li {
+        width: 14px;
+        height: 14px;
+    }
+
+    /* mobile */
+    @media (min-width: 320px) and (max-width: 767px) {
+        .carousel .carousel-indicators {
+            width: 300px;
+        }
+    }
+
+    h1 {
+        color:#f46f21;
+        font-weight:900;
+        line-height:0.6;
+    }
+
+    h1 span {
+        color: #0066b4;
+    }
+
+    /* mobile */
+    @media (min-width: 320px) and (max-width: 767px) {
+        .bkg-sparda {
+            background-position: 38% 50%;
+        }
+
+        h1 {
+            font-size: 34px;
+        }
+
+        h1 span {
+            font-size: 16px;
+        }
+    }
+
+    /* tablet */
+    @media (min-width: 768px) and (max-width: 991px) {
+        h1 {
+            font-size: 52px;
+        }
+
+        h1 span {
+            font-size: 24px;
+        }
+    }
+
+    /* desktop */
+    @media (min-width: 992px) {
+        h1 {
+            font-size: 80px;
+        }
+
+        h1 span {
+            font-size: 36px;
+        }
+    }
+
+
+    @media (min-width: 320px) and (max-width: 767px) {
+        .move-block-xs {
+            padding: 0 15px;
+        }
+    }
+
+
+
+</style>
+
+<div class="cms-page investor">
+
+
+    <div class="container-wrapper header-top bkg-sparda">
+        <div class="container spacing">
+            <div class="row">
+                <div class="col-xs-12 col-sm-9 col-md-10">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h1>HALLO<br>
+                                <span>DIGITALE GENOSSENSCHAFT</span></h1>
+                            <div>Werden Sie Teil der digitalen Genossenschaft.</div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <p>Investieren Sie in Projekte aus Ihrer Region mit einer durchschnittlichen Nettorendite von 6,25% p.a.
+                                Profitieren Sie zusätzlich von exklusiven Vorteilen.</p>
+                            <a class="btn btn-lg btn-nvstr" href="/register/lender/">Jetzt kostenlos anmelden</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+                <div class="col-xs-12 col-sm-3 col-md-2">
+                    <img alt="Bonus 50 €" src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/sparda/bundles/bubble-500.png" class="bubble">
+                </div>
+                </div>
+            </div>
+        </div>
+
+
+    <div class="container-wrapper">
+        <div class="container spacing">
+            <h2 class="faux-h1 text-center">Ausgewählte Projekte aus Ihrer Region</h2>
+
+            <div id="myCarousel" class="carousel slide custom-row" data-interval="10000">
+
+                <!-- Carousel items -->
+
+                <div class="carousel-inner">
+                    <div class="active item">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-8 col-sm-offset-4 col-md-7 col-md-offset-3">
+                                <h3 class="move-block-xs">Liquidität für solides Wachstum</h3>
+                            </div>
+                        </div><!-- end .row -->
+                        <div class="row">
+                            <div class="hidden-xs col-sm-4 col-md-3">
+                                <a class="move-block-xs" href="/darlehen-anfrage/detail/3058"><img src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/sparda/bundles/pr02.jpg" alt="Arena"></a>
+                            </div>
+                            <div class="col-xs-12 col-sm-8 col-md-9">
+                                <table>
+                                    <tr>
+                                        <td class="col-xs-1"><strong>50.000 €</strong><br><span>Kreditbetrag</span></td>
+                                        <td class="col-xs-1 hidden-xs"><strong>3</strong><br><span>Jahre</span></td>
+                                        <td class="col-xs-1"><strong>8,71 %</strong><br><span>Zinssatz</span></td>
+                                        <td class="col-xs-2"><strong>1.583 €</strong><br><span>Monatliche Rate</span></td>
+                                        <td class="col-xs-1 hidden-xs">
+                                            <div class="grade grade-c grade-small">C</div><br>
+                                            <small>Risikoklasse</small>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <p class="inside-carrousel move-block-xs">Das <a href="/darlehen-anfrage/detail/3058">Leipziger Spezial-Ingenieurbüro</a> verfügt über 30 Jahre Betriebserfahrung in dem Bereich des professionellen Holzbaus. Nicht nur die Vielfalt an Farben, auch die Flexibilität des Materials und die verschiedenen Eigenschaften machen dieses Bauelement zu etwas Besonderem. Der Baustoff eignet sich besonders für große Dachhallen und im Sonderschalenbau für Bauprojekte aller Art. Zur Projektfinanzierung hat sich das Unternehmen für die Aufnahme eines Zencap-Kredits entschieden.
+                                </p>
+                            </div>
+                        </div><!-- end .row -->
+                    </div><!-- end .item -->
+
+
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-8 col-sm-offset-4 col-md-7 col-md-offset-3">
+                                <h3 class="move-block-xs">Gewinnmaximierung mit bestehenden Strukturen</h3>
+                            </div>
+                        </div><!-- end .row -->
+                        <div class="row">
+                            <div class="hidden-xs col-sm-4 col-md-3">
+                                <a href="/darlehen-anfrage/detail/2837"><img src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/sparda/bundles/pr01.jpg" alt="Gewinnmaximierung mit bestehenden Strukturen"></a>
+                            </div>
+                            <div class="col-xs-12 col-sm-8 col-md-9">
+                                <table>
+                                    <tr>
+                                        <td class="col-xs-1"><strong>100.000 €</strong><br><span>Kreditbetrag</span></td>
+                                        <td class="col-xs-1 hidden-xs"><strong>2</strong><br><span>Jahre</span></td>
+                                        <td class="col-xs-1"><strong>7,25 %</strong><br><span>Zinssatz</span></td>
+                                        <td class="col-xs-2"><strong>4.489 €</strong><br><span>Monatliche Rate</span></td>
+                                        <td class="col-xs-1 hidden-xs">
+                                            <div class="grade grade-b grade-small">B</div><br>
+                                            <small>Risikoklasse</small>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <p class="inside-carrousel"><a href="/darlehen-anfrage/detail/2837">Autohaus Schröder e.K.</a> ist einer der europaweit größten Unfallwagenhändler. Der Betrieb ist der Spezialist für unfallbeschädigte, nicht reparierte junge Autos. Seit Jahrzehnten arbeitet das Autohaus sehr eng mit fast allen großen Versicherungsunternehmen in Deutschland zusammen, was dem Betrieb einen noch weit größeren und günstigeren Warenankauf ermöglicht. Um eine Gewinnmaximierung zu gewährleisten, wird Fremdkapital benötigt - dies soll mit Zencap realisiert werden.</p>
+                            </div>
+                        </div><!-- end .row -->
+                    </div><!-- end .item -->
+
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-8 col-sm-offset-4 col-md-7 col-md-offset-3">
+                                <h3 class="move-block-xs">Wir leben für unsere Böden!</h3>
+                            </div>
+                        </div><!-- end .row -->
+                        <div class="row">
+                            <div class="hidden-xs col-sm-4 col-md-3">
+                                <a href="/darlehen-anfrage/detail/3060"><img src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/sparda/bundles/pr03.jpg" alt="Gewinnmaximierung mit bestehenden Strukturen"></a>
+                            </div>
+                            <div class="col-xs-12 col-sm-8 col-md-9">
+                                <table>
+                                    <tr>
+                                        <td class="col-xs-1"><strong>50.000 €</strong><br><span>Kreditbetrag</span></td>
+                                        <td class="col-xs-1 hidden-xs"><strong>2</strong><br><span>Jahre</span></td>
+                                        <td class="col-xs-1"><strong>7,75 %</strong><br><span>Zinssatz</span></td>
+                                        <td class="col-xs-2"><strong>2.256 €</strong><br><span>Monatliche Rate</span></td>
+                                        <td class="col-xs-1 hidden-xs">
+                                            <div class="grade grade-c grade-small">C</div><br>
+                                            <small>Risikoklasse</small>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <p class="inside-carrousel"><a href="/darlehen-anfrage/detail/3060">Ingenieur Werner Klemm</a> ist ein modernes, regionales Ingenieurs- und Fachunternehmen. Die GmbH ist im Bereich Fußbodensanierung in der Industrie sowie für die öffentliche Hand tätig. Zu den Kunden gehören Unternehmen wie BMW, Porsche und RB Leipzig. Mit dem über Zencap aufgenommenen Wachstumskapital möchte der Betrieb die Liquidität verbessern. So soll unter anderem gegenüber den Lieferanten Skonto genutzt werden und damit Freiräume für weiteres Wachstum schaffen.</p>
+                            </div>
+                        </div><!-- end .row -->
+                    </div><!-- end .item -->
+
+                </div>
+
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" id="myBtn" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" id="myBtn2" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" id="myBtn3" data-slide-to="2"></li>
+                </ol>
+
+            </div>
+            <div class="desp-20"></div>
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <a class="btn btn-lg btn-nvstr" href="/register/lender/">Jetzt kostenlos anmelden</a>
+                </div>
+            </div>
+        </div>
+    </div><!-- end .container-wrapper -->
+
+
+    <div class="container-wrapper odd">
+        <div class="container spacing">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="faux-h1 text-center">Regional investieren - Ihre Vorteile</h2>
+                </div>
+
+                <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+                    <ul class="styled large">
+                        <li>Willkommensbonus: 50 € exklusiv für Sparda-Anleger *</li>
+                        <li>Regional investieren: regelmäßige Informationen über aktuelle Projekte aus Ihrer Region</li>
+                        <li>Premium-Service: Persönlicher Ansprechpartner für alle Sparda-Kunden</li>
+                    </ul>
+                    <p>Regional investieren und Vorteile nutzen. Geben Sie dazu bitte bei Ihrem ersten Gebot Ihr Sparda-Bank-Konto zur Verrechnung an.</p>
+                </div>
+            </div><!-- end .row -->
+        </div>
+    </div><!-- end .container-wrapper -->
+
+
+    <div class="container-wrapper how-zencap-works">
+        <div class="container spacing">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="faux-h1 text-center">Das Genossenschaftsprinzip geht online -mit Zencap und der Sparda-Bank</h2>
+                </div>
+                <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-0"><img class="img-responsive"
+                                                                                              src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/sparda/bundles/how-it-works.png"
+                                                                                              alt="Wie funktioniert es">
+                </div>
+                <div class="desp-20 hidden-md hidden-lg"></div>
+                <div class="col-xs-12 col-sm-12 col-md-6">
+                    Gemeinsam stärker als der Einzelne. Die Sparda-Bank Berlin und Zencap gründen
+                    Deutschlands erste digitale Genossenschaft und setzen neue Maßstäbe für ein zeitgemäßes Banking. Auf seinem Online-Marktplatz führt Zencap private Anleger
+                    mit kreditsuchenden Mittelstandsbetrieben aus der Region zusammen.
+                    Von Genossenschaftsanteilen zu profitieren war noch nie so einfach.
+                    Weg von abstrakten Finanzprodukten, hin zur direkten Geldanlage in solide Unternehmen vor Ort. Die digitale Genossenschaft macht es möglich.
+                </div>
+            </div>
+        </div>
+    </div><!-- end .how-zencap-works -->
+
+    {#  TO REPLACE THE IMAGE  borrower-benefit-1.png WITH THE CORRECT ONE #}
+    <div class="container-wrapper lender-invest-steps odd">
+        <div class="container spacing">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="faux-h1 text-center">Genossenschaftliche Geldanlage in drei Schritten</h2>
+                </div>
+            </div>
+            <div class="row">
+                <p class="hidden-xs hidden-sm col-md-10 col-md-offset-1">
+                    <img class="img-responsive" alt="" src="/bundles/intlenddeweblayout/frontend/images/cms/lender/lender-steps.png" />
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-4 grey-note">
+                    <div class="row helper">
+                        <div class="col-xs-12 helper-inner">
+                            <img class="pull-left hidden-md hidden-lg" alt="" src="/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-1.png" />
+                            <div class="col-xs-7 col-sm-6 col-md-12 pull-left helper-inner">
+                                <h3>Konto erstellen in 1 Minute</h3>
+                            </div>
+                        </div>
+                        <div class="desp-10 hidden-md hidden-lg"></div>
+                        <div class="col-xs-12">
+                            <p>Registrieren Sie sich in 1 Minute mit Ihrem Namen und Ihrer E-Mailadresse und entdecken Sie spannende Kreditprojekte der digitalen Genossenschaft.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="row helper">
+                        <div class="col-xs-12 helper-inner">
+                            <img class="pull-left hidden-md hidden-lg" alt="" src="/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-1.png" />
+                            <div class="col-xs-7 col-sm-6 col-md-12 pull-left helper-inner">
+                                <h3>Geldanlage auswählen</h3>
+                            </div>
+                        </div>
+                        <div class="desp-10 hidden-md hidden-lg"></div>
+                        <div class="col-xs-12">
+                            <p>Genossenschaftliche Geldanlage auswählen und Ihre Bankdaten eingeben. Die Abwicklung erfolgt bequem per Lastschrift über Ihr Konto bei der Sparda-Bank Berlin.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4 grey-note">
+                    <div class="row helper">
+                        <div class="col-xs-12 helper-inner">
+                            <img class="pull-left hidden-md hidden-lg" alt="" src="/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-1.png" />
+                            <div class="col-xs-7 col-sm-6 col-md-12 pull-left helper-inner">
+                                <h3>Rückzahlungen erhalten</h3>
+                            </div>
+                        </div>
+                        <div class="desp-10 hidden-md hidden-lg"></div>
+                        <div class="col-xs-12">
+                            <p>Nutzen Sie Ihr Dashboard, um den Überblick über Ihre Zinseinkünfte und monatlichen Rückzahlungen aus Ihrer genossen-
+                                schaftlichen Geldanlage zu erhalten.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <a class="btn btn-lg btn-nvstr" href="/register/lender/">Jetzt kostenlos anmelden</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-wrapper odd">
+        <div class="container spacing">
+            <div class="accordion-group">
+                <div class="accordion-heading"><a data-parent="#faq" data-toggle="collapse" href="#sparda" class="collapsed"><i>↓</i>* Teilnahmebedingungen und Disclaimer (zum Öffnen bitte klicken):</a></div>
+                <div class="accordion-body collapse" id="sparda" style="height: 0px;">
+                    <div class="accordion-inner">
+                        Wenn Sie bei diesem Projekt „digitale Genossenschaft“ teilnehmen und sich über diesen Link bei Zencap als Investor registrieren und im Registrierungsprozess Ihr Bankkonto bei der Sparda-Bank Berlin als Referenzkonto angeben, dann können Sie folgende Vorteile genießen:<br><br>
+                        <ol>
+                            <li>Wenn Sie innerhalb des ersten Monats mindestens 500,00 € über die Zencap-Plattform investiert haben, erhalten Sie einen einmaligen Bonus auf Ihr Referenzkonto in Höhe von 50,00 €.</li>
+                            <li>Wenn Sie bei der Registrierung Ihre Einwilligung zum Erhalt von Newslettern gegeben haben, erhalten Sie besondere Newsletter, der die Kreditprojekte aus der Region vorstellt. </li>
+                        </ol>
+                        Sie befinden sich nicht mehr auf der Internetseite der Sparda-Bank Berlin eG. Diese Seite ist eine Seite außerhalb des Verantwortungsbereichs der Sparda-Bank Berlin eG. Für den Inhalt der vermittelten Seite haftet nicht die Sparda-Bank Berlin eG, sondern der Inhaber der Webseite, auf die Sie weitergeleitet wurden.
+                        <br>
+                        Der Abschluss erfolgt ausschließlich über die Plattform von Zencap unter den dort genannten Bedingungen. Für die dort bereitgestellten Informationen ist die Sparda-Bank Berlin eG nicht verantwortlich.  Es handelt sich weder um eine Anlagevermittlung, noch um eine Anlageberatung oder Handlungsempfehlung  durch die Sparda-Bank Berlin eG. Jede Investition kann zu einem Teil- oder Totalverlust führen.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+{% block js %}
+    {{ parent() }}
+
+<script>
+    $(document).ready(function(){
+        //Activate Carousel
+        $("#myCarousel").carousel();
+
+        // Click on the button to stop sliding
+        $("#myBtn").click(function(){
+            $("#myCarousel").carousel("pause");
+        });
+
+        $("#myBtn2").click(function(){
+            $("#myCarousel").carousel("pause");
+        });
+
+        $("#myBtn3").click(function(){
+            $("#myCarousel").carousel("pause");
+        });
+
+    });
+</script>
+
+{% endblock %}

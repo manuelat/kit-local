@@ -104,6 +104,9 @@ institutional:
 affiliate:
     path: /cms/affiliate
 
+affiliate-ES:
+    path: /cms-es/affiliate-ES
+
 blogger:
     path: /cms/blogger
 
@@ -124,6 +127,9 @@ lp-negativzinsen-vermeiden:
 
 lp-sparbuch:
     path: /cms/lp-sparbuch
+
+lp-sparda:
+    path: /cms/lp-sparda
 
 lp-sharing-economy:
     path: /cms/lp-sharing-economy
