@@ -105,7 +105,7 @@ affiliate:
     path: /cms/affiliate
 
 affiliate-ES:
-    path: /cms-es/affiliate-ES
+    path: /cms-ES/affiliate-ES
 
 blogger:
     path: /cms/blogger
