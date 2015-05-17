@@ -1,0 +1,193 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+
+    <style>
+        .bkg-crowdfunding {
+
+        }
+
+        /* background height on mobile */
+        @media (min-width: 320px) and (max-width: 767px) {
+            .bkg-crowdfunding {
+                background: url('https://d1x3gb5zl465n8.cloudfront.net/de/lp/crowdfunding/image_crowd_euro1.jpg') 50% 0 no-repeat;
+                background-size: cover;
+                height: 250px;
+            }
+        }
+
+        /* background height on tablet */
+        @media (min-width: 768px) and (max-width: 991px) {
+            .bkg-crowdfunding {
+                background: url('https://d1x3gb5zl465n8.cloudfront.net/de/lp/crowdfunding/image_crowd_euro1.jpg') 50% 0 no-repeat;
+                height: 390px;
+            }
+        }
+
+        /* background height on desktop */
+        @media (min-width: 992px) {
+            .bkg-crowdfunding {
+                background: url('https://d1x3gb5zl465n8.cloudfront.net/de/lp/crowdfunding/image_crowd_euro1.jpg') 59% 50% no-repeat;
+                height: 445px;
+            }
+        }
+
+        .borrower h3, span.borrower {
+            color: #ff8c19;
+        }
+
+        .investor h3, span.investor {
+            color: #189bf2;
+        }
+
+        .container-wrapper .styled li {
+            border: 0;
+            line-height: 1.5em;
+        }
+
+        /* mobile */
+        @media (min-width: 320px) and (max-width: 767px) {
+            .lp-steps img {
+                margin: 0 auto;
+            }
+
+            .lp-steps {
+                text-align: center;
+            }
+        }
+
+    </style>
+
+    <div class="cms-page">
+        <div class="container-wrapper">
+            <div class="container spacing">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1 class="text-center">Crowdfunding</h1>
+                    </div>
+                </div>
+            </div>
+        </div><!-- end .container-wrapper -->
+
+        <div class="container-wrapper bkg-crowdfunding"> </div><!-- end .container-wrapper -->
+
+        <div class="container-wrapper">
+            <div class="container spacing">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h2 class="faux-h1 text-center">Crowdfunding – die neue Alternative in der Gewerbefinanzierung</h2>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 borrower">
+                        <h3>Für Unternehmen</h3>
+                        <p>Als Crowdfunding-Plattform für kleine und mittlere Unternehmen unterstützt Zencap die alternative Finanzierung des Mittelstands. Mit dieser neuen Methode können Mittelständler ihre Kredite durch eine Vielzahl von Anlegern finanzieren ohne lange und komplizierte Verhandlungen mit Banken.</p>
+                        <p>Der Kredit wird durch die &nbsp;sogenannte “Crowd” finanziert. Diese setzt sich aus einer Vielzahl von Investoren zusammen, die sich meist für verschiedene Anlageprojekte entscheiden. Es handelt sich also um Privatdarlehen, die in der Summe Projekte von Unternehmen unterstützen. Diese neue Art der Finanzierung wird in Deutschland bei Firmenkrediten immer öfter in Anspruch genommen.</p>
+                        <p>Die Entscheidung, Projekte über die Crowd zu finanzieren, macht Unternehmern unabhängiger von Banken und Risikokapitalgesellschaften. Bei Zencap können Unternehmen schnell und unkompliziert ihre Kreditanfrage stellen, welche in der Regel innerhalb von nur 48 Stunden beantwortet wird. Die Höhe der angebotenen Kreditsummen reichen von 10.000 € bis 150.000 €. Und das zu fairen Konditionen ab 3,99 % Zinsen p.a. Auf dem Kreditmarktplatz finden Mittelständler geeignete Investoren für ihre Projekte und profitieren von einer transparenten Abwicklung. Möchte ein Unternehmen zudem seinen Kredit früher ablösen, so geschieht dies völlig kostenfrei ohne Zahlung einer Vorfälligkeitsentschädigung. Anders als traditionelle Kreditgeber ist der Kreditmarktplatz auch transparent bezüglich der anfallenden Kosten und Gebühren. Zencap ist der neue Finanzierungspartner an der Seite des Mittelstands.</p>
+                        <div class="row">
+                            <div class="col-xs-12 text-center">
+                                <a class="btn btn-lg btn-brrwr text-center" href="https://www.zencap.de/loan-request/register#baseForm">Crowdfunding-Projekt starten</a>
+                                <div class="desp-10"></div>
+                                <p>Mehr <a href="https://www.zencap.de/unternehmen-faq-16.html">Fragen zum Thema?</a></p>
+                                <p>Sprechen Sie uns gerne persönlich an.<br>Sie erreichen uns unter <a href="mailto:unternehmen@zencap.de">unternehmen@zencap.de</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="desp-10 hidden-sm hidden-md hidden-lg"></div>
+                    <div class="col-xs-12 col-sm-6 investor">
+                        <h3>Für Investoren</h3>
+                        <p>Investoren bietet Crowdfunding eine gute Gelegenheit ihr Geld in mehrere attraktive Kreditprojekte von kleinen und mittleren Unternehmen aus Deutschland anzulegen.</p>
+                        <p>Auch Zencap nutzt dieses Prinzip und eröffnet Investoren eine neue solide Anlageklasse, in der Investitionen bereits ab 100 € möglich sind. Angeboten werden verschiedene Projekte mit einem Kreditvolumen zwischen 10.000 € und 150.000 €.</p>
+                        <p>Auch stellt der Kreditmarktplatz eine neue und individualisierbare Form der <a target="_blank" href="https://www.zencap.de/geldanlage-unternehmen-5.html">Geldanlage</a> dar: Je nach Risikobereitschaft können Investoren sich ihr persönliches Portfolio zusammenstellen und diversifizieren. Sie selbst entscheiden, in welche Projekte sie <a href="https://www.zencap.de#info">Geld investieren </a> und damit unterstützen möchten. Entsprechend der jeweiligen Bonitätsklasse erhalten Investoren eine interessante  <a target="_blank" href="https://www.zencap.de/rendite-22.html">Rendite </a> von bis zu 14,64% pro Jahr.</p>
+                        <p>Ganz gleich, in welche der Anlageklassen sie investieren, Risikoeinschätzungen, Zinssätze sowie weitere Informationen zum Unternehmen können sie auf dem Kreditmarktplatz einsehen.
+                            Die Rückzahlungen erfolgen monatlich und werden auf das persönliche Bankkonto der Investoren gutgeschrieben. Auf diese Weise sichern Investoren Arbeitsplätze und fördern das Wirtschaftswachstum Deutschlands &ndash; ohne auf starke Zinsen zu verzichten. Mit Zencap nehmen Investoren direkt am Erfolg des deutschen Mittelstands teil.</p>
+                        <div class="row">
+                            <div class="col-xs-12 text-center">
+                                <a class="btn btn-lg btn-nvstr" href="/register/lender/">In Crowdfunding-Projekte investieren</a>
+                                <div class="desp-10"></div>
+                                <p>Mehr <a href="https://www.zencap.de/investoren-hilfe-17.html">Fragen zum Thema?</a></p>
+                                <p>Sprechen Sie uns gerne persönlich an.<br>Sie erreichen uns unter <a href="mailto:investor@zencap.de">investor@zencap.de</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- end .container-wrapper -->
+
+        <div class="container-wrapper odd">
+            <div class="container spacing">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h2 class="faux-h1 text-center">Vorteile des Crowdfunding</h2>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 borrower">
+                        <h3>Für Unternehmen</h3>
+                        <ul class="styled">
+                            <li>Kredite schon ab 3,99% p.a.</li>
+                            <li>Annuitätendarlehen mit monatlicher Tilgung</li>
+                            <li>Laufzeiten der Kredite schon ab 6 Monaten und bis zu 5 Jahren</li>
+                            <li>Unverbindliches und kostenloses Angebot innerhalb von 48 Stunden</li>
+                            <li>Uneingeschränkte Transparenz ohne verdeckte Kosten</li>
+                            <li>Keine Abhängigkeit von Banken</li>
+                            <li>Maximale Flexibilität: keine Vorfälligkeitsentschädigung bei vorzeitiger Ablösung des Kredits</li>
+                        </ul>
+                        <div class="row">
+                            <div class="col-xs-12 text-center">
+                                <a class="btn btn-lg btn-brrwr text-center" href="https://www.zencap.de/loan-request/register#baseForm">Crowdfunding-Projekt starten</a>
+                                <div class="desp-10"></div>
+                                <p>Mehr <a href="https://www.zencap.de/unternehmen-faq-16.html">Fragen zum Thema?</a></p>
+                                <p>Sprechen Sie uns gerne persönlich an.<br>Sie erreichen uns unter <a href="mailto:unternehmen@zencap.de">unternehmen@zencap.de</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+                    <div class="col-xs-12 col-sm-6 investor">
+                        <h3>Für Investoren</h3>
+                        <ul class="styled">
+                            <li>Attraktive Durchschnittsrendite von 5,85%</li>
+                            <li>Schon ab 100 € Mindestinvestition</li>
+                            <li>Laufzeiten der Projekte: von 6 Monaten bis zu 5 Jahren</li>
+                            <li>Risikoeinschätzung von erfahrenen Finanzmanagern in die Bonitätsklassen A+ bis C-</li>
+                            <li>Monatliche Rückzahlungen der Rendite</li>
+                            <li>Minimierung des Risikos durch Streuung in verschiedene Kreditprojekte</li>
+                        </ul>
+                        <div class="row">
+                            <div class="col-xs-12 text-center">
+                                <a class="btn btn-lg btn-nvstr" href="/register/lender/">In Crowdfunding-Projekte investieren</a>
+                                <div class="desp-10"></div>
+                                <p>Mehr <a href="https://www.zencap.de/investoren-hilfe-17.html">Fragen zum Thema?</a></p>
+                                <p>Sprechen Sie uns gerne persönlich an.<br>Sie erreichen uns unter <a href="mailto:investor@zencap.de">investor@zencap.de</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- end .container-wrapper -->
+
+        <div class="container-wrapper lp-steps">
+            <div class="container spacing">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h2 class="faux-h1 text-center">Wie funktioniert Zencap?</h2>
+                    </div>
+                    <div class="col-xs-12 col-sm-4"> <img alt="" class="img-responsive" src="https://d1uuy7l9kfwygp.cloudfront.net/bundles/intlendweblayout/frontend/images/cms/home/howitworks-01.png">
+                        <div> <span class="borrower">Unternehmen</span> stellen einen Kreditantrag</div>
+                        <p> <span class="investor">Investoren</span> registrieren sich </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-4"> <img alt="" class="img-responsive" src="https://d1uuy7l9kfwygp.cloudfront.net/bundles/intlendweblayout/frontend/images/cms/home/howitworks-02.png">
+                        <div> <span class="borrower">Unternehmen</span> werden finanziert </div>
+                        <p><span class="investor">Investoren</span> erstellen ein Portfolio </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-4"> <img alt="" class="img-responsive" src="https://d1uuy7l9kfwygp.cloudfront.net/bundles/intlendweblayout/frontend/images/cms/home/howitworks-03.png">
+                        <div><span class="borrower">Unternehmen</span> zahlen zurück </div>
+                        <p><span class="investor">Investoren</span> verdienen und reinvestieren </p>
+                    </div>
+                    <div class="col-xs-12">
+                        <p>Zahlreiche kleine und mittelständische Unternehmen haben ihre Projekte bereits erfolgreich per <strong>Crowdlending</strong> <br>
+                            finanziert &ndash; hier finden Sie einige <a href="https://www.zencap.de/darlehen-anfrage/index">Referenzprojekte.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div><!-- end .container-wrapper -->
+
+    </div><!-- end .cms-page -->
+
+{% endblock %}

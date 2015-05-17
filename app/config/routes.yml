@@ -152,6 +152,9 @@ lp-borrower-nopromo:
 lp-crowdlending:
     path: /cms/lp-crowdlending
 
+lp-crowdfunding:
+    path: /cms/lp-crowdfunding
+
 login:
     path: /others/login
 
