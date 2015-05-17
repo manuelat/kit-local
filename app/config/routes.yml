@@ -86,6 +86,9 @@ jobs:
 career-engineering-product:
     path: /cms/career-engineering-product
 
+career-operations-and-customer-care:
+    path: /cms/career-operations-and-customer-care
+
 press:
     path: /cms/press
 
