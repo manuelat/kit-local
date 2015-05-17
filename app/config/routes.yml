@@ -101,6 +101,9 @@ career-human-resources-and-office-management:
 career-sales-business-dev:
     path: /cms/career-sales-business-dev
 
+career-marketing:
+    path: /cms/career-marketing
+
 press:
     path: /cms/press
 
