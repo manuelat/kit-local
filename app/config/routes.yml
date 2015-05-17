@@ -83,6 +83,9 @@ howItWorks:
 jobs:
     path: /cms/jobs
 
+career-engineering-product:
+    path: /cms/career-engineering-product
+
 press:
     path: /cms/press
 
