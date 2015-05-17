@@ -2,6 +2,42 @@
 
 {% block body %}
 
+<style>
+
+    .job-title {
+        font-size: 28px;
+        font-weight: 300;
+        display: block;
+    }
+
+    @media  (min-width: 320px) and (max-width: 767px) {
+        .job-title {
+            font-size: 21px;
+        }
+    }
+
+    .job-title i {
+        font-size: 20px;
+    }
+
+    .positions .collapse {
+        margin-top: 25px;
+    }
+
+    .positions hr {
+        border: 1px solid #dadada;
+    }
+
+
+    @media (min-width: 992px) {
+        .positions .info {
+            float: right;
+        }
+    }
+
+
+</style>
+
 <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false">
 </script>
 
@@ -20,13 +56,15 @@
 </script>
 
 <div class="cms-page">
+
     <div class="container-wrapper">
         <div class="container">
             <div class="page-head">
                 <img class="img-responsive" src="https://d1x3gb5zl465n8.cloudfront.net/de/career/header_07-c.jpg" alt="Career at Zencap">
             </div>
         </div>
-    </div>
+    </div><!-- end .container-wrapper -->
+
     <div class="container-wrapper">
         <div class="container spacing">
             <div class="row">
@@ -51,68 +89,116 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container-wrapper odd">
+    </div><!-- end .container-wrapper -->
+
+    <div class="container-wrapper odd positions">
         <div class="container spacing">
+            <h1 class="text-center">Jobs</h1>
+
             <div class="row">
-                <div class="col-xs-12">
-                    <h1 class="text-center">Jobs</h1>
-                    <p>Choose one of the next areas to see the available positions.</p>
+                <div class="col-xs-12 col-md-9">
+                    <a class="job-title" data-toggle="collapse" href="#job-1" aria-expanded="false" aria-controls="job-1">Engineering, Design and Product Management<i class="pull-right">↓</i></a>
+                    <div class="collapse" id="job-1">
+                        <a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfnew/senior-product-manager.pdf" target="_blank">Senior Product Manager (m/f) - location Berlin</a>
+                    </div>
                 </div>
-                <div class="col-xs-12 col-sm-6">
-                    <h3><a href="/career-engineering-product"><i class="fa fa-cog fa-small"></i> Engineering, Design<br>&nbsp; &nbsp; and Product Management</a></h3>
-                    <ul>
-                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/senior-graphic-designer.pdf" target="_blank">Senior Graphic Designer (m/f)</a></li>
-                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/senior-graphic-designer.pdf" target="_blank">Senior Product Manager (m/f)</a></li>
-                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/php-dev.pdf" target="_blank">Senior PHP Developer (m/f)</a></li>
-                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/qa-test.pdf" target="_blank">QA Automation Test Engineer (m/f)</a></li>
-                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/working-student-quality-assurance.pdf" target="_blank">Working Student (m/f) Quality Assurance</a></li>
-                    </ul>
-                    <h3><a href="/career-operations-and-customer-care"><i class="fa fa-file fa-small"></i> Operations and Customer Care </a></h3>
-                    <ul>
-                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/intern-business-an.pdf" target="_blank">Intern (m/f) Business Analysis</a></li>
-                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/credit-analyst-nl.pdf" target="_blank">Credit Analyst (m/f) for the Dutch Market</a></li>
-                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/customer-care-agent-nl.pdf" target="_blank">Customer Care Agent (m/f) for the Dutch market</a></li>
-                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/intern-business-process-nl.pdf" target="_blank">Intern (m/f) Business Process Analysis for the Dutch Market</a></li>
-                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/junior-business-process-analyst.pdf" target="_blank">Junior Business Process Analyst (m/f)</a></li>
-                    </ul>
-                    <h3><a href="/career-data-risk"><i class="fa fa-align-left fa-small"></i> Data, Business Intelligence and Risk</a></h3>
-                    <ul>
-                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/intern-risk-management.pdf" target="_blank">Intern (m/f) Risk Management</a></li>
-                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/intern-bi.pdf" target="_blank">Intern (m/f) Business Intelligence</a></li>
-                    </ul>
-                    <h3><a href="/career-finance-and-legal"><i class="fa fa-eur fa-small"></i> Finance and Legal</a></h3>
-                    <ul>
-                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/rechtsreferendar-wissenschaftlicher-de.pdf" target="_blank">Rechtsreferendar (m/w)</a></li>
-                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/head-finance.pdf" target="_blank">Head (m/f) of Finance</a></li>
-                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/finance-assistant-part-time.pdf" target="_blank">Finance Assistant (m/f), part-time (20h)</a></li>
-                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/working-student-finance.pdf" target="_blank">Working Student (m/f) Finance</a></li>
-                    </ul>
+                <div class="desp-20 hidden-md hidden-lg"></div>
+                <div class="col-xs-12 col-md-3">
+                    <a href="/career-engineering-product" class="info">what is this</a>
                 </div>
-                <div class="col-xs-12 col-sm-6">
-                    <h3><a href="/career-human-resources-and-office-management"><i class="fa fa-user fa-small"></i> Human Resources and Office Management</a></h3>
-                    <div class="desp-20"></div>
-                    <h3><a href="/career-marketing"><i class="fa fa-bullhorn fa-small"></i> Marketing</a></h3>
-                    <ul>
-                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/content-mkt-manager.pdf" target="_blank">Content Marketing Manager (m/f)</a></li>
-                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/mkt-manager-nl.pdf" target="_blank">Marketing Manager (m/f) for the Dutch Market</a></li>
-                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/jr-comm-manager.pdf" target="_blank">Junior Communications Manager (m/f)</a></li>
-                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/head-mkt-on.pdf" target="_blank">Head (m/f) of Marketing, Focus Online</a></li>
-                    </ul>
-                    <h3><a href="/career-sales-business-dev"><i class="fa fa-headphones fa-small"></i> Sales and Business Development</a></h3>
-                    <ul>
-                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/senior-associate-focus-smes-de.pdf" target="_blank">Senior Associate (m/f), Focus SMEs – German Market</a></li>
-                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/senior-associate-focus-partners-de.pdf" target="_blank">Senior Associate (m/f), Focus Partners – German Market</a></li>
-                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/intern-business-dev-es.pdf" target="_blank">Intern (m/f) Business Development Spain</a></li>
-                        <br>
-                        <small>Amsterdam</small>
-                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/senior-associate-focus-smes-nl.pdf" target="_blank">Senior Associate, Focus SMEs (m/f) – Dutch Market</a></li>
-                        <li><a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfs/senior-associate-focus-partners-nl.pdf" target="_blank">Senior Associate (m/f), Focus Partners - Dutch Market</a></li>
-                    </ul>
+            </div><!-- end .row -->
+            <hr/>
+            <div class="row">
+                <div class="col-xs-12 col-md-9">
+                    <a class="job-title" data-toggle="collapse" href="#job-2" aria-expanded="false" aria-controls="job-2">Operations and Customer Care<i class="pull-right">↓</i></a>
+                    <div class="collapse" id="job-2">
+                        No available positions.
+                    </div>
                 </div>
-            </div>
+                <div class="desp-20 hidden-md hidden-lg"></div>
+                <div class="col-xs-12 col-md-3">
+                    <a href="/career-operations-and-customer-care" class="info">what is this</a>
+                </div>
+            </div><!-- end .row -->
+            <hr/>
+            <div class="row">
+                <div class="col-xs-12 col-md-9">
+                    <a class="job-title" data-toggle="collapse" href="#job-3" aria-expanded="false" aria-controls="job-3">Data, Business Intelligence and Risk<i class="pull-right">↓</i></a>
+                    <div class="collapse" id="job-3">
+                        <a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfsjobs/quantitative-risk-analyst2.pdf" target="_blank">Quantitative Risk Analyst (m/f) - location Berlin</a><br/>
+                        <a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfsjobs/data-scientist-risk2.pdf" target="_blank">Data Scientist (m/f) Business Intelligence/Risk - location Berlin</a><br/>
+                    </div>
+                </div>
+                <div class="desp-20 hidden-md hidden-lg"></div>
+                <div class="col-xs-12 col-md-3">
+                    <a href="/career-data-risk" class="info">what is this</a>
+                </div>
+            </div><!-- end .row -->
+            <hr/>
+            <div class="row">
+                <div class="col-xs-12 col-md-9">
+                    <a class="job-title" data-toggle="collapse" href="#job-4" aria-expanded="false" aria-controls="job-4">Finance and Legal<i class="pull-right">↓</i></a>
+                    <div class="collapse" id="job-4">
+                        No available positions.
+                    </div>
+                </div>
+                <div class="desp-20 hidden-md hidden-lg"></div>
+                <div class="col-xs-12 col-md-3">
+                    <a href="/career-finance-and-legal" class="info">what is this</a>
+                </div>
+            </div><!-- end .row -->
+            <hr/>
+            <div class="row">
+                <div class="col-xs-12 col-md-9">
+                    <a class="job-title" data-toggle="collapse" href="#job-5" aria-expanded="false" aria-controls="job-5">Human Resources and Office Management<i class="pull-right">↓</i></a>
+                    <div class="collapse" id="job-5">
+                        No available positions.
+                    </div>
+                </div>
+                <div class="desp-20 hidden-md hidden-lg"></div>
+                <div class="col-xs-12 col-md-3">
+                    <a href="/career-human-resources-and-office-management" class="info">what is this</a>
+                </div>
+            </div><!-- end .row -->
+            <hr/>
+            <div class="row">
+                <div class="col-xs-12 col-md-9">
+                    <a class="job-title" data-toggle="collapse" href="#job-6" aria-expanded="false" aria-controls="job-6">Sales and Business Development<i class="pull-right">↓</i></a>
+                    <div class="collapse" id="job-6">
+                        <a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfnew/account-manager-focus-partner.pdf" target="_blank">Account Manager (m/f), focus Partner – location Berlin </a><br>
+                        <a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfnew/associate-focus-sme.pdf" target="_blank">Associate (m/f), focus SME - location Berlin </a><br>
+                        <a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfnew/account-manager-focus-partners-dutch-market2.pdf" target="_blank">Account Manager (m/f), focus Partner – location Amsterdam</a><br>
+                        <a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfnew/associate-focus-smes-nl2.pdf" target="_blank">Associate (m/f), focus SME - location Amsterdam</a><br>
+                        <a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfnew/intern-bizdev-spain.pdf" target="_blank">Intern (m/f) Business Development Spain – location Madrid</a>
+                    </div>
+                </div>
+                <div class="desp-20 hidden-md hidden-lg"></div>
+                <div class="col-xs-12 col-md-3">
+                    <a href="/career-sales-business-dev" class="info">what is this</a>
+                </div>
+            </div><!-- end .row -->
+            <hr/>
+            <div class="row">
+                <div class="col-xs-12 col-md-9">
+                    <a class="job-title" data-toggle="collapse" href="#job-7" aria-expanded="false" aria-controls="job-7">Marketing<i class="pull-right">↓</i></a>
+                    <div class="collapse" id="job-7">
+                        <a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfnew/junior-communications-manager2.pdf" target="_blank">Junior Communications Manager (m/f) - location Berlin</a><br>
+                        <a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfsjobs/head-marketing.pdf" target="_blank">Head (m/f) of Marketing, focus Online - location Berlin</a><br>
+                        <a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdf-jobs/crm-manager.pdf" target="_blank">CRM Manager (m/f) - location Berlin</a><br>
+                        <a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfnew/communications-manager-nl2.pdf" target="_blank"> Communications Manager (m/f), for the Dutch market - location Amsterdam</a><br>
+                        <a href="https://d1x3gb5zl465n8.cloudfront.net/de/career/pdfnew/communications-manager-spanish-market.pdf" target="_blank">Communications Manager (m/f) for the Spanish market – location Madrid</a>
+                    </div>
+                </div>
+                <div class="desp-20 hidden-md hidden-lg"></div>
+                <div class="col-xs-12 col-md-3">
+                    <a href="/career-marketing" class="info">what is this</a>
+                </div>
+            </div><!-- end .row -->
+
+
         </div>
-    </div>
+    </div><!-- end .container-wrapper -->
+
     <div class="container-wrapper blockquote">
         <div class="container spacing">
             <h2 class="faux-h1 text-center">Meet our team</h2>
@@ -150,18 +236,20 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div><!-- end .container-wrapper -->
+
     <div class="container-wrapper odd">
         <div class="container spacing">
             <div class="row">
                 <div class="col-xs-12">
                     <h2 class="faux-h1 text-center">Visit us</h2>
                     <div id="googleMap" class="col-xs-12"></div>
-                    <small>Johannisstraße 20 • 10117 Berlin</small>
+                    <small>Johannisstraße 20 • 10117 Berlin </small>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    </div><!-- end .container-wrapper -->
+
+</div><!-- end .cms-page -->
 
 {% endblock %}
