@@ -1,0 +1,186 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+    
+   <style>
+        .bkg-crowdlending {
+
+        }
+
+        /* background height on mobile */
+        @media (min-width: 320px) and (max-width: 767px) {
+            .bkg-crowdlending {
+                background: url('https://d1x3gb5zl465n8.cloudfront.net/de/lp/crowdlending/image_crowd.jpg') 44% 0 no-repeat;
+                background-size: cover;
+                height: 250px;
+            }
+        }
+
+        /* background height on tablet */
+        @media (min-width: 768px) and (max-width: 991px) {
+            .bkg-crowdlending {
+                background: url('https://d1x3gb5zl465n8.cloudfront.net/de/lp/crowdlending/image_crowd.jpg') 47% 0 no-repeat;
+                height: 390px;
+            }
+        }
+
+        /* background height on desktop */
+        @media (min-width: 992px) {
+            .bkg-crowdlending {
+                background: url('https://d1x3gb5zl465n8.cloudfront.net/de/lp/crowdlending/image_crowd.jpg') 59% 50% no-repeat;
+                height: 445px;
+            }
+        }
+
+        .borrower h3, span.borrower {
+            color: #ff8c19;
+        }
+
+        .investor h3, span.investor {
+           color: #189bf2;
+        }
+
+       .container-wrapper .styled li {
+           border: 0;
+           line-height: 1.5em;
+       }
+
+       /* mobile */
+        @media (min-width: 320px) and (max-width: 767px) {
+           .lp-steps img {
+               margin: 0 auto;
+           }
+
+            .lp-steps {
+                text-align: center;
+            }
+        }
+
+   </style>
+
+<div class="cms-page">
+    <div class="container-wrapper">
+        <div class="container spacing">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1 class="text-center">Crowdlending</h1>
+                </div>
+            </div>
+        </div>
+    </div><!-- end .container-wrapper -->
+    
+    <div class="container-wrapper bkg-crowdlending"> </div><!-- end .container-wrapper -->
+    
+    <div class="container-wrapper">
+        <div class="container spacing">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="faux-h1 text-center">Crowdlending - die neue Alternative in der Fremdfinanzierung</h2>
+                </div>
+                <div class="col-xs-12 col-sm-6 borrower">
+                    <h3>Für Unternehmen</h3>
+                        <p>Als Kreditmarktplatz für mittelständische Unternehmen unterstützt Zencap die Finanzierung von Wachstums- und Innovationsprojekten.Das funktioniert nach dem Prinzip des Crowdlending.</p>
+                        <p>Der Trend "Crowdlending", der in den USA seinen Anfang genommen hat, ist in Deutschland eine relativ neue Form der Kreditaufnahme bei Privatpersonen.</p>
+                        <p>Vor dem Hintergrund, dass es vor allem für mittelständische Unternehmer zunehmend schwer ist, Gewerbekredite auf dem klasssichen Weg über die Bank aufzunehmen, stellt die Schwarmfinanzierung eine attraktive Alternative dar. Denn es sind gerade die Kreditprojekte des Mittelstands, die oft mit soliden Finanzkennzahlen, also einer guten Ertragslage und stabilen Eigenkapitalquoten, sowie enormen Wachstumschancen überzeugen.</p>
+                    <div class="row">
+                        <div class="col-xs-12 text-center">
+                            <a class="btn btn-lg btn-brrwr text-center" href="https://www.zencap.de/loan-request/register#baseForm">Crowdlending-Projekt starten</a>
+                            <div class="desp-10"></div>
+                            <p>Mehr <a href="https://www.zencap.de/unternehmen-faq-16.html">Fragen zum Thema?</a></p>
+                            <p>Sprechen Sie uns gerne persönlich an.<br>Sie erreichen uns unter <a href="mailto:unternehmen@zencap.de">unternehmen@zencap.de</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="desp-10 hidden-sm hidden-md hidden-lg"></div>
+                <div class="col-xs-12 col-sm-6 investor">
+                    <h3>Für Investoren</h3>
+                        <p>Im Zuge der Finanzkrise suchen viele Investoren nach neuen soliden Geldanlagen. Diese ermöglicht Zencap. Der Kreditmarktplatz bietet viele Vorteile wie die Möglichkeit eines individuell zusammengestellten Portfolios, das sich an den persönlichen Risikovorlieben orientiert.</p>
+                        <p>Dank der Bonitätseinstufung von Zencap in die Klassen von A+ bis C- können Investoren das Risiko gut einschätzen und attraktive Renditen erhalten. Kreditgeber können darauf vertrauen, dass alle auf Zencap gelisteten Projekte genau wie bei Banken sorgfältig geprüft werden. Risikoeinschätzungen, Zinssätze und weitere wichtige Informationen zu den jeweiligen Unternehmen können registrierte Anleger jederzeit auf dem Kreditmarktplatz einsehen.</p>
+                        <p>Projekte können schon ab einer Investitionssumme von 100 € innerhalb kürzester Zeit finanziert werden. Auch bietet die Streuung des Kapitals in viele verschiedene Projekte die Möglichkeit, das Ausfallrisiko erheblich zu mindern.</p>
+                    <div class="row">
+                        <div class="col-xs-12 text-center">
+                            <a class="btn btn-lg btn-nvstr" href="/register/lender/">In Crowdlending-Projekte investieren</a>
+                            <div class="desp-10"></div>
+                            <p>Mehr <a href="https://www.zencap.de/investoren-hilfe-17.html">Fragen zum Thema?</a></p>
+                            <p>Sprechen Sie uns gerne persönlich an.<br>Sie erreichen uns unter <a href="mailto:investor@zencap.de">investor@zencap.de</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- end .container-wrapper -->
+
+    <div class="container-wrapper odd">
+        <div class="container spacing">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="faux-h1 text-center">Vorteile des Crowdlending</h2>
+                </div>
+                <div class="col-xs-12 col-sm-6 borrower">
+                    <h3>Für Unternehmen</h3>
+                    <ul class="styled">
+                        <li>Kredite schon ab 3,99% p.a.</li>
+                        <li>Laufzeiten von 6 Monaten bis zu 5 Jahren</li>
+                        <li>Unverbindliches Angebot zu Ihrer Kreditanfrage innerhalb von zwei Bankarbeitstagen</li>
+                        <li>Vollständige Transparenz: keine versteckten Kosten</li>
+                        <li>Unabhängigkeit von Hausbanken und Eigenkapitalgebern</li>
+                        <li>Maximale Flexibilität: keine Vorfälligkeitsentschädigung bei vorzeitiger Ablösung des Kredits</li>
+                    </ul>
+                    <div class="row">
+                        <div class="col-xs-12 text-center">
+                            <a class="btn btn-lg btn-brrwr text-center" href="https://www.zencap.de/loan-request/register#baseForm">Crowdlending-Projekt starten</a>
+                            <div class="desp-10"></div>
+                            <p>Mehr <a href="https://www.zencap.de/unternehmen-faq-16.html">Fragen zum Thema?</a></p>
+                            <p>Sprechen Sie uns gerne persönlich an.<br>Sie erreichen uns unter <a href="mailto:unternehmen@zencap.de">unternehmen@zencap.de</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+                <div class="col-xs-12 col-sm-6 investor">
+                    <h3>Für Investoren</h3>
+                    <ul class="styled">
+                        <li>Attraktive Durchschnittsrendite von 5,85%</li>
+                        <li>Ab einer Investition von 100 €</li>
+                        <li>Variable Laufzeiten der Projekte: von 6 Monaten bis zu 5 Jahren</li>
+                        <li>Risikoprüfung von erfahrenen Finanzmanagern in die Bonitätsklassen A+ bis C-</li>
+                        <li>Monatliche Rückzahlungen zuzüglich Rendite</li>
+                        <li>Minimierung des Risikos durch Streuung in verschiedene Kreditprojekte</li>
+                    </ul>
+                    <div class="row">
+                        <div class="col-xs-12 text-center">
+                            <a class="btn btn-lg btn-nvstr" href="/register/lender/">In Crowdlending-Projekte investieren</a>
+                            <div class="desp-10"></div>
+                            <p>Mehr <a href="https://www.zencap.de/investoren-hilfe-17.html">Fragen zum Thema?</a></p>
+                            <p>Sprechen Sie uns gerne persönlich an.<br>Sie erreichen uns unter <a href="mailto:investor@zencap.de">investor@zencap.de</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- end .container-wrapper -->
+
+    <div class="container-wrapper lp-steps">
+        <div class="container spacing">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="faux-h1 text-center">Wie funktioniert Zencap?</h2>
+                </div>
+                <div class="col-xs-12 col-sm-4"> <img alt="" class="img-responsive" src="https://d1uuy7l9kfwygp.cloudfront.net/bundles/intlendweblayout/frontend/images/cms/home/howitworks-01.png">
+                    <div> <span class="borrower">Unternehmen</span> stellen einen Kreditantrag</div>
+                    <p> <span class="investor">Investoren</span> registrieren sich </p>
+                </div>
+                <div class="col-xs-12 col-sm-4"> <img alt="" class="img-responsive" src="https://d1uuy7l9kfwygp.cloudfront.net/bundles/intlendweblayout/frontend/images/cms/home/howitworks-02.png">
+                    <div> <span class="borrower">Unternehmen</span> werden finanziert </div>
+                    <p><span class="investor">Investoren</span> erstellen ein Portfolio </p>
+                </div>
+                <div class="col-xs-12 col-sm-4"> <img alt="" class="img-responsive" src="https://d1uuy7l9kfwygp.cloudfront.net/bundles/intlendweblayout/frontend/images/cms/home/howitworks-03.png">
+                     <div><span class="borrower">Unternehmen</span> zahlen zurück </div>
+                     <p><span class="investor">Investoren</span> verdienen und reinvestieren </p>
+                </div>
+            </div>
+        </div>
+    </div><!-- end .container-wrapper -->
+
+</div><!-- end .cms-page -->
+
+{% endblock %}

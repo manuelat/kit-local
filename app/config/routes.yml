@@ -149,6 +149,9 @@ lp-newfirmenkredit:
 lp-borrower-nopromo:
     path: /cms/lp-borrower-nopromo
 
+lp-crowdlending:
+    path: /cms/lp-crowdlending
+
 login:
     path: /others/login
 
