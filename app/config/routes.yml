@@ -92,6 +92,9 @@ career-operations-and-customer-care:
 career-data-risk:
     path: /cms/career-data-risk
 
+career-finance-and-legal:
+    path: /cms/career-finance-and-legal
+
 press:
     path: /cms/press
 
