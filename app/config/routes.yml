@@ -98,6 +98,9 @@ career-finance-and-legal:
 career-human-resources-and-office-management:
     path: /cms/career-human-resources-and-office-management
 
+career-sales-business-dev:
+    path: /cms/career-sales-business-dev
+
 press:
     path: /cms/press
 
