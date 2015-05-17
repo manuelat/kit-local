@@ -95,6 +95,9 @@ career-data-risk:
 career-finance-and-legal:
     path: /cms/career-finance-and-legal
 
+career-human-resources-and-office-management:
+    path: /cms/career-human-resources-and-office-management
+
 press:
     path: /cms/press
 
