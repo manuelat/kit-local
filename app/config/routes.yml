@@ -146,6 +146,9 @@ lp-sharing-economy-teilnahmebedingungen:
 lp-newfirmenkredit:
     path: /cms/lp-newfirmenkredit
 
+lp-borrower-nopromo:
+    path: /cms/lp-borrower-nopromo
+
 login:
     path: /others/login
 
