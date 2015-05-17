@@ -89,6 +89,9 @@ career-engineering-product:
 career-operations-and-customer-care:
     path: /cms/career-operations-and-customer-care
 
+career-data-risk:
+    path: /cms/career-data-risk
+
 press:
     path: /cms/press
 
