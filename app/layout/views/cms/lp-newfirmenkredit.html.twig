@@ -44,11 +44,11 @@
         }
     }
 
-    .list-inline li {
+    .calculate-rate .list-inline li {
         color: #5c6266;
     }
 
-    .list-inline li:before {
+    .calculate-rate .list-inline li:before {
         color: #FF8C19;
     }
 
@@ -636,7 +636,7 @@
 {% block js %}
     {{ parent() }}
 
-
+<script src="/bundles/intlendweblayout/js/sliderCalculator.js"></script>
 <script type="text/javascript">
     $(function() {
         $('.carousel').carousel({
