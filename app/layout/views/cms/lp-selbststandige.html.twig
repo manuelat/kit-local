@@ -1,0 +1,872 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+
+<style>
+
+    /******BAR*******/
+
+    .seal {
+        width:60%;
+    }
+
+    .seal:hover {
+        width:100%;
+    }
+
+    .tuv {
+        width:70%;
+    }
+
+    .tuv:hover {
+        width:100%;
+    }
+
+    .bar {
+        margin-top: 20px;
+    }
+
+    header .hotline .hotline-container{
+        z-index: -1;
+    }
+
+    ul.dropdown.unstyled{
+        z-index:-1;
+    }
+
+    /*****CORRECTION******/
+
+    .container-wrapper.odd {
+        background-color:#f2f2f2;
+    }
+
+
+    /*MENU HIDE*/
+    .menu-hide {
+        position: absolute;
+        background-color: #EDF0F2;
+        height: 69px;
+        width: 170px;
+        top: -70px;
+        right: 110px;
+        z-index: 1001;
+    }
+
+    /* tablet and desktop */
+    @media (min-width: 768px) {
+        .investor .add-space {
+            margin-top: 18px;
+        }
+
+        .testimonial-title {
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        .testimonial-title span {
+            display: block;
+        }
+
+        blockquote p {
+            font-size: 16px;
+        }
+    }
+
+    /* desktop */
+    @media (min-width: 992px) {
+        .sales-team {
+            margin-top: -40px;
+        }
+    }
+
+    .risk-team h3 {
+        margin-top: 20px;
+        color:#3f9cd9;
+    }
+
+    .risk-team img {
+        width: 100%;
+        display: block;
+    }
+
+    .ekomi {
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 0;
+        margin-top: 25px;
+    }
+
+    .carousel .carousel-indicators li {
+        width: 14px;
+        height: 14px;
+    }
+
+    .carousel-inner {
+        min-height: 130px;
+    }
+
+    /* vertical align icons */
+    .concept-row {
+        height: 96px;
+    }
+
+    .concept-size {
+        height: 100%;
+    }
+
+    .concept-size p {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        font-size: 22px;
+        font-weight: 100;
+    }
+
+    @media (min-width: 320px) and (max-width: 767px) {
+        .concept-row img {
+            width: 40px;
+        }
+    }
+
+    /* end vertical align icons */
+
+    .right-side img {
+        width: 80px;
+        margin: 30px 0;
+    }
+
+    /* icons on tablet and mobile */
+    @media (min-width: 768px) {
+        .bkg-step-1 {
+            background: url("/bundles/intlenddeweblayout/frontend/images/cms/selbs//between-steps1.png") 0 48px no-repeat;
+        }
+
+        .bkg-step-2 {
+            background: url("/bundles/intlenddeweblayout/frontend/images/cms/selbs/between-steps2.png") 0 0 no-repeat;
+        }
+
+        .bkg-step-3 {
+            background: url("/bundles/intlenddeweblayout/frontend/images/cms/selbs/between-steps3.png") 0 0 no-repeat;
+        }
+    }
+
+    h3.info-step {
+        border-bottom: 2px solid #189bf2;
+        padding-bottom: 10px;
+    }
+
+    .wulf {
+        background:url('http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/selbs/bundles/test3.jpg') 20% bottom no-repeat;
+        background-color:#6c5c5d;
+    }
+
+    /* mobile */
+    @media (max-width: 767px) {
+        .wulf {
+            background-position: -75% bottom;
+        }
+    }
+
+    /* tablet */
+    @media (min-width: 768px) and (max-width: 991px) {
+        .wulf {
+            background-position: 55% bottom;
+        }
+    }
+
+    .axel {
+        background:url('http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/selbs/bundles/test2.jpg') 50% top no-repeat;
+        background-color:#fff;
+    }
+
+    /* mobile */
+    @media (max-width: 767px) {
+        .axel {
+            background-position: 37% 0;
+        }
+    }
+
+    .goetz {
+        background: url('http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/selbs/bundles/test1.jpg') 50% 250% no-repeat;
+        height: 456px;
+        background-color: #fff;
+    }
+
+    /* mobile */
+    @media (max-width: 767px) {
+        .goetz {
+            background-position: 70% 250%;
+        }
+    }
+
+    /* tablet */
+    @media (min-width: 768px) and (max-width: 991px) {
+        .goetz {
+            height: 466px;
+        }
+    }
+
+    .calculate-rate {
+        background: url("/bundles/intlenddeweblayout/frontend/images/cms/selbs/bkg-calculator.png") no-repeat #05395b;
+        color: #fff;
+    }
+
+    /*  background height on mobile */
+    @media (max-width: 767px) {
+        .calculate-rate {
+            height: 680px;
+            background-size: cover;
+            background-position: 29% 0;
+        }
+    }
+
+    /* background height on tablet  */
+    @media (min-width: 768px) and (max-width: 991px) {
+        .calculate-rate {
+            height: 420px;
+            background-size: cover;
+            background-position: 6% 0;
+        }
+    }
+
+    /* background height on desktop */
+    @media (min-width: 992px) {
+        .calculate-rate {
+            background-position: 25% 0;
+            height: 420px;
+            background-size: cover;
+        }
+    }
+
+    .borrower .ui-slider {
+        background: #FFF;
+    }
+
+    .ui-slider-horizontal {
+        height: 0.4em;
+    }
+
+    /* center button on tablet */
+    @media (min-width: 768px) and (max-width: 991px) {
+        .negative-offset {
+            text-align: center;
+            margin-top: 30px;
+        }
+    }
+
+    /* desktop*/
+    @media (min-width: 992px) {
+        .negative-offset {
+            margin-left: -100px;
+        }
+    }
+
+    .slide-up {
+        margin-top: -10px;
+    }
+
+    /* desktop */
+    @media (min-width: 992px){
+        .slide-up {
+            font-size: 18px;
+        }
+    }
+
+    a[href='#kunden']:hover {
+        color: #fff;
+    }
+
+    /***Arrow***/
+
+    .arrow {
+        position: relative;
+        z-index: 100;
+    }
+
+    /* tablet */
+    @media (min-width: 768px) and (max-width: 991px) {
+        .arrow {
+            top: 42px;
+        }
+    }
+
+    /*  desktop */
+    @media (min-width: 992px) {
+        .arrow {
+            top: 64px;
+        }
+    }
+
+</style>
+
+<div class="cms-page investor">
+
+    <div class="container-wrapper calculate-rate">
+        <div class="container spacing">
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <h1 class="text-white"><strong>Kredite für Selbstständige – Einfach & online</strong></h1>
+                    <p class="white slide-up">Erhöhen Sie Ihren finanziellen Spielraum mit <strong>Deutschlands schnellstem Firmenkredit</strong></p>
+                </div>
+            </div>
+
+            <div class="row page-head">
+                <div class="col-xs-12 col-sm-3 col-sm-offset-1">
+                    <label for="amount"><strong>Ihr Kreditbetrag</strong></label><br>
+                    <input type="text" id="amount" value="" max="250.000" placeholder="Max. 250.000"/><br>
+                    <div id="slider-range-min"></div>
+                </div>
+                <div class="desp-30 hidden-sm hidden-md hidden-lg"></div>
+
+                <div class="col-xs-12 col-sm-4 col-md-2">
+                    <label for="loan-duration"><strong>Ihre Kreditlaufzeit</strong></label><br>
+                    <input type="text" id="loan-duration" value="" max="250.000" placeholder="Kreditlauftzeit"/><br>
+                    <div id="slider-loan-duration"></div>
+                </div>
+                <div class="desp-30 hidden-sm hidden-md hidden-lg"></div>
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <label for="monthlyRate"><strong>Monatliche Zahlung</strong></label><br>
+                    <span id="monthlyRate">200.000 €</span><br>
+                    <div class="desp-10 hidden-sm hidden-md hidden-lg"></div>
+                    <label for="monthlyRate"><strong>Gesamtbetrag</strong></label><br>
+                    <span id="monthlyRate">2.456 €</span>
+                </div>
+                <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+                <div class="col-xs-12 col-md-4 cta text-center negative-offset">
+                    <a id="loan-submit-1" class="btn btn-lg btn-brrwr" type="submit" href="">Jetzt Kredit beantragen</a>
+                    <div class="desp-10"></div>
+                    <p>TÜV geprüfte Datensicherheit</p>
+                </div>
+                <div class="desp-20 hidden-sm"></div>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <a href="#kunden" class="text-white">Mehr erfahren<br><img alt="Mehr erfahren" src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/selbs/bundles/arrow_down.png"></a>
+                </div>
+            </div>
+        </div><!-- end .container -->
+    </div><!-- end .calculate-rate -->
+
+    <div class="container-wrapper bar">
+        <div class="container">
+            <div class="row hidden-xs">
+                <div class="col-xs-12 col-sm-4 col-sm-offset-1">
+                    <div class="row">
+                        <img class="pull-left hidden-xs" src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/selbs/bundles/symbols/ekomi.png" alt="eKomi">
+                        <div class="col-xs-8">
+                            <p class="ekomi">94 %</p>
+                            <small>Kundenzufriedenheit</small>
+                        </div>
+                    </div>
+                </div>
+                <div style="border-left:1px solid #dadada; height:78px;" class="col-xs-1"></div>
+                <div class="col-xs-2 text-center"><img alt="" src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/selbs/bundles/symbols/sz-seal.png" class="seal"></div>
+                <div class="col-xs-2 text-center"><img alt="" src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/selbs/bundles/symbols/mittelstand.png" class="seal"></div>
+                <div style="line-height:80px;" class="col-xs-2 text-center"><img alt="" src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/selbs/bundles/symbols/tuv.png" class="tuv"></div>
+            </div>
+        </div>
+        <hr class="hidden-xs">
+    </div><!-- end .container-wrapper -->
+
+    <a id="kunden"></a>
+
+    <div class="container-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="faux-h1 text-center">Selbstständigenkredite bei Zencap - <br>das sagen unsere Kunden</h2>
+                </div>
+            </div>
+        </div>
+    </div><!-- end .container-wrapper -->
+
+    <div class="container-wrapper goetz blockquote">
+        <div class="container spacing">
+            <div class="row">
+                <div class="col-xs-12 col-sm-8 col-sm-offset-4">
+                    <div class="testimonial-title">Unternehmer Goetz Kanis hat seinen Vertrieb <span>für Sicherheitssysteme erweitert</span></div>
+                    <div class="desp-5"></div>
+                    <p>Finanzierung von 50.000 € von 102 Anlegern, Mai 2014</p>
+                    <blockquote>
+                        <p>Dadurch, dass ich meinen Firmenkredit von Privatleuten erhalten habe, die in meine Vision, mein Unternehmen glauben und mir demensprechend Vertrauen entgegenbringen, ist meine Motivation durchzustarten nochmals gestiegen.
+                            <span class="hidden-xs">Die Abwicklung bei Zencap ist sehr leicht, unbürokratisch und für jedermann verständlich. Ich würde Zencap in jedem Fall immer einer Bank vorziehen.</span>
+                        </p>
+                    </blockquote>
+                    <a href="/register/lender/" class="btn btn-medium btn" style="margin-right:20px;">Zum Unternehmen</a>
+                    <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+                    <a href="/register/lender/" class="btn btn-medium btn-nvstr">Jetzt erfolgreich durchstarten</a>
+                </div>
+            </div>
+            <div class="text-center hidden-xs">
+                <a href="#test2"><img alt="Nächste" src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/selbs/bundles/arrow.png" class="arrow"></a>
+            </div>
+        </div>
+    </div><!-- end .container-wrapper -->
+
+    <a id="test2"></a>
+
+    <div class="container-wrapper axel blockquote">
+        <div class="container spacing">
+            <div class="row">
+                <div class="col-xs-12 col-sm-7 col-md-6">
+                    <div class="testimonial-title">Geschäftsführer Axel Jünke hat seinen<span>Quadrocopter weiterentwickelt</span></div>
+                    <div class="desp-5"></div>
+                    <p>Finanzierung von 50.000 € von 63 Anlegern, März 2014</p>
+                    <blockquote>
+                        <p>Mit der Finanzierung bei Zencap schaffen wir uns ein zweites Standbein. Außerdem schätzen wir den unkomplizierten und sehr professionellen Prozess bei Zencap</p>
+                    </blockquote>
+                    <a href="/register/lender/" class="btn btn-medium btn" style="margin-right:20px;">Zum Unternehmen</a>
+                    <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+                    <a href="/register/lender/" class="btn btn-medium btn-nvstr">Jetzt erfolgreich durchstarten</a>
+                </div>
+            </div>
+            <div class="text-center hidden-xs">
+                <a href="#test3"><img alt="Nächste" src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/selbs/bundles/arrow.png" class="arrow"></a>
+            </div>
+        </div>
+    </div><!-- end .container-wrapper -->
+
+    <a id="test3"></a>
+
+    <div class="container-wrapper wulf blockquote">
+        <div class="container spacing">
+            <div class="row">
+                <div class="col-xs-12 col-sm-8 col-sm-offset-4 text-white">
+                    <div class="testimonial-title">Geschäftsführer Wulf Schlichte hat eine neue<span> Espressobar eröffnet</span></div>
+                    <div class="desp-5"></div>
+                    <p>Finanzierung von 50.000 € von 65 Anlegern, April 2014</p>
+                    <blockquote>
+                        <p>Ich habe nicht das Gefühl, dass Banken nennenswert daran interessiert sind den Mittelstand zu fördern. Und es erfüllt<br>einen daher natürlich mit einem gewissen Stolz zu sehen,<br>dass es Anleger gibt, die an das eigene Geschäftsmodell glauben<br>und einem ihr Geld anvertrauen.</p>
+                    </blockquote>
+                    <a class="btn btn-medium btn" href="/register/lender/" style="margin-right:20px;">Zum Unternehmen</a>
+                    <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+                    <a class="btn btn-medium btn-nvstr" href="/register/lender/">Jetzt erfolgreich durchstarten</a>
+                </div>
+            </div>
+            <div class="text-center hidden-xs">
+                <a href="#Zencap"><img class="arrow" src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/selbs/bundles/arrow.png" alt="Nächste"></a>
+            </div>
+        </div>
+    </div><!-- end .container-wrapper -->
+
+    <!-- ekomi 94% -->
+    <div class="container-wrapper">
+        <div class="container spacing">
+            <div class="row">
+                <div class="hidden-xs col-sm-2 col-sm-offset-1"><img src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/kreditmarketplatz.png"
+                                                                     alt=""></div>
+                <div class="col-xs-12 col-sm-8">
+                    <p><strong>Einfach günstige Firmenfinanzierungen</strong></p>
+                    <p>Wir sind ein digitaler Marktplatz, der Unternehmen mit Finanzierungsbedarf mit Privatpersonen auf der Suche nach einer soliden Anlage zusammenbringt.</p>
+                    <p>Damit umgehen wir die Komplexität und Kosten des Bankengeschäfts und Sie können Ihr Unternehmen kostengünstig finanzieren.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 col-sm-offset-2">
+                    <div class="row">
+                        <img alt="eKomi" src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/selbs/bundles/symbols/ekomi.png" class="pull-left">
+                        <div class="col-xs-8">
+                            <p class="ekomi">94 %</p>
+                            <small>Kundenzufriedenheit</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="desp-25"></div>
+                    <a href="/register/lender/" class="btn btn-lg btn-nvstr">Jetzt erfolgreich durchstarten</a>
+                </div>
+
+            </div>
+
+        </div><!-- end .container-->
+    </div><!-- end .container-wrapper -->
+    <!-- end ekomi 94% -->
+
+    <a id="Zencap"></a>
+
+    <!-- carousel calendar -->
+    <div class="container-wrapper odd hidden-xs">
+        <div class="container spacing">
+
+            <h2 class="faux-h1 text-center">Erfolgsmodell Zencap</h2>
+
+            <div id="myCarousel" class="carousel slide col-xs-12" data-interval="10000">
+
+                <!-- Carousel items -->
+
+                <div class="carousel-inner">
+                    <div class="active item">
+                        <div class="row concept-row">
+                            <img alt="Kalendar" src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/selbs/bundles/milestones/calendar.png" class="pull-left col-xs-offset-1">
+                            <div class="col-xs-9 concept-size">
+                                <p>Zencap finanziert mehr als 50 Firmenkredite im Monat</p>
+                            </div>
+                        </div><!-- end .row -->
+                    </div><!-- end .item -->
+
+                    <div class="item">
+                        <div class="row concept-row">
+                            <img alt="Kalendar" src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/selbs/bundles/milestones/calendar.png" class="pull-left col-xs-offset-1">
+                            <div class="col-xs-9 concept-size">
+                                <p>Zencap finanziert mehr als 50 Firmenkredite im Monat</p>
+                            </div>
+                        </div><!-- end .row -->
+                    </div><!-- end .item -->
+
+                    <div class="item">
+                        <div class="row concept-row">
+                            <img alt="Kalendar" src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/selbs/bundles/milestones/calendar.png" class="pull-left col-xs-offset-1">
+                            <div class="col-xs-9 concept-size">
+                                <p>Zencap finanziert mehr als 50 Firmenkredite im Monat</p>
+                            </div>
+                        </div><!-- end .row -->
+                    </div><!-- end .item -->
+
+                </div><!-- end .carousel-inner -->
+
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" id="myBtn" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" id="myBtn2" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" id="myBtn3" data-slide-to="2"></li>
+                </ol>
+
+            </div>
+
+            <div class="row hidden-xs">
+                <div class="col-xs-12 text-center">
+                    <a href="#steps"><img class="arrow" src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/selbs/bundles/arrow.png" alt="Nächste"></a>
+                </div>
+            </div><!-- end .row -->
+
+        </div><!-- end .container--->
+    </div><!-- end .container-wrapper -->
+    <!-- end carousel calendar -->
+
+    <a id="steps"></a>
+
+    <!-- drei schritten -->
+    <div class="container-wrapper">
+        <div class="container spacing">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="row">
+                        <h2 class="faux-h1 text-center col-xs-12 text-danger text-uppercase">In drei Schritten zu Ihrer Finanzierung</h2>
+                        {# image below should be CHANGED #}
+                        <p class="hidden-xs col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1">
+                            <img src="/bundles/intlenddeweblayout/frontend/images/cms/lender/lender-steps.png" alt="" class="img-responsive">
+                        </p>
+                        <div class="col-xs-12 col-sm-4 col-md-3 col-md-offset-1">
+                            <h3 class="text-center">Unverbindlich Anfrage</h3>
+                            <p class="text-center">Erstellen Sie Ihren Kreditantrag.<br/>
+                                Einfach – Schnell - Kostenlos.</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-3 col-md-offset-1">
+                            <h3 class="text-center">Kredit-Entscheidung</h3>
+                            <p class="text-center">Innerhalb von 48 Stunden bekommen Sie eine Antwort.</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-3 col-md-offset-1">
+                            <h3 class="text-center">Auszahlung</h3>
+                            <p class="text-center">Ihr Selbstständigenkredit wird direkt auf Ihr Konto überwiesen. Starten Sie durch!</p>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end .row -->
+            <div class="row cta">
+                <div class="page-head">
+                    <div class="col-xs-12 text-center">
+                        <a id="loan-submit-1" class="btn btn-lg btn-nvstr" type="submit" href="/loan-request/register#baseForm">Jetzt Finanzierung Anfragen</a>
+                    </div>
+                </div>
+            </div><!-- end .row -->
+            <div class="row hidden-xs">
+                <div class="col-xs-12 text-center">
+                    <a href="#steps1"><img alt="Nächste" src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/selbs/bundles/arrow.png" class="arrow"></a>
+                </div>
+            </div><!-- end .row -->
+        </div>
+    </div><!-- end .container-wrapper -->
+    <!-- end drei schritten -->
+
+    <div id="steps1"></div>
+
+    <!-- step 1 -->
+    <div class="container-wrapper odd">
+        <div class="container">
+            <div class="bkg-step-1">
+                <div class="spacing">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-7 col-sm-offset-1">
+                            <h3 class="info-step">Unverbindlich Anfrage</h3>
+                            <div class="desp-20"></div>
+                            <p><strong>Online-Kredit für Selbstständige und Freiberufler anfragen</strong></p>
+                            <p>Sie sind selbstständig oder freiberuflich tätig und benötigen Geld, um weitere Maßnahmen zur Neukundengewinnung oder Auftragsbeschaffung umzusetzen? Sie brauchen mehr liquide Mittel, um z. B. alte Kredite abzulösen, zu überbrücken oder fundamentale Anschaffungen zu finanzieren? Egal, was es ist: Ein Online-Kredit bei Zencap kann Ihnen helfen, den Umsatz zu steigern oder konkurrenzfähiger zu werden. Schildern Sie uns ganz einfach und bequem Ihr Online-Kreditprojekt, ohne lästigen Papierkram. Erfüllen Sie unsere Mindestvoraussetzungen, dann können Sie Ihren Kredit mit nur wenigen Klicks in 15 Minuten kostenlos und unverbindlich beantragen.</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 right-side">
+                            <img class="hidden-xs" alt="" src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/selbs/bundles/icons/01.png">
+                            <ul class="styled">
+                                <li>Kreditantrag in 15 Minuten</li>
+                                <li>Einfach und bequem von zuhause</li>
+                                <li>Kostenlos und unverbindlich</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row hidden-xs">
+                        <div class="col-xs-12 text-center">
+                            <a href="#steps2"><img class="arrow" src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/selbs/bundles/arrow.png" alt="Nächste"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- end .container-wrapper -->
+
+    <div id="steps2"></div>
+
+    <!-- step 2 -->
+    <div class="container-wrapper">
+        <div class="container">
+            <div class="bkg-step-2">
+                <div class="spacing">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-7 col-sm-offset-1">
+                            <h3 class="info-step">Kredit-Entscheidung</h3>
+                            <div class="desp-20"></div>
+                            <p><strong>Schnelle Kreditentscheidung für Selbstständige</strong></p>
+                            <p>Blitzschnell erhalten Sie eine Kreditentscheidung. Unsere erfahrenen Kreditanalysten prüfen Ihren vollständigen Antrag kostenfrei innerhalb von
+                                48 Stunden – ohne versteckte Gebühren, Stellung dinglicher Sicherheiten oder unnötige Berichtspflichten. Mit unserem Finanzierungsangebot erhalten Sie Ihr individuelles Zinsangebot und Ihre persönliche Kreditrate. Sobald Sie dieses annehmen, wird Ihr Projekt automatisch zur Finanzierung auf unserem Kreditmarktplatz freigeschaltet. Mit einem Online-Kredit bei Zencap schaffen
+                                sich Selbstständige und Freiberufler ein zweites Standbein und sind damit unabhängiger von ihrer Hausbank.</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 right-side">
+                            <img class="hidden-xs" alt="" src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/selbs/bundles/icons/02.png">
+                            <ul class="styled">
+                                <li>Gratis Prüfung durch Kreditexperten</li>
+                                <li>Individuelles Zinsangebot</li>
+                                <li>Angebot innerhalb von 48 Stunden</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row hidden-xs">
+                        <div class="col-xs-12 text-center">
+                            <a href="#steps3"><img class="arrow" src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/selbs/bundles/arrow.png" alt="Nächste"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- end .container-wrapper -->
+
+    <div id="steps3"></div>
+
+    <!-- step 3 -->
+    <div class="container-wrapper odd">
+        <div class="container">
+            <div class="bkg-step-3">
+                <div class="spacing">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-7 col-sm-offset-1">
+                            <h3 class="info-step">Auszahlung</h3>
+                            <div class="desp-20"></div>
+                            <p><strong>Kredit für Selbstständige von privaten Anlegern</strong></p>
+                            <p>Blitzschnell erhalten Sie eine Kreditentscheidung. Unsere erfahrenen Kreditanalysten prüfen Ihren vollständigen Antrag kostenfrei innerhalb von
+                                48 Stunden – ohne versteckte Gebühren, Stellung dinglicher Sicherheiten oder unnötige Berichtspflichten. Mit unserem Finanzierungsangebot erhalten Sie Ihr individuelles Zinsangebot und Ihre persönliche Kreditrate. Sobald Sie dieses annehmen, wird Ihr Projekt automatisch zur Finanzierung auf unserem Kreditmarktplatz freigeschaltet. Mit einem Online-Kredit bei Zencap schaffen
+                                sich Selbstständige und Freiberufler ein zweites Standbein und sind damit unabhängiger von ihrer Hausbank.</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 right-side">
+                            <img class="hidden-xs" alt="" src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/selbs/bundles/icons/03.png">
+                            <ul class="styled">
+                                <li>Kredit für Selbstständige von privaten Anlegern</li>
+                                <li>Private Anleger finanzieren Ihr Projekt</li>
+                                <li>Auszahlung Ihres Kredits</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="row hidden-xs">
+                            <div class="col-xs-12 text-center">
+                                <a href="#experts"><img class="arrow" src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/selbs/bundles/arrow.png" alt="Nächste"></a>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- end .container-wrapper -->
+
+    <!-- carousel press -->
+    <div class="container-wrapper press-quotes hidden-xs">
+        <div class="container spacing">
+            <div class="row">
+                <div class="col-xs-12 logos text-center">
+                    <div id="homepageCarousel" class="carousel slide" style="min-height: 215px;">
+                        <!-- Carousel items -->
+                        <div class="carousel-inner row">
+                            <div class="active item col-xs-12">
+                                <a href="https://d1x3gb5zl465n8.cloudfront.net/de/press/articles/2014-07-01_boersen-zeitung_Zencap_brisantes-Finanzierungsneuland.pdf"
+                                   target="_blank"><img src="https://d1x3gb5zl465n8.cloudfront.net/de/press/borsen.png"
+                                                        alt="Börsenzeitung" class="img-responsive"></a>
+                                <blockquote>
+                                    <p>&nbsp;Das Zencap-Prinzip wird sich in Deutschland wie zuvor in Großbritannien und
+                                        den USA etablieren. Mit der Fokussierung auf kleine Mittelständler greift Zencap
+                                        das Geschäft an, in dem traditionelle Banken hauptsächlich ihr Geld
+                                        verdienen.</p>
+
+                                    <p class="text-center"><a href="/press" title="" target="_blank"><em>Zencap in der
+                                                Presse</em></a></p>
+                                </blockquote>
+                            </div>
+
+                            <div class="item col-xs-12">
+                                <a href="https://d1x3gb5zl465n8.cloudfront.net/de/press/articles/140410_sueddeutsche-zeitung_das-problem-mit-dem-geld.pdf"
+                                   target="_blank"><img
+                                        src="https://d1x3gb5zl465n8.cloudfront.net/de/press/frankfurterallgemeine.png"
+                                        alt="Frankfurter Allgemeine" class="img-responsive"></a>
+                                <blockquote>
+                                    <p>&nbsp;Experten halten Online-Kredite für Mittelständler für eine realistische
+                                        Alternative zur klassischen Bankenfinanzierung (…). Vor allem für kleinere
+                                        Unternehmen ist das Modell von Zencap interessant.</p>
+
+                                    <p class="text-center"><a href="/press" title="" target="_blank"><em>Zencap in der
+                                                Presse</em></a></p>
+                                </blockquote>
+                            </div>
+
+                            <div class="item col-xs-12">
+                                <a href="http://www.handelsblatt.com/unternehmen/leasing-spezial/neue-samwer-plattform-jungunternehmer-finanzieren-den-mittelstand/9931626.html"
+                                   target="_blank"><img
+                                        src="https://d1uuy7l9kfwygp.cloudfront.net/bundles/intlendweblayout/frontend/images/cms/press/handelsblatt.png"
+                                        alt="Handeslblatt" class="img-responsive"></a>
+                                <blockquote>
+                                    <p>Die Internetplattform Zencap vermittelt Darlehen an Firmen – nach gründlicher
+                                        Bonitätsprüfung und zum Missfallen vieler Banken (…). Zwar laufen viele Prozesse
+                                        <br>IT-gestützt, aber beim Bilanzcheck vertraut Zencap auf erfahrene Analysten.
+                                    </p>
+
+                                    <p class="text-center"><a href="/press" title="" target="_blank"><em>Zencap in der
+                                                Presse</em></a></p>
+                                </blockquote>
+                            </div>
+
+                            <div class="item col-xs-12">
+
+                                <a href="https://d1x3gb5zl465n8.cloudfront.net/de/press/articles/140410_sueddeutsche-zeitung_das-problem-mit-dem-geld.pdf"
+                                   target="_blank"><img
+                                        src="https://d1x3gb5zl465n8.cloudfront.net/de/press/suddeutsche_zeitung.png"
+                                        alt="Süddeutsche Zeitung"></a>
+                                <blockquote>
+                                    <p>Die Finanzierung der vielen Mittelständler ist zunehmend ein Problem. Durchs
+                                        Raster fallen die Unternehmen, die das Rückgrat des Wirtschaftsstandorts
+                                        Deutschlands sind (...). In diese Lücke springen nun Internetplattformen wie
+                                        Zencap.</p>
+
+                                    <p class="text-center"><a href="/press" title="" target="_blank"><em>Zencap in der
+                                                Presse</em></a></p>
+                                </blockquote>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- end .press-quotes -->
+    <!-- end carousel press -->
+
+    <a id="experts"></a>
+
+    <!-- risk team -->
+    <div class="container-wrapper risk-team odd">
+        <div class="container spacing">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="faux-h1 text-center">Unsere Kreditexperten</h2>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <img src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/thorsten.jpg" alt="">
+                    <h3>Thorsten Nahm</h3>
+                    <p><strong>Leitung Risikoanalyse</strong><br/>
+                        8+ Jahre Erfahrung</p>
+                    <small>Ehemals: Commerzbank</small>
+                </div>
+                <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <img src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/dominic.jpg" alt="">
+                    <h3>Dominic Tolle</h3>
+                    <p><strong>Leitung Risikoanalyse</strong><br/>
+                        8+ Jahre Erfahrung</p>
+                    <small>Ehemals: Haspa</small>
+                </div>
+                <div class="desp-20 hidden-md hidden-lg"></div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <img src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/andreas.jpg" alt="">
+                    <h3>Andreas Ecke</h3>
+                    <p><strong>Senior Kreditanalyst</strong><br/>
+                        15+ Jahre Erfahrung</p>
+                    <small>Ehemals: HSH Nordbank</small>
+                </div>
+                <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <img src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/kerstin.jpg" alt="">
+                    <h3>Kerstin Baker</h3>
+                    <p><strong>Senior Kreditanalyst</strong><br/>
+                        20+ Jahre Erfahrung</p>
+                    <small>Ehemals: Deutsche Bank</small>
+                </div>
+            </div><!-- end .row -->
+
+        </div>
+    </div><!-- end .container-wrapper -->
+    <!-- end risk team -->
+
+    <!-- contact -->
+    <div class="container-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 page-head">
+                    <h2 class="faux-h1 text-center">Nehmen Sie Kontakt mit uns auf</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="hidden-xs col-sm-6">
+                    <img class="sales-team" src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/selbs/bundles/salesteam1.jpg" alt="Sales Team">
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="row">
+                        <a target="_blank" href="https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/unternehmensfinanzierung-mit-zencap.pdf"><img alt="" src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/selbs/bundles/icons/download.png" class="pull-left hidden-xs"></a>
+                        <div class="col-xs-7 col-sm-6 col-md-6 add-space">
+                            <p><strong><a target="_blank" href="https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/unternehmensfinanzierung-mit-zencap.pdf" target="_blank">Download</a> unserer Kreditnehmerbroschüre.</strong></p>
+                        </div>
+                    </div>
+                    <div class="desp-24"></div>
+                    <p><strong>Sprechen Sie mit unseren Experten<br/>
+                            Telefon: <span style="color:#3F9CD9;">030 / 2084900 – 17</span><br/>
+                            Email: <a href="mailto:unternehmen@zencap.de">unternehmen@zencap.de</a></strong></p>
+                </div>
+            </div>
+        </div>
+    </div><!-- end .container-wrapper -->
+    <!-- end contact -->
+
+</div><!-- end .cms-page -->
+
+
+{% endblock %}
+
+{% block js %}
+    {{ parent() }}
+
+    <script src="/bundles/intlendweblayout/js/sliderCalculator.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('.carousel').carousel({
+                interval: 5000
+            })
+        });
+    </script>
+{% endblock %}
