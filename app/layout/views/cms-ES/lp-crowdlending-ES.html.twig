@@ -1,0 +1,188 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+
+    <style>
+
+        /* background height on mobile */
+        @media (min-width: 320px) and (max-width: 767px) {
+            .bkg-crowdlending {
+                background: url('https://d1x3gb5zl465n8.cloudfront.net/es/lp/crowdlending/image_crowd.jpg') 44% 0 no-repeat;
+                background-size: cover;
+                height: 250px;
+            }
+        }
+
+        /* background height on tablet */
+        @media (min-width: 768px) and (max-width: 991px) {
+            .bkg-crowdlending {
+                background: url('https://d1x3gb5zl465n8.cloudfront.net/es/lp/crowdlending/image_crowd.jpg') 47% 0 no-repeat;
+                height: 390px;
+            }
+        }
+
+        /* background height on desktop */
+        @media (min-width: 992px) {
+            .bkg-crowdlending {
+                background: url('https://d1x3gb5zl465n8.cloudfront.net/es/lp/crowdlending/image_crowd.jpg') 59% 50% no-repeat;
+                height: 445px;
+            }
+        }
+
+        .borrower h3, span.borrower {
+            color: #ff8c19;
+        }
+
+        .investor h3, span.investor {
+            color: #189bf2;
+        }
+
+        .container-wrapper .styled li {
+            border: 0;
+            line-height: 1.5em;
+        }
+
+        /* mobile */
+        @media (min-width: 320px) and (max-width: 767px) {
+            .lp-steps img {
+                margin: 0 auto;
+            }
+
+            .lp-steps {
+                text-align: center;
+            }
+        }
+
+    </style>
+
+    <div class="cms-page">
+
+        <div class="container-wrapper">
+            <div class="container">
+                <div class="row page-head">
+                    <div class="col-xs-12">
+                        <h1 class="text-center">Crowdlending, ¿qué es y cómo funciona?</h1>
+                    </div>
+                </div>
+            </div>
+        </div><!-- end .container-wrapper -->
+
+        <div class="container-wrapper bkg-crowdlending"> </div><!-- end .container-wrapper -->
+
+        <div class="container-wrapper">
+            <div class="container spacing">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h2 class="faux-h1 text-center">El Crowdlending – financiación alternativa para PYMEs</h2>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 borrower">
+                        <h3>Para empresas</h3>
+                        <p>Como alternativa para la <a href="https://www.zencap.es/financiacion-empresas-96.html" target="_blank"> financiación para empresas </a>, Zencap apoya nuevos proyectos de desarrollo e innovación a través del <a target="_blank" href="https://www.zencap.es/">crowdlending</a>. Nuestra plataforma web facilita el encuentro entre empresarios e inversores para generar un intercambio y favorecer el emprendimiento. Las empresas solicitan un préstamo a través de nuestra plataforma, y los inversores privados lo financian.</p>
+                        <p>El principio de crowdlending (financiación colectiva, o préstamo P2P) nació en Estados Unidos y es un sistema de financiación alternativa e independiente de las entidades financieras entre particulares y empresas. Se trata de financiar préstamos (=Lending en inglés) por parte de inversores (llamados “Crowd”, un grupo de personas) al prestatario o empresa a través de una plataforma web.</p>
+                        <p>En España se está desarrollando cada vez más este sistema de financiación, ya que muchas PYMEs tienen dificultades para acceder a la financiación a través de los bancos. Sin embargo, los proyectos de las pequeñas y medianas empresas tienen un gran potencial de crecimiento y es aquí donde Zencap da soluciones: en Zencap se pueden solicitar préstamos desde 5.000 hasta 150.000 €.</p>
+                        <div class="row">
+                            <div class="col-xs-12 text-center">
+                                <a class="btn btn-lg btn-brrwr" href="https://www.zencap.es/loan-request/register#baseForm">Inicie su proyecto de Crowdlending ahora</a>
+                                <div class="desp-10"></div>
+                                <p>Si tiene alguna duda consulte nuestro<br>apartado de <a href="https://www.zencap.es/preguntas-frecuentes-empresas-16.html">preguntas frecuentes</a></p>
+                                <p>No dude en contactarnos.<br>Nos puede enviar un email a <a href="mailto:empresas@zencap.es">empresas@zencap.es</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="desp-10 hidden-sm hidden-md hidden-lg"></div>
+                    <div class="col-xs-12 col-sm-6 investor">
+                        <h3>Para inversores</h3>
+                        <p>Con la crisis financiera muchos inversores buscan nuevas formas de inversión. Zencap da acceso a nuevas posibilidades para inversores: En Zencap tienen la posibilidad de construir su propia cartera de  inversiones y adaptarla a sus preferencias de riesgo.</p>
+                        <p>Gracias a la clasificación de riesgo en las clases A+ hasta C- los inversores pueden analizar los proyectos y al mismo tiempo optimizar su cartera, para generar un rendimiento mayor. Con ésta clasificación, los prestamistas pueden estar seguros que todos los proyectos de crédito están examinados cuidadosamente por nuestros expertos, cómo lo haría un banco.  Los inversores registrados en nuestra página web, pueden revisar siempre todas las informaciones relativas a los proyectos de las empresas, como evaluación de riesgo y tipo de interés.</p>
+                        <p>Las inversiones se pueden hacer a partir de 50 € y la diversificación de la cartera de inversiones permite controlar el riesgo.</p>
+                        <div class="row">
+                            <div class="col-xs-12 text-center">
+                                <a class="btn btn-lg btn-nvstr" href="https://www.zencap.es/solicitar-prestamo/indice">Invierta ya en proyectos de Crowdlending</a></p>
+                                <div class="desp-10"></div>
+                                <p>Si tiene alguna duda consulte nuestro<br>apartado de <a href="https://www.zencap.es/preguntas-frecuentes-inversor-17.html">preguntas frecuentes</a></p>
+                                <p>No dude en contactarnos.<br>Nos puede enviar un email a <a href="mailto:investor@zencap.es">investor@zencap.es</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- end .container-wrapper -->
+
+        <div class="container-wrapper odd">
+            <div class="container spacing">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h2 class="faux-h1 text-center">Ventajas del Crowdlending</h2>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 borrower">
+                        <h3>Für Unternehmen</h3>
+                        <ul class="styled">
+                            <li><a target="_blank" href="https://www.zencap.es/prestamos-dinero-empresas-46.html"> préstamos para empresas</a> a partir de 6,99% por año.</li>
+                            <li>plazos comprendidos entre 6 meses y 5 años</li>
+                            <li>nosotros respondemos a su consulta con una oferta sin compromiso en pocos días</li>
+                            <li>sin más costes adicionales que la cuota de servicio</li>
+                            <li>independencia de los bancos</li>
+                            <li>máxima flexibilidad: sin coste adicional por amortiazación parcial o total del préstamo </li>
+                        </ul>
+                        <div class="row">
+                            <div class="col-xs-12 text-center">
+                                <a class="btn btn-lg btn-brrwr" href="https://www.zencap.es/loan-request/register#baseForm">Inicie su proyecto de Crowdlending ahora</a>
+                                <div class="desp-10"></div>
+                                <p>Si tiene alguna duda consulte nuestro<br>apartado de <a href="https://www.zencap.es/preguntas-frecuentes-empresas-16.html">preguntas frecuentes</a></p>
+                                <p>No dude en contactarnos.<br>Nos puede enviar un email a <a href="mailto:empresas@zencap.es">empresas@zencap.es</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+                    <div class="col-xs-12 col-sm-6 investor">
+                        <h3>Para inversores</h3>
+                        <ul class="styled">
+                            <li>rendimiento promedio esperado de 7,86 %</li>
+                            <li>inversiones a partir de 50 €</li>
+                            <li>proyectos con plazos variables: desde 6 meses hasta 5 años</li>
+                            <li>clasificación de riesgo por parte de expertos en grados de solvencia desde A+ hasta C-</li>
+                            <li>reembolso mensual del rendimiento</li>
+                            <li>mimimizar el riesgo a través de la diversificación personalizada de la cartera</li>
+                        </ul>
+                        <div class="row">
+                            <div class="col-xs-12 text-center">
+                                <a class="btn btn-lg btn-nvstr" href="https://www.zencap.es/solicitar-prestamo/indice">Invierta ya en proyectos de Crowdlending</a></p>
+                                <div class="desp-10"></div>
+                                <p>Si tiene alguna duda consulte nuestro<br>apartado de <a href="https://www.zencap.es/preguntas-frecuentes-inversor-17.html">preguntas frecuentes</a></p>
+                                <p>No dude en contactarnos.<br>Nos puede enviar un email a <a href="mailto:investor@zencap.es">investor@zencap.es</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- end .container-wrapper -->
+
+        <div class="container-wrapper lp-steps">
+            <div class="container spacing">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h2 class="faux-h1 text-center">Así funciona Zencap:</h2>
+                    </div>
+                    <div class="col-xs-12 col-sm-4"> <img alt="" class="img-responsive" src="https://d2nmwyt2xx612p.cloudfront.net/bundles/intlendweblayout/frontend/images/cms/home/howitworks-01.png" />
+                        <div> <span class="borrower">Las empresas</span> solicitan un préstamo</div>
+                        <p> <span class="investor">Los inversores</span> se registran  </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-4"> <img alt="" class="img-responsive"  src="https://d2nmwyt2xx612p.cloudfront.net/bundles/intlendweblayout/frontend/images/cms/home/howitworks-02.png" />
+                        <div> <span class="borrower">Las empresas</span> son financiadas</div>
+                        <p><span class="investor">Los inversores</span> crean una cartera de inversiones</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-4"> <img alt="" class="img-responsive" src="https://d2nmwyt2xx612p.cloudfront.net/bundles/intlendweblayout/frontend/images/cms/home/howitworks-03.png"/>
+                        <div><span class="borrower">Las empresas</span> devuelven el dinero </div>
+                        <p><span class="investor">Los inversores</span> ganan y reinvierten</p>
+                    </div>
+                    <div class="col-xs-12">
+                        <h3>Zencap ofrece el modelo financiero más eficaz</h3>
+                        <p>En Zencap reunimos a inversores y empresas de forma directa sin necesidad de un asesor bancario. De esta forma ambas partes salen ganando: las empresas reciben tipos de intereses más bajos y los inversores reciben mejores ingresos. De manera fácil, rápida y transparente. Cómo funcionan los <a href="/como-funciona-18.html"> préstamos a pymes ...</a> </p>
+                    </div>
+                </div>
+            </div>
+        </div><!-- end .container-wrapper -->
+
+    </div><!-- end .cms-page -->
+
+{% endblock %}
