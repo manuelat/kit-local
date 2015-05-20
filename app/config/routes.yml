@@ -185,6 +185,9 @@ lp-crowdfunding-ES:
 lp-selbststandige:
     path: /cms/lp-selbststandige
 
+referral-01:
+    path: /cms/referral-01
+
 login:
     path: /others/login
 
