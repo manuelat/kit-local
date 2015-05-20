@@ -179,6 +179,9 @@ lp-crowdlending-ES:
 lp-crowdfunding:
     path: /cms/lp-crowdfunding
 
+lp-crowdfunding-ES:
+    path: /cms-ES/lp-crowdfunding-ES
+
 lp-selbststandige:
     path: /cms/lp-selbststandige
 
