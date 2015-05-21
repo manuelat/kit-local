@@ -149,6 +149,9 @@ lp-negativzinsen-vermeiden:
 lp-sparbuch:
     path: /cms/lp-sparbuch
 
+lp-sparbuch:
+    path: /cms-ES/lp-sparbuch-ES
+
 lp-sparda:
     path: /cms/lp-sparda
 
