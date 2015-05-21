@@ -191,6 +191,9 @@ referral-01:
 investor-referral-top:
     path: /cms/investor-referral-top
 
+borrower-referral-top:
+    path: /cms/borrower-referral-top
+
 referral-01:
     path: /cms/referral-01
 

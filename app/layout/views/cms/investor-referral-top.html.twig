@@ -3,7 +3,7 @@
 {% block body %}
 
     <style>
-        .investor-referral .main-image {
+        .user-referral .main-image {
             background-image: url('https://d1x3gb5zl465n8.cloudfront.net/de/referral/01.jpg');
             background-color: #f4f6f7;
             background-position: 50% 50%;
@@ -12,7 +12,7 @@
 
         /* desktop */
         @media (min-width: 992px) {
-            .investor-referral .main-image h1 {
+            .user-referral .main-image h1 {
                 font-size: 40px;
                 margin-bottom: 20px;
             }
@@ -20,7 +20,7 @@
 
         /*  background height on mobile */
         @media (max-width: 767px) {
-            .investor-referral .main-image {
+            .user-referral .main-image {
                 height: 235px;
                 background-size: cover;
                 background-position: 9% 0;
@@ -41,7 +41,7 @@
 
         /* background height on tablet and desktop */
         @media (min-width: 768px) {
-            .investor-referral .main-image {
+            .user-referral .main-image {
                 min-height: 336px;
             }
         }
@@ -104,7 +104,7 @@
             background-color: #bacfcf;
         }
 
-        .btn-facebook, .btn-facebook:hover {
+        .btn-facebook, .btn-facebook:hover, .btn-facebook:focus {
             background: #415e9b none repeat scroll 0 0;
             box-shadow: 0 -3px 0 #415e9b inset;
         }
@@ -119,7 +119,7 @@
 
     </style>
 
-    <div class="cms-page investor-referral">
+    <div class="cms-page user-referral">
 
         <div class="container-wrapper main-image">
             <div class="container spacing">
@@ -182,7 +182,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-10">
 
-                        <input type="text" style="height:48px;" id="investor-referral_link" value="
+                        <input type="text" style="height:48px;" id="referral_link" value="
 
 
 
@@ -449,8 +449,8 @@
 
     <script type="text/javascript">
         window.onload = function () {
-            document.getElementById("investor-referral_link").value = document.getElementById("investor-referral_link").value.trim();
-            document.getElementById("investor-referral_link_2").value = document.getElementById("investor-referral_link").value;
+            document.getElementById("referral_link").value = document.getElementById("referral_link").value.trim();
+            document.getElementById("referral_link_2").value = document.getElementById("referral_link").value;
         }
     </script>
 

@@ -1,0 +1,437 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+
+    <style>
+        .user-referral .main-image {
+            background-image: url('https://d1x3gb5zl465n8.cloudfront.net/de/referral/03.jpg');
+            background-color: #f4f6f7;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+        }
+
+        /* desktop */
+        @media (min-width: 992px) {
+            .user-referral .main-image h1 {
+                font-size: 40px;
+                margin-bottom: 20px;
+            }
+        }
+
+        /*  background height on mobile */
+        @media (max-width: 767px) {
+            .user-referral .main-image {
+                height: 235px;
+                background-size: cover;
+                background-position: 9% 0;
+            }
+        }
+
+        /*  center on mobile */
+        @media (max-width: 767px) {
+            .rabatt {
+                margin: 0 auto;
+                display: block;
+            }
+
+            h1 {
+                text-align: center;
+            }
+        }
+
+        /* background height on tablet and desktop */
+        @media (min-width: 768px) {
+            .user-referral .main-image {
+                min-height: 336px;
+            }
+        }
+
+        .grey-bar {
+            background-color: #f2f1ef;
+            height: 50px;
+        }
+
+        .grey-bar small {
+            font-size: 75%
+        }
+
+        .grey-bar img {
+            margin-left: 0;
+        }
+
+        .grey-bar .ekomi {
+            margin-top: -15px;
+        }
+
+        .satisfaction p {
+            font-size: 24px;
+            font-weight: 800;
+            margin-top: 5px;
+            margin-bottom: 0;
+        }
+
+        .satisfaction p, .satisfaction small {
+            margin-left: 20px;
+        }
+
+        /* arrow on tablet and desktop */
+        @media (min-width: 768px) {
+            .down-arrow {
+                position: relative;
+            }
+
+            .down-arrow a {
+                position: absolute;
+                top: -5px;
+            }
+        }
+
+        /* position arrow on tablet */
+        @media (min-width: 768px) and (max-width: 991px) {
+            .down-arrow a {
+                top: 38px;
+            }
+        }
+
+        /* position arrow on desktop */
+        @media (min-width: 992px) {
+            .down-arrow a {
+                top: -5px;
+            }
+        }
+
+        .light-blue {
+            background-color: #bacfcf;
+        }
+
+        .btn-facebook, .btn-facebook:hover, .btn-facebook:focus {
+            background: #415e9b none repeat scroll 0 0;
+            box-shadow: 0 -3px 0 #415e9b inset;
+        }
+
+        .text-borrower {
+            color: #F18C19;
+        }
+
+        .text-investor {
+            color: #189bf2;
+        }
+
+    </style>
+
+<div class="cms-page user-referral">
+
+    <div class="container-wrapper main-image">
+        <div class="container spacing">
+            <div class="row">
+                <div class="col-xs-12 col-sm-7 col-md-7">
+                    <h1>Weitersagen lohnt sich:</h1>
+
+                    <h3 class="hidden-xs">Empfehlen Sie Zencap weiter und sparen Sie bis zu 1.000 € bei
+                        Ihrem nächsten Zencap-Kredit!</h3>
+
+                    <div class="desp-10 hidden-xs hidden-md hidden-lg"></div>
+                    <img class="rabatt" alt="Bis zu 1.000&nbsp;€ Rabatt"
+                         src="https://d1x3gb5zl465n8.cloudfront.net/de/referral/bundles/newdate/bubble-1000euro-rabatt.png">
+                </div>
+                <div class="desp-10 hidden-sm hidden-md hidden-lg"></div>
+                <div class="col-xs-12 text-center down-arrow">
+                    <a href="#link"><img alt="Arrow"
+                                         src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/arrow-white.png"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end .main-image -->
+
+    <div class="container-wrapper grey-bar hidden-xs hidden-sm">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-1">
+                    <img alt="Ekomi" src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/ekomi.png"
+                         class="pull-left ekomi">
+                </div>
+                <div class="col-xs-3 satisfaction">
+                    <p>94 %</p>
+                    <small>Kundenzufriedenheit</small>
+                </div>
+                <div class="col-xs-3 col-xs-offset-1">
+                    <div class="desp-5"></div>
+                    <small>,,Privatleute geben kleinen Firmen Kredite <br/>
+                        ohne eine zwischengeschaltete Bank’’, SZ
+                    </small>
+                </div>
+                <div class="col-xs-2">
+                    <div class="desp-15"></div>
+                    <a href="/press"><img class="pull-right"
+                                          src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/sued.png"></a>
+                </div>
+                <div class="col-xs-2">
+                    <div class="desp-5"></div>
+                    <img class="pull-right"
+                         src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/logos-bar.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div><!-- end .container-wrapper -->
+
+    <div id="link"></div>
+
+    <div class="container-wrapper light-blue">
+        <div class="container spacing">
+            <div class="row">
+                <div class="col-xs-12 col-sm-10">
+
+                    <input type="text" style="height:48px;" id="referral_link" value="
+
+
+
+
+                    {# below is investor referral bottom, copy also the script part #}
+
+
+                    "></div>
+                <!--<div class="col-xs-1"><a style="height:21px;" id="click-to-copy" class="btn btn-large btn-primary btn-nvstr"
+                onclick="window.location='https://www.facebook.com/sharer/sharer.php?u='  + document.getElementById('referral_link').value;return false;" href="#"><img style="margin-top:-5px;" src="https://d1x3gb5zl465n8.cloudfront.net/de/referral/bundles/copy.png" alt=""></a></div>-->
+                <div class="col-xs-4 col-xs-offset-2 col-sm-1 col-sm-offset-0">
+                    <a href="#"
+                       onclick="window.location.href='mailto:?body=' + document.getElementById('referral_link').value;return false;"
+                       class="btn btn-lg btn-nvstr" id="email">
+                        <i class="fa fa-envelope"></i></a>
+                </div>
+                <div class="col-xs-6 col-sm-1">
+                    <a href="#"
+                       onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + document.getElementById('referral_link').value);return false;"
+                       class="btn btn-lg btn-facebook" id="facebook-share">
+                        <i class="fa fa-lg fa-facebook text-white"></i></a>
+                </div>
+            </div>
+        </div>
+    </div><!-- end .container-wrapper -->
+
+    <div class="container-wrapper">
+        <div class="container spacing">
+            <h2 class="faux-h1 text-center">So geht’s - in drei einfachen Schritten</h2>
+
+            <div class="row">
+                <div class="hidden-xs col-sm-1">
+                    <img alt="Schritte 1" src="https://d1x3gb5zl465n8.cloudfront.net/de/referral/bundles/01.png">
+                </div>
+                <div class="col-xs-12 col-sm-11">
+                    <h3>Teilen Sie Ihren individuellen Empfehlungslink per E-Mail, Facebook, Twitter in Ihrem beruflichen und privaten Netzwerk!</h3>
+                    <p>Sie sind selbst Geschäftsführer/in und kennen andere mittelständische Unternehmen, die sich für einen unkomplizierten und schnellen Unternehmenskredit in Höhe von 10.000 € bis 250.000 € bei Zencap interessieren könnten? Empfehlen Sie uns weiter und sichern Sie sich auf bis zu 1.000 € Rabatt Ihren nächsten Zencap-Kredit. </p>
+                    <p>Auch Ihre Weiterempfehlung an neue Zencap-Investoren belohnen wir: Für jeden Anleger, den Sie von Zencap überzeugen, zahlen wir Ihnen 25 € in bar ? wenn Sie mögen, auch für die Investoren Ihres eigenen Kreditprojekts, die Sie werben.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="hidden-xs col-sm-1">
+                    <img alt="Schritte 2" src="https://d1x3gb5zl465n8.cloudfront.net/de/referral/bundles/02.png">
+                </div>
+                <div class="col-xs-12 col-sm-11">
+                    <h3>Einer Ihrer geworbenen Freunde bewirbt sich als Kreditnehmer oder wird Investor bei Zencap.</h3>
+                    <p>Das heißt: Der geworbene Kreditnehmer füllt einen qualifizierten Kreditantrag aus. Ob dieser bei der anschließenden Kreditprüfung angenommen oder abgelehnt wird, spielt keine Rolle. </p>
+                    <p>Wichtig: Die von Ihnen geworbenen neuen Kreditnehmer müssen dazu den Link aus dem o. g. Formular-Feld verwenden und Ihren Kreditantrag bis zum 31. Mai 2015 absenden!</p>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="hidden-xs col-sm-1">
+                    <img alt="Schritte 3" src="https://d1x3gb5zl465n8.cloudfront.net/de/referral/bundles/03.png">
+                </div>
+                <div class="col-xs-12 col-sm-11">
+                    <h3>Sie und der von Ihnen geworbene Freund erhalten die Prämie. Laden Sie so viele Bekannte wie möglich ein und steigern Sie Ihre Prämie!</h3>
+
+                    <p>Laden Sie so viele Freunde wie möglich ein und steigern Sie Ihre Prämie!</p>
+
+                    <p>Für <strong>jeden</strong> geworbenen <span class="text-investor"><strong>Investor</strong></span>
+                        erhalten <span class="text-investor"><strong>Sie und Ihr Freund jeweils 25 €</strong></span> in bar. Anspruch auf diese Prämie besteht, sobald der eingeladene
+                        Investor sein erstes erfolgreiches Gebot bei Zencap platziert.</p>
+
+                    <p>Für <strong>jeden</strong> geworbenen<span class="text-borrower"><strong> Kreditnehmer </strong></span>reduzieren wir die Gebühr Ihres nächsten Kredits bei Zencap um 0,4 Prozentpunkte ? das sind <span class="text-borrower"><strong>bis zu 1.000€</strong></span> bei einem Kredit von 250.000 €. Dieser Rabatt gilt unbeschränkt, sodass Sie keinerlei Zeitdruck haben. Laden Sie mehr als einen neuen Kreditnehmer ein, verdoppeln wir den Rabatt entsprechend. Das Beste: Der von Ihnen geworbene <span style="color:#F18C19;"><strong>Kreditnehmer erhält ebenfalls bis zu 1.000 €</strong></span> für sein erstes Kreditprojekt bei Zencap!</p>
+
+                    <div class="desp-10"></div>
+                    <div class="row">
+                        <div class="col-xs-7 col-sm-9">
+                            <strong>Beispielrechnung:</strong>
+                        </div>
+                        <div class="col-xs-5 col-sm-3 text-right">
+                            <strong>Sie erhalten:</strong>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-7 col-sm-9">
+                            2 eingeladene Freunde werden zu Investoren (und erhalten je 25 €)
+                        </div>
+                        <div class="col-xs-5 col-sm-3 text-right">
+                            <strong>2 x 25 € = 50 €</strong>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-xs-7 col-sm-9">
+                            1 eingeladener Freund füllt den Kreditantrag vollständig aus (und spart bis zu 1.000 €)
+                        </div>
+                        <div class="col-xs-5 col-sm-3 text-right">
+                            <strong>1.000 € Rabatt</strong>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="row">
+                        <div class="col-xs-12 text-right">
+                            <p><strong>Summe: 1.050 €</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- end .container-wrapper -->
+
+    <div class="container-wrapper light-blue">
+        <div class="container spacing">
+            <div class="row">
+                <div class="col-xs-12 col-sm-10"><input type="text" style="height:48px;" id="referral_link_2"></div>
+                <!--<div class="span1"><a style="height:21px;" id="click-to-copy" class="btn btn-large btn-primary btn-nvstr" onclick="window.location='https://www.facebook.com/sharer/sharer.php?u='  + document.getElementById('referral_link').value;return false;" href="#"><img style="margin-top:-5px;" src="https://d1x3gb5zl465n8.cloudfront.net/de/referral/bundles/copy.png" alt=""></a></div>-->
+                <div class="col-xs-4 col-xs-offset-2 col-sm-1 col-sm-offset-0">
+                    <a class="btn btn-lg btn-primary btn-nvstr" onclick="window.location.href='mailto:?body=' + document.getElementById('referral_link').value;return false;" href="#">
+                        <i class="fa fa-envelope"></i>
+                    </a>
+                </div>
+                <div class="col-xs-6 col-sm-1">
+                    <a class="btn btn-lg btn-facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + document.getElementById('referral_link').value);return false;" href="#">
+                        <i class="fa fa-lg fa-facebook text-white"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div><!-- end .container-wrapper -->
+
+    <div class="container-wrapper">
+        <div class="container spacing">
+            <div class="accordion-group">
+                <div class="accordion-heading"><a data-parent="#borrower-1" data-toggle="collapse" href="#borrower-1"
+                                                  class="collapsed"><i>↓</i>Teilnahmebedingungen (zum Öffnen bitte
+                        klicken):</a></div>
+                <div class="accordion-body collapse" id="borrower-1">
+                    <div class="accordion-inner">
+                        <ol>
+                            <li>Dieses Angebot zum Erhalt einer Werbeprämie richtet sich an alle Zencap-Nutzer, die
+                                entweder als Kreditnehmer oder als Investor auf der Plattform www.zencap.de registriert
+                                sind. Wenn Zencap-Nutzer mittels einer individuellen URL, die sie im Zencap-Loginbereich
+                                erhalten, neue Zencap-Nutzer, die noch nicht auf der Plattform registriert sind, werben,
+                                indem sie diese URL weitergeben, dann erhalten sie eine Werbeprämie entsprechend der
+                                nachstehenden Bedingungen. Darüber hinaus erhalten die geworbenen Nutzer ebenfalls eine
+                                Willkommensprämie.
+                            </li>
+                            <li>Um sich für die Auszahlung der Werbeprämie zu qualifizieren, müssen folgende Konditionen
+                                erfüllt sein:
+                            </li>
+                            <ol type="a">
+                                <li>Der geworbene Nutzer (Kreditnehmer/Investor) muss von einem bestehenden
+                                    Zencap-Nutzeraccount (“werbender Nutzer”) zwischen 00:01 Uhr am 23.03.2015 und 23:59
+                                    Uhr am 31.05.2015 (die Aktionslaufzeit) geworben werden.
+                                </li>
+                                <li>Der geworbene Nutzer (Kreditnehmer/Investor) wird bei seiner Registrierung im durch
+                                    eine individuelle URL mit einer Empfehlungskennung des werbenden Nutzers
+                                    identifiziert.Der geworbene Nutzer kann nicht bereits Zencap-Nutzer sein
+                                    (Kreditnehmer/Investor), bevor er geworben wird.
+                                </li>
+                                <li>Ein geworbener Investor muss zwischen 00:01 Uhr des 23.03.2015 und 23:59 Uhr des
+                                    31.05.2015 (die “Aktionslaufzeit”) mindestens 100 EUR bei Zencap in mindestens ein
+                                    Kreditprojekt investieren, das anschließend auch tatsächlich zustande kommt. Der
+                                    Zeitpunkt des Zustandekommens spielt dabei keine Rolle.
+                                </li>
+                                <li>Ein geworbener Kreditnehmer muss zwischen 00:01 Uhr des 23.03.2015 und 23:59 Uhr des
+                                    31.05.2015 (die Aktionslaufzeit) einen qualifizierten Kreditantrag an Zencap
+                                    gesendet haben. Ein qualifizierter Kreditantrag ist ein vollständig ausgefülltes
+                                    Kreditnehmer-Formular, inkl. aller hochzuladenden Dokumente. Zencap behält sich das
+                                    Recht vor, bewusst falsche, unfertige oder doppelte Kreditnehmer-Anträge bei der
+                                    Kalkulation der Auszahlung der Werbeprämie auszuschließen.
+                                </li>
+                            </ol>
+                            <li><strong>Werbeprämie:</strong></li>
+                            <ol type="a">
+                                <li>Investor als werbender Nutzer:</li>
+                                <ol type="i">
+                                    <li>Für jeden erfolgreich geworbenen Investor (siehe Punkt 2d) erhält der werbende
+                                        Zencap-Investor eine Werbeprämie in Höhe von 25 Euro.
+                                    </li>
+                                    <li>Für jeden erfolgreich geworbenen Kreditnehmer (siehe Punkt 2e) erhält der
+                                        werbende Zencap-Investor eine Werbeprämie in Höhe von 100 Euro.
+                                    </li>
+                                </ol>
+                                <li>Kreditnehmer als werbende Nutzer</li>
+                                <ol type="i">
+                                    <li>Für jeden erfolgreich geworbenen Investor (siehe Punkt 2d) erhält der werbende
+                                        Zencap-Kreditnehmer eine Werbeprämie in Höhe von 25 Euro, unabhängig von einem
+                                        nächsten Zencap-Kredit.
+                                    </li>
+                                    <li>Für jeden erfolgreich geworbenen Kreditnehmer (siehe Punkt 2e) erhält der
+                                        werbende Zencap-Kreditnehmer einen Rabatt auf seine Zencap-Gebühr in Höhe von
+                                        0,4 Prozentpunkten auf sein nächsten Kredit bei Zencap.
+                                    </li>
+                                </ol>
+                                <li>Ein werbender Nutzer kann nicht mehr als zwei Werbeprämien für gewonnene Nutzer
+                                    erhalten, die an derselben Adresse wie er/sie gemeldet sind.
+                                </li>
+                                <li>Die Werbeprämie gemäß 3 a) und b) wird spätestens 45 Tage nach Ende der
+                                    Aktionslaufzeit auf das bei Zencap angegebene Konto überwiesen.
+                                </li>
+                                <li>Eine Barauszahlung oder Sachprämie ist nicht möglich.</li>
+                                <li>Für jeden geworbenen Nutzer (Kreditnehmer oder Investor) kann nur eine Prämie
+                                    gezahlt werden. Teilnehmer des Zencap Private Partner Networks (Affiliate-Netzwerk)
+                                    erhalten bei Nutzung der Empfehlungskennung dieses Angebots keine zusätzliche
+                                    Provision.
+                                </li>
+                            </ol>
+                            <li><strong>Willlkommensprämie</strong></li>
+                            <ol type="a">
+                                <li>Jeder erfolgreich geworbene Investor (siehe 2d) erhält eine Willkommensprämie in
+                                    Höhe von 25 Euro.
+                                </li>
+                                <li>Jeder erfolgreich geworbene Kreditnehmer erhält einen Rabatt auf seine Zencap-Gebühr
+                                    in Höhe von 0,4 Prozentpunkten auf seinen nächsten Kredit bei Zencap.
+                                </li>
+                                <li>Jeder gewonnene Nutzer (Kreditnehmer oder Investor) kann nur eine Willkommensprämie
+                                    erhalten.
+                                </li>
+                                <li>Die Willkommensprämie nach 4 a) wird spätestens 45 Tage nach Ende der
+                                    Aktionslaufzeit auf das bei Zencap angegebene Konto überwiesen.
+                                </li>
+                                <li>Eine Barauszahlung oder Sachprämie ist nicht möglich.</li>
+                            </ol>
+                            <li>Der geworbene und der werbende Nutzer müssen unterschiedliche Personen sein. Eine
+                                juristische Person darf nicht von einem ihrer Vertretungsorgane geworben werden.
+                            </li>
+                            <li>Zencap behält sich das Recht vor, das Empfehlungsprogramm zu beenden, zu verlängern
+                                und/oder zu verändern. Alle Nutzer würden in einem solchen Fall per E-Mail darüber
+                                informiert.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- end .container-wrapper -->
+
+</div><!-- end .cms-page -->
+    
+
+{% endblock %}
+
+{% block js %}
+
+    {{ parent() }}
+
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById("referral_link").value = document.getElementById("referral_link").value.trim();
+            document.getElementById("referral_link_2").value = document.getElementById("referral_link").value;
+        }
+    </script>
+
+{% endblock %}
