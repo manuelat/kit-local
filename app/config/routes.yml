@@ -188,6 +188,12 @@ lp-selbststandige:
 referral-01:
     path: /cms/referral-01
 
+investor-referral-top:
+    path: /cms/investor-referral-top
+
+referral-01:
+    path: /cms/referral-01
+
 login:
     path: /others/login
 
