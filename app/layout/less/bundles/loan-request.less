@@ -202,3 +202,17 @@
         font-size: 62px;
     }
 }
+
+#dropzone.hover {
+    border-color: @inputFocusColor;
+    box-shadow: inset 0 0 30px rgba(0,0,0,.1);
+
+    i {
+        color: @brandColor2CTA;
+    }
+}
+
+#dropzone.fade {
+    .transition(~"all 0.3s ease-out");
+    opacity: 1;
+}
