@@ -13,7 +13,14 @@
 
     <div id="filter-section">
         <div class="row">
+
             {% include '_partials/lender/filter_loans_form.html.twig' %}
+
+            <div class="col-xs-12">
+                <p class="text-right">
+                    <a id="remove-filter" href="javascript:void(0)"><strong>Filter zurücksetzen <i class="fa fa-times"></i></strong></a>
+                </p>
+            </div>
         </div><!-- end .row -->
     </div><!-- end #filter-section -->
 
