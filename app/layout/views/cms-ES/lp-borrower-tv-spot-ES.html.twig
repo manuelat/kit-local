@@ -1,0 +1,394 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+
+    <style>
+
+        .three-steps img {
+            margin-bottom: 20px;
+        }
+
+        .loan-widget-container {
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .bkg-company {
+            background-image:url('https://d1x3gb5zl465n8.cloudfront.net/de/lp/unternehmen/borrower-bg1.jpg');
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            height: 515px;
+        }
+
+        /* background on mobile */
+        @media (min-width: 320px) and (max-width: 767px) {
+            .bkg-company {
+                height: 455px;
+                background-position: 35% 50%;
+                background: cover;
+            }
+        }
+
+        /* background on tablet */
+        @media (min-width: 768px) and (max-width: 991px) {
+            .bkg-company {
+                background-position: 14% 50%;
+                height: 405px;
+            }
+        }
+
+        .bkg-company p {
+            line-height: 26px;
+        }
+
+        /* desktop */
+        @media (min-width: 992px) {
+            .bkg-company p span {
+                font-size: 22px;
+            }
+        }
+
+        .styled li {
+            border-bottom: 0 none;
+            color: #fff;
+            line-height: 1.5em;
+        }
+
+        .bkg-calculator {
+            background: url("/bundles/intlendweblayout/frontend/images/cms/borrower/borrower-first-steps-bg.jpg") 50% 50% no-repeat;
+        }
+
+        /*  background height on mobile */
+        @media (max-width: 767px) {
+            .bkg-calculator {
+                height: 528px;
+            }
+        }
+
+        .loan-types {
+            background: url("/bundles/intlendweblayout/frontend/images/cms/borrower/borrower-fees-bg.jpg") 50% 0% no-repeat;
+        }
+
+        .loan-types tr td {
+            background: #fff;
+        }
+
+
+    </style>
+
+<div class="cms-page borrower">
+
+    <div class="container-wrapper bkg-company">
+        <div class="container page-head">
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <h1 class="text-white">Su préstamo desde 4,99% por año -
+                        seguro, rápido y sin bancos</h1>
+                    <p class="text-white hidden-xs">Solicite ahora su <a href="https://www.zencap.es#info"> préstamo online  </a> sin tener que pasar por un banco: con Zencap puede solicitar su préstamo<br>según sus propios criterios y necesidades. Rápido y fácil.<br>
+                        <span>Sus ventajas:</span></p>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <ul class="styled check">
+                        <li>Condiciones favorables desde 4,99% por año</li>
+                        <li>Oferta sin compromiso en 48 horas</li>
+                        <li>Servicio al cliente con asesores personales</li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <ul class="styled check">
+                        <li>Desde 5.000 € hasta 150.000 €</li>
+                        <li>Evaluación del préstamo y del riesgo gratuita</li>
+                        <li>Máxima flexibilidad: sin penalización en caso de amortización anticipada</li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 text-center">
+                    <a class="btn btn-lg btn-brrwr" href="/loan-request/register#baseForm">Solicite su préstamo</a>
+                </div>
+            </div><!-- end .row -->
+        </div><!-- end .container -->
+    </div><!-- end .container-wrapper -->
+
+    <div class="container-wrapper bkg-calculator">
+        <div class="container spacing">
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1 class="text-center">La mejor financiación para su empresa</h1>
+                </div>
+            </div>
+
+            <div class="custom-row page-head">
+                <div class="loan-widget-container">
+                    <div class="col-xs-12 col-sm-7 loan-widget">
+                        <h3>Calcule su cuota</h3>
+                        <div class="row">
+                            <div class="col-xs-7 col-md-7">
+                                <label for="amount"><strong>Importe del préstamo</strong></label><br>
+                            </div>
+                            <div class="col-xs-5 col-md-5 text-right">
+                                <span id="amount"><strong>200.000 €</strong></span>
+                            </div>
+                            <div class="col-xs-12 col-md-12">
+                                <div id="slider-range-min"></div>
+                            </div>
+                        </div>
+                        <div class="desp-20"></div>
+                        <div class="row">
+                            <div class="col-xs-7 col-md-7">
+                                <label for="loan-duration"><strong>Plazo del préstamo</strong></label><br>
+                            </div>
+                            <div class="col-xs-5 col-md-5 text-right">
+                                <span id="loan-duration"><strong>2 años</strong></span>
+                            </div>
+                            <div class="col-xs-12 col-md-12">
+                                <div id="slider-loan-duration"></div>
+                            </div>
+                        </div><!-- end .row -->
+                        <div class="desp-25 hidden-sm hidden-md hidden-lg"></div>
+                    </div><!-- end .col-xs-12 col-sm-6 -->
+
+                    <div class="col-xs-12 col-sm-5 rate-box">
+                        <div class="row">
+                            <div class="col-xs-7 col-md-6">
+                                <label for="monthlyRate">Pago mensual</label>
+                            </div>
+                            <div class="col-xs-5 col-md-6 text-right">
+                                <span id="monthlyRate" class="subheading">100.117 €</span>
+                            </div>
+                        </div><!-- end .row -->
+                        <div class="desp-15"></div>
+                        <div class="row">
+                            <div class="col-xs-7 col-md-6">
+                                <label for="totalSum"><strong>Importe total</strong></label>
+                            </div>
+                            <div class="col-xs-5 col-md-6 text-right">
+                                <span id="totalSum" class="subheading"><strong>2006.808 €</strong></span>
+                            </div>
+                        </div><!-- end .row -->
+                        <div class="desp-20"></div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <p><small>Las cantidades aquí mencionadas incluyen los <span id="feeAmount">1.000 €</span> correspondientes a la comisión de servicio de Zencap y se basan en la categoría de riesgo A+</small></p>
+                            </div>
+                        </div>
+                    </div><!-- end .col-xs-12 col-sm-6 -->
+
+                </div><!-- end .loan-widget-container -->
+            </div><!-- end .custom-row -->
+
+            <div class="clearfix"></div>
+
+            <div class="page-head"></div>
+
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+                    <a id="loan-submit-1" class="btn btn-lg btn-brrwr" type="submit" href="/loan-request/register#baseForm">Solicite su préstamo</a>
+                </div>
+            </div>
+
+        </div><!-- end .container -->
+    </div><!-- end .container-wrapper -->
+
+    <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+
+    <div class="container-wrapper odd">
+        <div class="container spacing">
+            <div class="row">
+                <div class="col-xs-12 cancel-padding">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="534" height="300" frameborder="0" allowfullscreen="" src="//player.vimeo.com/video/104310010" class="embed-responsive-item"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- end .container-wrapper -->
+
+    <div class="container-wrapper three-steps">
+        <div class="container spacing">
+            <h2 class="faux-h1 text-center">Su préstamo en tres pasos</h2>
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    <img class="hidden-xs img-responsive" src="https://d2nmwyt2xx612p.cloudfront.net/bundles/intlendweblayout/frontend/images/cms/borrower/3steps-01.png" alt="">
+                    <h3>Envíe su solicitud</h3>
+                    <p>Regístrese de forma gratuita y solicite su préstamo de forma rápida y sin compromiso. Nuestro equipo de analistas de riesgo examinará su solicitud y le enviará una propuesta en un plazo máximo de 48 horas.</p>
+                </div>
+                <div class="col-xs-12 col-sm-4 grey-note">
+                    <img class="hidden-xs img-responsive" src="https://d2nmwyt2xx612p.cloudfront.net/bundles/intlendweblayout/frontend/images/cms/borrower/3steps-02.png" alt="">
+                    <h3>Acepte nuestra propuesta</h3>
+                    <p>Su proyecto será dado de alta en nuestra plataforma una vez acepte las condiciones del préstamo. De esta manera los inversores pueden conocerlo y financiarlo. Desde la plataforma podrá seguir el estado de la financiación en todo momento.</p>
+                </div>
+                <div class="col-xs-12 col-sm-4"> <img class="hidden-xs img-responsive" src="https://d2nmwyt2xx612p.cloudfront.net/bundles/intlendweblayout/frontend/images/cms/borrower/3steps-03.png" alt="">
+                    <h3>Obtenga la financiación</h3>
+                    <p> La <a target="_blank" href="https://www.zencap.es/financiacion-empresas-96.html"> financiación de empresas </a>es nuestro objetivo: una vez se haya financiado el préstamo recibirá el contrato, tras cuya firma se le transferirá el dinero. Fácil y simple.
+                        De esta forma se puede concentrar en lo realmente importante: su empresa. </p>
+                </div>
+            </div>
+        </div>
+    </div><!-- end .container-wrapper -->
+
+    <div class="container-wrapper loan-types">
+        <div class="container spacing">
+
+            <!-- carousel with table fees visible on mobile, small tablets -->
+            <div class="row">
+                <div id="fees-borrower" class="carousel slide col-xs-12 col-sm-8 col-sm-offset-2 col-md-12 col-md-offset-0 ">
+                    <!-- Carousel items -->
+                    <div class="carousel-inner">
+                        <div class="active item">
+
+                            <table class="table">
+                                <caption class="text-center">Nuestro servicio</caption>
+                                <thead>
+                                <tr>
+                                    <th>Servicios</th>
+                                    <th>Costes</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Cuenta Zencap</td>
+                                    <th class="text-borrower-dark">gratis</th>
+                                </tr>
+                                <tr>
+                                    <td>Oferta de préstamo</td>
+                                    <th class="text-borrower-dark">gratis</th>
+                                </tr>
+                                <tr>
+                                    <td>Asesoramiento individual</td>
+                                    <th class="text-borrower-dark">gratis</th>
+                                </tr>
+                                <tr>
+                                    <td>Amortización anticipado</td>
+                                    <th class="text-borrower-dark">gratis</th>
+                                </tr>
+                                <tr>
+                                    <td>Análisis de solvencia</td>
+                                    <th class="text-borrower-dark">gratis</th>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                        <div class="item">
+                            <table class="table">
+                                <caption class="text-center">Faire Zinsen</caption>
+                                <thead>
+                                <tr>
+                                    <th>Clasificación solvencia</th>
+                                    <th>Interés nominal</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>A+</td>
+                                    <th class="text-borrower-dark">4,99% - 7,76%</th>
+                                </tr>
+                                <tr>
+                                    <td>A</td>
+                                    <th class="text-borrower-dark">5,49% - 8,57%</th>
+                                </tr>
+                                <tr>
+                                    <td>B</td>
+                                    <th class="text-borrower-dark">8,31% - 13,68%</th>
+                                </tr>
+                                <tr>
+                                    <td>C</td>
+                                    <th class="text-borrower-dark">10,32% - 15,16%</th>
+                                </tr>
+                                <tr>
+                                    <td>C-</td>
+                                    <th class="text-borrower-dark">12,34% - 21,00%</th>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="item">
+                            <table class="table">
+                                <caption class="text-center">Comisiones transparentes</caption>
+                                <thead>
+                                <tr>
+                                    <th>Plazo del préstamo</th>
+                                    <th>Tasas</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>6 meses</td>
+                                    <th class="text-borrower-dark">1 %</th>
+                                </tr>
+                                <tr>
+                                    <td>12 meses</td>
+                                    <th class="text-borrower-dark">2 %</th>
+                                </tr>
+                                <tr>
+                                    <td>24 meses</td>
+                                    <th class="text-borrower-dark">3 %</th>
+                                </tr>
+                                <tr>
+                                    <td>36 meses</td>
+                                    <th class="text-borrower-dark">4 %</th>
+                                </tr>
+                                <tr>
+                                    <td>48/60 meses</td>
+                                    <th class="text-borrower-dark">5 %</th>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div><!-- end .carousel-inner-->
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#fees-borrower" role="button" data-slide="prev">
+                        <span class="fa fa-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#fees-borrower" role="button" data-slide="next">
+                        <span class="fa fa-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+
+                </div><!-- #fees-borrower -->
+            </div>
+            <!-- end .carousel -->
+
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <a id="loan-submit-2" class="btn btn-lg btn-brrwr" type="submit" href="/loan-request/register#baseForm">Solicite su préstamo</a>
+                </div>
+            </div>
+
+        </div>
+    </div><!-- end .container-wrapper -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <a href="/presse-36.html#pressestimmen">
+                    <img class="hidden-xs img-responsive" alt="" src="https://d1x3gb5zl465n8.cloudfront.net/es/home/press/logos_uptade1.png">
+                </a>
+            </div>
+        </div>
+    </div><!-- end .container -->
+
+</div><!-- end .cms-page -->
+
+{% endblock %}
+
+{% block js %}
+    {{ parent() }}
+    <script src="/bundles/intlendweblayout/js/sliderCalculator.js"></script>
+    <script>
+        $(function(){
+            if ($(document).width() > 991) {
+                $('.carousel-control').addClass('hidden-md');
+                $('.carousel-control').addClass('hidden-lg');
+                $('.carousel-inner').children('.item').each(function(){
+                    $(this).addClass('active');
+                    $(this).addClass('col-md-4');
+                });
+            }
+        });
+    </script>
+{% endblock %}
