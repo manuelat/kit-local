@@ -1,0 +1,700 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+
+    <style>
+
+        .risk-team h3 {
+            margin-top: 20px;
+            color:#3f9cd9;
+        }
+
+        .risk-team img {
+            width: 100%; display: block;
+        }
+
+        .blockquote p {
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        /* tablet and desktop*/
+        @media (min-width: 768px)  {
+            .blockquote .details {
+                margin-left: 50px;
+            }
+        }
+
+        /* mobile */
+        @media (min-width: 320px) and (max-width: 767px) {
+            .blockquote .details {
+                margin-left: 24px;
+            }
+        }
+
+        .calculate-rate {
+            background-image:none;
+            background-color:#F2F1EF;
+        }
+
+        /* mobile */
+        @media (min-width: 320px) and (max-width: 767px) {
+            .calculate-rate {
+                height: auto;
+            }
+        }
+
+        .calculate-rate .list-inline li {
+            color: #5c6266;
+        }
+
+        .calculate-rate .list-inline li:before {
+            color: #FF8C19;
+        }
+
+        .bkg-finance {
+            background: url('https://d1x3gb5zl465n8.cloudfront.net/es/lp/finanzierung/hero2.jpg') 50% 50% no-repeat #e6f5a0;
+            height:335px;
+        }
+
+        /* desktop */
+        @media (min-width: 992px)  {
+            .bkg-finance h1 {
+                font-size: 48px;
+                text-align: right;
+                line-height: 48px;
+            }
+
+
+            .bkg-finance {
+                background-position: 50% 50%;
+            }
+
+            .btn-credit p {
+                text-align: center;
+                padding-left: 24px;
+            }
+        }
+
+        /* tablet */
+        @media (min-width: 768px) and (max-width: 991px) {
+            .bkg-finance {
+                background-position: 40% 50%;
+            }
+        }
+
+        /*  mobile */
+        @media (max-width: 767px) {
+            .bkg-finance {
+                background-position: 41% 50%;
+                height: 260px;
+            }
+
+            .btn-credit p {
+                text-align: center;
+            }
+        }
+
+        .satisfaction p {
+            font-size: 24px;
+            font-weight: 800;
+            margin-top: 5px;
+            margin-bottom: 0;
+        }
+
+        .satisfaction p, .satisfaction small {
+            margin-left: 20px;
+        }
+
+        /* tablet and desktop */
+        @media (min-width: 768px) {
+            .borrower .add-space {
+                margin-top: 25px;
+            }
+        }
+
+        th {
+            background-color: #dadada;
+        }
+
+        td {
+            border-bottom: 1px solid #dadada;
+            padding: 10px;
+        }
+
+        .press-quotes {
+            min-height: 280px;
+        }
+
+        @media (min-width: 768px) and (max-width: 991px) {
+            .press-quotes {
+                min-height: 279px;
+            }
+        }
+
+        .grey-bar {
+            background-color: #f2f1ef;
+            height: 36px;
+            line-height: 2.3;
+            margin-top: 0;
+        }
+
+    </style>
+
+    <div class="cms-page borrower">
+
+    <div class="container-wrapper bkg-finance">
+        <div class="container page-head">
+            <div class="row main-title">
+                <div class="col-xs-12 col-sm-11 col-md-7 col-md-offset-5 text-right">
+                    <h1>Financiación para empresas</h1>
+                    <h3 class="faux-h3">Seguro & rápido con Zencap</h3>
+                    <div class="desp-15 hidden-xs hidden-sm"></div>
+                    <div class="row btn-credit">
+                        <div class="desp-40 visible-xs hidden-sm hidden-md hidden-lg"></div>
+                        <div class="col-xs-12 col-sm-6 col-sm-offset-6 col-md-8 col-md-offset-4">
+                            <a class="btn btn-lg btn-brrwr" href="/loan-request/register#baseForm">Consiga ahora financiación</a>
+                            <div class="text-white hidden-xs">Créditos para empresas desde 5.000 € -150.000 €</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="desp-48 hidden-md hidden-lg"></div>
+                <div class="col-xs-12 text-center down-arrow">
+                    <a href="#three-steps"><img src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/arrow-white.png" alt="Arrow"></a>
+                </div>
+            </div>
+        </div>
+    </div><!-- end .container-wrapper -->
+
+    <div class="container-wrapper grey-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <a href="#press"><p style="line-height:2.2">Zencap en prensa <i class="fa fa-medium fa-arrow-down"></i></p></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="three-steps"></div>
+
+    <div class="container-wrapper">
+        <div class="container spacing">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="row">
+                        <h2 class="faux-h1 text-center col-xs-12 text-danger text-uppercase">Tres pasos para la financiación de su empresa </h2>
+                        {# image below should be CHANGED with orange one and with digits #}
+                        <p class="hidden-xs col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1">
+                            <img src="/bundles/intlenddeweblayout/frontend/images/cms/lender/lender-steps.png" alt="" class="img-responsive">
+                        </p>
+                        <div class="col-xs-12 col-sm-4 col-md-3 col-md-offset-1">
+                            <h3 class="text-center">Solicitud</h3>
+                            <p class="text-center">Solicite su préstamo online.<br/>
+                                Fácil – Rápido - Gratis.</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-3 col-md-offset-1">
+                            <h3 class="text-center">Financiación</h3>
+                            <p class="text-center">En un plazo de 48 horas recibirá su respuesta.</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-3 col-md-offset-1">
+                            <h3 class="text-center">Desembolso</h3>
+                            <p class="text-center">El préstamo para su empresa será directamente transferido en su cuenta</p>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end .row -->
+            <div class="row cta">
+                <div class="page-head">
+                    <div class="col-xs-12 text-center">
+                        <a id="loan-submit-1" class="btn btn-lg btn-brrwr" type="submit" href="/loan-request/register#baseForm">Consiga ahora financiación</a>
+                    </div>
+                </div>
+            </div><!-- end .row -->
+        </div>
+    </div><!-- end .container-wrapper -->
+
+    <div class="container-wrapper calculate-rate">
+        <div class="container spacing">
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1 class="text-center">La mejor financiación para su empresa</h1>
+                </div>
+            </div>
+
+            <div class="custom-row page-head">
+                <div class="loan-widget-container">
+                    <div class="col-xs-12 col-sm-7 loan-widget">
+                        <h3>Calcule su cuota</h3>
+                        <div class="row">
+                            <div class="col-xs-7 col-md-7">
+                                <label for="amount"><strong>Importe del préstamo</strong></label><br>
+                            </div>
+                            <div class="col-xs-5 col-md-5 text-right">
+                                <span id="amount"><strong>200.000 €</strong></span>
+                            </div>
+                            <div class="col-xs-12 col-md-12">
+                                <div id="slider-range-min"></div>
+                            </div>
+                        </div>
+                        <div class="desp-20"></div>
+                        <div class="row">
+                            <div class="col-xs-7 col-md-7">
+                                <label for="loan-duration"><strong>Plazo del préstamo</strong></label><br>
+                            </div>
+                            <div class="col-xs-5 col-md-5 text-right">
+                                <span id="loan-duration"><strong>2 años</strong></span>
+                            </div>
+                            <div class="col-xs-12 col-md-12">
+                                <div id="slider-loan-duration"></div>
+                            </div>
+                        </div><!-- end .row -->
+                        <div class="desp-25 hidden-sm hidden-md hidden-lg"></div>
+                    </div><!-- end .col-xs-12 col-sm-6 -->
+
+                    <div class="col-xs-12 col-sm-5 rate-box">
+                        <div class="row">
+                            <div class="col-xs-7 col-md-6">
+                                <label for="monthlyRate">Pago mensual</label>
+                            </div>
+                            <div class="col-xs-5 col-md-6 text-right">
+                                <span id="monthlyRate" class="subheading">100.117 €</span>
+                            </div>
+                        </div><!-- end .row -->
+                        <div class="desp-15"></div>
+                        <div class="row">
+                            <div class="col-xs-7 col-md-6">
+                                <label for="totalSum"><strong>Importe total</strong></label>
+                            </div>
+                            <div class="col-xs-5 col-md-6 text-right">
+                                <span id="totalSum" class="subheading"><strong>2006.808 €</strong></span>
+                            </div>
+                        </div><!-- end .row -->
+                        <div class="desp-20"></div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <p><small>Las cantidades aquí mencionadas incluyen los <span id="feeAmount">1.000 €</span> correspondientes a la comisión de servicio de Zencap y se basan en la categoría de riesgo A+</small></p>
+                            </div>
+                        </div>
+                    </div><!-- end .col-xs-12 col-sm-6 -->
+
+                </div><!-- end .loan-widget-container -->
+            </div><!-- end .custom-row -->
+
+            <div class="clearfix"></div>
+
+            <div class="page-head"></div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-md-offset-2">
+                    <ul class="styled check large">
+                        <li>Desde el 4,99 %</li>
+                        <li>Sin comisiones por cancelación total o parcial</li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <ul class="styled check large">
+                        <li>No computa en la CIRBE</li>
+                        <li>Sin costes adicionales</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+                    <a id="loan-submit-1" class="btn btn-lg btn-brrwr" type="submit" href="/loan-request/register#baseForm">Solicite su préstamo</a>
+                </div>
+            </div>
+
+        </div><!-- end .container -->
+    </div><!-- end .container-wrapper -->
+
+    <div class="container-wrapper blockquote">
+        <div class="container spacing">
+            <h3 class="faux-h1 text-center">Lo que dicen nuestros clientes</h3>
+            <div class="row">
+                <div class="hidden-xs col-sm-2"><img alt="Manuel López Alvaro"
+                                                     src="https://d1x3gb5zl465n8.cloudfront.net/es/lp/finanzierung/bundles/quote1.jpg" class="img-circle">
+                </div>
+                <div class="col-xs-12 col-sm-10">
+                    <blockquote>
+                        <p>Ich habe nicht das Gefühl, dass Banken nennenswert daran
+                            interessiert sind den Mittelstand zu fördern. Und es erfüllt einen daher natürlich mit
+                            einem gewissen Stolz zu sehen, dass es Anleger gibt, die an das eigene Geschäftsmodell
+                            glauben und einem ihr Geld anvertrauen.</p>
+                    </blockquote>
+                    <p class="details"><strong>Manuel López Àlvaro</strong><br/>
+                        Director de Administración y Finanzas<br/>
+                        COSPA & AGILMIC, S.L.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row cta">
+                <div class="col-xs-12 text-center page-head">
+                    <a id="loan-submit-1" class="btn btn-lg btn-brrwr" type="submit" href="/loan-request/register#baseForm">Consiga financiación ahora</a>
+                    <div class="desp-20"></div>
+                    <div>
+                        <a href="#next"><img alt=""  src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/arrow-grey.png"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- end .container-wrapper -->
+
+    <div id="next"></div>
+
+    <div class="container-wrapper odd">
+        <div class="container spacing">
+            <h2 class="faux-h1 text-center">Cómo definimos la financiación para empresas</h2>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <p>La parte dedicada a la financiación para empresas se observa en el balance en la parte del pasivo, donde se encuentra el patrimonio neto y el pasivo exigible.</p>
+                    <p>Una empresa puede obtener financiación a través de sus socios y de sus beneficios y, por lo tanto no es exigible. Aunque también podemos referirnos a los préstamos y créditos que las empresas deben devolver. Si atendemos a ésta financiación exigible, uno de los factores más importantes son los plazos de devolución, que se dividen dependiendo de su vencimiento en, <b>financiación a corto plazo</b> y <b>financiación a largo plazo</b>. Se considera a corto plazo, aquella financiación que debemos pagar en menos de un año, mientras que a largo plazo es aquella que debemos devolver a partir de un año.</p>
+                    <p>En la financiación a corto plazo incluiríamos los pagos pendientes a proveedores (como regla general serán facturas con vencimientos</p>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <p>a 30, 60 o 90 días), anticipos de clientes, préstamos y créditos a corto plazo con entidades financieras y descuento de efectos comerciales.</p>
+                    <p></p>
+                    <p>Partidas que figuran en el pasivo exigible de la empresa y que actúan como financiación a largo plazo serían los préstamos a largo plazo con entidades financieras, contratos de leasing, subvenciones reembolsables de la administración pública y emisiones de acciones y bonos en los mercados financieros.</p>
+                    <p>Todas estas fuentes de financiación se clasifican, como hemos mencionado más arriba, de corto a largo plazo y la empresa tiene la opción de recurrir a ellas o no.
+                        La ley solo contempla obligatoriedad, en cuanto a fuentes de financiación se refiere, en la formación del patrimonio neto. Así, habrá una:</p>
+                    <ul class="styled check">
+                        <li>Dotación mínima de capital social (dependiendo el importe de la forma jurídica de la sociedad)</li>
+                        <li>Reserva legal mínima a dotar en caso de que la empresa tenga beneficios.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div><!-- end .container-wrapper -->
+
+    <div class="container-wrapper">
+        <div class="container spacing">
+            <h2 class="faux-h1 text-center">Fuentes de financiación de una empresas</h2>
+            <h3>Financiación Interna</h3>
+            <p>La que realiza la empresa a través de sus recursos o capital propio. Normalmente para la empresa no es suficiente la utilización de recursos propios para financiarse, por lo que, en la mayoría de los casos, deben acudir a fuentes de financiación externas.</p>
+            <h3>Financiación Externa</h3>
+            <p>Generalmente los recursos propios no son suficientes, entonces la empresa debe recurrir a fuentes de financiación externa.</p>
+            <p>Las fuentes de financiación externa pueden ser productos a largo plazo, o productos a corto plazo y las empresas pueden obtener financiación por al menos cuatro vías:</p>
+            <ul class="styled check">
+                <li><strong>Financiación vía entidades de crédito</strong>: financiación que ofrecen bancos y cajas a través de productos financieros a corto o a largo plazo.</li>
+                <li><strong>Vía mercados organizados</strong>: productos financieros disponibles en los mercados organizados como por ejemplo los mercados bursátiles.</li>
+                <li><strong> <a href="https://www.zencap.es/blog/financiacion-alternativa-empresas-87.html"> Financiación alternativa </a></strong>: nuevas formas de financiación a través de agentes privados. El más conocido es el crowdfunding, seguido del crowdlending.</li>
+                <li><strong>Entidades y organismos públicos</strong>: financiación institucional como las ayudas y subvenciones que ofrece la administración pública, y que pueden ser a fondo perdido o exigibles. Estas subvenciones pueden ser ayudas al capital (financian inversiones) o a la explotación (financian gastos corrientes de la empresa).</li>
+            </ul>
+
+            <table class="hidden-xs">
+                <thead>
+                <tr>
+                    <th class="col-xs-3" style="background-color:transparent;">&nbsp;</th>
+                    <th class="col-xs-3" valign="middle"><em><strong>Productos a Largo Plazo</strong></em></th>
+                    <th class="col-xs-3" valign="middle"><strong><em>Productos a Corto Plazo</em></strong></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td valign="middle" align="left">
+                        <strong>Financiación Vía Entidades de Crédito</strong></td>
+                    <td>
+                        <ul>
+                            <li>Préstamo bancario</li>
+                            <li>Crédito bancario: Póliza de crédito</li>
+                            <li>Leasing</li>
+                            <li>Renting</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Descuento comercial bancario</li>
+                            <li>Crédito bancario a CP: Línea de crédito</li>
+                            <li>Crédito comercial</li>
+                            <li>Descubierto en CC</li>
+                            <li>Anticipo de crédito</li>
+                            <li>Factoring</li>
+                            <li>Confirming &copy;</li>
+                            <li>Crédito documentario</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Financiación Vía Mercados Organizados</strong></td>
+                    <td colspan="2">
+                        <ul>
+                            <li>Pagarés de empresa (vencimiento a Corto Plazo)</li>
+                            <li>Bonos y obligaciones (vencimiento a Largo Plazo)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Otras Vías de Financiación</strong></td>
+                    <td colspan="2">
+                        <ul>
+                            <li>Préstamo de los accionistas</li>
+                            <li>Capital-riesgo (ECR)</li>
+                            <li>Sociedades de Garantía Recíproca (SGR)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Entidades y Organismos Públicos</strong></td>
+                    <td colspan="2">
+                        <ul>
+                            <li>Ayudas y subvenciones</li>
+                        </ul>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div><!-- end .container-wrapper -->
+
+    <div class="container-wrapper odd">
+        <div class="container spacing">
+            <h2 class="faux-h1 text-center">Fuentes de financiación alternativa para empresas</h2>
+            <p>Además de las fuentes tradicionales de financiación descritas con anterioridad, las fuentes de financiación alternativas están ganando cada vez más terreno a los bancos. Estas vías alternativas son importante para diversificar las métodos de obtención de financiación para las empresas y, conseguir que estas no sean tan dependientes de los bancos. Según datos del BME en 2010, la dependencia de las empresas españolas con los bancos es mayor que en países como Alemania, Francia o EE.UU.</p>
+            <p>Las fuentes de financiación alternativas han ganado cuota de mercado debido sobre todo al desarrollo de las nuevas tecnologías y de internet. El proceso de solicitar un préstamo para una empresa es mucho más rápido y dinámico pues todo se gestiona online. Estas son las fuentes de financiación alternativa más importantes en la actualidad son:</p>
+            <ul class="styled check">
+                <li><a target="_blank" href="https://www.zencap.es/crowdfunding-63.html"><strong>Crowdfunding </strong></a>: lnversión colectiva a través de un gran número de inversores particulares, dependiendo del proyecto, los inversores pueden buscar una participación en éste o hacerlo de forma desinteresada.</li>
+                <li><a target="_blank" href="https://www.zencap.es/crowdlending-59.html"><strong>Crowdlending </strong></a>: en el crowdlending las empresas se ponen en contacto directo con inversores particulares a través de plataformas on-line. Son estas plataformas las que analizan las solicitudes de financiación de las empresas y las clasifican teniendo en cuenta el riesgo asociado de invertir en éstas.</li>
+                <li><strong>Mercado alternativo de Renta Fija (MARF)</strong>: las pymes buscan financiación emitiendo productos de renta fija.</li>
+                <li><strong>Mercado alternativo bursatil (MAB)</strong>: tiene un funcionamiento similar al de la Bolsa y está supervisado por el CNMV, sus características hacen que sean muy difícil la entrada para muchas empresas.</li>
+                <li><strong>Private equity</strong>: un inversor entra en el accionariado de una empresa no cotizada incrementando los fondos de esta.</li>
+                <li><strong>Capital riesgo</strong>: es una figura muy parecida al Private Equity pero, en este caso, el inversor entra en una empresa joven intentando ayudar e influir en el desarrollo y planificación de la misma.</li>
+                <li><strong>Venture capital</strong>: en este caso la empresa objetivo es una Start-up, los inversores suelen ser grandes compañías que ayudan a que el desarrollo de la empresa tenga lugar.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="press"></div>
+
+    <div class="container-wrapper press-quotes hidden-xs">
+        <div class="container spacing">
+            <div class="row">
+                <div class="col-xs-12 logos text-center">
+                    <div id="homepageCarousel" class="carousel slide" style="min-height: 260px;">
+                        <!-- Carousel items -->
+                        <div class="carousel-inner row">
+                            <div class="active item col-xs-12">
+                                <a href="https://d1x3gb5zl465n8.cloudfront.net/es/press/article/15-09-2014-expansion.pdf"
+                                   target="_blank"><img src="https://d1x3gb5zl465n8.cloudfront.net/es/press/expansion.png"
+                                                        alt="Zencap en el Economista" class="img-responsive"></a>
+                                <blockquote>
+                                    <p>Las 470.902 pymes que existen en Andalucía ya pueden acceder a Zencap, una nueva plataforma 'on line' que pone en contacto a pequeñas y medianas empresas con inversores particulares.En un comunicado, la compañía ha explicado que ofrece a las pequeñas y medianas empresas "la posibilidad de conseguir financiación sin la intermediación de una entidad bancaria tradicional", ya que son los particulares los que aportan los créditos.</p>
+
+                                    <p class="text-center"><a href="/presse-36.html" title="" target="_blank"><em>Zencap en la Prensa</em></a></p>
+                                </blockquote>
+                            </div>
+
+                            <div class="item col-xs-12">
+                                <a href="https://d1x3gb5zl465n8.cloudfront.net/es/press/article/13-07-2014-elmundo.pdf"
+                                   target="_blank"><img
+                                        src="https://d1x3gb5zl465n8.cloudfront.net/es/press/elmundo.png"
+                                        alt="Zencap en El Mundo" class="img-responsive"></a>
+                                <blockquote>
+                                    <p>&nbsp; En España existen varias iniciativas que te permiten saber dónde invierten los expertos y apoyar esas mismas ‘start up’. Por su parte, Zencap es un portal de ‘crowdlending’ nacido en Alemania a principios de año, que llegó a España hace tres semanas y ya cuenta con 200 inversores registrados.En Zencap, los préstamos oscilan entre los 5.000 y 150.000 euros, con tasas de interés de entre el 6,99 y el 21%, en función del riesgo de cada proyecto.</p>
+
+                                    <p class="text-center"><a href="/presse-36.html" title="" target="_blank"><em>Zencap en la Prensa</em></a></p>
+                                </blockquote>
+                            </div>
+
+                            <div class="item col-xs-12">
+                                <a href="http://www.eleconomista.es/espana/noticias/5922183/07/14/Zencap-crea-una-nueva-alternativa-de-financiacion-para-las-pymes-andaluzas.html"
+                                   target="_blank"><img
+                                        src="https://d1x3gb5zl465n8.cloudfront.net/es/press/eleconomista.png"
+                                        alt="El economista" class="img-responsive"></a>
+                                <blockquote>
+                                    <p>Las 470.902 pymes que existen en Andalucía ya pueden acceder a Zencap, una nueva plataforma 'on line' que pone en contacto a pequeñas y medianas empresas con inversores particulares.En un comunicado, la compañía ha explicado que ofrece a las pequeñas y medianas empresas "la posibilidad de conseguir financiación sin la intermediación de una entidad bancaria tradicional", ya que son los particulares los que aportan los créditos.</p>
+
+                                    <p class="text-center"><a href="/presse-36.html" title="" target="_blank"><em>Zencap en la Prensa</em></a></p>
+                                </blockquote>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- end .press-quotes -->
+
+    <div class="container-wrapper odd">
+        <div class="container spacing">
+            <h2 class="faux-h1 text-center">Financiación pymes</h2>
+            <p>El acceso a la financiación es un factor muy importante a la hora de crear una pequeña o mediana empresa. También es fundamental para que ésta desarrolle su actividad empresarial y se expanda, como en el caso de un proceso de internacionalización o de desarrollo (vertical u horizontal) de su modelo de negocio.</p>
+            <p>Una pyme se define dependiendo de su número de empleados, su volumen de negocio y su volumen de activo en el balance contable. En la siguiente tabla se puede ver más claro cómo podemos definir una pyme teniendo en cuenta los factores antes mencionados. <a target="_blank" href="http://ec.europa.eu/enterprise/policies/sme/facts-figures-analysis/sme-definition/index_es.htm">En este enlace</a> se puede encontrar más información.</p>
+
+
+            <table class="text-center hidden-xs col-sm-12">
+                <tbody><tr>
+                    <th>
+                        <p class="text-center">
+                            <strong>Categoría de la empresa</strong>
+                        </p>
+                    </th>
+                    <th>
+                        <p class="text-center">
+                            <strong>Empleados</strong>
+                        </p>
+                    </th>
+                    <th>
+                        <p class="text-center">
+                            <strong>Volumen de negocios</strong>
+                        </p>
+                    </th>
+                    <th>
+                        <p class="text-center">
+                            <strong>Balance general</strong>
+                        </p>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Mediana</p>
+                    </td><td>
+                        <p>&lt; 250</p>
+                    </td>
+                    <td>
+                        <p>≤ 50 millones de euros</p>
+                    </td>
+                    <td>
+                        <p>≤ 43 millones de euros</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Pequeña</p>
+                    </td><td>
+                        <p>&lt; 50</p>
+                    </td>
+                    <td>
+                        <p>≤ 10 millones de euros</p>
+                    </td>
+                    <td>
+                        <p>≤ 10 millones de euros</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Microempresa</p>
+                    </td><td>
+                        <p>&lt; 10</p>
+                    </td><td>
+                        <p>≤ 2 millones de euros</p>
+                    </td><td>
+                        <p>≤ 2 millones de euros</p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="container-wrapper spacing">
+        <div class="container">
+            <h2 class="faux-h1 text-center">Financiación de inversores privados a empresas</h2>
+            <p>La <a href="/prestamos-dinero-empresas-46.html#info"> financiación privada para empresas</a> es un fenómeno en constante evolución relacionado íntimamente con el desarrollo de la tecnología y las redes sociales. Los inversores privados pueden de forma fácil seleccionar aquellos proyectos de préstamos que les parezcan más interesantes e <a href="https://www.zencap.es/invertir-online-pymes-77.html">invertir online </a> en estos apoyando así, a empresas y pymes concretas. </p>
+            <p>Una empresa debe intentar diversificar sus fuentes de financiación y no ser totalmente dependiente de las fuentes de financiación tradicionales. La financiación privada presenta algunas ventajas importantes respecto a la tradicional. La flexibilidad, al no ser una estructura tan rígida como un banco, tantos las empresas como los inversores pueden beneficiarse de mejores tasas de interés. La mayor independencia de los bancos y por la tanto la posibilidad de mejorar las negociaciones con los mismos, además las plataformas de crowdlending proporcionan mayor publicidad y posibilidad de darse a conocer a las empresas.</p>
+            <p>Los <a target="_blank" href="https://www.zencap.es/prestamos-dinero-empresas-46.html">préstamos a empresas </a>de inversores particulares son una ventaja para todos los participantes ya que a las empresas les proporcionan la posibilidad de conseguir financiación de forma alternativa, a los inversores particulares les proporciona la posibilidad de diversificar su cartera de inversiones en consonancia con el riesgo que quieran asumir y, a las plataformas de crowdlending la posibilidad de crear un modelo de negocio relacionando con la tecnología, nuevo, dinámico y en constante y rápido crecimiento.</p>
+        </div>
+    </div>
+
+    <div class="container-wrapper risk-team odd">
+        <div class="container spacing">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="faux-h1 text-center">Nuestros expertos</h2>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <img src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/thorsten.jpg" alt="">
+                    <h3>Thorsten Nahm</h3>
+                    <p><strong>Senior Underwriter</strong><br/>
+                        8+ años de experiencia</p>
+                </div>
+                <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+                <div class="col-xs-12 col-sm-4">
+                    <img src="https://d1x3gb5zl465n8.cloudfront.net/es/lp/finanzierung/bundles/raul.jpg" alt="">
+                    <h3>Raúl Andrade</h3>
+                    <p><strong>Senior Underwriter</strong><br/>
+                        5+ años de experiencia</p>
+                </div>
+                <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+                <div class="col-xs-12 col-sm-4">
+                    <img src="https://d1x3gb5zl465n8.cloudfront.net/es/lp/finanzierung/bundles/ismael.jpg" alt="">
+                    <h3>Ismael Talaverano</h3>
+                    <p><strong>Senior Underwriter</strong><br/>
+                        8+ años de experiencia</p>
+                </div>
+            </div><!-- end .row -->
+
+        </div>
+    </div><!-- end .container-wrapper -->
+
+    <div class="container-wrapper">
+        <div class="container spacing">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="faux-h1 text-center">Contáctenos</h2>
+                </div>
+            </div><!-- end .row -->
+
+            <div class="row">
+
+                <div class="col-xs-12 col-sm-5 col-md-4">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <a href="https://d1x3gb5zl465n8.cloudfront.net/es/press/pressekit-20150112.pdf" target="_blank"><img class="pull-left hidden-xs" src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/download.png" alt=""></a>
+                            <div class="col-xs-7 col-sm-6 col-md-6 add-space">
+                                <p><strong><a href="https://d1x3gb5zl465n8.cloudfront.net/es/press/pressekit-20150112.pdf" target="_blank">Descargue</a>  nuestra carpeta de prensa</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+
+                <div class="col-xs-12 col-sm-7 col-md-8">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <img class="pull-left hidden-xs hidden-sm" src="https://d1x3gb5zl465n8.cloudfront.net/es/lp/finanzierung/bundles/sergio-navarro.jpg" alt="">
+                            <div class="col-xs-12 col-sm-12 col-md-7 add-space">
+                                <p><strong>Hable con nuestros expertos<br/>
+                                        Teléfono: <span class="text-investor">911 98 09 61</span><br/>
+                                        Email: <a href="mailto:empresas@zencap.es">empresas@zencap.es</a></strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end .row -->
+
+            <div class="row cta">
+                <div class="col-xs-12 text-center page-head">
+                    <a id="loan-submit-1" class="btn btn-lg btn-brrwr" type="submit" href="/loan-request/register#baseForm">Consiga ahora financiación</a>
+                    <div class="desp-10"></div>
+                    <p>TÜV geprüfte Datensicherheit</p>
+                </div>
+            </div><!-- end .row -->
+        </div>
+    </div><!-- end .container-wrapper -->
+
+    </div>
+
+
+{% endblock %}
+
+
+
+{% block js %}
+    {{ parent() }}
+
+    <script src="/bundles/intlendweblayout/js/sliderCalculator.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('.carousel').carousel({
+                interval: 5000
+            })
+        });
+    </script>
+
+{% endblock %}

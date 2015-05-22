@@ -188,6 +188,9 @@ lp-crowdfunding-ES:
 lp-borrower-tv-spot-ES:
     path: /cms-ES/lp-borrower-tv-spot-ES
 
+lp-financiacionempresas-ES:
+    path: /cms-ES/lp-financiacionempresas-ES
+
 lp-selbststandige:
     path: /cms/lp-selbststandige
 
