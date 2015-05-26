@@ -8,64 +8,66 @@
 
 {% block body %}
 
+
+<div class="container spacing">
+
 {#  cms block lender-upgrade-three-steps #}
 
-    <div class="container spacing">
+    <div class="row">
+        <div class="col-xs-12">
+            <p><strong>Auf dieser Seite haben Sie die Möglichkeit, ein kostenfreies Depotkonto zu eröffnen. Dieses Konto benötigen Sie, wenn Sie mehr als 10.000 EUR investieren möchten oder all Ihre Investitionen bei Zencap über ein gesondertes Konto abwickeln wollen. Ihr kostenfreies Depotkonto wird bei unserer Partnerbank Wirecard Bank AG geführt. In drei einfachen Schritten erklären wir Ihnen, wie Sie Ihr kostenfreies Depotkonto eröffnen.
+                </strong>
+            </p>
+        </div>
+    </div><!-- .row -->
 
-        <div class="row">
-            <div class="col-xs-12">
-                <p><strong>Auf dieser Seite haben Sie die Möglichkeit, ein kostenfreies Depotkonto zu eröffnen. Dieses Konto benötigen Sie, wenn Sie mehr als 10.000 EUR investieren möchten oder all Ihre Investitionen bei Zencap über ein gesondertes Konto abwickeln wollen. Ihr kostenfreies Depotkonto wird bei unserer Partnerbank Wirecard Bank AG geführt. In drei einfachen Schritten erklären wir Ihnen, wie Sie Ihr kostenfreies Depotkonto eröffnen.
-                    </strong>
-                </p>
+    <div class="row">
+
+        <div class="col-xs-12 col-sm-4 icon-blue">
+            <div class="well premium-well">
+                <i class="icon-info icon-get-started"></i>
+                <hr/>
+                <ul class="list-items">
+                    <li>Registrierungsformular ausf&uuml;llen</li>
+                    <li>Antrag zur Kontoeröffnung stellen</li>
+                </ul>
+                <a  href="/lenderbankaccount/create" class="btn btn-block btn-lg btn-nvstr">Kostenloses Konto er&ouml;ffnen</a>
             </div>
-        </div><!-- .row -->
+        </div>
 
-        <div class="row">
+        <div class="desp-20 col-xs-12 hidden-sm hidden-md hidden-lg"></div>
 
-            <div class="col-xs-12 col-sm-4 icon-blue">
-                <div class="well premium-well">
-                    <i class="icon-info icon-get-started"></i>
-                    <hr/>
-                    <ul class="list-items">
-                        <li>Registrierungsformular ausfüllen</li>
-                        <li>Antrag zur Kontoeröffnung stellen</li>
-                    </ul>
-                    <a href="{{ path('premium_lender_form') }}" class="btn btn-block btn-lg btn-nvstr">Kostenloses Konto eröffnen</a>
-                </div>
+        <div class="col-xs-12 col-sm-4">
+            <div class="well premium-well">
+                <i class="icon-info icon-post"></i>
+                <hr/>
+                <ul class="list-items">
+                    <li>Antrag zur Kontoeröffnung herunterladen, prüfen und unterschreiben</li>
+                    <li>Unterschriebenen Eröffnungsantrag per Postident-Verfahren versenden</li>
+                </ul>
             </div>
+        </div>
 
-            <div class="desp-20 col-xs-12 hidden-sm hidden-md hidden-lg"></div>
+        <div class="desp-20 col-xs-12 hidden-sm hidden-md hidden-lg"></div>
 
-            <div class="col-xs-12 col-sm-4">
-                <div class="well premium-well">
-                    <i class="icon-info icon-post"></i>
-                    <hr/>
-                    <ul class="list-items">
-                        <li>Antrag zur Kontoeröffnung herunterladen, prüfen und unterschreiben</li>
-                        <li>Unterschriebenen Eröffnungsantrag per Postident-Verfahren versenden</li>
-                    </ul>
-                </div>
+        <div class="col-xs-12 col-sm-4">
+            <div class="well premium-well">
+                <i class="icon-info icon-currency"></i>
+                <hr/>
+                <ul class="list-items">
+                    <li>Zugangsdaten für Ihr Depotkonto per E-Mail erhalten</li>
+                    <li>Startkapital &uuml;berweisen und direkt loslegen</li>
+                </ul>
             </div>
+        </div>
 
-            <div class="desp-20 col-xs-12 hidden-sm hidden-md hidden-lg"></div>
+        <div class="desp-20"></div>
 
-            <div class="col-xs-12 col-sm-4">
-                <div class="well premium-well">
-                    <i class="icon-info icon-currency"></i>
-                    <hr/>
-                    <ul class="list-items">
-                        <li>Zugangsdaten für Ihr Depotkonto per E-Mail erhalten</li>
-                        <li>Startkapital überweisen und direkt loslegen</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="desp-20"></div>
-
-        </div><!-- .row -->
-
-    </div><!-- .container -->
+    </div><!-- .row -->
 
 {# end cms #}
+
+</div><!-- .container -->
+
 
 {% endblock body %}
