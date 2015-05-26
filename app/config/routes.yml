@@ -68,6 +68,9 @@ ratesFeesInvestor:
 ratesFeesBorrower:
     path: /cms/ratesFeesBorrower
 
+ratesFeesBorrower-ES:
+    path: /cms-ES/ratesFeesBorrower-ES
+
 conditionsBorrower:
     path: /cms/conditionsB
 

@@ -1,0 +1,214 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+
+<style>
+    .loan-types {
+        background: url("/bundles/intlendweblayout/frontend/images/cms/borrower/borrower-fees-bg.jpg") 50% 0% no-repeat;
+    }
+
+    .loan-types tr td {
+        background: #fff;
+    }
+
+
+</style>
+
+<div class="cms-page borrower">
+
+<div class="container-wrapper loan-types">
+    <div class="container spacing">
+        <h2 class="faux-h1 text-center">Créditos rápidos online y fáciles</h2>
+        <!-- carousel with table fees visible on mobile, small tablets -->
+        <div class="row">
+            <div id="fees-borrower" class="carousel slide col-xs-12 col-sm-8 col-sm-offset-2 col-md-12 col-md-offset-0 ">
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+                    <div class="active item">
+
+                        <table class="table">
+                            <caption class="text-center">Nuestro servicio</caption>
+                            <thead>
+                            <tr>
+                                <th>Servicios</th>
+                                <th>Costes</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Cuenta Zencap</td>
+                                <th class="text-borrower-dark">gratis</th>
+                            </tr>
+                            <tr>
+                                <td>Oferta de préstamo</td>
+                                <th class="text-borrower-dark">gratis</th>
+                            </tr>
+                            <tr>
+                                <td>Asesoramiento individual</td>
+                                <th class="text-borrower-dark">gratis</th>
+                            </tr>
+                            <tr>
+                                <td>Amortización anticipado</td>
+                                <th class="text-borrower-dark">gratis</th>
+                            </tr>
+                            <tr>
+                                <td>Análisis de solvencia</td>
+                                <th class="text-borrower-dark">gratis</th>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <div class="item">
+                        <table class="table">
+                            <caption class="text-center">Faire Zinsen</caption>
+                            <thead>
+                            <tr>
+                                <th>Clasificación solvencia</th>
+                                <th>Interés nominal</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>A+</td>
+                                <th class="text-borrower-dark">4,99% - 7,76%</th>
+                            </tr>
+                            <tr>
+                                <td>A</td>
+                                <th class="text-borrower-dark">5,49% - 8,57%</th>
+                            </tr>
+                            <tr>
+                                <td>B</td>
+                                <th class="text-borrower-dark">8,31% - 13,68%</th>
+                            </tr>
+                            <tr>
+                                <td>C</td>
+                                <th class="text-borrower-dark">10,32% - 15,16%</th>
+                            </tr>
+                            <tr>
+                                <td>C-</td>
+                                <th class="text-borrower-dark">12,34% - 21,00%</th>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="item">
+                        <table class="table">
+                            <caption class="text-center">Comisiones transparentes</caption>
+                            <thead>
+                            <tr>
+                                <th>Plazo del préstamo</th>
+                                <th>Tasas</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>6 meses</td>
+                                <th class="text-borrower-dark">1 %</th>
+                            </tr>
+                            <tr>
+                                <td>12 meses</td>
+                                <th class="text-borrower-dark">2 %</th>
+                            </tr>
+                            <tr>
+                                <td>24 meses</td>
+                                <th class="text-borrower-dark">3 %</th>
+                            </tr>
+                            <tr>
+                                <td>36 meses</td>
+                                <th class="text-borrower-dark">4 %</th>
+                            </tr>
+                            <tr>
+                                <td>48/60 meses</td>
+                                <th class="text-borrower-dark">5 %</th>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div><!-- end .carousel-inner-->
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#fees-borrower" role="button" data-slide="prev">
+                    <span class="fa fa-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#fees-borrower" role="button" data-slide="next">
+                    <span class="fa fa-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+
+            </div><!-- #fees-borrower -->
+        </div>
+        <!-- end .carousel -->
+
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <a id="loan-submit-2" class="btn btn-lg btn-brrwr" type="submit" href="/loan-request/register#baseForm">Solicite su préstamo</a>
+            </div>
+        </div>
+
+    </div>
+</div><!-- end .container-wrapper -->
+
+    <div class="container-wrapper">
+        <div class="container spacing">
+            <h2 class="faux-h1 text-center">Tipos de créditos online y requisitos</h2>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <h3>Características del crédito online</h3>
+                    <div class="desp-20"></div>
+                    <ul class="styled check">
+                        <li>Créditos rápidos entre 5.000 € y 150.000 €</li>
+                        <li>Destinado a inversiones en activo fijo, capital circulante o gastos extraordinarios</li>
+                        <li>Créditos rápidos online con un plazo a escoger entre 6 meses y 5 años</li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <h3>Requisitos mínimos</h3>
+                    <div class="desp-20"></div>
+                    <ul class="styled check">
+                        <li>La empresa debe estar inscrita en el Registro Mercantil como S.L. o S.A. desde hace al menos 2 años</li>
+                        <li>La empresa debe haber alcanzado una facturación anual mínima de 100.000€, en los dos últimos ejercicios fiscales</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-wrapper odd">
+        <div class="container spacing">
+            <h2 class="faux-h1 text-center">Solicitar crédito online</h2>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <p>Zencap le ofrece créditos rápidos y fáciles online para su empresa sin necesidad de contactar con un banco. Al ser independientes ofrecemos préstamos online con condiciones muy competitivas. Podrá recibir créditos online desde 5.000€ hasta 150.000€, principalmente para capital circulante, inversions en activos fijos o gastos extraordinarios. El plazo de devolución puede ser de entre 6 meses hasta 5 años.</p>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <p>A la hora de solicitar su crédito online, Zencap clasifica los niveles de solvencia en cinco categorías, desde la A+ hasta C-, basandose en la probabilidad de incumplimiento de devolución del crédito. Los intereses dependen de la solvencia de la empreas así como de su crédito online. En el primer apartado de “Créditos rápidos online y fáciles” podrá ver más información sobre los intereses dependiendo de la solvencia de la empresa ¡Consiga crédito fácil en Zencap!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div><!-- end .cms-page -->
+
+{% endblock %}
+
+{% block js %}
+    {{ parent() }}
+    <script src="/bundles/intlendweblayout/js/sliderCalculator.js"></script>
+    <script>
+        $(function(){
+            if ($(document).width() > 991) {
+                $('.carousel-control').addClass('hidden-md');
+                $('.carousel-control').addClass('hidden-lg');
+                $('.carousel-inner').children('.item').each(function(){
+                    $(this).addClass('active');
+                    $(this).addClass('col-md-4');
+                });
+            }
+        });
+    </script>
+{% endblock %}
