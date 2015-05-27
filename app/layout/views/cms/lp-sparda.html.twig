@@ -294,12 +294,12 @@
         </div>
     </div><!-- end .how-zencap-works -->
 
-    {#  TO REPLACE THE IMAGE  borrower-benefit-1.png WITH THE CORRECT ONE #}
+    <!--   TO REPLACE THE IMAGE  borrower-benefit-1.png WITH THE CORRECT ONE -->
     <div class="container-wrapper lender-invest-steps odd">
         <div class="container spacing">
             <div class="row">
                 <div class="col-xs-12">
-                    <h2 class="faux-h1 text-center">Genossenschaftliche Geldanlage in drei Schritten</h2>
+                    <h2 class="faux-h1 text-center text-danger text-uppercase">Genossenschaftliche Geldanlage in drei Schritten</h2>
                 </div>
             </div>
             <div class="row">
@@ -386,25 +386,28 @@
 {% block js %}
     {{ parent() }}
 
-<script>
-    $(document).ready(function(){
-        //Activate Carousel
-        $("#myCarousel").carousel();
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-        // Click on the button to stop sliding
-        $("#myBtn").click(function(){
-            $("#myCarousel").carousel("pause");
+    <script>
+
+        $(document).ready(function(){
+            //Activate Carousel
+            $("#myCarousel").carousel();
+
+            // Click on the button to stop sliding
+            $("#myBtn").click(function(){
+                $("#myCarousel").carousel("pause");
+            });
+
+            $("#myBtn2").click(function(){
+                $("#myCarousel").carousel("pause");
+            });
+
+            $("#myBtn3").click(function(){
+                $("#myCarousel").carousel("pause");
+            });
+
         });
-
-        $("#myBtn2").click(function(){
-            $("#myCarousel").carousel("pause");
-        });
-
-        $("#myBtn3").click(function(){
-            $("#myCarousel").carousel("pause");
-        });
-
-    });
-</script>
+    </script>
 
 {% endblock %}

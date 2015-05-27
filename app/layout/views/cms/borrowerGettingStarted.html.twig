@@ -20,10 +20,10 @@
                     <div class="col-xs-12 col-sm-7 loan-widget">
                         <div class="row">
                             <div class="col-xs-7 col-md-7">
-                                <label for="amount"><strong>{{ 'Ihr Kreditbetrag' }}</strong></label><br>
+                                <label for="amount"><strong>Ihr Kreditbetrag</strong></label><br>
                             </div>
                             <div class="col-xs-5 col-md-5 text-right">
-                                <span id="amount"><strong>{{ '200.000 €' }}</strong></span>
+                                <span id="amount"><strong>200.000 €</strong></span>
                             </div>
                             <div class="col-xs-12 col-md-12">
                                 <div id="slider-range-min"></div>
@@ -32,10 +32,10 @@
                         <div class="desp-20"></div>
                         <div class="row">
                             <div class="col-xs-7 col-md-7">
-                                <label for="loan-duration"><strong>{{ 'Ihre Kreditlaufzeit' }}</strong></label><br>
+                                <label for="loan-duration"><strong>Ihre Kreditlaufzeit</strong></label><br>
                             </div>
                             <div class="col-xs-5 col-md-5 text-right">
-                                <span id="loan-duration"><strong>{{ '2 Jahre' }}</strong></span>
+                                <span id="loan-duration"><strong>2 Jahre</strong></span>
                             </div>
                             <div class="col-xs-12 col-md-12">
                                 <div id="slider-loan-duration"></div>
@@ -47,19 +47,19 @@
                     <div class="col-xs-12 col-sm-5 rate-box">
                         <div class="row">
                             <div class="col-xs-7 col-md-6">
-                               <label for="monthlyRate">{{ 'Monatliche Zahlung' }}</label>
+                               <label for="monthlyRate">Monatliche Zahlung</label>
                             </div>
                             <div class="col-xs-5 col-md-6 text-right">
-                                <span id="monthlyRate" class="subheading">{{ '100.117 €' }}</span>
+                                <span id="monthlyRate" class="subheading">100.117 €</span>
                             </div>
                         </div><!-- end .row -->
                         <div class="desp-15"></div>
                         <div class="row">
                             <div class="col-xs-7 col-md-6">
-                                <label for="totalSum"><strong>{{ 'Gesamtbetrag' }}</strong></label>
+                                <label for="totalSum"><strong>Gesamtbetrag</strong></label>
                             </div>
                             <div class="col-xs-5 col-md-6 text-right">
-                                <span id="totalSum" class="subheading"><strong>{{ '2006.808 €' }}</strong></span>
+                                <span id="totalSum" class="subheading"><strong>2006.808 €</strong></span>
                             </div>
                         </div><!-- end .row -->
                         <div class="desp-20"></div>
@@ -117,7 +117,7 @@
                 </p>
             </div>
             <div class="row">
-                {#<img class="pull-left" alt="" src="/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-2.png" />#}
+                <!--<img class="pull-left" alt="" src="/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-2.png" />-->
                 <div class="col-xs-12 col-md-4 grey-note">
                     <div class="row helper">
                         <div class="col-xs-12 helper-inner">
@@ -363,31 +363,24 @@
 
 </div><!-- end .cms-page -->
 
-    {#<script src="/bundles/intlendweblayout/js/sliderCalculator.js"></script>#}
-    <!--
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('.carousel').carousel({
-                interval: 5000
-            })
-        });
-    </script>-->
-
 
 {% endblock body %}
 
 {% block js %}
 
     {{ parent() }}
-    
-    <script src="/bundles/intlendweblayout/js/sliderCalculator.js"></script>
+
+    <script src="/resources/js/modules/slider-calculator.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script>
-
         $(function () {
-            $("#offerSlider").slider();
-        });
+            Zencap.sliderCalculator.init();
 
+            /* $('.carousel').carousel({
+             interval: 5000
+             }) */
+        });
     </script>
+
 
 {% endblock js %}

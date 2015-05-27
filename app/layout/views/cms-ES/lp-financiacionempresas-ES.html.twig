@@ -141,7 +141,7 @@
 
     </style>
 
-    <div class="cms-page borrower">
+<div class="cms-page borrower">
 
     <div class="container-wrapper bkg-finance">
         <div class="container page-head">
@@ -688,9 +688,12 @@
 {% block js %}
     {{ parent() }}
 
-    <script src="/bundles/intlendweblayout/js/sliderCalculator.js"></script>
-    <script type="text/javascript">
-        $(function() {
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/resources/js/modules/slider-calculator.js"></script>
+    <script>
+        $(function () {
+            Zencap.sliderCalculator.init();
+
             $('.carousel').carousel({
                 interval: 5000
             })
