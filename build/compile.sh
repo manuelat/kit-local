@@ -19,13 +19,17 @@ DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
 cd $DIR
 
-cp layout/layout.html.twig ../app/layout/views/
+#cp layout/layout.html.twig ../app/layout/views/
 
-if [[ "--no-bower" == $1 || "-n" == $1 ]]; then
+if [[ "--no-bower" != $1 && "-n" != $1 ]]; then
     cp bootstrap/variables.less ../public_html/bower/bootstrap/less/variables.less
 
     cd ../public_html/bower/bootstrap/
 
     $NPM install
     $GRUNT dist
+else
+	echo " "
+	echo "Gulp command did not run.'"
+	echo " "
 fi
