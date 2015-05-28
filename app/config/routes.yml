@@ -167,6 +167,9 @@ options:
 contact:
     path: /cms/contact
 
+contact-ES:
+    path: /cms-ES/contact-ES
+
 imprint:
     path: /cms/imprint
 
