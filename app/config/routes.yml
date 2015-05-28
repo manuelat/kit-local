@@ -92,6 +92,9 @@ partnership:
 howItWorks:
     path: /cms/works
 
+howItWorks-ES:
+    path: /cms-ES/works-ES
+
 jobs:
     path: /cms/jobs
 
