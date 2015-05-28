@@ -71,6 +71,9 @@ borrowerGettingStarted-ES:
 ratesFeesInvestor:
     path: /cms/ratesFeesInvestor
 
+ratesFeesInvestor-ES:
+    path: /cms-ES/ratesFeesInvestor-ES
+
 ratesFeesBorrower:
     path: /cms/ratesFeesBorrower
 
