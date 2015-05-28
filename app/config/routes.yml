@@ -191,6 +191,9 @@ business:
 about_us:
     path: /cms/about
 
+about_us-ES:
+    path: /cms-ES/about-ES
+
 account_options:
     path: /cms/options
 
