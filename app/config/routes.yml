@@ -62,6 +62,9 @@ lenderGettingStarted:
 borrowerGettingStarted:
     path: /cms/borrowerGettingStarted
 
+borrowerGettingStarted-ES:
+    path: /cms-ES/borrowerGettingStarted
+
 ratesFeesInvestor:
     path: /cms/ratesFeesInvestor
 

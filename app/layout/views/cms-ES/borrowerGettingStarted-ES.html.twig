@@ -1,0 +1,195 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+<div class="cms-page borrower borrower-es">
+    <div class="container-wrapper calculate-rate">
+        <div class="container spacing">
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1 class="text-center">Préstamos para empresas</h1>
+                </div>
+            </div>
+
+            <div class="custom-row page-head">
+                <div class="loan-widget-container">
+                    <div class="col-xs-12 col-sm-7 loan-widget">
+                        <h3>Calcular préstamo</h3>
+                        <div class="row">
+                            <div class="col-xs-7 col-md-7">
+                                <label for="amount"><strong>Importe del préstamo</strong></label><br>
+                            </div>
+                            <div class="col-xs-5 col-md-5 text-right">
+                                <span id="amount"><strong>200.000 €</strong></span>
+                            </div>
+                            <div class="col-xs-12 col-md-12">
+                                <div id="slider-range-min"></div>
+                            </div>
+                        </div>
+                        <div class="desp-20"></div>
+                        <div class="row">
+                            <div class="col-xs-7 col-md-7">
+                                <label for="loan-duration"><strong>Plazo del préstamo</strong></label><br>
+                            </div>
+                            <div class="col-xs-5 col-md-5 text-right">
+                                <span id="loan-duration"><strong>2 años</strong></span>
+                            </div>
+                            <div class="col-xs-12 col-md-12">
+                                <div id="slider-loan-duration"></div>
+                            </div>
+                        </div><!-- end .row -->
+                        <div class="desp-25 hidden-sm hidden-md hidden-lg"></div>
+                    </div><!-- end .col-xs-12 col-sm-6 -->
+
+                    <div class="col-xs-12 col-sm-5 rate-box">
+                        <div class="row">
+                            <div class="col-xs-7 col-md-6">
+                                <label for="monthlyRate">Pago mensual</label>
+                            </div>
+                            <div class="col-xs-5 col-md-6 text-right">
+                                <span id="monthlyRate" class="subheading">100.117 €</span>
+                            </div>
+                        </div><!-- end .row -->
+                        <div class="desp-15"></div>
+                        <div class="row">
+                            <div class="col-xs-7 col-md-6">
+                                <label for="totalSum"><strong>Importe total</strong></label>
+                            </div>
+                            <div class="col-xs-5 col-md-6 text-right">
+                                <span id="totalSum" class="subheading"><strong>2006.808 €</strong></span>
+                            </div>
+                        </div><!-- end .row -->
+                        <div class="desp-20"></div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <p><small>Las cantidades aquí mencionadas incluyen los <span id="feeAmount">1.000 €</span> correspondientes a la comisión de servicio de Zencap y se basan en la categoría de riesgo A+</small></p>
+                            </div>
+                        </div>
+                    </div><!-- end .col-xs-12 col-sm-6 -->
+
+                </div><!-- end .loan-widget-container -->
+
+                <div class="loan-terms hidden-xs">
+                    <div class="col-sm-12">
+                        <ul class="list-inline large">
+                            <li><strong>Desde el 4,99 %</strong></li>
+                            <li><strong>Sin comisiones por cancelación total o parcial</strong></li>
+                            <li><strong>No computa en la CIRBE</strong></li>
+                            <li><strong>Sin costes adicionales</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- end .custom-row -->
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+                    <a id="loan-submit-1" class="btn btn-lg btn-brrwr" type="submit" href="/loan-request/register#baseForm">Solicite su préstamo</a>
+                </div>
+            </div>
+
+        </div><!-- end .container -->
+    </div><!-- end .container-wrapper -->
+
+    <div class="container-wrapper three-steps">
+        <div class="container spacing">
+            <h2 class="faux-h1 text-center">Préstamos de dinero para empresas en tres pasos</h2>
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    <img class="hidden-xs img-responsive" src="https://d2nmwyt2xx612p.cloudfront.net/bundles/intlendweblayout/frontend/images/cms/borrower/3steps-01.png" alt="">
+                    <h3>Envíe su solicitud</h3>
+                    <p>Regístrese de forma gratuita y solicite su préstamo de forma rápida y sin compromiso. Nuestro equipo de analistas de riesgo examinará su solicitud y le enviará una propuesta en un plazo máximo de 48 horas.</p>
+                </div>
+                <div class="col-xs-12 col-sm-4 grey-note">
+                    <img class="hidden-xs img-responsive" src="https://d2nmwyt2xx612p.cloudfront.net/bundles/intlendweblayout/frontend/images/cms/borrower/3steps-02.png" alt="">
+                    <h3>Acepte nuestra propuesta</h3>
+                    <p>Los préstamos para empresas funcionan de forma fácil. En primer lugar, su proyecto será dado de alta en nuestra plataforma una vez acepte las condiciones del préstamo. De esta manera, los inversores pueden conocerlo y financiarlo. Desde la plataforma podrá seguir el estado de la financiación de su empresa en todo momento.
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-4"> <img class="hidden-xs img-responsive" src="https://d2nmwyt2xx612p.cloudfront.net/bundles/intlendweblayout/frontend/images/cms/borrower/3steps-03.png" alt="">
+                    <h3>Obtenga la financiación</h3>
+                    <p> La <a target="_blank" href="https://www.zencap.es/financiacion-empresas-96.html"> financiación de empresas </a>es nuestro objetivo: una vez se haya financiado el préstamo recibirá el contrato, tras cuya firma se le transferirá el dinero. Fácil y simple.
+                        De esta forma se puede concentrar en lo realmente importante: su empresa. </p>
+                </div>
+            </div>
+        </div>
+    </div><!-- end .container-wrapper -->
+
+    <div class="container-wrapper odd blockquote">
+        <div class="container spacing">
+            <h3 class="faux-h1 text-center">Lo que dicen nuestros clientes</h3>
+            <div class="row">
+                <div class="hidden-xs col-sm-2"><img alt="Manuel López Alvaro"
+                                                     src="https://d1x3gb5zl465n8.cloudfront.net/es/lp/finanzierung/bundles/quote1.jpg" class="img-circle">
+                </div>
+                <div class="col-xs-12 col-sm-10">
+                    <blockquote>
+                        <p>Ich habe nicht das Gefühl, dass Banken nennenswert daran
+                            interessiert sind den Mittelstand zu fördern. Und es erfüllt einen daher natürlich mit
+                            einem gewissen Stolz zu sehen, dass es Anleger gibt, die an das eigene Geschäftsmodell
+                            glauben und einem ihr Geld anvertrauen.</p>
+                    </blockquote>
+                    <p class="details"><strong>Manuel López Àlvaro</strong><br/>
+                        Director de Administración y Finanzas<br/>
+                        COSPA & AGILMIC, S.L.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row cta">
+                <div class="col-xs-12 text-center page-head">
+                    <a id="loan-submit-1" class="btn btn-lg btn-brrwr" type="submit" href="/loan-request/register#baseForm">Consiga financiación ahora</a>
+                </div>
+            </div>
+        </div>
+    </div><!-- end .container-wrapper -->
+
+    <div class="container-wrapper benefits">
+        <div class="container spacing">
+            <h2 class="faux-h1 text-center">Beneficios de la financiación privada para empresas</h2>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <h3>Condiciones favorables de financiación</h3>
+                    <div class="pull-right hidden-xs col-sm-12 col-md-4"><img alt="" src="https://d2nmwyt2xx612p.cloudfront.net/bundles/intlendweblayout/frontend/images/cms/borrower/benefits-01.png"></div>
+                    <p>La financiación privada para empresas funciona mejor que la tradicional ya que, al no ser un banco no necesitamos mantener una red de sucursales. De este ahorro se benefician directamente nuestros clientes.</p>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <h3>Sea independiente de su banco</h3>
+                    <div class="pull-right hidden-xs col-sm-12 col-md-4"><img src="https://d2nmwyt2xx612p.cloudfront.net/bundles/intlendweblayout/frontend/images/cms/borrower/benefits-02.png">
+                    </div>
+                    <p>Los préstamos para empresas que le ofrece Zencap le facilitan la oportunidad de descubrir nuevos caminos de financiación para su empresa y mejorar su posición de negociación frente a los bancos. Evite largas entrevistas y plazos de espera que le hacen<br> perder su valioso tiempo.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <h3>Máxima flexibilidad </h3>
+                    <div class="pull-right hidden-xs col-sm-12 col-md-4"><img alt="" src="https://d2nmwyt2xx612p.cloudfront.net/bundles/intlendweblayout/frontend/images/cms/borrower/benefits-03.png">
+                    </div>
+                    <p>Reembolse el préstamo de dinero, en su totalidad o parcialmente, sin penalización por amortización anticipada.</p>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <h3>Aproveche nuestra publicidad</h3>
+                    <div class="pull-right hidden-xs col-sm-12 col-md-5"><img src="https://d2nmwyt2xx612p.cloudfront.net/bundles/intlendweblayout/frontend/images/cms/borrower/benefits-04.png">
+                    </div>
+                    <p>Benefíciese de nuestra plataforma como medio para promocionar su empresa. Si lo desea, expondremos su proyecto como ejemplo de éxito del modelo de financiación privada para empresas o <a href="https://www.zencap.es/crowdlending-59.html">Crowdlending. </a>
+                    </p>
+                </div>
+            </div>
+            <div class="row page-head">
+                <div class="col-xs-12 text-center">
+                    <a id="loan-submit-1" class="btn btn-lg btn-brrwr" type="submit" href="/loan-request/register#baseForm">Solicite su préstamo</a>
+                    <div class="desp-10"></div>
+                    <p>Si tiene alguna duda consulte nuestro apartado de <a href="/preguntas-frecuentes-empresas-16.html">preguntas frecuentes</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div><!-- end .cms-page -->
+
+{% endblock %}
