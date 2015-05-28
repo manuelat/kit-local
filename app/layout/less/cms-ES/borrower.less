@@ -1,0 +1,49 @@
+/* ==========================================================================
+   Borrower getting started
+   ========================================================================== */
+
+.borrower-es {
+    .calculate-rate {
+        background: url("/bundles/intlendweblayout/frontend/images/cms/borrower/borrower-first-steps-bg.jpg") no-repeat 50% 0;
+        height: 576px;
+    }
+
+    .loan-terms .list-inline {
+        padding: 19px 3px 18px;
+
+        li {
+            color: #5c6266;
+            font-weight: 100;
+
+            &::before {
+                content: "\f00c";
+                color: #ff8c19;
+            }
+        }
+    }
+
+    .three-steps img {
+        margin-bottom: 20px;
+    }
+
+    .blockquote p {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    /* tablet and desktop*/
+    @media (min-width: 768px)  {
+        .blockquote .details {
+            margin-left: 52px;
+        }
+    }
+
+    /* mobile */
+    @media (min-width: 320px) and (max-width: 767px) {
+        .blockquote .details {
+            margin-left: 24px;
+        }
+    }
+
+
+}

@@ -59,6 +59,9 @@ openBlogArticle:
 lenderGettingStarted:
     path: /cms/lenderGettingStarted
 
+lenderGettingStarted-ES:
+    path: /cms-ES/lenderGettingStarted-ES
+
 borrowerGettingStarted:
     path: /cms/borrowerGettingStarted
 
