@@ -122,6 +122,9 @@ career-marketing:
 press:
     path: /cms/press
 
+press-ES:
+    path: /cms-ES/press-ES
+
 press-article-12:
     path: /cms/press-article-12
 
