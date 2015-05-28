@@ -110,6 +110,42 @@ career-marketing:
 press:
     path: /cms/press
 
+press-article-12:
+    path: /cms/press-article-12
+
+press-article-11:
+    path: /cms/press-article-11
+
+press-article-10:
+    path: /cms/press-article-10
+
+press-article-9:
+    path: /cms/press-article-9
+
+press-article-8:
+    path: /cms/press-article-8
+
+press-article-7:
+    path: /cms/press-article-7
+
+press-article-6:
+    path: /cms/press-article-6
+
+press-article-5:
+    path: /cms/press-article-5
+
+press-article-4:
+    path: /cms/press-article-4
+
+press-article-3:
+    path: /cms/press-article-3
+
+press-article-2:
+    path: /cms/press-article-2
+
+press-article-1:
+    path: /cms/press-article-1
+
 options:
     path: /cms/options
 
