@@ -170,8 +170,14 @@ contact:
 contact-ES:
     path: /cms-ES/contact-ES
 
+cookies-ES:
+    path: /cms-ES/cookies-ES
+
 imprint:
     path: /cms/imprint
+
+imprint-ES:
+    path: /cms/imprint-ES
 
 privacy:
     path: /cms/privacy
