@@ -115,12 +115,16 @@ label.required:after {
     content: ' *';
 }
 
-label.text-danger {
+label.text-danger, label.error {
     font-size: @headingsFontSizeH6;
     line-height: 16px;
     display: table;
     content: "";
     clear: both;
+}
+
+label.error {
+    color: @errorText;
 }
 
 label, input, button, select, textarea {
