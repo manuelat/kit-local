@@ -77,6 +77,9 @@ ratesFeesInvestor:
 risikoRenditeInvestor:
     path: /cms/risikoRenditeInvestor
 
+ratesFeesInvestor-NL:
+    path: /cms-NL/ratesFeesInvestor-NL
+
 ratesFeesInvestor-ES:
     path: /cms-ES/ratesFeesInvestor-ES
 
