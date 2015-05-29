@@ -66,10 +66,16 @@ borrowerGettingStarted:
     path: /cms/borrowerGettingStarted
 
 borrowerGettingStarted-ES:
-    path: /cms-ES/borrowerGettingStarted
+    path: /cms-ES/borrowerGettingStarted-ES
+
+borrowerGettingStarted-NL:
+    path: /cms-NL/borrowerGettingStarted-NL
 
 ratesFeesInvestor:
     path: /cms/ratesFeesInvestor
+
+risikoRenditeInvestor:
+    path: /cms/risikoRenditeInvestor
 
 ratesFeesInvestor-ES:
     path: /cms-ES/ratesFeesInvestor-ES

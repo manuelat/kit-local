@@ -1,0 +1,273 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+
+<div class="cms-page borrower borrower-nl">
+
+    <div class="container-wrapper calculate-rate">
+        <div class="container">
+
+            <div class="page-head">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1 class="text-white text-center">Uw zakelijke lening: Bereken nu uw persoonlijke tarief</h1>
+                    </div>
+                </div>
+            </div><!-- end .page-head -->
+
+            <div class="custom-row">
+                <div class="loan-widget-container">
+                    <div class="col-xs-12 col-sm-7 loan-widget">
+                        <div class="row">
+                            <div class="col-xs-7 col-md-7">
+                                <label for="amount"><strong>Bedrag lening</strong></label><br>
+                            </div>
+                            <div class="col-xs-5 col-md-5 text-right">
+                                <span id="amount"><strong>200.000 €</strong></span>
+                            </div>
+                            <div class="col-xs-12 col-md-12">
+                                <div id="slider-range-min"></div>
+                            </div>
+                        </div>
+                        <div class="desp-20"></div>
+                        <div class="row">
+                            <div class="col-xs-7 col-md-7">
+                                <label for="loan-duration"><strong>Looptijd lening</strong></label><br>
+                            </div>
+                            <div class="col-xs-5 col-md-5 text-right">
+                                <span id="loan-duration"><strong>2 Jahre</strong></span>
+                            </div>
+                            <div class="col-xs-12 col-md-12">
+                                <div id="slider-loan-duration"></div>
+                            </div>
+                        </div><!-- end .row -->
+                        <div class="desp-25 hidden-sm hidden-md hidden-lg"></div>
+                    </div><!-- end .col-xs-12 col-sm-6 -->
+
+                    <div class="col-xs-12 col-sm-5 rate-box">
+                        <div class="row">
+                            <div class="col-xs-7 col-md-6">
+                                <label for="monthlyRate">Maandelijkse betaling</label>
+                            </div>
+                            <div class="col-xs-5 col-md-6 text-right">
+                                <span id="monthlyRate" class="subheading">100.117 €</span>
+                            </div>
+                        </div><!-- end .row -->
+                        <div class="desp-15"></div>
+                        <div class="row">
+                            <div class="col-xs-7 col-md-6">
+                                <label for="totalSum"><strong>Totaalbedrag</strong></label>
+                            </div>
+                            <div class="col-xs-5 col-md-6 text-right">
+                                <span id="totalSum" class="subheading"><strong>2006.808 €</strong></span>
+                            </div>
+                        </div><!-- end .row -->
+                        <div class="desp-20"></div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <p><small>De bovenvermelde bedragen zijn inclusief <span id="feeAmount">€ 750</span>  Zencapkosten. De bedragen zijn gebaseerd op een risicoklasse A+ lening.</small></p>
+                            </div>
+                        </div>
+                    </div><!-- end .col-xs-12 col-sm-6 -->
+
+                </div><!-- end .loan-widget-container -->
+                <div class="loan-terms hidden-xs">
+                    <div class="col-sm-12">
+                        <ul class="list-inline text-center">
+                            <li><strong>Minimale omzet: € 100.000</strong></li>
+                            <li><strong>Minimale leeftijd onderneming: 2 jaar</strong></li>
+                        </ul>
+                    </div>
+                </div><!-- end .loan-terms -->
+            </div><!-- end .custom-row -->
+
+            <div class="clearfix"></div>
+
+            <div class="cta">
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+                        <a id="loan-submit-1" class="btn btn-lg btn-brrwr" type="submit" href="/loan-request/register#baseForm">Nu een krediet aanvragen</a>
+                        <div class="desp-20 hidden-xs"></div>
+                    </div>
+                </div>
+            </div><!--end .cta -->
+
+
+        </div><!-- end .container -->
+
+    </div><!-- end .calculate-rate -->
+
+    <!-- TO DO: REPLACE THE borrower-benefit-1.png  WITH THE CORECT IMAGE ON ALL 3 STEPS!!!!!!!!!!!!!!!!!  -->
+
+    <div class="container-wrapper borrower-credit-steps">
+        <div class="container spacing">
+            <h2 class="faux-h1 text-center text-danger text-uppercase">In drie stappen naar uw bedrijfskrediet</h2>
+
+            <div class="row">
+                <p class="hidden-xs hidden-sm col-md-10 col-md-offset-1">
+                    <img class="img-responsive"
+                         src="https://d1x3gb5zl465n8.cloudfront.net/nl/bundles/steps.png" alt="">
+                </p>
+            </div>
+            <div class="row">
+                <!--<img class="pull-left" alt="" src="/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-2.png" />-->
+                <div class="col-xs-12 col-md-4 grey-note">
+                    <div class="row helper">
+                        <div class="col-xs-12 helper-inner">
+                            <img class="pull-left hidden-md hidden-lg" alt=""
+                                 src="/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-1.png"/>
+
+                            <div class="col-xs-7 col-sm-6 col-md-12 pull-left helper-inner">
+                                <h3 class="sm-large">Financieringsaanvraag indienen</h3>
+                            </div>
+
+                        </div>
+                        <div class="desp-10 hidden-md hidden-lg"></div>
+                        <div class="col-xs-12">
+                            <p>Als u aan onze minimumeisen voldoet, kunt u uw zakelijke lening binnen 15 minuten aanvragen: gemakkelijk met een paar kliks registreren, een duidelijk bedrijfsprofiel maken en de gevraagde financiële cijfers uploaden. </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-md-4">
+                    <div class="row helper">
+                        <div class="col-xs-12 helper-inner">
+                            <img class="pull-left hidden-md hidden-lg" alt=""
+                                 src="/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-1.png"/>
+
+                            <div class="col-xs-7 col-sm-6 col-md-12 pull-left helper-inner">
+                                <h3 class="sm-large">Antwoord op uw aanvraag</h3>
+                            </div>
+                        </div>
+                        <div class="desp-10 hidden-md hidden-lg"></div>
+                        <div class="col-xs-12">
+                            <p>Onze ervaren kredietanalisten controleren uw volledige aanvraag binnen 48 uur &ndash; en dat kost natuurlijk niets. Daarna krijgt u uw individuele renteaanbod. Zodra u dat accepteert, wordt uw project automatisch vrijgegeven voor financiering.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-md-4 grey-note">
+                    <div class="row helper">
+                        <div class="col-xs-12 helper-inner">
+                            <img class="pull-left hidden-md hidden-lg" alt=""
+                                 src="/bundles/intlenddeweblayout/frontend/images/cms/borrower/borrower-benefit-1.png"/>
+
+                            <div class="col-xs-7 col-sm-6 col-md-12 pull-left helper-inner">
+                                <h3 class="sm-large">Geld ontvangen</h3>
+                            </div>
+                        </div>
+                        <div class="desp-10 hidden-md hidden-lg"></div>
+                        <div class="col-xs-12">
+                            <p>Als uw kredietproject is gefinancierd, krijgt u uw kredietovereenkomst. Als u die ondertekend aan ons terugstuurt, betalen wij uw bedrijfskrediet binnen enkele dagen uit. De maandelijkse aflossing vindt vervolgens gemakkelijk via automatische incasso plaats.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <p class="text-center">Gedetailleerde informatie over uw bedrijfskredietaanvraag vindt u <a target="_blank" href="/online-krediet-aanvragen-79.html">hier. </a></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <a href="/loan-request/register#baseForm" class="btn btn-lg btn-brrwr">Nu een krediet aanvragen</a>
+                </div>
+            </div>
+        </div>
+    </div><!-- end .container-wrapper -->
+
+    <div class="container-wrapper benefits-borrower odd">
+        <div class="container spacing">
+            <h2 class="faux-h1 text-center">Uw bedrijfsfinanciering</h2>
+
+            <div class="row">
+
+                <div class="col-xs-12 col-md-4">
+                    <div class="row visual">
+                        <div class="col-xs-12 visual-inner">
+                            <img class="pull-left" alt=""
+                                 src="https://d2pxc3go2nr9i6.cloudfront.net/bundles/intlendnlweblayout/frontend/images/cms/borrower/borrower-benefit-1.png"/>
+
+                            <div class="col-xs-7 col-sm-6 col-md-9 visual-inner">
+                                <h3 class="sm-large">Betrouwbare voorwaarden</h3>
+                            </div>
+                        </div>
+                        <div class="desp-10"></div>
+                        <div class="col-xs-12 col-md-9 col-md-offset-3">
+                            <p class="text">Ons kredietbesluit volgt binnen maximaal 48 uur, omdat het succes van uw bedrijf afhangt van uw mogelijkheid om te plannen. Zo maakt u zich minder afhankelijk van uw bank en heeft uw bedrijfsfinanciering een extra fundament.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4 grey-note">
+                    <div class="row visual">
+                        <div class="col-xs-12 visual-inner">
+                            <img class="pull-left" alt=""
+                                 src="https://d2pxc3go2nr9i6.cloudfront.net/bundles/intlendnlweblayout/frontend/images/cms/borrower/borrower-benefit-2.png"/>
+
+                            <div class="col-xs-7 col-sm-6 col-md-9 visual-inner">
+                                <h3 class="sm-large">Aantrekkelijke voorwaarden</h3>
+                            </div>
+                        </div>
+                        <div class="desp-10"></div>
+                        <div class="col-xs-12 col-md-9 col-md-offset-3">
+                            <p class="text">Wij zijn er persoonlijk voor u – zonder een duur netwerk van filialen. U kunt al een krediet krijgen vanaf 3,99% p.j. – zonder verborgen kosten en het inbrengen van onderpand. Tegelijkertijd bevrijden we u van ingewikkelde kredietclausules </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="row visual">
+                        <div class="col-xs-12 visual-inner">
+                            <img class="pull-left" alt=""
+                                 src="https://d2pxc3go2nr9i6.cloudfront.net/bundles/intlendnlweblayout/frontend/images/cms/borrower/borrower-benefit-3.png"/>
+
+                            <div class="col-xs-7 col-sm-6 col-md-9 visual-inner">
+                                <h3 class="sm-large">Flexibele afwikkeling</h3>
+                            </div>
+                        </div>
+                        <div class="desp-10"></div>
+                        <div class="col-xs-12 col-md-9 col-md-offset-3">
+                            <p class="text">Vergeet de openingstijden van uw bank. Blijf bij uw bedrijfsfinanciering net zo flexibel als tegenover uw klanten. Bij vervroegde aflossing van uw bedrijfskrediet berekenen wij geen kosten.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- end .row -->
+
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <a id="loan-submit-2" class="btn btn-lg btn-brrwr" type="submit"
+                       href="/loan-request/register#baseForm">Nu een krediet aanvragen</a>
+
+                    <div class="desp-10"></div>
+                    <p><a href="/vragen-bedrijven-90.html">Of hebt u nog vragen?</a></p>
+                </div>
+            </div>
+        </div>
+    </div><!-- end .container-wrapper -->
+
+</div><!-- end .cms-page -->
+
+
+{% endblock body %}
+
+{% block js %}
+
+    {{ parent() }}
+
+    <script src="/resources/js/modules/slider-calculator.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            Zencap.sliderCalculator.init();
+
+            /* $('.carousel').carousel({
+             interval: 5000
+             }) */
+        });
+    </script>
+
+
+{% endblock js %}
