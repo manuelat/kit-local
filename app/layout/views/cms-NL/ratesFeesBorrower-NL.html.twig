@@ -356,12 +356,13 @@
         </div>
     </div><!-- end .container-wrapper -->
 
-</div>
+</div><!-- end .cms-page -->
 
 {% endblock %}
 
 {% block js %}
     {{ parent() }}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script>
         $(function(){
             if ($(document).width() > 991) {

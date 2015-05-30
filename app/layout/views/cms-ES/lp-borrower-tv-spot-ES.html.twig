@@ -380,9 +380,13 @@
 
 {% block js %}
     {{ parent() }}
-    <script src="/bundles/intlendweblayout/js/sliderCalculator.js"></script>
+
+    <script src="/resources/js/modules/slider-calculator.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script>
-        $(function(){
+        $(function () {
+            Zencap.sliderCalculator.init();
+
             if ($(document).width() > 991) {
                 $('.carousel-control').addClass('hidden-md');
                 $('.carousel-control').addClass('hidden-lg');
@@ -391,6 +395,7 @@
                     $(this).addClass('col-md-4');
                 });
             }
+
         });
     </script>
 {% endblock %}
