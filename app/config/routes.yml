@@ -194,6 +194,9 @@ contact:
 contact-ES:
     path: /cms-ES/contact-ES
 
+contact-NL:
+    path: /cms-NL/contact-NL
+
 cookies-ES:
     path: /cms-ES/cookies-ES
 
