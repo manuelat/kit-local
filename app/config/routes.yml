@@ -209,6 +209,9 @@ affiliate:
 affiliate-ES:
     path: /cms-ES/affiliate-ES
 
+affiliate-NL:
+    path: /cms-NL/affiliate-NL
+
 blogger:
     path: /cms/blogger
 
