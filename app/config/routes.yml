@@ -143,6 +143,9 @@ press:
 press-ES:
     path: /cms-ES/press-ES
 
+press-NL:
+    path: /cms-NL/press-NL
+
 press-article-12:
     path: /cms/press-article-12
 
