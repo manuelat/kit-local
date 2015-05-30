@@ -3,7 +3,7 @@
 {% block body %}
 
 
-    <div class="cms-page borrower">
+<div class="cms-page borrower">
 
     <div class="container-wrapper header-top fees">
         <div class="container spacing">
@@ -172,50 +172,21 @@
 
     <div class="container-wrapper borrower-steps odd  col-md-12">
         <div class="container spacing">
-
-            <!--  THIS IMAGE SHOULD BE REPLACED!!!  -->
             <div class="row">
-                <h2 class="faux-h1 text-center col-xs-12 text-danger text-uppercase">In drie stappen naar online geld lenen</h2>
+                <h2 class="faux-h1 text-center col-xs-12">In drie stappen naar online geld lenen</h2>
                 <p class="hidden-xs hidden-sm col-md-10 col-md-offset-1">
-                    <img class="img-responsive" alt="" src="/bundles/intlenddeweblayout/frontend/images/cms/lender/lender-steps.png" />
+                    <img class="img-responsive" alt="" src="https://d1x3gb5zl465n8.cloudfront.net/nl/bundles/steps.png" />
                 </p>
                 <div class="hidden-xs hidden-sm col-md-3 col-md-offset-1">
-                    <h3>Anfrage stellen</h3>
+                    <h3>Aanvraag indienen</h3>
                 </div>
-                <div class="hidden-xs hidden-sm col-md-3 col-md-offset-1">
-                    <h3 class="text-center">Finanzierungszusage erhalten </h3>
+                <div class="hidden-xs hidden-sm col-md-4">
+                    <h3 class="text-center">Financiering krijgen</h3>
                 </div>
-                <div class="hidden-xs hidden-sm col-md-3 col-md-offset-1">
-                    <h3>Geldeingang verbuchen</h3>
-                </div>
-            </div>
-
-
-            <div class="row hidden-xs hidden-sm">
-                <p style="margin-left:70px;" class="col-xs-2">
-                    <img src="https://d1x3gb5zl465n8.cloudfront.net/de/bundles/images/borrower/anfrage.png" alt="">
-                </p>
-                <p style="border-top: solid #c2b9b1 2px; width: 232px;margin-left: -13px;margin-right: -14px;margin-top: 62px;" class="col-xs-4"></p>
-                <p class="col-xs-2">
-                    <img src="https://d1x3gb5zl465n8.cloudfront.net/de/bundles/images/borrower/finanzierung.png" alt="">
-                </p>
-                <p style="border-top: solid #c2b9b1 2px; width: 193px;margin-left: -13px;margin-right: 0px;margin-top: 62px;" class="col-xs-4"></p>
-                <p>
-                    <img src="https://d1x3gb5zl465n8.cloudfront.net/de/bundles/images/borrower/geldingang.png" alt="">
-                </p>
-            </div>
-            <div class="row hidden-xs hidden-sm">
-                <div style="margin-left:70px;" class="col-xs-3 col-xs-offset-1">
-                    <h3>Anfrage stellen</h3>
-                </div>
-                <div class="col-xs-3 col-xs-offset-1">
-                    <h3 style="text-align:center;">Finanzierungszusage erhalten</h3>
-                </div>
-                <div class="col-xs-3 col-xs-offset-1">
-                    <h3>Geldeingang verbuchen</h3>
+                <div class="hidden-xs hidden-sm col-md-4">
+                    <h3>Ontvangen geld boeken</h3>
                 </div>
             </div>
-
         </div>
     </div><!-- end .container-wrapper -->
 
@@ -260,18 +231,18 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <th class="text-borrower-dark hidden-xs visible-sm visible-md visible-lg">Korte termijn</th>
-                            <th class="text-borrower-dark visible-xs hidden-sm">Korte termijn <br>(6 maanden)</th>
+                           {# <th class="text-borrower-dark hidden-xs visible-sm visible-md visible-lg">Korte termijn</th>#}
+                            <th class="text-borrower-dark">Korte termijn <br>(6 maanden)</th>
                             <td>Voorfinanciering van orders, voorfinanciering, projectfinanciering</td>
                         </tr>
                         <tr>
-                            <th class="text-borrower-dark hidden-xs visible-sm visible-md visible-lg">Mittelfristig</th>
-                            <th class="text-borrower-dark visible-xs hidden-sm">Mittelfristig <br>(1 tot 2 jaar)</th>
+                            {#<th class="text-borrower-dark hidden-xs visible-sm visible-md visible-lg">Mittelfristig</th>#}
+                            <th class="text-borrower-dark">Mittelfristig <br>(1 tot 2 jaar)</th>
                             <td>Liquiditeit, werkkapitaal, voorraden</td>
                         </tr>
                         <tr>
-                            <th class="text-borrower-dark hidden-xs visible-sm visible-md visible-lg">Langfristig</th>
-                            <th class="text-borrower-dark visible-xs hidden-sm">Langfristig <br>(3 tot 5 jaar</th>
+                            {#<th class="text-borrower-dark hidden-xs visible-sm visible-md visible-lg">Langfristig</th>#}
+                            <th class="text-borrower-dark">Langfristig <br>(3 tot 5 jaar</th>
                             <td>Financiering van machines, voertuigen, software, licenties, kantoormeubilair en apparatuur</td>
                         </tr>
                         </tbody>
@@ -287,7 +258,7 @@
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
                                         <a class="collapsed" href="#collapse-1" data-parent="#accordion-1"
-                                           data-toggle="collapse">
+                                           data-toggle="collapse" aria-expanded="false">
                                             Wist u dat...
                                             <i class="fa fa-medium fa-minus-square fa-plus-square pull-right"></i>
                                         </a>
@@ -385,7 +356,7 @@
         </div>
     </div><!-- end .container-wrapper -->
 
-    </div>
+</div>
 
 {% endblock %}
 
