@@ -62,6 +62,9 @@ lenderGettingStarted:
 lenderGettingStarted-ES:
     path: /cms-ES/lenderGettingStarted-ES
 
+lenderGettingStarted-NL:
+    path: /cms-NL/lenderGettingStarted-NL
+
 borrowerGettingStarted:
     path: /cms/borrowerGettingStarted
 
@@ -73,6 +76,9 @@ borrowerGettingStarted-NL:
 
 ratesFeesInvestor:
     path: /cms/ratesFeesInvestor
+
+ratesFeesInvestor-NL:
+    path: /cms-NL/ratesFeesInvestor-NL
 
 risikoRenditeInvestor:
     path: /cms/risikoRenditeInvestor
