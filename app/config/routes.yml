@@ -4,6 +4,9 @@ imports:
 homepage:
     path: /cms/homepage
 
+homepage-NL:
+    path: /cms-NL/homepage-NL
+
 articles:
     path: /articles
 
