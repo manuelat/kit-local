@@ -110,6 +110,9 @@ howItWorks:
 howItWorks-ES:
     path: /cms-ES/works-ES
 
+howItWorks-NL:
+    path: /cms-ES/works-NL
+
 jobs:
     path: /cms/jobs
 
