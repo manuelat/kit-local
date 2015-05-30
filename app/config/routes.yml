@@ -116,6 +116,9 @@ howItWorks-NL:
 jobs:
     path: /cms/jobs
 
+jobs-NL:
+    path: /cms-NL/jobs-NL
+
 career-engineering-product:
     path: /cms/career-engineering-product
 
