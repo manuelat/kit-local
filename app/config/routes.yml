@@ -230,6 +230,9 @@ about_us:
 about_us-ES:
     path: /cms-ES/about-ES
 
+about_us-NL:
+    path: /cms-NL/about-NL
+
 account_options:
     path: /cms/options
 
