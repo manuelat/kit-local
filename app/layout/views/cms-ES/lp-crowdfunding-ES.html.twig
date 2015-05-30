@@ -2,183 +2,181 @@
 
 {% block body %}
 
-    <style>
+<style>
 
-        /* background height on mobile */
-        @media (min-width: 320px) and (max-width: 767px) {
-            .bkg-crowdfunding {
-                background: url('https://d1x3gb5zl465n8.cloudfront.net/de/lp/crowdfunding/image_crowd_euro1.jpg') 50% 0 no-repeat;
-                background-size: cover;
-                height: 250px;
-            }
+    /* background height on mobile */
+    @media (min-width: 320px) and (max-width: 767px) {
+        .bkg-crowdfunding {
+            background: url('https://d1x3gb5zl465n8.cloudfront.net/de/lp/crowdfunding/image_crowd_euro1.jpg') 50% 0 no-repeat;
+            background-size: cover;
+            height: 250px;
+        }
+    }
+
+    /* background height on tablet */
+    @media (min-width: 768px) and (max-width: 991px) {
+        .bkg-crowdfunding {
+            background: url('https://d1x3gb5zl465n8.cloudfront.net/de/lp/crowdfunding/image_crowd_euro1.jpg') 50% 0 no-repeat;
+            height: 390px;
+        }
+    }
+
+    /* background height on desktop */
+    @media (min-width: 992px) {
+        .bkg-crowdfunding {
+            background: url('https://d1x3gb5zl465n8.cloudfront.net/de/lp/crowdfunding/image_crowd_euro1.jpg') 59% 50% no-repeat;
+            height: 445px;
+        }
+    }
+
+    .container-wrapper .styled li {
+        border: 0;
+        line-height: 1.5em;
+    }
+
+    /* mobile */
+    @media (min-width: 320px) and (max-width: 767px) {
+        .lp-steps img {
+            margin: 0 auto;
         }
 
-        /* background height on tablet */
-        @media (min-width: 768px) and (max-width: 991px) {
-            .bkg-crowdfunding {
-                background: url('https://d1x3gb5zl465n8.cloudfront.net/de/lp/crowdfunding/image_crowd_euro1.jpg') 50% 0 no-repeat;
-                height: 390px;
-            }
+        .lp-steps {
+            text-align: center;
         }
+    }
 
-        /* background height on desktop */
-        @media (min-width: 992px) {
-            .bkg-crowdfunding {
-                background: url('https://d1x3gb5zl465n8.cloudfront.net/de/lp/crowdfunding/image_crowd_euro1.jpg') 59% 50% no-repeat;
-                height: 445px;
-            }
-        }
+</style>
 
-        .container-wrapper .styled li {
-            border: 0;
-            line-height: 1.5em;
-        }
-
-        /* mobile */
-        @media (min-width: 320px) and (max-width: 767px) {
-            .lp-steps img {
-                margin: 0 auto;
-            }
-
-            .lp-steps {
-                text-align: center;
-            }
-        }
-
-    </style>
-
-    <div class="cms-page">
-        <div class="container-wrapper">
-            <div class="container">
-                <div class="row page-head">
-                    <div class="col-xs-12">
-                        <h1 class="text-center">crowdfunding, ¿qué es y cómo funciona?</h1>
-                    </div>
+<div class="cms-page">
+    <div class="container-wrapper">
+        <div class="container">
+            <div class="row page-head">
+                <div class="col-xs-12">
+                    <h1 class="text-center">crowdfunding, ¿qué es y cómo funciona?</h1>
                 </div>
             </div>
-        </div><!-- end .container-wrapper -->
+        </div>
+    </div><!-- end .container-wrapper -->
 
-        <div class="container-wrapper bkg-crowdfunding"> </div><!-- end .container-wrapper -->
+    <div class="container-wrapper bkg-crowdfunding"> </div><!-- end .container-wrapper -->
 
-        <div class="container-wrapper">
-            <div class="container spacing">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <h2 class="faux-h1 text-center">crowdfunding – financiación colectiva para PYMES</h2>
-                    </div>
-                    <div class="col-xs-12 col-sm-6">
-                        <h3 class="text-borrower">Para empresas</h3>
-                        <p>Zencap es una plataforma de crowdfunding para pequeñas y medianas empresas. Con éste sistema de financiación colectiva, la red de inversores privados financian los proyectos de los empresarios. Las empresas ya no tienen que pasar por el banco y pueden evitar largos trámites estresantes.</p>
-                        <p>Los préstamos se financian a través del “crowd” (grupo de personas) que son los que invierten en los diferentes proyectos. Se trata de préstamos financiados por personas particulares, que apoyan así a las empresas.</p>
-                        <p>El crowdfunding es interesante para pequeños negocios o empresas medianas, ya que es una alternativa de <a target="_blank" href="https://www.zencap.es/financiacion-empresas-96.html"> financiación para empresas </a> independiente de los bancos. Además, las condiciones de préstamo son mucho más beneficiosas. En Zencap, los intereses de los créditos son a partir del 6.99% y los trámites son sencillos y rápidos:  nosotros respondemos a su consulta con una oferta sin compromiso en pocos días.</p>
-                        <p>En Zencap, garantizamos una transparencia total: no hay coste adicional por amortización parcial o total del préstamo. Se pueden solicitar préstamos desde 5.000 hasta 150.000 €.</p>
-                        <div class="row">
-                            <div class="col-xs-12 text-center">
-                                <a class="btn btn-lg btn-brrwr" href="https://www.zencap.es/loan-request/register#baseForm">Inicie su proyecto de Crowdfunding ahora</a>
-                                <div class="desp-10"></div>
-                                <p>Si tiene alguna duda consulte nuestro apartado de <a href="https://www.zencap.es/preguntas-frecuentes-empresas-16.html"><br>preguntas frecuentes</a></p>
-                                <p>No dude en contactarnos.<br>Nos puede enviar un email a <a href="mailto:empresas@zencap.es">empresas@zencap.es</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="desp-10 hidden-sm hidden-md hidden-lg"></div>
-                    <div class="col-xs-12 col-sm-6">
-                        <h3 class="text-investor">Para inversores</h3>
-                        <p>Las plataformas de crowdfunding son una buena oportunidad para que los inversores particulares inviertan su dinero en proyectos de pequeñas y medianas empresas. Zencap utiliza este sistema para abrir un nuevo camino de inversiones personalizadas. Podrá invertir un mínimo de 50 € en proyectos de préstamo entre 5.000 y 150.000 €.</p>
-                        <p>En Zencap, los inversores pueden crear su cartera de inversiones según el riesgo que deseen asumir. Los inversores deciden en qué proyectos quieren invertir y por lo tanto apoyar. Según la clasificación de riesgo, los inversores pueden obtener un rendimiento promedio esperado de 7,86% al año.</p>
-                        <p>Puede informarse de las cinco categorías de inversión, del tipo de interés y de la tasa de rendimiento en nuestra página web.</p>
-                        <p>Los reembolsos se hacen mensualmente y recibirá los ingresos derivados de todas sus inversiones directamente a su cuenta bancaria. De esta manera, apoya la creación de puestos de trabajo y generará crecimiento económico en España - sin renunciar a beneficios.</p>
-                        <div class="desp-20 hidden-xs"></div>
-                        <div class="row">
-                            <div class="col-xs-12 text-center">
-                                <a class="btn btn-lg btn-nvstr" href="https://www.zencap.es/solicitar-prestamo/indice">Invierta ya en proyectos de Crowdfunding</a>
-                                <div class="desp-10"></div>
-                                <p>Si tiene alguna duda consulte nuestro apartado de <a href="https://www.zencap.es/preguntas-frecuentes-inversor-17.html"><br>preguntas frecuentes</a></p>
-                                <p>No dude en contactarnos.<br>Nos puede enviar un email a <a href="mailto:inversores@zencap.es">inversores@zencap.es</a></p>
-                                rechen Sie uns gerne persönlich an.<br>Sie erreichen uns unter <a href="mailto:investor@zencap.de">investor@zencap.de</a></p>
-                            </div>
+    <div class="container-wrapper">
+        <div class="container spacing">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="faux-h1 text-center">crowdfunding – financiación colectiva para PYMES</h2>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <h3 class="text-borrower">Para empresas</h3>
+                    <p>Zencap es una plataforma de crowdfunding para pequeñas y medianas empresas. Con éste sistema de financiación colectiva, la red de inversores privados financian los proyectos de los empresarios. Las empresas ya no tienen que pasar por el banco y pueden evitar largos trámites estresantes.</p>
+                    <p>Los préstamos se financian a través del “crowd” (grupo de personas) que son los que invierten en los diferentes proyectos. Se trata de préstamos financiados por personas particulares, que apoyan así a las empresas.</p>
+                    <p>El crowdfunding es interesante para pequeños negocios o empresas medianas, ya que es una alternativa de <a target="_blank" href="https://www.zencap.es/financiacion-empresas-96.html"> financiación para empresas </a> independiente de los bancos. Además, las condiciones de préstamo son mucho más beneficiosas. En Zencap, los intereses de los créditos son a partir del 6.99% y los trámites son sencillos y rápidos:  nosotros respondemos a su consulta con una oferta sin compromiso en pocos días.</p>
+                    <p>En Zencap, garantizamos una transparencia total: no hay coste adicional por amortización parcial o total del préstamo. Se pueden solicitar préstamos desde 5.000 hasta 150.000 €.</p>
+                    <div class="row">
+                        <div class="col-xs-12 text-center">
+                            <a class="btn btn-lg btn-brrwr" href="https://www.zencap.es/loan-request/register#baseForm">Inicie su proyecto de Crowdfunding ahora</a>
+                            <div class="desp-10"></div>
+                            <p>Si tiene alguna duda consulte nuestro apartado de <a href="https://www.zencap.es/preguntas-frecuentes-empresas-16.html"><br>preguntas frecuentes</a></p>
+                            <p>No dude en contactarnos.<br>Nos puede enviar un email a <a href="mailto:empresas@zencap.es">empresas@zencap.es</a></p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div><!-- end .container-wrapper -->
-
-        <div class="container-wrapper odd">
-            <div class="container spacing">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <h2 class="faux-h1 text-center">Ventajas del crowdfunding</h2>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 borrower">
-                        <h3 class="text-borrower">Para empresas</h3>
-                        <ul class="styled check">
-                            <li>Préstamos a partir de 6,99% por año</li>
-                            <li>Plazos entre 6 meses y 5 años</li>
-                            <li>Consulta gratuita y sin compromiso con respuesta<br>en pocos días</li>
-                            <li>Independencia de los bancos</li>
-                            <li>Máxima flexibilidad: sin coste adicional por amortización<br>parcial o total del préstamo </li>
-                        </ul>
-                        <div class="desp-30 hidden-xs"></div>
-                        <div class="row">
-                            <div class="col-xs-12 text-center">
-                                <a class="btn btn-lg btn-brrwr" href="https://www.zencap.es/loan-request/register#baseForm">Inicie su proyecto de Crowdfunding ahora</a>
-                                <div class="desp-10"></div>
-                                <p>Si tiene alguna duda consulte nuestro apartado de <a href="https://www.zencap.es/preguntas-frecuentes-empresas-16.html"><br>preguntas frecuentes</a></p>
-                                <p>No dude en contactarnos.<br>Nos puede enviar un email a <a href="mailto:empresas@zencap.es">empresas@zencap.es</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
-                    <div class="col-xs-12 col-sm-6 investor">
-                        <h3 class="text-investor">Para inversores</h3>
-                        <ul class="styled check">
-                            <li>Rendimientos atractivos con una media anual esperada del 7,86%</li>
-                            <li>Inversiones a partir de 50 €</li>
-                            <li>Con plazos de entre 6 meses y 5 años</li>
-                            <li>Clasificación de los proyectos en función del riesgo de A+ hasta C- por parte de nuestros expertos</li>
-                            <li>Reembolsos mensuales</li>
-                            <li>Minimización del riesgo al diversificar la cartera de inversión</li>
-                        </ul>
-                        <div class="row">
-                            <div class="col-xs-12 text-center">
-                                <a class="btn btn-lg btn-nvstr" href="https://www.zencap.es/solicitar-prestamo/indice">Invierta ya en proyectos de Crowdfunding</a>
-                                <div class="desp-10"></div>
-                                <p>Si tiene alguna duda consulte nuestro apartado de <a href="https://www.zencap.es/preguntas-frecuentes-inversor-17.html"><br>preguntas frecuentes</a></p>
-                                <p>No dude en contactarnos.<br>Nos puede enviar un email a <a href="mailto:inversores@zencap.es">inversores@zencap.es</a></p>
-                                rechen Sie uns gerne persönlich an.<br>Sie erreichen uns unter <a href="mailto:investor@zencap.de">investor@zencap.de</a></p>
-                            </div>
+                <div class="desp-10 hidden-sm hidden-md hidden-lg"></div>
+                <div class="col-xs-12 col-sm-6">
+                    <h3 class="text-investor">Para inversores</h3>
+                    <p>Las plataformas de crowdfunding son una buena oportunidad para que los inversores particulares inviertan su dinero en proyectos de pequeñas y medianas empresas. Zencap utiliza este sistema para abrir un nuevo camino de inversiones personalizadas. Podrá invertir un mínimo de 50 € en proyectos de préstamo entre 5.000 y 150.000 €.</p>
+                    <p>En Zencap, los inversores pueden crear su cartera de inversiones según el riesgo que deseen asumir. Los inversores deciden en qué proyectos quieren invertir y por lo tanto apoyar. Según la clasificación de riesgo, los inversores pueden obtener un rendimiento promedio esperado de 7,86% al año.</p>
+                    <p>Puede informarse de las cinco categorías de inversión, del tipo de interés y de la tasa de rendimiento en nuestra página web.</p>
+                    <p>Los reembolsos se hacen mensualmente y recibirá los ingresos derivados de todas sus inversiones directamente a su cuenta bancaria. De esta manera, apoya la creación de puestos de trabajo y generará crecimiento económico en España - sin renunciar a beneficios.</p>
+                    <div class="desp-20 hidden-xs"></div>
+                    <div class="row">
+                        <div class="col-xs-12 text-center">
+                            <a class="btn btn-lg btn-nvstr" href="https://www.zencap.es/solicitar-prestamo/indice">Invierta ya en proyectos de Crowdfunding</a>
+                            <div class="desp-10"></div>
+                            <p>Si tiene alguna duda consulte nuestro apartado de <a href="https://www.zencap.es/preguntas-frecuentes-inversor-17.html"><br>preguntas frecuentes</a></p>
+                            <p>No dude en contactarnos.<br>Nos puede enviar un email a <a href="mailto:inversores@zencap.es">inversores@zencap.es</a></p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div><!-- end .container-wrapper -->
+        </div>
+    </div><!-- end .container-wrapper -->
 
-        <div class="container-wrapper lp-steps">
-            <div class="container spacing">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <h2 class="faux-h1 text-center">Así funciona Zencap:</h2>
+    <div class="container-wrapper odd">
+        <div class="container spacing">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="faux-h1 text-center">Ventajas del crowdfunding</h2>
+                </div>
+                <div class="col-xs-12 col-sm-6 borrower">
+                    <h3 class="text-borrower">Para empresas</h3>
+                    <ul class="styled check">
+                        <li>Préstamos a partir de 6,99% por año</li>
+                        <li>Plazos entre 6 meses y 5 años</li>
+                        <li>Consulta gratuita y sin compromiso con respuesta<br>en pocos días</li>
+                        <li>Independencia de los bancos</li>
+                        <li>Máxima flexibilidad: sin coste adicional por amortización<br>parcial o total del préstamo </li>
+                    </ul>
+                    <div class="desp-30 hidden-xs"></div>
+                    <div class="row">
+                        <div class="col-xs-12 text-center">
+                            <a class="btn btn-lg btn-brrwr" href="https://www.zencap.es/loan-request/register#baseForm">Inicie su proyecto de Crowdfunding ahora</a>
+                            <div class="desp-10"></div>
+                            <p>Si tiene alguna duda consulte nuestro apartado de <a href="https://www.zencap.es/preguntas-frecuentes-empresas-16.html"><br>preguntas frecuentes</a></p>
+                            <p>No dude en contactarnos.<br>Nos puede enviar un email a <a href="mailto:empresas@zencap.es">empresas@zencap.es</a></p>
+                        </div>
                     </div>
-                    <div class="col-xs-12 col-sm-4"> <img alt="" class="img-responsive" src="https://d2nmwyt2xx612p.cloudfront.net/bundles/intlendweblayout/frontend/images/cms/home/howitworks-01.png" />
-                        <div> <span class="text-borrower">Las empresas</span> solicitan un préstamo</div>
-                        <p> <span class="text-investor">Los inversores</span> se registran  </p>
-                    </div>
-                    <div class="col-xs-12 col-sm-4"> <img alt="" class="img-responsive"  src="https://d2nmwyt2xx612p.cloudfront.net/bundles/intlendweblayout/frontend/images/cms/home/howitworks-02.png" />
-                        <div> <span class="text-borrower">Las empresas</span> son financiadas</div>
-                        <p><span class="text-investor">Los inversores</span> crean una cartera de inversiones</p>
-                    </div>
-                    <div class="col-xs-12 col-sm-4"> <img alt="" class="img-responsive" src="https://d2nmwyt2xx612p.cloudfront.net/bundles/intlendweblayout/frontend/images/cms/home/howitworks-03.png"/>
-                        <div><span class="text-borrower">Las empresas</span> devuelven el dinero </div>
-                        <p><span class="text-investor">Los inversores</span> ganan y reinvierten</p>
-                    </div>
-                    <div class="col-xs-12">
-                        <h3>Zencap ofrece el modelo financiero más eficaz</h3>
-                        <p>En Zencap reunimos a inversores y empresas de forma directa sin necesidad de un asesor bancario. De esta forma ambas partes salen ganando: las empresas reciben tipos de intereses más bajos y los inversores reciben mejores ingresos. De manera fácil, rápida y transparente. <a href="/como-funciona-18.html">Más información ...</a></p>
+                </div>
+                <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+                <div class="col-xs-12 col-sm-6 investor">
+                    <h3 class="text-investor">Para inversores</h3>
+                    <ul class="styled check">
+                        <li>Rendimientos atractivos con una media anual esperada del 7,86%</li>
+                        <li>Inversiones a partir de 50 €</li>
+                        <li>Con plazos de entre 6 meses y 5 años</li>
+                        <li>Clasificación de los proyectos en función del riesgo de A+ hasta C- por parte de nuestros expertos</li>
+                        <li>Reembolsos mensuales</li>
+                        <li>Minimización del riesgo al diversificar la cartera de inversión</li>
+                    </ul>
+                    <div class="row">
+                        <div class="col-xs-12 text-center">
+                            <a class="btn btn-lg btn-nvstr" href="https://www.zencap.es/solicitar-prestamo/indice">Invierta ya en proyectos de Crowdfunding</a>
+                            <div class="desp-10"></div>
+                            <p>Si tiene alguna duda consulte nuestro apartado de <a href="https://www.zencap.es/preguntas-frecuentes-inversor-17.html"><br>preguntas frecuentes</a></p>
+                            <p>No dude en contactarnos.<br>Nos puede enviar un email a <a href="mailto:inversores@zencap.es">inversores@zencap.es</a></p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div><!-- end .container-wrapper -->
+        </div>
+    </div><!-- end .container-wrapper -->
 
-    </div><!-- end .cms-page -->
+    <div class="container-wrapper lp-steps">
+        <div class="container spacing">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="faux-h1 text-center">Así funciona Zencap:</h2>
+                </div>
+                <div class="col-xs-12 col-sm-4"> <img alt="" class="img-responsive" src="https://d2nmwyt2xx612p.cloudfront.net/bundles/intlendweblayout/frontend/images/cms/home/howitworks-01.png" />
+                    <div> <span class="text-borrower">Las empresas</span> solicitan un préstamo</div>
+                    <p> <span class="text-investor">Los inversores</span> se registran  </p>
+                </div>
+                <div class="col-xs-12 col-sm-4"> <img alt="" class="img-responsive"  src="https://d2nmwyt2xx612p.cloudfront.net/bundles/intlendweblayout/frontend/images/cms/home/howitworks-02.png" />
+                    <div> <span class="text-borrower">Las empresas</span> son financiadas</div>
+                    <p><span class="text-investor">Los inversores</span> crean una cartera de inversiones</p>
+                </div>
+                <div class="col-xs-12 col-sm-4"> <img alt="" class="img-responsive" src="https://d2nmwyt2xx612p.cloudfront.net/bundles/intlendweblayout/frontend/images/cms/home/howitworks-03.png"/>
+                    <div><span class="text-borrower">Las empresas</span> devuelven el dinero </div>
+                    <p><span class="text-investor">Los inversores</span> ganan y reinvierten</p>
+                </div>
+                <div class="col-xs-12">
+                    <h3>Zencap ofrece el modelo financiero más eficaz</h3>
+                    <p>En Zencap reunimos a inversores y empresas de forma directa sin necesidad de un asesor bancario. De esta forma ambas partes salen ganando: las empresas reciben tipos de intereses más bajos y los inversores reciben mejores ingresos. De manera fácil, rápida y transparente. <a href="/como-funciona-18.html">Más información ...</a></p>
+                </div>
+            </div>
+        </div>
+    </div><!-- end .container-wrapper -->
+
+</div><!-- end .cms-page -->
 
 {% endblock %}
