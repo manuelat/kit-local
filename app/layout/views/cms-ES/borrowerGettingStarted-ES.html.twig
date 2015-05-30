@@ -193,3 +193,23 @@
 </div><!-- end .cms-page -->
 
 {% endblock %}
+
+
+{% block js %}
+
+    {{ parent() }}
+
+    <script src="/resources/js/modules/slider-calculator.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            Zencap.sliderCalculator.init();
+
+            /* $('.carousel').carousel({
+             interval: 5000
+             }) */
+        });
+    </script>
+
+
+{% endblock js %}
