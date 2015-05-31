@@ -299,7 +299,12 @@
         .arrow {
             top: 64px;
         }
+
+        .lender-credit-steps .helper h3, .lender-credit-steps .helper p {
+            text-align:center;
+        }
     }
+
 
 </style>
 
@@ -552,28 +557,67 @@
     <a id="steps"></a>
 
     <!-- drei schritten -->
-    <div class="container-wrapper">
+
+    <div class="container-wrapper lender-credit-steps">
         <div class="container spacing">
+            <h2 class="faux-h1 text-center col-xs-12">In drei Schritten zu Ihrer Finanzierung</h2>
+
             <div class="row">
-                <div class="col-xs-12">
-                    <div class="row">
-                        <h2 class="faux-h1 text-center col-xs-12 text-danger text-uppercase">In drei Schritten zu Ihrer Finanzierung</h2>
-                        {# image below should be CHANGED #}
-                        <p class="hidden-xs col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1">
-                            <img src="/bundles/intlenddeweblayout/frontend/images/cms/lender/lender-steps.png" alt="" class="img-responsive">
-                        </p>
-                        <div class="col-xs-12 col-sm-4 col-md-3 col-md-offset-1">
-                            <h3 class="text-center">Unverbindlich Anfrage</h3>
-                            <p class="text-center">Erstellen Sie Ihren Kreditantrag.<br/>
+                <p class="hidden-xs hidden-sm col-md-10 col-md-offset-1">
+                    <img class="img-responsive"
+                         src="/bundles/intlenddeweblayout/frontend/images/cms/lender/lender-steps.png" alt="">
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 grey-note">
+                    <div class="row helper">
+                        <div class="col-xs-12 helper-inner">
+                            <img class="pull-left hidden-md hidden-lg" alt=""
+                                 src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/selbs/bundles/icons/01.png"/>
+
+                            <div class="col-xs-7 col-sm-6 col-md-12 pull-left helper-inner">
+                                <h3>Unverbindlich Anfrage</h3>
+                            </div>
+
+                        </div>
+                        <div class="desp-10 hidden-md hidden-lg"></div>
+                        <div class="col-xs-12">
+                            <p>Erstellen Sie Ihren Kreditantrag.<br/>
                                 Einfach – Schnell - Kostenlos.</p>
                         </div>
-                        <div class="col-xs-12 col-sm-4 col-md-3 col-md-offset-1">
-                            <h3 class="text-center">Kredit-Entscheidung</h3>
-                            <p class="text-center">Innerhalb von 48 Stunden bekommen Sie eine Antwort.</p>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-4">
+                    <div class="row helper">
+                        <div class="col-xs-12 helper-inner">
+                            <img class="pull-left hidden-md hidden-lg" alt=""
+                                 src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/selbs/bundles/icons/02.png"/>
+
+                            <div class="col-xs-7 col-sm-6 col-md-12 pull-left helper-inner">
+                                <h3>Kredit-Entscheidung</h3>
+                            </div>
                         </div>
-                        <div class="col-xs-12 col-sm-4 col-md-3 col-md-offset-1">
-                            <h3 class="text-center">Auszahlung</h3>
-                            <p class="text-center">Ihr Selbstständigenkredit wird direkt auf Ihr Konto überwiesen. Starten Sie durch!</p>
+                        <div class="desp-10 hidden-md hidden-lg"></div>
+                        <div class="col-xs-12">
+                            <p>Innerhalb von 48 Stunden bekommen Sie eine Antwort.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 grey-note">
+                    <div class="row helper">
+                        <div class="col-xs-12 helper-inner">
+                            <img class="pull-left hidden-md hidden-lg" alt=""
+                                 src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/selbs/bundles/icons/03.png"/>
+
+                            <div class="col-xs-7 col-sm-6 col-md-12 pull-left helper-inner">
+                                <h3 class="sm-large">Auszahlung</h3>
+                            </div>
+                        </div>
+                        <div class="desp-10 hidden-md hidden-lg"></div>
+                        <div class="col-xs-12">
+                            <p>Ihr Selbstständigenkredit wird direkt auf Ihr Konto überwiesen. Starten Sie durch!</p>
                         </div>
                     </div>
                 </div>
@@ -590,8 +634,11 @@
                     <a href="#steps1"><img alt="Nächste" src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/selbs/bundles/arrow.png" class="arrow"></a>
                 </div>
             </div><!-- end .row -->
+
+
         </div>
     </div><!-- end .container-wrapper -->
+
     <!-- end drei schritten -->
 
     <div id="steps1"></div>
