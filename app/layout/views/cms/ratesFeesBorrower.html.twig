@@ -244,17 +244,17 @@
                         </thead>
                         <tbody>
                         <tr>
-                            {#<th class="text-borrower-dark hidden-xs visible-sm visible-md visible-lg">Kurzfristig</th>#}
+                            <!--<th class="text-borrower-dark hidden-xs visible-sm visible-md visible-lg">Kurzfristig</th>-->
                             <th class="text-borrower-dark">Kurzfristig <br>(6 Monate)</th>
                             <td>Auftragsfinanzierung, Vorfinanzierung, Projektfinanzierung</td>
                         </tr>
                         <tr>
-                            {#<th class="text-borrower-dark hidden-xs visible-sm visible-md visible-lg">Mittelfristig</th>#}
+                            <!--<th class="text-borrower-dark hidden-xs visible-sm visible-md visible-lg">Mittelfristig</th>-->
                             <th class="text-borrower-dark">Mittelfristig <br>(12 - 24 Monate)</th>
                             <td>Liquidität, Betriebsmittel, Vorräte wie Lageraufstockung</td>
                         </tr>
                         <tr>
-                            {#<th class="text-borrower-dark hidden-xs visible-sm visible-md visible-lg">Langfristig</th>#}
+                            <!--<th class="text-borrower-dark hidden-xs visible-sm visible-md visible-lg">Langfristig</th>-->
                             <th class="text-borrower-dark">Langfristig <br>(36 - 60 Monate</th>
                             <td>Finanzierung von Maschinen, Fahrzeugen, Software, <br>Lizenzen sowie Betriebs- und
                                 Geschäftsausstattung
@@ -352,18 +352,18 @@
                         informieren Sie uns bitte frühzeitig, damit wir gemeinsam eine Lösung finden.</p>
 
                     <div class="facts hidden-xs hidden-sm visible-md visible-lg">
-                        <div id="accordion-3" class="panel-group">
+                        <div id="accordion-2" class="panel-group">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                        <a class="collapsed" href="#collapse-3" data-parent="#accordion-3"
+                                        <a class="collapsed" href="#collapse-2" data-parent="#accordion-2"
                                            data-toggle="collapse">
                                             Wussten Sie, dass..
                                             <i class="fa fa-medium fa-minus-square fa-plus-square pull-right"></i>
                                         </a>
                                     </h4>
                                 </div>
-                                <div class="panel-collapse collapse" id="collapse-3">
+                                <div class="panel-collapse collapse" id="collapse-2">
                                     <div class="panel-body">
                                         … Sie über Zencap mehrere Kredite in einem Jahr aufnehmen können? Bereits nach
                                         Ablauf von sechs Monaten können Sie erneut eine Finanzierung online beantragen.
@@ -399,6 +399,8 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script>
         $(function(){
+
+            // remove carousel on desktop
             if ($(document).width() > 991) {
                 $('.carousel-control').addClass('hidden-md');
                 $('.carousel-control').addClass('hidden-lg');
