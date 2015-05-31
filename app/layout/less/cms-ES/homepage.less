@@ -1,0 +1,67 @@
+.homepage {
+
+    .main-image-es {
+        background: url("/bundles/intlendweblayout/frontend/images/cms/home/landing-bg-v2.jpg");
+    }
+
+    /*  background height on mobile */
+    @media (max-width: 767px) {
+        .main-image-es {
+            height: 88px;
+            background-size: cover;
+            background-position: 29% 0;
+        }
+    }
+
+    /* background height on tablet position boxes */
+    @media (min-width: 768px) and (max-width: 991px) {
+        .main-image-es {
+            min-height: 300px;
+            background-size: cover;
+            background-position: 50% 0;
+        }
+
+        .tiles-es .pull-down {
+            bottom: 26px;
+        }
+
+        .tiles .container {
+            min-height: 0px;
+        }
+    }
+
+    /* background height on desktop and position boxes */
+    @media (min-width: 992px) {
+        .main-image-es {
+            min-height: 384px;
+            background-size: cover;
+            background-position: 50% 0;
+        }
+
+        .tiles-es .pull-down {
+            bottom: 48px;
+        }
+
+        .tiles .container {
+            min-height: 0px;
+        }
+    }
+
+        /*  place buttons on mobile */
+        @media (min-width: 320px) and (max-width: 767px) {
+            .special-buttons {
+                top: -15px;
+            }
+        }
+
+    /* mobile */
+    @media (min-width: 320px) and (max-width: 767px) {
+        .lp-steps img {
+            margin: 0 auto;
+        }
+
+        .lp-steps {
+            text-align: center;
+        }
+    }
+}

@@ -7,6 +7,9 @@ homepage:
 homepage-NL:
     path: /cms-NL/homepage-NL
 
+homepage-ES:
+    path: /cms-ES/homepage-ES
+
 articles:
     path: /articles
 
