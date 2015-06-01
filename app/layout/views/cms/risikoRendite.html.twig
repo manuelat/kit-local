@@ -1,0 +1,470 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+
+
+    <style>
+
+    .investor .lender-fees {
+        background: url('http://marketing-resources.zencap.de.s3.amazonaws.com/de/bundles/images/investor/hero-rendite.jpg');
+        background-repeat: no-repeat;
+        background-color: #ffffff;
+    }
+
+    /* background on tablet */
+    @media (min-width: 767px) and (max-width: 991px) {
+        .investor  .lender-fees {
+            background: cover;
+            height: 400px;
+            background-position: 53% 33%;
+        }
+    }
+
+    /*  background on mobile */
+        @media (max-width: 767px) {
+        .investor .lender-fees {
+            height: 190px;
+            background: cover;
+            background-position: 45% 33%;
+        }
+    }
+
+    /* background on desktop */
+    @media (min-width: 992px) {
+        .investor .lender-fees {
+            height: 375px;
+            background-position: 50% 33%;
+            background: cover;
+        }
+
+        .investor .lender-fees h1 ~ p {
+            margin-top: -15px;
+        }
+    }
+
+    .cms-page .styled li {
+        border-bottom: none;
+    }
+
+    .grade {
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+    .blue-box{
+        background-color:#189bf2;
+    }
+
+    .blue-box i {
+        display: block;
+    }
+
+    .dark-blue{
+        background-color:#1068a4;
+    }
+
+    .font-big {
+        font-size: 42px;
+        text-align: center;
+    }
+
+    .spacing-half{
+        padding: 30px 10px 10px 20px;
+    }
+
+    .text-investor{
+        color: #189bf2;
+    }
+
+    @media (max-width: 767px) {
+        .img-circle {
+            margin: 0 auto;
+            display: block;
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        .img-circle {
+            width: 100%;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .img-circle {
+            width: 140px;
+            height: 140px;
+        }
+    }
+
+    .risk-bg{
+        background: url('http://marketing-resources.zencap.de.s3.amazonaws.com/de/bundles/images/investor/bundles/bg-risk.jpg') 50% 50% no-repeat #f2f2f2;
+    }
+
+
+    /*  background on mobile */
+    @media (max-width: 767px) {
+        .risk-bg {
+            background-position: 18% 33%;
+        }
+    }
+
+    .blue-box {
+        position: relative;
+        display: table;
+    }
+
+    .dark-blue {
+        position: absolute;
+        height: 100%;
+    }
+
+</style>
+
+<div class="cms-page investor">
+
+    <div class="container-wrapper lender-fees">
+        <div class="container spacing">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1>Hohe Rendite, transparentes<br>Risiko: Geld anlegen bei Zencap </h1>
+                    <div class="desp-15 hidden-xs visible-sm hidden-md hidden-lg"></div>
+                    <p>Erstellen Sie Ihr diversifiziertes Mittelstandsportfolio nach individuellen Renditevorstellungen </p>
+                    <ul class="styled hidden-xs">
+                        <li>Kostenlos registrieren und sofort investieren</li>
+                        <li>Geringe Servicegebühr: 1 Prozentpunkt vom Zinssatz</li>
+                        <li>Kein zusätzliches Depotkonto benötigt</li>
+                    </ul>
+                </div>
+                <div class="hidden-xs col-sm-6 col-md-5 col-md-offset-3">
+                    <p>Mandy Wisniewski von <strong>Jetzt &amp; Immer</strong> hat mit 30.000 € von 47 Anlegern ihr Geschäft finanziert.</p>
+                </div>
+            </div>
+        </div>
+    </div><!-- end .lender-fees -->
+
+    <div class="container-wrapper">
+        <div class="container spacing">
+            <div class="row">
+                <div class="col-xs-12 col-md-8 cancel-padding">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>Zencap-Klasse</th>
+                                <th>Zinssatz</th>
+                                <th>Investor-Rendite</th>
+                                <th>Ausfallwahrscheinlichkeit<sup>1</sup></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><span class="grade grade-a-plus grade-large">A<span>+</span></span></td>
+                                <td>3,99% - 5,99%</td>
+                                <td>2,99% - 4,99%</td>
+                                <td>0,03% - 1,04%</td>
+                            </tr>
+                            <tr>
+                                <td><span class="grade grade-a grade-large">A</span></td>
+                                <td>4,48% - 6,80%</td>
+                                <td>3,48% - 5,80%</td>
+                                <td>1,04% - 2,03%</td>
+                            </tr>
+                            <tr>
+                                <td><span class="grade grade-b grade-large">B</span></td>
+                                <td>5,41% - 8,44%</td>
+                                <td>4,41% - 7,44%</td>
+                                <td>2,03% - 4,01%</td>
+                            </tr>
+                            <tr>
+                                <td><span class="grade grade-c grade-large">C</span></td>
+                                <td>7,30% - 11,91%</td>
+                                <td>6,30% - 10,91%</td>
+                                <td>4,01% - 8,04%</td>
+                            </tr>
+                            <tr>
+                                <td><span class="grade grade-c-minus grade-large">C-</span></td>
+                                <td>11,32% - 15,64%</td>
+                                <td>10,32% - 14,64%</td>
+                                <td>8,04% - 12,17%</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="desp-20 hidden-md hidden-lg"></div>
+                <div class="col-xs-12 col-md-4 well">
+                    <small><sup>1</sup> Die Ausfallwahrscheinlichkeit bezeichnet das durchschnittliche Risiko, mit dem innerhalb von 12 Monaten während der Laufzeit des Kredits mögliche Zahlungsstörungen auftreten. Diese Wahrscheinlichkeit entspricht nicht unmittelbar der Minderung Ihrer Investor-Rendite, da die tatsächliche Höhe des Verlusts von weiteren Faktoren, wie dem Zeitpunkt der Zahlungsstörung, dem Erfolg des Forderungsmanagements sowie dem Wert der geleisteten Bürgschaft abhängt. Damit ist der erwartete Verlust aus einer Anlage in der Regel kleiner als die angegebene Ausfallwahrscheinlichkeit.</small>
+                </div>
+                <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <a class="btn btn-lg btn-nvstr" href="/register/lender/">Jetzt investieren</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- end .container-wrapper -->
+
+    <div class="container-wrapper odd">
+        <div class="container spacing">
+            <div class="row">
+                <h2 class="faux-h1 text-center">Ihre Investition in renditeorientierte Geldanlagen</h2>
+                <div class="col-xs-12">
+                    <p>Bei Zencap können sich private Investoren erstmals ein breit gestreutes <a href="/borrower-getting-started">Portfolio an Firmenkrediten</a> aufbauen. Abhängig von Ihrer individuellen Risikoneigung ist es dabei möglich, hohe Renditen bis zu 14,64 % zu verdienen. Aber auch sicherheitsorientierte Anleger finden bei Zencap <br>das passende Produkt. In unserer Anlageklasse A+ können Sie Ihr Geld in Firmenkredite mit einer maximalen Ausfallwahrscheinlichkeit von rund 1 % anlegen und eine durchschnittliche Rendite von 3,99 % verdienen.</p>
+                    <p>Investitionen in Geldanlagen mit hohen Renditen bergen immer auch ein Verlustrisiko. Auf dieser Seite finden Sie daher ausführliche Informationen, die Ihnen helfen, dieses Risiko besser einzuschätzen. Neben allgemeinen Fakten zu Ausfallrisiken im Segment von mittelständischen Firmenkrediten, geben wir einen Einblick in die Risikoanalyse von Zencap.</p>
+                    <h3>Fakten zum Ausfallrisiko von Firmenkrediten in Deutschland</h3>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <p>Die Wahrscheinlichkeit, ob eine Firma ihren Kredit zurückzahlen kann, hängt von verschiedenen Faktoren ab. Neben der individuellen Finanzkraft ist dabei insbesondere die allgemeine wirtschaftliche Lage ausschlaggebend.</p>
+                    <p>Bei Zencap finanzieren sich in der Regel kleine Mittelständler mit einem durchschnittlichen Umsatz von 1.500.000 €. Auswertungen der Deutschen Bundesbank zeigen, dass die Wahrscheinlichkeit einer Insolvenz von Unternehmen in diesem Umsatzsegment bei rund 3 % liegt. Das heißt, dass von 100 Firmen im Schnitt pro Jahr <br>3 ihre Kredite nicht mehr bedienen können. Dieser Wert entspricht nahezu exakt der allgemeinen Ausfallwahrscheinlichkeit über alle Umsatzsegmente <br>im deutschen Mittelstand.</p></div>
+                <div class="col-xs-12 col-sm-6">
+                    <img class="img-responsive" src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/bundles/images/investor/bundles/chart-ausfallwahrscheinlichkeiten.png" alt="Ausfallwahrscheinlichkeiten"><br>
+                    <small>Quelle: <a href="http://www.bundesbank.de/Redaktion/EN/Downloads/Publications/Discussion_Paper_1/2013/2013_06_10_dkp_22.pdf?__blob=publicationFile">Deutsche Bundesbank</a></small>
+                </div>
+                <div class="desp-20"></div>
+                <div class="col-xs-12">
+                    <p>Die Ausfallwahrscheinlichkeit allein sagt allerdings noch nichts über Ihr tatsächliches Verlustrisiko aus. Dieses ist neben dem konkreten Ausfallzeitpunkt abhängig vom Wert der hinterlegten Sicherheiten. Firmenkredite sind anders als so genannte <a href="/blog">Mittelstandsanleihen</a> Annuitätenkredite. Das heißt, der Unternehmer zahlt jeden Monat neben den fälligen Zinsen auch einen Teil der Kreditsumme (Tilgung) zurück. Nimmt ein Unternehmen beispielsweise einen Kredit über 100.000 € über 3 Jahre auf und geht nach 2 Jahren Pleite, beträgt der Verlust maximal noch 33.000 €. Zusätzlich garantieren Unternehmen ihren Kredit häufig mit ihrem Privatvermögen durch eine persönliche Bürgschaft – auch bei Zencap (ausführlich dazu: <a href="#section">Kapitel Bürgschaft</a>).</p>
+                    <h3>Hohe Renditen mit Firmenkrediten bei Zencap</h3>
+                    <p>Investitionen in Firmenkredite ermöglichen Nettorenditen zwischen 2,99 % und 14,64 % je nach individueller Risikoneigung. Ob diese tatsächlich erzielt werden, hängt von der Qualität unserer Bonitätsprüfung, ihrer Anlagestrategie und dem Erfolg unseres Forderungsmanagements im Insolvenzfall ab. Alle 3 Aspekte werden im Folgenden ausführlich erläutert.</p>
+                </div>
+            </div>
+        </div>
+    </div><!-- end .container-wrapper -->
+
+    <div class="container-wrapper">
+        <div class="container spacing">
+            <div class="row">
+                <h2 class="faux-h1 text-center">Kernelemente für die Erzielung hoher Renditen</h2>
+                <div class="col-xs-12 col-sm-5 text-center">
+                    <a href="#pruefung"><img class="img-center" src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/bundles/images/investor/bundles/icons/01.png" alt="Professionelle Bonitätsprüfung"><br><div class="desp-10"></div>Professionelle<br>Bonitätsprüfung</a>
+                </div>
+                <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+                <div class="col-xs-12 col-sm-2 text-center">
+                    <a href="#portfolio"><img class="img-center" src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/bundles/images/investor/bundles/icons/02.png" alt="Diversifiziertes Portfolio"><br><div class="desp-10"></div>Diversifiziertes<br>Portfolio</a>
+                </div>
+                <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+                <div class="col-xs-12 col-sm-5 text-center">
+                    <a href="#forderungsmanagement"><img class="img-center" src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/bundles/images/investor/bundles/icons/03.png" alt="Erfolgreiches Forderungsmanagement"><br><div class="desp-10"></div>Erfolgreiches<br>Forderungsmanagement</a>
+                </div>
+            </div>
+        </div>
+    </div><!-- end .container-wrapper -->
+
+    <a id="pruefung"></a>
+
+    <div class="container-wrapper odd risk-bg">
+        <div class="container spacing">
+            <div class="row visual">
+                <div class="col-xs-12 visual-inner">
+                    <img class="pull-left"
+                         src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/bundles/images/investor/bundles/icons/01.png" alt="Professionelle Bonitätsprüfung">
+                    <h3 class="title-lead col-xs-8 col-sm-10">Unsere Kreditprüfung</h3>
+                </div>
+            </div>
+            <div class="desp-10"></div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-5">
+                    <p>Um die Bonität von Unternehmen richtig einzuschätzen und Investitionsrisiken adäquat darzustellen, vertraut Zencap auf ein dreistufiges Analyseverfahren. In der Betrugsprävention gleichen unsere Experten die Kundenangaben mit externen Datenquellen ab, im automatisierten Rating wird die Finanzkraft des Unternehmens anhand von Kernkennzahlen wie Gewinnen und Eigenkapitalquoten maschinell ermittelt und in der abschließenden Kreditprüfung validiert unser erfahrenes Analystenteam das maschinelle Ratingergebnis.</p>
+                    <p>Unser Analystenteam verfügt über mehr als 50 Jahre Erfahrung in der Prüfung von Mittelstandskrediten und der Festsetzung eines risikoangemessenen Zinssatzes.</p>
+                    <p><a href="#experten"><i class="fa fa-arrow-right"></i> Erfahren Sie mehr über unsere Analysten.</a></p>
+                </div>
+            </div>
+        </div>
+    </div><!--End of Pruefung-->
+
+    <div class="container-wrapper">
+        <div class="container spacing">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12">
+                    <h3>Die Betrugsprävention</h3>
+                    <p>Um Sie und uns vor Betrug und Geldwäsche zu schützen, schauen wir uns jedes Projekt ganz genau an. Insgesamt werten wir in unserem selbst entwickelten Betrugspräventionsmodell mehr als 30 Einzelfaktoren aus. Ziel der Betrugsprävention ist sicherzustellen, dass das Unternehmen des Kreditantragstellers existiert und erhaltende Daten korrekt sind. Dazu gleichen unsere Kreditexperten die Kundenangaben mit externen Datenquellen ab.</p>
+                    <p>Überprüft werden die gesamten Unternehmensdaten wie Name, Adresse, Steuernummer und der Handelsregisterauszug. <br>Neben diesen Informationen liefern die offiziellen Datenbanken der Wirtschaftsauskunfteien Creditreform und Schufa, aber auch webbasierte Firmendatenbanken, wichtige Hinweise über den Kreditnehmer und das Unternehmen.</p>
+                    <p>Unsere Kreditanalysten schauen sich allerdings nicht nur Unterlagen und Datensätze an, die üblicherweise bei einem Kreditantrag überprüft werden. Die Experten gehen noch weiter ins Detail: Sie kontrollieren beispielsweise das Gesellschafterverhältnis des Unternehmens und plausibilisieren die Entfernung zwischen Arbeits- und Wohnorts des Unternehmers. Zusätzlich schauen sich unsere Analysten auch den öffentlichen Webauftritt des Betriebes an.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 grey-note">
+                    <h3>Die Bonitätsanalyse</h3>
+                    <p>Bei der Bewertung der Kreditanträge setzten wir auf eine automatisierte Verarbeitung der Kundendaten. Unser intern entwickeltes Scoring-Instrument zur Risikobewertung, das ZenScore-Modell analysiert maschinell die Kennzahlen aus den eingereichten Bilanzunterlagen, <br>die Ergebnisse der Auskunfteien sowie die öffentlich zugänglichen Kundeninformationen.  Unser ZenScore-Modell wird durch unsere Kreditanalysten stetig weiterentwickelt und sowohl intern wie extern validiert. Einfluss auf die Bewertung werden künftig auch mikroökonomische Daten haben wie regionale Unterschiede oder das Rückzahlverhalten während der Kreditlaufzeit. Unsere Bonitätsanalyse geht damit über die übliche Bankprüfung hinaus.</p>
+                </div>
+            </div>
+            <div class="blue-box" style="position: relative; display: table;">
+                <div class="col-xs-2 col-sm-1 dark-blue hidden-xs" style="position: absolute;height: 100%;">
+                    <div class="desp-20"></div>
+                    <i class="fa fa-info-circle text-white font-big"></i>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-xs-12 col-sm-11 col-sm-offset-1 text-white spacing-half">
+                    <h3 class="text-white">Detaillerte Analyse der Kreditanträge</h3>
+                    <p>Durch unser striktes Risikomanagement gelangen nur Unternehmen mit einer guten Bonität auf unseren Kreditmarktplatz. Das Ergebnis des umfassenden Analyseprozesses: nur etwa 30 % der eingereichten Kreditanträge werden bei Zencap veröffentlicht.</p>
+                </div>
+            </div><!--End of .blue-box-->
+            <div class="row">
+                <div class="col-xs-12"><br>
+                    <h3>Die Kreditentscheidung</h3>
+                    <p>Unsere Kreditanalysten haben viele Jahre kleine und mittelständische Unternehmen bei namhaften Banken bewertet. Gemeinsam vereint unser Team in diesem Bereich über 50 Jahre Erfahrung in der Risikobewertung. Für jede Branche und jedes Segment haben wir einen erfahrenen Experten. Ziel der Beurteilung durch unsere Kreditanalysten ist die Zuordnung in eine unserer 5 Anlageklassen A+, A, B, C und C-. Wie entscheidend die manuelle Bewertung ist, zeigen auch erfolgreiche ausländische Kreditmarktplätze in den in Großbritannien und den USA: durch die individuelle Analyse der Kreditprojekte lassen sich die Verlustraten um 50 % verringern.</p>
+                </div>
+            </div>
+        </div>
+    </div><!--End of Pruefung - Second Part-->
+
+    <a id="portfolio"></a>
+
+    <div class="container-wrapper odd">
+        <div class="container spacing">
+            <div class="row visual">
+                <div class="col-xs-12 visual-inner">
+                    <img class="pull-left"
+                         src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/bundles/images/investor/bundles/icons/02.png" alt="Professionelle Bonitätsprüfung">
+                    <h3 class="title-lead col-xs-8 col-sm-10">Ihre Portfoliostrategie</h3>
+                </div>
+            </div>
+
+            <div class="desp-10"></div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-12">
+                    <p>Die professionelle Bonitätsanalyse stellt sicher, dass die durchschnittliche Ausfallwahrscheinlichkeit  der Zencap-Kredite korrekt bemessen ist. Das bedeutet, dass von 100 Krediten der Risikoklasse A+ im Jahresmittel nicht mehr als 1 Kredit ausfällt. Der Ausfall eines Kredit ist unabhängig von der Anlageklasse allerdings ein so genanntes binäres Ereignis: entweder der Kredit fällt während der Laufzeit aus oder er wird vollständig zurückgezahlt. Um Ihr Risiko in Geldanlagen mit hoher Rendite daher angemessen zu kalkulieren, ist der Grad der Diversifikation Ihres Portfolios entscheidend. Bei Zencap finanzieren sich Unternehmen aus allen Regionen und Branchen Deutschlands. Mit diesem Angebot stellen wir sicher, dass Sie Ihr Portfolio optimal streuen können.</p>
+                </div>
+            </div>
+            <div class="blue-box">
+                <div class="col-sm-1 dark-blue hidden-xs">
+                    <div class="desp-20"></div>
+                    <i class="fa fa-info-circle text-white font-big"></i>
+                </div>
+                <div class="col-xs-12 col-sm-11 col-sm-offset-1 text-white spacing-half">
+                    <h3 class="text-white">Portfoliodiversifizierung – die goldenen Anlageregel</h3>
+                    <p>Sie möchten 10.000 € in Firmenkredite der Anlageklasse A+ bei Zencap anlegen. Ihre Wahl fällt auf das Kreditprojekt „Modernisierung des Maschinenparks“ eines Industrieunternehmens im Raum München. Während der Kreditlaufzeit verunglückt der Unternehmer und es findet sich kein Nachfolger. In der Folge sinken die Umsätze und das Unternehmen kann seine Darlehensraten nicht mehr bedienen. Sie verlieren einen Großteil Ihrer Geldanlage, obwohl die allgemeine Wahrscheinlichkeit einer Insolvenz dieses Unternehmens lediglich bei 1 % lag. Streuen Sie Ihre Investitionen hingegen auf mehrere Kreditprojekte der Anlageklasse A+ aus unterschiedlichen Branchen und Regionen, können Sie Ihr Verlustrisiko bei noch immer hoher Rendite signifikant minimieren. Idealerweise legen Sie Ihre 10.000 € deutschlandweit in 100 Projekte an und investieren jeweils nur 100 €. Kann der Industrieunternehmer dann sein Darlehen aufgrund eines individuellen Unglücksfalls nicht mehr bedienen, minimiert sich Ihr Verlust auf 100 € und betrifft nur noch 1% Ihrer Anlagesumme. Dass nämlich allen anderen Unternehmen in Ihrem Portfolio ähnliches zustößt ist statistisch sehr unwahrscheinlich. Die Entdeckung dieses Effekts der Portfoliodiversifizierung ist in der Wissenschaft mit dem Nobelpreis ausgezeichnet worden und auch in der Praxis belegt wie Erfahrungen der führenden Kreditplattformen zeigen.</p>
+                </div>
+            </div><!--End of .blue-box-->
+            <div class="row spacing">
+                <h2 class="text-center">Unsere Kreditnehmer</h2>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="desp-20"></div>
+                    <h3>Nach Regionen*</h3>
+                    <br><img src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/bundles/images/investor/bundles/de-volume.png" alt="Nach Regionen*" class="img-responsive"><br>
+                    <small>*Gemessen am Kreditvolumen</small>
+                </div>
+
+                <div class="col-xs-12 col-sm-6">
+                    <div class="desp-20"></div>
+                    <h3>Nach Industrien</h3>
+                    <br><img src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/bundles/images/investor/bundles/chart-industry.png" alt="Nach Regionen*" class="img-responsive">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <a class="btn btn-lg btn-nvstr" href="/register/lender/">Jetzt investieren</a>
+                </div>
+            </div>
+        </div>
+    </div><!--End of Portfolio-->
+
+    <a id="forderungsmanagement"></a>
+
+    <div class="container-wrapper">
+        <div class="container spacing">
+            <div class="row visual">
+                <div class="col-xs-12 visual-inner">
+                    <img class="pull-left" src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/bundles/images/investor/bundles/icons/03.png" alt="Das Forderungsmanagement">
+                    <h3 class="title-lead col-xs-8 col-sm-10">Das Forderungsmanagement</h3>
+                </div>
+            </div>
+
+            <div class="desp-10"></div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-7" style="letter-spacing:-0.3px;">
+                    <p>Kann ein Kreditnehmer sein Darlehen nicht mehr bedienen, greift unser Forderungsmanagement. Erster Schritt des Prozesses ist ein zweistufiges Mahnverfahren. Ziel unserer Bemühungen ist es, eine Einigung mit dem Unternehmer herbeizuführen und einen Forderungsausfall zu vermeiden.</p>
+                    <p>Frühzeitig kommunizieren wir, sobald erforderlich, mit den betroffenen Investoren und informieren transparent über die aktuelle Situation und nächsten Schritte. <br>Bei Fragen steht Ihnen jederzeit ein <a href="/contact">Ansprechpartner</a> aus dem Kreditnehmer-Service zur Verfügung.</p>
+                    <p>Unsere Kreditanalysten prüfen jeden Forderungsfall individuell. Um die wirtschaftliche Situation eines Betriebs bestmöglich zu bewerten, fordert unser Team neue Unternehmensunterlagen an. Anhand dieser wird entschieden, ob ein Unternehmen restrukturiert werden kann. In solchen Fällen wird die Kreditlaufzeit verändert oder der Kredit gestundet. Andernfalls erfolgt die Kündigung des Kreditvertrages.</p>
+                    <p>Ist nach Ablauf von 30 Tagen keine Rückzahlungsvereinbarung erzielt, erhält der Bürge eine Zahlungsaufforderung von uns.</p>
+                    <p>Nach 50 Tagen erfolgt die Kündigung des Kreditvertrags. Neben dem Verkauf der Forderung, kann die weitere Beitreibung des Außenstands an ein externes Inkassounternehmen abgegeben werden. Aufgabe ist die ausstehenden Forderungen für Sie einzutreiben sowie gegebenenfalls das <a href="http://www.inkasso.de/_downloads/436.pdf">Gerichtsmahnverfahren einzuleiten</a> – natürlich ohne Mehrkosten für Sie!</p>
+                </div>
+                <div class="col-sm-5 hidden-xs">
+                    <img src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/bundles/images/investor/bundles/risk-an.jpg" alt="Das Forderungsmanagement">
+                </div>
+            </div>
+            <a id="section"></a>
+            <div class="blue-box">
+                <div class="col-xs-2 col-sm-1 dark-blue hidden-xs">
+                    <div class="desp-20"></div>
+                    <i class="fa fa-info-circle text-white font-big"></i>
+                </div>
+                <div class="col-xs-12 col-sm-11 col-sm-offset-1 text-white spacing-half">
+                    <h3 class="text-white">Die Bürgschaft - zusätzliche Sicherheit für Investoren</h3>
+                    <p>Geschäftsführer bzw. Eigentümer des Unternehmens bürgen bei Zencap für den Kredit. Sie haften persönlich im Falle eines Kreditausfalls. Kommt ein Kreditnehmer seinen Zahlungen nicht nach, können wir das Darlehen kündigen und den Bürgen in Anspruch nehmen. Für Investoren bedeutet eine Bürgschaft daher zusätzliche Sicherheit.</p>
+                    <p>Sollte das Unternehmen trotz mehrfacher Aufforderung seinen Zahlungsverpflichtungen nicht nachkommen, übernimmt ein externes Inkassounternehmen die Beitreibung der offenen Forderung. Studien belegen, dass 80 % dieser außergerichtlichen Mahnungen zum Erfolg führen*.</p>
+                    <p>Wichtig für Anleger: Für den Fall einer Zahlungsunfähigkeit werden Zencap-Investoren vor allen Gesellschaftern des Unternehmens und anderen nachrangigen Gläubigern bedient.</p>
+                    <small><a class="text-white" href="http://verbaende.com/news.php/Inkassounternehmen-Branchenstudie-liefert-erstmals-umfassende-Zahlen-zum-Gesamtmarkt?m=85321" target="_blank">*http://verbaende.com/news.php/Inkassounternehmen-Branchenstudie-liefert-erstmals-umfassende-Zahlen-zum-Gesamtmarkt?m=85321</a></small>
+                </div>
+            </div><!--End of .blue-box-->
+        </div>
+    </div><!-- end .container-wrapper -->
+
+    <a id="experten"></a>
+
+    <div class="container-wrapper odd">
+        <div class="container spacing">
+            <h2 class="faux-h1 text-center">Unser Team</h2>
+            <p class="text-center">Langjährige Erfahrung im Bankensektor und umfassende Expertise in der Unternehmensbewertung und Risikoprüfung zeichnen unser Analystenteam aus.</p>
+            <div class="row">
+                <div class="col-xs-12 col-sm-2 text-center">
+                    <img src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/bundles/images/investor/bundles/torsten.jpg" class="img-circle" alt="">
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <h3 class="text-investor">Torsten Nahm</h3>
+                    <p><strong>Leiter Risikomanagement</strong><br>
+                        Torsten Nahm besitzt über 8 Jahre Erfahrung in der Risikoanalyse und im Risiko-management. Er war zuvor u.a. als Manager bei KPMG und bei Oliver Wyman tätig, wo er die Entwicklung von branchenführenden Risiko- und Scoringmodellen für Unternehmen verantwortete.</p>
+
+                </div>
+                <div class="col-xs-12 col-sm-2 text-center">
+                    <img src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/bundles/images/investor/bundles/dominic.jpg" class="img-circle" alt="">
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <h3 class="text-investor">Dominic Tolle</h3>
+                    <p><strong>Leiter Kreditanalyse</strong><br>
+                        Dominic Tolle ist Chefanalyst bei Zencap. Seit mehr als acht Jahren analysiert er Firmen- und Gewerbekunden in den Bereichen Sanierung und Restrukturierung und der gewerblichen mmobilienfinanzierung bei der Hamburger Sparkasse, Deutsche Bank und der Mercedes Benz Bank.</p>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-2 text-center">
+                    <img src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/bundles/images/investor/bundles/kerstin.jpg" class="img-circle" alt="">
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <h3 class="text-investor">Kerstin Baker</h3>
+                    <p><strong>Kreditanalystin</strong><br>
+                        Kerstin Baker hat über 20 Jahre Erfahrung in der Kreditbearbeitung und Risikoanalyse von Unternehmen. Als ehemalige Senior Kredit-Analystin und Loan Managerin bei der Deutschen Bank AG und Archon Capital Bank Deutschland GmbH verfügt sie über langjährige Erfahrungen – auch in der Abwicklung von Kreditengagements mit hohem Risiko.</p>
+
+                </div>
+                <div class="col-xs-12 col-sm-2 text-center">
+                    <img src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/bundles/images/investor/bundles/andreas-ekke.jpg" class="img-circle" alt="">
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <h3 class="text-investor">Andreas Ekke</h3>
+                    <p><strong>Kreditanalyst</strong><br>
+                        Andreas Ekke hat über zehn Jahre in der Analyse von Firmenkunden aus verschiedenen Branchen und Sektoren. Bevor er zu Zencap kam, war er bei der HSH Nordbank für die Kreditbewertung deutscher Unternehmensgruppen und international tätiger Unternehmen verantwortlich. </p>
+
+                </div>
+            </div>
+        </div>
+    </div><!-- end .container-wrapper -->
+
+    <div class="container-wrapper">
+        <div class="container spacing">
+            <div class="row">
+                <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                    <h3>Ihre persönlichen Ansprechpartner:</h3>
+                    <p>Sie haben weitere Fragen und möchten unsere Kreditanalystenteam persönlich kontaktieren? Schreiben Sie uns gerne eine E-Mail an <a href="mailto:kreditanalysten@zencap.de">kreditanalysten@zencap.de</a></p>
+                </div>
+            </div>
+        </div>
+    </div><!-- end .container-wrapper -->
+
+</div><!-- end .cms-page -->
+
+
+{% endblock %}
