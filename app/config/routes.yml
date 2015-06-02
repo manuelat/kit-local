@@ -83,6 +83,9 @@ borrowerGettingStarted-NL:
 ratesFeesInvestor:
     path: /cms/ratesFeesInvestor
 
+risikoRendite:
+    path: /cms/risikoRendite
+
 ratesFeesInvestor-NL:
     path: /cms-NL/ratesFeesInvestor-NL
 
@@ -298,6 +301,9 @@ lp-financiacionempresas-ES:
 
 lp-selbststandige:
     path: /cms/lp-selbststandige
+
+lp-investor:
+    path: /cms/lp-investor
 
 referral-01:
     path: /cms/referral-01

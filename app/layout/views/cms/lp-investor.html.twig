@@ -1,0 +1,629 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+
+<style>
+    .header-top{
+        background-color: #01020f;
+        background-image: url('http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/investor-page/hero.jpg');
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        height: 384px;
+    }
+
+    .borrower .benefits-borrower h3 {
+        color:#189bf2;
+        font-size: 16px;
+    }
+
+    .borrower .benefits-borrower h3 {
+        border-bottom-color: #dadada;
+    }
+
+    .borrower .styled li:before{
+        color:#FFF;
+    }
+
+    .btn-green {
+        color:#FFFFFF!important;
+        background-color: #1ca854;
+        -webkit-box-shadow: inset 0 -3px 0 #14753b;
+        -moz-box-shadow: inset 0 -3px 0 #14753b;
+        box-shadow: inset 0 -3px 0 #14753b;
+    }
+
+    .btn-green:hover {
+        background-color: #36c26e;
+    }
+
+    .blue-background{
+        background-color:#0a466e;
+        background-image:url('http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/investor-page/bg-blue-background.png');
+        background-position:  50% bottom;
+        background-repeat:  no-repeat;
+    }
+
+    .logo-bar {
+        line-height: 100px;
+    }
+
+    .logo-bar img {
+        width: 60px;
+    }
+
+    .kunde01 {
+        background: url('http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/investor-page/kunde1.jpg') 50% 50% no-repeat;
+    }
+    .kunde02 {
+        background: url('http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/investor-page/kunde2.jpg') right top no-repeat;
+        background-color: #8f6439;
+    }
+
+    h3 {
+        color:#5c6266;
+    }
+
+    .img-border {
+        border: 1px solid #FFF;
+    }
+
+    td{
+        background-color:#84abc5;
+    }
+    .td-border{
+        border-left: 3px solid #08598c;
+    }
+
+    .risk-team{
+        background: url('http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/investor-page/bg-experts.jpg') right top no-repeat;
+        background-color:#f6f7f8;
+    }
+
+    .add-space{
+        margin-top:15px;
+    }
+
+    .imac img:hover {
+        opacity: 0.8;
+        filter: alpha(opacity=80); /* For IE8 and earlier */
+    }
+
+    .imac img {
+        position: absolute;
+        top: -267px;
+        right: 15px;
+    }
+
+    .imac {
+        position: relative;
+    }
+
+
+    @media screen and (max-width: 991px) {
+        .col-xs-12-text-center img {
+            padding: 22px;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+
+    @media screen and (max-width:767px){
+        .risk-team{
+            background:transparent;
+        }
+
+        .img-border{
+            border:0;
+        }
+
+        .kunde01, .kunde02{
+            background:transparent;
+        }
+        .kunde02 .text-white{
+            color:#5c6266;
+        }
+        .title-h1 {
+            text-align: center;
+        }
+    }
+
+    @media (max-width:767px){
+
+        .risk-team img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .logos-ekomi {
+            margin: 0 auto;
+            display: block;
+        }
+    }
+
+</style>
+
+<div class="cms-page borrower">
+
+<div class="container-wrapper header-top">
+    <div class="container">
+        <div class="page-head">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1 class="text-white title-h1">Investieren Sie in Unternehmen</h1>
+                    <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+                    <h3 style="color:#189bf2;" class="title-h1">Beim preisgekrönten Finanzmarktplatz</h3>
+                </div>
+                <div class="desp-51"></div>
+                <div class="col-xs-12 col-sm-6 text-white text-center">
+                    <p><a id="loan-submit-1" class="btn btn-lg btn-nvstr text-center" type="submit" href="">Jetzt Gratis Konto eröffnen</a></p>
+                    <p class="text-center">Einfach. Online. Rentabel.</p>
+                    <a href="#gruende"><p class="text-center text-white">Mehr erfahren<br>
+                            <img src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/investor-page/arrow.png" alt="Mehr"></p></a>
+                </div>
+            </div>
+        </div><!-- end .page-head -->
+    </div><!-- end .col-xs-12-->
+</div>
+
+<div class="container-wrapper" style="border-bottom:1px solid #dadada;">
+    <div class="container">
+        <div class="desp-5"></div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-3">
+                <img class="logos-ekomi" src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/investor-page/bar/ekomi.png" alt="Ekomi">
+            </div>
+            <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+            <div class="logo-bar">
+                <div class="col-xs-4 col-sm-3 col-md-1">
+                    <img src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/investor-page/bar/sz.png" alt="Süddeutsche Zeitung">
+                </div>
+                <div class="col-xs-4 col-sm-3 col-md-1">
+                    <img src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/investor-page/bar/mittelstand.png" alt="Mittelstand">
+                </div>
+                <div class="col-xs-4 col-sm-2 col-md-1">
+                    <img src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/investor-page/bar/tuv.png" alt="Tüv">
+                </div>
+            </div>
+            <div class="hidden-xs hidden-sm imac">
+                <a href="#invest"><img class="img-responsive" src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/investor-page/imac.png" alt=""></a>
+            </div>
+        </div>
+        <div class="desp-5"></div>
+    </div>
+</div><!--end of bar-->
+
+<a id="gruende"></a>
+
+<div class="container-wrapper benefits-borrower">
+    <div class="container spacing">
+        <h2 class="faux-h1 text-center">Online investieren auf Zencap – 5 gute Gründe</h2>
+
+        <div class="row">
+
+            <div class="col-xs-12 col-md-6">
+                <div class="row visual">
+                    <div class="col-xs-12 visual-inner">
+                        <img class="pull-left" alt="" src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/investor-page/icons/01.png">
+
+                        <div class="col-xs-7 col-sm-10 visual-inner">
+                            <h3>Investieren vom Anfänger bis zum Experten</h3>
+                        </div>
+                    </div>
+                    <div class="desp-10"></div>
+                    <div class="col-xs-12 col-md-10 col-md-offset-2">
+                        <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6 grey-note">
+                <div class="row visual">
+                    <div class="col-xs-12 visual-inner">
+                        <img class="pull-left" alt="" src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/investor-page/icons/02.png">
+
+                        <div class="col-xs-7 col-md-10 visual-inner">
+                            <h3>Hohe Renditen bei geringem Risiko</h3>
+                        </div>
+                    </div>
+                    <div class="desp-10"></div>
+                    <div class="col-xs-12 col-md-10 col-md-offset-2">
+                        <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <div class="row visual">
+                    <div class="col-xs-12 visual-inner">
+                        <img class="pull-left" alt="" src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/investor-page/icons/03.png">
+
+                        <div class="col-xs-7 col-md-10 visual-inner">
+                            <h3>Ab 100 € bei monatlicher Rendite-Zahlung</h3>
+                        </div>
+                    </div>
+                    <div class="desp-10"></div>
+                    <div class="col-xs-12 col-md-10 col-md-offset-2">
+                        <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6 grey-note">
+                <div class="row visual">
+                    <div class="col-xs-12 visual-inner">
+                        <img class="pull-left" alt="" src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/investor-page/icons/04.png">
+
+                        <div class="col-xs-7 col-md-10 visual-inner">
+                            <h3 style="letter-spacing:-0.4px;">Profitieren auch Sie vom deutschen Mittelstand</h3>
+                        </div>
+                    </div>
+                    <div class="desp-10"></div>
+                    <div class="col-xs-12 col-md-10 col-md-offset-2">
+                        <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <div class="row visual">
+                    <div class="col-xs-12 visual-inner">
+                        <img class="pull-left" alt="" src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/investor-page/icons/05.png">
+
+                        <div class="col-xs-7 col-md-10 visual-inner">
+                            <h3>Preisgekrönter Finanzmarktplatz</h3>
+                        </div>
+                    </div>
+                    <div class="desp-10"></div>
+                    <div class="col-xs-12 col-md-10 col-md-offset-2">
+                        <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <div class="desp-20"></div>
+                <div class="col-xs-12 text-center">
+                    <a href="/register/lender/" class="btn btn-lg btn-nvstr">Jetzt Gratis Konto eröffnen</a><br>
+                    <div class="desp-10"></div>
+                    <a href="/darlehen-anfrage/index" style="width:266px;" class="btn btn-lg btn-green">Kreditprojekte entdecken</a><br>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div><!-- end of reasons to apply -->
+
+<a id="invest"></a>
+
+<div class="container-wrapper blue-background">
+    <div class="container spacing text-white">
+        <h2 class="faux-h1 text-center text-white">In was Investieren?<br>
+            <small class="text-white">Mit Zencap Ø 6,29 % Rendite sichern</small></h2>
+        <div class="desp-30"></div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-3">
+                <p>In was Investieren? Sichern Sie sich hohe Renditen und legen ihr Geld in Firmenkredite an.</p>
+                <ul class="styled">
+                    <li>Solide Geldanlage</li>
+                    <li>Höhere Renditen</li>
+                    <li>Beträge ab 100 €</li>
+                </ul>
+                <a href="/darlehen-anfrage/index" class="btn btn-md btn-green">Kreditprojekte entdecken</a><br>
+            </div>
+            <div class="desp-30 hidden-md hidden-lg"></div>
+            <div class="col-xs-12 col-sm-12 col-md-9">
+                <p class="text-white text-right">Investition von 100.000 € im Monat Januar, 2014</p>
+                <img class="img-responsive" src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/investor-page/chart-in-was-invest.png" alt="">
+                <div class="desp-20"></div>
+                <small>Bloomberg; FMH-Finanzberatung; FAZ (2014): Ergebnis für 100.000 Euro angelegt im Jahr 2014 nach der Investitionsform (in Euro), zitiert nach <a href="http://de.statista.com/statistik/daten/studie/206505/umfrage/anlageergebnis-fuer-100000-euro-im-jahr-2011-nach-investitionsform/">de.statista.com</a>, Abruf am 30.04.2008, 14.51 Uhr<br>*durchschnittliche Rendite bei Zencap</small>
+                <div class="desp-20"></div>
+                <div class="text-right">
+                    <a href="/register/lender/" class="btn btn-md btn-nvstr">Jetzt anlegen</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!--End of .blue-background -->
+
+<div class="container-wrapper">
+    <div class="container spacing">
+        <h2 class="faux-h1 text-center">Einfach. Online. Rentabel –<br>Drei Schritte zu Ihrer Rendite</h2>
+        <div class="row">
+            <div class="col-xs-12 col-sm-2 col-sm-offset-2 col-xs-12-text-center">
+                <img class="img-responsive"
+                     src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/investor-page/steps/01.png" alt="">
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <h3>Anlegerkonto eröffnen – <span style="color:#189bf2">1 Minute</span></h3>
+                <p>Registrieren Sie sich in 1 Minute mit Ihrem Namen und Ihrer E-Mail adresse und entdecken Sie spannende Kreditprojekte</p>
+                <div class="text-center">
+                    <a href="/register/lender/" class="btn btn-lg btn-nvstr">Anlegerkonto eröffnen</a><br>
+                    <div class="desp-20"></div>
+                    <img src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/investor-page/steps/arrow.png" alt="">
+                </div>
+            </div>
+        </div><!--End of first step-->
+        <div class="desp-40"></div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-2 col-sm-offset-2 col-xs-12-text-center">
+                <img class="img-responsive"
+                     src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/investor-page/steps/02.png" alt="">
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <h3>Passendes Unternehmen finden</h3>
+                <p>Wählen Sie Ihre Kapitalanlage aus und geben Sie Ihre Bankdaten ein. Die Abwicklung erfolgt bequem per Lastschrift.</p>
+                <div class="text-center">
+                    <a href="/darlehen-anfrage/index" class="btn btn-lg btn-green">Jetzt Unternehmen finden</a><br>
+                    <div class="desp-20"></div>
+                    <img src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/investor-page/steps/arrow.png" alt="">
+                </div>
+            </div>
+        </div><!--End of second step-->
+        <div class="desp-40"></div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-2 col-sm-offset-2 col-xs-12-text-center">
+                <img class="img-responsive"
+                     src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/investor-page/steps/03.png" alt="">
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <h3>Monatliche Rückzahlungen</h3>
+                <p>Nutzen Sie Ihr Dashboard, um den Überblick über Ihre Zinseinkünfte und monatlichen Rückzahlungen zu behalten</p>
+            </div>
+        </div><!--End of second step-->
+    </div>
+</div> <!--End of Steps-->
+
+<div class="container-wrapper">
+    <div class="container">
+        <h2 class="faux-h1 text-center">Innovative Investments mit Weitblick</h2>
+    </div>
+</div>
+
+<div class="container-wrapper kunde01 blockquote">
+    <div class="container spacing">
+        <div class="row">
+            <div class="col-xs-12 col-sm-7 col-sm-offset-5">
+                <h3>Dr. Stefan Michallik - Investor bei Zencap</h3>
+                <blockquote><p>Der große Vorteil bei Zencap: Bei dem Online-Marktplatz wird bereits vorsortiert und die Kredite werden von A+ bis C- eingestuft.</p></blockquote>
+                <div class="text-right">
+                    <a href="/register/lender/" class="btn btn-md btn-nvstr">Anleger werden</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!--End of Kunde01-->
+
+<div class="container-wrapper kunde02 blockquote">
+    <div class="container spacing">
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 grey-note">
+                <h3 class="text-white">Ihr Zencap-Team</h3>
+                <blockquote class="text-white"><p>Als Investor bei Zencap erhalten Sie monatliche Rückzahlungen. Um die Rendite aus Ihrem Investment zu optimieren, können sie diese Rückzahlungen direkt in neue kreditwürdige Unternehmen re-investieren. So stellen Sie sicher, dass Ihr Geld zu jedem Zeitpunkt optimal für Sie arbeitet.</p></blockquote>
+            </div>
+        </div>
+    </div>
+</div><!--End of Kunde02-->
+
+<div class="container-wrapper press-quotes hidden-xs">
+    <div class="container spacing">
+        <div class="row">
+            <div class="col-xs-12 logos text-center">
+                <div id="homepageCarousel" class="carousel slide" style="min-height: 215px;">
+                    <!-- Carousel items -->
+                    <div class="carousel-inner row">
+                        <div class="active item col-xs-12">
+                            <a href="https://d1x3gb5zl465n8.cloudfront.net/de/press/articles/2014-07-01_boersen-zeitung_Zencap_brisantes-Finanzierungsneuland.pdf"
+                               target="_blank"><img src="https://d1x3gb5zl465n8.cloudfront.net/de/press/borsen.png"
+                                                    alt="Börsenzeitung" class="img-responsive"></a>
+                            <blockquote>
+                                <p>&nbsp;Das Zencap-Prinzip wird sich in Deutschland wie zuvor in Großbritannien und
+                                    den USA etablieren. Mit der Fokussierung auf kleine Mittelständler greift Zencap
+                                    das Geschäft an, in dem traditionelle Banken hauptsächlich ihr Geld
+                                    verdienen.</p>
+
+                                <p class="text-center"><a href="/press" title="" target="_blank"><em>Zencap in der
+                                            Presse</em></a></p>
+                            </blockquote>
+                        </div>
+
+                        <div class="item col-xs-12">
+                            <a href="https://d1x3gb5zl465n8.cloudfront.net/de/press/articles/140410_sueddeutsche-zeitung_das-problem-mit-dem-geld.pdf"
+                               target="_blank"><img
+                                    src="https://d1x3gb5zl465n8.cloudfront.net/de/press/frankfurterallgemeine.png"
+                                    alt="Frankfurter Allgemeine" class="img-responsive"></a>
+                            <blockquote>
+                                <p>&nbsp;Experten halten Online-Kredite für Mittelständler für eine realistische
+                                    Alternative zur klassischen Bankenfinanzierung (…). Vor allem für kleinere
+                                    Unternehmen ist das Modell von Zencap interessant.</p>
+
+                                <p class="text-center"><a href="/press" title="" target="_blank"><em>Zencap in der
+                                            Presse</em></a></p>
+                            </blockquote>
+                        </div>
+
+
+                        <div class="item col-xs-12">
+                            <a href="http://www.handelsblatt.com/unternehmen/leasing-spezial/neue-samwer-plattform-jungunternehmer-finanzieren-den-mittelstand/9931626.html"
+                               target="_blank"><img
+                                    src="https://d1uuy7l9kfwygp.cloudfront.net/bundles/intlendweblayout/frontend/images/cms/press/handelsblatt.png"
+                                    alt="Handeslblatt" class="img-responsive"></a>
+                            <blockquote>
+                                <p>Die Internetplattform Zencap vermittelt Darlehen an Firmen – nach gründlicher
+                                    Bonitätsprüfung und zum Missfallen vieler Banken (…). Zwar laufen viele Prozesse
+                                    <br>IT-gestützt, aber beim Bilanzcheck vertraut Zencap auf erfahrene Analysten.
+                                </p>
+
+                                <p class="text-center"><a href="/press" title="" target="_blank"><em>Zencap in der
+                                            Presse</em></a></p>
+                            </blockquote>
+                        </div>
+
+                        <div class="item col-xs-12">
+
+                            <a href="https://d1x3gb5zl465n8.cloudfront.net/de/press/articles/140410_sueddeutsche-zeitung_das-problem-mit-dem-geld.pdf"
+                               target="_blank"><img
+                                    src="https://d1x3gb5zl465n8.cloudfront.net/de/press/suddeutsche_zeitung.png"
+                                    alt="Süddeutsche Zeitung"></a>
+                            <blockquote>
+                                <p>Die Finanzierung der vielen Mittelständler ist zunehmend ein Problem. Durchs
+                                    Raster fallen die Unternehmen, die das Rückgrat des Wirtschaftsstandorts
+                                    Deutschlands sind (...). In diese Lücke springen nun Internetplattformen wie
+                                    Zencap.</p>
+
+                                <p class="text-center"><a href="/press" title="" target="_blank"><em>Zencap in der
+                                            Presse</em></a></p>
+                            </blockquote>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- end .press-quotes -->
+
+<div class="container-wrapper blue-background">
+    <div class="container spacing text-white">
+        <h2 class="faux-h1 text-center text-white">Aktuelle Kreditprojekte</h2>
+        <div class="row">
+            <div class="col-xs-12 col-md-4 col-xs-12-text-center">
+                <img class="img-border img-responsive" src="http://placehold.it/300x195"><br><br>
+                <h3 class="text-white">Ihr Investition in Nachhaltigkeit</h3><br>
+                <table class="table">
+                    <tr class="text-center">
+                        <td>60.000 €<br>
+                            Kreditbetrag</td>
+                        <td class="td-border">3 Jahre<br>
+                            Laufzeit</td>
+                        <td class="td-border">5,81 %<br>
+                            Zinssatz</td>
+                    </tr>
+                </table>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                <div class="text-center">
+                    <a href="/register/lender/" class="btn btn-lg btn-nvstr">Jetzt anlegen</a>
+                </div>
+            </div><!--End of Projet 1-->
+            <div class="desp-30 hidden-md hidden-lg"></div>
+            <div class="col-xs-12 col-md-4 col-xs-12-text-center">
+                <img class="img-border img-responsive" src="http://placehold.it/300x195"><br><br>
+                <h3 class="text-white">Ihr Investition in Nachhaltigkeit</h3><br>
+                <table class="table">
+                    <tr class="text-center">
+                        <td>60.000 €<br>
+                            Kreditbetrag</td>
+                        <td class="td-border">3 Jahre<br>
+                            Laufzeit</td>
+                        <td class="td-border">5,81 %<br>
+                            Zinssatz</td>
+                    </tr>
+                </table>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                <div class="text-center">
+                    <a href="/register/lender/" class="btn btn-lg btn-nvstr">Jetzt anlegen</a>
+                </div>
+            </div><!--End of Projet 2-->
+            <div class="desp-30 hidden-md hidden-lg"></div>
+            <div class="col-xs-12 col-md-4 col-xs-12-text-center">
+                <img class="img-border img-responsive" src="http://placehold.it/300x195"><br><br>
+                <h3 class="text-white">Ihr Investition in Nachhaltigkeit</h3><br>
+                <table class="table">
+                    <tr class="text-center">
+                        <td>60.000 €<br>
+                            Kreditbetrag</td>
+                        <td class="td-border">3 Jahre<br>
+                            Laufzeit</td>
+                        <td class="td-border">5,81 %<br>
+                            Zinssatz</td>
+                    </tr>
+                </table>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                <div class="text-center">
+                    <a href="/register/lender/" class="btn btn-lg btn-nvstr">Jetzt anlegen</a>
+                </div>
+            </div>
+            <div class="desp-30 hidden-sm hidden-md hidden-lg"></div>
+        </div><!--End of Images-->
+    </div>
+</div> <!--End of .blue-background -->
+
+<div class="container-wrapper risk-team">
+    <div class="container spacing">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="faux-h1 text-center">Unsere Kreditexperten</h2>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <img src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/thorsten.jpg" alt="">
+                <div class="desp-20"></div>
+                <h3 class="text-investor">Thorsten Nahm</h3>
+                <p><strong>Leitung Risikoanalyse</strong><br>
+                    8+ Jahre Erfahrung</p>
+                <small>Ehemals: Commerzbank</small>
+            </div>
+            <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <img src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/dominic.jpg" alt="">
+                <div class="desp-20"></div>
+                <h3 class="text-investor">Dominic Tolle</h3>
+                <p><strong>Leitung Risikoanalyse</strong><br>
+                    8+ Jahre Erfahrung</p>
+                <small>Ehemals: Haspa</small>
+            </div>
+            <div class="desp-20 hidden-md hidden-lg"></div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <img src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/andreas.jpg" alt="">
+                <div class="desp-20"></div>
+                <h3 class="text-investor">Andreas Ecke</h3>
+                <p><strong>Senior Kreditanalyst</strong><br>
+                    15+ Jahre Erfahrung</p>
+                <small>Ehemals: HSH Nordbank</small>
+            </div>
+            <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <img src="https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/kerstin.jpg" alt="">
+                <div class="desp-20"></div>
+                <h3 class="text-investor">Kerstin Baker</h3>
+                <p><strong>Senior Kreditanalyst</strong><br>
+                    20+ Jahre Erfahrung</p>
+                <small>Ehemals: Deutsche Bank</small>
+            </div>
+        </div><!-- end .row -->
+
+    </div>
+</div><!-- end .container-wrapper -->
+
+<div class="container-wrapper">
+    <div class="container page-head">
+        <h2 class="faux-h1 text-center">Nehmen Sie persönlich Kontakt mit uns auf</h2>
+        <div class="row">
+            <div class="col-xs-12">
+                <a href="https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/unternehmensfinanzierung-mit-zencap.pdf" target="_blank"><img class="pull-left hidden-xs" src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/investor-page/download.png" alt=""></a>
+                <div class="col-xs-12 col-sm-5 col-md-5 add-space">
+                    <p><strong><a href="https://d1x3gb5zl465n8.cloudfront.net/de/lp/borrower-noindex/unternehmensfinanzierung-mit-zencap.pdf" target="_blank">Download</a><br>unserer Kreditnehmerbroschüre.</strong></p>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 add-space">
+                    <p><strong>Sprechen Sie mit unseren Experten<br>
+                            Telefon: <span class="text-investor">030 / 2084900 – 17</span><br>
+                            Email: <a href="mailto:unternehmen@zencap.de">unternehmen@zencap.de</a></strong></p>
+                </div>
+            </div>
+            <img class="hidden-xs img-responsive" src="http://marketing-resources.zencap.de.s3.amazonaws.com/de/lp/investor-page/sales-team.jpg">
+        </div>
+        <!-- end .row -->
+    </div>
+</div><!-- end .container-wrapper -->
+
+</div><!-- end .cms-page -->
+
+{% endblock %}
+
+{% block js %}
+{{ parent() }}
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.carousel').carousel({
+            interval: 5000
+        })
+    });
+</script>
+
+{% endblock %}
