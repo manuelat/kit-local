@@ -67,14 +67,27 @@
     <script>
         /* horizontal loan request menu */
         function stepsResize() {
-            if ($(document).width() > 675 && $(document).width() < 992) {
+            if ($(document).width() < 750) {
+                // get <ul> width
                 var div_width = $('.register-step').width();
+                // get the number of <li> items
+                var steps_number = $('.register-step-item').length;
+                // set percentage width for each <li> item
+                $('.register-step-item').css({'width': 100/steps_number + '%'});
+            } else if ($(document).width() >= 750 && $(document).width() < 992) {
+                // remove the width that was set above for each <li> item
+                $('.register-step-item').css({'width': ''});
+                // get ul width
+                var div_width = $('.register-step').width();
+                // calculate new width for element that has description text to fill the window
                 var new_width = div_width - ($('.register-step-item').length * 45);
+                // set new width to text element inside <li> item
                 $('.register-step .active .text').css({'width': new_width + 'px'});
             }
         }
         $(function(){
             $(window).load(function() {
+
                 stepsResize();
                 resizeOffcanvasHeight();
             });
