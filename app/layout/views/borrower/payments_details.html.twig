@@ -19,25 +19,54 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-xs-12">
-            <ul class="list-inline">
-                <li><a href="">Version 2 - active since 02.03.2015</a></li>
-                <li><a href="">Version 1 - active from 01.01.2015 to 01.03.2015</a></li>
-            </ul>
-        </div>
-    </div>
-
+    <!-- tabs for mobile and tablet -->
     <div class="row">
         <div class="col-xs-12 col-sm-12 hidden-md hidden-lg payments cancel-padding">
-            {# accordion on mobile and tablet #}
-            {% include '_partials/tables/borrower_payments_details_table_mobile.html.twig' %}
+            <ul role="tablist" class="nav nav-tabs">
+                <li class="dropdown" role="presentation">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#"><span id="dropdown-change">Dropdown</span> <span class="fa fa-sort-down"></span></a>
+                    <ul role="menu" class="dropdown-menu">
+                        <li class="active"><a aria-controls="xs-version1" data-toggle="tab" id="xs-version1-tab" role="tab" tabindex="-1" href="#xs-version1">Version 1 Aktiv</a></li>
+                        <li><a aria-controls="xs-version2" data-toggle="tab" id="xs-version2-tab" role="tab" tabindex="-1" href="#xs-version2">Version 2 Aktiv</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div aria-labelledby="xs-version1-tab" id="xs-version1" class="tab-pane fade active in" role="tabpanel">
+                    <!-- accordion on mobile and tablet -->
+                    <!-- TO DO change dynamically the ID's from the accordion bellow -->
+                    {% include '_partials/tables/borrower_payments_details_table_mobile.html.twig' %}
+                </div>
+                <div aria-labelledby="xs-version2-tab" id="xs-version2" class="tab-pane fade" role="tabpanel">
+                    <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.</p>
+                </div>
+            </div>
         </div>
+    </div><!-- .row -->
+
+    <!-- tabs for desktop -->
+    <div class="row">
         <div class="hidden-xs hidden-sm col-md-12 col-lg-12 payments cancel-padding">
-            {# table on desktop #}
-            {% include '_partials/tables/borrower_payments_details_table.html.twig' %}
+            <ul role="tablist" class="nav nav-tabs">
+                <li class="dropdown" role="presentation">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">Dropdown <span class="fa fa-sort-down"></span></a>
+                    <ul role="menu" class="dropdown-menu">
+                        <li><a aria-controls="version1" data-toggle="tab" id="dropdown1-tab" role="tab" tabindex="-1" href="#version1">Version 1 Aktiv</a></li>
+                        <li><a aria-controls="version2" data-toggle="tab" id="dropdown2-tab" role="tab" tabindex="-1" href="#version2">Version 2 Aktiv</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div aria-labelledby="version1-tab" id="version1" class="tab-pane fade" role="tabpanel">
+                    <!-- table on desktop -->
+                    {% include '_partials/tables/borrower_payments_details_table.html.twig' %}
+                </div>
+                <div aria-labelledby="version2-tab" id="version2" class="tab-pane fade" role="tabpanel">
+                    <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.</p>
+                </div>
+            </div>
         </div>
-    </div>
+    </div><!-- .row -->
 
 </div><!-- end .container -->
 
