@@ -22,17 +22,17 @@
     <!-- tabs for mobile and tablet -->
     <div class="row">
         <div class="col-xs-12 col-sm-12 hidden-md hidden-lg payments cancel-padding">
-            <ul role="tablist" class="nav nav-tabs">
+            <ul role="tablist" class="nav nav-tabs" id="mobile-tab">
                 <li class="dropdown" role="presentation">
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#"><span id="dropdown-change">Dropdown</span> <span class="fa fa-sort-down"></span></a>
                     <ul role="menu" class="dropdown-menu">
-                        <li class="active"><a aria-controls="xs-version1" data-toggle="tab" id="xs-version1-tab" role="tab" tabindex="-1" href="#xs-version1">Version 1 Aktiv</a></li>
+                        <li><a aria-controls="xs-version1" data-toggle="tab" id="xs-version1-tab" role="tab" tabindex="-1" href="#xs-version1">Version 1 Aktiv</a></li>
                         <li><a aria-controls="xs-version2" data-toggle="tab" id="xs-version2-tab" role="tab" tabindex="-1" href="#xs-version2">Version 2 Aktiv</a></li>
                     </ul>
                 </li>
             </ul>
             <div class="tab-content">
-                <div aria-labelledby="xs-version1-tab" id="xs-version1" class="tab-pane fade active in" role="tabpanel">
+                <div aria-labelledby="xs-version1-tab" id="xs-version1" class="tab-pane fade" role="tabpanel">
                     <!-- accordion on mobile and tablet -->
                     <!-- TO DO change dynamically the ID's from the accordion bellow -->
                     {% include '_partials/tables/borrower_payments_details_table_mobile.html.twig' %}
@@ -46,8 +46,8 @@
 
     <!-- tabs for desktop -->
     <div class="row">
-        <div class="hidden-xs hidden-sm col-md-12 col-lg-12 payments cancel-padding">
-            <ul role="tablist" class="nav nav-tabs">
+        <div class="hidden-xs hidden-sm col-md-12 col-lg-12 payments cancel-padding tabber">
+            <ul role="tablist" class="nav nav-tabs" id="desktop-tab">
                 <li class="dropdown" role="presentation">
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">Dropdown <span class="fa fa-sort-down"></span></a>
                     <ul role="menu" class="dropdown-menu">
@@ -71,3 +71,13 @@
 </div><!-- end .container -->
 
 {% endblock body %}
+
+{% block js %}
+{{ parent() }}
+    <script>
+        $(function(){
+            $('#mobile-tab > li > ul> li > a:first').tab('show');
+            $('#desktop-tab > li > ul> li > a:first').tab('show');
+        });
+    </script>
+{% endblock %}
