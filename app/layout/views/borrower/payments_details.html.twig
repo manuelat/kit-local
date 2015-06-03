@@ -21,10 +21,10 @@
 
     <!-- tabs for mobile and tablet -->
     <div class="row">
-        <div class="col-xs-12 col-sm-12 hidden-md hidden-lg payments cancel-padding">
+        <div class="col-xs-12 col-sm-12 hidden-md hidden-lg payments cancel-padding tabber">
             <ul role="tablist" class="nav nav-tabs" id="mobile-tab">
                 <li class="dropdown" role="presentation">
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="#"><span id="dropdown-change">Dropdown</span> <span class="fa fa-sort-down"></span></a>
+                    <a data-toggle="dropdown" class="dropdown-toggle custom-display" href="#"><span class="tab-select-label">Dropdown</span> <span class="fa fa-sort-down"></span></a>
                     <ul role="menu" class="dropdown-menu">
                         <li><a aria-controls="xs-version1" data-toggle="tab" id="xs-version1-tab" role="tab" tabindex="-1" href="#xs-version1">Version 1 Aktiv</a></li>
                         <li><a aria-controls="xs-version2" data-toggle="tab" id="xs-version2-tab" role="tab" tabindex="-1" href="#xs-version2">Version 2 Aktiv</a></li>
@@ -49,7 +49,7 @@
         <div class="hidden-xs hidden-sm col-md-12 col-lg-12 payments cancel-padding tabber">
             <ul role="tablist" class="nav nav-tabs" id="desktop-tab">
                 <li class="dropdown" role="presentation">
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">Dropdown <span class="fa fa-sort-down"></span></a>
+                    <a data-toggle="dropdown" class="dropdown-toggle custom-display" href="#"><span class="tab-select-label">Dropdown</span> <span class="fa fa-sort-down"></span></a>
                     <ul role="menu" class="dropdown-menu">
                         <li><a aria-controls="version1" data-toggle="tab" id="dropdown1-tab" role="tab" tabindex="-1" href="#version1">Version 1 Aktiv</a></li>
                         <li><a aria-controls="version2" data-toggle="tab" id="dropdown2-tab" role="tab" tabindex="-1" href="#version2">Version 2 Aktiv</a></li>
@@ -76,8 +76,14 @@
 {{ parent() }}
     <script>
         $(function(){
-            $('#mobile-tab > li > ul> li > a:first').tab('show');
-            $('#desktop-tab > li > ul> li > a:first').tab('show');
+            $('#mobile-tab > li > ul > li > a:first').tab('show');
+            $('#desktop-tab > li > ul > li > a:first').tab('show');
+            var firstTabContent = $('#desktop-tab > li > ul> li > a:first').html();
+            $('.tabber .tab-select-label').html(firstTabContent);
+            $('#desktop-tab > li > ul > li > a, #mobile-tab > li > ul > li > a').click(function(){
+                var newContent = $(this).html();
+                $('.tabber .tab-select-label').html(newContent);
+            });
         });
     </script>
 {% endblock %}
