@@ -166,4 +166,16 @@ $(function() {
         collapseOnResize();
     });
 
+
+    /* borrower and lender payment details tab dropdown*/
+    $('#mobile-tab > li > ul > li > a:first').tab('show');
+    $('#desktop-tab > li > ul > li > a:first').tab('show');
+    var firstTabContent = $('#desktop-tab > li > ul> li > a:first').html();
+    $('.tabber .tab-select-label').html(firstTabContent);
+    $('#desktop-tab > li > ul > li > a, #mobile-tab > li > ul > li > a').click(function(){
+        var newContent = $(this).html();
+        $('.tabber .tab-select-label').html(newContent);
+    });
+
+
 });

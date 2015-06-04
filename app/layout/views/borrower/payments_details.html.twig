@@ -19,7 +19,7 @@
         </div>
     </div>
 
-    <!-- tabs for mobile and tablet -->
+    <!-- dropdown tab for mobile and tablet -->
     <div class="row">
         <div class="col-xs-12 col-sm-12 hidden-md hidden-lg payments cancel-padding tabber">
             <ul role="tablist" class="nav nav-tabs" id="mobile-tab">
@@ -44,15 +44,15 @@
         </div>
     </div><!-- .row -->
 
-    <!-- tabs for desktop -->
+    <!-- dropdown tab for desktop -->
     <div class="row">
         <div class="hidden-xs hidden-sm col-md-12 col-lg-12 payments cancel-padding tabber">
             <ul role="tablist" class="nav nav-tabs" id="desktop-tab">
                 <li class="dropdown" role="presentation">
                     <a data-toggle="dropdown" class="dropdown-toggle custom-display" href="#"><span class="tab-select-label">Dropdown</span> <span class="fa fa-sort-down"></span></a>
                     <ul role="menu" class="dropdown-menu">
-                        <li><a aria-controls="version1" data-toggle="tab" id="dropdown1-tab" role="tab" tabindex="-1" href="#version1">Version 1 Aktiv</a></li>
-                        <li><a aria-controls="version2" data-toggle="tab" id="dropdown2-tab" role="tab" tabindex="-1" href="#version2">Version 2 Aktiv</a></li>
+                        <li><a aria-controls="version1" data-toggle="tab" id="version1-tab" role="tab" tabindex="-1" href="#version1">Version 1 Aktiv</a></li>
+                        <li><a aria-controls="version2" data-toggle="tab" id="version2-tab" role="tab" tabindex="-1" href="#version2">Version 2 Aktiv</a></li>
                     </ul>
                 </li>
             </ul>
@@ -72,18 +72,3 @@
 
 {% endblock body %}
 
-{% block js %}
-{{ parent() }}
-    <script>
-        $(function(){
-            $('#mobile-tab > li > ul > li > a:first').tab('show');
-            $('#desktop-tab > li > ul > li > a:first').tab('show');
-            var firstTabContent = $('#desktop-tab > li > ul> li > a:first').html();
-            $('.tabber .tab-select-label').html(firstTabContent);
-            $('#desktop-tab > li > ul > li > a, #mobile-tab > li > ul > li > a').click(function(){
-                var newContent = $(this).html();
-                $('.tabber .tab-select-label').html(newContent);
-            });
-        });
-    </script>
-{% endblock %}
