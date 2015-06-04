@@ -32,8 +32,8 @@
             <div class="panel-heading">truncate</div>
             <div class="panel-body">
                 <h5>Write</h5>
-                <pre>{{ "{{ 'this is my long text to be displayed in this view' | nice_url_title(10) }}" }}</pre>
-                will display the first 10 characters from the string
+                <pre>{{ "{{ 'this is my long text to be displayed in this view' | truncate(10) }}" }}</pre>
+                will display the first 10 characters from the string. (default is 255 characters)
 
                 <h5>Rendered in HTML</h5>
                 <pre>{{ 'this is my long text to be displayed in this view' | truncate(10) }}</pre>
