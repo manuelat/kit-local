@@ -29,10 +29,10 @@
     </div>
 
     <div class="row">
-        <div class="col-xs-12 col-sm-6 cancel-padding">
+        <div class="col-xs-12 col-sm-6 cancel-padding-left xs-padding">
             {% include '_partials/tables/loan_default_summary_table.html.twig' %}
         </div>
-        <div class="col-xs-12 col-sm-6 cancel-padding">
+        <div class="col-xs-12 col-sm-6 cancel-padding-right xs-padding">
             {% include '_partials/tables/lender_investments_table.html.twig' %}
         </div>
     </div><!-- end .row -->
@@ -45,7 +45,7 @@
 
     <h1> TESTING SPAIN</h1>
     <div class="row">
-        <div class="col-xs-12 col-sm-6 cancel-padding">
+        <div class="col-xs-12 col-sm-6 cancel-padding-left xs-padding">
             <table class="table">
                 <thead>
                 <tr>
@@ -85,7 +85,7 @@
                 </tbody>
             </table>
         </div>
-        <div class="col-xs-12 col-sm-6 cancel-padding">
+        <div class="col-xs-12 col-sm-6 cancel-padding-right xs-padding">
             <div class="table-responsive">
                 <table class="table">
                 <thead>
@@ -129,7 +129,7 @@
 
     <h1> TESTING NETHERLAND</h1>
     <div class="row">
-        <div class="col-xs-12 col-sm-6 cancel-padding">
+        <div class="col-xs-12 col-sm-6 cancel-padding-left xs-padding">
             <table class="table">
                 <thead>
                 <tr>
@@ -169,7 +169,7 @@
                 </tbody>
             </table>
         </div>
-        <div class="col-xs-12 col-sm-6 cancel-padding">
+        <div class="col-xs-12 col-sm-6 cancel-padding-right xs-padding">
             <div class="table-responsive">
                 <table class="table">
                 <thead>
@@ -213,7 +213,9 @@
     {# ================ END TO DELETE ====================== #}
 
 
-    <div class="row">
+
+    <!-- ticket 2368 says to delete this table ??? -->
+    {#<div class="row">
         <div class="col-xs-12">
             <p class="faux-h3">Zahlungsverlauf</p>
         </div>
@@ -221,11 +223,11 @@
 
     <div class="row">
         <div class="col-xs-12 col-sm-12 hidden-md hidden-lg payments cancel-padding">
-            {# accordion on mobile and tablet #}
+            <!-- accordion on mobile and tablet -->
             {% include '_partials/tables/payment_history_table_mobile.html.twig' %}
         </div>
         <div class="hidden-xs hidden-sm col-md-12 col-lg-12 payments cancel-padding">
-            {# table on desktop #}
+            <!-- table on desktop -->
             {% include '_partials/tables/payment_history_table.html.twig' %}
         </div>
     </div>
@@ -234,18 +236,88 @@
         <div class="col-xs-12">
             <p class="faux-h3">Zahlungsplan (nach Service-Gebühr) <i data-original-title="Lorem Ipsum." class="fa fa-question-circle" data-toggle="tooltip" data-placement="top" title=""></i> <sup>1</sup></p>
         </div>
-    </div>
+    </div>#}
 
+    <!-- tabs for mobile and tablet -->
+    {#<div class="row">
+        <div class="col-xs-12 col-sm-12 hidden-md hidden-lg payments cancel-padding tabber">
+            <ul role="tablist" class="nav nav-tabs" id="mobile-tab">
+                <li class="dropdown" role="presentation">
+                    <a data-toggle="dropdown" class="dropdown-toggle custom-display" href="#"><span class="tab-select-label">Dropdown</span> <span class="fa fa-sort-down"></span></a>
+                    <ul role="menu" class="dropdown-menu">
+                        <li class="active"><a aria-controls="xs-vers1" data-toggle="tab" id="xs-vers1-tab" role="tab" tabindex="-1" href="#xs-vers1">vers 1 Aktiv</a></li>
+                        <li><a aria-controls="xs-vers2" data-toggle="tab" id="xs-vers2-tab" role="tab" tabindex="-1" href="#xs-vers2">vers 2 Aktiv</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div aria-labelledby="xs-vers1-tab" id="xs-vers1" class="tab-pane fade active in" role="tabpanel">
+                    <!-- accordion on mobile and tablet -->
+                    <!-- TO DO change dynamically the ID's from the accordion bellow -->
+                    {% include '_partials/tables/payment_plan_table_mobile.html.twig' %}
+                </div>
+                <div aria-labelledby="xs-vers2-tab" id="xs-vers2" class="tab-pane fade" role="tabpanel">
+                    <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.</p>
+                </div>
+            </div>
+        </div>
+    </div>#}
+    <!-- .row -->
+
+
+    <!-- dropdown tab for mobile and tablet -->
     <div class="row">
-        <div class="col-xs-12 col-sm-12 hidden-md hidden-lg payments cancel-padding">
-            {# accordion on mobile and tablet #}
-            {% include '_partials/tables/payment_plan_table_mobile.html.twig' %}
+        <div class="col-xs-12 col-sm-12 hidden-md hidden-lg payments cancel-padding tabber">
+            <ul role="tablist" class="nav nav-tabs" id="mobile-tab">
+                <li class="dropdown" role="presentation">
+                    <a data-toggle="dropdown" class="dropdown-toggle custom-display" href="#"><span class="tab-select-label">Dropdown</span> <span class="fa fa-sort-down"></span></a>
+                    <ul role="menu" class="dropdown-menu">
+                        <li><a aria-controls="xs-vers1" data-toggle="tab" id="xs-vers1-tab" role="tab" tabindex="-1" href="#xs-vers1">Version 1 Aktiv</a></li>
+                        <li><a aria-controls="xs-vers2" data-toggle="tab" id="xs-vers2-tab" role="tab" tabindex="-1" href="#xs-vers2">Version 2 Aktiv</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div aria-labelledby="xs-vers1-tab" id="xs-vers1" class="tab-pane fade" role="tabpanel">
+                    <!-- accordion on mobile and tablet -->
+                    <!-- TO DO change dynamically the ID's from the accordion bellow -->
+                    {% include '_partials/tables/payment_plan_table_mobile.html.twig' %}
+                </div>
+                <div aria-labelledby="xs-vers2-tab" id="xs-vers2" class="tab-pane fade" role="tabpanel">
+                    <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.</p>
+                </div>
+            </div>
         </div>
-        <div class="hidden-xs hidden-sm col-md-12 col-lg-12 payments cancel-padding">
-            {# table on desktop #}
-            {% include '_partials/tables/payment_plan_table.html.twig' %}
+    </div><!-- .row -->
+
+    <!-- tabs for desktop -->
+    <div class="row">
+        <div class="hidden-xs hidden-sm col-md-12 col-lg-12 payments cancel-padding tabber">
+            <ul role="tablist" class="nav nav-tabs" id="desktop-tab">
+                <li class="dropdown" role="presentation">
+                    <a data-toggle="dropdown" class="dropdown-toggle custom-display" href="#"><span class="tab-select-label"></span> <span class="fa fa-sort-down"></span></a>
+                    <ul role="menu" class="dropdown-menu">
+                        <li><a aria-controls="vers1" data-toggle="tab" id="dropdown1-tab" role="tab" tabindex="-1" href="#vers1">Version 1 Aktiv</a></li>
+                        <li><a aria-controls="vers2" data-toggle="tab" id="dropdown2-tab" role="tab" tabindex="-1" href="#vers2">Version 2 Aktiv</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div aria-labelledby="vers1-tab" id="vers1" class="tab-pane fade" role="tabpanel">
+                    <!-- table on desktop -->
+                    {% include '_partials/tables/payment_plan_table.html.twig' %}
+                </div>
+                <div aria-labelledby="vers2-tab" id="vers2" class="tab-pane fade" role="tabpanel">
+                    <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.</p>
+                </div>
+            </div>
         </div>
-    </div>
+    </div><!-- .row -->
+
+
+
+
+
 
 </div><!-- end .container -->
 
