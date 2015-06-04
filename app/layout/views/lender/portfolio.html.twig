@@ -46,6 +46,7 @@
                         <th class="hidden-xs hidden-sm text-center">Resterende duur</th>
                         <th class="hidden-xs hidden-sm text-center">Investeringsbedrag</th>
                         <th class="text-right right-position">Aflossing in behandeling</th>
+                        <th class="hidden-xs text-center">Status</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -57,7 +58,7 @@
                             <td class="hidden-md hidden-lg"></td>
 
                             <td class="loan-title">
-                                <a href="{{ path('lender_portfolio_loans') }}">{{ art.title }}</a>
+                                <a class="xs-height" href="{{ path('lender_portfolio_loans') }}">{{ art.title| truncate(35) }}</a>
                             </td>
 
                             <td class="hidden-sm hidden-md hidden-lg text-right">
@@ -70,6 +71,10 @@
                             <td class="hidden-xs hidden-sm text-center">{{ art.days_left }}</td>
                             <td class="hidden-xs hidden-sm text-right">{{ art.amount }}</td>
                             <td class="text-right right-position">{{ art.amount_pending }}</td>
+                            <td class="hidden-xs align-bullet">
+                                <div class="bullet defaulted"></div>
+                                <div class="bullet-label">defaulted</div>
+                            </td>
                         </tr>
                     {% endfor %}
                     </tbody>
@@ -82,48 +87,53 @@
         <div class="row">
             <div class="col-xs-12 cancel-padding">
                 <table class="table custom-table">
-                <thead>
+            <thead>
+            <tr>
+                <th class="hidden-md hidden-lg"></th>
+                <th class="hidden-xs hidden-sm">Activa desde</th>
+                <th class="hidden-md hidden-lg"></th>
+                <th>Proyectos de préstamos</th>
+                <th class="hidden-sm hidden-md hidden-lg"></th>
+                <th class="hidden-xs hidden-sm text-center">Categoría</th>
+                <th class="hidden-xs text-right">Tipo de interés</th>
+                <th class="hidden-xs text-right hidden-md hidden-lg">Plazo</th>
+                <th class="hidden-xs hidden-sm text-center">Tiempo restante</th>
+                <th class="hidden-xs hidden-sm text-center">Importe de inversión</th>
+                <th class="text-right right-position">Amortización pendiente</th>
+                <th class="hidden-xs text-center">Status</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            {% for art in articles_es %}
                 <tr>
-                    <th class="hidden-md hidden-lg"></th>
-                    <th class="hidden-xs hidden-sm">Activa desde</th>
-                    <th class="hidden-md hidden-lg"></th>
-                    <th>Proyectos de préstamos</th>
-                    <th class="hidden-sm hidden-md hidden-lg"></th>
-                    <th class="hidden-xs hidden-sm text-center">Categoría</th>
-                    <th class="hidden-xs text-right">Tipo de interés</th>
-                    <th class="hidden-xs text-right hidden-md hidden-lg">Plazo</th>
-                    <th class="hidden-xs hidden-sm text-center">Tiempo restante</th>
-                    <th class="hidden-xs hidden-sm text-center">Importe de inversión</th>
-                    <th class="text-right right-position">Amortización pendiente</th>
+                    <td class="hidden-md hidden-lg {{ art.risk_class }} sm-width text-center"><a href="{{ path('loanDetails') }}">{{ art.risk_title }}</a></td>
+
+                    <td class="hidden-xs hidden-sm">10.01.2014</td>
+                    <td class="hidden-md hidden-lg"></td>
+
+                    <td class="loan-title">
+                        <a class="xs-height" href="{{ path('lender_portfolio_loans') }}">{{ art.title| truncate(35) }}</a>
+                    </td>
+
+                    <td class="hidden-sm hidden-md hidden-lg text-right">
+                        <a href="{{ path('loanDetails') }}">{{ art.interest }}<br>{{ art.duration }}</a>
+                    </td>
+
+                    <td class="hidden-xs hidden-sm text-center"><i class="categoryIcon">{{ art.category }}</i></td>
+                    <td class="hidden-xs text-right">{{ art.interest }}<span class="grade grade-c grade-small hidden-xs hidden-sm">C</span></td>
+                    <td class="hidden-xs text-right hidden-md hidden-lg">{{ art.duration }}</td>
+                    <td class="hidden-xs hidden-sm text-center">{{ art.days_left }}</td>
+                    <td class="hidden-xs hidden-sm text-right">{{ art.amount }}</td>
+                    <td class="text-right right-position">{{ art.amount_pending }}</td>
+                    <td class="hidden-xs align-bullet">
+                        <div class="bullet defaulted"></div>
+                        <div class="bullet-label">defaulted</div>
+                    </td>
                 </tr>
-                </thead>
-
-                <tbody>
-                {% for art in articles_es %}
-                    <tr>
-                        <td class="hidden-md hidden-lg {{ art.risk_class }} sm-width text-center"><a href="{{ path('loanDetails') }}">{{ art.risk_title }}</a></td>
-
-                        <td class="hidden-xs hidden-sm">10.01.2014</td>
-                        <td class="hidden-md hidden-lg"></td>
-
-                        <td class="loan-title">
-                            <a href="{{ path('lender_portfolio_loans') }}">{{ art.title }}</a>
-                        </td>
-
-                        <td class="hidden-sm hidden-md hidden-lg text-right">
-                            <a href="{{ path('loanDetails') }}">{{ art.interest }}<br>{{ art.duration }}</a>
-                        </td>
-
-                        <td class="hidden-xs hidden-sm text-center"><i class="categoryIcon">{{ art.category }}</i></td>
-                        <td class="hidden-xs text-right">{{ art.interest }}<span class="grade grade-c grade-small hidden-xs hidden-sm">C</span></td>
-                        <td class="hidden-xs text-right hidden-md hidden-lg">{{ art.duration }}</td>
-                        <td class="hidden-xs hidden-sm text-center">{{ art.days_left }}</td>
-                        <td class="hidden-xs hidden-sm text-right">{{ art.amount }}</td>
-                        <td class="text-right right-position">{{ art.amount_pending }}</td>
-                    </tr>
-                {% endfor %}
-                </tbody>
-            </table>
+            {% endfor %}
+            </tbody>
+        </table>
             </div>
         </div>
 

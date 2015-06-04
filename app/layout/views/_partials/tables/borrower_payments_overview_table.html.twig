@@ -13,7 +13,7 @@
     </thead>
     <tbody>
         <tr>
-            <td class="loan-title left-position"><a href="{{ path('payments_details') }}">{{ articles[0].title }}</a></td>
+            <td class="loan-title left-position"><a class="xs-height" href="{{ path('payments_details') }}">{{ articles[0].title|truncate(35) }}</a></td>
             <td class="text-right">{{ articles[0].amount }}</td>
             <td class="hidden-xs text-center">{{ articles[0].duration_months }}</td>
             <td class="hidden-xs text-right">{{ articles[0].interest }}</td>

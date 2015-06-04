@@ -11,6 +11,7 @@
     <th class="hidden-xs hidden-sm text-center">Restlaufzeit</th>
     <th class="hidden-xs hidden-sm text-center">Anlagebetrag</th>
     <th class="text-right right-position">Ausstehend</th>
+    <th class="hidden-xs text-center">Status</th>
 </tr>
 </thead>
 <tbody>
@@ -21,7 +22,7 @@
         <td class="hidden-xs hidden-sm">10.01.2014</td>
         <td class="hidden-md hidden-lg"></td>
         <td class="loan-title">
-            <a href="{{ path('lender_portfolio_loans') }}">{{ art.title }}</a>
+            <a class="xs-height" href="{{ path('lender_portfolio_loans') }}">{{ art.title| truncate(35) }}</a>
         </td>
 
         <td class="hidden-sm hidden-md hidden-lg text-right">
@@ -34,6 +35,11 @@
         <td class="hidden-xs hidden-sm text-center">{{ art.days_left }}</td>
         <td class="hidden-xs hidden-sm text-right">{{ art.amount }}</td>
         <td class="text-right right-position">{{ art.amount_pending }}</td>
+        <td class="hidden-xs align-bullet">
+            <div class="bullet defaulted"></div>
+            <div class="bullet-label">defaulted</div>
+        </td>
+        <!--  PLS ALSO ADD TRUNCATE 35 TO THE TITLE -->
     </tr>
 {% endfor %}
 </tbody>
