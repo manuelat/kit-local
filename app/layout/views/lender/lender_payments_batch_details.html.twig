@@ -1,0 +1,195 @@
+{% extends 'layout.html.twig' %}
+
+{% block header %}
+
+    {% include '_partials/headers/account-header.html.twig' %}
+
+{% endblock header %}
+
+{% block body %}
+
+
+<div class="container spacing">
+
+    <h1>Meine Auszahlungen > Batch RR31-L714668302-T1433923996-C023</h1>
+    <div class="well custom-row">
+        <div class="row batch-total ">
+            <div class="col-xs-12 col-sm-3 col-md-2">
+                <span>27.24 €</span><small>Gesamtbetrag</small>
+            </div>
+            <div class="desp-20 hidden-sm hidden-md hidden-lg"></div>
+            <div class="col-xs-6 col-sm-3 col-md-2">
+                <span>4.12 €</span>
+                <small>Zinsen</small>
+                </div>
+            <div class="col-xs-6 col-sm-3 col-md-2">
+                <span>23.12 €</span>
+                <small>Tilgung</small>
+            </div>
+        </div>
+    </div>
+
+    {# DATA BELOW IS JUST FOR TESTING NL + ES, SHOULD BE DELETED #}
+
+    {# ================ START TO DELETE ====================== #}
+    <!-- Testing ES -->
+   {# <div class="well custom-row">
+        <div class="row batch-total">
+            <div class="col-xs-4 col-sm-2"><span>27000.24 €</span><small>Importe total</small></div>
+            <div class="col-xs-4 col-sm-2"><span>4000.12 €</span><small>Capital</small></div>
+            <div class="col-xs-4 col-sm-2"><span>2300.12 €</span><small>Intereses</small></div>
+        </div>
+    </div>#}
+    <!-- END Testing ES -->
+
+    <!-- Testing NL -->
+    {#<div class="well custom-row">
+        <div class="row batch-total">
+            <div class="col-xs-4 col-sm-2"><span>27000.24 €</span><small>Totaalbedrag</small></div>
+            <div class="col-xs-4 col-sm-2"><span>4000.12 €</span><small>Terugbetaling</small></div>
+            <div class="col-xs-4 col-sm-2"><span>2300.12 €</span><small>Rente</small></div>
+        </div>
+    </div>#}
+    <!-- END Testing NL -->
+
+    <div class="row">
+        <div class="col-xs-12">
+            <ul class="pagination pagination-sm pull-right">
+                <li><a aria-label="Previous" href="#"><span aria-hidden="true">«</span></a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a aria-label="Next" href="#"><span aria-hidden="true">»</span></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 cancel-padding">
+            <table class="table custom-table">
+                <thead>
+                    <tr>
+                        <th class="hidden-xs hidden-sm"></th>
+                        <th class="hidden-xs left-position">Einzug</th>
+                        <th class="hidden-xs">Uberweisungsdatum</th>
+                        <th class="first-xs">Kredit</th>
+                        <th class="text-right">Betrag</th>
+                        <th class="text-right">Tilgung</th>
+                        <th class="text-right right-position">Zinsen</th>
+                        <th class="hidden-xs hidden-sm"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for art in articles %}
+                    <tr>
+                        <td class="hidden-xs hidden-sm"></td>
+                        <td class="hidden-xs left-position">15.01.2015</td>
+                        <td class="hidden-xs">16.01.2015</td>
+                        <td class="ref-title first-xs"><a class="xs-height" href="">{{ art.title|truncate(45) }}</a></td>
+                        <td class="text-right">{{ art.batch_amount }}</td>
+                        <td class="text-right">{{ art.batch_principal }}</td>
+                        <td class="text-right right-position">{{ art.batch_interest }}</td>
+                        <td class="hidden-xs hidden-sm"></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-xs-12">
+            <ul class="pagination pagination-sm pull-right">
+                <li><a aria-label="Previous" href="#"><span aria-hidden="true">«</span></a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a aria-label="Next" href="#"><span aria-hidden="true">»</span></a></li>
+            </ul>
+        </div>
+    </div>
+
+    {# DATA BELOW IS JUST FOR TESTING NL + ES, SHOULD BE DELETED #}
+
+    {# ================ START TO DELETE ====================== #}
+    {# ================ SPAIN ====================== #}
+
+    {#
+    <div class="row">
+        <div class="col-xs-12 cancel-padding">
+            <table class="table custom-table">
+                <thead>
+                    <tr>
+                        <th class="hidden-xs hidden-sm"></th>
+                        <th class="hidden-xs left-position">Pago cuota</th>
+                        <th class="hidden-xs">Transaction date</th>
+                        <th class="first-xs">Credito</th>
+                        <th class="text-right">Importe</th>
+                        <th class="text-right">Capital</th>
+                        <th class="text-right right-position">Intereses</th>
+                        <th class="hidden-xs hidden-sm"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="hidden-xs hidden-sm"></td>
+                        <td class="hidden-xs left-position">15.01.2015</td>
+                        <td class="hidden-xs">16.01.2015</td>
+                        <td class="ref-title first-xs"><a class="xs-height" href="">{{'Aufbau der Expansion und Umlagerung eines bestehenden Kredits'|truncate(45)}}</a></td>
+                        <td class="text-right">7000.24 €</td>
+                        <td class="text-right">7000.00 €</td>
+                        <td class="text-right right-position">7000.23 €</td>
+                        <td class="hidden-xs hidden-sm"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    #}
+    {# ================ NETHERLANDS ====================== #}
+
+   {# <div class="row">
+        <div class="col-xs-12 cancel-padding">
+            <table class="table custom-table">
+                <thead>
+                    <tr>
+                        <th class="hidden-xs hidden-sm"></th>
+                        <th class="hidden-xs left-position">Einzug</th>
+                        <th class="hidden-xs">Transaction date</th>
+                        <th class="first-xs">Krediet</th>
+                        <th class="text-right">Bedrag</th>
+                        <th class="text-right">Afflossing</th>
+                        <th class="text-right right-position">Rente</th>
+                        <th class="hidden-xs hidden-sm"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="hidden-xs hidden-sm"></td>
+                        <td class="hidden-xs left-position">15.01.2015</td>
+                        <td class="hidden-xs">16.01.2015</td>
+                        <td class="ref-title first-xs"><a class="xs-height" href="">{{'Aufbau der Expansion und Umlagerung eines bestehenden Kredits'|truncate(45)}}</a></td>
+                        <td class="text-right">7000.24 €</td>
+                        <td class="text-right">7000.00 €</td>
+                        <td class="text-right right-position">4000.23 €</td>
+                        <td class="hidden-xs hidden-sm"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    #}
+    {# ================ END TO DELETE ====================== #}
+
+
+
+</div><!-- end .container -->
+
+
+{% endblock body %}

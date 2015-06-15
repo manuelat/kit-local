@@ -1,0 +1,217 @@
+{% extends 'layout.html.twig' %}
+
+{% block header %}
+
+    {% include '_partials/headers/account-header.html.twig' %}
+
+{% endblock header %}
+
+{% block body %}
+
+<div class="container spacing">
+
+    <h1>Meine Auszahlungen</h1>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <ul class="pagination pagination-sm pull-right">
+                <li><a aria-label="Previous" href="#"><span aria-hidden="true">«</span></a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a aria-label="Next" href="#"><span aria-hidden="true">»</span></a></li>
+            </ul>
+        </div>
+    </div>
+
+    {# testing DE #}
+    <div class="row">
+        <div class="col-xs-12 cancel-padding">
+            <table class="table custom-table">
+                <thead>
+                <tr>
+                    <th class="hidden-xs"></th>
+                    <!-- this new key 'Payment' appears only on mobile -->
+                    <th class="first-xs hidden-sm hidden-md hidden-lg">Einzug</th>
+                    <th class="first-xs hidden-xs">Datum</th>
+                    <th class="xs-pos-right">Verwendungszweck</th>
+                    <th class="hidden-xs">Investitionen</th>
+                    <th class="hidden-xs text-right">Gesamtbetrag</th>
+                    <th class="hidden-xs"></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="hidden-xs"></td>
+                    <td class="first-xs hidden-sm hidden-md hidden-lg">15.01.2015<br><span><a href="" class="hidden-sm hidden-md hidden-lg">15.23 €</a></span></td>
+                    <td class="first-xs hidden-xs">15.01.2015</td>
+                    <td class="xs-pos-right"><a href="">RR31-L714668302-T1433923996-C029</a></td>
+                    <td class="hidden-xs">2</td>
+                    <td class="text-right hidden-xs"><a href="">15.23 €</a></td>
+                    <td class="hidden-xs"></td>
+                </tr>
+                <tr>
+                    <td class="hidden-xs"></td>
+                    <td class="first-xs hidden-sm hidden-md hidden-lg">15.02.2015<br><span><a href="" class="hidden-sm hidden-md hidden-lg">15.23 €</a></span></td>
+                    <td class="first-xs hidden-xs">15.02.2015</td>
+                    <td class="xs-pos-right"><a href="">RR31-L714668302-T1433923996-C027</a></td>
+                    <td class="hidden-xs">3</td>
+                    <td class="text-right hidden-xs"><a href="">17.47 €</a></td>
+                    <td class="hidden-xs"></td>
+                </tr>
+                <tr>
+                    <td class="hidden-xs"></td>
+                    <td class="first-xs hidden-sm hidden-md hidden-lg">15.03.2015<br><span><a href="" class="hidden-sm hidden-md hidden-lg">15.23 €</a></span></td>
+                    <td class="first-xs hidden-xs">15.03.2015</td>
+                    <td class="xs-pos-right"><a href="">RR31-L714668302-T1433923996-C023</a></td>
+                    <td class="hidden-xs">5</td>
+                    <td class="text-right hidden-xs"><a href="">11.33 €</a></td>
+                    <td class="hidden-xs"></td>
+                </tr>
+                <tr>
+                    <td class="hidden-xs"></td>
+                    <td class="first-xs hidden-sm hidden-md hidden-lg">15.04.2015<br><span><a href="" class="hidden-sm hidden-md hidden-lg">15.23 €</a></span></td>
+                    <td class="first-xs hidden-xs">15.04.2015</td>
+                    <td class="xs-pos-right"><a href="">RR31-L714668302-T1433923996-C014</a></td>
+                    <td class="hidden-xs">3</td>
+                    <td class="text-right hidden-xs"><a href="">17.20 €</a></td>
+                    <td class="hidden-xs"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {# end testing DE #}
+
+
+    <div class="row">
+        <div class="col-xs-12">
+            <ul class="pagination pagination-sm pull-right">
+                <li><a aria-label="Previous" href="#"><span aria-hidden="true">«</span></a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a aria-label="Next" href="#"><span aria-hidden="true">»</span></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <hr/>
+
+    <form class="form-inline form-register" method="get" action="">
+        <p class="faux-h3">
+            Export
+        </p>
+        <div class="form-group">
+            <div class="radio-buttons pad-top">
+                <label for="" class="enhanced-radio">
+                    <!-- add class 'filled' when the user clicks -->
+                    <i class="filled"></i></label>
+                <input type="radio" value="" name="" id="" class="ui-helper-hidden-accessible">
+                <label for="">Alle</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="radio-buttons pad-top">
+                <label for="" class="enhanced-radio">
+                    <!-- add class 'filled' when the user clicks -->
+                    <i></i></label>
+                <input type="radio" value="" name="" id="" class="ui-helper-hidden-accessible">
+                <label for="">Datum</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="">von</label>
+            <input type="text" class="form-control" id="" placeholder="DD.MM.YYYY">
+        </div>
+        <div class="form-group">
+            <label for="">bis</label>
+            <input type="text" class="form-control" id="" placeholder="DD.MM.YYYY">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-default">Export</button>
+        </div>
+    </form>
+
+    <hr/>
+
+
+    {# testing nl #}
+    {#
+    <div class="row">
+        <div class="col-xs-12 cancel-padding">
+            <table class="table custom-table">
+                <thead>
+                <tr>
+                    <th class="hidden-xs"></th>
+                    <th class="first-xs hidden-sm hidden-md hidden-lg">Payment</th>
+                    <th class="first-xs hidden-xs">Termijnbetaling</th>
+                    <th class="xs-pos-right">Verwacht gebruik</th>
+                    <th class="hidden-xs">Investeeringen</th>
+                    <th class="hidden-xs text-right">Totaalbedrag</th>
+                    <th class="hidden-xs"></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="hidden-xs"></td>
+                    <td class="first-xs hidden-sm hidden-md hidden-lg">15.01.2015<br><span><a href="" class="hidden-sm hidden-md hidden-lg">15.23 €</a></span></td>
+                    <td class="first-xs hidden-xs">15.01.2015</td>
+                    <td class="xs-pos-right"><a href="">RR31-L714668302-T1433923996-C032</a></td>
+                    <td class="hidden-xs">5</td>
+                    <td class="text-right hidden-xs"><a href="">15.230 €</a></td>
+                    <td class="hidden-xs"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    #}
+    {# END testing nl #}
+
+    {# testing ES #}
+   {#
+    <div class="row">
+        <div class="col-xs-12 cancel-padding">
+            <table class="table custom-table">
+                <thead>
+                <tr>
+                    <th class="hidden-xs"></th>
+                    <th class="first-xs hidden-sm hidden-md hidden-lg">Payment</th>
+                    <th class="first-xs hidden-xs">Pago cuota</th>
+                    <th class="xs-pos-right">Uso previsto</th>
+                    <th class="hidden-xs">Number of Payments</th>
+                    <th class="hidden-xs text-right">Importe total</th>
+                    <th class="hidden-xs"></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="hidden-xs"></td>
+                    <td class="first-xs hidden-sm hidden-md hidden-lg">15.01.2015<br><span><a href="" class="hidden-sm hidden-md hidden-lg">15.23 €</a></span></td>
+                    <td class="first-xs hidden-xs">15.01.2015</td>
+                    <td class="xs-pos-right"><a href="">RR31-L714668302-T1433923996-C032</a></td>
+                    <td class="hidden-xs">5</td>
+                    <td class="text-right hidden-xs"><a href="">15.230 €</a></td>
+                    <td class="hidden-xs"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    #}
+    {# testing ES #}
+
+
+
+
+
+</div><!-- end .container -->
+
+
+{% endblock body %}

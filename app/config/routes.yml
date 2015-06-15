@@ -32,6 +32,12 @@ active_biddings:
 portfolio:
     path: /lender/portfolio
 
+lender_payments_batch_details:
+    path: /lender/lender_payments_batch_details
+
+lender_payments_batch:
+    path: /lender/lender_payments_batch
+
 lender_portfolio_loans:
     path: /lender/lender_portfolio_loan_detail
 
