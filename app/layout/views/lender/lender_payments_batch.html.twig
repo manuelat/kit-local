@@ -26,65 +26,13 @@
         </div>
     </div>
 
-    {# testing DE #}
     <div class="row">
         <div class="col-xs-12 cancel-padding">
             <table class="table custom-table">
-                <thead>
-                <tr>
-                    <th class="hidden-xs"></th>
-                    <!-- this new key 'Payment' appears only on mobile -->
-                    <th class="first-xs hidden-sm hidden-md hidden-lg">Einzug</th>
-                    <th class="first-xs hidden-xs">Datum</th>
-                    <th class="xs-pos-right">Verwendungszweck</th>
-                    <th class="hidden-xs">Investitionen</th>
-                    <th class="hidden-xs text-right">Gesamtbetrag</th>
-                    <th class="hidden-xs"></th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td class="hidden-xs"></td>
-                    <td class="first-xs hidden-sm hidden-md hidden-lg">15.01.2015<br><span><a href="" class="hidden-sm hidden-md hidden-lg">15.23 €</a></span></td>
-                    <td class="first-xs hidden-xs">15.01.2015</td>
-                    <td class="xs-pos-right"><a href="">RR31-L714668302-T1433923996-C029</a></td>
-                    <td class="hidden-xs">2</td>
-                    <td class="text-right hidden-xs"><a href="">15.23 €</a></td>
-                    <td class="hidden-xs"></td>
-                </tr>
-                <tr>
-                    <td class="hidden-xs"></td>
-                    <td class="first-xs hidden-sm hidden-md hidden-lg">15.02.2015<br><span><a href="" class="hidden-sm hidden-md hidden-lg">15.23 €</a></span></td>
-                    <td class="first-xs hidden-xs">15.02.2015</td>
-                    <td class="xs-pos-right"><a href="">RR31-L714668302-T1433923996-C027</a></td>
-                    <td class="hidden-xs">3</td>
-                    <td class="text-right hidden-xs"><a href="">17.47 €</a></td>
-                    <td class="hidden-xs"></td>
-                </tr>
-                <tr>
-                    <td class="hidden-xs"></td>
-                    <td class="first-xs hidden-sm hidden-md hidden-lg">15.03.2015<br><span><a href="" class="hidden-sm hidden-md hidden-lg">15.23 €</a></span></td>
-                    <td class="first-xs hidden-xs">15.03.2015</td>
-                    <td class="xs-pos-right"><a href="">RR31-L714668302-T1433923996-C023</a></td>
-                    <td class="hidden-xs">5</td>
-                    <td class="text-right hidden-xs"><a href="">11.33 €</a></td>
-                    <td class="hidden-xs"></td>
-                </tr>
-                <tr>
-                    <td class="hidden-xs"></td>
-                    <td class="first-xs hidden-sm hidden-md hidden-lg">15.04.2015<br><span><a href="" class="hidden-sm hidden-md hidden-lg">15.23 €</a></span></td>
-                    <td class="first-xs hidden-xs">15.04.2015</td>
-                    <td class="xs-pos-right"><a href="">RR31-L714668302-T1433923996-C014</a></td>
-                    <td class="hidden-xs">3</td>
-                    <td class="text-right hidden-xs"><a href="">17.20 €</a></td>
-                    <td class="hidden-xs"></td>
-                </tr>
-                </tbody>
+                {% include '_partials/tables/lender_payments_batch_table.html.twig' %}
             </table>
         </div>
     </div>
-    {# end testing DE #}
-
 
     <div class="row">
         <div class="col-xs-12">
@@ -139,8 +87,11 @@
 
     <hr/>
 
+    {# DATA BELOW IS JUST FOR TESTING NL + ES, SHOULD BE DELETED #}
 
-    {# testing nl #}
+    {# ================ START TO DELETE ====================== #}
+
+    {# ================ NETHERLANDS ====================== #}
     {#
     <div class="row">
         <div class="col-xs-12 cancel-padding">
@@ -174,7 +125,7 @@
     #}
     {# END testing nl #}
 
-    {# testing ES #}
+    {# ================ SPAIN ====================== #}
    {#
     <div class="row">
         <div class="col-xs-12 cancel-padding">
@@ -206,7 +157,7 @@
     </div>
     #}
     {# testing ES #}
-
+    {# ================ END TO DELETE ====================== #}
 
 
 
