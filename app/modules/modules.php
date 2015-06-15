@@ -7,7 +7,7 @@
 
 $articles = array();
 $articles[] = array(
-    'title' => 'Vorfinanzierung von Filmrechten in Maschinenpark',
+    'title' => 'Vorfinanzierung',
     'category' => '1',
     'amount' => '150.000 €',
     'interest' => '6,99% ',
@@ -28,11 +28,14 @@ $articles[] = array(
     'interest_rate' => '6,99% ',
     'interest_carried'=>'0 €',
     'principal'=>'320 €',
+    'batch_amount'=>'7,23 €',
+    'batch_principal'=>'7,00 €',
+    'batch_interest'=>'0,23 €',
 
 );
 
 $articles[] = array(
-    'title' => 'Investition in Maschinenpark für einen',
+    'title' => 'Aufbau der Expansion und Umlagerung eines bestehenden Kredits',
     'category' => '2',
     'amount' => '90.000 €',
     'interest' => '16,99% ',
@@ -50,10 +53,13 @@ $articles[] = array(
     'state'=>'Paid',
     'principal'=>'470 €',
     'outstanding_principal'=>'8.123 €',
+    'batch_amount'=>'7,23 €',
+    'batch_principal'=>'7,00 €',
+    'batch_interest'=>'0,23 €',
 );
 
 $articles[] = array(
-    'title' => 'Italienische Gastlichkeit in Verden',
+    'title' => 'Bau von landwirtschaftlichen Gebäuden',
     'category' => '3',
     'amount' => '25.000 €',
     'interest' => '8,62% ',
@@ -71,10 +77,14 @@ $articles[] = array(
     'state'=>'Pending',
     'principal'=>'650 €',
     'outstanding_principal'=>'3.230 €',
+    'batch_amount'=>'7,23 €',
+    'batch_principal'=>'7,00 €',
+    'batch_interest'=>'0,23 €',
+
 );
 
 $articles[] = array(
-    'title' => 'Zukunftsorientierte giftfreie',
+    'title' => 'Expansion für Marktführer in Industrietonertechnik',
     'category' => '4',
     'amount' => '75.000 €',
     'interest' => '8,12% ',
@@ -92,6 +102,9 @@ $articles[] = array(
     'state'=>'Paid',
     'principal'=>'640 €',
     'outstanding_principal'=>'5.420 €',
+    'batch_amount'=>'7,23 €',
+    'batch_principal'=>'7,00 €',
+    'batch_interest'=>'0,23 €',
 );
 
 

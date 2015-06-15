@@ -6,7 +6,7 @@ Header visible for desktop  ( hidden for phones and tablets )
 <div class="hidden-xs hidden-sm">
 
     {# must include the cookie bar #}
-    {#{% include '_partials/headers/cookiesWarning.html.twig' %}#}
+    {% include '_partials/headers/cookiesWarning.html.twig' %}
 
     {% include '_partials/headers/top-nav.html.twig' %}
     <header>
@@ -35,6 +35,9 @@ Header visible for desktop  ( hidden for phones and tablets )
                             </li>
                             <li>
                                 <a href="{{ path('portfolio') }}">Portofolio</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('lender_payments_batch') }}">Payments</a>
                             </li>
                             <li>
                                 <a href="{{ path('lenderUpgradeThreeSteps') }}">Premium-account</a>
