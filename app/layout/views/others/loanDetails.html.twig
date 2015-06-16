@@ -2,6 +2,17 @@
 
 {% block body %}
 
+<!-- ALERT MESSAGE -->
+
+{# display when needed #}
+
+<!--<div class="container page-head">
+    <div class="alert alert-danger col-xs-12" role="alert">
+        <span class="sr-only">Error:</span>
+        <span class="alert-ico pull-left hidden-xs"><i class="fa fa-exclamation-circle" aria-hidden="true"></i></span>
+        <div class="col-xs-12 col-sm-11 message">Fehler <br> Ein Fehler ist aufgetreten</div>
+    </div>
+</div>-->
 
 <div class="container spacing">
     <div class="row">
@@ -80,10 +91,11 @@
                     <!-- Bid Form-->
                     <form action="" class="form" method="post">
                         {# used if user is logged in #}
+                        {# TO DO -> check how it looks on desktop when available-limit is present  #}
 
                         {#<div class="available-limit">
-                            <div class="col-xs-6"><strong>Verfügbares Limit</strong></div>
-                            <div class="col-xs-6 text-right"><strong>10.000,00 €</strong></div>
+                            <div class="col-xs-7 col-sm-6"><strong>Verfügbares Guthaben: </strong></div>
+                            <div class="col-xs-5 col-sm-6 text-right"><strong>5.635,40 €</strong></div>
                         </div>#}
                         <div class="col-xs-6">
                             <div class="input-group">
@@ -95,10 +107,10 @@
                             <input type="submit" value="Anlegen" class="btn btn-nvstr form-control"/>
                         </div>
                         {# ALERT DISPLAY FOR THE USER #}
-                        <!--<div class="col-xs-12 text-danger" role="alert">
+                        {#<div class="col-xs-12 text-danger" role="alert">
                             <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                            Bitte geben Sie ein Vielfaches von 100,00 € ein
-                        </div>-->
+                            <small>Bitte geben Sie ein Vielfaches von 100,00 € ein</small>
+                        </div>#}
                     </form>
                 </div>
             </div>
@@ -126,7 +138,12 @@
     <script src="/js/easyResponsiveTabs.js"></script>
 
     <script>
+
+        var tabsInitialised = false;
         function prepareTabsAccordion() {
+            if (tabsInitialised) {
+                return;
+            }
             if ($(document).width() < 992) {
                 // Accordion
                 $('#parentHorizontalTab').easyResponsiveTabs({
@@ -166,6 +183,7 @@
                     }
                 });
             }
+            tabsInitialised = true;
         }
         $(function(){
             $(window).load(function() {
