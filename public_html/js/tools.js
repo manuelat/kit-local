@@ -177,5 +177,8 @@ $(function() {
         $('.tabber .tab-select-label').html(newContent);
     });
 
+    // initialise custom dropdown
+    $('.selectpicker').selectpicker();
+
 
 });
