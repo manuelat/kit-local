@@ -299,6 +299,9 @@ lp-crowdfunding:
 lp-crowdfunding-ES:
     path: /cms-ES/lp-crowdfunding-ES
 
+lp-investor-tv-spot-ES:
+    path: /cms-ES/lp-investor-tv-spot-ES
+
 lp-borrower-tv-spot-ES:
     path: /cms-ES/lp-borrower-tv-spot-ES
 
