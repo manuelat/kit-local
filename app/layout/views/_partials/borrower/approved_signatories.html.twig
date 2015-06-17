@@ -32,7 +32,7 @@
                 <label for="approved_signatory_gender_f" class="required"> {{ 'Frau' }}</label>
             </div>
             <div class="clearfix"></div>
-            <label for="approved_signatory_gender" class="text-danger" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+            <label for="approved_signatory_gender" class="error" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
         </div>
     </div><!-- end .row -->
 
@@ -43,7 +43,7 @@
                 <label for="approved_signatory_first_name" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Vorname' }}</label>
                 <!-- add class 'error' for the input to make the border red  when the alert is also present -->
                 <input type="text" id="approved_signatory_first_name" class="form-control" placeholder="Vorname" required="required">
-                <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
         <div class="col-xs-12 col-sm-6">
@@ -51,7 +51,7 @@
                 <label for="approved_signatory_last_name" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Nachname' }}</label>
                 <!-- add class 'error' for the input to make the border red  when the alert is also present -->
                 <input type="text" id="approved_signatory_last_name" class="form-control" placeholder="Nachname" required="required">
-                <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
     </div>
@@ -67,7 +67,7 @@
                     <label for="approved_signatory_sign_permission" class="required">
                         {{ 'Diese Person ist alleinvertretungsberechtigt' }}
                     </label>
-                    <label role="alert" class="text-danger hidden" for="approved_signatory_sign_permission">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                    <label role="alert" class="error hidden" for="approved_signatory_sign_permission">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                 </div>
 
             </div>
@@ -79,7 +79,7 @@
             <div class="form-group">
                 <label for="approved_signatory_birthday" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Geburtsdatum' }}</label>
                 <input type="text" id="approved_signatory_birthday" class="form-control" placeholder="Geburtsdatum TT.MM.JJJJ" required="required">
-                <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
         <div class="col-xs-12 col-sm-6">
@@ -95,79 +95,54 @@
             <div class="form-group">
                 <label for="approved_signatory_city_of_birth" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Geburtsort' }}</label>
                 <input type="text" id="approved_signatory_city_of_birth" class="form-control" placeholder="Geburtsort" required="required">
-                <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
         <div class="col-xs-12 col-sm-6">
-            <label for="approved_signatory_country_of_birth" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Geburtsland' }}</label>
-            <div class="btn-group btn-block">
-                <button data-toggle="dropdown" class="form-control btn dropdown-toggle form-group" type="button" aria-expanded="false">
-                    <span class="pull-left">{{ 'Deutschland' }}</span>
-                    <span class="fa fa-chevron-down pull-right"></span>
-                </button>
-                <ul role="menu" class="dropdown-menu col-xs-12">
-                    <li><a href="#"><i class="fa fa-check pull-right"></i>{{ 'Deutschland' }}
-                        </a></li>
-                    <li><a href="#">{{ '-------------------' }}</a></li>
-                    <li><a href="#">{{ 'Afghanistan' }}</a></li>
-                    <li><a href="#">{{ 'Albanien' }}</a></li>
-                </ul>
+            <div class="form-group">
+                <label for="approved_signatory_country_of_birth" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Geburtsland' }}</label>
+                <select class="selectpicker show-tick" data-width="100%">
+                    <option value="">Deutschland</option>
+                    <option value="">Afghanistan</option>
+                    <option value="">Albanien</option>
+                </select>
             </div>
         </div>
     </div>
 
     <div class="row">
         <div class="col-xs-12 col-sm-6">
-            <label for="approved_signatory_nationality" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Staatsangehörigkeit' }}</label>
-            <div class="btn-group btn-block">
-                <button data-toggle="dropdown" class="form-control btn dropdown-toggle form-group" type="button" aria-expanded="false">
-                    <span class="pull-left">{{ 'Deutschland' }}</span>
-                    <span class="fa fa-chevron-down pull-right"></span>
-                </button>
-                <ul role="menu" class="dropdown-menu col-xs-12">
-                    <li><a href="#"><i class="fa fa-check pull-right"></i>{{ 'Deutschland' }}
-                        </a></li>
-                    <li><a href="#">{{ '-------------------' }}</a></li>
-                    <li><a href="#">{{ 'Afghanistan' }}</a></li>
-                    <li><a href="#">{{ 'Albanien' }}</a></li>
-                </ul>
+            <div class="form-group">
+                <label for="approved_signatory_nationality" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Staatsangehörigkeit' }}</label>
+                <select class="selectpicker show-tick" data-width="100%">
+                    <option value="">Deutschland</option>
+                    <option value="">Afghanistan</option>
+                    <option value="">Albanien</option>
+                </select>
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-6">
-            <label for="approved_signatory_country_of_origin" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Herkunftsstaatsangehörigkeit' }}</label>
-            <div class="btn-group btn-block">
-                <button data-toggle="dropdown" class="form-control btn dropdown-toggle form-group" type="button" aria-expanded="false">
-                    <span class="pull-left">{{ 'Deutschland' }}</span>
-                    <span class="fa fa-chevron-down pull-right"></span>
-                </button>
-                <ul role="menu" class="dropdown-menu col-xs-12">
-                    <li><a href="#"><i class="fa fa-check pull-right"></i>{{ 'Deutschland' }}
-                        </a></li>
-                    <li><a href="#">{{ '-------------------' }}</a></li>
-                    <li><a href="#">{{ 'Afghanistan' }}</a></li>
-                    <li><a href="#">{{ 'Albanien' }}</a></li>
-                </ul>
+            <div class="form-group">
+                <label for="approved_signatory_country_of_origin" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Herkunftsstaatsangehörigkeit' }}</label>
+                <select class="selectpicker show-tick" data-width="100%">
+                    <option value="">Deutschland</option>
+                    <option value="">Afghanistan</option>
+                    <option value="">Albanien</option>
+                </select>
             </div>
         </div>
     </div>
 
-
-
     <div class="row">
         <div class="col-xs-12 col-sm-6">
-            <label for="approved_signatory_bank_employment_status" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Erwerbssituation' }}</label>
-            <div class="btn-group btn-block">
-                <button data-toggle="dropdown" class="form-control btn dropdown-toggle form-group" type="button" aria-expanded="false">
-                    <span class="pull-left">{{ 'Selbstständig' }}</span>
-                    <span class="fa fa-chevron-down pull-right"></span>
-                </button>
-                <ul role="menu" class="dropdown-menu col-xs-12">
-                    <li><a href="#"><i class="fa fa-check pull-right"></i>{{ 'Selbstständig' }}
-                        </a></li>
-                    <li><a href="#">{{ 'Angestellter Geschäftsführer' }}</a></li>
-                    <li><a href="#">{{ 'Angestellter' }}</a></li>
-                </ul>
+            <div class="form-group">
+                <label for="approved_signatory_bank_employment_status" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Erwerbssituation' }}</label>
+                <select class="selectpicker show-tick" data-width="100%">
+                    <option value="">Selbstständig</option>
+                    <option value="">Angestellter Geschäftsführer</option>
+                    <option value="">Angestellter</option>
+                </select>
             </div>
         </div>
     </div>
@@ -183,7 +158,7 @@
             <div class="form-group">
                 <label for="approved_signatory_email" class="required hidden-xs hidden-sm">{{ 'Email' }}</label>
                 <input type="email" placeholder="Email" id="approved_signatory_email" class="form-control" required="required">
-                <label for="approved_signatory_email" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                <label for="approved_signatory_email" class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
 
@@ -191,7 +166,7 @@
             <div class="form-group">
                 <label for="approved_signatory_cellphone" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Mobiltelefon' }}</label>
                 <input type="text" id="approved_signatory_cellphone" class="form-control" placeholder="Mobiltelefon" required="required">
-                <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
     </div><!-- end .row -->
@@ -207,7 +182,7 @@
             <div class="form-group">
                 <label for="approved_signatory_street" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Straße' }}</label>
                 <input type="text" id="approved_signatory_street" class="form-control" placeholder="Straße" required="required" maxlength="200">
-                <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
 
@@ -215,7 +190,7 @@
             <div class="form-group">
                 <label for="approved_signatory_street_number" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Nr' }}</label>
                 <input type="text" id="approved_signatory_street_number" class="form-control" placeholder="Nr" required="required" maxlength="10">
-                <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
     </div>
@@ -225,7 +200,7 @@
             <div class="form-group">
                 <label for="approved_signatory_postal_code" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'PLZ' }}</label>
                 <input type="text" id="approved_signatory_postal_code" class="form-control" placeholder="PLZ" required="required" maxlength="20">
-                <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
 
@@ -233,7 +208,7 @@
             <div class="form-group">
                 <label for="approved_signatory_city" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Ort' }}</label>
                 <input type="text" id="approved_signatory_city" class="form-control" placeholder="Ort" required="required" maxlength="200">
-                <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
     </div>
@@ -244,7 +219,7 @@
             <div class="form-group">
                 <label for="approved_signatory_resident_since" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Wohnhaft seit' }}</label>
                 <input type="text" id="approved_signatory_resident_since" class="form-control" placeholder="TT.MM.JJJJ" required="required" maxlength="200">
-                <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
     </div>

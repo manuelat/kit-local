@@ -55,24 +55,19 @@
     <!-- PAGINATION -->
 
     <div class="row">
-        <div class="hidden-xs hidden-sm col-md-1 col-lg-1">
-            <div class="btn-group btn-block pagination">
+        <div class="hidden-xs hidden-sm col-md-2 col-lg-2">
+            <div class="pagination">
                 <div class="per-page">
-                    <button data-toggle="dropdown" class="form-control btn dropdown-toggle" type="button" aria-expanded="false">
-                        <span class="pull-left">{{ '15' }}</span>
-                        <span class="fa fa-chevron-down pull-right"></span>
-                    </button>
-                    <ul role="menu" class="dropdown-menu">
-                        <li><a href="#"><i class="fa fa-check pull-right"></i>{{ '15' }}
-                            </a></li>
-                        <li><a href="#">{{ '30' }}</a></li>
-                        <li><a href="#">{{ '60' }}</a></li>
-                    </ul>
+                    <select class="selectpicker show-tick" data-width="100%">
+                        <option value="">15</option>
+                        <option value="">30</option>
+                        <option value="">60</option>
+                    </select>
                 </div>
             </div>
         </div>
 
-        <div class="col-xs-12 col-md-11">
+        <div class="col-xs-12 col-md-10">
             <ul class="pagination pagination-sm pull-right">
                 <li><a aria-label="Previous" href="#"><span aria-hidden="true">«</span></a></li>
                 <li><a href="#">1</a></li>

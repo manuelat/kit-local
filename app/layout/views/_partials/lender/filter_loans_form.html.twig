@@ -3,19 +3,13 @@
     <div class="col-xs-12 col-sm-3 col-md-3 col-md-offset-0">
         <p><strong>{{  'Kategorie' }}</strong></p>
 
-        <div class="btn-group btn-block">
-
-            <button type="button" class="form-control btn dropdown-toggle" data-toggle="dropdown">
-                <span class="pull-left">Alle</span>
-                <span class="fa fa-chevron-down pull-right"></span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-                <li><a href="#"><i class="fa fa-check pull-right"></i>{{ 'Betriebsmittelfinanzierung' }}</a></li>
-                <li><a href="#">{{ 'Investition in Anlagevermögen' }}</a></li>
-                <li><a href="#">{{ 'Wachstumkapital' }}</a></li>
-                <li><a href="#">{{ 'Tilgung von Steuer-oder Versicherungsverbindlichkeiten' }}</a></li>
-                <li><a href="#">{{ 'Sonstige' }}</a></li>
-            </ul>
+        <div class="form-group">
+            <select class="selectpicker show-tick" data-width="100%">
+                <option value="">Investition in Anlagevermögen</option>
+                <option value="">Betriebsmittelfinanzierung</option>
+                <option value="">Wachstumkapital</option>
+                <option value="">Tilgung von Steuer-oder Versicherungsverbindlichkeiten</option>
+            </select>
         </div>
 
         {#<select name="filter[category]" id="filter_category" class="show-tick selectpicker">

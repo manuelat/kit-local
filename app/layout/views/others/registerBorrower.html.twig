@@ -47,24 +47,24 @@
                                 </div>
                                 <label for="borrower_gender_f" class="required"> {{ 'Frau' }}</label>
                             </div>
-                            <label for="borrower_gender" class="text-danger" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                            <label for="borrower_gender" class="error" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
 
-                            {#
+
                             <!-- old project implementation -->
-                            <div class="radio-buttons" id="userlender_gender">
+                          {#  <div class="radio-buttons" id="userlender_gender">
                                 <label for="userlender_gender_0" class="enhanced-radio">
                                     <!-- add class 'filled' when the user clicks -->
                                     <i class="filled"></i></label>
                                 <input type="radio" value="m" required="required" name="userlender[gender]" id="userlender_gender_0" class="ui-helper-hidden-accessible">
                                 <label class="required" for="userlender_gender_0">Herr</label>
+                                <label for="borrower_gender" class="error" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                                 <label for="userlender_gender_1" class="enhanced-radio">
                                     <i class="filled"></i></label>
                                 <input type="radio" value="f" required="required" name="userlender[gender]" id="userlender_gender_1" class="ui-helper-hidden-accessible">
                                 <label class="required" for="userlender_gender_1">Frau</label>
-                                <label for="borrower_gender" class="text-danger" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
-                            </div>
+                            </div>#}
                             <!-- end old project implementation -->
-                            #}
+
 
                         </div>
                     </div><!-- end .row -->
@@ -75,7 +75,7 @@
                                 <label for="borrower_first_name" class="required hidden-xs hidden-sm">{{ 'Vorname' }}</label>
                                 <!-- add class 'error' for the input to make the border red  when the alert is also present -->
                                 <input type="text" placeholder="Enter vorname" id="borrower_first_name" class="form-control" required="required">
-                                <label for="borrower_first_name" class="text-danger" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                                <label for="borrower_first_name" class="error" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                             </div>
                         </div>
 
@@ -84,7 +84,7 @@
                                 <label for="borrower_last_name" class="required hidden-xs hidden-sm">{{ 'Nachname' }}</label>
                                 <!-- add class 'error' for the input to make the border red  when the alert is also present -->
                                 <input type="text" placeholder="Enter nachname" id="borrower_last_name" class="form-control" required="required">
-                                <label for="borrower_last_name" class="text-danger" role="alert hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                                <label for="borrower_last_name" class="error" role="alert hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                             </div>
                         </div>
                     </div><!-- end .row -->
@@ -94,24 +94,18 @@
                             <div class="form-group">
                                 <label for="borrower_company_name" class="required hidden-xs hidden-sm">{{ 'Firmenname' }}</label>
                                 <input type="text" placeholder="Enter firmenname" id="borrower_company_name" class="form-control" required="required">
-                                <label for="borrower_company_name" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                                <label for="borrower_company_name" class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                             </div>
                         </div>
 
                         <div class="col-xs-12 col-sm-6">
-                            <label class="required hidden-xs hidden-sm">Rechtsform</label>
-                            <div class="btn-group btn-block">
-                                <button data-toggle="dropdown" class="form-control btn dropdown-toggle form-group" type="button" aria-expanded="false">
-                                    <span class="pull-left">{{ 'Bitte wählen ...' }}</span>
-                                    <span class="fa fa-chevron-down pull-right"></span>
-                                </button>
-                                <ul role="menu" class="dropdown-menu col-xs-12">
-                                    <li><a href="#"><i class="fa fa-check pull-right"></i>{{ 'Bitte wählen ...' }}
-                                        </a></li>
-                                    <li><a href="#">{{ 'GmbH' }}</a></li>
-                                    <li><a href="#">{{ 'UG' }}</a></li>
-                                    <li><a href="#">{{ 'GmbH & Co. KG' }}</a></li>
-                                </ul>
+                            <div class="form-group">
+                                <label class="required hidden-xs hidden-sm">Rechtsform</label>
+                                <select class="selectpicker show-tick" data-width="100%">
+                                    <option value="">Bitte wählen ...</option>
+                                    <option value="">GmbH</option>
+                                    <option value="">UG</option>
+                                </select>
                             </div>
                         </div>
                     </div><!-- end .row -->
@@ -121,7 +115,7 @@
                             <div class="form-group">
                                 <label for="borrower_cellphone" class="required hidden-xs hidden-sm">{{ 'Telefonnummer' }}</label>
                                 <input type="tel" placeholder="Enter telefonnummer" required="required" id="borrower_cellphone" class="form-control">
-                                <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                                <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                             </div>
                         </div>
                     </div><!-- end .row -->
@@ -136,7 +130,7 @@
                                         <span></span> <!-- add class .selected when user clicks -->
                                     </div>
                                     <label for="borrower_revenue" class="required">  {{ 'Lorem ipsum dolor sit amet, consectetur adipiscing elit' }}</label>
-                                    <label for="borrower_revenue" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                                    <label for="borrower_revenue" class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                                 </div>
 
                                 <div class="checkbox-buttons">
@@ -145,7 +139,7 @@
                                         <span></span>
                                     </div>
                                     <label for="borrower_company_age" class="required"> {{ 'Lorem ipsum dolor sit amet, consectetur adipiscing elit' }}</label>
-                                    <label for="borrower_company_age" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                                    <label for="borrower_company_age" class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                                 </div>
 
                             </div><!-- end .form-group -->
@@ -163,7 +157,7 @@
                             <div class="form-group">
                                 <label for="borrower_email" class="required hidden-xs hidden-sm">{{ 'Email address' }}</label>
                                 <input type="email" placeholder="Enter email" id="borrower_email" class="form-control" required="required">
-                                <label for="borrower_email" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                                <label for="borrower_email" class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                             </div>
                         </div>
 
@@ -172,7 +166,7 @@
                                 <label for="borrower_password" class="required hidden-xs hidden-sm">{{ 'Password' }}</label>
                                 <div class="input-group-pass">
                                     <input type="password" placeholder="Password" id="borrower_password" class="form-control" required="required">
-                                    <label for="borrower_password" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                                    <label for="borrower_password" class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                                     <div class="input-icon-eye">
                                         <i class="fa fa-eye"></i>
                                         <span class="password-mask">anzeigen</span>
@@ -185,9 +179,9 @@
                     <div class="row">
                         <div class="col-xs-12">
 
-                            {#
+
                             <!-- old project implementation -->
-                            <div class="form-group">
+                            {#<div class="form-group">
                                 <div class="checkbox">
                                     <label for="" class="enhanced-checkbox">
                                         <i class="fa fa-check"></i>
@@ -212,21 +206,22 @@
                                     <label class="required" for="">
                                         Ich bin damit einverstanden, dass mich die Zencap Deutschland GmbH per E-Mail und SMS über weitere interessante Angebote informiert und hierfür meine obigen Angaben verwendet. (freiwillig)
                                     </label>
-                                    <label for="" class="text-danger" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                                    <label for="" class="error" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                                 </div>
-                            </div><!-- end .form-group -->
+                            </div>#}
+                            <!-- end .form-group -->
                             <!-- end old project implementation -->
-                            #}
+
 
                             <div class="form-group">
                                 <div class="checkbox-buttons">
                                     <input type="checkbox" class="hidden" value="" name="borrower_terms_and_conditions" id="borrower_terms_and_conditions" required="required">
                                     <div class="custom-square">
-                                        <span class="fa"></span> <!-- add class 'fa-check' when the user clicks -->
+                                        <span class="fa fa-check"></span> <!-- add class 'fa-check' when the user clicks -->
                                     </div>
                                     <label for="borrower_terms_and_conditions" class="required">  {{ 'Hiermit akzeptiere ich die' }}
                                         <a target="_blank" href="{{ path('conditionsBorrower') }}">{{ 'Nutzungsbedingungen' }}</a></label>
-                                    <label for="borrower_terms_and_conditions" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                                    <label for="borrower_terms_and_conditions" class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                                 </div>
 
                                 <div class="checkbox-buttons">
@@ -237,7 +232,7 @@
                                     <label for="borrower_privacy" class="required"> {{ 'Ich willige in die Erhebung, Verarbeitung und Nutzung meiner personenbezogenen Daten, wie in der' }}
                                         <a target="_blank" href="{{ path('privacy') }}">{{ 'Datenschutzerklärung' }}</a>
                                         {{ 'beschrieben, ein.' }}</label>
-                                    <label for="borrower_privacy" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                                    <label for="borrower_privacy" class="error" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                                 </div>
 
                                 <div class="checkbox-buttons">
@@ -288,6 +283,7 @@
 
 {% block js %}
     {{ parent() }}
+
 
     <script>
         $(function(){

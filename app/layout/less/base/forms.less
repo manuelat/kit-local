@@ -286,24 +286,9 @@ label, input, button, select, textarea {
     color: @brandColor3;
 }
 
-/*  pagination md */
-
-@media (min-width: 992px)  {
-    .per-page {
-        .btn {
-            padding: 6px 7px;
-        }
-
-        .fa-chevron-down {
-            margin-top: 7%;
-        }
-    }
-}
-
-.per-page {
-    .dropdown-menu {
-        margin: 0;
-    }
+.btn.dropdown-toggle {
+    height: 32px;
+    overflow: hidden;
 }
 
 .user-login {
@@ -405,6 +390,10 @@ label, input, button, select, textarea {
 
     .checkbox-buttons {
         margin-bottom: 24px;
+
+        .error, .text-danger {
+            margin-left: 31px;
+        }
     }
 
     .counter {

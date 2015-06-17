@@ -175,19 +175,14 @@
             </div><!-- end .row -->
 
             <div class="row">
-                <div class="col-xs-4 col-sm-2 col-md-1 col-lg-1">
-                    <div class="btn-group btn-block pagination">
+                <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
+                    <div class="pagination">
                         <div class="per-page">
-                            <button data-toggle="dropdown" class="form-control btn dropdown-toggle" type="button" aria-expanded="false">
-                                <span class="pull-left">{{ '15' }}</span>
-                                <span class="fa fa-chevron-down pull-right"></span>
-                            </button>
-                            <ul role="menu" class="dropdown-menu">
-                                <li><a href="#"><i class="fa fa-check pull-right"></i>{{ '15' }}
-                                    </a></li>
-                                <li><a href="#">{{ '30' }}</a></li>
-                                <li><a href="#">{{ '60' }}</a></li>
-                            </ul>
+                            <select class="selectpicker show-tick" data-width="100%">
+                                <option value="">15</option>
+                                <option value="">30</option>
+                                <option value="">60</option>
+                            </select>
                         </div>
                     </div>
                 </div>
