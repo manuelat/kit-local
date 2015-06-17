@@ -1,12 +1,12 @@
 <table class="table">
 <thead>
 <tr>
-    <th><a>Ratennummer</a></th>
-    <th><a>Einzug</a> <i data-original-title="Einzug beim Kreditnehmer" class="fa fa-question-circle" data-toggle="tooltip" data-placement="top" title=""></i> </th>
-    <th><a>Geldeingang</a> <i data-original-title="Erwarteter Geldeingang auf Ihrem Konto" class="fa fa-question-circle" data-toggle="tooltip" data-placement="top" title=""></i></th>
-    <th><a>Tatsächlicher Zahlungstag</a></th>
     <th><a>Ratenhöhe</a></th>
-    <th><a>Tilgughng</a></th>
+    <th><a>Einzug</a></th>
+    <th><a>Erwarteter</a></th>
+    <th><a>Tatsächlicher Eingang</a></th>
+    <th><a>Rate</a></th>
+    <th><a>Tilgung</a></th>
     <th><a>Zinsen</a></th>
     <th><a href="">Restbetrag</a></th>
     <th><a href="">Status</a></th>
@@ -24,7 +24,7 @@
     <td>9.815,10 €</td>
     <td class="align-bullet">
         <div class="bullet defaulted"></div>
-        <div class="bullet-label">defaulted</div>
+        <div class="bullet-label"><a href="">Ausfall</a></div>
     </td>
 </tr>
 <tr>
@@ -38,7 +38,49 @@
     <td>9.629,27 €</td>
     <td class="align-bullet">
         <div class="bullet scheduled_irregular"></div>
-        <div class="bullet-label">scheduled_irregular</div>
+        <div class="bullet-label"><a href="">Ausfall</a></div>
+    </td>
+</tr>
+<tr>
+    <td>2</td>
+    <td>15.07.2014</td>
+    <td>25.07.2014</td>
+    <td>25.07.2014</td>
+    <td>234,77 €</td>
+    <td>185,83 €</td>
+    <td>48,94 €</td>
+    <td>9.629,27 €</td>
+    <td class="align-bullet">
+        <div class="bullet scheduled_irregular"></div>
+        <div class="bullet-label"><a href="">Außerplanmäßige Rückzahlung</a></div>
+    </td>
+</tr>
+<tr>
+    <td>2</td>
+    <td>15.07.2014</td>
+    <td>25.07.2014</td>
+    <td>25.07.2014</td>
+    <td>234,77 €</td>
+    <td>185,83 €</td>
+    <td>48,94 €</td>
+    <td>9.629,27 €</td>
+    <td class="align-bullet">
+        <div class="bullet scheduled_irregular"></div>
+        <div class="bullet-label"><a href="">Verlängerung</a></div>
+    </td>
+</tr>
+<tr>
+    <td>2</td>
+    <td>15.07.2014</td>
+    <td>25.07.2014</td>
+    <td>25.07.2014</td>
+    <td>234,77 €</td>
+    <td>185,83 €</td>
+    <td>48,94 €</td>
+    <td>9.629,27 €</td>
+    <td class="align-bullet">
+        <div class="bullet scheduled_irregular"></div>
+        <div class="bullet-label"><a href="">Ratenänderung</a></div>
     </td>
 </tr>
 <tr>
@@ -52,7 +94,35 @@
     <td>9.442,52 €</td>
     <td class="align-bullet">
         <div class="bullet transferred"></div>
-        <div class="bullet-label">Bezahlt</div>
+        <div class="bullet-label"><a href="">Bezahlt</a></div>
+    </td>
+</tr>
+<tr>
+    <td>3</td>
+    <td>15.08.2014</td>
+    <td>27.08.2014</td>
+    <td>27.08.2014</td>
+    <td>234,77 €</td>
+    <td>186,75 €</td>
+    <td>48,02 €</td>
+    <td>9.442,52 €</td>
+    <td class="align-bullet">
+        <div class="bullet delayed"></div>
+        <div class="bullet-label"><a href="">10 Tage verspätet</a></div>
+    </td>
+</tr>
+<tr>
+    <td>3</td>
+    <td>15.08.2014</td>
+    <td>27.08.2014</td>
+    <td>27.08.2014</td>
+    <td>234,77 €</td>
+    <td>186,75 €</td>
+    <td>48,02 €</td>
+    <td>9.442,52 €</td>
+    <td class="align-bullet">
+        <div class="bullet scheduled_normal"></div>
+        <div class="bullet-label"><a href="">Geplant</a></div>
     </td>
 </tr>
 </tbody>
@@ -63,6 +133,22 @@
     {# ================ START TO DELETE ====================== #}
 
     {# ================ SPAIN ====================== #}
+
+{#defaulted: Impagado
+delayed: "Retrasado %days%"
+scheduled_irregular: "%type%"
+scheduled_normal: Programado
+skipped: Omitido
+transferred: Transferido
+
+
+defaulted: Insolvent
+delayed: "Vertraagd door %days% dagen"
+scheduled_irregular: "%type%"
+scheduled_normal: Gepland
+skipped: "Uitstel van betaling"
+transferred: Betaald#}
+
 <h1>TESTING SPAIN</h1>
 <table class="table">
     <thead>
