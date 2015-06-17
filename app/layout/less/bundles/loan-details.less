@@ -87,11 +87,27 @@ iframe[src^='http://marketing.net.zencap'] {
     padding-top: 10px;
 }
 
-#financials {
-    .table.hidden-lg {
-        th, td {
-            white-space: nowrap;
-        }
+@media (max-width: 359px) {
+    #financials th:first-child, #financials td:first-child {
+        width: 185px;
+    }
+}
+
+@media (min-width: 360px) and (max-width: 479px){
+    #financials th:first-child, #financials td:first-child {
+        width: 225px;
+    }
+}
+
+@media (max-width: 479px){
+    #financials td:nth-child(2) {
+        vertical-align: bottom;
+    }
+}
+
+#financials .sm-screens, #financials .lg-screens {
+    th:not(:first-child), td:not(:first-child) {
+        text-align: right;
     }
 }
 
