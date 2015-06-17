@@ -20,11 +20,15 @@
                                 <tbody>
                                 <tr>
                                     <th>Firmenname</th>
-                                    <td>Bitte <a href="/login">melden Sie sich an</a>, um diese Informationen anzusehen </td>
+                                    {#<td>Bitte <a href="/login">melden Sie sich an</a>, um diese Informationen anzusehen </td>#}
+                                    <td>Glockler Automaten Gmbh</td>
                                 </tr>
                                 <tr>
                                     <th>Branche</th>
-                                    <td>Dienstleistungen</td>
+                                    {#<td>Dienstleistungen</td>#}
+                                    <td>
+                                        Wisschenschaftiche und technische Dienstleistungen
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th>Ort</th>
@@ -160,7 +164,18 @@
                                 <div class="move-block">
                                     <h3>Bonitätsentwicklung der vergangenen 2 Jahre</h3>
                                     <figure>
-                                        <p>Leider sind aktuell keine Daten der CreditReform verfügbar. Wir bitten um Ihr Verständnis.</p>
+                                        <!--  if user not logged in -->
+                                        {#<p>Leider sind aktuell keine Daten der CreditReform verfügbar. Wir bitten um Ihr Verständnis.</p>#}
+
+
+                                        <div id="pd-graph" data-highcharts-chart="0">
+                                            <div class="highcharts-container" id="highcharts-0"
+                                                 style="position: relative; overflow: hidden;  width: 100%;  display: inline-block;  padding-bottom: 33%; vertical-align: middle; /*width: 460px; height: 166px;*/ text-align: left; line-height: normal; z-index: 0; font-family: Arial; font-size: 12px; color: rgb(92, 98, 102); left: 0.5px; top: 0.983337px;">
+                                                <svg version="1.1" preserveAspectRatio="xMinYMin meet" xmlns="http://www.w3.org/2000/svg" {#width="460" height="166"#} viewBox="0 0 500 500" style=" display: inline-block; position: absolute; top: 0; left: 0;">
+                                                    <desc>Created with Highcharts 3.0.5</desc><defs><clipPath id="highcharts-1"><rect fill="none" x="0" y="0" width="386" height="103"/></clipPath></defs><g class="highcharts-grid" zIndex="1"/><g class="highcharts-grid" zIndex="1"><path fill="none" d="M 59 31.5 L 445 31.5" stroke="#C0C0C0" stroke-width="1" zIndex="1" opacity="1"/><path fill="none" d="M 59 51.5 L 445 51.5" stroke="#C0C0C0" stroke-width="1" zIndex="1" opacity="1"/><path fill="none" d="M 59 72.5 L 445 72.5" stroke="#C0C0C0" stroke-width="1" zIndex="1" opacity="1"/><path fill="none" d="M 59 92.5 L 445 92.5" stroke="#C0C0C0" stroke-width="1" zIndex="1" opacity="1"/><path fill="none" d="M 59 113.5 L 445 113.5" stroke="#C0C0C0" stroke-width="1" zIndex="1" opacity="1"/><path fill="none" d="M 59 9.5 L 445 9.5" stroke="#C0C0C0" stroke-width="1" zIndex="1" opacity="1"/></g><g class="highcharts-axis" zIndex="2"><path fill="none" d="M 155.5 113 L 155.5 118" stroke="#C0D0E0" stroke-width="1" opacity="1"/><path fill="none" d="M 203.5 113 L 203.5 118" stroke="#C0D0E0" stroke-width="1" opacity="1"/><path fill="none" d="M 251.5 113 L 251.5 118" stroke="#C0D0E0" stroke-width="1" opacity="1"/><path fill="none" d="M 299.5 113 L 299.5 118" stroke="#C0D0E0" stroke-width="1" opacity="1"/><path fill="none" d="M 348.5 113 L 348.5 118" stroke="#C0D0E0" stroke-width="1" opacity="1"/><path fill="none" d="M 396.5 113 L 396.5 118" stroke="#C0D0E0" stroke-width="1" opacity="1"/><path fill="none" d="M 445.5 113 L 445.5 118" stroke="#C0D0E0" stroke-width="1" opacity="1"/><path fill="none" d="M 106.5 113 L 106.5 118" stroke="#C0D0E0" stroke-width="1" opacity="1"/><path fill="none" d="M 58.5 113 L 58.5 118" stroke="#C0D0E0" stroke-width="1"/><text x="252" y="148" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:12px;color:#5c6266;font-weight:bold;fill:#5c6266;" zIndex="7" text-anchor="middle" transform="translate(0,0)" visibility="visible"><tspan x="252">Monat</tspan></text><path fill="none" d="M 59 113.5 L 445 113.5" stroke="#f2f2f2" stroke-width="1" zIndex="7" visibility="visible"/></g><g class="highcharts-axis" zIndex="2"><path fill="none" d="M 59 31.5 L 54 31.5" stroke="#e5e5e5" stroke-width="1" opacity="1"/><path fill="none" d="M 59 51.5 L 54 51.5" stroke="#e5e5e5" stroke-width="1" opacity="1"/><path fill="none" d="M 59 72.5 L 54 72.5" stroke="#e5e5e5" stroke-width="1" opacity="1"/><path fill="none" d="M 59 92.5 L 54 92.5" stroke="#e5e5e5" stroke-width="1" opacity="1"/><path fill="none" d="M 59 113.5 L 54 113.5" stroke="#e5e5e5" stroke-width="1" opacity="1"/><path fill="none" d="M 59 9.5 L 54 9.5" stroke="#e5e5e5" stroke-width="1" opacity="1"/><text x="20.149999618530273" y="61.5" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:12px;color:#5c6266;font-weight:bold;fill:#5c6266;" zIndex="7" text-anchor="middle" transform="translate(0,0) rotate(270 20.149999618530273 61.5)" visibility="visible"><tspan x="20.149999618530273">Bonitätsindex</tspan></text><path fill="none" d="M 58.5 10 L 58.5 113" stroke="#f2f2f2" stroke-width="1" zIndex="7" visibility="visible"/></g><g class="highcharts-series-group" zIndex="3"><g class="highcharts-series" visibility="visible" zIndex="0.1" transform="translate(59,10) scale(1 1)" clip-path="url(#highcharts-1)"><path fill="none" d="M 24.125 37.698 L 72.375 37.492 L 120.625 37.492 L 168.875 37.903999999999996 L 217.125 37.08 L 265.375 37.08 L 313.625 37.08 L 361.875 39.14" stroke="#2f7ed8" stroke-width="2" zIndex="1"/><path fill="none" d="M 14.125 37.698 L 24.125 37.698 L 72.375 37.492 L 120.625 37.492 L 168.875 37.903999999999996 L 217.125 37.08 L 265.375 37.08 L 313.625 37.08 L 361.875 39.14 L 371.875 39.14" stroke-linejoin="round" visibility="visible" stroke-opacity="0.0001" stroke="rgb(192,192,192)" stroke-width="22" zIndex="2" class=" highcharts-tracker" style=""/></g><g class="highcharts-markers highcharts-tracker" visibility="visible" zIndex="0.1" transform="translate(59,10) scale(1 1)" clip-path="none" style=""><path fill="#2f7ed8" d="M 361.875 35.14 C 367.203 35.14 367.203 43.14 361.875 43.14 C 356.547 43.14 356.547 35.14 361.875 35.14 Z" stroke-width="1" visibility="inherit"/><path fill="#2f7ed8" d="M 313 33.08 C 318.328 33.08 318.328 41.08 313 41.08 C 307.672 41.08 307.672 33.08 313 33.08 Z" stroke-width="1" visibility="inherit"/><path fill="#2f7ed8" d="M 265.375 33.08 C 270.703 33.08 270.703 41.08 265.375 41.08 C 260.047 41.08 260.047 33.08 265.375 33.08 Z" visibility="inherit" stroke-width="1"/><path fill="#2f7ed8" d="M 217.125 33.08 C 222.453 33.08 222.453 41.08 217.125 41.08 C 211.797 41.08 211.797 33.08 217.125 33.08 Z" visibility="inherit" stroke-width="1"/><path fill="#2f7ed8" d="M 168.875 33.903999999999996 C 174.203 33.903999999999996 174.203 41.903999999999996 168.875 41.903999999999996 C 163.547 41.903999999999996 163.547 33.903999999999996 168.875 33.903999999999996 Z" visibility="inherit" stroke-width="1"/><path fill="#2f7ed8" d="M 120 33.492 C 125.328 33.492 125.328 41.492 120 41.492 C 114.672 41.492 114.672 33.492 120 33.492 Z" visibility="inherit"/><path fill="#2f7ed8" d="M 72 33.492 C 77.328 33.492 77.328 41.492 72 41.492 C 66.672 41.492 66.672 33.492 72 33.492 Z" visibility="inherit"/><path fill="#2f7ed8" d="M 24.125 33.698 C 29.453 33.698 29.453 41.698 24.125 41.698 C 18.797 41.698 18.797 33.698 24.125 33.698 Z" visibility="inherit" stroke-width="1"/></g></g><g class="highcharts-axis-labels" zIndex="7"><text x="83.125" y="127" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:28px;color:#666;cursor:default;line-height:14px;fill:#666;" text-anchor="middle" opacity="1"><tspan x="83.125">07/13</tspan></text><text x="131.375" y="127" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:28px;color:#666;cursor:default;line-height:14px;fill:#666;" text-anchor="middle" opacity="1"><tspan x="131.375">10/13</tspan></text><text x="179.625" y="127" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:28px;color:#666;cursor:default;line-height:14px;fill:#666;" text-anchor="middle" opacity="1"><tspan x="179.625">01/14</tspan></text><text x="227.875" y="127" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:28px;color:#666;cursor:default;line-height:14px;fill:#666;" text-anchor="middle" opacity="1"><tspan x="227.875">04/14</tspan></text><text x="276.125" y="127" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:28px;color:#666;cursor:default;line-height:14px;fill:#666;" text-anchor="middle" opacity="1"><tspan x="276.125">07/14</tspan></text><text x="324.375" y="127" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:28px;color:#666;cursor:default;line-height:14px;fill:#666;" text-anchor="middle" opacity="1"><tspan x="324.375">10/14</tspan></text><text x="372.625" y="127" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:28px;color:#666;cursor:default;line-height:14px;fill:#666;" text-anchor="middle" opacity="1"><tspan x="372.625">01/15</tspan></text><text x="420.875" y="127" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:28px;color:#666;cursor:default;line-height:14px;fill:#666;" text-anchor="middle" opacity="1"><tspan x="420.875">04/15</tspan></text></g><g class="highcharts-axis-labels" zIndex="7"><text x="51" y="13" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:132px;color:#666;cursor:default;line-height:14px;fill:#666;" text-anchor="end" opacity="1"><tspan x="51">100</tspan></text><text x="51" y="33.599999999999994" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:132px;color:#666;cursor:default;line-height:14px;fill:#666;" text-anchor="end" opacity="1"><tspan x="51">200</tspan></text><text x="51" y="54.19999999999999" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:132px;color:#666;cursor:default;line-height:14px;fill:#666;" text-anchor="end" opacity="1"><tspan x="51">300</tspan></text><text x="51" y="74.8" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:132px;color:#666;cursor:default;line-height:14px;fill:#666;" text-anchor="end" opacity="1"><tspan x="51">400</tspan></text><text x="51" y="95.39999999999998" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:132px;color:#666;cursor:default;line-height:14px;fill:#666;" text-anchor="end" opacity="1"><tspan x="51">500</tspan></text><text x="51" y="116" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:132px;color:#666;cursor:default;line-height:14px;fill:#666;" text-anchor="end" opacity="1"><tspan x="51">600</tspan></text></g><g class="highcharts-tooltip" zIndex="8" style="cursor:default;padding:0;white-space:nowrap;" visibility="hidden" transform="translate(229,60)" opacity="0"><rect rx="3" ry="3" fill="none" x="0.5" y="0.5" width="216" height="49" fill-opacity="0.85" isShadow="true" stroke="black" stroke-opacity="0.049999999999999996" stroke-width="5" transform="translate(1, 1)"/><rect rx="3" ry="3" fill="none" x="0.5" y="0.5" width="216" height="49" fill-opacity="0.85" isShadow="true" stroke="black" stroke-opacity="0.09999999999999999" stroke-width="3" transform="translate(1, 1)"/><rect rx="3" ry="3" fill="none" x="0.5" y="0.5" width="216" height="49" fill-opacity="0.85" isShadow="true" stroke="black" stroke-opacity="0.15" stroke-width="1" transform="translate(1, 1)"/><rect rx="3" ry="3" fill="rgb(255,255,255)" x="0.5" y="0.5" width="216" height="49" fill-opacity="0.85" stroke="#2f7ed8" stroke-width="1" anchorX="-0.5" anchorY="-12"/><text x="8" y="21" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:12px;color:#333333;fill:#333333;" zIndex="1"><tspan style="font-size: 10px" x="8">04/14</tspan><tspan style="fill:#2f7ed8" x="8" dy="16">PolymerPark materials GmbH</tspan><tspan dx="0">: </tspan><tspan style="font-weight:bold" dx="0">284</tspan></text></g>
+                                                </svg>
+                                            </div>
+                                        </div>
                                     </figure>
                                     <div class="desp-20 hidden-xs"></div>
                                 </div>
@@ -197,6 +212,1801 @@
                 {% include '_partials/tables/balanceSheet.html.twig' %}
 
             </div><!-- end #financials -->
+
+            {# testing DE #}
+            <h1>TESTING DE</h1>
+            <div id="financials" class="resp-tab-content hor_1 resp-tab-content-active active" aria-labelledby="hor_1_tab_item-3" style="display:block">
+            <div class="row">
+            <div class="col-xs-12">
+            <div class="">
+
+            <table class="table hidden-xs hidden-sm hidden-md lg-screens">
+
+            <thead>
+            <tr>
+                <th>
+                    <h4>Gewinn- und Verlustrechnung</h4><p>&nbsp;</p>
+                </th>
+
+                <th><h4>Aktuelles Jahr</h4><p>31.03.2015</p></th>
+                <th><h4>Jahresabschluss</h4><p>31.12.2014</p></th>
+                <th><h4>Jahresabschluss</h4><p>31.12.2013</p></th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+                <td><strong>Gesamtleistung</strong></td>
+                <td>
+                    10,282,772 €
+                </td>
+                <td>
+                    10,282,772 €
+                </td>
+                <td>
+                    10,282,772 €
+                </td>
+            </tr>
+            <tr>
+                <td>Wareneinsatz</td>
+                <td>
+                    10,282,772 €
+                </td>
+                <td>
+                    10,282,772 €
+                </td>
+                <td>
+                    10,282,772 €
+                </td>
+            </tr>
+            <tr>
+                <td>Personalkosten</td>
+                <td>
+                    10,282,772 €
+                </td>
+                <td>
+                    10,282,772 €
+                </td>
+                <td>
+                    10,282,772 €
+                </td>
+            </tr>
+            <tr>
+                <td>andere betriebliche Kosten</td>
+                <td>
+                    10,282,772 €
+                </td>
+                <td>
+                    10,282,772 €
+                </td>
+                <td>
+                    10,282,772 €
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Operatives Ergebnis</strong></td>
+                <td>
+                    10,282,772 €
+                </td>
+                <td>
+                    10,282,772 €
+                </td>
+                <td>
+                    10,282,772 €
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Ergebnis vor Zinsen und Steuern</strong></td>
+                <td>
+                    10,282,772 €
+                </td>
+                <td>
+                    10,282,772 €
+                </td>
+                <td>
+                    10,282,772 €
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Jahresüberschuss / Fehlbetrag</strong></td>
+                <td>
+                    10,282,772 €
+                </td>
+                <td>
+                    10,282,772 €
+                </td>
+                <td>
+                    10,282,772 €
+                </td>
+            </tr>
+            <tr>
+                <th colspan="4"><h4>Bilanz</h4></th>
+            </tr>
+            <tr>
+                <td><strong>Aktiva</strong></td>
+                <td>
+                    10,282,772 €
+                </td>
+                <td>
+                    10,282,772 €
+                </td>
+                <td>
+                    10,282,772 €
+                </td>
+            </tr>
+            <tr>
+            </tr><tr>
+                <td>Umlaufvermögen</td>
+                <td>
+                    10,282,772 €
+                </td>
+                <td>
+                    10,282,772 €
+                </td>
+                <td>
+                    10,282,772 €
+                </td>
+            </tr>
+            <tr>
+                <td>Anlagevermögen</td>
+                <td>
+                    10,282,772 €
+                </td>
+                <td>
+                    10,282,772 €
+                </td>
+                <td>
+                    10,282,772 €
+                </td>
+            </tr>
+            <tr>
+                <td>Sonstige Aktiva</td>
+                <td>
+                    10,282,772 €
+                </td>
+                <td>
+                    10,282,772 €
+                </td>
+                <td>
+                    10,282,772 €
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Passiva</strong></td>
+                <td>
+                    10,282,772 €
+                </td>
+                <td>
+                    10,282,772 €
+                </td>
+                <td>
+                    10,282,772 €
+                </td>
+            </tr>
+            <tr>
+                <td>Eigenkapital</td>
+                <td>
+                    10,282,772 €
+                </td>
+                <td>
+                    10,282,772 €
+                </td>
+                <td>
+                    10,282,772 €
+                </td>
+            </tr>
+            <tr>
+                <td>Rückstellungen</td>
+                <td>
+                    10,282,772 €
+                </td>
+                <td>
+                    10,282,772 €
+                </td>
+                <td>
+                    10,282,772 €
+                </td>
+            </tr>
+            <tr>
+                <td>kurzfristige Verbindlichkeiten</td>
+                <td>
+                    10,282,772 €
+                </td>
+                <td>
+                    10,282,772 €
+                </td>
+                <td>
+                    10,282,772 €
+                </td>
+            </tr>
+            <tr>
+                <td>langfristige Verbindlichkeiten</td>
+                <td>
+                    10,282,772 €
+                </td>
+                <td>
+                    10,282,772 €
+                </td>
+                <td>
+                    10,282,772 €
+                </td>
+            </tr>
+            <tr>
+                <td>Sonstige Passiva</td>
+                <td>
+                    10,282,772 €
+                </td>
+                <td>
+                    10,282,772 €
+                </td>
+                <td>
+                    10,282,772 €
+                </td>
+            </tr>
+            </tbody></table>
+
+            <table class="table hidden-lg sm-screens">
+
+                <thead>
+                <tr>
+
+                    <th>Aktuelles Jahr</th>
+
+                    <th>31.03.2015</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td><strong>Gesamtleistung</strong></td>
+                    <td>
+                        10,282,772 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Wareneinsatz</td>
+                    <td>
+                        10,282,772 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Personalkosten</td>
+                    <td>
+                        10,282,772 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>andere betriebliche Kosten</td>
+                    <td>
+                        10,282,772 €
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Operatives Ergebnis</strong></td>
+                    <td>
+                        10,282,772 €
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Ergebnis vor Zinsen und Steuern</strong></td>
+                    <td>
+                        10,282,772 €
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Jahresüberschuss / Fehlbetrag</strong></td>
+                    <td>
+                        10,282,772 €
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="4"><h4>Bilanz</h4></th>
+                </tr>
+                <tr>
+                    <td><strong>Aktiva</strong></td>
+                    <td>
+                        10,282,772 €
+                    </td>
+                </tr>
+                <tr>
+                </tr><tr>
+                    <td>Umlaufvermögen</td>
+                    <td>
+                        10,282,772 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Anlagevermögen</td>
+                    <td>
+                        10,282,772 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sonstige Aktiva</td>
+                    <td>
+                        10,282,772 €
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Passiva</strong></td>
+                    <td>
+                        10,282,772 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Eigenkapital</td>
+                    <td>
+                        10,282,772 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Rückstellungen</td>
+                    <td>
+                        10,282,772 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>kurzfristige Verbindlichkeiten</td>
+                    <td>
+                        10,282,772 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>langfristige Verbindlichkeiten</td>
+                    <td>
+                        10,282,772 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sonstige Passiva</td>
+                    <td>
+                        10,282,772 €
+                    </td>
+                </tr>
+                </tbody></table>
+
+            <table class="table hidden-lg sm-screens">
+
+                <thead>
+                <tr>
+
+                    <th>Aktuelles Jahr</th>
+
+                    <th>31.12.2014</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td><strong>Gesamtleistung</strong></td>
+                    <td>
+                        10,282,772 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Wareneinsatz</td>
+                    <td>
+                        10,282,772 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Personalkosten</td>
+                    <td>
+                        10,282,772 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>andere betriebliche Kosten</td>
+                    <td>
+                        10,282,772 €
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Operatives Ergebnis</strong></td>
+                    <td>
+                        10,282,772 €
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Ergebnis vor Zinsen und Steuern</strong></td>
+                    <td>
+                        10,282,772 €
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Jahresüberschuss / Fehlbetrag</strong></td>
+                    <td>
+                        10,282,772 €
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="4"><h4>Bilanz</h4></th>
+                </tr>
+                <tr>
+                    <td><strong>Aktiva</strong></td>
+                    <td>
+                        10,282,772 €
+                    </td>
+                </tr>
+                <tr>
+                </tr><tr>
+                    <td>Umlaufvermögen</td>
+                    <td>
+                        10,282,772 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Anlagevermögen</td>
+                    <td>
+                        10,282,772 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sonstige Aktiva</td>
+                    <td>
+                        10,282,772 €
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Passiva</strong></td>
+                    <td>
+                        10,282,772 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Eigenkapital</td>
+                    <td>
+                        10,282,772 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Rückstellungen</td>
+                    <td>
+                        10,282,772 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>kurzfristige Verbindlichkeiten</td>
+                    <td>
+                        10,282,772 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>langfristige Verbindlichkeiten</td>
+                    <td>
+                        10,623,600 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sonstige Passiva</td>
+                    <td>
+                        10,623,600 €
+                    </td>
+                </tr>
+                </tbody></table>
+
+            <table class="table hidden-lg sm-screens">
+
+                <thead>
+                <tr>
+
+                    <th>Aktuelles Jahr</th>
+
+                    <th>31.12.2013</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td><strong>Gesamtleistung</strong></td>
+                    <td>
+                        40,681,800 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Wareneinsatz</td>
+                    <td>
+                        10,641,400 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Personalkosten</td>
+                    <td>
+                        10,624,000 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>andere betriebliche Kosten</td>
+                    <td>
+                        10,624,000 €
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Operatives Ergebnis</strong></td>
+                    <td>
+                        10,624,000 €
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Ergebnis vor Zinsen und Steuern</strong></td>
+                    <td>
+                        10,282,772 €
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Jahresüberschuss / Fehlbetrag</strong></td>
+                    <td>
+                        10,624,000 €
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="4"><h4>Bilanz</h4></th>
+                </tr>
+                <tr>
+                    <td><strong>Aktiva</strong></td>
+                    <td>
+                        40,026,300 €
+                    </td>
+                </tr>
+                <tr>
+                </tr><tr>
+                    <td>Umlaufvermögen</td>
+                    <td>
+                        30,508,300 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Anlagevermögen</td>
+                    <td>
+                        10,624,000 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sonstige Aktiva</td>
+                    <td>
+                        10,624,000 €
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Passiva</strong></td>
+                    <td>
+                        40,026,300 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Eigenkapital</td>
+                    <td>
+                        10,624,000 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Rückstellungen</td>
+                    <td>
+                        10,624,000 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>kurzfristige Verbindlichkeiten</td>
+                    <td>
+                        10,709,500 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>langfristige Verbindlichkeiten</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sonstige Passiva</td>
+                    <td>
+                        10,624,000 €
+                    </td>
+                </tr>
+                </tbody></table>                                                    </div>
+            </div>
+            </div>
+            </div>
+
+            {# end testing DE #}
+
+
+            {#testing NL#}
+            <h1>TESTING NL</h1>
+
+            <div id="financials" class="resp-tab-content hor_1 resp-tab-content-active active" aria-labelledby="hor_1_tab_item-3" style="display:block">
+            <div class="row">
+            <div class="col-xs-12">
+            <div class="">
+
+            <table class="table hidden-xs hidden-sm hidden-md lg-screens">
+
+            <thead>
+            <tr>
+                <th>
+                    <h4>Resultatenrekening</h4><p>&nbsp;</p>
+                </th>
+
+                <th><h4>Huidig jaar</h4><p>31-12-2014</p></th>
+                <th><h4>Jaarbalans</h4><p>31-12-2013</p></th>
+                <th><h4>Jaarbalans</h4><p>31-12-2012</p></th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+                <td><strong>Netto-omzet</strong></td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+            </tr>
+            <tr>
+                <td>Voorzieningen</td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+            </tr>
+            <tr>
+                <td>Personeelskosten</td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+            </tr>
+            <tr>
+                <td>Overige exploitatiekosten</td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Bedrijfsresultaat</strong></td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Financieel resultaat</strong></td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Resultaat van boekjaar</strong></td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+            </tr>
+            <tr>
+                <th colspan="4"><h4>Balans</h4></th>
+            </tr>
+            <tr>
+                <td><strong>Activa</strong></td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+            </tr>
+            <tr>
+            </tr><tr>
+                <td>Vaste activa</td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+            </tr>
+            <tr>
+                <td>Vlottende activa</td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+            </tr>
+            <tr>
+                <td>Overige activa</td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Eigen vermogen en passiva</strong></td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+            </tr>
+            <tr>
+                <td>Eigen vermogen</td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+            </tr>
+            <tr>
+                <td>Langlopende schulden</td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    n/a
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+            </tr>
+            <tr>
+                <td>Langlopende schulden bij kredietinstellingen</td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+            </tr>
+            <tr>
+                <td>Kortlopende schulden</td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+            </tr>
+            <tr>
+                <td>... bij kredietinstellingen</td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+            </tr>
+            </tbody></table>
+
+            <table class="table hidden-lg sm-screens">
+
+                <thead>
+                <tr>
+
+                    <th>Huidig jaar</th>
+
+                    <th>31-12-2014</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td><strong>Netto-omzet</strong></td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorzieningen</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Personeelskosten</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Overige exploitatiekosten</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Bedrijfsresultaat</strong></td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Financieel resultaat</strong></td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Resultaat van boekjaar</strong></td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="4"><h4>Balans</h4></th>
+                </tr>
+                <tr>
+                    <td><strong>Activa</strong></td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                </tr><tr>
+                    <td>Vaste activa</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Vlottende activa</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Overige activa</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Eigen vermogen en passiva</strong></td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Eigen vermogen</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Langlopende schulden</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Langlopende schulden bij kredietinstellingen</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Kortlopende schulden</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>... bij kredietinstellingen</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                </tbody></table>
+
+            <table class="table hidden-lg sm-screens">
+
+                <thead>
+                <tr>
+
+                    <th>Huidig jaar</th>
+
+                    <th>31-12-2013</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td><strong>Netto-omzet</strong></td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorzieningen</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Personeelskosten</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Overige exploitatiekosten</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Bedrijfsresultaat</strong></td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Financieel resultaat</strong></td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Resultaat van boekjaar</strong></td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="4"><h4>Balans</h4></th>
+                </tr>
+                <tr>
+                    <td><strong>Activa</strong></td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                </tr><tr>
+                    <td>Vaste activa</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Vlottende activa</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Overige activa</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Eigen vermogen en passiva</strong></td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Eigen vermogen</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Langlopende schulden</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Langlopende schulden bij kredietinstellingen</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Kortlopende schulden</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>... bij kredietinstellingen</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                </tbody></table>
+
+            <table class="table hidden-lg sm-screens">
+
+                <thead>
+                <tr>
+
+                    <th>Huidig jaar</th>
+
+                    <th>31-12-2012</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td><strong>Netto-omzet</strong></td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voorzieningen</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Personeelskosten</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Overige exploitatiekosten</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Bedrijfsresultaat</strong></td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Financieel resultaat</strong></td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Resultaat van boekjaar</strong></td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="4"><h4>Balans</h4></th>
+                </tr>
+                <tr>
+                    <td><strong>Activa</strong></td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                </tr><tr>
+                    <td>Vaste activa</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Vlottende activa</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Overige activa</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Eigen vermogen en passiva</strong></td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Eigen vermogen</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Langlopende schulden</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Langlopende schulden bij kredietinstellingen</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Kortlopende schulden</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>... bij kredietinstellingen</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                </tbody></table>                                                    </div>
+            </div>
+            </div>
+            </div>
+
+            {# end testing NL#}
+
+        {# TESTING ES#}
+            <h1>TESTING ES</h1>
+            <div id="financials" class="resp-tab-content hor_1 resp-tab-content-active" aria-labelledby="hor_1_tab_item-3" style="display:block">
+            <div class="row">
+            <div class="col-xs-12">
+            <div class="">
+
+            <table class="table hidden-xs hidden-sm hidden-md lg-screens">
+
+            <thead>
+            <tr>
+                <th>
+                    <h4>Estado de Pérdidas y Ganancias</h4><p>&nbsp;</p>
+                </th>
+
+                <th><h4>Año actual</h4><p>31/12/2014</p></th>
+                <th><h4>Balance anual</h4><p>31/12/2013</p></th>
+                <th><h4>Balance anual</h4><p>31/12/2012</p></th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+                <td><strong>Importe Neto de la Cifra de Negocios</strong></td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    50,325,402 €
+                </td>
+                <td>
+                    40,315,236 €
+                </td>
+            </tr>
+            <tr>
+                <td>Aprovisionamientos</td>
+                <td>
+                    -40,353,471 €
+                </td>
+                <td>
+                    -40,401,202 €
+                </td>
+                <td>
+                    -30,480,120 €
+                </td>
+            </tr>
+            <tr>
+                <td>Gastos de Personal</td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+            </tr>
+            <tr>
+                <td>Otros gastos de explotación</td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Resultado de Explotación</strong></td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Resultado Financiero</strong></td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Resultado del Ejercicio</strong></td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+            </tr>
+            <tr>
+                <th colspan="4"><h4>Balance</h4></th>
+            </tr>
+            <tr>
+                <td><strong>Activo</strong></td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+            </tr>
+            <tr>
+            </tr><tr>
+                <td>Activo No Corriente</td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+            </tr>
+            <tr>
+                <td>Activo Corriente</td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+            </tr>
+            <tr>
+                <td>Otros activos</td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    n/a
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Patrimonio Neto y Pasivo</strong></td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+            </tr>
+            <tr>
+                <td>Patrimonio Neto</td>
+                <td>
+                    10,187,814 €
+                </td>
+                <td>
+                    10,000,561 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+            </tr>
+            <tr>
+                <td>Pasivo No Corriente</td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    n/a
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+            </tr>
+            <tr>
+                <td>Deudas Entidades de Crédito l/p</td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+            </tr>
+            <tr>
+                <td>Pasivo Corriente</td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+            </tr>
+            <tr>
+                <td>Deudas Entidades de Crédito c/p</td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+                <td>
+                    10,810,100 €
+                </td>
+            </tr>
+            </tbody></table>
+
+            <table class="table hidden-lg sm-screens">
+
+                <thead>
+                <tr>
+
+                    <th>Año actual</th>
+
+                    <th>31/12/2014</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td><strong>Importe Neto <br>de la Cifra de Negocios</strong></td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Aprovisionamientos</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gastos de Personal</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Otros gastos de explotación</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Resultado de Explotación</strong></td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Resultado Financiero</strong></td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Resultado del Ejercicio</strong></td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="4"><h4>Balance</h4></th>
+                </tr>
+                <tr>
+                    <td><strong>Activo</strong></td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                </tr><tr>
+                    <td>Activo No Corriente</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Activo Corriente</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Otros activos</td>
+                    <td>
+                        n/a
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Patrimonio Neto y Pasivo</strong></td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Patrimonio Neto</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pasivo No Corriente</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Deudas Entidades de Crédito l/p</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pasivo Corriente</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Deudas Entidades de Crédito c/p</td>
+                    <td>
+                        n/a
+                    </td>
+                </tr>
+                </tbody></table>
+
+            <table class="table hidden-lg sm-screens">
+
+                <thead>
+                <tr>
+
+                    <th>Año actual</th>
+
+                    <th>31/12/2013</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td><strong>Importe Neto de la Cifra de Negocios</strong></td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Aprovisionamientos</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gastos de Personal</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Otros gastos de explotación</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Resultado de Explotación</strong></td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Resultado Financiero</strong></td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Resultado del Ejercicio</strong></td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="4"><h4>Balance</h4></th>
+                </tr>
+                <tr>
+                    <td><strong>Activo</strong></td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                </tr><tr>
+                    <td>Activo No Corriente</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Activo Corriente</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Otros activos</td>
+                    <td>
+                        n/a
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Patrimonio Neto y Pasivo</strong></td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Patrimonio Neto</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pasivo No Corriente</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Deudas Entidades de Crédito l/p</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pasivo Corriente</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Deudas Entidades de Crédito c/p</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                </tbody></table>
+
+            <table class="table hidden-lg sm-screens">
+
+                <thead>
+                <tr>
+
+                    <th>Año actual</th>
+
+                    <th>31/12/2012</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td><strong>Importe Neto de la Cifra de Negocios</strong></td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Aprovisionamientos</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gastos de Personal</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Otros gastos de explotación</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Resultado de Explotación</strong></td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Resultado Financiero</strong></td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Resultado del Ejercicio</strong></td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="4"><h4>Balance</h4></th>
+                </tr>
+                <tr>
+                    <td><strong>Activo</strong></td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                </tr><tr>
+                    <td>Activo No Corriente</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Activo Corriente</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Otros activos</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Patrimonio Neto y Pasivo</strong></td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Patrimonio Neto</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pasivo No Corriente</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Deudas Entidades de Crédito l/p</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pasivo Corriente</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                <tr>
+                    <td>Deudas Entidades de Crédito c/p</td>
+                    <td>
+                        10,810,100 €
+                    </td>
+                </tr>
+                </tbody></table>                                                    </div>
+            </div>
+            </div>
+            </div>
+
+        {# end TESTING ES#}
+
+
         </div>
     </div>
 </div>
