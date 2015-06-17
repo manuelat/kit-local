@@ -3,8 +3,8 @@
     <th class="hidden-md hidden-lg"></th>
     <th class="hidden-xs hidden-sm">Aktiv seit</th>
     <th class="hidden-md hidden-lg"></th>
-    <th>Kreditprojekt</th>
-    <th class="hidden-sm hidden-md hidden-lg"></th>
+    <th>Kredit</th>
+    {#<th class="hidden-sm hidden-md hidden-lg"></th>#}
     <th class="hidden-xs hidden-sm text-center">Kategorie</th>
     <th class="hidden-xs text-right">Sollzins</th>
     <th class="hidden-xs text-right hidden-md hidden-lg">Laufzeit</th>
@@ -25,19 +25,21 @@
             <a class="xs-height" href="{{ path('lender_portfolio_loans') }}">{{ art.title| truncate(35) }}</a>
         </td>
 
-        <td class="hidden-sm hidden-md hidden-lg text-right">
+        {#<td class="hidden-sm hidden-md hidden-lg text-right">
             <a href="{{ path('loanDetails') }}">{{ art.interest }}<br>{{ art.duration }}</a>
-        </td>
+        </td>#}
 
         <td class="hidden-xs hidden-sm text-center"><i class="categoryIcon">{{ art.category }}</i></td>
         <td class="hidden-xs text-right">{{ art.interest }}<span class="grade grade-b grade-small hidden-xs hidden-sm">B</span></td>
         <td class="hidden-xs text-right hidden-md hidden-lg">{{ art.duration }}</td>
         <td class="hidden-xs hidden-sm text-center">{{ art.days_left }}</td>
         <td class="hidden-xs hidden-sm text-right">{{ art.amount }}</td>
-        <td class="text-right right-position">{{ art.amount_pending }}</td>
+        <td class="text-right right-position">{{ art.amount_pending }}<br><span class="hidden-sm hidden-md hidden-lg">20 Monate</span></td>
         <td class="hidden-xs align-bullet">
             <div class="bullet defaulted"></div>
             <div class="bullet-label">defaulted</div>
+
+
         </td>
         <!--  PLS ALSO ADD TRUNCATE 35 TO THE TITLE -->
     </tr>
