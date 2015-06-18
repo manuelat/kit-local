@@ -10,6 +10,11 @@ $examples = array(
     array('order', 'checkout'),
 );
 
+$variable = array(
+    'one' => 'Row one',
+    'two' => 'Row two',
+);
+
 ob_start();
 show_source(__DIR__ . '/ex.php');
 $php_code = ob_get_clean();
@@ -17,4 +22,5 @@ $php_code = ob_get_clean();
 return array(
     'examples' => $examples,
     'php_code' => $php_code,
+    'variable' => $variable,
 );
