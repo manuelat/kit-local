@@ -308,6 +308,9 @@ lp-borrower-tv-spot-ES:
 lp-financiacionempresas-ES:
     path: /cms-ES/lp-financiacionempresas-ES
 
+lp-levante-ES:
+    path: /cms-ES/lp-levante-ES
+
 lp-selbststandige:
     path: /cms/lp-selbststandige
 
