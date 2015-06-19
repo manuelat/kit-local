@@ -240,6 +240,53 @@
 }
 
 
+/* ==========================================================================
+   Upgrade
+   ========================================================================== */
+
+.upload-file-wrapper {
+    .add-box {
+        min-height: 108px;
+        padding-top: 84px;
+        position: relative;
+    }
+
+    #upload-file-inner {
+        position: absolute;
+        top: 85px;
+        left: 70px;
+    }
+
+    p {
+        color: #8e959a;
+    }
+}
+
+#dropfile {
+    height: 253px;
+    padding-top: 72px;
+    border: 2px dashed @grayLighter;
+
+    i {
+        color: @brandColor7;
+        display: block;
+        font-size: 62px;
+    }
+}
+
+#dropfile.hover {
+    border-color: @inputFocusColor;
+    box-shadow: inset 0 0 30px rgba(0,0,0,.1);
+
+    i {
+        color: @brandColor2CTA;
+    }
+}
+
+#dropfile.fade {
+    transition: all 0.3s ease-out;
+    opacity: 1;
+}
 
 /* ==========================================================================
    Premium account

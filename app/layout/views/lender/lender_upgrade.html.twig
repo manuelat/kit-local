@@ -1,0 +1,53 @@
+{% extends 'layout.html.twig' %}
+
+{% block header %}
+
+    {% include '_partials/headers/account-header.html.twig' %}
+
+{% endblock header %}
+
+{% block body %}
+
+<div class="container spacing">
+
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>Upgrade your account</h1>
+            <p>CMS block: investor upgrade info</p>
+        </div>
+    </div><!-- end .row -->
+
+    <div class="row">
+        <div class="col-xs-12 col-xs-8">
+            {% include '_partials/lender/lender_upgrade_form.html.twig' %}
+        </div>
+        <div class="hidden-xs col-xs-4">
+            <p>CMS block: upgrade sidebar</p>
+        </div>
+    </div><!-- end .row -->
+
+</div><!-- end .container -->
+
+    <!--
+
+ Modal
+
+-->
+
+    {% include '_partials/lender/iban_calculator_modal.html.twig' %}
+
+{% endblock %}
+
+
+{% block js %}
+    {{ parent() }}
+
+    <script>
+        $(function(){
+
+            $('#lender-iban-modal').click(function(){
+                $('#lender-iban-calculator').modal('show');
+            });
+        });
+    </script>
+{% endblock js %}
