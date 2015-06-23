@@ -341,6 +341,9 @@ login_partner:
 user_edit_details_investor:
     path: /lender/user_edit_details_investor
 
+user_edit_details_borrower:
+    path: /borrower/user_edit_details_borrower
+
 changePassword:
     path: /others/changePassword
 
