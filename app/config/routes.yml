@@ -347,8 +347,14 @@ user_edit_details_borrower:
 changePassword:
     path: /others/changePassword
 
-forgot_password:
-    path: /others/forgot_password
+request_password:
+    path: /others/request_password
+
+request_password_new:
+    path: /others/request_password_new
+
+request_password_submitted:
+    path: /others/request_password_submitted
 
 registerLender:
     path: /others/registerLender
