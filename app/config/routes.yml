@@ -332,6 +332,12 @@ borrower-referral-top:
 referral-01:
     path: /cms/referral-01
 
+referral-borrower:
+    path: /borrower/referral-borrower
+
+referral-investor:
+    path: /lender/referral-investor
+
 login:
     path: /others/login
 
