@@ -1,0 +1,198 @@
+<div class="row">
+    <div class="col-xs-12 cancel-padding">
+        <h2 class="faux-h3">{{ 'Personliche Angaben' }}<small class="pull-right">* Pflichtfeld</small></h2>
+    </div><!-- .col-xs-12 -->
+</div><!-- end .row -->
+
+<div class="row form-group">
+    <div class="col-xs-12">
+        <div class="radio-buttons">
+            <input type="radio" class="hidden" value="male" name="lender_edit_gender" id="lender_edit_gender_m" required="required">
+            <div class="custom-circle">
+                <!-- add .selected when user clicks -->
+                <span></span>
+            </div>
+            <label for="lender_edit_gender_m" class="required"> {{ 'Herr' }}</label>
+        </div>
+        <div class="radio-buttons">
+            <input type="radio" class="hidden" value="female" name="lender_edit_gender" id="lender_edit_gender_f" required="required">
+            <div class="custom-circle">
+                <!-- add .selected when user clicks -->
+                <span></span>
+            </div>
+            <label for="lender_edit_gender_f" class="required"> {{ 'Frau' }}</label>
+        </div>
+        <div class="clearfix"></div>
+        <label for="lender_edit_gender" class="error" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+    </div>
+</div><!-- end .row -->
+
+<div class="row">
+    <div class="col-xs-12 col-sm-6">
+        <div class="form-group">
+            <label for="lender_edit_first_name" class="required">{{ 'Vorname(n)' }}</label>
+            <input type="text" id="lender_edit_first_name" class="form-control" required="required">
+            <label  class="error " role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+        <div class="form-group">
+            <label for="lender_edit_last_name" class="required">{{ 'Nachname' }}</label>
+            <input type="text" id="lender_edit_last_name" class="form-control" required="required">
+            <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+        </div>
+    </div>
+</div><!-- end .row -->
+
+<div class="row">
+    <div class="col-xs-12 col-sm-9">
+        <div class="form-group">
+            <label for="lender_edit_street" class="required">{{ 'Straße' }}</label>
+            <input type="text" id="lender_edit_street" class="form-control" required="required" maxlength="200">
+            <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-3">
+        <div class="form-group">
+            <label for="lender_edit_street_number" class="required">{{ 'Nummer' }}</label>
+            <input type="text" id="lender_edit_street_number" class="form-control" required="required" maxlength="10">
+            <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+        </div>
+    </div>
+</div><!-- end .row -->
+
+<div class="row">
+    <div class="col-xs-12 col-sm-4">
+        <div class="form-group">
+            <label for="lender_edit_postal_code" class="required  ">{{ 'Postleitzahl' }}</label>
+            <input type="text" id="lender_edit_postal_code" class="form-control" required="required" maxlength="20">
+            <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-8">
+        <div class="form-group">
+            <label for="lender_edit_city" class="required">{{ 'Stadt' }}</label>
+            <input type="text" id="lender_edit_city" class="form-control" required="required" maxlength="200">
+            <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+        </div>
+    </div>
+</div><!-- end .row -->
+
+<div class="row">
+    <div class="col-xs-12 col-sm-6">
+        <div class="form-group">
+            <label for="lender_edit_cellphone" class="required">{{ 'Mobiltelefonnummer' }}</label>
+            <input type="tel" id="lender_edit_cellphone" class="form-control" required="required">
+            <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+        </div>
+    </div>
+</div><!-- end .row -->
+
+<div class="row">
+    <div class="col-xs-12 cancel-padding">
+        <h2 class="faux-h3">{{ 'Bankverbindung' }} <small class="pull-right">* Pflichtfeld</small></h2>
+    </div>
+</div><!-- end .row -->
+
+<div class="row">
+    <div class="col-xs-12 text-right">
+        <div class="form-group">
+            <a href="">Download current SEPA mandate</a>
+        </div>
+    </div>
+</div><!-- end .row -->
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="form-group">
+            <label for="lender_edit_bank_account_holder" class="required">{{ 'Kontoinhaber' }}</label>
+            <input type="text" id="lender_edit_bank_account_holder" class="form-control" required="required">
+            <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+        </div>
+    </div>
+</div><!-- end .row -->
+
+<div class="row">
+    <div class="col-xs-12 col-sm-6">
+        <div class="form-group">
+            <label for="lender_edit_bank_account_number" class="required">{{ 'IBAN' }}</label>
+            <input type="text" id="lender_edit_bank_account_number" class="form-control" required="required" maxlength="22">
+            <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-6">
+        <div class="form-group">
+            <label for="lender_edit_bank_account_typed_bic_code" class="required">{{ 'BIC' }}</label>
+            <input type="text" id="lender_edit_bank_account_typed_bic_code" class="form-control" required="required">
+            <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+        </div>
+    </div>
+
+</div><!-- end .row -->
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="form-group">
+            <div class="checkbox-buttons">
+                <input type="checkbox" class="hidden" value="" name="lender_edit_bank_account_access_permit" id="lender_edit_bank_account_access_permit" required="required">
+                <div class="custom-square">
+                    <span></span> <!-- add class .selected when user clicks -->
+                </div>
+                <label for="lender_edit_bank_account_access_permit" class="required">
+                    {{ 'Ich ermächtige die Zencap Connect GmbH Zahlungen von meinem Konto mittels Lastschrift einzuziehen. Zugleich weise ich mein Kreditinstitut an, die von der Zencap Connect GmbH auf mein Konto gezogenen Lastschriften einzulösen.' }}
+                </label>
+                <label role="alert" class="error hidden" for="lender_edit_bank_account_access_permit">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+            </div>
+
+        </div>
+    </div>
+</div><!-- end .row -->
+
+<div class="row">
+    <div class="col-xs-12 text-right">
+        <div class="form-group">
+            <button class="btn btn-lg btn-nvstr" type="submit">Save changes</button>
+        </div>
+    </div>
+</div><!-- end .row -->
+
+<div class="row">
+    <div class="col-xs-12 cancel-padding">
+        <h2 class="faux-h3">{{ 'Account access' }}</h2>
+    </div>
+</div><!-- end .row -->
+
+<div class="row">
+    <div class="col-xs-12 col-sm-6">
+        <div class="form-group">
+            Passwort: *********
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-6">
+        <div class="form-group">
+            <button class="btn btn-lg btn-block" type="submit">Change Password</button>
+        </div>
+    </div>
+</div><!-- end .row -->
+
+<div class="row">
+    <div class="col-xs-12 col-sm-6">
+        <div class="form-group">
+           Email: qa+lender_live@zencap.de
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-6">
+        <div class="form-group">
+            Please contact CC to change your email
+        </div>
+    </div>
+</div><!-- end .row -->
+
+
+
+

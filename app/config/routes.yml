@@ -26,6 +26,9 @@ dashboard:
 invest:
     path: /lender/invest
 
+lender_upgrade:
+    path: /lender/lender_upgrade
+
 active_biddings:
     path: /lender/activeBiddings
 
@@ -335,8 +338,8 @@ login:
 login_partner:
     path: /others/login_partner
 
-profile:
-    path: /others/profile
+user_edit_details_investor:
+    path: /lender/user_edit_details_investor
 
 changePassword:
     path: /others/changePassword
