@@ -16,7 +16,7 @@
                 <p>Auf dieser Seite finden Sie eine Übersicht aller Kreditprojekte, von denen Sie monatliche Zahlungen erhalten. </p>
                 <p><strong>0 Kredite</strong></p>
             </div>
-        </div>
+        </div><!-- end .row -->
 
         <div class="row">
             <div class="col-xs-12 cancel-padding">
@@ -24,7 +24,7 @@
                     {% include '_partials/tables/portfolioTable.html.twig' %}
                 </table>
             </div>
-        </div>
+        </div><!-- end .row -->
 
         {# DATA BELOW IS JUST FOR TESTING NL + ES, SHOULD BE DELETED #}
 
@@ -139,6 +139,59 @@
         </div>
 
     {# ================ END TO DELETE ====================== #}
+
+
+        <!-- PAGINATION -->
+
+        <div class="row">
+            <div class="hidden-xs hidden-sm col-md-2 col-lg-2">
+                <div class="pagination">
+                    <div class="per-page">
+                        <select name="limit" class="selectpicker show-tick" data-width="100%">
+                            <option value="/darlehen/index?limit=15">15</option>
+                            <option value="/darlehen/index?limit=30">30</option>
+                            <option value="/darlehen/index?limit=60">60</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-10">
+                <ul class="pagination pagination-sm pull-right">
+                    {#<li class="disabled"><span aria-hidden="true">«</span></li>#}
+                    <li><a aria-label="Previous" href="#"><span aria-hidden="true">«</span></a></li>
+                    <li class="active">
+                        <a href="/darlehen/index">1</a>
+                    </li>
+                    <li>
+                        <a href="/darlehen/index/2">2</a>
+                    </li>
+                    <li>
+                        <a href="/darlehen/index/3">3</a>
+                    </li>
+                    <li><a aria-label="Next" href="/darlehen/index/2"><span aria-hidden="true">»</span></a></li>
+                </ul>
+            </div>
+
+        </div><!-- end .row -->
+
+        <!-- END PAGINATION -->
+
+
+        <!-- LINK TO TAX REPORTS -->
+        
+        {% if reports|length > 0 %}
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <h2>Zu versteuernde Zinseinkünfte</h2>
+
+                <p>Hier finden Sie die Dokumente mit ihren jährlich zu versteuernden Zinseinkünften. Das Dokument für das aktuelle Jahr wird Ende Dezember für Sie hochgeladen.</p>
+                <ul>
+                    <li><a href="/tax-report/download/2014">Zinseinkünfte 2014</a></li>
+                </ul>
+            </div>
+        </div>
+        {% endif %}
 
 
     </div><!-- .container -->
