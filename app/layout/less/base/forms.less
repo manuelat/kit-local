@@ -225,6 +225,8 @@ label, input, button, select, textarea {
         margin-top: -10px;
         height: 32px;
         overflow: hidden;
+        padding: 5px 24px 0 11px;
+        line-height: 22px;
     }
 
     ul.dropdown-menu {
@@ -328,7 +330,6 @@ label, input, button, select, textarea {
     height: 22px;
     width: 22px;
     float: left;
-    margin-bottom: 12px;
     position: relative;
 
     .selected {
@@ -411,10 +412,16 @@ label, input, button, select, textarea {
     .radio-buttons {
         float: left;
         margin-right: 30px;
-        line-height: 28px;
 
         .custom-circle {
             margin-right: 12px;
+        }
+
+        label.required {
+            height: 23px;
+            line-height: 23px;
+            margin-bottom: 0;
+
         }
     }
 
@@ -473,4 +480,14 @@ label, input, button, select, textarea {
     }
 }
 
+@media (max-width: 767px) {
+    #transactions_export_filter_date {
+        height: 23px;
+    }
+}
 
+@media (min-width: 768px) {
+    #transactions_export_filter_date {
+        padding-top: 8px;
+    }
+}
