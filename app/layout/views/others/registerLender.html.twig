@@ -31,24 +31,26 @@
                         </div>
                     </div><!-- end .row -->
 
-                    <div class="row form-group">
+                    <div class="row">
                         <div class="col-xs-12">
-                            <div class="radio-buttons">
-                                <input type="radio" class="hidden" value="male" name="lender_gender" id="lender_gender_m" required="required">
-                                <div class="custom-circle">
-                                    <span></span> <!-- add class .selected when user clicks -->
+                            <div class="form-group">
+                                <div class="radio-buttons">
+                                    <input type="radio" class="hidden" value="male" name="lender_gender" id="lender_gender_m" required="required">
+                                    <div class="custom-circle">
+                                        <span></span> <!-- add class .selected when user clicks -->
+                                    </div>
+                                    <label for="lender_gender_m" class="required"> {{ 'Herr' }}</label>
                                 </div>
-                                <label for="lender_gender_m" class="required"> {{ 'Herr' }}</label>
-                            </div>
-                            <div class="radio-buttons">
-                                <input type="radio" class="hidden" value="female" name="lender_gender" id="lender_gender_f" required="required">
-                                <div class="custom-circle">
-                                    <span></span>
+                                <div class="radio-buttons">
+                                    <input type="radio" class="hidden" value="female" name="lender_gender" id="lender_gender_f" required="required">
+                                    <div class="custom-circle">
+                                        <span></span>
+                                    </div>
+                                    <label for="lender_gender_f" class="required"> {{ 'Frau' }}</label>
                                 </div>
-                                <label for="lender_gender_f" class="required"> {{ 'Frau' }}</label>
+                                <div class="clearfix"></div>
+                                <label for="lender_gender" class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                             </div>
-                            <div class="clearfix"></div>
-                            <label for="lender_gender" class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                         </div>
                     </div><!-- end .row -->
 

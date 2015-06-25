@@ -30,25 +30,26 @@
                         </div>
                     </div><!-- end .row -->
 
-                    <div class="row form-group">
+                    <div class="row">
                         <div class="col-xs-12">
-
-                            <div class="radio-buttons">
-                                <input type="radio" class="hidden" value="male" name="borrower_gender" id="borrower_gender_m" required="required">
-                                <div class="custom-circle">
-                                    <span></span> <!-- add class .selected when user clicks -->
+                            <div class="form-group">
+                                <div class="radio-buttons">
+                                    <input type="radio" class="hidden" value="male" name="borrower_gender" id="borrower_gender_m" required="required">
+                                    <div class="custom-circle">
+                                        <span></span> <!-- add class .selected when user clicks -->
+                                    </div>
+                                    <label for="borrower_gender_m" class="required"> {{ 'Herr' }}</label>
                                 </div>
-                                <label for="borrower_gender_m" class="required"> {{ 'Herr' }}</label>
-                            </div>
-                            <div class="radio-buttons">
-                                <input type="radio" class="hidden" value="female" name="borrower_gender" id="borrower_gender_f" required="required">
-                                <div class="custom-circle">
-                                    <span></span> <!-- add class .selected when user clicks -->
+                                <div class="radio-buttons">
+                                    <input type="radio" class="hidden" value="female" name="borrower_gender" id="borrower_gender_f" required="required">
+                                    <div class="custom-circle">
+                                        <span></span> <!-- add class .selected when user clicks -->
+                                    </div>
+                                    <label for="borrower_gender_f" class="required"> {{ 'Frau' }}</label>
                                 </div>
-                                <label for="borrower_gender_f" class="required"> {{ 'Frau' }}</label>
+                                <div class="clearfix"></div>
+                                <label for="borrower_gender" class="error" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                             </div>
-                            <label for="borrower_gender" class="error" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
-
 
                             <!-- old project implementation -->
                           {#  <div class="radio-buttons" id="userlender_gender">
