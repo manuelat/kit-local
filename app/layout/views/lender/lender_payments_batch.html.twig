@@ -12,6 +12,43 @@
 
     <h1>Meine Auszahlungen</h1>
 
+    <form class="form-inline form-register" id="transactions_export_filter" method="get" action="">
+        <p class="faux-h3">
+            Export
+        </p>
+        <div class="form-group">
+            <div id="transactions_export_filter_date">
+                <div class="radio-buttons">
+                    <input type="radio" class="hidden" value="male" name="" id="transactions_export_filter_date_0" required="required">
+                    <div class="custom-circle">
+                        <span class="selected"></span> <!-- add class .selected when user clicks -->
+                    </div>
+                    <label for="transactions_export_filter_date_0" class="required"> {{ 'Alle' }}</label>
+                </div>
+                <div class="radio-buttons">
+                    <input type="radio" class="hidden" value="female" name="" id="transactions_export_filter_date_1" required="required">
+                    <div class="custom-circle">
+                        <span></span> <!-- add class .selected when user clicks -->
+                    </div>
+                    <label for="transactions_export_filter_date_1" class="required"> {{ 'Datum' }}</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="transactions_export_filter_from">von</label>
+            <input type="text" class="form-control" id="transactions_export_filter_from" placeholder="DD.MM.YYYY">
+        </div>
+        <div class="form-group">
+            <label for="transactions_export_filter_to">bis</label>
+            <input type="text" class="form-control" id="transactions_export_filter_to" placeholder="DD.MM.YYYY">
+        </div>
+        <div class="form-group">
+            <button id="" type="submit" class="btn btn-default">Export</button>
+        </div>
+    </form>
+
+    <hr/>
+
     <div class="row">
         <div class="col-xs-12">
             <ul class="pagination pagination-sm pull-right">
@@ -34,7 +71,7 @@
         </div>
     </div>
 
-    <div class="row">
+    {#<div class="row">
         <div class="col-xs-12">
             <ul class="pagination pagination-sm pull-right">
                 <li><a aria-label="Previous" href="#"><span aria-hidden="true">«</span></a></li>
@@ -46,11 +83,10 @@
                 <li><a aria-label="Next" href="#"><span aria-hidden="true">»</span></a></li>
             </ul>
         </div>
-    </div>
+    </div>#}
 
-    <hr/>
-
-    <form class="form-inline form-register" method="get" action="">
+    <!-- old project implementation -->
+   {# <form class="form-inline form-register" id="transactions_export_filter" method="get" action="">
         <p class="faux-h3">
             Export
         </p>
@@ -83,9 +119,8 @@
         <div class="form-group">
             <button type="submit" class="btn btn-default">Export</button>
         </div>
-    </form>
+    </form>#}
 
-    <hr/>
 
     {# DATA BELOW IS JUST FOR TESTING NL + ES, SHOULD BE DELETED #}
 
