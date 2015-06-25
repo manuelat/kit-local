@@ -49,8 +49,23 @@
 
     <hr/>
 
+    <!-- PAGINATION -->
+
     <div class="row">
-        <div class="col-xs-12">
+
+        <div class="col-xs-12 col-sm-2">
+            <div class="pagination xs-pull-right">
+                <div class="per-page">
+                    <select class="selectpicker show-tick" data-width="100%">
+                        <option value="">15</option>
+                        <option value="">30</option>
+                        <option value="">60</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-10">
             <ul class="pagination pagination-sm pull-right">
                 <li><a aria-label="Previous" href="#"><span aria-hidden="true">«</span></a></li>
                 <li><a href="#">1</a></li>
@@ -61,7 +76,7 @@
                 <li><a aria-label="Next" href="#"><span aria-hidden="true">»</span></a></li>
             </ul>
         </div>
-    </div>
+    </div><!-- end .row -->
 
     <div class="row">
         <div class="col-xs-12 cancel-padding">
@@ -69,7 +84,36 @@
                 {% include '_partials/tables/lender_payments_batch_table.html.twig' %}
             </table>
         </div>
-    </div>
+    </div><!-- end .row -->
+
+    <!-- PAGINATION -->
+
+    <div class="row">
+
+        <div class="col-xs-12 col-sm-2">
+            <div class="pagination xs-pull-right">
+                <div class="per-page">
+                    <select class="selectpicker show-tick" data-width="100%">
+                        <option value="">15</option>
+                        <option value="">30</option>
+                        <option value="">60</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-10">
+            <ul class="pagination pagination-sm pull-right">
+                <li><a aria-label="Previous" href="#"><span aria-hidden="true">«</span></a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a aria-label="Next" href="#"><span aria-hidden="true">»</span></a></li>
+            </ul>
+        </div>
+    </div><!-- end .row -->
 
     {#<div class="row">
         <div class="col-xs-12">
