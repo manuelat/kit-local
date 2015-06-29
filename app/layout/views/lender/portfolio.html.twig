@@ -20,9 +20,11 @@
 
         <div class="row">
             <div class="col-xs-12 cancel-padding">
-                <table class="table custom-table">
-                    {% include '_partials/tables/portfolioTable.html.twig' %}
-                </table>
+                <div class="portfolio-table">
+                    <table class="table custom-table">
+                        {% include '_partials/tables/portfolioTable.html.twig' %}
+                    </table>
+                </div>
             </div>
         </div><!-- end .row -->
 
@@ -31,6 +33,7 @@
         {# ================ START TO DELETE ====================== #}
         <div class="row">
             <div class="col-xs-12 cancel-padding">
+                <div class="portfolio-table">
                 <table class="table custom-table">
                     {# ================ NETHERLANDS ====================== #}
                     <thead>
@@ -80,6 +83,7 @@
                     {% endfor %}
                     </tbody>
                 </table>
+                </div>
             </div>
         </div>
 
@@ -87,6 +91,7 @@
          {# ================ SPAIN ====================== #}
         <div class="row">
             <div class="col-xs-12 cancel-padding">
+                <div class="portfolio-table">
                 <table class="table custom-table">
             <thead>
             <tr>
@@ -135,6 +140,7 @@
             {% endfor %}
             </tbody>
         </table>
+                </div>
             </div>
         </div>
 
