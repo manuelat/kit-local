@@ -16,7 +16,7 @@
                     <label for="password" class="hidden">Password</label>
                     <input type="text" class="form-control col-xs-12 custom-input" placeholder="Passwort" required="required" name="_password" id="password" autocomplete="off">
                 </div>
-                <a href="{{ path('request_password') }}" class="forgotPassword pull-right"><strong>Passwort vergessen?</strong></a>
+                <a href="{{ path('request_password') }}" class="forgotPassword pull-right" id="forgot_password"><strong>Passwort vergessen?</strong></a>
                 <input type="submit" value="Anmelden" name="_submit" id="_submit" class="btn btn-lg col-xs-12">
             </form>
         </div>
@@ -27,11 +27,11 @@
             <h1 class="faux-h1">Profil erstellen</h1>
             <p>Neu bei Zencap? Registrieren Sie sich jetzt kostenlos.</p>
             <p>
-                <a href="{{ path('registerLender') }}" class="btn btn-lg btn-nvstr btn-block">
+                <a href="{{ path('registerLender') }}" class="btn btn-lg btn-nvstr btn-block" id="register_lender_btn">
                     Investoren - Jetzt investieren
                 </a>
             </p>
-            <a href="{{ path('registerBorrower') }}" class="btn btn-lg btn-brrwr btn-block">
+            <a href="{{ path('registerBorrower') }}" class="btn btn-lg btn-brrwr btn-block" id="register_borrower_btn">
                 Unternehmen - Jetzt Kredit beantragen
             </a>
         </div>

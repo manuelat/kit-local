@@ -19,8 +19,8 @@ Header visible for desktop  ( hidden for phones and tablets )
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline metanav text-right">
-                        <li><a href="{{ path('login') }}">Anmelden/Registrieren </a></li>
-                        <li><a href="">Hilfe</a></li>
+                        <li><a href="{{ path('login') }}" id="user_registration">Anmelden/Registrieren </a></li>
+                        <li><a href="" id="user_help">Hilfe</a></li>
                     </ul>
                 </div>
             </div>
@@ -30,7 +30,7 @@ Header visible for desktop  ( hidden for phones and tablets )
                     <div class="site-menu">
                         <ul class="dropdown list-inline">
                             <li>
-                                <a href="{{ path('borrowerGettingStarted') }}">Ihr Firmenkredit</a>
+                                <a href="{{ path('borrowerGettingStarted') }}" id="user_company">Ihr Firmenkredit</a>
                                 <ul class="dropdown submenu-hover list-unstyled">
                                     <li><a href="{{ path('borrowerGettingStarted') }}">Kredit beantragen</a></li>
                                     <li><a href="{{ path('ratesFeesBorrower') }}">Leitfaden</a></li>
@@ -38,7 +38,7 @@ Header visible for desktop  ( hidden for phones and tablets )
                                 </ul>
                             </li>
                             <li>
-                                <a href="{{ path('lenderGettingStarted') }}">Ihre Investition</a>
+                                <a href="{{ path('lenderGettingStarted') }}" id="user_investments">Ihre Investition</a>
                                 <ul class="dropdown submenu-hover list-unstyled">
                                     <li><a href="{{ path('lenderGettingStarted') }}">Geld anlegen</a></li>
                                     <li><a href="{{ path('ratesFeesInvestor') }}">Renditen &amp; Gebühren</a></li>
@@ -46,13 +46,13 @@ Header visible for desktop  ( hidden for phones and tablets )
                                 </ul>
                             </li>
                             <li>
-                                <a href="{{ path('creditProjects') }}">Kreditprojekte</a>
+                                <a href="{{ path('creditProjects') }}" id="user_projects">Kreditprojekte</a>
                             </li>
                             <li>
-                                <a href="{{ path('howItWorks') }}">So funktioniert's</a>
+                                <a href="{{ path('howItWorks') }}" id="user_how_works">So funktioniert's</a>
                             </li>
                             <li>
-                                <a href="{{ path('blog') }}">Blog</a>
+                                <a href="{{ path('blog') }}" id="user_blog">Blog</a>
                             </li>
                         </ul>
                     </div>
@@ -83,15 +83,15 @@ Header visible for desktop  ( hidden for phones and tablets )
                 <div class="row">
                     <div class="col-md-12">
                         <div class="site-sub-menu">
-                            <ul class="investorSubmenu">{# for borrower must be this class => borrowerSubmenu #}
+                            <ul class="investorSubmenu">{# for borrower must be this class => borrowerSubmenu + pls add ID's for Test Automation #}
                                 <li class="sub-selected">
-                                    <a href="{{ path('lenderGettingStarted') }}">Geld anlegen</a>
+                                    <a href="{{ path('lenderGettingStarted') }}" id="lender_getting_started">Geld anlegen</a>
                                 </li>
                                 <li>
-                                    <a href="{{ path('ratesFeesInvestor') }}">Renditen &amp; Gebühren</a>
+                                    <a href="{{ path('ratesFeesInvestor') }}" id="lender_fees">Renditen &amp; Gebühren</a>
                                 </li>
                                 <li>
-                                    <a href="">Häufige Fragen</a>
+                                    <a href="" id="lender_faq">Häufige Fragen</a>
                                 </li>
                             </ul>
                         </div>
