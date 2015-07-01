@@ -11,8 +11,8 @@
 <div class="container spacing">
 
     <div class="row">
-        <div class="col-xs-12">
-            <ol class="lender_complete_steps list-inline hidden-xs hidden-sm visible-md visible-lg">
+        <div class="hidden-xs hidden-sm col-md-12 col-lg-12">
+            <ol class="lender_complete_steps list-inline">
                 <li class="step1 done col-xs-6 faux-h3"><span class="badge">1</span>Eingabe der persönlichen Daten</li>
                 <li class="step2 active col-xs-6 faux-h3"><span class="badge">2</span>Bestätigung der Gebote</li>
             </ol>
@@ -29,10 +29,25 @@
 
             <h1 class="pull-left"> Bestätigen Sie Ihre Gebote</h1>
 
-            <div class="clearfix"></div>
-            <a href="{{ path('invest') }}" class="btn hidden-xs hidden-sm">Gebote ändern</a>
         </div>
     </div><!-- end .row -->
+
+    <h2 class="faux-h2">Aufschlüsselung Ihrer Gebote</h2>
+
+    <div class="row">
+        <div class="col-xs-12 cancel-padding">
+            <table class="table custom-table">
+                {% include '_partials/tables/lender_checkout_table.html.twig' %}
+            </table>
+        </div>
+    </div><!-- end .row -->
+
+    <div class="row">
+        <p class="hidden-xs col-sm-12">
+            <a href="{{ path('invest') }}" class="btn pull-right" id="back">Gebote ändern</a>
+        </p>
+    </div><!-- end .row -->
+
 
     <hr class="hidden-xs hidden-sm"/>
 
@@ -67,7 +82,7 @@
             </div>
         </div>
         <div class="col-xs-12 col-sm-6">
-            <p><a class="btn btn-lg btn-block btn-nvstr" href="{{ path('invest') }}">Gebote kostenpflichtig abgebe</a>
+            <p><a class="btn btn-lg btn-block btn-nvstr" href="{{ path('invest') }}" id="btn_confirm_investment">Gebote kostenpflichtig abgebe</a>
             </p>
 
             <p>Sie haben mir die Vertragsunterlagen zu meinen Geboten per E-Mail zugeschickt. Hiermit bestätige ich,
@@ -76,15 +91,6 @@
         </div>
     </div><!-- end .row -->
 
-    <h2 class="faux-h2">Aufschlüsselung Ihrer Gebote</h2>
-
-    <div class="row">
-        <div class="col-xs-12 cancel-padding">
-            <table class="table custom-table">
-                {% include '_partials/tables/lender_checkout_table.html.twig' %}
-            </table>
-        </div>
-    </div><!-- end .row -->
 
 
             {# DATA BELOW IS JUST FOR TESTING NL + ES, SHOULD BE DELETED #}

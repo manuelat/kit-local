@@ -24,29 +24,30 @@ Header visible for desktop  ( hidden for phones and tablets )
                 <div class="col-md-12">
                     <div class="site-menu">
                         <ul class="dropdown list-inline">
+                            {# pls add ID's for TA, doesn't matter their name #}
                             <li>
-                                <a href="{{ path('dashboard') }}">Dashboard</a>
+                                <a href="{{ path('dashboard') }}" id="lender_dashboard">Dashboard</a>
                             </li>
                             <li>
-                                <a href="{{ path('invest') }}">Anlegen</a>
+                                <a href="{{ path('invest') }}" id="lender_invest">Anlegen</a>
                             </li>
                             <li>
-                                <a href="{{ path('active_biddings') }}">Gebote</a>
+                                <a href="{{ path('active_biddings') }}" id="lender_biddings">Gebote</a>
                             </li>
                             <li>
-                                <a href="{{ path('portfolio') }}">Portofolio</a>
+                                <a href="{{ path('portfolio') }}" id="lender_portfolio">Portofolio</a>
                             </li>
                             <li>
-                                <a href="{{ path('lender_upgrade') }}">Upgrade</a>
+                                <a href="{{ path('lender_upgrade') }}" id="lender_upgrade">Upgrade</a>
                             </li>
                             <li>
-                                <a href="{{ path('lender_payments_batch') }}">Auszahlungen</a>
+                                <a href="{{ path('lender_payments_batch') }}" id="lender_payments">Auszahlungen</a>
                             </li>
                             {#<li>
                                 <a href="{{ path('lenderUpgradeThreeSteps') }}">Premium-account</a>
                             </li>#}
                             <li>
-                                <a href="">Hilfe</a>
+                                <a href="" id="lender_help">Hilfe</a>
                             </li>
                         </ul>
                     </div>

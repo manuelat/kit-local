@@ -43,7 +43,7 @@
             <form action="">
                 <div class="input-search">
                     <i class="fa fa-search"></i>
-                    <input type="text" placeholder="Suchen" class="form-control" name="search" value="">
+                    <input type="text" placeholder="Suchen" class="form-control" name="search" value="" id="search_loan">
                 </div>
             </form>
         </div>
@@ -59,8 +59,22 @@
         </div>
     </div><!-- end .row -->
 
+    <!-- PAGINATION -->
+
     <div class="row">
-        <div class="col-xs-12">
+        <div class="col-xs-12 col-sm-2">
+            <div class="pagination xs-pull-right">
+                <div class="per-page">
+                    <select class="selectpicker show-tick" data-width="100%">
+                        <option value="">15</option>
+                        <option value="">30</option>
+                        <option value="">60</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-10">
             <ul class="pagination pagination-sm pull-right">
                 <li><a aria-label="Previous" href="#"><span aria-hidden="true">«</span></a></li>
                 <li><a href="#">1</a></li>
@@ -71,7 +85,8 @@
                 <li><a aria-label="Next" href="#"><span aria-hidden="true">»</span></a></li>
             </ul>
         </div>
-    </div>
+
+    </div><!-- end .row -->
 
     {# DATA BELOW IS JUST FOR TESTING NL + ES, SHOULD BE DELETED #}
 
@@ -88,9 +103,9 @@
             <th class="hidden-md hidden-lg"></th>
             <th class="hidden-xs"></th>
             <th class="hidden-xs">Kredietproject</th>
-            <th class="hidden-md hidden-lg text-center sm-width-ratio">Laufzeit</br>Zins</th>
+            <th class="hidden-md hidden-lg text-center sm-width-ratio">Laufzeit<br/>Zins</th>
             <th class="hidden-xs hidden-sm">Categorie</th>
-            <th class="hidden-md hidden-lg text-center">Kredit-</br>Bedrag</th>
+            <th class="hidden-md hidden-lg text-center">Kredit-<br/>Bedrag</th>
             <th class="hidden-xs hidden-sm text-center">Betrag</th>
             <th class="hidden-xs hidden-sm text-center">Rentevoet</th>
             <th class="hidden-xs hidden-sm">Termijn</th>
@@ -170,9 +185,9 @@
             <th class="hidden-md hidden-lg"></th>
             <th class="hidden-xs"></th>
             <th class="hidden-xs">Proyecto de préstamo</th>
-            <th class="hidden-md hidden-lg text-center sm-width-ratio">Plazo</br>Tipo de interés</th>
+            <th class="hidden-md hidden-lg text-center sm-width-ratio">Plazo<br/>Tipo de interés</th>
             <th class="hidden-xs hidden-sm">Categoría</th>
-            <th class="hidden-md hidden-lg text-center">Kredit-</br>Betrag</th>
+            <th class="hidden-md hidden-lg text-center">Kredit-<br/>Betrag</th>
             <th class="hidden-xs hidden-sm text-center">Importe</th>
             <th class="hidden-xs hidden-sm text-center">Tipo de interés</th>
             <th class="hidden-xs hidden-sm">Plazo</th>

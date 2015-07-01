@@ -23,6 +23,17 @@
                     vollständig finanziert, wird der Anlagebetrag in Ihrem Dashboard erneut unter "verfügbares Limit"
                     bzw. "verfügbares Guthaben" angezeigt.</p>
 
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="hidden-xs hidden-sm col-md-12">
+                <hr />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
                 <p><strong>0 Kredite</strong></p>
             </div>
         </div>
@@ -35,8 +46,43 @@
             </div>
         </div>
 
+        <!-- PAGINATION -->
 
-        {# DATA BELOW IS JUST FOR TESTING NL + ES, SHOULD BE DELETED #}
+        <div class="row">
+            <div class="col-xs-12 col-sm-2">
+                <div class="pagination xs-pull-right">
+                    <div class="per-page">
+                        <select name="limit" class="selectpicker show-tick" data-width="100%">
+                            <option value="/darlehen/index?limit=15">15</option>
+                            <option value="/darlehen/index?limit=30">30</option>
+                            <option value="/darlehen/index?limit=60">60</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-10">
+                <ul class="pagination pagination-sm pull-right">
+                    {#<li class="disabled"><span aria-hidden="true">«</span></li>#}
+                    <li><a aria-label="Previous" href="#"><span aria-hidden="true">«</span></a></li>
+                    <li class="active">
+                        <a href="/darlehen/index">1</a>
+                    </li>
+                    <li>
+                        <a href="/darlehen/index/2">2</a>
+                    </li>
+                    <li>
+                        <a href="/darlehen/index/3">3</a>
+                    </li>
+                    <li><a aria-label="Next" href="/darlehen/index/2"><span aria-hidden="true">»</span></a></li>
+                </ul>
+            </div>
+
+        </div><!-- end .row -->
+
+        <!-- END PAGINATION -->
+
+    {# DATA BELOW IS JUST FOR TESTING NL + ES, SHOULD BE DELETED #}
 
         {# ================ START TO DELETE ====================== #}
 
@@ -178,7 +224,8 @@
                 </table>
             </div>
         </div>
-        {# ================ END TO DELETE ====================== #}
+
+    {# ================ END TO DELETE ====================== #}
 
 
     </div><!-- .container -->
