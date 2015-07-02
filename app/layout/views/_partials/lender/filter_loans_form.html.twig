@@ -34,8 +34,10 @@
             <div id="slider-range-amount"></div>
         </div>
         <div class="text-center">
-            <label for="amount"></label>
-            <input type="text" id="amount" class="text-center text-slides" readonly>
+            <!--  in order to see dinamic data, remove .hidden from input and place it on label  -->
+            <!--  remove .text-slides from label and place it on input (remove padding-top for this class to look ok) -->
+            <label for="amount" class="text-slides">10.000€ - 150.000€</label>
+            <input type="text" id="amount" class="hidden text-center" readonly>
         </div>
         <div class="desp-10 hidden-md hidden-lg"></div>
     </div>
@@ -46,8 +48,8 @@
             <div id="slider-range-interest"></div>
         </div>
         <div class="text-center">
-            <label for="interest"></label>
-            <input type="text" id="interest" class="text-center text-slides" readonly>
+            <label for="interest" class="text-slides">1 % - 16 %</label>
+            <input type="text" id="interest" class="text-center hidden" readonly>
         </div>
         <div class="desp-10 hidden-md hidden-lg"></div>
     </div>
@@ -58,8 +60,8 @@
             <div id="slider-range-year"></div>
         </div>
         <div class="text-center">
-            <label for="years"></label>
-            <input type="text" id="years" class="text-center text-slides" readonly>
+            <label for="years" class="text-slides">0.5 Jahre - 5 Jahre</label>
+            <input type="text" id="years" class="text-center hidden" readonly>
         </div>
         <div class="desp-10 hidden-md hidden-lg"></div>
     </div>
