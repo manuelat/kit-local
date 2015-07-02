@@ -208,11 +208,11 @@ $loan_request[2] = array(
     'category' => 'Kreditprojektdetails ',
 );
 $loan_request[3] = array(
-    'step' => 'approved_signatories',
+    'step' => 'approved_signatories',  // approved_signatories_list
     'category' => 'Zeichnungsberechtigte',
 );
 $loan_request[4] = array(
-    'step' => 'warrantors_list',
+    'step' => 'warrantors', // warrantors_list
     'category' => 'Bürgen',
 );
 $loan_request[5] = array(

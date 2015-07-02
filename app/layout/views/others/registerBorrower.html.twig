@@ -107,6 +107,7 @@
                                     <option value="">GmbH</option>
                                     <option value="">UG</option>
                                 </select>
+                                <label class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                             </div>
                         </div>
                     </div><!-- end .row -->
@@ -116,7 +117,7 @@
                             <div class="form-group">
                                 <label for="borrower_cellphone" class="required">{{ 'Telefonnummer' }}</label>
                                 <input type="tel" required="required" id="borrower_cellphone" class="form-control">
-                                <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                                <label class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                             </div>
                         </div>
                     </div><!-- end .row -->
@@ -126,18 +127,18 @@
                             <div class="form-group">
 
                                 <div class="checkbox-buttons">
-                                    <input type="checkbox" class="hidden" value="" name="borrower_revenue" id="borrower_revenue" required="required">
+                                    <input type="checkbox" class="hidden" value="" name="borrower_revenue_last_year" id="borrower_revenue_last_year" required="required">
                                     <div class="custom-square">
-                                        <span class="" id="select_borrower_revenue"></span> <!-- add class .selected when user clicks and an ID for TA -->
+                                        <span class="fa" id="select_borrower_revenue"></span> <!-- add class .fa-check when user clicks and an ID for TA -->
                                     </div>
-                                    <label for="borrower_revenue" class="required">  {{ 'Lorem ipsum dolor sit amet, consectetur adipiscing elit' }}</label>
-                                    <label for="borrower_revenue" class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                                    <label for="borrower_revenue_last_year" class="required">  {{ 'Lorem ipsum dolor sit amet, consectetur adipiscing elit' }}</label>
+                                    <label for="borrower_revenue_last_year" class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                                 </div>
 
                                 <div class="checkbox-buttons">
                                     <input type="checkbox" class="hidden" value="" name="borrower_company_age" id="borrower_company_age" required="required">
                                     <div class="custom-square">
-                                        <span class="" id="select_borrower_company_age"></span> <!-- add class .selected when user clicks and an ID for TA -->
+                                        <span class="fa" id="select_borrower_company_age"></span> <!-- add class .fa-check when user clicks and an ID for TA -->
                                     </div>
                                     <label for="borrower_company_age" class="required"> {{ 'Lorem ipsum dolor sit amet, consectetur adipiscing elit' }}</label>
                                     <label for="borrower_company_age" class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
@@ -266,7 +267,8 @@
             <div class="container spacing">
                 <div class="row">
                     <div class="col-xs-12 screen-align-btn">
-                        <button class="btn btn-lg btn-brrwr" type="submit" id="borrower_submit">{{ 'Weiter' }}</button>
+                        <!-- add an ID for TA -->
+                        <button class="btn btn-lg btn-brrwr" type="submit" id="borrower_submit_registration">{{ 'Weiter' }}</button>
                         <div class="desp-10"></div>
                         <a href="" class="text-muted" data-toggle="tooltip" data-original-title="Another one here too" data-placement="top"><i class="fa fa-lock"></i> Sichere Übertragung (SSL)</a>
                     </div>

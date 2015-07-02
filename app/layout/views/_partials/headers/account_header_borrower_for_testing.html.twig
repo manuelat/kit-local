@@ -21,14 +21,15 @@ USED TO TEST LOGGED IN ~ BORROWER ~ ON DESKTOP  ...
                 <div class="col-md-8">
                     <div class="site-menu">
                         <ul class="dropdown list-inline">
+                            <!-- add an ID for TA -->
                             <li>
-                                <a href="{{ path('cockpit') }}">Mein Kredit</a>
+                                <a href="{{ path('cockpit') }}" id="borrower_credit">Mein Kredit</a>
                             </li>
                             <li>
-                                <a href="{{ path('payments_overview') }}">Payment plans</a>
+                                <a href="{{ path('payments_overview') }}" id="borrower_payments">Payment plans</a>
                             </li>
                             <li>
-                                <a href="">Hilfe</a>
+                                <a href="" id="borrower_help">Hilfe</a>
                             </li>
                         </ul>
                     </div>

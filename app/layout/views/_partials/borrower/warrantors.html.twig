@@ -20,19 +20,19 @@
             <div class="radio-buttons">
                 <input type="radio" class="hidden" value="male" name="warrantor_gender" id="warrantor_gender_m" required="required">
                 <div class="custom-circle">
-                    <span></span> <!-- add class .selected when user clicks -->
+                    <span class="" id="select_warrantor_gender_m"></span> <!-- add class .selected when user clicks and an ID for TA -->
                 </div>
                 <label for="warrantor_gender_m" class="required"> {{ 'Herr' }}</label>
             </div>
             <div class="radio-buttons">
                 <input type="radio" class="hidden" value="female" name="warrantor_gender" id="warrantor_gender_f" required="required">
                 <div class="custom-circle">
-                    <span></span>
+                    <span class="" id="select_warrantor_gender_f"></span> <!-- add class .selected when user clicks and an ID for TA -->
                 </div>
                 <label for="warrantor_gender_f" class="required"> {{ 'Frau' }}</label>
             </div>
             <div class="clearfix"></div>
-            <label for="warrantor_gender" class="text-danger" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+            <label for="warrantor_gender" class="error" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
         </div>
     </div><!-- end .row -->
 
@@ -40,18 +40,18 @@
     <div class="row">
         <div class="col-xs-12 col-sm-6">
             <div class="form-group">
-                <label for="warrantor_first_name" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Vorname' }}</label>
+                <label for="warrantor_first_name" class="required">{{ 'Vorname' }}</label>
                 <!-- add class 'error' for the input to make the border red  when the alert is also present -->
-                <input type="text" id="warrantor_first_name" class="form-control" placeholder="Vorname" required="required">
-                <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                <input type="text" id="warrantor_first_name" class="form-control" required="required">
+                <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
         <div class="col-xs-12 col-sm-6">
             <div class="form-group">
-                <label for="warrantor_last_name" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Nachname' }}</label>
+                <label for="warrantor_last_name" class="required">{{ 'Nachname' }}</label>
                 <!-- add class 'error' for the input to make the border red  when the alert is also present -->
-                <input type="text" id="warrantor_last_name" class="form-control" placeholder="Nachname" required="required">
-                <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                <input type="text" id="warrantor_last_name" class="form-control" required="required">
+                <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
     </div>
@@ -59,83 +59,15 @@
     <div class="row">
         <div class="col-xs-12 col-sm-6">
             <div class="form-group">
-                <label for="warrantor_birthday" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Geburtsdatum' }}</label>
+                <label for="warrantor_birthday" class="required">{{ 'Geburtsdatum' }}</label>
                 <input type="text" id="warrantor_birthday" class="form-control" placeholder="TT.MM.JJJJ" required="required">
-                <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
         <div class="col-xs-12 col-sm-6">
             <div class="form-group">
-                <label for="warrantor_surname_at_birth" class="hidden-xs hidden-sm visible-md visible-lg">{{ 'Geburtsname' }}</label>
-                <input type="text" id="warrantor_surname_at_birth" class="form-control" placeholder="Geburtsname">
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-xs-12 col-sm-6">
-            <label for="warrantor_country_of_origin" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Herkunftsstaatsangehörigkeit' }}</label>
-            <div class="btn-group btn-block">
-                <button data-toggle="dropdown" class="form-control btn dropdown-toggle form-group" type="button" aria-expanded="false">
-                    <span class="pull-left">{{ 'Deutschland' }}</span>
-                    <span class="fa fa-chevron-down pull-right"></span>
-                </button>
-                <ul role="menu" class="dropdown-menu col-xs-12">
-                    <li><a href="#"><i class="fa fa-check pull-right"></i>{{ 'Deutschland' }}
-                        </a></li>
-                    <li><a href="#">{{ '-------------------' }}</a></li>
-                    <li><a href="#">{{ 'Afghanistan' }}</a></li>
-                    <li><a href="#">{{ 'Albanien' }}</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6">
-            <label for="warrantor_nationality" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Staatsangehörigkeit' }}</label>
-            <div class="btn-group btn-block">
-                <button data-toggle="dropdown" class="form-control btn dropdown-toggle form-group" type="button" aria-expanded="false">
-                    <span class="pull-left">{{ 'Deutschland' }}</span>
-                    <span class="fa fa-chevron-down pull-right"></span>
-                </button>
-                <ul role="menu" class="dropdown-menu col-xs-12">
-                    <li><a href="#"><i class="fa fa-check pull-right"></i>{{ 'Deutschland' }}
-                        </a></li>
-                    <li><a href="#">{{ '-------------------' }}</a></li>
-                    <li><a href="#">{{ 'Afghanistan' }}</a></li>
-                    <li><a href="#">{{ 'Albanien' }}</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-xs-12 col-sm-6">
-            <label for="warrantor_second_nationality" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Zweite Staatsangehörigkeit' }}</label>
-            <div class="btn-group btn-block">
-                <button data-toggle="dropdown" class="form-control btn dropdown-toggle form-group" type="button" aria-expanded="false">
-                    <span class="pull-left">{{ 'nichts ausgewählt' }}</span>
-                    <span class="fa fa-chevron-down pull-right"></span>
-                </button>
-                <ul role="menu" class="dropdown-menu col-xs-12">
-                    <li><a href="#"><i class="fa fa-check pull-right"></i>{{ 'nichts ausgewählt' }}
-                        </a></li>
-                    <li><a href="#">{{ 'Afghanistan' }}</a></li>
-                    <li><a href="#">{{ 'Albanien' }}</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6">
-            <label for="warrantor_bank_employment_status" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Erwerbssituation' }}</label>
-            <div class="btn-group btn-block">
-                <button data-toggle="dropdown" class="form-control btn dropdown-toggle form-group" type="button" aria-expanded="false">
-                    <span class="pull-left">{{ 'Selbstständig' }}</span>
-                    <span class="fa fa-chevron-down pull-right"></span>
-                </button>
-                <ul role="menu" class="dropdown-menu col-xs-12">
-                    <li><a href="#"><i class="fa fa-check pull-right"></i>{{ 'Selbstständig' }}
-                        </a></li>
-                    <li><a href="#">{{ 'Angestellter Geschäftsführer' }}</a></li>
-                    <li><a href="#">{{ 'Angestellter' }}</a></li>
-                </ul>
+                <label for="warrantor_surname_at_birth">{{ 'Geburtsname' }}</label>
+                <input type="text" id="warrantor_surname_at_birth" class="form-control">
             </div>
         </div>
     </div>
@@ -143,25 +75,73 @@
     <div class="row">
         <div class="col-xs-12 col-sm-6">
             <div class="form-group">
-                <label for="warrantor_city_of_birth" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Geburtsort' }}</label>
-                <input type="text" id="warrantor_city_of_birth" class="form-control" placeholder="Geburtsort" required="required">
-                <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                <label class="required">Herkunftsstaatsangehörigkeit</label>
+                <select class="selectpicker show-tick" data-width="100%">
+                    <option value="">Deutschland.</option>
+                    <option value="">-------------------</option>
+                    <option value="">Afghanistan</option>
+                </select>
+                <label class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6">
+            <div class="form-group">
+                <label class="required">Staatsangehörigkeit</label>
+                <select class="selectpicker show-tick" data-width="100%">
+                    <option value="">Deutschland.</option>
+                    <option value="">-------------------</option>
+                    <option value="">Afghanistan</option>
+                </select>
+                <label class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <div class="form-group">
+                <label class="required">Zweite Staatsangehörigkeit</label>
+                <select class="selectpicker show-tick" data-width="100%">
+                    <option value="">Deutschland.</option>
+                    <option value="">-------------------</option>
+                    <option value="">Afghanistan</option>
+                </select>
+                <label class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+            </div>
+        </div>
+        
+        <div class="col-xs-12 col-sm-6">
+            <div class="form-group">
+                <label class="required">Erwerbssituation</label>
+                <select class="selectpicker show-tick" data-width="100%">
+                    <option value="">Selbstständig</option>
+                    <option value="">Angestellter Geschäftsführer</option>
+                    <option value="">Angestellter</option>
+                </select>
+                <label class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <div class="form-group">
+                <label for="warrantor_city_of_birth" class="required">{{ 'Geburtsort' }}</label>
+                <input type="text" id="warrantor_city_of_birth" class="form-control" required="required">
+                <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
         <div class="col-xs-12 col-sm-6">
-            <label for="warrantor_country_of_birth" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Geburtsland' }}</label>
-            <div class="btn-group btn-block">
-                <button data-toggle="dropdown" class="form-control btn dropdown-toggle form-group" type="button" aria-expanded="false">
-                    <span class="pull-left">{{ 'Deutschland' }}</span>
-                    <span class="fa fa-chevron-down pull-right"></span>
-                </button>
-                <ul role="menu" class="dropdown-menu col-xs-12">
-                    <li><a href="#"><i class="fa fa-check pull-right"></i>{{ 'Deutschland' }}
-                        </a></li>
-                    <li><a href="#">{{ '-------------------' }}</a></li>
-                    <li><a href="#">{{ 'Afghanistan' }}</a></li>
-                    <li><a href="#">{{ 'Albanien' }}</a></li>
-                </ul>
+            <div class="form-group">
+                <label class="required">Geburtsland</label>
+                <select class="selectpicker show-tick" data-width="100%">
+                    <option value="">Deutschland.</option>
+                    <option value="">-------------------</option>
+                    <option value="">Afghanistan</option>
+                </select>
+                <label class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
     </div>
@@ -175,17 +155,17 @@
     <div class="row">
         <div class="col-xs-12 col-sm-6">
             <div class="form-group">
-                <label for="warrantor_email" class="required hidden-xs hidden-sm">{{ 'Email' }}</label>
-                <input type="email" placeholder="Email" id="warrantor_email" class="form-control" required="required">
-                <label for="warrantor_email" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                <label for="warrantor_email" class="required">{{ 'Email' }}</label>
+                <input type="email" id="warrantor_email" class="form-control" required="required">
+                <label for="warrantor_email" class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-6">
             <div class="form-group">
-                <label for="warrantor_cellphone" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Mobiltelefon' }}</label>
-                <input type="text" id="warrantor_cellphone" class="form-control" placeholder="Mobiltelefon" required="required">
-                <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                <label for="warrantor_cellphone" class="required">{{ 'Mobiltelefon' }}</label>
+                <input type="text" id="warrantor_cellphone" class="form-control" required="required">
+                <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
     </div><!-- end .row -->
@@ -199,17 +179,17 @@
     <div class="row">
         <div class="col-xs-12 col-sm-10">
             <div class="form-group">
-                <label for="warrantor_street" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Straße' }}</label>
-                <input type="text" id="warrantor_street" class="form-control" placeholder="Straße" required="required" maxlength="200">
-                <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                <label for="warrantor_street" class="required">{{ 'Straße' }}</label>
+                <input type="text" id="warrantor_street" class="form-control" required="required" maxlength="200">
+                <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-2">
             <div class="form-group">
-                <label for="warrantor_street_number" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Nr' }}</label>
-                <input type="text" id="warrantor_street_number" class="form-control" placeholder="Nr" required="required" maxlength="10">
-                <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                <label for="warrantor_street_number" class="required">{{ 'Nr' }}</label>
+                <input type="text" id="warrantor_street_number" class="form-control" required="required" maxlength="10">
+                <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
     </div>
@@ -217,17 +197,17 @@
     <div class="row">
         <div class="col-xs-12 col-sm-4">
             <div class="form-group">
-                <label for="warrantor_postal_code" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'PLZ' }}</label>
-                <input type="text" id="warrantor_postal_code" class="form-control" placeholder="PLZ" required="required" maxlength="20">
-                <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                <label for="warrantor_postal_code" class="required">{{ 'PLZ' }}</label>
+                <input type="text" id="warrantor_postal_code" class="form-control" required="required" maxlength="20">
+                <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-8">
             <div class="form-group">
-                <label for="warrantor_city" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Ort' }}</label>
-                <input type="text" id="warrantor_city" class="form-control" placeholder="Ort" required="required" maxlength="200">
-                <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                <label for="warrantor_city" class="required">{{ 'Ort' }}</label>
+                <input type="text" id="warrantor_city" class="form-control" required="required" maxlength="200">
+                <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
     </div>
@@ -236,9 +216,9 @@
     <div class="row">
         <div class="col-xs-12 col-sm-6">
             <div class="form-group">
-                <label for="warrantor_resident_since" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Wohnhaft seit' }}</label>
+                <label for="warrantor_resident_since" class="required">{{ 'Wohnhaft seit' }}</label>
                 <input type="text" id="warrantor_resident_since" class="form-control" placeholder="TT.MM.JJJJ" required="required" maxlength="200">
-                <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
     </div>
@@ -255,12 +235,12 @@
                 <div class="checkbox-buttons">
                     <input type="checkbox" class="hidden" value="" name="warrantor_type_scoring_confirmed" id="warrantor_type_scoring_confirmed">
                     <div class="custom-square">
-                        <span></span> <!-- add class .selected when user clicks -->
+                        <span class="fa" id="select_warrantor_scoring_confirmed"></span> <!-- add class 'fa-check' when the user clicks and an ID for TA -->
                     </div>
                     <label for="warrantor_type_scoring_confirmed" class="required">
                         {{ 'Hiermit erkläre ich mich bereit, im Bedarfsfall als Bürge eine selbstschuldnerische Bürgschaft für den beantragten Kredit zu übernehmen. In dieser Funktion willige ich ein, dass meine persönlichen Daten durch die SCHUFA verarbeitet werden können. Hinweis: Wenn Sie dieses Formular für eine dritte Person ausfüllen, wird Zencap von dieser Person separat eine Erlaubnis zur Verarbeitung persönlicher Daten durch die SCHUFA einholen.' }}
                     </label>
-                    <label for="warrantor_type_scoring_confirmed" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                    <label for="warrantor_type_scoring_confirmed" class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                 </div>
 
             </div>

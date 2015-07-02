@@ -17,35 +17,35 @@
                         <div class="radio-buttons">
                             <input type="radio" class="hidden" value="male" name="lender_complete_gender" id="lender_complete_gender_m" required="required">
                             <div class="custom-circle">
-                                <span class="selected"></span>
+                                <span class="" id="select_complete_gender_m"></span> <!-- add class .selected when user clicks and an ID for TA -->
                             </div>
                             <label for="lender_complete_gender_m" class="required"> {{ 'Herr' }}</label>
                         </div>
                         <div class="radio-buttons">
                             <input type="radio" class="hidden" value="female" name="lender_complete_gender" id="lender_complete_gender_f" required="required">
                             <div class="custom-circle">
-                                <span></span>
+                                <span class="" id="select_complete_gender_f"></span> <!-- add class .selected when user clicks and an ID for TA -->
                             </div>
                             <label for="lender_complete_gender_f" class="required"> {{ 'Frau' }}</label>
                         </div>
                         <div class="clearfix"></div>
-                        <label for="lender_complete_gender" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                        <label for="lender_complete_gender" class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                     </div>
                 </div><!-- end .row -->
 
                 <div class="row">
                     <div class="col-xs-12 col-sm-6">
                         <div class="form-group">
-                            <label for="lender_complete_first_name" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Vorname(n)' }}</label>
-                            <input type="text" id="lender_complete_first_name" class="form-control" placeholder="Vorname(n)" required="required">
-                            <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                            <label for="lender_complete_first_name" class="required">{{ 'Vorname(n)' }}</label>
+                            <input type="text" id="lender_complete_first_name" class="form-control" required="required">
+                            <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-6">
                         <div class="form-group">
-                            <label for="lender_complete_last_name" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Nachname' }}</label>
-                            <input type="text" id="lender_complete_last_name" class="form-control" placeholder="Nachname" required="required">
-                            <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                            <label for="lender_complete_last_name" class="required">{{ 'Nachname' }}</label>
+                            <input type="text" id="lender_complete_last_name" class="form-control" required="required">
+                            <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                         </div>
                     </div>
                 </div><!-- end .row -->
@@ -53,17 +53,17 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-9">
                         <div class="form-group">
-                            <label for="lender_complete_street" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Straße' }}</label>
-                            <input type="text" id="lender_complete_street" class="form-control" placeholder="Straße" required="required" maxlength="200">
-                            <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                            <label for="lender_complete_street" class="required">{{ 'Straße' }}</label>
+                            <input type="text" id="lender_complete_street" class="form-control" required="required" maxlength="200">
+                            <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                         </div>
                     </div>
 
                     <div class="col-xs-12 col-sm-3">
                         <div class="form-group">
-                            <label for="lender_complete_street_number" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Nummer' }}</label>
-                            <input type="text" id="lender_complete_street_number" class="form-control" placeholder="Nummer" required="required" maxlength="10">
-                            <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                            <label for="lender_complete_street_number" class="required">{{ 'Nummer' }}</label>
+                            <input type="text" id="lender_complete_street_number" class="form-control" required="required" maxlength="10">
+                            <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                         </div>
                     </div>
                 </div><!-- end .row -->
@@ -71,17 +71,17 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-4">
                         <div class="form-group">
-                            <label for="lender_complete_postal_code" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Postleitzahl' }}</label>
-                            <input type="text" id="lender_complete_postal_code" class="form-control" placeholder="Postleitzahl" required="required" maxlength="20">
-                            <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                            <label for="lender_complete_postal_code" class="required">{{ 'Postleitzahl' }}</label>
+                            <input type="text" id="lender_complete_postal_code" class="form-control" required="required" maxlength="20">
+                            <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                         </div>
                     </div>
 
                     <div class="col-xs-12 col-sm-8">
                         <div class="form-group">
-                            <label for="lender_complete_city" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Stadt' }}</label>
-                            <input type="text" id="lender_complete_city" class="form-control" placeholder="Stadt" required="required" maxlength="200">
-                            <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                            <label for="lender_complete_city" class="required">{{ 'Stadt' }}</label>
+                            <input type="text" id="lender_complete_city" class="form-control" required="required" maxlength="200">
+                            <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                         </div>
                     </div>
                 </div><!-- end .row -->
@@ -89,9 +89,9 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-6">
                         <div class="form-group">
-                            <label for="lender_complete_cellphone" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Mobiltelefonnummer' }}</label>
-                            <input type="text" id="lender_complete_cellphone" class="form-control" placeholder="Mobiltelefonnummer" required="required">
-                            <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                            <label for="lender_complete_cellphone" class="required">{{ 'Mobiltelefonnummer' }}</label>
+                            <input type="text" id="lender_complete_cellphone" class="form-control" required="required">
+                            <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                         </div>
                     </div>
                 </div><!-- end .row -->
@@ -99,9 +99,9 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-6">
                         <div class="form-group">
-                            <label for="lender_complete_birthday" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Geburtsdatum' }}</label>
+                            <label for="lender_complete_birthday" class="required">{{ 'Geburtsdatum' }}</label>
                             <input type="text" id="lender_complete_birthday" class="form-control" placeholder="Geburtsdatum TT.MM.JJJJ" required="required">
-                            <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                            <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                         </div>
                     </div>
                 </div><!-- end .row -->
@@ -115,9 +115,9 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-12">
                         <div class="form-group">
-                            <label for="lender_complete_bank_account_holder" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Kontoinhaber' }}</label>
-                            <input type="text" id="lender_complete_bank_account_holder" placeholder="Kontoinhaber" class="form-control" required="required">
-                            <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                            <label for="lender_complete_bank_account_holder" class="required">{{ 'Kontoinhaber' }}</label>
+                            <input type="text" id="lender_complete_bank_account_holder" class="form-control" required="required">
+                            <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                         </div>
                     </div>
                 </div><!-- end .row -->
@@ -125,9 +125,9 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-6">
                         <div class="form-group">
-                            <label for="lender_complete_bank_account_number" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'IBAN' }}</label>
-                            <input type="text" id="lender_complete_bank_account_number" class="form-control" placeholder="IBAN" required="required" maxlength="22">
-                            <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                            <label for="lender_complete_bank_account_number" class="required">{{ 'IBAN' }}</label>
+                            <input type="text" id="lender_complete_bank_account_number" class="form-control" required="required" maxlength="22">
+                            <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                         </div>
                     </div>
                 </div><!-- end .row -->
@@ -135,27 +135,20 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-6">
                         <div class="form-group">
-                            <label for="lender_complete_bank_account_typed_bic_code" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'BIC' }}</label>
-                            <input type="text" id="lender_complete_bank_account_typed_bic_code" placeholder="BIC" class="form-control" required="required">
-                            <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                            <label for="lender_complete_bank_account_typed_bic_code" class="required">{{ 'BIC' }}</label>
+                            <input type="text" id="lender_complete_bank_account_typed_bic_code" class="form-control" required="required">
+                            <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                         </div>
                     </div>
 
                     <div class="col-xs-12 col-sm-6">
                         <div class="form-group">
-                            <label for="lender_complete_bank_account_bic_code" class="required  hidden-xs hidden-sm visible-md visible-lg">{{ 'Name der Bank' }}</label>
-                            <div class="btn-group btn-block hidden">
-                                <button data-toggle="dropdown" class="form-control btn dropdown-toggle" type="button" aria-expanded="false">
-                                    <span class="pull-left">{{ '' }}</span>
-                                    <span class="fa fa-chevron-down pull-right"></span>
-                                </button>
-                                <ul role="menu" class="dropdown-menu">
-                                    <li><a href="#"><i class="fa fa-check pull-right"></i>{{ '' }}
-                                        </a></li>
-                                    <li><a href="#">{{ '' }}</a></li>
-                                </ul>
-                            </div>
-                            <label class="placeholder">Commerzbank Gf 261 Hamburg</label>
+                            <label for="lender_complete_bank_account_bic_code" class="required">Name der Bank</label><br>
+                            <select class="selectpicker show-tick hidden" data-width="100%">
+                                <option value="">...</option>
+                                <option value="">...</option>
+                            </select>
+                           <label class="placeholder">Commerzbank Gf 261 Hamburg</label>
                         </div>
                     </div>
 
@@ -169,12 +162,12 @@
                             <div class="checkbox-buttons">
                                 <input type="checkbox" class="hidden" value="" name="lender_complete_bank_account_access_permit" id="lender_complete_bank_account_access_permit" required="required">
                                 <div class="custom-square">
-                                    <span></span> <!-- add class .selected when user clicks -->
+                                    <span class="fa" id="select_bank_account_permit"></span> <!-- add class .fa-check when user clicks and an ID for TA -->
                                 </div>
                                 <label for="lender_complete_bank_account_access_permit" class="required">
                                     {{ 'Ich ermächtige die Zencap Connect GmbH Zahlungen von meinem Konto mittels Lastschrift einzuziehen. Zugleich weise ich mein Kreditinstitut an, die von der Zencap Connect GmbH auf mein Konto gezogenen Lastschriften einzulösen.' }}
                                 </label>
-                                <label role="alert" class="text-danger hidden" for="lender_complete_bank_account_access_permit">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                                <label role="alert" class="error hidden" for="lender_complete_bank_account_access_permit">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                             </div>
 
                         </div>

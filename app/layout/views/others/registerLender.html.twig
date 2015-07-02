@@ -37,14 +37,14 @@
                                 <div class="radio-buttons">
                                     <input type="radio" class="hidden" value="male" name="lender_gender" id="lender_gender_m" required="required">
                                     <div class="custom-circle">
-                                        <span></span> <!-- add class .selected when user clicks -->
+                                        <span class="" id="select_lender_gender_m"></span> <!-- add class .selected when the user clicks and an ID for TA -->
                                     </div>
                                     <label for="lender_gender_m" class="required"> {{ 'Herr' }}</label>
                                 </div>
                                 <div class="radio-buttons">
                                     <input type="radio" class="hidden" value="female" name="lender_gender" id="lender_gender_f" required="required">
                                     <div class="custom-circle">
-                                        <span></span>
+                                        <span class="" id="select_lender_gender_f"></span>
                                     </div>
                                     <label for="lender_gender_f" class="required"> {{ 'Frau' }}</label>
                                 </div>
@@ -114,7 +114,7 @@
                                 <div class="checkbox-buttons">
                                     <input type="checkbox" class="hidden" value="" name="lender_terms_and_conditions" id="lender_terms_and_conditions" required="required">
                                     <div class="custom-square">
-                                        <span></span> <!-- add class .selected when user clicks -->
+                                        <span class="fa" id="select_lender_terms"></span> <!-- add class .fa-check when the user clicks and an ID for TA -->
                                     </div>
                                     <label for="lender_terms_and_conditions" class="required">  {{ 'Hiermit akzeptiere ich die' }}
                                         <a target="_blank" href="{{ path('conditionsInvestor') }}">{{ 'Nutzungsbedingungen' }}</a></label>
@@ -123,7 +123,7 @@
                                 <div class="checkbox-buttons">
                                     <input type="checkbox" class="hidden" value="" name="lender_privacy" id="lender_privacy" required="required">
                                     <div class="custom-square">
-                                        <span></span>
+                                        <span class="fa" id="select_lender_privacy"></span> <!-- add class .fa-check when the user clicks and an ID for TA -->
                                     </div>
                                     <label for="lender_privacy" class="required"> {{ 'Ich willige in die Erhebung, Verarbeitung und Nutzung meiner personenbezogenen Daten, wie in der' }}
                                         <a target="_blank" href="{{ path('privacy') }}">{{ 'Datenschutzerklärung' }}</a>
@@ -133,7 +133,7 @@
                                 <div class="checkbox-buttons">
                                     <input type="checkbox" class="hidden" value="" name="lender_newsletter_subscription" id="lender_newsletter_subscription">
                                     <div class="custom-square">
-                                        <span class="fa fa-check"></span>
+                                        <span class="fa" id="select_lender_newsletter"></span>  <!-- add class .fa-check when the user clicks and an ID for TA -->
                                     </div>
                                     <label for="lender_newsletter_subscription"> {{ 'Ich bin damit einverstanden, dass mich die Zencap Deutschland GmbH per E-Mail und SMS über weitere interessante Angebote informiert und hierfür meine obigen Angaben verwendet. (freiwillig)' }}</label>
                                 </div>
@@ -157,7 +157,8 @@
             <div class="container spacing">
                 <div class="row">
                     <div class="col-xs-12 screen-align-btn">
-                        <button class="btn btn-lg btn-nvstr" type="submit" id="lender_submit">{{ 'Weiter' }}</button>
+                        <!-- add an ID for TA -->
+                        <button class="btn btn-lg btn-nvstr" type="submit" id="lender_submit_registration">{{ 'Weiter' }}</button>
                         <div class="desp-10"></div>
                         <a href="" class="text-muted" data-toggle="tooltip" data-original-title="Another one here too" data-placement="top"><i class="fa fa-lock"></i> Sichere Übertragung (SSL)</a>
                     </div>

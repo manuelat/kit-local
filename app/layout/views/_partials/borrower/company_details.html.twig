@@ -14,21 +14,22 @@
     <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-7">
             <div class="form-group">
-                <label class="required hidden-xs hidden-sm" for="loan_request_company_name">Firmenname</label> <i data-original-title="Lorem Ipsum" class="fa fa-globe hidden-xs hidden-sm" data-toggle="tooltip" data-placement="top" title=""></i>
+                <label class="required" for="loan_request_company_name">Firmenname</label> <i data-original-title="Lorem Ipsum" class="fa fa-globe hidden-xs hidden-sm" data-toggle="tooltip" data-placement="top" title=""></i>
                 <!-- add class 'disabled' for the input -->
-                <input type="text" required="required" class="form-control" id="loan_request_company_name" placeholder="Firmenname">
+                <input type="text" required="required" class="form-control" id="loan_request_company_name">
                 <label role="alert" class="error hidden" for="loan_request_company_name">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-6 col-md-5">
             <div class="form-group">
-                <label class="required hidden-xs hidden-sm">Rechtsform</label> <i data-original-title="Lorem Ipsum" class="fa fa-globe hidden-xs hidden-sm" data-toggle="tooltip" data-placement="top" title=""></i>
+                <label class="required">Rechtsform</label> <i data-original-title="Lorem Ipsum" class="fa fa-globe hidden-xs hidden-sm" data-toggle="tooltip" data-placement="top" title=""></i>
                 <select class="selectpicker show-tick" data-width="100%">
                     <option value="">GmbH & Co. KG</option>
                     <option value="">nichts ausgewählt</option>
                     <option value="">UG (haftungsbeschränkt)</option>
                 </select>
+                <label class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
 
@@ -42,19 +43,19 @@
                 <div class="checkbox-buttons">
                     <input type="checkbox" class="hidden" value="" name="loan_request_company_name_public" id="borrower_revenue" required="required">
                     <div class="custom-square">
-                        <span></span> <!-- add class .selected when user clicks -->
+                        <span class="fa" id="select_company_name_public"></span> <!-- add class .fa-check when user clicks and an ID for TA -->
                     </div>
                     <label for="loan_request_company_name_public">  {{ 'Ich möchte nicht, dass mein Firmenname und die URL der Firmenwebseite registrierten Investoren auf der Plattform angezeigt wird' }}. <i data-original-title="Lorem ipsum." class="fa fa-question-circle" data-toggle="tooltip" data-placement="top" title=""></i></label>
                     <label for="loan_request_company_name_public" class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                 </div>
 
                 <div class="checkbox-buttons">
-                    <input type="checkbox" class="hidden" value="" name="legal_form_changed" id="legal_form_changed" required="required">
+                    <input type="checkbox" class="hidden" value="" name="loan_request_legal_form_changed" id="loan_request_legal_form_changed" required="required">
                     <div class="custom-square">
-                        <span></span>
+                        <span class="" id="select_legal_form_changed"></span>  <!-- add class .fa-check when user clicks and an ID for TA -->
                     </div>
-                    <label for="legal_form_changed"> {{ 'Rechtsformänderung: Sofern Sie in den letzten 3 Jahren Ihre Rechtsform verändert haben, klicken Sie bitte hier.' }}</label>
-                    <label for="legal_form_changed" class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+                    <label for="loan_request_legal_form_changed"> {{ 'Rechtsformänderung: Sofern Sie in den letzten 3 Jahren Ihre Rechtsform verändert haben, klicken Sie bitte hier.' }}</label>
+                    <label for="loan_request_legal_form_changed" class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                 </div>
             </div><!-- end .form-group -->
         </div>
@@ -63,18 +64,18 @@
     <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-9">
             <div class="form-group">
-                <label for="loan_request_company_street" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Straße' }}</label>
+                <label for="loan_request_company_street" class="required">{{ 'Straße' }}</label>
                 <!-- add class 'error' for the input to make the border red  when the alert is also present -->
-                <input type="text" id="loan_request_company_street" class="form-control" placeholder="Straße" required="required">
+                <input type="text" id="loan_request_company_street" class="form-control" required="required">
                 <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-6 col-md-3">
             <div class="form-group">
-                <label for="loan_request_company_street_number" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Nummer' }}</label>
+                <label for="loan_request_company_street_number" class="required">{{ 'Nummer' }}</label>
                 <!-- add class 'error' for the input to make the border red  when the alert is also present -->
-                <input type="text" id="loan_request_company_street_number" class="form-control" placeholder="Nummer" required="required">
+                <input type="text" id="loan_request_company_street_number" class="form-control" required="required">
                 <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
@@ -83,17 +84,17 @@
     <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-5">
             <div class="form-group">
-                <label for="loan_request_company_postal_code" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'PLZ' }}</label>
+                <label for="loan_request_company_postal_code" class="required">{{ 'PLZ' }}</label>
                 <!-- add class 'error' for the input to make the border red  when the alert is also present -->
-                <input type="text" id="loan_request_company_postal_code" class="form-control" placeholder="PLZ" required="required">
+                <input type="text" id="loan_request_company_postal_code" class="form-control" required="required">
                 <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-6 col-md-7">
             <div class="form-group">
-                <label for="loan_request_company_city" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Ort' }}</label>
-                <input type="text" id="loan_request_company_city" class="form-control" placeholder="Ort" required="required">
+                <label for="loan_request_company_city" class="required">{{ 'Ort' }}</label>
+                <input type="text" id="loan_request_company_city" class="form-control" required="required">
                 <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
@@ -104,20 +105,21 @@
     <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-5">
             <div class="form-group">
-                <label class="required hidden-xs hidden-sm" for="loan_request_company_register_number">Handelsregisternummer</label>
-                <input type="text" required="required" class="form-control" id="loan_request_company_register_number" placeholder="Handelsregisternummer">
+                <label class="required" for="loan_request_company_register_number">Handelsregisternummer</label>
+                <input type="text" required="required" class="form-control" id="loan_request_company_register_number">
                 <label role="alert" class="error hidden" for="loan_request_company_register_number">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-6 col-md-7">
             <div class="form-group">
-                <label class="required hidden-xs hidden-sm">Handelsregister</label> <i data-original-title="Lorem Ipsum" class="fa fa-globe hidden-xs hidden-sm" data-toggle="tooltip" data-placement="top" title=""></i>
+                <label class="required">Handelsregister</label> <i data-original-title="Lorem Ipsum" class="fa fa-globe hidden-xs hidden-sm" data-toggle="tooltip" data-placement="top" title=""></i>
                 <select class="selectpicker show-tick" data-width="100%">
                     <option value="">Aachen</option>
                     <option value="">Altenburg</option>
                     <option value="">Amberg</option>
                 </select>
+                <label class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
     </div><!-- end .row -->
@@ -125,8 +127,8 @@
     <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-5">
             <div class="form-group">
-                <label class="required hidden-xs hidden-sm" for="loan_request_company_vat_number">USt-ID</label>
-                <input type="text" required="required" class="form-control" id="loan_request_company_vat_number" placeholder="USt-ID">
+                <label class="required" for="loan_request_company_vat_number">USt-ID</label>
+                <input type="text" required="required" class="form-control" id="loan_request_company_vat_number">
                 <label role="alert" class="error hidden" for="loan_request_company_vat_number">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
@@ -141,7 +143,7 @@
     <div class="row">
 
         <div class="col-xs-12 col-sm-6">
-            <label class="required hidden-xs hidden-sm">Branche</label> <i data-original-title="Lorem Ipsum" class="fa fa-globe hidden-xs hidden-sm" data-toggle="tooltip" data-placement="top" title=""></i>
+            <label class="required">Branche</label> <i data-original-title="Lorem Ipsum" class="fa fa-globe hidden-xs hidden-sm" data-toggle="tooltip" data-placement="top" title=""></i>
             <div class="form-group">
                 <select class="selectpicker show-tick" data-width="100%">
                     <option value="">Bitte wählen Sie die Branche</option>
@@ -149,6 +151,7 @@
                     <option value="">Dienstleistungen</option>
                     <option value="">Finanzen</option>
                 </select>
+                <label class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
 
@@ -156,7 +159,7 @@
 
         <div class="col-xs-12 col-sm-6">
             <div class="form-group">
-                <label class="required hidden-xs hidden-sm" for="loan_request_company_foundation_date">Gründungsdatum</label> <i data-original-title="Lorem Ipsum" class="fa fa-globe hidden-xs hidden-sm" data-toggle="tooltip" data-placement="top" title=""></i>
+                <label class="required" for="loan_request_company_foundation_date">Gründungsdatum</label> <i data-original-title="Lorem Ipsum" class="fa fa-globe hidden-xs hidden-sm" data-toggle="tooltip" data-placement="top" title=""></i>
                 <input type="text" required="required" class="form-control" id="loan_request_company_foundation_date" placeholder="Gründungsdatum (TT.MM.JJJJ)">
                 <label role="alert" class="error hidden" for="loan_request_company_foundation_date">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
@@ -166,8 +169,8 @@
     <div class="row">
         <div class="col-xs-12 col-sm-6">
             <div class="form-group">
-                <label class="required hidden-xs hidden-sm" for="loan_request_company_employees_number">Anzahl Mitarbeiter</label> <i data-original-title="Lorem Ipsum" class="fa fa-globe hidden-xs hidden-sm" data-toggle="tooltip" data-placement="top" title=""></i>
-                <input type="text" required="required" class="form-control" id="loan_request_company_employees_number" placeholder="Anzahl Mitarbeiter" maxlength="25">
+                <label class="required" for="loan_request_company_employees_number">Anzahl Mitarbeiter</label> <i data-original-title="Lorem Ipsum" class="fa fa-globe hidden-xs hidden-sm" data-toggle="tooltip" data-placement="top" title=""></i>
+                <input type="text" required="required" class="form-control" id="loan_request_company_employees_number" maxlength="25">
                 <label role="alert" class="error hidden" for="loan_request_company_employees_number">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>

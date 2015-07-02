@@ -20,14 +20,14 @@
             <div class="radio-buttons">
                 <input type="radio" class="hidden" value="male" name="approved_signatory_gender" id="approved_signatory_gender_m" required="required">
                 <div class="custom-circle">
-                    <span></span> <!-- add class .selected when user clicks -->
+                    <span class="" id="select_signatory_gender_m"></span> <!-- add class .selected when user clicks and an ID for TA -->
                 </div>
                 <label for="approved_signatory_gender_m" class="required"> {{ 'Herr' }}</label>
             </div>
             <div class="radio-buttons">
                 <input type="radio" class="hidden" value="female" name="approved_signatory_gender" id="approved_signatory_gender_f" required="required">
                 <div class="custom-circle">
-                    <span></span>
+                    <span class="" id="select_signatory_gender_f"></span> <!-- add class .selected when user clicks and an ID for TA -->
                 </div>
                 <label for="approved_signatory_gender_f" class="required"> {{ 'Frau' }}</label>
             </div>
@@ -40,17 +40,17 @@
     <div class="row">
         <div class="col-xs-12 col-sm-6">
             <div class="form-group">
-                <label for="approved_signatory_first_name" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Vorname' }}</label>
+                <label for="approved_signatory_first_name" class="required">{{ 'Vorname' }}</label>
                 <!-- add class 'error' for the input to make the border red  when the alert is also present -->
-                <input type="text" id="approved_signatory_first_name" class="form-control" placeholder="Vorname" required="required">
+                <input type="text" id="approved_signatory_first_name" class="form-control" required="required">
                 <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
         <div class="col-xs-12 col-sm-6">
             <div class="form-group">
-                <label for="approved_signatory_last_name" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Nachname' }}</label>
+                <label for="approved_signatory_last_name" class="required">{{ 'Nachname' }}</label>
                 <!-- add class 'error' for the input to make the border red  when the alert is also present -->
-                <input type="text" id="approved_signatory_last_name" class="form-control" placeholder="Nachname" required="required">
+                <input type="text" id="approved_signatory_last_name" class="form-control" required="required">
                 <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
@@ -62,7 +62,7 @@
                 <div class="checkbox-buttons">
                     <input type="checkbox" class="hidden" value="" name="approved_signatory_sign_permission" id="approved_signatory_sign_permission" required="required">
                     <div class="custom-square">
-                        <span></span> <!-- add class .selected when user clicks -->
+                        <span class="fa" id="select_signatory_sign_permission"></span> <!-- add class .fa-check when user clicks and an ID for TA -->
                     </div>
                     <label for="approved_signatory_sign_permission" class="required">
                         {{ 'Diese Person ist alleinvertretungsberechtigt' }}
@@ -77,15 +77,36 @@
     <div class="row">
         <div class="col-xs-12 col-sm-6">
             <div class="form-group">
-                <label for="approved_signatory_birthday" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Geburtsdatum' }}</label>
-                <input type="text" id="approved_signatory_birthday" class="form-control" placeholder="Geburtsdatum TT.MM.JJJJ" required="required">
+                <label for="approved_signatory_birthday" class="required">{{ 'Geburtsdatum' }}</label>
+                <input type="text" id="approved_signatory_birthday" class="form-control" required="required">
+                <label class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <div class="form-group">
+                <label for="approved_signatory_surname_at_birth">{{ 'Geburtsname' }}</label>
+                <input type="text" id="approved_signatory_surname_at_birth" class="form-control">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <div class="form-group">
+                <label for="approved_signatory_city_of_birth" class="required">{{ 'Geburtsort' }}</label>
+                <input type="text" id="approved_signatory_city_of_birth" class="form-control" required="required">
                 <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
         <div class="col-xs-12 col-sm-6">
             <div class="form-group">
-                <label for="approved_signatory_surname_at_birth" class="hidden-xs hidden-sm visible-md visible-lg">{{ 'Geburtsname' }}</label>
-                <input type="text" id="approved_signatory_surname_at_birth" class="form-control" placeholder="Geburtsname">
+                <label for="approved_signatory_country_of_birth" class="required">{{ 'Geburtsland' }}</label>
+                <select class="selectpicker show-tick" data-width="100%">
+                    <option value="">Deutschland</option>
+                    <option value="">Afghanistan</option>
+                    <option value="">Albanien</option>
+                </select>
+                <label class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
     </div>
@@ -93,19 +114,25 @@
     <div class="row">
         <div class="col-xs-12 col-sm-6">
             <div class="form-group">
-                <label for="approved_signatory_city_of_birth" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Geburtsort' }}</label>
-                <input type="text" id="approved_signatory_city_of_birth" class="form-control" placeholder="Geburtsort" required="required">
-                <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6">
-            <div class="form-group">
-                <label for="approved_signatory_country_of_birth" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Geburtsland' }}</label>
+                <label for="approved_signatory_nationality" class="required">{{ 'Staatsangehörigkeit' }}</label>
                 <select class="selectpicker show-tick" data-width="100%">
                     <option value="">Deutschland</option>
                     <option value="">Afghanistan</option>
                     <option value="">Albanien</option>
                 </select>
+                <label class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6">
+            <div class="form-group">
+                <label for="approved_signatory_country_of_origin" class="required">{{ 'Herkunftsstaatsangehörigkeit' }}</label>
+                <select class="selectpicker show-tick" data-width="100%">
+                    <option value="">Deutschland</option>
+                    <option value="">Afghanistan</option>
+                    <option value="">Albanien</option>
+                </select>
+                <label class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
     </div>
@@ -113,36 +140,13 @@
     <div class="row">
         <div class="col-xs-12 col-sm-6">
             <div class="form-group">
-                <label for="approved_signatory_nationality" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Staatsangehörigkeit' }}</label>
-                <select class="selectpicker show-tick" data-width="100%">
-                    <option value="">Deutschland</option>
-                    <option value="">Afghanistan</option>
-                    <option value="">Albanien</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-6">
-            <div class="form-group">
-                <label for="approved_signatory_country_of_origin" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Herkunftsstaatsangehörigkeit' }}</label>
-                <select class="selectpicker show-tick" data-width="100%">
-                    <option value="">Deutschland</option>
-                    <option value="">Afghanistan</option>
-                    <option value="">Albanien</option>
-                </select>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-xs-12 col-sm-6">
-            <div class="form-group">
-                <label for="approved_signatory_bank_employment_status" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Erwerbssituation' }}</label>
+                <label for="approved_signatory_bank_employment_status" class="required">{{ 'Erwerbssituation' }}</label>
                 <select class="selectpicker show-tick" data-width="100%">
                     <option value="">Selbstständig</option>
                     <option value="">Angestellter Geschäftsführer</option>
                     <option value="">Angestellter</option>
                 </select>
+                <label class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
     </div>
@@ -156,16 +160,16 @@
     <div class="row">
         <div class="col-xs-12 col-sm-6">
             <div class="form-group">
-                <label for="approved_signatory_email" class="required hidden-xs hidden-sm">{{ 'Email' }}</label>
-                <input type="email" placeholder="Email" id="approved_signatory_email" class="form-control" required="required">
+                <label for="approved_signatory_email" class="required">{{ 'Email' }}</label>
+                <input type="email" id="approved_signatory_email" class="form-control" required="required">
                 <label for="approved_signatory_email" class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-6">
             <div class="form-group">
-                <label for="approved_signatory_cellphone" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Mobiltelefon' }}</label>
-                <input type="text" id="approved_signatory_cellphone" class="form-control" placeholder="Mobiltelefon" required="required">
+                <label for="approved_signatory_cellphone" class="required">{{ 'Mobiltelefon' }}</label>
+                <input type="text" id="approved_signatory_cellphone" class="form-control" required="required">
                 <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
@@ -180,16 +184,16 @@
     <div class="row">
         <div class="col-xs-12 col-sm-10">
             <div class="form-group">
-                <label for="approved_signatory_street" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Straße' }}</label>
-                <input type="text" id="approved_signatory_street" class="form-control" placeholder="Straße" required="required" maxlength="200">
+                <label for="approved_signatory_street" class="required">{{ 'Straße' }}</label>
+                <input type="text" id="approved_signatory_street" class="form-control" required="required" maxlength="200">
                 <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-2">
             <div class="form-group">
-                <label for="approved_signatory_street_number" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Nr' }}</label>
-                <input type="text" id="approved_signatory_street_number" class="form-control" placeholder="Nr" required="required" maxlength="10">
+                <label for="approved_signatory_street_number" class="required">{{ 'Nr' }}</label>
+                <input type="text" id="approved_signatory_street_number" class="form-control" required="required" maxlength="10">
                 <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
@@ -198,16 +202,16 @@
     <div class="row">
         <div class="col-xs-12 col-sm-4">
             <div class="form-group">
-                <label for="approved_signatory_postal_code" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'PLZ' }}</label>
-                <input type="text" id="approved_signatory_postal_code" class="form-control" placeholder="PLZ" required="required" maxlength="20">
+                <label for="approved_signatory_postal_code" class="required">{{ 'PLZ' }}</label>
+                <input type="text" id="approved_signatory_postal_code" class="form-control" required="required" maxlength="20">
                 <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-8">
             <div class="form-group">
-                <label for="approved_signatory_city" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Ort' }}</label>
-                <input type="text" id="approved_signatory_city" class="form-control" placeholder="Ort" required="required" maxlength="200">
+                <label for="approved_signatory_city" class="required">{{ 'Ort' }}</label>
+                <input type="text" id="approved_signatory_city" class="form-control" required="required" maxlength="200">
                 <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
         </div>
@@ -217,7 +221,7 @@
     <div class="row">
         <div class="col-xs-12 col-sm-6">
             <div class="form-group">
-                <label for="approved_signatory_resident_since" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'Wohnhaft seit' }}</label>
+                <label for="approved_signatory_resident_since" class="required">{{ 'Wohnhaft seit' }}</label>
                 <input type="text" id="approved_signatory_resident_since" class="form-control" placeholder="TT.MM.JJJJ" required="required" maxlength="200">
                 <label  class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
             </div>
@@ -236,7 +240,7 @@
                 <div class="checkbox-buttons">
                     <input type="checkbox" class="hidden" value="" name="approved_signatory_warrantor" id="approved_signatory_warrantor">
                     <div class="custom-square">
-                        <span></span> <!-- add class .selected when user clicks -->
+                        <span class="fa" id="select_approved_warrantor"></span> <!-- add class .fa-check when user clicks and an ID for TA -->
                     </div>
                     <label for="approved_signatory_warrantor">
                         {{ 'Hiermit erkläre ich mich bereit, im Bedarfsfall als Bürge eine selbstschuldnerische Bürgschaft für den beantragten Kredit zu übernehmen. In dieser Funktion willige ich ein, dass meine persönlichen Daten durch die SCHUFA verarbeitet werden können. Hinweis: Wenn Sie dieses Formular für eine dritte Person ausfüllen, wird Zencap von dieser Person separat eine Erlaubnis zur Verarbeitung persönlicher Daten durch die SCHUFA einholen.' }}
