@@ -14,7 +14,7 @@
 <div class="row">
     <div class="col-xs-12">
         <div class="form-group">
-            <input type="text" id="borrower_bank_account_holder" placeholder="Kontoinhaber" class="form-control" required="required">
+            <input type="text" id="borrower_bank_account_holder" class="form-control" required="required">
             <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
         </div>
     </div>
@@ -23,8 +23,8 @@
 <div class="row">
     <div class="col-xs-12 col-md-6">
         <div class="form-group">
-            <label for="borrower_bank_account_number" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'IBAN' }}</label>
-            <input type="text" id="borrower_bank_account_number" placeholder="IBAN" class="form-control" required="required" maxlength="22">
+            <label for="borrower_bank_account_number" class="required">{{ 'IBAN' }}</label>
+            <input type="text" id="borrower_bank_account_number" class="form-control" required="required" maxlength="22">
             <label for="borrower_bank_account_number" class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
         </div>
     </div>
@@ -44,26 +44,19 @@
 <div class="row">
     <div class="col-xs-12">
         <div class="form-group">
-            <label for="borrower_bank_account_typed_bic_code" class="required hidden-xs hidden-sm visible-md visible-lg">{{ 'BIC' }}</label>
-            <input type="text" id="borrower_bank_account_typed_bic_code" placeholder="BIC" class="form-control" required="required">
+            <label for="borrower_bank_account_typed_bic_code" class="required">{{ 'BIC' }}</label>
+            <input type="text" id="borrower_bank_account_typed_bic_code" class="form-control" required="required">
             <label  class="text-danger hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
         </div>
     </div>
 
     <div class="col-xs-12">
         <div class="form-group">
-            <label for="borrower_bank_account_bic_code" class="required  hidden-xs hidden-sm visible-md visible-lg">{{ 'Name der Bank' }}</label>
-            <div class="btn-group btn-block hidden">
-                <button data-toggle="dropdown" class="form-control btn dropdown-toggle" type="button" aria-expanded="false">
-                    <span class="pull-left">{{ '' }}</span>
-                    <span class="fa fa-chevron-down pull-right"></span>
-                </button>
-                <ul role="menu" class="dropdown-menu">
-                    <li><a href="#"><i class="fa fa-check pull-right"></i>{{ '' }}
-                        </a></li>
-                    <li><a href="#">{{ '' }}</a></li>
-                </ul>
-            </div>
+            <label for="borrower_bank_account_bic_code" class="required">{{ 'Name der Bank' }}</label><br>
+            <select class="selectpicker show-tick hidden" data-width="100%">
+                <option value="">...</option>
+                <option value="">...</option>
+            </select>
             <label class="placeholder">Commerzbank Gf 261 Hamburg</label>
         </div>
     </div>

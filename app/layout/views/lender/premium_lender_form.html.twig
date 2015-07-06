@@ -35,14 +35,14 @@
                                 <div class="radio-buttons">
                                     <input type="radio" class="hidden" value="male" name="premium_lender_gender" id="premium_lender_gender_m" required="required">
                                     <div class="custom-circle">
-                                        <span class="selected"></span>
+                                        <span></span> <!-- add class .selected when user clicks and an ID for TA -->
                                     </div>
                                     <label for="premium_lender_gender_m" class="required"> {{ 'Herr' }}</label>
                                 </div>
                                 <div class="radio-buttons">
                                     <input type="radio" class="hidden" value="female" name="premium_lender_gender" id="premium_lender_gender_f" required="required">
                                     <div class="custom-circle">
-                                        <span></span>
+                                        <span></span> <!-- add class .selected when user clicks and an ID for TA -->
                                     </div>
                                     <label for="premium_lender_gender_f" class="required"> {{ 'Frau' }}</label>
                                 </div>
@@ -55,18 +55,18 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-6">
                             <div class="form-group">
-                                <label for="premium_lender_first_name" class="required hidden-xs hidden-sm">{{ 'Vorname(n)' }}</label>
+                                <label for="premium_lender_first_name" class="required">{{ 'Vorname(n)' }}</label>
                                 <!-- add class 'error' for the input to make the border red  when the alert is also present -->
-                                <input type="text" placeholder="Vorname(n)" id="premium_lender_first_name" class="form-control" required="required">
+                                <input type="text" id="premium_lender_first_name" class="form-control" required="required">
                                 <label for="premium_lender_first_name" class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                             </div>
                         </div>
 
                         <div class="col-xs-12 col-sm-6">
                             <div class="form-group">
-                                <label for="premium_lender_last_name" class="required hidden-xs hidden-sm">{{ 'Nachname' }}</label>
+                                <label for="premium_lender_last_name" class="required">{{ 'Nachname' }}</label>
                                 <!-- add class 'error' for the input to make the border red  when the alert is also present -->
-                                <input type="text" placeholder="Nachname" id="premium_lender_last_name" class="form-control" required="required">
+                                <input type="text" id="premium_lender_last_name" class="form-control" required="required">
                                 <label for="premium_lender_last_name" class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                             </div>
                         </div>
@@ -75,17 +75,17 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-9">
                             <div class="form-group">
-                                <label for="premium_lender_street" class="required hidden-xs hidden-sm">{{ 'Straße' }}</label>
+                                <label for="premium_lender_street" class="required">{{ 'Straße' }}</label>
                                 <!-- add class 'error' for the input to make the border red  when the alert is also present -->
-                                <input type="text" placeholder="Straße" id="premium_lender_street" class="form-control" required="required" maxlength="200">
+                                <input type="text" id="premium_lender_street" class="form-control" required="required" maxlength="200">
                                 <label for="premium_lender_street" class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                             </div>
                         </div>
 
                         <div class="col-xs-12 col-sm-3">
                             <div class="form-group">
-                                <label for="premium_lender_street_number" class="required hidden-xs hidden-sm">{{ 'Nummer' }}</label>
-                                <input type="text" placeholder="Nummer" id="premium_lender_street_number" class="form-control" required="required" maxlength="10">
+                                <label for="premium_lender_street_number" class="required">{{ 'Nummer' }}</label>
+                                <input type="text" id="premium_lender_street_number" class="form-control" required="required" maxlength="10">
                                 <label for="premium_lender_street_number" class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                             </div>
                         </div>
@@ -94,16 +94,16 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-4">
                             <div class="form-group">
-                                <label for="premium_lender_postal_code" class="required hidden-xs hidden-sm">{{ 'Postleitzahl' }}</label>
-                                <input type="text" placeholder="Postleitzahl" id="premium_lender_postal_code" class="form-control" required="required" maxlength="20">
+                                <label for="premium_lender_postal_code" class="required">{{ 'Postleitzahl' }}</label>
+                                <input type="text" id="premium_lender_postal_code" class="form-control" required="required" maxlength="20">
                                 <label for="premium_lender_postal_code" class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                             </div>
                         </div>
 
                         <div class="col-xs-12 col-sm-8">
                             <div class="form-group">
-                                <label for="premium_lender_city" class="required hidden-xs hidden-sm">{{ 'Stadt' }}</label>
-                                <input type="text" placeholder="Stadt" id="premium_lender_city" class="form-control" required="required" maxlength="200">
+                                <label for="premium_lender_city" class="required">{{ 'Stadt' }}</label>
+                                <input type="text" id="premium_lender_city" class="form-control" required="required" maxlength="200">
                                 <label for="premium_lender_city" class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                             </div>
                         </div>
@@ -115,8 +115,8 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-6">
                             <div class="form-group">
-                                <label for="premium_lender_birthday" class="required hidden-xs hidden-sm">{{ 'Geburtsdatum' }}</label>
-                                <input type="text" placeholder="Geburtsdatum" id="premium_lender_birthday" class="form-control" placeholder="TT.MM.JJJJ" required="required">
+                                <label for="premium_lender_birthday" class="required">{{ 'Geburtsdatum' }}</label>
+                                <input type="text" id="premium_lender_birthday" class="form-control" placeholder="TT.MM.JJJJ" required="required">
                                 <label for="premium_lender_birthday" class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                             </div>
                         </div>
@@ -125,8 +125,8 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-6">
                             <div class="form-group">
-                                <label for="premium_lender_cellphone" class="required hidden-xs hidden-sm">{{ 'Mobiltelefonnummer' }}</label>
-                                <input type="text" placeholder="Mobiltelefonnummer" id="premium_lender_cellphone" class="form-control" required="required">
+                                <label for="premium_lender_cellphone" class="required">{{ 'Mobiltelefonnummer' }}</label>
+                                <input type="text" id="premium_lender_cellphone" class="form-control" required="required">
                                 <label for="premium_lender_cellphone" class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                             </div>
                         </div>
@@ -141,8 +141,8 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="form-group">
-                                <label for="premium_lender_bank_account_holder" class="required hidden-xs hidden-sm">{{ 'Kontoinhaber' }}</label>
-                                <input type="text" placeholder="Kontoinhaber" id="premium_lender_bank_account_holder" class="form-control" required="required" maxlength="100">
+                                <label for="premium_lender_bank_account_holder" class="required">{{ 'Kontoinhaber' }}</label>
+                                <input type="text" id="premium_lender_bank_account_holder" class="form-control" required="required" maxlength="100">
                                 <label for="premium_lender_bank_account_holder" class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                             </div>
                         </div>
@@ -151,8 +151,8 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-6">
                             <div class="form-group">
-                                <label for="premium_lender_bank_account_number" class="required hidden-xs hidden-sm">{{ 'IBAN' }}</label>
-                                <input type="text" placeholder="IBAN" id="premium_lender_bank_account_number" class="form-control" required="required" maxlength="22">
+                                <label for="premium_lender_bank_account_number" class="required">{{ 'IBAN' }}</label>
+                                <input type="text" id="premium_lender_bank_account_number" class="form-control" required="required" maxlength="22">
                                 <label for="premium_lender_bank_account_number" class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                             </div>
                         </div>
@@ -172,8 +172,8 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-6">
                             <div class="form-group">
-                                <label for="premium_lender_bank_account_bic_code" class="required hidden-xs hidden-sm">{{ 'BIC' }}</label>
-                                <input type="text" placeholder="BIC" id="premium_lender_bank_account_bic_code" class="form-control" required="required">
+                                <label for="premium_lender_bank_account_bic_code" class="required">{{ 'BIC' }}</label>
+                                <input type="text" id="premium_lender_bank_account_bic_code" class="form-control" required="required">
                                 <label for="premium_lender_bank_account_bic_code" class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                             </div>
                         </div>
@@ -200,8 +200,8 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="form-group">
-                                <label for="premium_lender_identification_id_number" class="required hidden-xs hidden-sm">{{ 'Nummer des Identifikations-Dokuments' }}</label>
-                                <input type="text" id="premium_lender_identification_id_number" placeholder="Nummer des Identifikations-Dokuments" class="form-control" required="required">
+                                <label for="premium_lender_identification_id_number" class="required">{{ 'Nummer des Identifikations-Dokuments' }}</label>
+                                <input type="text" id="premium_lender_identification_id_number" class="form-control" required="required">
                                 <label for="premium_lender_identification_id_number" class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                             </div>
                         </div>
@@ -210,8 +210,8 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="form-group">
-                                <label for="identification_place_of_issue" class="required hidden-xs hidden-sm">{{ 'Ausstellungsort' }}</label>
-                                <input type="text" id="identification_place_of_issue" class="form-control" placeholder="Ausstellungsort" required="required">
+                                <label for="identification_place_of_issue" class="required">{{ 'Ausstellungsort' }}</label>
+                                <input type="text" id="identification_place_of_issue" class="form-control" required="required">
                                 <label for="identification_place_of_issue" class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                             </div>
                         </div>
@@ -220,7 +220,7 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="form-group">
-                                <label for="premium_lender_identification_issue_date" class="required hidden-xs hidden-sm">{{ 'Erstellt am' }}</label>
+                                <label for="premium_lender_identification_issue_date" class="required">{{ 'Erstellt am' }}</label>
                                 <input type="text" id="premium_lender_identification_issue_date" class="form-control" placeholder="TT.MM.JJJJ" required="required">
                                 <label for="premium_lender_identification_issue_date" class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                             </div>
@@ -230,16 +230,16 @@
                     <div class="row">
                         <div class="col-xs-12 col-md-6">
                             <div class="form-group">
-                                <label for="premium_lender_city_of_birth" class="required hidden-xs hidden-sm">{{ 'Geburtsort' }}</label>
-                                <input type="text" id="premium_lender_city_of_birth" class="form-control" placeholder="Geburtsort" required="required">
+                                <label for="premium_lender_city_of_birth" class="required">{{ 'Geburtsort' }}</label>
+                                <input type="text" id="premium_lender_city_of_birth" class="form-control" required="required">
                                 <label for="premium_lender_city_of_birth" class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                             </div>
                         </div>
 
                         <div class="col-xs-12 col-md-6">
                             <div class="form-group">
-                                <label for="premium_lender_birth_name" class="hidden-xs hidden-sm">{{ 'Geburtsname' }}</label>
-                                <input type="text" id="premium_lender_birth_name" class="form-control" placeholder="Geburtsname" required="required">
+                                <label for="premium_lender_birth_name">{{ 'Geburtsname' }}</label>
+                                <input type="text" id="premium_lender_birth_name" class="form-control" required="required">
                                 <label for="premium_lender_birth_name" class="error hidden" role="alert">Lorem ipsum dolor sit amet, consectetur adipiscing elit</label>
                             </div>
                         </div>
@@ -264,7 +264,7 @@
                                 <div class="checkbox-buttons">
                                     <input type="checkbox" class="hidden" value="" name="premium_lender_no_cancellation_period" id="premium_lender_no_cancellation_period" required="required">
                                     <div class="custom-square">
-                                        <span></span> <!-- add class .selected when user clicks -->
+                                        <span class="fa"></span> <!-- add class 'fa-check' when the user clicks and an ID for TA -->
                                     </div>
                                     <label for="premium_lender_no_cancellation_period" class="required">
                                         {{ 'Ich erkläre mich ausdrücklich damit einverstanden, dass die Wirecard Bank AG nach Annahme meines Antrages auf Abschluss des Vertrags, aber noch vor Ablauf der Widerrufsfrist mit der Ausführung dieses Vertrages beginnt.' }}
@@ -274,7 +274,7 @@
                                 <div class="checkbox-buttons">
                                     <input type="checkbox" class="hidden" value="" name="premium_lender_bank_account_access_permit" id="premium_lender_bank_account_access_permit" required="required">
                                     <div class="custom-square">
-                                        <span></span>
+                                        <span class="fa"></span> <!-- add class 'fa-check' when the user clicks and an ID for TA -->
                                     </div>
                                     <label for="premium_lender_bank_account_access_permit" class="required">
                                         {{ 'Ich ermächtige die Zencap Connect GmbH Zahlungen von meinem Konto mittels Lastschrift einzuziehen. Zugleich weise ich mein Kreditinstitut an, die von der Zencap Connect GmbH auf mein Konto gezogenen Lastschriften einzulösen.' }}
