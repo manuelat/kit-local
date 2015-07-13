@@ -260,6 +260,12 @@ about_us-NL:
 account_options:
     path: /cms/options
 
+lp-partners:
+    path: /cms/lp-partners
+
+lp-partners-message:
+    path: /cms/lp-partners-message
+
 lp-negativzinsen-vermeiden:
     path: /cms/lp-negativzinsen-vermeiden
 
